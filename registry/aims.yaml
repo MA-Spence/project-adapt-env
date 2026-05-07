@@ -1,1 +1,14 @@
-items: []
+items:
+- id: AIM-001
+  title: Create-Model-Landscape
+  status: active
+  created: '2026-05-07T14:03:14+10:00'
+  owner: matthew-spence
+  statement: Based on FGM theory, build a procedural and synthetic fitness landscape
+    model that resembles real, biological landscapes from the perspective of population
+    genetics, while also accounting for molecular phenomena such as stability neutral
+    networks and specific epistasis.
+  path: AIM.md
+  compliance:
+    level: green
+    issues: []

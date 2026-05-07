@@ -1,98 +1,48 @@
-# Project Adapt-Env
+# Example chemical biology computational project
 
-This repository is the scientific project workspace for this study.
+This repository is a project-facing example of the `labproj` scientific record
+model for a computational chemical biology / protein engineering workflow.
 
-It is intended to hold:
+It is intended to show what a student-facing scientific project repo should
+look like when:
 
-- the scientific record and lineage registries
+- the scientific record lives in the project repository
+- infrastructure policy lives in a separate `lab-infra-config`
+- durable data is backed up with DVC
+- external source packages remain independently installable
+
+## Scientific Record Model
+
+This project follows the lineage chain:
+
+`AIM -> HYP -> EXP -> RUN -> ANA -> RES -> CLAIM`
+
+Each layer should correspond to a real scientific object, not a convenience
+label.
+
+## What Belongs Here
+
+- aims, hypotheses, experiments, analyses, results, and claims
 - project code, notebooks, and small configuration files
 - DVC pointer files for durable data and promoted artifacts
 
-It is not intended to hold:
+## What Does Not Belong Here
 
 - machine-specific credentials in `.env`
-- the only copy of important data in scratch or runtime paths
+- the only copy of important evidence in scratch or runtime paths
 - lab-wide execution policy that belongs in `lab-infra-config`
 
-## Current Model
+## Project Configuration
 
-The current `labproj` model is:
-
-- the project repository lives in Git
-- infrastructure policy is loaded from a separate `lab-infra-config`
-- durable data is backed up with DVC
-- remote jobs can be submitted to configured targets such as Slurm
-- `data/processed` is the default durable data root
-
-## Key Configuration
-
-- Project ID: `project-adapt-env`
-- Default target: `lab-slurm`
+- Project ID: `example-chemical-biology-project`
+- Default target: `local`
 - Default stack: `STACK-000`
-- Infra config source: `../lab-infra-config-homelab`
+- Infra config source: `../lab-infra-config`
 
-## Getting Started
+## Scientific and Agent Guidance
 
-Initialize or refresh the local machine configuration from the selected lab infra config:
-
-```bash
-labproj env apply-infra
-```
-
-If this project needs to be repointed to a different infra config directory or target YAML:
-
-```bash
-labproj env apply-infra /path/to/lab-infra-config
-labproj env apply-infra /path/to/lab-infra-config/targets/lab-slurm.yaml
-```
-
-Configure durable data backup for this project:
-
-```bash
-labproj data configure-backup
-labproj data status
-```
-
-Check the project state:
-
-```bash
-labproj status
-labproj refresh --write --strict
-labproj check --strict
-```
-
-## Common Workflow
-
-Create the first scientific records:
-
-```bash
-labproj new aim --yes
-labproj new hypothesis --yes
-labproj new experiment --yes
-```
-
-Track durable project data and back it up with DVC:
-
-```bash
-labproj data track data/processed/example/output.tsv
-labproj data push
-```
-
-Prepare and submit runs:
-
-```bash
-labproj target doctor lab-slurm --network
-labproj submit EXP-001 --target lab-slurm --dry-run
-labproj submit EXP-001 --target lab-slurm --execute
-labproj run reconcile
-```
-
-Update statuses when a record has reached a real milestone:
-
-```bash
-labproj set-status RUN-001 completed
-labproj set-status ANA-001 completed
-```
+Agent-facing operating rules live in [AGENTS.md](/Users/matthewspence/Documents/Documents/labproj_collection/scientific-project-repo/AGENTS.md).
+Project-local agent tooling guidance lives in [.agents/skills/labproj/SKILL.md](/Users/matthewspence/Documents/Documents/labproj_collection/scientific-project-repo/.agents/skills/labproj/SKILL.md).
 
 ## Repository Layout
 
@@ -102,10 +52,11 @@ labproj set-status ANA-001 completed
 - `results/`: interpreted result records
 - `claims/`: manuscript-facing claims
 - `data/`: durable project data, typically backed up with DVC
+- `external/`: external source packages that remain independently installable
 - `scratch_space/`: exploratory, non-record work only
 - `environment/`: lightweight project overlay dependencies
 
-## Working Rules
+## Data and Reproducibility
 
 - Keep `.env` local and untracked.
 - Treat `data/processed` as durable by default.
