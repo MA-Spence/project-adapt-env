@@ -1,0 +1,24 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: end-of-file-fixer
+        exclude: '(^|.*/)artifacts/'
+      - id: trailing-whitespace
+        exclude: '(^|.*/)artifacts/'
+      - id: check-added-large-files
+  - repo: local
+    hooks:
+      - id: labproj-refresh
+        name: Refresh lab project compliance state
+        entry: labproj refresh --write --strict --fail-on error --fail-on-change
+        language: system
+        pass_filenames: false
+      - id: labproj-check
+        name: Check lab project provenance structure
+        entry: labproj check --strict
+        language: system
+        pass_filenames: false

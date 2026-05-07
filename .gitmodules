@@ -1,0 +1,3 @@
+[submodule "external/Adapt-Env"]
+	path = external/Adapt-Env
+	url = https://github.com/MA-Spence/Adapt-Env.git

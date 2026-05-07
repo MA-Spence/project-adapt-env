@@ -1,0 +1,4 @@
+[core]
+    remote = labcluster
+['remote "labcluster"']
+    url = /Volumes/DutchZFS/labproj/projects/project-adapt-env/data

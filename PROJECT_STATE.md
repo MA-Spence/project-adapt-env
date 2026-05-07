@@ -1,0 +1,3 @@
+# Project state
+
+- Status: initialised

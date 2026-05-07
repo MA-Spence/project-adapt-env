@@ -1,0 +1,30 @@
+project:
+  id: project-adapt-env
+  title: Project Adapt-Env
+  owner: matthew-spence
+  supervisor: replace-me
+labproj:
+  required_version: '>=0.1,<0.2'
+infra_config:
+  source: ../labproj_collection/lab-infra-config-homelab
+  version: prototype
+  commit: null
+defaults:
+  target: lab-slurm
+  stack: STACK-000
+  dvc_remote: labcluster
+data:
+  backup:
+    remote: labcluster
+    storage_subpath_env: LABPROJ_DATA_STORAGE_SUBPATH
+    default_tracked_roots:
+    - data/processed
+environment:
+  base_stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt

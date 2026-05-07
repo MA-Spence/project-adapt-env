@@ -1,0 +1,3 @@
+# Small project-specific Python dependencies only.
+
+-e ./external/Adapt-Env
