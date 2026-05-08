@@ -43,3 +43,24 @@ items:
   compliance:
     level: green
     issues: []
+- id: RES-003
+  title: RUN-010 weakens HYP-001 despite coordinate-aware calibration
+  status: completed
+  created: '2026-05-08T14:39:14+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-003
+  experiments:
+  - EXP-003
+  runs:
+  - RUN-010
+  supports: []
+  weakens:
+  - HYP-001
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-003_run-010-weakens-hyp-001-despite-coordinate-aware-calibration
+  compliance:
+    level: green
+    issues: []

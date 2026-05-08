@@ -1,0 +1,35 @@
+id: RES-003
+title: RUN-010 weakens HYP-001 despite coordinate-aware calibration
+status: completed
+created: '2026-05-08T14:39:14+10:00'
+owner: matthew-spence
+analyses:
+- ANA-003
+experiments:
+- EXP-003
+runs:
+- RUN-010
+supports: []
+weakens:
+- HYP-001
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-010 used a homogeneous multi-mutant ProteinGym stability panel, raw assay
+  scores, assay-specific MAVE-NN observation models, and real MMseqs alignments, but
+  the shared Adapt-Env calibration still showed weak single- and double-mutant holdout
+  recovery. The measurement-layer confound was reduced, yet the downstream landscape
+  fit remained poor, so the evidence further weakens rather than supports HYP-001.
+artifacts:
+- results/RES-003_run-010-weakens-hyp-001-despite-coordinate-aware-calibration/metrics.json
+evidence_paths:
+- analyses/2026-05-08_ANA-003_run-010-raw-scale-latent-observation-calibration-review/tables/run-010_key_metrics.md
+- data/processed/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010/summary.json
+- data/processed/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010/selected_panel.csv
+- data/processed/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010/mavenn_assay_metrics.csv
+- data/processed/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010/per_assay_latent_fits.csv
+- experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/config.yaml
+- experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/runs/RUN-010.yaml
+compliance:
+  level: green
+  issues: []

@@ -6,29 +6,164 @@
 #
 -e ./external/Adapt-Env
     # via -r environment/requirements.in
+absl-py==2.4.0
+    # via
+    #   keras
+    #   tensorflow
+astunparse==1.6.3
+    # via tensorflow
 biopython==1.87
     # via adaptenv
+certifi==2026.4.22
+    # via requests
+charset-normalizer==3.4.7
+    # via requests
+contourpy==1.3.3
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
+flatbuffers==25.12.19
+    # via tensorflow
+fonttools==4.62.1
+    # via matplotlib
+gast==0.7.0
+    # via tensorflow
+google-pasta==0.2.0
+    # via tensorflow
+grpcio==1.80.0
+    # via tensorflow
+h5py==3.14.0
+    # via
+    #   keras
+    #   tensorflow
+idna==3.13
+    # via requests
+iniconfig==2.3.0
+    # via pytest
+joblib==1.5.3
+    # via scikit-learn
+keras==3.14.1
+    # via tensorflow
+kiwisolver==1.5.0
+    # via matplotlib
+libclang==18.1.1
+    # via tensorflow
+logomaker==0.8.7
+    # via mavenn
+markdown-it-py==4.2.0
+    # via rich
+matplotlib==3.10.9
+    # via
+    #   logomaker
+    #   mavenn
+    #   seaborn
+mavenn==1.1.4
+    # via -r environment/requirements.in
+mdurl==0.1.2
+    # via markdown-it-py
+ml-dtypes==0.5.4
+    # via
+    #   keras
+    #   tensorflow
+namex==0.1.0
+    # via keras
 numpy==2.4.4
     # via
     #   adaptenv
     #   biopython
+    #   contourpy
+    #   h5py
+    #   keras
+    #   logomaker
+    #   matplotlib
+    #   mavenn
+    #   ml-dtypes
     #   pandas
+    #   scikit-learn
     #   scipy
+    #   seaborn
+    #   tensorflow
+opt-einsum==3.4.0
+    # via tensorflow
+optree==0.19.1
+    # via keras
+packaging==26.2
+    # via
+    #   keras
+    #   matplotlib
+    #   pytest
+    #   tensorflow
+    #   wheel
 pandas==2.3.0
-    # via -r environment/requirements.in
+    # via
+    #   -r environment/requirements.in
+    #   logomaker
+    #   mavenn
+    #   seaborn
+pillow==12.2.0
+    # via matplotlib
+pluggy==1.6.0
+    # via pytest
 proteingym==1.3
     # via -r environment/requirements.in
+protobuf==7.34.1
+    # via tensorflow
 pyarrow==20.0.0
     # via -r environment/requirements.in
+pygments==2.20.0
+    # via
+    #   pytest
+    #   rich
+pyparsing==3.3.2
+    # via matplotlib
+pytest==9.0.3
+    # via mavenn
 python-dateutil==2.9.0.post0
-    # via pandas
+    # via
+    #   matplotlib
+    #   pandas
 pytz==2026.2
     # via pandas
 pyyaml==6.0.3
     # via adaptenv
+requests==2.33.1
+    # via tensorflow
+rich==15.0.0
+    # via keras
+scikit-learn==1.8.0
+    # via mavenn
 scipy==1.17.1
-    # via adaptenv
+    # via
+    #   adaptenv
+    #   mavenn
+    #   scikit-learn
+seaborn==0.13.2
+    # via mavenn
 six==1.17.0
-    # via python-dateutil
+    # via
+    #   astunparse
+    #   google-pasta
+    #   python-dateutil
+    #   tensorflow
+tensorflow==2.21.0
+    # via mavenn
+termcolor==3.3.0
+    # via tensorflow
+threadpoolctl==3.6.0
+    # via scikit-learn
+typing-extensions==4.15.0
+    # via
+    #   grpcio
+    #   optree
+    #   tensorflow
 tzdata==2026.2
     # via pandas
+urllib3==2.7.0
+    # via requests
+wheel==0.47.0
+    # via astunparse
+wrapt==2.1.2
+    # via tensorflow
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools

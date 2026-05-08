@@ -1,0 +1,4 @@
+base_stack_id: STACK-000
+base_stack_version: 2026.05
+overlay_spec: environment/requirements.in
+overlay_lock: environment/requirements.lock.txt

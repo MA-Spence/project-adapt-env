@@ -1,0 +1,98 @@
+id: EXP-003
+type: experiment
+title: ProteinGym Raw-Scale Latent Observation Calibration Panel
+slug: proteingym-raw-scale-latent-observation-calibration-panel
+status: planned
+created: '2026-05-08T13:18:26+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-001
+  - EXP-002
+  motivating_results:
+  - RES-001
+  - RES-002
+question: Does HYP-001 hold more cleanly when assay-coordinate confounds are removed
+  by fitting homogeneous multi-mutant ProteinGym stability assays on raw scores, using
+  assay-specific latent observation models and non-affine measurement transforms instead
+  of assay-wise z-scoring and wild-type zeroing?
+pre_experiment_prediction: Within a homogeneous multi-mutant stability panel, a shared
+  Adapt-Env regime fit on raw scores with assay-specific nonlinear observation models
+  and on MAVE-NN-derived latent phenotypes should outperform the original z-scored
+  baseline from EXP-001, while per-assay latent fits should still exceed the shared
+  fit and thereby reveal the remaining gap attributable to true cross-protein heterogeneity.
+rationale: 'RES-001 weakened HYP-001, but that run mixed assay families, z-scored
+  each assay, fixed wild type to zero, and excluded double-mutant signal from calibration.
+  RES-002 then showed that the raw Adapt-Env family is expressive enough to span broad
+  local DFE regimes. This experiment is therefore run to isolate a more specific question:
+  whether the main failure in RES-001 came from coordinate-system and observation-model
+  mismatch rather than from lack of landscape expressivity. It does so by using a
+  homogeneous ProteinGym stability subpanel with real multi-mutant measurements, learning
+  assay-specific latent observation maps from raw scores, and comparing shared versus
+  per-assay Adapt-Env calibration on those cleaner coordinates.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  - data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  - experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/config.yaml
+  - scripts/proteingym_latent_observation_calibration.py
+  datasets:
+  - ProteinGym DMS substitutions benchmark v1.3
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - 1) a reproducible homogeneous ProteinGym stability panel and metadata table
+  - 2) MMseqs-derived alignment FASTAs saved under data/interim
+  - 3) per-assay mavenn latent-phenotype diagnostics from raw scores
+  - 4) a shared raw-score Adapt-Env calibration summary with assay-specific nonlinear observation models
+  - 5) a shared latent-phenotype Adapt-Env calibration summary
+  - 6) per-assay latent-branch calibration summaries
+  - and 7) a Slurm-executable run scaffold
+  artifacts:
+  - selected_panel.csv
+  - mavenn_assay_metrics.csv
+  - per_assay_latent_fits.csv
+  - summary.json
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 4aa0c9d4511105caffdc500bf7a32c30d4efa5f6
+  dirty: true
+notes:
+- This experiment is run because RES-001 confounded external-realism failure with
+  assay-coordinate and observation-model mismatch, while RES-002 showed that the
+  model family itself is broad enough to remain scientifically live under HYP-001.
+- The current implementation uses mavenn to estimate assay-specific raw-scale and
+  latent wild-type anchors instead of standardizing each assay and forcing wild
+  type to zero.
+template: generic
+compliance:
+  level: green
+  issues: []

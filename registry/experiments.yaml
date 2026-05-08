@@ -41,3 +41,27 @@ items:
   compliance:
     level: green
     issues: []
+- id: EXP-003
+  title: ProteinGym Raw-Scale Latent Observation Calibration Panel
+  status: planned
+  created: '2026-05-08T13:18:26+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-001
+  - EXP-002
+  motivating_results:
+  - RES-001
+  - RES-002
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel
+  metadata_path: experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/metadata.yaml
+  compliance:
+    level: green
+    issues: []

@@ -69,3 +69,15 @@
   - `stability_margin` dominates local harshness, while `epistasis_strength` mainly changes double-mutant epistasis magnitude
   - this keeps `HYP-001` scientifically live as a realism target, but does not support it directly because no empirical comparison is involved
 - `ANA-002` records the scientific review of `RUN-008`, and `RES-002` records that the result motivates `HYP-001` without resolving it.
+- `EXP-003` has been created under `HYP-001` to resolve the main interpretability flaw left by `RES-001`.
+  - it restricts the panel to homogeneous multi-mutant ProteinGym stability assays instead of mixing assay families
+  - it adds `mavenn` to the run environment and fits assay-specific latent observation maps from raw assay scores
+  - it replaces assay-wise z-scoring and synthetic wild-type zeroing with assay-specific raw-scale and latent wild-type anchors inferred from `mavenn`
+  - it compares a shared Adapt-Env fit on raw scores with non-affine observation models against a shared latent-scale fit and per-assay latent fits
+  - `RUN-010` completed successfully on `lab-slurm` under scheduler job `32`
+  - the promoted durable outputs are now stored under `data/processed/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010`
+  - the selected panel contained `6` homogeneous Tsuboyama `cDNA display proteolysis` stability assays spanning `23,279` measured variants, including `16,855` multiple mutants
+  - assay-specific `mavenn` models fit the raw assay scale well, with mean test Spearman `0.894`
+  - the shared raw-score Adapt-Env branch was modestly better than the shared latent branch, but both remained weak on holdout recovery and both shared fits retained `epistasis_strength = 0.0`
+  - per-assay latent fits also remained poor, so removing z-scoring and synthetic wild-type zeroing did not rescue the empirical calibration claim
+  - `ANA-003` records the scientific review of `RUN-010`, and `RES-003` records that the result further weakens `HYP-001`

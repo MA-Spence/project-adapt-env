@@ -1,0 +1,42 @@
+run: RUN-010
+target: lab-slurm
+experiment: EXP-003
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel
+  run_script: experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/run.sh
+inputs:
+  declared_files:
+  - data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  - data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  - experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/config.yaml
+  - scripts/proteingym_latent_observation_calibration.py
+  datasets:
+  - ProteinGym DMS substitutions benchmark v1.3
+outputs:
+  expected:
+  - 1) a reproducible homogeneous ProteinGym stability panel and metadata table
+  - 2) MMseqs-derived alignment FASTAs saved under data/interim
+  - 3) per-assay mavenn latent-phenotype diagnostics from raw scores
+  - 4) a shared raw-score Adapt-Env calibration summary with assay-specific nonlinear
+    observation models
+  - 5) a shared latent-phenotype Adapt-Env calibration summary
+  - 6) per-assay latent-branch calibration summaries
+  - and 7) a Slurm-executable run scaffold
+  artifacts:
+  - selected_panel.csv
+  - mavenn_assay_metrics.csv
+  - per_assay_latent_fits.csv
+  - summary.json
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-010/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-010
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-010/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-010/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-010
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-010/project/experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-010/project/experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/runs/RUN-010.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

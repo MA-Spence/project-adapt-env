@@ -84,3 +84,23 @@ items:
     - 'File under default durable data root is not tracked by DVC: data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/summary.json'
     - 'File under default durable data root is not tracked by DVC: data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_setting.csv'
     - 'File under default durable data root is not tracked by DVC: data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_landscape.csv'
+- id: RUN-009
+  experiment: EXP-003
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-08T13:34:55+10:00'
+  path: experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/runs/RUN-009.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-010
+  experiment: EXP-003
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-08T13:35:03+10:00'
+  path: experiments/2026-05-08_EXP-003_proteingym-raw-scale-latent-observation-calibration-panel/runs/RUN-010.yaml
+  compliance:
+    level: green
+    issues: []

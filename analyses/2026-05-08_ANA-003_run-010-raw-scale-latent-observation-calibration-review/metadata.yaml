@@ -1,0 +1,24 @@
+id: ANA-003
+title: RUN-010 Raw-Scale Latent Observation Calibration Review
+status: completed
+created: '2026-05-08T14:39:14+10:00'
+owner: matthew-spence
+experiments:
+- EXP-003
+runs:
+- RUN-010
+purpose: Review RUN-010 against HYP-001 by testing whether coordinate-aware calibration
+  on a homogeneous multi-mutant ProteinGym stability panel improves recovery of local
+  landscape statistics.
+path: analyses/2026-05-08_ANA-003_run-010-raw-scale-latent-observation-calibration-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-08_ANA-003_run-010-raw-scale-latent-observation-calibration-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-08_ANA-003_run-010-raw-scale-latent-observation-calibration-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-010
+  produced_artifacts:
+  - analyses/2026-05-08_ANA-003_run-010-raw-scale-latent-observation-calibration-review/tables/run-010_key_metrics.md
+compliance:
+  level: green
+  issues: []

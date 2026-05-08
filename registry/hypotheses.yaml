@@ -21,9 +21,11 @@ items:
   tested_by:
   - EXP-001
   - EXP-002
+  - EXP-003
   supported_by: []
   weakened_by:
   - RES-001
+  - RES-003
   refuted_by: []
   superseded_by: []
   path: docs/hypotheses.md
