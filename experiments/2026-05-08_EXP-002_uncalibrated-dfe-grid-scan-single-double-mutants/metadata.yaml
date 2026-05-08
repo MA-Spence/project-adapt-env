@@ -1,0 +1,81 @@
+id: EXP-002
+type: experiment
+title: Uncalibrated DFE Grid Scan for Single and Double Mutants
+slug: uncalibrated-dfe-grid-scan-single-double-mutants
+status: planned
+created: '2026-05-08T11:35:54+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-001
+  motivating_results:
+  - RES-001
+question: Without fitting to any empirical DMS landscape, what single-mutant and double-mutant
+  DFEs does the raw Adapt-Env model family generate across a preregistered parameter
+  grid, and does that grid span qualitatively protein-like local mutational regimes?
+pre_experiment_prediction: Across the uncalibrated grid, lower stability margins and
+  higher epistasis strengths should shift one- and two-step DFEs toward more deleterious
+  and lethal effects, double-mutant DFEs should be broader and more deleterious than
+  single-mutant DFEs, and epistasis-sensitive settings should produce larger deviations
+  from additive expectation for double mutants.
+rationale: 'After RES-001 weakened HYP-001 under empirical calibration, the next rigorous
+  question is whether the uncalibrated model family can generate a plausible envelope
+  of one- and two-step DFEs at all. This does not directly test empirical recovery,
+  but it is a necessary scope check: if the raw family cannot span realistic local
+  DFE regimes before fitting, calibration failure is more likely a model-family limitation
+  than only an objective-search problem.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/config.yaml
+  - scripts/uncalibrated_dfe_grid_scan.py
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 16
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 06:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - 1) a per-setting table of single- and double-mutant DFE summary statistics
+  - 2) aggregate summaries across parameter axes
+  - 3) double-mutant epistasis summaries relative to additive expectation
+  - and 4) a Slurm-executable experiment scaffold.
+  artifacts:
+  - single_double_dfe_per_landscape.csv
+  - single_double_dfe_per_setting.csv
+  - summary.json
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 67ab7ffa0c4e4d905dc1e7e631e6f2802bc3044c
+  dirty: true
+notes:
+- This experiment is linked to HYP-001 as an indirect scope check on the uncalibrated
+  model family, not as a direct empirical-recovery test.
+template: generic
+compliance:
+  level: green
+  issues: []

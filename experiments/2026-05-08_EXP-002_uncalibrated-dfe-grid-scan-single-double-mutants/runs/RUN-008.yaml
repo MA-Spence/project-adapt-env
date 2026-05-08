@@ -1,0 +1,95 @@
+id: RUN-008
+experiment: EXP-002
+target: lab-slurm
+target_profile:
+  display_name: HomeLab
+  cluster_name: homelab
+scheduler: slurm
+status: completed
+dry_run: false
+created: '2026-05-08T11:40:37+10:00'
+submitted_by: matthewspence
+git:
+  branch: main
+  commit: 67ab7ffa0c4e4d905dc1e7e631e6f2802bc3044c
+  dirty: true
+dvc:
+  available: true
+  pointer_files: []
+environment:
+  base_stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+    lock_sha256: b0371d40fbfb8271c9efca76ced0557a39e75981358cc11393a415615887c13c
+software_stack:
+  id: STACK-000
+  name: homelab-default
+  version: '2026.05'
+resources_requested:
+  cpus: 4
+  memory_gb: 16
+  gpus: 0
+  gpu_memory_expected_gb: null
+  walltime: 06:00:00
+  jobfs_gb: 0
+resources_observed: {}
+paths:
+  experiment_dir: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants
+  run_metadata: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-008.yaml
+  local_run_record_dir: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-008
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-008/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-008/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-008
+  remote_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-008/project
+staging:
+  manifest: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-008.manifest.yaml
+  mode: source-staged
+container:
+  runtime: native
+scheduler_script: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-008.slurm
+remote_scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-008/project/experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-008.slurm
+scheduler_job_id: '31'
+logs:
+  stdout: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-008/logs/stdout.txt
+  stderr: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-008/logs/stderr.txt
+outputs:
+  expected:
+  - 1) a per-setting table of single- and double-mutant DFE summary statistics
+  - 2) aggregate summaries across parameter axes
+  - 3) double-mutant epistasis summaries relative to additive expectation
+  - and 4) a Slurm-executable experiment scaffold.
+  artifacts:
+  - single_double_dfe_per_landscape.csv
+  - single_double_dfe_per_setting.csv
+  - summary.json
+remote_cleanup:
+  eligible: true
+  status: not-requested
+remote_staging:
+  destination: matthew-spence@raspi-1
+  command: rm -rf /tank/data/labproj/staging/project-adapt-env/RUN-008/project &&
+    mkdir -p /tank/data/labproj/staging/project-adapt-env/RUN-008/project && tar -xzf
+    - -C /tank/data/labproj/staging/project-adapt-env/RUN-008/project
+execution_result:
+  returncode: 0
+  stdout: '31'
+  stderr: ''
+remote_submission:
+  destination: matthew-spence@raspi-1
+  command: mkdir -p /tank/data/labproj/runtime/project-adapt-env/runs/RUN-008 /tank/data/labproj/runtime/project-adapt-env/runs/RUN-008/logs
+    /tank/data/labproj/runtime/project-adapt-env/runs/RUN-008/outputs && cd /tank/data/labproj/staging/project-adapt-env/RUN-008/project
+    && sbatch --parsable /tank/data/labproj/staging/project-adapt-env/RUN-008/project/experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-008.slurm
+  staged_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-008/project
+scheduler_state: INFERRED_EXIT_CODE
+compliance:
+  level: yellow
+  issues:
+  - 'File under default durable data root is not tracked by DVC: data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/summary.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_setting.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_landscape.csv'
+scheduler_exit_code: '0'

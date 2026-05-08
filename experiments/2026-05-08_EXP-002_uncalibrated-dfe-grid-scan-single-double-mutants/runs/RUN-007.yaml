@@ -1,0 +1,75 @@
+id: RUN-007
+experiment: EXP-002
+target: lab-slurm
+target_profile:
+  display_name: HomeLab
+  cluster_name: homelab
+scheduler: slurm
+status: planned
+dry_run: true
+created: '2026-05-08T11:40:20+10:00'
+submitted_by: matthewspence
+git:
+  branch: main
+  commit: 67ab7ffa0c4e4d905dc1e7e631e6f2802bc3044c
+  dirty: true
+dvc:
+  available: true
+  pointer_files: []
+environment:
+  base_stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+    lock_sha256: b0371d40fbfb8271c9efca76ced0557a39e75981358cc11393a415615887c13c
+software_stack:
+  id: STACK-000
+  name: homelab-default
+  version: '2026.05'
+resources_requested:
+  cpus: 4
+  memory_gb: 16
+  gpus: 0
+  gpu_memory_expected_gb: null
+  walltime: 06:00:00
+  jobfs_gb: 0
+resources_observed: {}
+paths:
+  experiment_dir: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants
+  run_metadata: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-007.yaml
+  local_run_record_dir: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-007
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-007/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-007/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-007
+  remote_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-007/project
+staging:
+  manifest: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-007.manifest.yaml
+  mode: source-staged
+container:
+  runtime: native
+scheduler_script: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-007.slurm
+remote_scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-007/project/experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-007.slurm
+scheduler_job_id: null
+logs:
+  stdout: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-007/logs/stdout.txt
+  stderr: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-007/logs/stderr.txt
+outputs:
+  expected:
+  - 1) a per-setting table of single- and double-mutant DFE summary statistics
+  - 2) aggregate summaries across parameter axes
+  - 3) double-mutant epistasis summaries relative to additive expectation
+  - and 4) a Slurm-executable experiment scaffold.
+  artifacts:
+  - single_double_dfe_per_landscape.csv
+  - single_double_dfe_per_setting.csv
+  - summary.json
+remote_cleanup:
+  eligible: true
+  status: not-requested
+compliance:
+  level: green
+  issues: []

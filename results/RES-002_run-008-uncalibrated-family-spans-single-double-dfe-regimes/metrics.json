@@ -1,0 +1,62 @@
+{
+  "grid_settings": 81,
+  "landscapes_evaluated": 324,
+  "sequence_length": 80,
+  "seeds_per_setting": 4,
+  "double_mutants_per_landscape": 10000,
+  "summary": {
+    "double_more_deleterious_than_single_fraction": 1.0,
+    "double_more_lethal_than_single_fraction": 0.8333333333333334,
+    "highest_epistasis_setting": "stability_margin-5__functional_sigma_base-28__n_functional_dims-2__epistasis_strength-0.06",
+    "lowest_epistasis_setting": "stability_margin-12__functional_sigma_base-28__n_functional_dims-8__epistasis_strength-0"
+  },
+  "setting_ranges": {
+    "single_fraction_neutral_mean": {
+      "min": 0.9019736842105263,
+      "max": 1.0
+    },
+    "single_fraction_lethal_mean": {
+      "min": 0.0,
+      "max": 0.009210526315789475
+    },
+    "double_fraction_lethal_mean": {
+      "min": 7.500000000000001e-05,
+      "max": 0.328475
+    },
+    "double_fraction_beneficial_mean": {
+      "min": 0.0,
+      "max": 0.040350000000000004
+    },
+    "epistasis_abs_mean_mean": {
+      "min": 0.009456463581719159,
+      "max": 3.125640921430024
+    }
+  },
+  "axis_examples": {
+    "stability_margin": {
+      "5.0": {
+        "single_fraction_neutral_mean": 0.9756578947368424,
+        "double_fraction_lethal_mean": 0.32847499999999996,
+        "epistasis_abs_mean_mean": 3.0814713276674355
+      },
+      "12.0": {
+        "single_fraction_neutral_mean": 0.9870431286549708,
+        "double_fraction_lethal_mean": 7.500000000000003e-05,
+        "epistasis_abs_mean_mean": 0.049573117674183875
+      }
+    },
+    "epistasis_strength": {
+      "0.0": {
+        "single_fraction_neutral_mean": 0.9832480506822613,
+        "epistasis_abs_mean_mean": 1.1149102494206582,
+        "fraction_positive_epistasis_mean": 0.0004259259259259259
+      },
+      "0.06": {
+        "single_fraction_neutral_mean": 0.9832480506822613,
+        "epistasis_abs_mean_mean": 1.1434465226531538,
+        "fraction_positive_epistasis_mean": 0.012200925925925928
+      }
+    }
+  },
+  "hypothesis_effect": "motivates"
+}

@@ -1,1 +1,45 @@
-items: []
+items:
+- id: RES-001
+  title: RUN-006 weakens HYP-001 through incomplete recovery of ProteinGym distributional
+    statistics
+  status: completed
+  created: '2026-05-08T11:09:53+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-001
+  experiments:
+  - EXP-001
+  runs:
+  - RUN-006
+  supports: []
+  weakens:
+  - HYP-001
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-001_run-006-weakens-hyp-001-proteingym-distributional-statistics
+  compliance:
+    level: green
+    issues: []
+- id: RES-002
+  title: RUN-008 shows the uncalibrated model family spans broad single- and double-mutant
+    DFE regimes
+  status: completed
+  created: '2026-05-08T12:43:36+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-002
+  experiments:
+  - EXP-002
+  runs:
+  - RUN-008
+  supports: []
+  weakens: []
+  refutes: []
+  motivates:
+  - HYP-001
+  supersedes: []
+  path: results/RES-002_run-008-uncalibrated-family-spans-single-double-dfe-regimes
+  compliance:
+    level: green
+    issues: []

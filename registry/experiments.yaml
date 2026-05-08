@@ -19,3 +19,25 @@ items:
   compliance:
     level: green
     issues: []
+- id: EXP-002
+  title: Uncalibrated DFE Grid Scan for Single and Double Mutants
+  status: planned
+  created: '2026-05-08T11:35:54+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-001
+  motivating_results:
+  - RES-001
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants
+  metadata_path: experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/metadata.yaml
+  compliance:
+    level: green
+    issues: []

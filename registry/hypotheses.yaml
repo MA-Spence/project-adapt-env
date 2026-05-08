@@ -20,8 +20,10 @@ items:
     without assay-specific fitting.
   tested_by:
   - EXP-001
+  - EXP-002
   supported_by: []
-  weakened_by: []
+  weakened_by:
+  - RES-001
   refuted_by: []
   superseded_by: []
   path: docs/hypotheses.md

@@ -1,0 +1,24 @@
+id: ANA-002
+title: RUN-008 Uncalibrated Single and Double DFE Grid Review
+status: completed
+created: '2026-05-08T12:43:36+10:00'
+owner: matthew-spence
+experiments:
+- EXP-002
+runs:
+- RUN-008
+purpose: Review RUN-008 as an indirect scope check under HYP-001 by summarizing whether
+  the uncalibrated Adapt-Env model family spans plausible one-step and two-step mutational
+  effect regimes before any empirical DMS fitting.
+path: analyses/2026-05-08_ANA-002_run-008-uncalibrated-single-double-dfe-grid-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-08_ANA-002_run-008-uncalibrated-single-double-dfe-grid-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-08_ANA-002_run-008-uncalibrated-single-double-dfe-grid-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-008
+  produced_artifacts:
+  - analyses/2026-05-08_ANA-002_run-008-uncalibrated-single-double-dfe-grid-review/tables/run-008_key_metrics.md
+compliance:
+  level: green
+  issues: []

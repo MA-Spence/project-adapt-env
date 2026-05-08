@@ -1,0 +1,24 @@
+id: ANA-001
+title: RUN-006 ProteinGym Distributional Realism Review
+status: completed
+created: '2026-05-08T11:09:53+10:00'
+owner: matthew-spence
+experiments:
+- EXP-001
+runs:
+- RUN-006
+purpose: Review RUN-006 against HYP-001 by comparing the fitted shared Adapt-Env regime
+  to ProteinGym single-mutant assay summary statistics and recording whether the observed
+  evidence supports, weakens, or refutes the hypothesis.
+path: analyses/2026-05-08_ANA-001_run-006-proteingym-distributional-realism-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-08_ANA-001_run-006-proteingym-distributional-realism-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-08_ANA-001_run-006-proteingym-distributional-realism-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-006
+  produced_artifacts:
+  - analyses/2026-05-08_ANA-001_run-006-proteingym-distributional-realism-review/tables/run-006_key_metrics.md
+compliance:
+  level: green
+  issues: []

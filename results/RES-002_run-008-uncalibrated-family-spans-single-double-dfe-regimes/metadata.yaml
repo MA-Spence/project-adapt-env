@@ -1,0 +1,37 @@
+id: RES-002
+title: RUN-008 shows the uncalibrated model family spans broad single- and double-mutant
+  DFE regimes
+status: completed
+created: '2026-05-08T12:43:36+10:00'
+owner: matthew-spence
+analyses:
+- ANA-002
+experiments:
+- EXP-002
+runs:
+- RUN-008
+supports: []
+weakens: []
+refutes: []
+motivates:
+- HYP-001
+supersedes: []
+summary: RUN-008 does not test empirical recovery directly, but it shows that the
+  uncalibrated Adapt-Env family spans a broad envelope of one-step and two-step mutational
+  regimes. Across the preregistered grid, singles were usually highly neutral, doubles
+  were always more deleterious than singles and more lethal in most landscapes, stability
+  margin dominated severity, and increasing epistasis strength increased double-mutant
+  epistasis magnitude without changing single-mutant DFEs. This keeps HYP-001 scientifically
+  live by arguing that the failure in RUN-006 is unlikely to be explained only by
+  a complete lack of model-family capacity.
+artifacts: []
+evidence_paths:
+- analyses/2026-05-08_ANA-002_run-008-uncalibrated-single-double-dfe-grid-review/tables/run-008_key_metrics.md
+- data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/summary.json
+- data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_setting.csv
+- data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_landscape.csv
+- experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/config.yaml
+- experiments/2026-05-08_EXP-002_uncalibrated-dfe-grid-scan-single-double-mutants/runs/RUN-008.yaml
+compliance:
+  level: green
+  issues: []

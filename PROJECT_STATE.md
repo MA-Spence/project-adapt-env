@@ -33,6 +33,12 @@
   - smooth-bottom / rugged-top majority: supported
   - high-throughput beating low-throughput: failed in the quick run
   - viral earlier improvement than bacterial: failed in the quick run
+- `RUN-006` for `EXP-001` now provides the first external ProteinGym panel test under `HYP-001`.
+  - 8 assays selected across 4 taxa with 27,249 single mutants total
+  - real MMseqs alignments were generated and saved under `data/interim/proteingym_mmseqs_alignments`
+  - the best shared fitted regime set `epistasis_strength`, `empirical_pairwise_strength`, and `noise_amplitude` to zero
+  - holdout performance was weak (`Spearman 0.103`, `NRMSE 0.998`)
+  - the run therefore weakens `HYP-001` rather than supporting it
 
 ## Main scientific weaknesses at the current state
 
@@ -53,4 +59,13 @@
 
 - Project-local hypotheses have now been recorded in `docs/hypotheses.md` and the `labproj` registry.
 - `EXP-001` has been created under `HYP-001` to assemble a real ProteinGym DMS panel, fetch MMseqs alignments from assay wild-type sequences, and fit a shared synthetic regime against external distributional statistics.
-- The next scientific work should test those hypotheses against both empirical landscape summaries and benchmark-specific criteria for active learning and optimization.
+- `ANA-001` records the scientific review of `RUN-006`, and `RES-001` records that the present evidence weakens `HYP-001`.
+- `EXP-002` has been created under `HYP-001` as an indirect scope check on the uncalibrated model family.
+  - it scans `stability_margin`, `functional_sigma_base`, `n_functional_dims`, and `epistasis_strength`
+  - it measures one-step and two-step DFEs around the reference sequence without DMS calibration
+  - it records double-mutant deviations from additive expectation
+  - `RUN-008` completed successfully on `lab-slurm` under scheduler job `31`
+  - the uncalibrated family spans a broad one-step and two-step DFE envelope, with doubles always more deleterious than singles across the scanned settings
+  - `stability_margin` dominates local harshness, while `epistasis_strength` mainly changes double-mutant epistasis magnitude
+  - this keeps `HYP-001` scientifically live as a realism target, but does not support it directly because no empirical comparison is involved
+- `ANA-002` records the scientific review of `RUN-008`, and `RES-002` records that the result motivates `HYP-001` without resolving it.

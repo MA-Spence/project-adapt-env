@@ -1,0 +1,34 @@
+id: RES-001
+title: RUN-006 weakens HYP-001 through incomplete recovery of ProteinGym distributional
+  statistics
+status: completed
+created: '2026-05-08T11:09:53+10:00'
+owner: matthew-spence
+analyses:
+- ANA-001
+experiments:
+- EXP-001
+runs:
+- RUN-006
+supports: []
+weakens:
+- HYP-001
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-006 produced a balanced eight-assay ProteinGym panel with real MMseqs
+  alignments, but the best shared parameter regime collapsed epistasis, empirical
+  pairwise structure, and noise to zero and showed weak holdout performance. The synthetic
+  landscapes reproduced some quantiles and conservation trends in a subset of assays,
+  but broadly under-represented beneficial tails and over-produced negative skew,
+  so the evidence weakens rather than supports HYP-001.
+artifacts: []
+evidence_paths:
+- analyses/2026-05-08_ANA-001_run-006-proteingym-distributional-realism-review/tables/run-006_key_metrics.md
+- data/processed/proteingym-dms-distributional-realism-panel/RUN-006/summary.json
+- data/processed/proteingym-dms-distributional-realism-panel/RUN-006/selected_panel.csv
+- experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/config.yaml
+- experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-006.yaml
+compliance:
+  level: green
+  issues: []
