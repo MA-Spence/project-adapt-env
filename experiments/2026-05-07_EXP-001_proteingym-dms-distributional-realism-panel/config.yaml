@@ -1,0 +1,87 @@
+experiment_id: EXP-001
+title: ProteinGym-DMS-Distributional-Realism-Panel
+stack: STACK-000
+target: lab-slurm
+experiment:
+  id: EXP-001
+
+proteingym:
+  version: v1.3
+  reference_csv_url: https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/main/reference_files/DMS_substitutions.csv
+  substitutions_parquet_url: https://proteingym.s3.us-east-2.amazonaws.com/DMS_substitutions.parquet
+  reference_csv_path: data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  substitutions_parquet_path: data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  assay_output_dir: data/raw/proteingym/v1.3/assays
+
+panel:
+  panel_size: 8
+  assays_per_taxon: 2
+  allowed_taxa:
+    - Human
+    - Prokaryote
+    - Eukaryote
+    - Virus
+  min_single_mutants: 1000
+  max_sequence_length: 400
+  assay_ids: []
+
+mmseqs:
+  alignment_dir: data/interim/proteingym_mmseqs_alignments
+  cache_dir: data/interim/proteingym_mmseqs_cache
+  max_alignment_sequences: 512
+  timeout_seconds: 20.0
+  poll_interval_seconds: 5.0
+  max_retries: 6
+
+adapt_env:
+  base_config:
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    n_functional_dims: 4
+    functional_sigma_base: 20.0
+    functional_sigma_anisotropy: 0.35
+    functional_weight: 1.0
+    fitness_output_scale: 10.0
+    n_epistatic_terms: 220
+    epistasis_strength: 0.025
+    empirical_pairwise_strength: 0.025
+    pairwise_epistasis_rank: 2
+    epistasis_order_max: 3
+    epistasis_order_decay: 2.0
+    n_higher_order_epistatic_terms: 0
+    epistasis_covariation_bias: 0.8
+    noise_amplitude: 0.003
+    noise_heterogeneity: 0.3
+    peak_search_steps: 400
+    peak_search_top_single_starts: 8
+    peak_search_random_starts: 8
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 3
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+    seed: 42
+
+calibration:
+  options:
+    neutral_threshold: 0.25
+    beneficial_threshold: 0.25
+    lethal_relative_threshold: 0.1
+    max_landscapes_per_fit: 8
+    max_observed_sequences: 2048
+    max_double_mutants: 0
+    synthetic_seed: 123
+    query_missing_alignments: false
+    single_mutant_holdout_modulo: 5
+    single_mutant_holdout_remainder: 0
+    stability_scale_grid: [0.5, 1.0, 1.5]
+    blosum_blend_grid: [0.25, 0.5, 0.75]
+    stability_conservation_power_grid: [0.75, 1.0, 1.25]
+    stability_margin_grid: [5.0, 8.0, 12.0]
+    functional_sigma_grid: [12.0, 20.0, 28.0]
+    n_functional_dims_grid: [2, 4, 6]
+    peak_distance_grid: [0, 1, 3]
+    epistasis_strength_grid: [0.0, 0.025, 0.05]
+    empirical_pairwise_strength_grid: [0.0, 0.025, 0.05]
+    noise_amplitude_grid: [0.0, 0.003, 0.006]

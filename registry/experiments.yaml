@@ -1,1 +1,21 @@
-items: []
+items:
+- id: EXP-001
+  title: ProteinGym-DMS-Distributional-Realism-Panel
+  status: planned
+  created: '2026-05-07T17:34:29+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments: []
+  motivating_results: []
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel
+  metadata_path: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/metadata.yaml
+  compliance:
+    level: green
+    issues: []

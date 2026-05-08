@@ -1,0 +1,91 @@
+id: RUN-003
+experiment: EXP-001
+target: lab-slurm
+target_profile:
+  display_name: HomeLab
+  cluster_name: homelab
+scheduler: slurm
+status: failed
+dry_run: false
+created: '2026-05-07T18:02:57+10:00'
+submitted_by: matthewspence
+git:
+  branch: main
+  commit: e7a6fa92b134d57ac3382a765c9b19b883fd4ae2
+  dirty: true
+dvc:
+  available: true
+  pointer_files: []
+environment:
+  base_stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+    lock_sha256: b0371d40fbfb8271c9efca76ced0557a39e75981358cc11393a415615887c13c
+software_stack:
+  id: STACK-000
+  name: homelab-default
+  version: '2026.05'
+resources_requested:
+  cpus: 4
+  memory_gb: 16
+  gpus: 0
+  gpu_memory_expected_gb: null
+  walltime: 04:00:00
+  jobfs_gb: 0
+resources_observed: {}
+paths:
+  experiment_dir: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel
+  run_metadata: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-003.yaml
+  local_run_record_dir: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-003
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-003/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-003/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-003
+  remote_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-003/project
+staging:
+  manifest: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-003.manifest.yaml
+  mode: source-staged
+container:
+  runtime: native
+scheduler_script: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-003.slurm
+remote_scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-003/project/experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-003.slurm
+scheduler_job_id: '28'
+logs:
+  stdout: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-003/logs/stdout.txt
+  stderr: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-003/logs/stderr.txt
+outputs:
+  expected:
+  - 1) a reproducible ProteinGym assay panel and metadata table
+  - 2) downloaded real DMS assay files
+  - 3) MMseqs-derived alignment FASTAs saved under data/interim
+  - 4) empirical versus synthetic summary-statistic comparisons
+  - and 5) a Slurm-executable experiment scaffold.
+  artifacts:
+  - selected_panel.csv
+  - summary.json
+remote_cleanup:
+  eligible: true
+  status: not-requested
+remote_staging:
+  destination: matthew-spence@raspi-1
+  command: rm -rf /tank/data/labproj/staging/project-adapt-env/RUN-003/project &&
+    mkdir -p /tank/data/labproj/staging/project-adapt-env/RUN-003/project && tar -xzf
+    - -C /tank/data/labproj/staging/project-adapt-env/RUN-003/project
+execution_result:
+  returncode: 0
+  stdout: '28'
+  stderr: ''
+remote_submission:
+  destination: matthew-spence@raspi-1
+  command: mkdir -p /tank/data/labproj/runtime/project-adapt-env/runs/RUN-003 /tank/data/labproj/runtime/project-adapt-env/runs/RUN-003/logs
+    /tank/data/labproj/runtime/project-adapt-env/runs/RUN-003/outputs && cd /tank/data/labproj/staging/project-adapt-env/RUN-003/project
+    && sbatch --parsable /tank/data/labproj/staging/project-adapt-env/RUN-003/project/experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-003.slurm
+  staged_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-003/project
+compliance:
+  level: green
+  issues: []
+scheduler_state: INFERRED_STDERR

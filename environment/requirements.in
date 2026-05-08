@@ -1,3 +1,6 @@
 # Small project-specific Python dependencies only.
 
 -e ./external/Adapt-Env
+pandas==2.3.0
+proteingym==1.3
+pyarrow==20.0.0

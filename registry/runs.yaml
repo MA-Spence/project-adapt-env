@@ -1,1 +1,63 @@
-items: []
+items:
+- id: RUN-001
+  experiment: EXP-001
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-07T17:34:48+10:00'
+  path: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-001.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-002
+  experiment: EXP-001
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-07T17:49:03+10:00'
+  path: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-002.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-003
+  experiment: EXP-001
+  target: lab-slurm
+  status: failed
+  dry_run: false
+  created: '2026-05-07T18:02:57+10:00'
+  path: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-003.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-004
+  experiment: EXP-001
+  target: lab-slurm
+  status: failed
+  dry_run: false
+  created: '2026-05-07T18:03:23+10:00'
+  path: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-004.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-005
+  experiment: EXP-001
+  target: lab-slurm
+  status: failed
+  dry_run: false
+  created: '2026-05-07T18:24:29+10:00'
+  path: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-005.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-006
+  experiment: EXP-001
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-07T18:55:22+10:00'
+  path: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-006.yaml
+  compliance:
+    level: yellow
+    issues:
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-dms-distributional-realism-panel/RUN-006/summary.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-dms-distributional-realism-panel/RUN-006/selected_panel.csv'

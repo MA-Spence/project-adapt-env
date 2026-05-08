@@ -1,0 +1,75 @@
+id: EXP-001
+type: experiment
+title: ProteinGym-DMS-Distributional-Realism-Panel
+slug: proteingym-dms-distributional-realism-panel
+status: planned
+created: '2026-05-07T17:34:29+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments: []
+  motivating_results: []
+question: Can Adapt-Env recover local distributional statistics from real ProteinGym
+  DMS assays when alignments are built from assay wild-type sequences using the MMseqs
+  API?
+pre_experiment_prediction: A shared synthetic parameter regime should match empirical
+  DFE and mutational-effect summary statistics across a panel of ProteinGym substitution
+  assays better than naive synthetic controls, but with assay-to-assay residual mismatch.
+rationale: HYP-001 should be tested first against external DMS assays because benchmark
+  usefulness depends on reproducing real sample statistics before any stronger claim
+  about exact landscape structure is attempted.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  - data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  datasets:
+  - ProteinGym DMS substitutions benchmark v1.3
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 16
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 04:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - 1) a reproducible ProteinGym assay panel and metadata table
+  - 2) downloaded real DMS assay files
+  - 3) MMseqs-derived alignment FASTAs saved under data/interim
+  - 4) empirical versus synthetic summary-statistic comparisons
+  - and 5) a Slurm-executable experiment scaffold.
+  artifacts:
+  - selected_panel.csv
+  - summary.json
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: e7a6fa92b134d57ac3382a765c9b19b883fd4ae2
+  dirty: true
+notes:
+- The current implementation standardizes DMS scores within assay and assigns the
+  wild-type sequence a fitness of zero for calibration.
+template: generic
+compliance:
+  level: green
+  issues: []

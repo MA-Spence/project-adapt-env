@@ -1,0 +1,35 @@
+run: RUN-005
+target: lab-slurm
+experiment: EXP-001
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel
+  run_script: experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/run.sh
+inputs:
+  declared_files:
+  - data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  - data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  datasets:
+  - ProteinGym DMS substitutions benchmark v1.3
+outputs:
+  expected:
+  - 1) a reproducible ProteinGym assay panel and metadata table
+  - 2) downloaded real DMS assay files
+  - 3) MMseqs-derived alignment FASTAs saved under data/interim
+  - 4) empirical versus synthetic summary-statistic comparisons
+  - and 5) a Slurm-executable experiment scaffold.
+  artifacts:
+  - selected_panel.csv
+  - summary.json
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-005/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-005
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-005/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-005/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-005
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-005/project/experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-005/project/experiments/2026-05-07_EXP-001_proteingym-dms-distributional-realism-panel/runs/RUN-005.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

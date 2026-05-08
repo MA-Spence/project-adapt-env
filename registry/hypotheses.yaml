@@ -1,1 +1,162 @@
-items: []
+items:
+- id: HYP-001
+  title: Local-Protein-Landscape-Statistics-Without-Exact-Reconstruction
+  status: active
+  created: '2026-05-07T16:18:33+10:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: A hybrid synthetic landscape built from a stability threshold, a low-dimensional
+    functional layer, and sparse structured epistasis can match empirical local summary
+    statistics from real protein landscapes without attempting to reconstruct any
+    one assay exactly.
+  predictions:
+  - Across a panel of empirical assays
+  - one shared synthetic parameter regime should reproduce DFE shape
+  - neutrality
+  - beneficial fraction
+  - and fitness-dependent mutational-effect trends at the level of summary statistics
+    without assay-specific fitting.
+  tested_by:
+  - EXP-001
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  compliance:
+    level: green
+    issues: []
+- id: HYP-002
+  title: Benchmark-Certified-Peak-Mode-Preserves-Local-Realism
+  status: active
+  created: '2026-05-07T16:18:33+10:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: A benchmark-facing landscape mode that certifies or tightly controls
+    the top of the landscape will make optimization metrics interpretable while preserving
+    the local DFE and epistasis properties needed for realism.
+  predictions:
+  - A certified-top mode should reduce peak overshoot and reference-to-peak ambiguity
+    while keeping local DFE
+  - global epistasis
+  - and neutrality metrics within pre-specified tolerances of the biological mode.
+  tested_by: []
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  compliance:
+    level: yellow
+    issues:
+    - 'Active hypothesis has no linked experiment: HYP-002'
+- id: HYP-003
+  title: Real-MSA-Conditioning-Improves-Realism-Over-Synthetic-Conditioning
+  status: active
+  created: '2026-05-07T16:18:33+10:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: Conditioning the landscape on real family MSAs will improve conservation-sensitivity
+    structure and pairwise epistasis placement more than conditioning on internally
+    generated synthetic alignments.
+  predictions:
+  - Real MSA conditioning should outperform synthetic-alignment conditioning on held-out
+    conservation-effect correlation
+  - covariation-epistasis enrichment
+  - and natural-sequence plausibility metrics.
+  tested_by: []
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  compliance:
+    level: yellow
+    issues:
+    - 'Active hypothesis has no linked experiment: HYP-003'
+- id: HYP-004
+  title: Benchmark-Regimes-Separate-Search-Strategies-Reproducibly
+  status: active
+  created: '2026-05-07T16:18:34+10:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: A scientifically useful synthetic benchmark should produce reproducible
+    performance separation between qualitatively different optimization strategies
+    across budgets, start states, and noise levels.
+  predictions:
+  - Across seeds and budgets
+  - strategy rankings should be stable enough that random search
+  - local mutagenesis
+  - recombination
+  - and uncertainty-aware active learning do not collapse into one indistinguishable
+    performance class.
+  tested_by: []
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  compliance:
+    level: yellow
+    issues:
+    - 'Active hypothesis has no linked experiment: HYP-004'
+- id: HYP-005
+  title: Mechanistic-Knobs-Produce-Monotonic-Directional-Effects
+  status: active
+  created: '2026-05-07T16:18:34+10:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: The model knobs intended to represent biological concepts should move
+    validation metrics in the expected direction over broad parameter sweeps.
+  predictions:
+  - Increasing stability margin
+  - functional dimensionality
+  - epistasis strength
+  - covariation bias
+  - and noise settings should each induce directional changes in their target validation
+    metrics with effect sizes that are larger than seed-to-seed variation.
+  tested_by: []
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  compliance:
+    level: yellow
+    issues:
+    - 'Active hypothesis has no linked experiment: HYP-005'
+- id: HYP-006
+  title: Observation-Noise-Is-Realistic-And-Does-Not-Destabilize-Conclusions
+  status: active
+  created: '2026-05-07T16:18:34+10:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: A useful active-learning benchmark needs an observation model that perturbs
+    ranking and uncertainty in a realistic way, but does not erase meaningful differences
+    between strategies.
+  predictions:
+  - Empirically grounded noise models should change local rankings and search difficulty
+  - but strategy ordering and top-k recovery should remain statistically stable over
+    practical noise ranges.
+  tested_by: []
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  compliance:
+    level: yellow
+    issues:
+    - 'Active hypothesis has no linked experiment: HYP-006'
