@@ -104,3 +104,23 @@ items:
   compliance:
     level: green
     issues: []
+- id: RUN-011
+  experiment: EXP-004
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-08T16:46:45+10:00'
+  path: experiments/2026-05-08_EXP-004_proteingym-predictive-joint-calibration-pairwise-capacity-panel/runs/RUN-011.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-012
+  experiment: EXP-004
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-08T16:46:56+10:00'
+  path: experiments/2026-05-08_EXP-004_proteingym-predictive-joint-calibration-pairwise-capacity-panel/runs/RUN-012.yaml
+  compliance:
+    level: green
+    issues: []

@@ -22,10 +22,12 @@ items:
   - EXP-001
   - EXP-002
   - EXP-003
+  - EXP-004
   supported_by: []
   weakened_by:
   - RES-001
   - RES-003
+  - RES-004
   refuted_by: []
   superseded_by: []
   path: docs/hypotheses.md

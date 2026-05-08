@@ -1,0 +1,23 @@
+id: ANA-004
+title: RUN-012 predictive-joint calibration and pairwise-capacity review
+status: completed
+created: '2026-05-09T09:39:06+10:00'
+owner: matthew-spence
+experiments:
+- EXP-004
+runs:
+- RUN-012
+purpose: Assess whether predictive-joint calibration and reduced pairwise compression
+  improve empirical reconstruction on the ProteinGym stability panel tested in EXP-004.
+path: analyses/2026-05-09_ANA-004_run-012-predictive-joint-calibration-pairwise-capacity-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-09_ANA-004_run-012-predictive-joint-calibration-pairwise-capacity-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-09_ANA-004_run-012-predictive-joint-calibration-pairwise-capacity-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-012
+  produced_artifacts:
+  - analyses/2026-05-09_ANA-004_run-012-predictive-joint-calibration-pairwise-capacity-review/tables/run-012_key_metrics.md
+compliance:
+  level: green
+  issues: []

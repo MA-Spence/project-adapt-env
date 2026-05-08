@@ -1,0 +1,97 @@
+id: EXP-004
+type: experiment
+title: ProteinGym Predictive Joint Calibration And Pairwise Capacity Panel
+slug: proteingym-predictive-joint-calibration-pairwise-capacity-panel
+status: planned
+created: '2026-05-08T16:39:51+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-001
+  - EXP-003
+  motivating_results:
+  - RES-001
+  - RES-002
+  - RES-003
+question: Does HYP-001 hold more cleanly on the fixed EXP-003 six-assay ProteinGym
+  stability panel when calibration is changed from a staged summary-matching fit to
+  a predictive joint fit and when empirical pairwise epistasis is represented with
+  less aggressive compression?
+pre_experiment_prediction: Relative to the EXP-003 baseline, a predictive joint objective
+  should improve single- and double-mutant holdout recovery on the shared raw-score
+  branch, and relaxing empirical pairwise compression should further improve double-mutant
+  and epistasis-prediction metrics while reducing collapse to zero epistasis strength.
+  If calibration was the main bottleneck, the improved shared raw branch should approach
+  the improved per-assay ceiling more closely than in EXP-003.
+rationale: 'RES-002 showed that the Adapt-Env family spans broad local DFE envelopes,
+  while RES-003 showed that coordinate-aware preprocessing alone does not rescue empirical
+  calibration. This experiment is run to isolate two remaining calibration bottlenecks:
+  the staged summary-first objective and the strongly compressed empirical pairwise
+  epistasis representation. It fixes the panel to the exact six multi-mutant Tsuboyama
+  stability assays used in EXP-003, then compares baseline and improved calibration
+  branches on the same raw and latent assay constructions.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  - data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  - experiments/2026-05-08_EXP-004_proteingym-predictive-joint-calibration-pairwise-capacity-panel/config.yaml
+  - scripts/proteingym_predictive_joint_calibration.py
+  datasets:
+  - ProteinGym DMS substitutions benchmark v1.3
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '16:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - 1) a fixed six-assay ProteinGym stability panel matching EXP-003
+  - 2) per-assay MAVE-NN diagnostics
+  - 3) shared-branch calibration summaries for baseline, predictive-joint, and predictive-plus-rich-pairwise
+    settings
+  - 4) per-assay branch fits for the improved raw setting
+  - and 5) a Slurm-submittable run scaffold
+  artifacts:
+  - selected_panel.csv
+  - mavenn_assay_metrics.csv
+  - branch_validations.csv
+  - per_assay_branch_fits.csv
+  - summary.json
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 97c16aaaae9733e1545cf840cbce3ab390412748
+  dirty: true
+notes:
+- This experiment fixes the empirical panel to the exact six assays used in EXP-003
+  so that changes in fit quality can be attributed to calibration changes rather than
+  assay selection drift.
+- The improved branches depend on new Adapt-Env calibration controls added on the
+  `feat/predictive-joint-calibration` branch of the external repository.
+template: generic
+compliance:
+  level: green
+  issues: []

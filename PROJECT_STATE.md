@@ -81,3 +81,18 @@
   - the shared raw-score Adapt-Env branch was modestly better than the shared latent branch, but both remained weak on holdout recovery and both shared fits retained `epistasis_strength = 0.0`
   - per-assay latent fits also remained poor, so removing z-scoring and synthetic wild-type zeroing did not rescue the empirical calibration claim
   - `ANA-003` records the scientific review of `RUN-010`, and `RES-003` records that the result further weakens `HYP-001`
+- `EXP-004` has now been created under `HYP-001` to test the two remaining calibration bottlenecks left after `RES-003`.
+  - it fixes the empirical target to the exact six-assay `EXP-003` Tsuboyama stability panel so branch comparisons are paired on the same observed landscapes
+  - it retains the `EXP-003` shared raw branch as a baseline control
+  - it adds new predictive-joint calibration branches that use a DFE-and-predictive core objective instead of the earlier summary-first staged fit
+  - it adds new rich-pairwise branches that relax empirical pairwise compression through less aggressive prior blending, coverage shrinkage, and normalization
+  - it compares shared raw, shared latent, and per-assay raw fits under the improved settings
+  - the required external code changes were committed and pushed to `external/Adapt-Env` branch `feat/predictive-joint-calibration` at commit `8ce716211160f83c0d4c3eaa13a9e0ffefde1814`
+  - `RUN-012` completed successfully on `lab-slurm` under scheduler job `33`
+  - the promoted durable outputs are now stored under `data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012` and tracked with DVC
+  - the run remained paired to the `EXP-003` six-assay Tsuboyama stability panel with `23,279` measured variants, including `16,855` multiple mutants
+  - assay-specific `mavenn` models again fit the raw assay scale well, with mean test Spearman `0.890`
+  - the modified shared fitter improved some coarse shared raw metrics relative to the `RUN-010` shared raw baseline, with best shared-branch single-mutant holdout Spearman `0.243`, double-mutant holdout Spearman `0.098`, and functional KS `0.463`
+  - those gains did not rescue variant-level reconstruction: the best shared branch still fit `epistasis_strength = 0.0` and `empirical_pairwise_strength = 0.0`, moved the reference very near the peak, and had weak epistasis-prediction Spearman `0.094`
+  - per-assay raw fits used some nonzero empirical pairwise strength in `5/6` assays, but all six still fit `epistasis_strength = 0.0`, and mean single- and double-mutant holdout Spearman remained only `0.201` and `0.089`
+  - `ANA-004` records the scientific review of `RUN-012`, and `RES-004` records that the result still weakens `HYP-001`

@@ -65,3 +65,28 @@ items:
   compliance:
     level: green
     issues: []
+- id: EXP-004
+  title: ProteinGym Predictive Joint Calibration And Pairwise Capacity Panel
+  status: planned
+  created: '2026-05-08T16:39:51+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-001
+  - EXP-003
+  motivating_results:
+  - RES-001
+  - RES-002
+  - RES-003
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-08_EXP-004_proteingym-predictive-joint-calibration-pairwise-capacity-panel
+  metadata_path: experiments/2026-05-08_EXP-004_proteingym-predictive-joint-calibration-pairwise-capacity-panel/metadata.yaml
+  compliance:
+    level: green
+    issues: []

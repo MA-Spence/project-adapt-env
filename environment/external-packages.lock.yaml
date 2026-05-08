@@ -6,8 +6,8 @@ packages:
   editable: true
   exists: true
   git_repo: true
-  branch: main
-  commit: 9b2bba043d35ab81b022727b0ff39806f97df62c
+  branch: feat/predictive-joint-calibration
+  commit: 8ce716211160f83c0d4c3eaa13a9e0ffefde1814
   dirty: null
   detached_head: false
   remote: https://github.com/MA-Spence/Adapt-Env.git

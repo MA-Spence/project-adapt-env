@@ -64,3 +64,24 @@ items:
   compliance:
     level: green
     issues: []
+- id: RES-004
+  title: RUN-012 modestly improves shared raw calibration but still weakens HYP-001
+  status: completed
+  created: '2026-05-09T09:39:06+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-004
+  experiments:
+  - EXP-004
+  runs:
+  - RUN-012
+  supports: []
+  weakens:
+  - HYP-001
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-004_run-012-modestly-improves-shared-raw-calibration-but-still-weakens-hyp-001
+  compliance:
+    level: green
+    issues: []

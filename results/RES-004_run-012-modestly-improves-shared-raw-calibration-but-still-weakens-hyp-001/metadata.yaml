@@ -1,0 +1,36 @@
+id: RES-004
+title: RUN-012 modestly improves shared raw calibration but still weakens HYP-001
+status: completed
+created: '2026-05-09T09:39:06+10:00'
+owner: matthew-spence
+analyses:
+- ANA-004
+experiments:
+- EXP-004
+runs:
+- RUN-012
+supports: []
+weakens:
+- HYP-001
+refutes: []
+motivates: []
+supersedes: []
+summary: Predictive-joint and richer pairwise calibration modestly improved the best
+  shared raw single-mutant holdout ranking and double-mutant holdout ranking on the
+  six-assay ProteinGym stability panel, but the fitter still failed to recover strong
+  variant-level structure and still drove epistasis_strength to zero.
+artifacts:
+- results/RES-004_run-012-modestly-improves-shared-raw-calibration-but-still-weakens-hyp-001/metrics.json
+evidence_paths:
+- analyses/2026-05-09_ANA-004_run-012-predictive-joint-calibration-pairwise-capacity-review/tables/run-012_key_metrics.md
+- data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012/summary.json
+- data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012/selected_panel.csv
+- data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012/mavenn_assay_metrics.csv
+- data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012/branch_validations.csv
+- data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012/per_assay_branch_fits.csv
+- experiments/2026-05-08_EXP-004_proteingym-predictive-joint-calibration-pairwise-capacity-panel/config.yaml
+- experiments/2026-05-08_EXP-004_proteingym-predictive-joint-calibration-pairwise-capacity-panel/runs/RUN-012.yaml
+- results/RES-003_run-010-weakens-hyp-001-despite-coordinate-aware-calibration/metrics.json
+compliance:
+  level: green
+  issues: []

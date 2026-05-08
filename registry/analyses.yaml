@@ -38,3 +38,16 @@ items:
   compliance:
     level: green
     issues: []
+- id: ANA-004
+  title: RUN-012 predictive-joint calibration and pairwise-capacity review
+  status: completed
+  created: '2026-05-09T09:39:06+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-004
+  runs:
+  - RUN-012
+  path: analyses/2026-05-09_ANA-004_run-012-predictive-joint-calibration-pairwise-capacity-review
+  compliance:
+    level: green
+    issues: []
