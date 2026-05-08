@@ -1,0 +1,14 @@
+schema_version: 1
+overlay_spec: environment/requirements.in
+packages:
+- name: Adapt-Env
+  path: external/Adapt-Env
+  editable: true
+  exists: true
+  git_repo: true
+  branch: main
+  commit: 9b2bba043d35ab81b022727b0ff39806f97df62c
+  dirty: null
+  detached_head: false
+  remote: https://github.com/MA-Spence/Adapt-Env.git
+  submodule: true
