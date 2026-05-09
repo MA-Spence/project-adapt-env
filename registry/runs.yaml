@@ -124,3 +124,23 @@ items:
   compliance:
     level: green
     issues: []
+- id: RUN-013
+  experiment: EXP-005
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-09T10:19:04+10:00'
+  path: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-013.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-014
+  experiment: EXP-005
+  target: lab-slurm
+  status: running
+  dry_run: false
+  created: '2026-05-09T10:19:09+10:00'
+  path: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-014.yaml
+  compliance:
+    level: green
+    issues: []

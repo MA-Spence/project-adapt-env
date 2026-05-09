@@ -12,3 +12,4 @@ packages:
   detached_head: false
   remote: https://github.com/MA-Spence/Adapt-Env.git
   submodule: true
+  tracking_branch: null

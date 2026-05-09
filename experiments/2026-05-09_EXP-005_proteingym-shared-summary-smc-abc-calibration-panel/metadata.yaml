@@ -1,0 +1,79 @@
+id: EXP-005
+type: experiment
+title: ProteinGym Shared Summary SMC-ABC Calibration Panel
+slug: proteingym-shared-summary-smc-abc-calibration-panel
+status: planned
+created: '2026-05-09T10:16:09+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-003
+  - EXP-004
+  motivating_results:
+  - RES-002
+  - RES-003
+  - RES-004
+question: Does a project-local shared SMC-ABC summary calibration recover the fixed
+  six-assay ProteinGym stability panel more faithfully than the current deterministic
+  Adapt-Env fitters?
+pre_experiment_prediction: If the dominant bottleneck is calibration rather than model-family
+  expressivity, then an SMC-ABC fit against a structured per-assay summary target
+  should improve shared raw holdout behavior relative to EXP-004 and should recover
+  known parameters in synthetic-truth tests without collapsing immediately to zero
+  epistasis.
+rationale: RES-002 kept the model family scientifically live, while RES-003 and RES-004
+  showed that coordinate-aware preprocessing and deterministic objective redesign
+  still leave the inverse problem weak. This experiment is run to replace the current
+  coarse staged/grid fitting path with a project-local likelihood-free Bayesian calibration
+  on the same six-assay ProteinGym stability panel, with synthetic-truth recovery
+  built in before the empirical test.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - 1) the fixed six-assay ProteinGym stability panel
+  - 2) per-assay mavenn diagnostics
+  - 3) deterministic branch comparison metrics
+  - 4) SMC-ABC posterior particles and round diagnostics
+  - 5) synthetic-truth recovery metrics
+  - and 6) a structured summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: be7cdd233d14ecd6e7f7516a8a16bb058d9679ea
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

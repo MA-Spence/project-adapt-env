@@ -96,3 +96,17 @@
   - those gains did not rescue variant-level reconstruction: the best shared branch still fit `epistasis_strength = 0.0` and `empirical_pairwise_strength = 0.0`, moved the reference very near the peak, and had weak epistasis-prediction Spearman `0.094`
   - per-assay raw fits used some nonzero empirical pairwise strength in `5/6` assays, but all six still fit `epistasis_strength = 0.0`, and mean single- and double-mutant holdout Spearman remained only `0.201` and `0.089`
   - `ANA-004` records the scientific review of `RUN-012`, and `RES-004` records that the result still weakens `HYP-001`
+- The project-local `src/` package has been renamed from the placeholder `scientific_project` to `project_adapt_env`.
+  - the new package now contains project-side experiment code instead of leaving all workflow logic in ad hoc scripts
+  - `src/project_adapt_env/smc_abc.py` implements a reusable SMC-ABC engine
+  - `src/project_adapt_env/adapt_env_bayes.py` implements Adapt-Env-specific summary targeting, bootstrap covariance estimation, and synthetic-truth recovery helpers
+  - `src/project_adapt_env/proteingym_panel.py` factors out ProteinGym panel assembly, MMseqs alignment fetching, and `mavenn`-anchored empirical landscape construction from the earlier scripts
+- `EXP-005` has now been created under `HYP-001` to test whether a likelihood-free Bayesian calibration can recover the six-assay ProteinGym stability panel more faithfully than the current deterministic fitters.
+  - it keeps the exact fixed `EXP-003` / `EXP-004` six-assay Tsuboyama stability panel so the Bayesian calibration is paired against the existing evidence
+  - it retains two deterministic controls: `baseline_shared_raw` and `predictive_richpair_shared_raw`
+  - it builds a structured per-assay summary target from observed single-mutant and double-mutant statistics and estimates the target covariance by bootstrap
+  - it fits a shared posterior over `stability_scale`, `stability_margin`, `blosum_blend`, `stability_conservation_power`, `functional_sigma_base`, `n_functional_dims`, `peak_distance_from_consensus`, `epistasis_strength`, `empirical_pairwise_strength`, and `noise_amplitude`
+  - it includes preregistered synthetic-truth recovery on the same panel scaffold before the empirical posterior is interpreted as evidence about `HYP-001`
+  - the runner is `scripts/proteingym_bayesian_summary_calibration.py`, and the experiment record lives under `experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel`
+  - local code validation passed through `python -m compileall` and `pytest tests/test_smc_abc.py`, while a local `EXP-005 --quick` workflow smoke was blocked only by the absence of `mavenn` in the current interpreter
+  - `RUN-014` is now running on `lab-slurm` under scheduler job `55`
