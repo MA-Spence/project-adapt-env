@@ -24,11 +24,14 @@ items:
   - EXP-003
   - EXP-004
   - EXP-005
+  - EXP-006
   supported_by: []
   weakened_by:
   - RES-001
   - RES-003
   - RES-004
+  - RES-005
+  - RES-006
   refuted_by: []
   superseded_by: []
   path: docs/hypotheses.md
@@ -167,3 +170,34 @@ items:
     level: yellow
     issues:
     - 'Active hypothesis has no linked experiment: HYP-006'
+- id: HYP-007
+  title: Multiple-Latent-Molecular-Phenotypes-Improve-Empirical-Recovery
+  status: active
+  created: '2026-05-12T04:00:01+10:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: Replacing the current single functional latent layer with multiple explicit
+    latent molecular phenotypes, such as folding stability together with binding or
+    abundance, linked to assay readouts through nonlinear thermodynamic or measurement
+    maps, will improve empirical recovery and realism.
+  predictions:
+  - On matched empirical assays, multi-phenotype models should improve held-out single-mutant
+    ranking, double-mutant ranking, and epistasis-prediction metrics relative to the
+    current single-latent model.
+  - The improvement should be largest on assays where the present fitter collapses
+    to zero epistasis, near-peak reference artifacts, or weak double-mutant recovery.
+  - When orthogonal measurements such as abundance plus binding or stability plus
+    activity are available, a shared latent decomposition should transfer across readouts
+    better than a single scalar latent score.
+  tested_by: []
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  compliance:
+    level: yellow
+    issues:
+    - 'Active hypothesis has no linked experiment: HYP-007'

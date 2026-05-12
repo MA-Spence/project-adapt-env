@@ -230,3 +230,61 @@ Falsification criteria:
 - small noise changes cause large and erratic benchmark reordering
 - the default noise model is not empirically defensible or is too weak to
   change search behavior
+
+## HYP-007: Multiple-Latent-Molecular-Phenotypes-Improve-Empirical-Recovery
+
+- Status: active
+- Owner: matthew-spence
+- Aims: AIM-001
+
+Replacing the current single functional latent layer with multiple explicit
+latent molecular phenotypes, such as folding stability together with binding or
+abundance, linked to assay readouts through nonlinear thermodynamic or
+measurement maps, will improve empirical recovery and realism.
+
+Predictions:
+- On matched empirical assays, multi-phenotype models should improve held-out
+  single-mutant ranking, double-mutant ranking, and epistasis-prediction
+  metrics relative to the current single-latent model.
+- The improvement should be largest on assays where the present fitter
+  collapses to zero epistasis, near-peak reference artifacts, or weak
+  double-mutant recovery.
+- When orthogonal measurements such as abundance plus binding or stability plus
+  activity are available, a shared latent decomposition should transfer across
+  readouts better than a single scalar latent score.
+
+Why this matters:
+- `RES-005` weakens the idea that the remaining failure is mainly optimizer
+  collapse. Otwinowski-style folding and binding decompositions, together with
+  the Lehner-group `deepPCA`, `ddPCA`, and `MoCHI` results, suggest that much
+  observed epistasis may arise from nonlinear readouts of a small number of
+  additive molecular traits rather than from one generic phenotype plus ad hoc
+  ruggedness.
+
+Test:
+- Build paired benchmark panels with orthogonal readouts where possible, such
+  as abundance plus binding or stability plus activity, and compare the current
+  model against explicit two-trait and multi-trait latent variants on held-out
+  single and double mutants.
+- Evaluate both assay-specific fits and limited-sharing hierarchical fits to
+  determine whether the latent traits transfer across related assays or
+  proteins.
+- Require improvement over the current model on predictive metrics and on
+  mechanistic diagnostics such as reduced reference-to-peak artifacts and
+  non-degenerate latent parameter posteriors.
+
+Primary readouts:
+- single-mutant holdout Spearman or Kendall
+- double-mutant holdout Spearman or Kendall
+- epistasis-prediction Spearman and KS
+- cross-readout transfer accuracy when fitting one shared latent decomposition
+- fitted latent-trait interpretability, such as shared folding effects across
+  binding readouts
+
+Falsification criteria:
+- multi-phenotype models do not materially outperform the current single-latent
+  model on matched assays
+- any gains come only from much larger unconstrained parameterization rather
+  than from transferable latent structure
+- latent decompositions fail to align across orthogonal readouts or collapse
+  back to effectively one trait

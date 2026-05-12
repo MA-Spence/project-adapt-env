@@ -1,0 +1,29 @@
+run: RUN-022
+target: lab-slurm
+experiment: EXP-006
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick
+  run_script: experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick/run.sh
+inputs:
+  declared_files: []
+  datasets: []
+outputs:
+  expected:
+  - 1) a fixed single-assay ProteinGym target for SPTN1_CHICK_Tsuboyama_2023_1TUD;
+    2) assay-specific mavenn diagnostics; 3) deterministic branch comparison metrics;
+    4) SMC-ABC posterior particles and round diagnostics; 5) synthetic-truth recovery
+    metrics; and 6) a structured summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-022/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-022
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-022/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-022/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-022
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-022/project/experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-022/project/experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick/runs/RUN-022.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

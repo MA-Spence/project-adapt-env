@@ -1,0 +1,41 @@
+id: RES-006
+title: RUN-022 single-assay Bayesian SMC-ABC improves on the shared fit but still
+  weakens HYP-001
+status: completed
+created: '2026-05-12T12:24:36+10:00'
+owner: matthew-spence
+analyses:
+- ANA-006
+experiments:
+- EXP-006
+runs:
+- RUN-022
+supports: []
+weakens:
+- HYP-001
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-022 restricted the Bayesian SMC-ABC fit to the single SPTN1_CHICK_Tsuboyama_2023_1TUD
+  assay and improved several metrics relative to the earlier six-assay shared fit,
+  but it still did not recover the assay cleanly enough to support HYP-001, so the
+  result still weakens the hypothesis while narrowing the failure mode.
+artifacts:
+- results/RES-006_run-022-single-assay-bayesian-smc-abc-improves-on-the-shared-fit-but-still-weakens-hyp-001/metrics.json
+evidence_paths:
+- analyses/2026-05-12_ANA-006_run-022-single-assay-bayesian-smc-abc-calibration-review/tables/run-022_key_metrics.md
+- data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/summary.json
+- data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/selected_panel.csv
+- data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/mavenn_assay_metrics.csv
+- data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/branch_validations.csv
+- data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/posterior_particles.csv
+- data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/posterior_rounds.csv
+- data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/posterior_parameter_summary.csv
+- data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/synthetic_truth_recovery.csv
+- data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012/per_assay_branch_fits.csv
+- results/RES-005_run-019-bayesian-smc-abc-recovers-nonzero-epistasis-but-still-weakens-hyp-001/metrics.json
+- experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick/config.yaml
+- experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick/runs/RUN-022.yaml
+compliance:
+  level: green
+  issues: []

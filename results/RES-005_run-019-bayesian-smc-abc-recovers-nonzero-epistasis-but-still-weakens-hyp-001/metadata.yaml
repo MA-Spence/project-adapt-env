@@ -1,0 +1,39 @@
+id: RES-005
+title: RUN-019 Bayesian SMC-ABC recovers nonzero epistasis but still weakens HYP-001
+status: completed
+created: '2026-05-12T03:23:48+10:00'
+owner: matthew-spence
+analyses:
+- ANA-005
+experiments:
+- EXP-005
+runs:
+- RUN-019
+supports: []
+weakens:
+- HYP-001
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-019 completed the resumed Bayesian SMC-ABC calibration and no longer
+  collapsed the shared fit to zero epistasis, while preregistered synthetic-truth
+  recovery succeeded on the same panel scaffold. Empirical holdout recovery on the
+  six-assay ProteinGym stability panel nevertheless remained weak relative to the
+  scientific claim, so the result still weakens HYP-001.
+artifacts:
+- results/RES-005_run-019-bayesian-smc-abc-recovers-nonzero-epistasis-but-still-weakens-hyp-001/metrics.json
+evidence_paths:
+- analyses/2026-05-12_ANA-005_run-019-bayesian-shared-summary-smc-abc-calibration-review/tables/run-019_key_metrics.md
+- data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/summary.json
+- data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/selected_panel.csv
+- data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/mavenn_assay_metrics.csv
+- data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/branch_validations.csv
+- data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/posterior_particles.csv
+- data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/posterior_rounds.csv
+- data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/posterior_parameter_summary.csv
+- data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/synthetic_truth_recovery.csv
+- experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/config.yaml
+- experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-019.yaml
+compliance:
+  level: green
+  issues: []

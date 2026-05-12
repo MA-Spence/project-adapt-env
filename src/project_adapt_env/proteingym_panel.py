@@ -15,7 +15,7 @@ import yaml
 from scipy.stats import spearmanr
 
 from ._compat import ensure_external_paths
-from .utils import hash_mod, to_builtin
+from .utils import atomic_write_dataframe_csv, atomic_write_json, hash_mod, to_builtin
 
 ensure_external_paths()
 
@@ -316,10 +316,12 @@ def select_assay_panel(reference_df: pd.DataFrame, panel_cfg: dict[str, Any]) ->
 
 def write_fasta(path: Path, sequences: list[str], *, prefix: str) -> None:
     ensure_parent(path)
-    with path.open("w", encoding="utf-8") as handle:
+    tmp_path = path.with_suffix(path.suffix + ".tmp")
+    with tmp_path.open("w", encoding="utf-8") as handle:
         for index, sequence in enumerate(sequences):
             handle.write(f">{prefix}_{index:04d}\n")
             handle.write(f"{sequence}\n")
+    tmp_path.replace(path)
 
 
 def build_alignment_fasta(
@@ -581,6 +583,8 @@ def prepare_proteingym_panel(
     mmseqs_cfg: dict[str, Any],
     mavenn_cfg: dict[str, Any],
     calibration_max_mutation_count: int,
+    checkpoint_dir: Path | None = None,
+    progress_callback: Any | None = None,
 ) -> PreparedPanel:
     reference_csv_path = project_root / proteingym_cfg["reference_csv_path"]
     substitutions_parquet_path = project_root / proteingym_cfg["substitutions_parquet_path"]
@@ -601,9 +605,13 @@ def prepare_proteingym_panel(
 
     raw_assay_dir = project_root / proteingym_cfg["assay_output_dir"]
     raw_assay_dir.mkdir(parents=True, exist_ok=True)
+    panel_cache_dir = checkpoint_dir / "panel_preparation" if checkpoint_dir is not None else None
+    if panel_cache_dir is not None:
+        panel_cache_dir.mkdir(parents=True, exist_ok=True)
 
     assays: list[PreparedAssay] = []
-    for row in panel_df.itertuples(index=False):
+    total_assays = int(len(panel_df))
+    for assay_index, row in enumerate(panel_df.itertuples(index=False), start=1):
         dms_id = str(row.DMS_id)
         wildtype_sequence = canonical_sequence(str(row.target_seq))
         subset = assay_df[assay_df["DMS_id"] == dms_id].copy()
@@ -621,7 +629,7 @@ def prepare_proteingym_panel(
         )
 
         assay_output_path = raw_assay_dir / f"{dms_id}.csv"
-        subset.to_csv(assay_output_path, index=False)
+        atomic_write_dataframe_csv(assay_output_path, subset, index=False)
 
         alignment_path = alignment_dir / f"{dms_id}.fasta"
         build_alignment_fasta(
@@ -631,19 +639,38 @@ def prepare_proteingym_panel(
             mmseqs_cfg=mmseqs_cfg,
         )
 
-        mavenn_model, mavenn_metrics = fit_mavenn_model(
-            assay_frame=subset,
-            wildtype_sequence=wildtype_sequence,
-            cfg=mavenn_cfg,
-        )
-        subset["latent_phi"] = np.asarray(
-            mavenn_model.x_to_phi(subset["mutated_sequence"].to_numpy(dtype=object)),
-            dtype=np.float64,
-        ).reshape(-1)
-        subset["mavenn_yhat"] = np.asarray(
-            mavenn_model.phi_to_yhat(subset["latent_phi"].to_numpy(dtype=np.float64)),
-            dtype=np.float64,
-        ).reshape(-1)
+        cached_subset_path = None
+        cached_metrics_path = None
+        if panel_cache_dir is not None:
+            assay_cache_dir = panel_cache_dir / dms_id
+            assay_cache_dir.mkdir(parents=True, exist_ok=True)
+            cached_subset_path = assay_cache_dir / "prepared_assay.csv"
+            cached_metrics_path = assay_cache_dir / "mavenn_metrics.json"
+        if (
+            cached_subset_path is not None
+            and cached_metrics_path is not None
+            and cached_subset_path.is_file()
+            and cached_metrics_path.is_file()
+        ):
+            subset = pd.read_csv(cached_subset_path)
+            mavenn_metrics = json.loads(cached_metrics_path.read_text(encoding="utf-8"))
+        else:
+            mavenn_model, mavenn_metrics = fit_mavenn_model(
+                assay_frame=subset,
+                wildtype_sequence=wildtype_sequence,
+                cfg=mavenn_cfg,
+            )
+            subset["latent_phi"] = np.asarray(
+                mavenn_model.x_to_phi(subset["mutated_sequence"].to_numpy(dtype=object)),
+                dtype=np.float64,
+            ).reshape(-1)
+            subset["mavenn_yhat"] = np.asarray(
+                mavenn_model.phi_to_yhat(subset["latent_phi"].to_numpy(dtype=np.float64)),
+                dtype=np.float64,
+            ).reshape(-1)
+            if cached_subset_path is not None and cached_metrics_path is not None:
+                atomic_write_dataframe_csv(cached_subset_path, subset, index=False)
+                atomic_write_json(cached_metrics_path, mavenn_metrics)
 
         calibration_subset = subset[subset["mutation_count"] <= int(calibration_max_mutation_count)].copy()
         if calibration_subset.empty:
@@ -684,4 +711,13 @@ def prepare_proteingym_panel(
                 latent_landscape=latent_landscape,
             )
         )
+        if progress_callback is not None:
+            progress_callback(
+                {
+                    "event": "prepared_assay",
+                    "completed": assay_index,
+                    "total": total_assays,
+                    "dms_id": dms_id,
+                }
+            )
     return PreparedPanel(panel_df=panel_df, assays=assays)

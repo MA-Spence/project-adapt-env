@@ -85,3 +85,46 @@ items:
   compliance:
     level: green
     issues: []
+- id: RES-005
+  title: RUN-019 Bayesian SMC-ABC recovers nonzero epistasis but still weakens HYP-001
+  status: completed
+  created: '2026-05-12T03:23:48+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-005
+  experiments:
+  - EXP-005
+  runs:
+  - RUN-019
+  supports: []
+  weakens:
+  - HYP-001
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-005_run-019-bayesian-smc-abc-recovers-nonzero-epistasis-but-still-weakens-hyp-001
+  compliance:
+    level: green
+    issues: []
+- id: RES-006
+  title: RUN-022 single-assay Bayesian SMC-ABC improves on the shared fit but still
+    weakens HYP-001
+  status: completed
+  created: '2026-05-12T12:24:36+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-006
+  experiments:
+  - EXP-006
+  runs:
+  - RUN-022
+  supports: []
+  weakens:
+  - HYP-001
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-006_run-022-single-assay-bayesian-smc-abc-improves-on-the-shared-fit-but-still-weakens-hyp-001
+  compliance:
+    level: green
+    issues: []

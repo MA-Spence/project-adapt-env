@@ -115,3 +115,29 @@ items:
   compliance:
     level: green
     issues: []
+- id: EXP-006
+  title: ProteinGym Single-Assay SMC-ABC Calibration Diagnostic for SPTN1_CHICK
+  status: planned
+  created: '2026-05-12T03:51:29+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-003
+  - EXP-004
+  - EXP-005
+  motivating_results:
+  - RES-003
+  - RES-004
+  - RES-005
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick
+  metadata_path: experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick/metadata.yaml
+  compliance:
+    level: green
+    issues: []

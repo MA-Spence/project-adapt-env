@@ -1,0 +1,78 @@
+id: EXP-006
+type: experiment
+title: ProteinGym Single-Assay SMC-ABC Calibration Diagnostic for SPTN1_CHICK
+slug: proteingym-single-assay-smc-abc-calibration-sptn1-chick
+status: planned
+created: '2026-05-12T03:51:29+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-003
+  - EXP-004
+  - EXP-005
+  motivating_results:
+  - RES-003
+  - RES-004
+  - RES-005
+question: Does the Bayesian SMC-ABC calibration from EXP-005 recover one empirical
+  assay from the paired six-assay panel when pooling is removed, using SPTN1_CHICK_Tsuboyama_2023_1TUD
+  as a single-dataset diagnostic?
+pre_experiment_prediction: If pooling across assays is a major bottleneck, then fitting
+  the same Bayesian calibration path to only SPTN1_CHICK_Tsuboyama_2023_1TUD should
+  materially improve single-mutant and double-mutant holdout recovery relative to
+  the shared six-assay fit while retaining nonzero epistatic structure.
+rationale: RES-003 and RES-004 already weakened the claim that pooling alone explains
+  the calibration failure, but both relied on deterministic fitters. RES-005 then
+  showed that the Bayesian fitter can recover structured parameters on model-matched
+  synthetic targets and no longer fails by trivial collapse, yet the shared six-assay
+  empirical fit remained weak. This experiment isolates whether removing cross-assay
+  pooling on the strongest per-assay candidate from the paired panel makes the empirical
+  inverse problem materially easier under the same SMC-ABC path.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 12
+    memory_gb: 24
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '48:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - 1) a fixed single-assay ProteinGym target for SPTN1_CHICK_Tsuboyama_2023_1TUD;
+    2) assay-specific mavenn diagnostics; 3) deterministic branch comparison metrics;
+    4) SMC-ABC posterior particles and round diagnostics; 5) synthetic-truth recovery
+    metrics; and 6) a structured summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 0b0f5523e0136d3d52f0c2f1de4456155d0dad1c
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

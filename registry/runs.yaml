@@ -137,10 +137,145 @@ items:
 - id: RUN-014
   experiment: EXP-005
   target: lab-slurm
-  status: running
+  status: failed
   dry_run: false
   created: '2026-05-09T10:19:09+10:00'
   path: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-014.yaml
   compliance:
     level: green
     issues: []
+- id: RUN-015
+  experiment: EXP-005
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-10T06:28:54+10:00'
+  path: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-015.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-016
+  experiment: EXP-005
+  target: lab-slurm
+  status: failed
+  dry_run: false
+  created: '2026-05-10T06:29:01+10:00'
+  path: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-016.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-017
+  experiment: EXP-005
+  target: lab-slurm
+  status: failed
+  dry_run: false
+  created: '2026-05-10T09:10:17+10:00'
+  path: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-017.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-018
+  experiment: EXP-005
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-11T11:00:56+10:00'
+  path: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-018.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-019
+  experiment: EXP-005
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-11T11:01:19+10:00'
+  path: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-019.yaml
+  compliance:
+    level: yellow
+    issues:
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/synthetic_truth_recovery.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/summary.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/posterior_particles.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/posterior_rounds.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/mavenn_assay_metrics.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/target_features.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/branch_validations.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/selected_panel.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/progress.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/posterior_parameter_summary.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/progress.log'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/smc_empirical.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/empirical_target.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/synthetic_truth/synthetic_truth_flatter_low_epistasis.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/synthetic_truth/synthetic_truth_recovery_progress.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/synthetic_truth/synthetic_truth_moderate_epistatic.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/MYO3_YEAST_Tsuboyama_2023_2BTT/prepared_assay.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/MYO3_YEAST_Tsuboyama_2023_2BTT/mavenn_metrics.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/HECD1_HUMAN_Tsuboyama_2023_3DKM/prepared_assay.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/HECD1_HUMAN_Tsuboyama_2023_3DKM/mavenn_metrics.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/SDA_BACSU_Tsuboyama_2023_1PV0/prepared_assay.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/SDA_BACSU_Tsuboyama_2023_1PV0/mavenn_metrics.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/CSN4_MOUSE_Tsuboyama_2023_1UFM/prepared_assay.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/CSN4_MOUSE_Tsuboyama_2023_1UFM/mavenn_metrics.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/POLG_PESV_Tsuboyama_2023_2MXD/prepared_assay.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/POLG_PESV_Tsuboyama_2023_2MXD/mavenn_metrics.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/prepared_assay.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/mavenn_metrics.json'
+- id: RUN-020
+  experiment: EXP-006
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-12T03:52:54+10:00'
+  path: experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick/runs/RUN-020.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-021
+  experiment: EXP-006
+  target: lab-slurm
+  status: failed
+  dry_run: false
+  created: '2026-05-12T03:53:18+10:00'
+  path: experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick/runs/RUN-021.yaml
+  compliance:
+    level: yellow
+    issues:
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/mavenn_assay_metrics.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/target_features.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/selected_panel.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/progress.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/progress.log'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/smc_empirical.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/empirical_target.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/prepared_assay.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/mavenn_metrics.json'
+- id: RUN-022
+  experiment: EXP-006
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-12T10:48:16+10:00'
+  path: experiments/2026-05-12_EXP-006_proteingym-single-assay-smc-abc-calibration-sptn1-chick/runs/RUN-022.yaml
+  compliance:
+    level: yellow
+    issues:
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/synthetic_truth_recovery.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/summary.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/posterior_particles.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/posterior_rounds.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/mavenn_assay_metrics.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/target_features.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/branch_validations.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/selected_panel.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/progress.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/posterior_parameter_summary.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/progress.log'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/checkpoints/smc_empirical.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/checkpoints/empirical_target.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/checkpoints/synthetic_truth/synthetic_truth_flatter_low_epistasis.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/checkpoints/synthetic_truth/synthetic_truth_recovery_progress.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/checkpoints/synthetic_truth/synthetic_truth_moderate_epistatic.json'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/prepared_assay.csv'
+    - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/mavenn_metrics.json'

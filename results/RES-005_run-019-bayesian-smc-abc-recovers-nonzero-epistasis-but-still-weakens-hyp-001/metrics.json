@@ -1,0 +1,151 @@
+{
+  "panel_assays": 6,
+  "panel_total_mutants": 23279,
+  "panel_single_mutants": 6424,
+  "panel_multiple_mutants": 16855,
+  "panel_taxa": {
+    "Eukaryote": 3,
+    "Human": 1,
+    "Prokaryote": 1,
+    "Virus": 1
+  },
+  "panel_selection_type": "cDNA display proteolysis",
+  "mavenn_test_metrics": {
+    "mean_spearman": 0.8898336279355511,
+    "min_spearman": 0.8414712815578272,
+    "max_spearman": 0.9459520892925394,
+    "mean_nrmse": 0.4804342965180132
+  },
+  "deterministic_controls": {
+    "baseline_shared_raw": {
+      "functional_holdout_spearman": 0.15240992558979224,
+      "functional_holdout_nrmse": 1.068115890421641,
+      "functional_double_holdout_spearman": -0.016040355440046124,
+      "functional_double_holdout_nrmse": 1.1198486611787002,
+      "functional_epistasis_prediction_spearman": 0.47186361852376135,
+      "functional_epistasis_prediction_ks": 0.3727078832197662,
+      "functional_ks": 0.5565068493150684,
+      "functional_reference_fraction_of_peak": 0.09027323306622109,
+      "functional_reference_distance_to_peak": 57.5,
+      "empirical_pairwise_strength": 0.025,
+      "epistasis_strength": 0.0
+    },
+    "predictive_richpair_shared_raw": {
+      "functional_holdout_spearman": 0.24307517706871573,
+      "functional_holdout_nrmse": 1.117072567826296,
+      "functional_double_holdout_spearman": 0.09773888100155503,
+      "functional_double_holdout_nrmse": 1.1631912005022877,
+      "functional_epistasis_prediction_spearman": 0.09367230999746816,
+      "functional_epistasis_prediction_ks": 0.36660494208067,
+      "functional_ks": 0.4832086403958404,
+      "functional_reference_fraction_of_peak": 0.9976740247118947,
+      "functional_reference_distance_to_peak": 3.0,
+      "empirical_pairwise_strength": 0.0,
+      "epistasis_strength": 0.0
+    }
+  },
+  "smc_abc": {
+    "best_particle_distance": 22.555871338623213,
+    "best_particle": {
+      "stability_scale": 1.1356490703097848,
+      "stability_margin": 9.822456013803823,
+      "blosum_blend": 0.3351224270824191,
+      "stability_conservation_power": 1.0955927747884542,
+      "functional_sigma_base": 12.279561955564194,
+      "n_functional_dims": 5,
+      "peak_distance_from_consensus": 0,
+      "epistasis_strength": 0.052666512876669375,
+      "empirical_pairwise_strength": 0.0008289032336193762,
+      "noise_amplitude": 0.00043843156551022283
+    },
+    "best_validation": {
+      "functional_holdout_spearman": 0.1953773462521081,
+      "functional_holdout_nrmse": 1.09207503827233,
+      "functional_double_holdout_spearman": 0.11889673119700254,
+      "functional_double_holdout_nrmse": 1.2258814099424824,
+      "functional_epistasis_prediction_spearman": 0.2647796895731933,
+      "functional_epistasis_prediction_ks": 0.31016710854448426,
+      "functional_ks": 0.4827066970799021,
+      "functional_reference_fraction_of_peak": 0.049448024416666445,
+      "functional_reference_distance_to_peak": 56.5
+    },
+    "posterior_mean": {
+      "stability_scale": 1.016963557085779,
+      "stability_margin": 8.329217052944372,
+      "blosum_blend": 0.46950080856918325,
+      "stability_conservation_power": 0.9117411923808256,
+      "functional_sigma_base": 15.054305039785103,
+      "n_functional_dims": 4,
+      "peak_distance_from_consensus": 2,
+      "epistasis_strength": 0.04286304063148032,
+      "empirical_pairwise_strength": 0.005028179156367177,
+      "noise_amplitude": 0.005161959406833146
+    },
+    "posterior_mean_validation": {
+      "functional_holdout_spearman": -0.016650301977881768,
+      "functional_holdout_nrmse": 1.1905306830237203,
+      "functional_double_holdout_spearman": -0.011216222889406045,
+      "functional_double_holdout_nrmse": 1.0935115516830591,
+      "functional_epistasis_prediction_spearman": -0.025383453385433977,
+      "functional_epistasis_prediction_ks": 0.3883063383578317,
+      "functional_ks": 0.49879681167995704,
+      "functional_reference_fraction_of_peak": 0.06452416318999503,
+      "functional_reference_distance_to_peak": 49.0
+    },
+    "round_summaries": [
+      {
+        "round_index": 0,
+        "epsilon": 36.46349938371298,
+        "attempts": 384,
+        "best_distance": 25.95029020253642,
+        "median_distance": 34.42021086507125
+      },
+      {
+        "round_index": 1,
+        "epsilon": 42.10041728693217,
+        "attempts": 512,
+        "best_distance": 24.458759851592134,
+        "median_distance": 31.379929644068294
+      },
+      {
+        "round_index": 2,
+        "epsilon": 39.74743294805029,
+        "attempts": 512,
+        "best_distance": 22.673430082403648,
+        "median_distance": 29.80820834841262
+      },
+      {
+        "round_index": 3,
+        "epsilon": 37.023992551721285,
+        "attempts": 512,
+        "best_distance": 22.555871338623213,
+        "median_distance": 29.02008530112449
+      }
+    ]
+  },
+  "comparison_to_best_deterministic_control": {
+    "single_holdout_spearman_delta": -0.04769783081660761,
+    "double_holdout_spearman_delta": 0.021157850195447497,
+    "functional_ks_delta": -0.0005019433159382802,
+    "epistasis_prediction_spearman_delta": 0.1711073795757252,
+    "reference_fraction_of_peak_delta": -0.9482260002952284,
+    "reference_distance_to_peak_delta": 53.5
+  },
+  "synthetic_truth_recovery": {
+    "moderate_epistatic": {
+      "best_distance": 2.50277216450812,
+      "truths_within_q90": 10,
+      "truth_parameter_count": 10,
+      "misses": []
+    },
+    "flatter_low_epistasis": {
+      "best_distance": 4.206432512182601,
+      "truths_within_q90": 9,
+      "truth_parameter_count": 10,
+      "misses": [
+        "noise_amplitude"
+      ]
+    }
+  },
+  "hypothesis_effect": "weakens"
+}

@@ -176,6 +176,10 @@ deterministic_branches:
       reference_peak_distance_weight: 0.5
 
 abc:
+  backend:
+    kind: ray
+    max_workers: 12
+    batch_size: 12
   selected_features:
     - mean
     - variance
@@ -265,6 +269,10 @@ abc:
     seed: 2026
 
 synthetic_truth_recovery:
+  backend:
+    kind: ray
+    max_workers: 12
+    batch_size: 12
   replicates_per_particle: 1
   smc:
     n_particles: 32
@@ -298,6 +306,9 @@ synthetic_truth_recovery:
         epistasis_strength: 0.010
         empirical_pairwise_strength: 0.015
         noise_amplitude: 0.001
+
+resume:
+  source_run_id: RUN-017
 
 quick:
   panel:

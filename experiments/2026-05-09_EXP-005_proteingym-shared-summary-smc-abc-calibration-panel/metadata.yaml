@@ -48,13 +48,13 @@ execution:
   intended_targets:
   - lab-slurm
   resources:
-    cpus: 8
+    cpus: 12
     memory_gb: 48
     gpus: 0
     gpu_memory_expected_gb: null
-    walltime: '24:00:00'
+    walltime: '48:00:00'
     jobfs_gb: 0
-  partition: all
+  partition: gpu
   queue: normal
 outputs:
   expected:

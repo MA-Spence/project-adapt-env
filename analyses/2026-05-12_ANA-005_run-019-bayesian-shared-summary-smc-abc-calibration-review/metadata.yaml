@@ -1,0 +1,24 @@
+id: ANA-005
+title: RUN-019 Bayesian shared-summary SMC-ABC calibration review
+status: completed
+created: '2026-05-12T03:23:42+10:00'
+owner: matthew-spence
+experiments:
+- EXP-005
+runs:
+- RUN-019
+purpose: Assess whether the resumed Bayesian SMC-ABC calibration in RUN-019 recovers
+  the fixed six-assay ProteinGym stability panel more faithfully than the deterministic
+  controls and whether synthetic-truth recovery supports the inference procedure.
+path: analyses/2026-05-12_ANA-005_run-019-bayesian-shared-summary-smc-abc-calibration-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-12_ANA-005_run-019-bayesian-shared-summary-smc-abc-calibration-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-12_ANA-005_run-019-bayesian-shared-summary-smc-abc-calibration-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-019
+  produced_artifacts:
+  - analyses/2026-05-12_ANA-005_run-019-bayesian-shared-summary-smc-abc-calibration-review/tables/run-019_key_metrics.md
+compliance:
+  level: green
+  issues: []

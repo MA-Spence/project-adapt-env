@@ -1,0 +1,31 @@
+run: RUN-019
+target: lab-slurm
+experiment: EXP-005
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel
+  run_script: experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/run.sh
+inputs:
+  declared_files: []
+  datasets: []
+outputs:
+  expected:
+  - 1) the fixed six-assay ProteinGym stability panel
+  - 2) per-assay mavenn diagnostics
+  - 3) deterministic branch comparison metrics
+  - 4) SMC-ABC posterior particles and round diagnostics
+  - 5) synthetic-truth recovery metrics
+  - and 6) a structured summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-019/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-019
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-019/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-019/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-019
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-019/project/experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-019/project/experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel/runs/RUN-019.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

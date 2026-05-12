@@ -108,5 +108,40 @@
   - it fits a shared posterior over `stability_scale`, `stability_margin`, `blosum_blend`, `stability_conservation_power`, `functional_sigma_base`, `n_functional_dims`, `peak_distance_from_consensus`, `epistasis_strength`, `empirical_pairwise_strength`, and `noise_amplitude`
   - it includes preregistered synthetic-truth recovery on the same panel scaffold before the empirical posterior is interpreted as evidence about `HYP-001`
   - the runner is `scripts/proteingym_bayesian_summary_calibration.py`, and the experiment record lives under `experiments/2026-05-09_EXP-005_proteingym-shared-summary-smc-abc-calibration-panel`
-  - local code validation passed through `python -m compileall` and `pytest tests/test_smc_abc.py`, while a local `EXP-005 --quick` workflow smoke was blocked only by the absence of `mavenn` in the current interpreter
-  - `RUN-014` is now running on `lab-slurm` under scheduler job `55`
+  - the first execution, `RUN-014`, was terminated and marked `failed` after it remained effectively single-process and made no durable progress through the SMC stage after roughly `20` hours on `lab-slurm`
+  - the project-local Bayesian fitter was then refactored for HPC execution
+  - `src/project_adapt_env/smc_abc.py` now supports batch-parallel Ray execution, resumable JSON checkpoints, and batch-level progress callbacks
+  - `src/project_adapt_env/proteingym_panel.py` now caches per-assay `mavenn` preparation artifacts under the run output so interrupted runs do not retrain every assay from scratch
+  - `scripts/proteingym_bayesian_summary_calibration.py` now writes atomic outputs, emits live progress logs and ETA estimates, restores cached empirical targets, and resumes synthetic-truth recovery incrementally
+  - the `EXP-005` overlay environment now includes `ray==2.55.1`, and the run entrypoint exports unbuffered Python with single-threaded BLAS defaults for multi-worker CPU use
+  - `RUN-016` then failed at the start of the Ray SMC stage because worker actors could not import `project_adapt_env` from the staged source tree
+  - the Ray executor now propagates the staged `src/` path into worker `PYTHONPATH`, and the Slurm entrypoint now exports that path explicitly before launch
+  - local code validation now includes `python -m compileall`, `pytest tests/test_smc_abc.py` with checkpoint-resume and Ray-worker import coverage (`4 passed`), and a Ray-backed SMC smoke test on a toy simulator
+  - a full local `EXP-005 --quick` workflow smoke remains blocked in the current workstation interpreter because `mavenn` and `tensorflow` are not installed locally, but those dependencies are recorded in the Slurm overlay
+  - `RUN-017` later consumed its full `24:00:00` walltime and was terminated by Slurm at `2026-05-11 09:11:50 AEST` while still in empirical SMC round `3`
+  - the final durable `RUN-017` checkpoint captured completed empirical rounds `0`, `1`, and `2`, plus `344/512` proposal-pool attempts in round `3`
+  - `scripts/proteingym_bayesian_summary_calibration.py` now supports seeding a new run from a prior run's cached `checkpoints/` directory via a `resume.source_run_id` config entry
+  - `EXP-005` is now configured for a resumed `12`-worker Ray backend on the `gpu` Slurm partition so the job runs on `ripley` rather than `dutch`
+  - the dry-run record for that resumed submission is `RUN-018`
+  - the resumed execution was `RUN-019`, which was submitted to `lab-slurm` as scheduler job `67`, restored the `RUN-017` checkpoint/cache into its own output directory, and completed successfully on `2026-05-12`
+  - the promoted durable outputs are now stored under `data/processed/proteingym-shared-summary-smc-abc-calibration-panel/RUN-019`
+  - `RUN-019` completed the final empirical SMC round and both preregistered synthetic-truth recovery branches on the six-assay paired panel; the measurement layer remained strong with mean `mavenn` test Spearman `0.890`
+  - the Bayesian fit no longer collapsed to zero epistasis: the best particle fit `epistasis_strength = 0.053` and `empirical_pairwise_strength = 0.0008`, while the posterior mean retained `epistasis_strength = 0.043`
+  - synthetic-truth recovery was strong on the matched panel scaffold: the `moderate_epistatic` truth lay within the posterior q90 interval for `10/10` parameters, and the `flatter_low_epistasis` truth did so for `9/10`, missing only `noise_amplitude`
+  - empirical recovery nevertheless remained weak. The best Bayesian shared fit reached only single-mutant holdout Spearman `0.195`, double-mutant holdout Spearman `0.119`, and functional KS `0.483`; it improved epistasis-prediction Spearman relative to the best deterministic control (`0.265` versus `0.094`) and avoided the near-peak reference artifact, but it did not rescue the shared empirical reconstruction claim
+  - `ANA-005` records the scientific review of `RUN-019`, and `RES-005` records that the result still weakens `HYP-001` while shifting the main failure away from pure optimizer collapse and toward shared-model mismatch with the empirical panel
+  - `EXP-006` has now been created under `HYP-001` to isolate whether the remaining `RES-005` failure is driven mainly by pooling across assays rather than by mismatch between the model family and an individual empirical target
+  - it reuses the project-local Bayesian SMC-ABC workflow from `EXP-005` but restricts the empirical target to one assay, `SPTN1_CHICK_Tsuboyama_2023_1TUD`, chosen because it was the strongest prior per-assay candidate in the earlier deterministic records
+  - the experiment keeps the same `12`-worker Ray backend and `48:00:00` walltime request on the `gpu` Slurm partition, but reduces requested memory to `24G` to avoid over-reserving queue capacity for the single-assay diagnostic
+  - the dry-run record for this submission is `RUN-020`
+  - the first live execution was `RUN-021`, submitted to `lab-slurm` as scheduler job `78` on `2026-05-12`
+  - `RUN-021` failed during empirical SMC round `3` after `468/512` proposal-pool evaluations when the Ray backend raised `ActorUnavailableError` with a keepalive watchdog timeout; the partial checkpoint and assay-preparation cache remain available under `data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021`
+  - the project-local SMC executor now retries recoverable Ray actor failures by rebuilding the actor pool and rerunning the same parameter batch instead of aborting the whole run
+  - the resumed execution was `RUN-022`, submitted to `lab-slurm` as scheduler job `80` on `2026-05-12`; it restored the `RUN-021` output cache via `resume.source_run_id` and completed successfully
+  - the promoted durable outputs are now stored under `data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-022`
+  - `RUN-022` kept the measurement layer strong on `SPTN1_CHICK_Tsuboyama_2023_1TUD` with `mavenn` test Spearman `0.907`
+  - the best Bayesian single-assay fit improved over the earlier six-assay shared Bayesian fit on single-mutant holdout Spearman (`0.278` versus `0.195`), double-mutant holdout Spearman (`0.362` versus `0.119`), and functional KS (`0.337` versus `0.483`), while retaining nonzero `epistasis_strength = 0.0497`
+  - that single-assay improvement did not rescue the broader realism claim: the fit still did not dominate the strongest prior assay-specific deterministic `SPTN1` fit from `RUN-012`, and no branch achieved a clean reconstruction across ranking, epistasis prediction, and reference-to-peak behavior simultaneously
+  - `ANA-006` records the scientific review of `RUN-022`, and `RES-006` records that the result still weakens `HYP-001` while narrowing the failure mode: cross-assay pooling matters, but it is not a sufficient explanation for the remaining empirical mismatch
+  - `HYP-007` has now been recorded to capture a mechanistic alternative motivated by `RES-005`: the model may need multiple explicit latent molecular phenotypes, such as folding stability together with binding or abundance, rather than one generic functional layer plus sparse epistasis
+  - this hypothesis is motivated by Otwinowski-style folding and binding decomposition and by the Lehner-group `deepPCA`, `ddPCA`, and `MoCHI` line of work, but it is not yet linked to a project experiment

@@ -4,13 +4,22 @@ from __future__ import annotations
 
 import math
 from dataclasses import dataclass, replace
+from pathlib import Path
 from typing import Any
 
 import numpy as np
 
 from ._compat import ensure_external_paths
-from .smc_abc import ParameterSpec, SMCABCConfig, SMCABCResult, SimulationResult, run_smc_abc
-from .utils import to_builtin, weighted_quantile
+from .smc_abc import (
+    ParameterSpec,
+    SMCABCBackendConfig,
+    SMCABCCheckpointConfig,
+    SMCABCConfig,
+    SMCABCResult,
+    SimulationResult,
+    run_smc_abc,
+)
+from .utils import atomic_write_dataframe_csv, atomic_write_json, to_builtin, weighted_quantile
 
 ensure_external_paths()
 
@@ -173,6 +182,7 @@ def build_empirical_target(
     bootstrap_replicates: int = 256,
     covariance_shrinkage: float = 0.25,
     covariance_ridge: float = 1e-6,
+    progress_callback: Any | None = None,
 ) -> SummaryTarget:
     collection = summarize_empirical_landscapes(
         landscapes,
@@ -194,8 +204,10 @@ def build_empirical_target(
     feature_names, observed_vector = _flatten_feature_rows(observed_rows)
 
     rng = np.random.RandomState(options.synthetic_seed + 404)
-    bootstrap_vectors = np.stack(
-        [
+    bootstrap_vectors_list = []
+    total_replicates = int(bootstrap_replicates)
+    for replicate_index in range(total_replicates):
+        bootstrap_vectors_list.append(
             _bootstrap_empirical_vector(
                 list(collection.per_landscape),
                 options=options,
@@ -203,10 +215,18 @@ def build_empirical_target(
                 rng=rng,
                 feature_names=feature_names,
             )
-            for _ in range(int(bootstrap_replicates))
-        ],
-        axis=0,
-    )
+        )
+        if progress_callback is not None and (
+            (replicate_index + 1) == total_replicates or (replicate_index + 1) % 16 == 0
+        ):
+            progress_callback(
+                {
+                    "event": "bootstrap_progress",
+                    "completed": replicate_index + 1,
+                    "total": total_replicates,
+                }
+            )
+    bootstrap_vectors = np.stack(bootstrap_vectors_list, axis=0)
     covariance = np.cov(bootstrap_vectors, rowvar=False)
     covariance = np.asarray(covariance, dtype=np.float64)
     if covariance.ndim == 0:
@@ -227,6 +247,31 @@ def build_empirical_target(
         inverse_covariance=inverse_covariance,
         bootstrap_vectors=bootstrap_vectors,
         empirical_collection=collection,
+    )
+
+
+def serialize_summary_target(target: SummaryTarget) -> dict[str, Any]:
+    return {
+        "feature_names": list(target.feature_names),
+        "observed_vector": np.asarray(target.observed_vector, dtype=np.float64).tolist(),
+        "covariance": np.asarray(target.covariance, dtype=np.float64).tolist(),
+        "inverse_covariance": np.asarray(target.inverse_covariance, dtype=np.float64).tolist(),
+        "bootstrap_vectors": np.asarray(target.bootstrap_vectors, dtype=np.float64).tolist(),
+    }
+
+
+def restore_summary_target(
+    *,
+    payload: dict[str, Any],
+    empirical_collection: Any,
+) -> SummaryTarget:
+    return SummaryTarget(
+        feature_names=[str(item) for item in payload["feature_names"]],
+        observed_vector=np.asarray(payload["observed_vector"], dtype=np.float64),
+        covariance=np.asarray(payload["covariance"], dtype=np.float64),
+        inverse_covariance=np.asarray(payload["inverse_covariance"], dtype=np.float64),
+        bootstrap_vectors=np.asarray(payload["bootstrap_vectors"], dtype=np.float64),
+        empirical_collection=empirical_collection,
     )
 
 
@@ -383,14 +428,34 @@ def run_synthetic_truth_recovery(
     options: CalibrationOptions,
     specs: list[ParameterSpec],
     smc_config: SMCABCConfig,
+    backend: SMCABCBackendConfig | None,
     truths: list[dict[str, Any]],
     replicates_per_particle: int,
     selected_features: tuple[str, ...] = DEFAULT_FEATURES,
+    checkpoint_dir: Path | None = None,
+    partial_csv_path: Path | None = None,
+    progress_callback: Any | None = None,
+    logger: Any | None = None,
 ) -> list[dict[str, Any]]:
     results: list[dict[str, Any]] = []
+    completed_by_label: dict[str, dict[str, Any]] = {}
+    if checkpoint_dir is not None:
+        checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    if partial_csv_path is not None and partial_csv_path.is_file():
+        try:
+            import pandas as pd
+
+            existing_frame = pd.read_csv(partial_csv_path)
+            for row in existing_frame.to_dict(orient="records"):
+                completed_by_label[str(row["label"])] = row
+        except Exception:
+            completed_by_label = {}
     for truth_index, truth in enumerate(truths):
         truth_updates = dict(truth["updates"])
         truth_label = str(truth["label"])
+        if truth_label in completed_by_label:
+            results.append(dict(completed_by_label[truth_label]))
+            continue
         truth_options = replace(options, synthetic_seed=int(options.synthetic_seed) + 5000 + truth_index * 97)
         truth_vector = _simulate_vector_once(
             summaries=list(target.empirical_collection.per_landscape),
@@ -419,6 +484,20 @@ def run_synthetic_truth_recovery(
             specs=specs,
             config=smc_config,
             simulate=problem.simulate,
+            backend=backend,
+            checkpoint=SMCABCCheckpointConfig(
+                path=str((checkpoint_dir / f"synthetic_truth_{truth_label}.json").resolve())
+                if checkpoint_dir is not None
+                else None,
+                resume=True,
+            ),
+            progress_callback=(
+                (lambda event, label=truth_label: progress_callback(label, event))
+                if progress_callback is not None
+                else None
+            ),
+            run_label=f"synthetic_truth::{truth_label}",
+            logger=logger,
         )
         weights = np.asarray([particle.weight for particle in result.particles], dtype=np.float64)
         weights = weights / max(float(np.sum(weights)), 1e-12)
@@ -439,4 +518,13 @@ def run_synthetic_truth_recovery(
             recovery_row[f"{spec.name}__q95"] = q95
             recovery_row[f"{spec.name}__truth_in_q90"] = bool(q05 <= truth_value <= q95)
         results.append(to_builtin(recovery_row))
+        if partial_csv_path is not None:
+            import pandas as pd
+
+            atomic_write_dataframe_csv(partial_csv_path, pd.DataFrame(results), index=False)
+        if checkpoint_dir is not None:
+            atomic_write_json(
+                checkpoint_dir / "synthetic_truth_recovery_progress.json",
+                {"completed_labels": [str(row["label"]) for row in results]},
+            )
     return results
