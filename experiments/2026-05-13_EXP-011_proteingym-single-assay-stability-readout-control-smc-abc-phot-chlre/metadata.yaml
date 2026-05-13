@@ -1,0 +1,83 @@
+id: EXP-011
+type: experiment
+title: ProteinGym Single-Assay Stability-Readout Control SMC-ABC Diagnostic for PHOT_CHLRE
+slug: proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre
+status: planned
+created: '2026-05-13T11:55:31+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-007
+  previous_experiments:
+  - EXP-007
+  - EXP-008
+  - EXP-010
+  motivating_results:
+  - RES-007
+  - RES-008
+  - RES-009
+question: Does the simpler stability-targeted single-latent calibration used in RES-007
+  recover the PHOT_CHLRE activity assay better than the recent activity-specific formulations,
+  or are the PHOT failures robust even under that simpler control?
+pre_experiment_prediction: If the negative PHOT results mainly reflect over-parameterization
+  or confounding in the newer activity-specific formulations, then reverting to the
+  simpler RES-007 stability-targeted calibration may improve holdout ranking and epistasis
+  metrics on PHOT_CHLRE despite its causal mismatch. If it does not, that would strengthen
+  the case that the assay-model mismatch is more fundamental.
+rationale: RES-007 showed that a stability-targeted readout materially improved recovery
+  on a matched unfolding assay, while RES-008 and RES-009 showed that two richer PHOT_CHLRE
+  activity formulations still did not rescue the same activity landscape. Before attributing
+  that failure entirely to missing latent causal structure, this control tests whether
+  the simpler single-latent stability-targeted fitter from RES-007 can recover PHOT_CHLRE
+  better than the newer activity-oriented versions. A positive control result would
+  suggest that the current multi-latent activity parameterization is harder to fit
+  than necessary; a negative control result would imply that the PHOT assay itself
+  is poorly matched to the stability-only causal chain.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 6
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - 1) paired branch comparisons between raw-readout and stability-readout controls
+    on PHOT_CHLRE; 2) assay-specific mavenn diagnostics; 3) SMC-ABC posterior particles
+    and round diagnostics under the RES-007-style stability-readout path; 4) synthetic-truth
+    recovery metrics for that path; and 5) a structured summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: f71f9f8a816a29041cb5f4617c50573d15404de7
+  dirty: true
+notes:
+- '2026-05-13: RUN-033 completed panel preparation and all four deterministic control branches, then reached 300/384 particles in empirical SMC round 0 before the process exited without a model-level traceback. Because the same 12-worker, 24 GB Ray profile also failed on EXP-012 and the paired PHOT run completed after reducing to 6 workers with a 48 GB memory request, EXP-011 is being resubmitted with that same execution-only profile change.'
+template: generic
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,25 @@
+id: ANA-010
+title: RUN-036 explicit two-latent-trait validation-objective calibration review
+status: completed
+created: '2026-05-13T15:48:07+10:00'
+owner: matthew-spence
+experiments:
+- EXP-012
+runs:
+- RUN-036
+purpose: Assess whether the clean EXP-012 explicit two-latent-trait formulation improves
+  empirical recovery on PHOT_CHLRE relative to the earlier PHOT implementations
+  once the latent-trait confounders are removed and the Bayesian fit optimizes the
+  held-out validation objective directly.
+path: analyses/2026-05-13_ANA-010_run-036-explicit-two-latent-trait-validation-objective-calibration-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-13_ANA-010_run-036-explicit-two-latent-trait-validation-objective-calibration-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-13_ANA-010_run-036-explicit-two-latent-trait-validation-objective-calibration-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-036
+  produced_artifacts:
+  - analyses/2026-05-13_ANA-010_run-036-explicit-two-latent-trait-validation-objective-calibration-review/tables/run-036_key_metrics.md
+compliance:
+  level: green
+  issues: []

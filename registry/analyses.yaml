@@ -77,3 +77,70 @@ items:
   compliance:
     level: green
     issues: []
+- id: ANA-007
+  title: RUN-024 single-assay stability-readout SMC-ABC calibration review
+  status: completed
+  created: '2026-05-12T17:04:54+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-007
+  runs:
+  - RUN-024
+  path: analyses/2026-05-12_ANA-007_run-024-single-assay-stability-readout-smc-abc-calibration-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-008
+  title: RUN-026 single-assay biophysical-function-readout calibration review
+  status: completed
+  created: '2026-05-13T06:46:38+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-008
+  runs:
+  - RUN-026
+  path: analyses/2026-05-13_ANA-008_run-026-single-assay-biophysical-function-readout-calibration-review
+  compliance:
+    level: yellow
+    issues:
+    - ANA-008 is completed but none of its linked runs are completed.
+- id: ANA-009
+  title: RUN-030 latent-activity observed-fitness calibration review
+  status: completed
+  created: '2026-05-13T11:31:04+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-010
+  runs:
+  - RUN-030
+  path: analyses/2026-05-13_ANA-009_run-030-latent-activity-observed-fitness-calibration-review
+  compliance:
+    level: yellow
+    issues:
+    - ANA-009 is completed but none of its linked runs are completed.
+- id: ANA-010
+  title: RUN-036 explicit two-latent-trait validation-objective calibration review
+  status: completed
+  created: '2026-05-13T15:48:07+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-012
+  runs:
+  - RUN-036
+  path: analyses/2026-05-13_ANA-010_run-036-explicit-two-latent-trait-validation-objective-calibration-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-011
+  title: RUN-038 single-assay stability-readout control calibration review
+  status: completed
+  created: '2026-05-14T07:04:48+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-011
+  runs:
+  - RUN-038
+  path: analyses/2026-05-14_ANA-011_run-038-single-assay-stability-readout-control-calibration-review
+  compliance:
+    level: green
+    issues: []

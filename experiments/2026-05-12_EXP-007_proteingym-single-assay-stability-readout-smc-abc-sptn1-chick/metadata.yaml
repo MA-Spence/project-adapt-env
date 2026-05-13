@@ -1,0 +1,83 @@
+id: EXP-007
+type: experiment
+title: ProteinGym Single-Assay Stability-Readout SMC-ABC Diagnostic for SPTN1_CHICK
+slug: proteingym-single-assay-stability-readout-smc-abc-sptn1-chick
+status: planned
+created: '2026-05-12T13:05:10+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-003
+  - EXP-004
+  - EXP-005
+  - EXP-006
+  motivating_results:
+  - RES-003
+  - RES-004
+  - RES-005
+  - RES-006
+question: Does fitting the SPTN1_CHICK_Tsuboyama_2023_1TUD stability assay through
+  a stability-targeted synthetic readout, instead of collapsed synthetic fitness,
+  improve empirical recovery under the same single-assay SMC-ABC workflow?
+pre_experiment_prediction: If the main remaining misspecification is that Adapt-Env
+  collapses stability assays into a generic scalar fitness too early, then a stability-targeted
+  readout with pairwise overrides routed through latent stability should improve single-mutant
+  holdout, double-mutant holdout, and epistasis-prediction metrics relative to the
+  RUN-022 controls on the same assay.
+rationale: RES-006 showed that removing cross-assay pooling helps but does not rescue
+  the SPTN1 single-assay fit. Code review and local diagnostics now indicate that
+  the current calibration path explains this stability assay mainly through a near-binary
+  folding gate applied to collapsed synthetic fitness, while the functional layer
+  is nearly flat in the wild-type neighborhood. This experiment keeps the exact SPTN1
+  assay and baseline controls from EXP-006, but adds stability-readout calibration
+  branches that expose latent stability to the observation model and move empirical
+  pairwise structure upstream of the nonlinear gate.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 12
+    memory_gb: 24
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '48:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - 1) paired branch comparisons between the existing RUN-022-style controls and new
+    stability-readout controls on SPTN1_CHICK_Tsuboyama_2023_1TUD; 2) assay-specific
+    mavenn diagnostics; 3) SMC-ABC posterior particles and round diagnostics under
+    the stability-readout path; 4) synthetic-truth recovery metrics for the modified
+    calibration path; and 5) a structured summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: f71f9f8a816a29041cb5f4617c50573d15404de7
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

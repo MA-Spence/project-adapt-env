@@ -141,3 +141,169 @@ items:
   compliance:
     level: green
     issues: []
+- id: EXP-007
+  title: ProteinGym Single-Assay Stability-Readout SMC-ABC Diagnostic for SPTN1_CHICK
+  status: planned
+  created: '2026-05-12T13:05:10+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-003
+  - EXP-004
+  - EXP-005
+  - EXP-006
+  motivating_results:
+  - RES-003
+  - RES-004
+  - RES-005
+  - RES-006
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick
+  metadata_path: experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-008
+  title: ProteinGym Single-Assay Biophysical-Function-Readout SMC-ABC Diagnostic for
+    PHOT_CHLRE
+  status: planned
+  created: '2026-05-12T20:52:41+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-007
+  previous_experiments:
+  - EXP-003
+  - EXP-004
+  - EXP-005
+  - EXP-006
+  - EXP-007
+  motivating_results:
+  - RES-003
+  - RES-004
+  - RES-005
+  - RES-006
+  - RES-007
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-12_EXP-008_proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre
+  metadata_path: experiments/2026-05-12_EXP-008_proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-009
+  title: ProteinGym Paired KRAS Abundance-Binding Thermodynamic Diagnostic
+  status: planned
+  created: '2026-05-13T07:19:34+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-007
+  - EXP-008
+  motivating_results:
+  - RES-007
+  - RES-008
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-13_EXP-009_proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic
+  metadata_path: experiments/2026-05-13_EXP-009_proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-010
+  title: ProteinGym Single-Assay Latent-Activity-Observed-Fitness SMC-ABC Diagnostic
+    for PHOT_CHLRE
+  status: planned
+  created: '2026-05-13T10:24:50+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-007
+  previous_experiments:
+  - EXP-007
+  - EXP-008
+  motivating_results:
+  - RES-007
+  - RES-008
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre
+  metadata_path: experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-011
+  title: ProteinGym Single-Assay Stability-Readout Control SMC-ABC Diagnostic for
+    PHOT_CHLRE
+  status: planned
+  created: '2026-05-13T11:55:31+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-007
+  previous_experiments:
+  - EXP-007
+  - EXP-008
+  - EXP-010
+  motivating_results:
+  - RES-007
+  - RES-008
+  - RES-009
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-13_EXP-011_proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre
+  metadata_path: experiments/2026-05-13_EXP-011_proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-012
+  title: ProteinGym Single-Assay Explicit Two-Latent-Trait Validation-Objective SMC-ABC
+    Diagnostic for PHOT_CHLRE
+  status: planned
+  created: '2026-05-13T12:40:00+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-007
+  previous_experiments:
+  - EXP-008
+  - EXP-010
+  - EXP-011
+  motivating_results:
+  - RES-007
+  - RES-008
+  - RES-009
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-13_EXP-012_proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre
+  metadata_path: experiments/2026-05-13_EXP-012_proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/metadata.yaml
+  compliance:
+    level: green
+    issues: []

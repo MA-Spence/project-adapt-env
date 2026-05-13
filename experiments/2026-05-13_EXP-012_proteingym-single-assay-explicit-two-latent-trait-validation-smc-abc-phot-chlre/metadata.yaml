@@ -1,0 +1,84 @@
+id: EXP-012
+type: experiment
+title: ProteinGym Single-Assay Explicit Two-Latent-Trait Validation-Objective SMC-ABC
+  Diagnostic for PHOT_CHLRE
+slug: proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre
+status: planned
+created: '2026-05-13T12:40:00+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-007
+  previous_experiments:
+  - EXP-008
+  - EXP-010
+  - EXP-011
+  motivating_results:
+  - RES-007
+  - RES-008
+  - RES-009
+question: Does an explicit two-latent-trait PHOT_CHLRE fit, with stability plus
+  one fitted readout trait and only empirical pairwise structure routed into that
+  readout trait, improve recovery once the Bayesian distance is the held-out predictive
+  validation objective rather than a bootstrap summary-vector target?
+pre_experiment_prediction: If the earlier PHOT failures were partly caused by implicit
+  legacy-block fitting, competing epistasis levers, and an objective mismatch, then
+  this explicit two-trait formulation should improve double-mutant holdout, epistasis
+  prediction, and reference geometry relative to RES-008 and RES-009.
+rationale: >-
+  Later code review narrowed what RES-008 and RES-009 actually tested. Those
+  runs changed readout semantics, but they did not yet fit an explicit second
+  latent trait block and still optimized the Bayesian fit against
+  summary-vector matching rather than the held-out predictive metrics used in
+  the analysis. EXP-012 is the direct replacement test: one explicit readout
+  trait block, stability as the other latent trait, no generic score-space
+  epistasis, only empirical pairwise structure routed into the readout trait,
+  and a Bayesian objective aligned with the intended evaluation package.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 6
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - 1) paired deterministic branch metrics under the explicit two-trait generator;
+    2) assay-specific `mavenn` diagnostics; 3) posterior particles, round summaries,
+    and branch validations under the validation-objective SMC fit; and 4) a structured
+    `summary.json`
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: f71f9f8a816a29041cb5f4617c50573d15404de7
+  dirty: true
+notes:
+- '2026-05-13: RUN-035 failed during the Ray-backed SMC phase after deterministic controls completed. Node-local Ray logs on `ripley` recorded unexpected worker failures and a dead raylet/GCS heartbeat chain consistent with a memory-pressure runtime failure, so the execution profile was reduced to 6 Ray workers with a 48 GB job memory request for resubmission.'
+template: generic
+compliance:
+  level: green
+  issues: []

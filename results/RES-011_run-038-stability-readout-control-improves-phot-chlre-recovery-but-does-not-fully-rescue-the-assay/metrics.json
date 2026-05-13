@@ -1,0 +1,275 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "assay_taxon": "Eukaryote",
+  "assay_selection_type": "FACS",
+  "assay_coarse_selection_type": "Activity",
+  "assay_sequence_length": 118,
+  "assay_total_variants": 167529,
+  "assay_single_mutants": 2122,
+  "assay_multiple_mutants": 165407,
+  "mavenn_test_metrics": {
+    "fit_variant_count": 3276,
+    "train_variant_count": 2966,
+    "test_variant_count": 310,
+    "nrmse": 0.9158136892293495,
+    "spearman": 0.685717427970008,
+    "wildtype_phi": 0.689005970954895,
+    "wildtype_yhat": 1.3099022059151824
+  },
+  "bayesian_calibration_semantics": {
+    "synthetic_readout_mode": "stability_margin",
+    "empirical_pairwise_target": "stability",
+    "branch_label_caveat": "summary artifacts retain historical smc_abc_*_raw labels even though EXP-011 config uses stability-targeted calibration semantics"
+  },
+  "summary_target_features": [
+    "PHOT_CHLRE_Chen_2023__conservation_correlation",
+    "PHOT_CHLRE_Chen_2023__epistasis_variance",
+    "PHOT_CHLRE_Chen_2023__fraction_beneficial",
+    "PHOT_CHLRE_Chen_2023__fraction_deleterious",
+    "PHOT_CHLRE_Chen_2023__fraction_lethal",
+    "PHOT_CHLRE_Chen_2023__fraction_neutral",
+    "PHOT_CHLRE_Chen_2023__mean",
+    "PHOT_CHLRE_Chen_2023__skewness",
+    "PHOT_CHLRE_Chen_2023__variance"
+  ],
+  "deterministic_controls": {
+    "baseline_shared_raw": {
+      "functional_holdout_spearman": 0.06644276428363725,
+      "functional_holdout_nrmse": 0.9962042114388754,
+      "functional_double_holdout_spearman": 0.3154498038016976,
+      "functional_double_holdout_nrmse": 1.0023041173604514,
+      "functional_epistasis_prediction_spearman": 0.43486022452124146,
+      "functional_epistasis_prediction_ks": 0.26704545454545453,
+      "functional_ks": 0.784981011131,
+      "functional_reference_fraction_of_peak": 0.2788314622204515,
+      "functional_reference_distance_to_peak": 16.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.025
+    },
+    "predictive_richpair_shared_raw": {
+      "functional_holdout_spearman": 0.3381957274699377,
+      "functional_holdout_nrmse": 0.9566676057978953,
+      "functional_double_holdout_spearman": 0.3380203515263645,
+      "functional_double_holdout_nrmse": 1.0619787843246826,
+      "functional_epistasis_prediction_spearman": 0.2585031917235307,
+      "functional_epistasis_prediction_ks": 0.29545454545454547,
+      "functional_ks": 0.29076343072573047,
+      "functional_reference_fraction_of_peak": 0.03242584959662236,
+      "functional_reference_distance_to_peak": 91.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.05
+    },
+    "baseline_shared_stability_readout": {
+      "functional_holdout_spearman": 0.5040907799003865,
+      "functional_holdout_nrmse": 0.851279325840206,
+      "functional_double_holdout_spearman": 0.5379032258064517,
+      "functional_double_holdout_nrmse": 0.9557719298005534,
+      "functional_epistasis_prediction_spearman": -0.2496637662200565,
+      "functional_epistasis_prediction_ks": 0.75,
+      "functional_ks": 0.17593689490583758,
+      "functional_reference_fraction_of_peak": 1.0,
+      "functional_reference_distance_to_peak": 0.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.025
+    },
+    "predictive_richpair_shared_stability_readout": {
+      "functional_holdout_spearman": 0.5054483020817381,
+      "functional_holdout_nrmse": 0.8708632475958207,
+      "functional_double_holdout_spearman": 0.7007708911501696,
+      "functional_double_holdout_nrmse": 0.7725138632288707,
+      "functional_epistasis_prediction_spearman": 0.008058551617873652,
+      "functional_epistasis_prediction_ks": 0.7386363636363636,
+      "functional_ks": 0.17825995202546535,
+      "functional_reference_fraction_of_peak": 0.9872600607977574,
+      "functional_reference_distance_to_peak": 3.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.05
+    }
+  },
+  "smc_abc": {
+    "best_particle_distance": 10.959462173989081,
+    "best_particle": {
+      "distance": 10.959462173989081,
+      "parameters": {
+        "blosum_blend": 0.31236162230635023,
+        "empirical_pairwise_strength": 0.07898664042471853,
+        "epistasis_strength": 0.045136428314988014,
+        "functional_sigma_base": 20.438988758753442,
+        "n_functional_dims": 5,
+        "noise_amplitude": 0.008785426867665817,
+        "peak_distance_from_consensus": 0,
+        "stability_conservation_power": 0.8345999147200206,
+        "stability_margin": 10.773163286815137,
+        "stability_scale": 0.8661436337942623
+      }
+    },
+    "best_validation": {
+      "functional_double_holdout_nrmse": 0.8030782587532725,
+      "functional_double_holdout_spearman": 0.721245760098674,
+      "functional_double_nrmse": 0.8828281275774332,
+      "functional_double_spearman": 0.631716927140656,
+      "functional_epistasis_prediction_ks": 0.6761363636363636,
+      "functional_epistasis_prediction_spearman": 0.06598283072859346,
+      "functional_holdout_nrmse": 0.8657715856176589,
+      "functional_holdout_spearman": 0.5052113392775691,
+      "functional_ks": 0.16635249764373233,
+      "functional_reference_distance_to_peak": 4.0,
+      "functional_reference_fraction_of_peak": 0.866984254776528,
+      "functional_train_nrmse": 0.8518873406624121,
+      "unfolding_ks": null
+    },
+    "posterior_mean_validation": {
+      "functional_double_holdout_nrmse": 0.7519276751652998,
+      "functional_double_holdout_spearman": 0.6937403638606229,
+      "functional_double_nrmse": 0.8542455220771348,
+      "functional_double_spearman": 0.6131256878714506,
+      "functional_epistasis_prediction_ks": 0.7670454545454546,
+      "functional_epistasis_prediction_spearman": -0.15632621615672462,
+      "functional_holdout_nrmse": 0.8739776967472221,
+      "functional_holdout_spearman": 0.5035504940322185,
+      "functional_ks": 0.18242556422206171,
+      "functional_reference_distance_to_peak": 21.0,
+      "functional_reference_fraction_of_peak": 0.3370754354472371,
+      "functional_train_nrmse": 0.8587045813423875,
+      "unfolding_ks": null
+    },
+    "round_summaries": [
+      {
+        "attempts": 384,
+        "best_distance": 10.647723669846242,
+        "epsilon": 11.903277540850727,
+        "median_distance": 11.555726781045507,
+        "round_index": 0
+      },
+      {
+        "attempts": 512,
+        "best_distance": 10.909488070908742,
+        "epsilon": 12.98954818925291,
+        "median_distance": 11.428166707089575,
+        "round_index": 1
+      },
+      {
+        "attempts": 512,
+        "best_distance": 10.699477431943862,
+        "epsilon": 12.95129830940627,
+        "median_distance": 11.404954776632046,
+        "round_index": 2
+      },
+      {
+        "attempts": 512,
+        "best_distance": 10.959462173989081,
+        "epsilon": 12.973290170609731,
+        "median_distance": 11.430465116620859,
+        "round_index": 3
+      }
+    ]
+  },
+  "comparison_to_within_run_best_deterministic": {
+    "deterministic_branch": "predictive_richpair_shared_stability_readout",
+    "single_holdout_spearman_delta": -0.00023696280416896087,
+    "double_holdout_spearman_delta": 0.020474868948504477,
+    "epistasis_prediction_spearman_delta": 0.057924279110719804,
+    "functional_ks_delta": -0.011907454381733018,
+    "reference_fraction_of_peak_delta": -0.12027580602122945,
+    "reference_distance_to_peak_delta": 1.0
+  },
+  "comparison_to_run_024_best_stability_assay": {
+    "single_holdout_spearman_delta": -0.050746250951731686,
+    "double_holdout_spearman_delta": 0.23789409605276174,
+    "epistasis_prediction_spearman_delta": -0.47422740215137416,
+    "functional_ks_delta": -0.06707014077915649,
+    "reference_fraction_of_peak_delta": 0.8284386138566446,
+    "reference_distance_to_peak_delta": -46.0
+  },
+  "comparison_to_run_026_bayesian_best": {
+    "single_holdout_spearman_delta": 0.2125251039050718,
+    "double_holdout_spearman_delta": 0.15911193339500462,
+    "epistasis_prediction_spearman_delta": -0.04296720228923619,
+    "functional_ks_delta": -0.2002150698556644,
+    "reference_fraction_of_peak_delta": 0.7844189742104328,
+    "reference_distance_to_peak_delta": -53.0
+  },
+  "comparison_to_run_030_bayesian_best": {
+    "single_holdout_spearman_delta": 0.2108136309655113,
+    "double_holdout_spearman_delta": 0.35843354918285536,
+    "epistasis_prediction_spearman_delta": 0.0918930222320053,
+    "functional_ks_delta": -0.08634827696087294,
+    "reference_fraction_of_peak_delta": -0.13251209617212234,
+    "reference_distance_to_peak_delta": -1.0
+  },
+  "comparison_to_run_036_bayesian_best": {
+    "single_holdout_spearman_delta": 0.30713043920520455,
+    "double_holdout_spearman_delta": 0.46981061137537933,
+    "epistasis_prediction_spearman_delta": -0.19254101422342745,
+    "functional_ks_delta": -0.3298421615949809,
+    "reference_fraction_of_peak_delta": -0.11897405907116332,
+    "reference_distance_to_peak_delta": -2.0
+  },
+  "posterior_parameter_summary": {
+    "stability_scale": {
+      "weighted_mean": 0.9487757697268525,
+      "q05": 0.5409573153921455,
+      "q95": 1.4655887019266678
+    },
+    "stability_margin": {
+      "weighted_mean": 8.349635046018554,
+      "q05": 5.843485518137128,
+      "q95": 11.793230125399477
+    },
+    "blosum_blend": {
+      "weighted_mean": 0.5580729692467794,
+      "q05": 0.23868148120495714,
+      "q95": 0.7846902472697739
+    },
+    "stability_conservation_power": {
+      "weighted_mean": 0.9561454047629823,
+      "q05": 0.7617742512975998,
+      "q95": 1.2123752955625764
+    },
+    "functional_sigma_base": {
+      "weighted_mean": 19.278205483928833,
+      "q05": 10.753423423275061,
+      "q95": 28.648811150306827
+    },
+    "n_functional_dims": {
+      "weighted_mean": 4.039090139545406,
+      "q05": 3.0,
+      "q95": 6.0
+    },
+    "peak_distance_from_consensus": {
+      "weighted_mean": 1.8935810936625452,
+      "q05": 0.0,
+      "q95": 4.0
+    },
+    "epistasis_strength": {
+      "weighted_mean": 0.034253158100882836,
+      "q05": 0.0022911347878655755,
+      "q95": 0.07426420289405344
+    },
+    "empirical_pairwise_strength": {
+      "weighted_mean": 0.04393683704306086,
+      "q05": 0.003726453848631147,
+      "q95": 0.07855217958968572
+    },
+    "noise_amplitude": {
+      "weighted_mean": 0.00498981151507572,
+      "q05": 0.0005276939407696539,
+      "q95": 0.009753907193396064
+    }
+  },
+  "synthetic_truth_recovery": {
+    "moderate_epistatic": {
+      "best_distance": 0.16463949615129778,
+      "truths_within_q90": 10,
+      "truth_parameter_count": 10,
+      "misses": []
+    },
+    "flatter_low_epistasis": {
+      "best_distance": 0.2614262341323457,
+      "truths_within_q90": 10,
+      "truth_parameter_count": 10,
+      "misses": []
+    }
+  },
+  "hypothesis_effect": "weakens"
+}

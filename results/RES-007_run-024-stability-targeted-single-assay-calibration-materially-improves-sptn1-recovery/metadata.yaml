@@ -1,0 +1,44 @@
+id: RES-007
+title: RUN-024 stability-targeted single-assay calibration materially improves SPTN1
+  recovery
+status: completed
+created: '2026-05-12T17:04:54+10:00'
+owner: matthew-spence
+analyses:
+- ANA-007
+experiments:
+- EXP-007
+runs:
+- RUN-024
+supports: []
+weakens: []
+refutes: []
+motivates:
+- HYP-001
+supersedes: []
+summary: RUN-024 switched the SPTN1_CHICK single-assay Bayesian calibration to a stability-targeted
+  synthetic readout and materially improved holdout ranking, epistasis prediction,
+  and KS relative to RUN-022 while keeping the fitted reference far from the peak.
+  Because the run still targets one assay rather than a shared multi-assay regime,
+  it does not directly support HYP-001, but it does motivate the hypothesis by showing
+  that readout-stage misspecification was a major contributor to the earlier failure.
+artifacts:
+- results/RES-007_run-024-stability-targeted-single-assay-calibration-materially-improves-sptn1-recovery/metrics.json
+evidence_paths:
+- analyses/2026-05-12_ANA-007_run-024-single-assay-stability-readout-smc-abc-calibration-review/tables/run-024_key_metrics.md
+- data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/summary.json
+- data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/selected_panel.csv
+- data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/mavenn_assay_metrics.csv
+- data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/branch_validations.csv
+- data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/posterior_particles.csv
+- data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/posterior_rounds.csv
+- data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/posterior_parameter_summary.csv
+- data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/synthetic_truth_recovery.csv
+- data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012/per_assay_branch_fits.csv
+- results/RES-006_run-022-single-assay-bayesian-smc-abc-improves-on-the-shared-fit-but-still-weakens-hyp-001/metrics.json
+- results/RES-005_run-019-bayesian-smc-abc-recovers-nonzero-epistasis-but-still-weakens-hyp-001/metrics.json
+- experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/config.yaml
+- experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/runs/RUN-024.yaml
+compliance:
+  level: green
+  issues: []

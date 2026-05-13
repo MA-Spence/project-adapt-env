@@ -128,3 +128,112 @@ items:
   compliance:
     level: green
     issues: []
+- id: RES-007
+  title: RUN-024 stability-targeted single-assay calibration materially improves SPTN1
+    recovery
+  status: completed
+  created: '2026-05-12T17:04:54+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-007
+  experiments:
+  - EXP-007
+  runs:
+  - RUN-024
+  supports: []
+  weakens: []
+  refutes: []
+  motivates:
+  - HYP-001
+  supersedes: []
+  path: results/RES-007_run-024-stability-targeted-single-assay-calibration-materially-improves-sptn1-recovery
+  compliance:
+    level: green
+    issues: []
+- id: RES-008
+  title: RUN-026 biophysical-function readout does not improve PHOT_CHLRE recovery
+  status: completed
+  created: '2026-05-13T06:46:38+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-008
+  experiments:
+  - EXP-008
+  runs:
+  - RUN-026
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-008_run-026-biophysical-function-readout-does-not-improve-phot-chlre-recovery
+  compliance:
+    level: green
+    issues: []
+- id: RES-009
+  title: RUN-030 latent-activity observed-fitness readout does not rescue PHOT_CHLRE
+    recovery
+  status: completed
+  created: '2026-05-13T11:31:04+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-009
+  experiments:
+  - EXP-010
+  runs:
+  - RUN-030
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-009_run-030-latent-activity-observed-fitness-readout-does-not-rescue-phot-chlre-recovery
+  compliance:
+    level: green
+    issues: []
+- id: RES-010
+  title: RUN-036 explicit two-latent-trait validation-objective fit does not rescue
+    PHOT_CHLRE recovery
+  status: completed
+  created: '2026-05-13T15:48:07+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-010
+  experiments:
+  - EXP-012
+  runs:
+  - RUN-036
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-010_run-036-explicit-two-latent-trait-validation-objective-does-not-rescue-phot-chlre-recovery
+  compliance:
+    level: green
+    issues: []
+- id: RES-011
+  title: RUN-038 stability-readout control improves PHOT_CHLRE recovery but does not
+    fully rescue the assay
+  status: completed
+  created: '2026-05-14T07:04:48+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-011
+  experiments:
+  - EXP-011
+  runs:
+  - RUN-038
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-011_run-038-stability-readout-control-improves-phot-chlre-recovery-but-does-not-fully-rescue-the-assay
+  compliance:
+    level: green
+    issues: []

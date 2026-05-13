@@ -1,0 +1,91 @@
+id: RUN-023
+experiment: EXP-007
+target: lab-slurm
+target_profile:
+  display_name: HomeLab
+  cluster_name: homelab
+scheduler: slurm
+status: planned
+dry_run: true
+created: '2026-05-12T13:10:03+10:00'
+submitted_by: matthewspence
+git:
+  branch: main
+  commit: f71f9f8a816a29041cb5f4617c50573d15404de7
+  dirty: true
+dvc:
+  available: true
+  pointer_files:
+  - data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012.dvc
+  - data/processed/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010.dvc
+environment:
+  base_stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+    lock_sha256: 8514b12e1077154f1252ae3644603d7c3ee3a32c15a66a341d4515aa156a0cce
+  external_packages_lock:
+    path: environment/external-packages.lock.yaml
+    sha256: 805d8899ca31b32630b1cdb6ce77c6df8cfaca85a51c032ba529d3d506d4d6ed
+  external_packages:
+  - name: Adapt-Env
+    path: external/Adapt-Env
+    editable: true
+    exists: true
+    git_repo: true
+    branch: feat/predictive-joint-calibration
+    commit: 8ce716211160f83c0d4c3eaa13a9e0ffefde1814
+    dirty: true
+    detached_head: false
+    remote: https://github.com/MA-Spence/Adapt-Env.git
+    submodule: true
+    tracking_branch: null
+software_stack:
+  id: STACK-000
+  name: homelab-default
+  version: '2026.05'
+resources_requested:
+  cpus: 12
+  memory_gb: 24
+  gpus: 0
+  gpu_memory_expected_gb: null
+  walltime: '48:00:00'
+  jobfs_gb: 0
+resources_observed: {}
+paths:
+  experiment_dir: experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick
+  run_metadata: experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/runs/RUN-023.yaml
+  local_run_record_dir: experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/runs
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-023
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-023/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-023/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-023
+  remote_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-023/project
+staging:
+  manifest: experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/runs/RUN-023.manifest.yaml
+  mode: source-staged
+container:
+  runtime: native
+scheduler_script: experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/runs/RUN-023.slurm
+remote_scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-023/project/experiments/2026-05-12_EXP-007_proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/runs/RUN-023.slurm
+scheduler_job_id: null
+logs:
+  stdout: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-023/logs/stdout.txt
+  stderr: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-023/logs/stderr.txt
+outputs:
+  expected:
+  - 1) paired branch comparisons between the existing RUN-022-style controls and new
+    stability-readout controls on SPTN1_CHICK_Tsuboyama_2023_1TUD; 2) assay-specific
+    mavenn diagnostics; 3) SMC-ABC posterior particles and round diagnostics under
+    the stability-readout path; 4) synthetic-truth recovery metrics for the modified
+    calibration path; and 5) a structured summary.json
+  artifacts: []
+remote_cleanup:
+  eligible: true
+  status: not-requested
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,85 @@
+id: EXP-010
+type: experiment
+title: ProteinGym Single-Assay Latent-Activity-Observed-Fitness SMC-ABC Diagnostic
+  for PHOT_CHLRE
+slug: proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre
+status: planned
+created: '2026-05-13T10:24:50+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-007
+  previous_experiments:
+  - EXP-007
+  - EXP-008
+  motivating_results:
+  - RES-007
+  - RES-008
+question: Does fitting the PHOT_CHLRE multi-mutant activity assay through the new
+  observed-fitness composition path, with scalar fitness formed as a latent activity
+  readout rather than a collapsed post hoc score, improve recovery under the single-assay
+  SMC-ABC workflow?
+pre_experiment_prediction: If RES-008 failed partly because the previous activity
+  model still treated the assay readout as an auxiliary calibration view over a legacy
+  collapsed generator, then promoting activity to the public observed-fitness readout
+  and routing epistasis through the latent function layer should improve holdout ranking,
+  epistasis prediction, and reference-to-peak behavior on PHOT_CHLRE relative to the
+  earlier experiment.
+rationale: RES-007 showed that calibration improves when the fitted readout matches
+  the latent causal quantity. RES-008 then showed that the first PHOT_CHLRE stability-plus-function
+  implementation did not outperform the raw control, which suggests the remaining
+  mismatch may be structural rather than merely parametric. The new Adapt-Env observed-fitness
+  composition path now allows the scalar benchmark fitness itself to be generated
+  from latent molecular components instead of leaving activity as a special secondary
+  readout layered onto the historical collapsed score. This experiment returns to
+  the same multi-mutant PHOT_CHLRE assay used in EXP-008 and tests whether making
+  activity the actual observed fitness, with epistasis routed through the latent function
+  layer before collapse, improves empirical recovery under otherwise matched single-assay
+  calibration.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 12
+    memory_gb: 24
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - 1) PHOT_CHLRE deterministic and Bayesian validation metrics under the latent-activity
+    observed-fitness generator; 2) assay-specific `mavenn` diagnostics; 3) posterior
+    particles, round summaries, and synthetic-truth recovery for the new parameterization;
+    and 4) a structured `summary.json`
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: f71f9f8a816a29041cb5f4617c50573d15404de7
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

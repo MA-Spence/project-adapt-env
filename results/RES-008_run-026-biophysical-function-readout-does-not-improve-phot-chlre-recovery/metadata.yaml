@@ -1,0 +1,37 @@
+id: RES-008
+title: RUN-026 biophysical-function readout does not improve PHOT_CHLRE recovery
+status: completed
+created: '2026-05-13T06:46:38+10:00'
+owner: matthew-spence
+analyses:
+- ANA-008
+experiments:
+- EXP-008
+runs:
+- RUN-026
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: On the single functional ProteinGym assay PHOT_CHLRE_Chen_2023, the explicit
+  stability-plus-function readout did not outperform the paired raw-readout controls
+  across the preregistered combination of single-mutant holdout, double-mutant holdout,
+  epistasis prediction, and KS metrics, so the result weakens HYP-007.
+artifacts:
+- results/RES-008_run-026-biophysical-function-readout-does-not-improve-phot-chlre-recovery/metrics.json
+evidence_paths:
+- analyses/2026-05-13_ANA-008_run-026-single-assay-biophysical-function-readout-calibration-review/tables/run-026_key_metrics.md
+- data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/summary.json
+- data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/selected_panel.csv
+- data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/mavenn_assay_metrics.csv
+- data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/branch_validations.csv
+- data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/posterior_parameter_summary.csv
+- data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/posterior_rounds.csv
+- data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/synthetic_truth_recovery.csv
+- experiments/2026-05-12_EXP-008_proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/config.yaml
+- experiments/2026-05-12_EXP-008_proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/runs/RUN-026.yaml
+compliance:
+  level: green
+  issues: []

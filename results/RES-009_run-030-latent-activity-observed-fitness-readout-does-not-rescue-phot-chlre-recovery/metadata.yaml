@@ -1,0 +1,39 @@
+id: RES-009
+title: RUN-030 latent-activity observed-fitness readout does not rescue PHOT_CHLRE
+  recovery
+status: completed
+created: '2026-05-13T11:31:04+10:00'
+owner: matthew-spence
+analyses:
+- ANA-009
+experiments:
+- EXP-010
+runs:
+- RUN-030
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: On PHOT_CHLRE_Chen_2023, promoting activity to the public observed-fitness
+  readout did not improve the full empirical recovery package relative to either the
+  within-run activity-readout controls or the earlier RUN-026 biophysical-function
+  baseline.
+artifacts:
+- results/RES-009_run-030-latent-activity-observed-fitness-readout-does-not-rescue-phot-chlre-recovery/metrics.json
+evidence_paths:
+- analyses/2026-05-13_ANA-009_run-030-latent-activity-observed-fitness-calibration-review/tables/run-030_key_metrics.md
+- data/processed/proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/RUN-030/summary.json
+- data/processed/proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/RUN-030/selected_panel.csv
+- data/processed/proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/RUN-030/mavenn_assay_metrics.csv
+- data/processed/proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/RUN-030/branch_validations.csv
+- data/processed/proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/RUN-030/posterior_parameter_summary.csv
+- data/processed/proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/RUN-030/posterior_rounds.csv
+- data/processed/proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/RUN-030/synthetic_truth_recovery.csv
+- results/RES-008_run-026-biophysical-function-readout-does-not-improve-phot-chlre-recovery/metrics.json
+- experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/config.yaml
+- experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/runs/RUN-030.yaml
+compliance:
+  level: green
+  issues: []

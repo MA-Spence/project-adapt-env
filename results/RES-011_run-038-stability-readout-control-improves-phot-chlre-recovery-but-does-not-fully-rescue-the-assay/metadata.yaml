@@ -1,0 +1,43 @@
+id: RES-011
+title: RUN-038 stability-readout control improves PHOT_CHLRE recovery but does not
+  fully rescue the assay
+status: completed
+created: '2026-05-14T07:04:48+10:00'
+owner: matthew-spence
+analyses:
+- ANA-011
+experiments:
+- EXP-011
+runs:
+- RUN-038
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: On PHOT_CHLRE_Chen_2023, the simpler EXP-011 stability-readout control materially
+  improves single-mutant ranking, double-mutant ranking, and KS relative to the recent
+  PHOT Bayesian activity formulations, but epistasis prediction remains weak and the
+  best fit still sits too near the peak to count as a clean rescue.
+artifacts:
+- results/RES-011_run-038-stability-readout-control-improves-phot-chlre-recovery-but-does-not-fully-rescue-the-assay/metrics.json
+evidence_paths:
+- analyses/2026-05-14_ANA-011_run-038-single-assay-stability-readout-control-calibration-review/tables/run-038_key_metrics.md
+- data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/summary.json
+- data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/selected_panel.csv
+- data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/mavenn_assay_metrics.csv
+- data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/branch_validations.csv
+- data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/posterior_parameter_summary.csv
+- data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/posterior_rounds.csv
+- data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/synthetic_truth_recovery.csv
+- data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/target_features.csv
+- results/RES-007_run-024-stability-targeted-single-assay-calibration-materially-improves-sptn1-recovery/metrics.json
+- results/RES-008_run-026-biophysical-function-readout-does-not-improve-phot-chlre-recovery/metrics.json
+- results/RES-009_run-030-latent-activity-observed-fitness-readout-does-not-rescue-phot-chlre-recovery/metrics.json
+- results/RES-010_run-036-explicit-two-latent-trait-validation-objective-does-not-rescue-phot-chlre-recovery/metrics.json
+- experiments/2026-05-13_EXP-011_proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/config.yaml
+- experiments/2026-05-13_EXP-011_proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/runs/RUN-038.yaml
+compliance:
+  level: green
+  issues: []

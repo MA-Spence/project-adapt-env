@@ -1,0 +1,83 @@
+id: EXP-009
+type: experiment
+title: ProteinGym Paired KRAS Abundance-Binding Thermodynamic Diagnostic
+slug: proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic
+status: planned
+created: '2026-05-13T07:19:34+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-007
+  - EXP-008
+  motivating_results:
+  - RES-007
+  - RES-008
+question: Does replacing collapsed binding fitness with a paired abundance-plus-binding
+  thermodynamic readout improve empirical recovery on the matched KRAS ProteinGym
+  assays `RASK_HUMAN_Weng_2022_abundance` and `RASK_HUMAN_Weng_2022_binding-DARPin_K55`?
+pre_experiment_prediction: If `RES-008` failed mainly because `PHOT_CHLRE` fluorescence
+  is not a clean two-latent assay and because one readout leaves stability and function
+  weakly identifiable, then a paired KRAS abundance-plus-binding fit with a three-state
+  folded/unfolded/bound readout should improve binding holdout ranking, double-mutant
+  recovery, epistasis prediction, and reference-to-peak behavior relative to both
+  binding-only raw controls and paired raw-readout controls.
+rationale: '`RES-008` does not cleanly falsify the broader multi-latent idea in `HYP-007`;
+  it tests a fluorescence reporter whose score likely mixes folded fraction, FMN occupancy,
+  and chromophore photophysics, while providing only one measured phenotype to identify
+  multiple latent molecular traits. The literature points to a sharper causal test.
+  Otwinowski''s GB1 reanalysis and the KRAS `ddPCA` work from Weng et al. both show
+  that binding assays are better explained by explicit folding-plus-binding thermodynamic
+  models than by a collapsed scalar score, especially when orthogonal abundance data
+  and many double-mutant backgrounds are available. This experiment therefore moves
+  from the underidentified single-readout `PHOT_CHLRE` setting to a matched KRAS abundance-plus-binding
+  pair with substantial multi-mutant coverage, and compares raw collapsed baselines
+  against an explicit thermodynamic binding readout calibrated jointly across the
+  two assays.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 12
+    memory_gb: 24
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - 1) branch comparisons between binding-only and paired abundance-plus-binding fits
+    on the KRAS assays; 2) assay-specific `mavenn` diagnostics for abundance and DARPin
+    K55 binding; 3) fitted thermodynamic-readout parameters and predictive validation
+    metrics for each branch; and 4) a structured `summary.json`
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: f71f9f8a816a29041cb5f4617c50573d15404de7
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

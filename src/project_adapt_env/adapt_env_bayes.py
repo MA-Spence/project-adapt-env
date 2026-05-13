@@ -29,6 +29,8 @@ from adaptenv.calibration import (  # noqa: E402
     LandscapeCalibrator,
     _aggregate_synthetic_stats,
     _build_synthetic_landscape_for_summary,
+    _dfe_objective,
+    _double_epistasis_objective,
     _summarize_effect_distribution,
     _synthetic_summary_for_landscape,
     summarize_empirical_landscapes,
@@ -275,6 +277,37 @@ def restore_summary_target(
     )
 
 
+def build_validation_objective_target(
+    *,
+    landscapes: list[Any],
+    alignment_paths: list[Any],
+    wildtypes: list[Any],
+    options: CalibrationOptions,
+) -> SummaryTarget:
+    collection = summarize_empirical_landscapes(
+        landscapes,
+        kind="functional",
+        alignment_profiles=alignment_paths,
+        wildtypes=wildtypes,
+        options=options,
+    )
+    feature_names = [
+        "objective_core",
+        "objective_double",
+        "objective_total",
+    ]
+    observed_vector = np.zeros(len(feature_names), dtype=np.float64)
+    covariance = np.eye(len(feature_names), dtype=np.float64)
+    return SummaryTarget(
+        feature_names=feature_names,
+        observed_vector=observed_vector,
+        covariance=covariance,
+        inverse_covariance=np.linalg.pinv(covariance),
+        bootstrap_vectors=np.zeros((1, len(feature_names)), dtype=np.float64),
+        empirical_collection=collection,
+    )
+
+
 def _simulate_vector_once(
     *,
     summaries: list[Any],
@@ -344,6 +377,7 @@ class AdaptEnvSMCABCProblem:
         specs: list[ParameterSpec],
         selected_features: tuple[str, ...] = DEFAULT_FEATURES,
         replicates_per_particle: int = 1,
+        distance_mode: str = "summary_vector",
     ) -> None:
         self.target = target
         self.base_config = base_config
@@ -351,6 +385,7 @@ class AdaptEnvSMCABCProblem:
         self.specs = specs
         self.selected_features = selected_features
         self.replicates_per_particle = max(int(replicates_per_particle), 1)
+        self.distance_mode = str(distance_mode).strip().lower()
         self._cache: dict[tuple[tuple[str, float | int], ...], SimulationResult] = {}
 
     def _cache_key(self, parameters: dict[str, float | int]) -> tuple[tuple[str, float | int], ...]:
@@ -368,37 +403,90 @@ class AdaptEnvSMCABCProblem:
         if cache_key in self._cache:
             return self._cache[cache_key]
 
-        vectors = []
-        for replicate_index in range(self.replicates_per_particle):
-            replicate_options = replace(
-                self.options,
-                synthetic_seed=int(self.options.synthetic_seed) + 1009 * replicate_index,
-            )
-            vector = _simulate_vector_once(
-                summaries=list(self.target.empirical_collection.per_landscape),
-                base_config=self.base_config,
-                options=replicate_options,
-                updates=parameters,
-                selected_features=self.selected_features,
-            )
-            vectors.append(vector)
-        summary_vector = np.mean(np.stack(vectors, axis=0), axis=0)
-        delta = summary_vector - self.target.observed_vector
-        distance = float(
-            math.sqrt(
-                max(
-                    float(delta.T @ self.target.inverse_covariance @ delta) / max(delta.size, 1),
-                    0.0,
+        if self.distance_mode == "summary_vector":
+            vectors = []
+            for replicate_index in range(self.replicates_per_particle):
+                replicate_options = replace(
+                    self.options,
+                    synthetic_seed=int(self.options.synthetic_seed)
+                    + 1009 * replicate_index,
+                )
+                vector = _simulate_vector_once(
+                    summaries=list(self.target.empirical_collection.per_landscape),
+                    base_config=self.base_config,
+                    options=replicate_options,
+                    updates=parameters,
+                    selected_features=self.selected_features,
+                )
+                vectors.append(vector)
+            summary_vector = np.mean(np.stack(vectors, axis=0), axis=0)
+            delta = summary_vector - self.target.observed_vector
+            distance = float(
+                math.sqrt(
+                    max(
+                        float(
+                            delta.T
+                            @ self.target.inverse_covariance
+                            @ delta
+                        )
+                        / max(delta.size, 1),
+                        0.0,
+                    )
                 )
             )
-        )
+            extras = {
+                "delta": delta,
+                "replicate_count": self.replicates_per_particle,
+            }
+        elif self.distance_mode == "validation_objective":
+            vectors = []
+            for replicate_index in range(self.replicates_per_particle):
+                replicate_options = replace(
+                    self.options,
+                    synthetic_seed=int(self.options.synthetic_seed)
+                    + 1009 * replicate_index,
+                )
+                synthetic = _aggregate_synthetic_stats(
+                    list(self.target.empirical_collection.per_landscape),
+                    base_config=self.base_config,
+                    options=replicate_options,
+                    updates=parameters,
+                )
+                objective_core = _dfe_objective(
+                    synthetic,
+                    self.target.empirical_collection,
+                    options=replicate_options,
+                )
+                objective_double = _double_epistasis_objective(
+                    synthetic,
+                    self.target.empirical_collection,
+                    options=replicate_options,
+                )
+                objective_total = float(objective_core + objective_double)
+                vectors.append(
+                    np.asarray(
+                        [
+                            float(objective_core),
+                            float(objective_double),
+                            objective_total,
+                        ],
+                        dtype=np.float64,
+                    )
+                )
+            summary_vector = np.mean(np.stack(vectors, axis=0), axis=0)
+            distance = float(summary_vector[2])
+            extras = {
+                "replicate_count": self.replicates_per_particle,
+                "objective_core": float(summary_vector[0]),
+                "objective_double": float(summary_vector[1]),
+                "objective_total": float(summary_vector[2]),
+            }
+        else:
+            raise ValueError(f"Unsupported distance_mode: {self.distance_mode}")
         result = SimulationResult(
             distance=distance,
             summary_vector=summary_vector,
-            extras={
-                "delta": delta,
-                "replicate_count": self.replicates_per_particle,
-            },
+            extras=extras,
         )
         self._cache[cache_key] = result
         return result

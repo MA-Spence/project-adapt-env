@@ -1,0 +1,25 @@
+id: ANA-009
+title: RUN-030 latent-activity observed-fitness calibration review
+status: completed
+created: '2026-05-13T11:31:04+10:00'
+owner: matthew-spence
+experiments:
+- EXP-010
+runs:
+- RUN-030
+purpose: Assess whether the EXP-010 latent-activity observed-fitness generator improves
+  empirical recovery on PHOT_CHLRE relative to both its within-run controls and the
+  earlier RUN-026 biophysical-function baseline.
+path: analyses/2026-05-13_ANA-009_run-030-latent-activity-observed-fitness-calibration-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-13_ANA-009_run-030-latent-activity-observed-fitness-calibration-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-13_ANA-009_run-030-latent-activity-observed-fitness-calibration-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-030
+  produced_artifacts:
+  - analyses/2026-05-13_ANA-009_run-030-latent-activity-observed-fitness-calibration-review/tables/run-030_key_metrics.md
+compliance:
+  level: yellow
+  issues:
+  - ANA-009 is completed but none of its linked runs are completed.

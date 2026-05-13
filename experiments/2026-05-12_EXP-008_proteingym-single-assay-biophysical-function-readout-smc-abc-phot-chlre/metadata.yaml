@@ -1,0 +1,88 @@
+id: EXP-008
+type: experiment
+title: ProteinGym Single-Assay Biophysical-Function-Readout SMC-ABC Diagnostic for
+  PHOT_CHLRE
+slug: proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre
+status: planned
+created: '2026-05-12T20:52:41+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-007
+  previous_experiments:
+  - EXP-003
+  - EXP-004
+  - EXP-005
+  - EXP-006
+  - EXP-007
+  motivating_results:
+  - RES-003
+  - RES-004
+  - RES-005
+  - RES-006
+  - RES-007
+question: Does replacing collapsed synthetic fitness with an explicit stability-plus-function
+  biophysical readout improve empirical recovery for the multi-mutant PHOT_CHLRE_Chen_2023
+  functional assay under the same single-assay SMC-ABC workflow used in the most recent
+  stability round?
+pre_experiment_prediction: If the misspecification exposed by RUN-024 extends beyond
+  unfolding assays, then a functional assay fit through an explicit stability-plus-function
+  readout, with empirical pairwise overrides routed through the function layer, should
+  improve single-mutant holdout, double-mutant holdout, and epistasis-prediction metrics
+  relative to the paired raw-fitness controls on the same assay.
+rationale: RUN-024 showed that the recent single-assay improvement came from exposing
+  the right latent variable to calibration rather than from changing the optimizer
+  alone. HYP-007 makes the stronger claim that functional assays should not be fit
+  through the same collapsed scalar used for viability-style readouts. This experiment
+  therefore keeps the exact single-assay Bayesian workflow, control branches, and
+  resource profile from EXP-007, but moves to one activity assay with substantial
+  multi-mutant coverage and adds calibration branches that treat assay signal as a
+  stability-plus-function biophysical readout instead of collapsed synthetic fitness.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 12
+    memory_gb: 24
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '48:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - 1) paired branch comparisons between the existing raw-fitness controls and new
+    biophysical-function controls on PHOT_CHLRE_Chen_2023; 2) assay-specific mavenn
+    diagnostics; 3) SMC-ABC posterior particles and round diagnostics under the biophysical-function
+    path; 4) synthetic-truth recovery metrics for the modified calibration path; and
+    5) a structured summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: f71f9f8a816a29041cb5f4617c50573d15404de7
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

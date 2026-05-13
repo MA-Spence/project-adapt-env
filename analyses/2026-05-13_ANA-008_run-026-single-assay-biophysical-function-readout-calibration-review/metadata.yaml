@@ -1,0 +1,25 @@
+id: ANA-008
+title: RUN-026 single-assay biophysical-function-readout calibration review
+status: completed
+created: '2026-05-13T06:46:38+10:00'
+owner: matthew-spence
+experiments:
+- EXP-008
+runs:
+- RUN-026
+purpose: Assess whether the explicit stability-plus-function biophysical readout in
+  RUN-026 improves empirical recovery on PHOT_CHLRE_Chen_2023 relative to the paired
+  raw-readout controls and whether the result supports HYP-007.
+path: analyses/2026-05-13_ANA-008_run-026-single-assay-biophysical-function-readout-calibration-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-13_ANA-008_run-026-single-assay-biophysical-function-readout-calibration-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-13_ANA-008_run-026-single-assay-biophysical-function-readout-calibration-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-026
+  produced_artifacts:
+  - analyses/2026-05-13_ANA-008_run-026-single-assay-biophysical-function-readout-calibration-review/tables/run-026_key_metrics.md
+compliance:
+  level: yellow
+  issues:
+  - ANA-008 is completed but none of its linked runs are completed.

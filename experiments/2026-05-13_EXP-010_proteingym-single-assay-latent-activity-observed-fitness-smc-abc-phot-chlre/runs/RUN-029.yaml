@@ -1,0 +1,110 @@
+id: RUN-029
+experiment: EXP-010
+target: lab-slurm
+target_profile:
+  display_name: HomeLab
+  cluster_name: homelab
+scheduler: slurm
+status: planned
+dry_run: true
+created: '2026-05-13T10:28:00+10:00'
+last_submitted: '2026-05-13T10:28:00+10:00'
+submitted_by: matthewspence
+attempt: 1
+attempts:
+- attempt: 1
+  submitted_at: '2026-05-13T10:28:00+10:00'
+  status: planned
+  dry_run: true
+  scheduler_job_id: null
+  resumed: false
+  resume_from_attempt: null
+  checkpoint_path: null
+  checkpoint_dir: null
+resume:
+  enabled: false
+  checkpoint_path: null
+  checkpoint_dir: null
+  source: null
+  previous_attempt: null
+  previous_scheduler_job_id: null
+  previous_status: null
+git:
+  branch: main
+  commit: f71f9f8a816a29041cb5f4617c50573d15404de7
+  dirty: true
+dvc:
+  available: true
+  pointer_files:
+  - data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012.dvc
+  - data/processed/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010.dvc
+environment:
+  base_stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+    lock_sha256: cb34da18942b359c889eacd523eb8e584b8808a4ffe146a8e4d29c048de00859
+  external_packages_lock:
+    path: environment/external-packages.lock.yaml
+    sha256: e49ac236d21c7798ecdbba3d7dacdf4ccbd1b8beb715ee141b9976132424bcc8
+  external_packages:
+  - name: Adapt-Env
+    path: external/Adapt-Env
+    editable: true
+    exists: true
+    git_repo: true
+    branch: feat/multi-trait-latent-blocks
+    commit: 5bc54cd9d3a66e981da5d89effdcc50d462ef8e7
+    dirty: false
+    detached_head: false
+    remote: https://github.com/MA-Spence/Adapt-Env.git
+    submodule: true
+    tracking_branch: null
+software_stack:
+  id: STACK-000
+  name: homelab-default
+  version: '2026.05'
+resources_requested:
+  cpus: 12
+  memory_gb: 24
+  gpus: 0
+  gpu_memory_expected_gb: null
+  walltime: '24:00:00'
+  jobfs_gb: 0
+resources_observed: {}
+paths:
+  experiment_dir: experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre
+  run_metadata: experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/runs/RUN-029.yaml
+  local_run_record_dir: experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/runs
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-029
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-029/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-029/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-029
+  remote_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-029/project
+staging:
+  manifest: experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/runs/RUN-029.manifest.yaml
+  mode: source-staged
+container:
+  runtime: native
+scheduler_script: experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/runs/RUN-029.slurm
+remote_scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-029/project/experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/runs/RUN-029.slurm
+scheduler_job_id: null
+logs:
+  stdout: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-029/logs/stdout.txt
+  stderr: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-029/logs/stderr.txt
+outputs:
+  expected:
+  - 1) PHOT_CHLRE deterministic and Bayesian validation metrics under the latent-activity
+    observed-fitness generator; 2) assay-specific `mavenn` diagnostics; 3) posterior
+    particles, round summaries, and synthetic-truth recovery for the new parameterization;
+    and 4) a structured `summary.json`
+  artifacts: []
+remote_cleanup:
+  eligible: true
+  status: not-requested
+compliance:
+  level: green
+  issues: []

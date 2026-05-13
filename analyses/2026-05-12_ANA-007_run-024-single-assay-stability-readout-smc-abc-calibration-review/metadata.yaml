@@ -1,0 +1,24 @@
+id: ANA-007
+title: RUN-024 single-assay stability-readout SMC-ABC calibration review
+status: completed
+created: '2026-05-12T17:04:54+10:00'
+owner: matthew-spence
+experiments:
+- EXP-007
+runs:
+- RUN-024
+purpose: Assess whether the stability-targeted synthetic readout in RUN-024 materially
+  improves empirical recovery on SPTN1_CHICK_Tsuboyama_2023_1TUD relative to the earlier
+  raw-readout single-assay Bayesian fit and deterministic controls.
+path: analyses/2026-05-12_ANA-007_run-024-single-assay-stability-readout-smc-abc-calibration-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-12_ANA-007_run-024-single-assay-stability-readout-smc-abc-calibration-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-12_ANA-007_run-024-single-assay-stability-readout-smc-abc-calibration-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-024
+  produced_artifacts:
+  - analyses/2026-05-12_ANA-007_run-024-single-assay-stability-readout-smc-abc-calibration-review/tables/run-024_key_metrics.md
+compliance:
+  level: green
+  issues: []

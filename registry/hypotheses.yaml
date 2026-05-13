@@ -25,6 +25,10 @@ items:
   - EXP-004
   - EXP-005
   - EXP-006
+  - EXP-007
+  - EXP-008
+  - EXP-010
+  - EXP-011
   supported_by: []
   weakened_by:
   - RES-001
@@ -54,7 +58,8 @@ items:
     while keeping local DFE
   - global epistasis
   - and neutrality metrics within pre-specified tolerances of the biological mode.
-  tested_by: []
+  tested_by:
+  - EXP-008
   supported_by: []
   weakened_by: []
   refuted_by: []
@@ -80,7 +85,9 @@ items:
     conservation-effect correlation
   - covariation-epistasis enrichment
   - and natural-sequence plausibility metrics.
-  tested_by: []
+  tested_by:
+  - EXP-008
+  - EXP-009
   supported_by: []
   weakened_by: []
   refuted_by: []
@@ -191,13 +198,18 @@ items:
   - When orthogonal measurements such as abundance plus binding or stability plus
     activity are available, a shared latent decomposition should transfer across readouts
     better than a single scalar latent score.
-  tested_by: []
+  tested_by:
+  - EXP-010
+  - EXP-011
+  - EXP-012
   supported_by: []
-  weakened_by: []
+  weakened_by:
+  - RES-009
+  - RES-010
+  - RES-011
   refuted_by: []
   superseded_by: []
   path: docs/hypotheses.md
   compliance:
-    level: yellow
-    issues:
-    - 'Active hypothesis has no linked experiment: HYP-007'
+    level: green
+    issues: []

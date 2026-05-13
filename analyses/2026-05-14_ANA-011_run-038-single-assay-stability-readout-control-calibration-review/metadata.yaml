@@ -1,0 +1,24 @@
+id: ANA-011
+title: RUN-038 single-assay stability-readout control calibration review
+status: completed
+created: '2026-05-14T07:04:48+10:00'
+owner: matthew-spence
+experiments:
+- EXP-011
+runs:
+- RUN-038
+purpose: Assess whether the simpler EXP-011 stability-targeted single-latent control
+  recovers PHOT_CHLRE_Chen_2023 better than the recent PHOT activity-oriented formulations,
+  and determine what that control implies for HYP-007.
+path: analyses/2026-05-14_ANA-011_run-038-single-assay-stability-readout-control-calibration-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-14_ANA-011_run-038-single-assay-stability-readout-control-calibration-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-14_ANA-011_run-038-single-assay-stability-readout-control-calibration-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-038
+  produced_artifacts:
+  - analyses/2026-05-14_ANA-011_run-038-single-assay-stability-readout-control-calibration-review/tables/run-038_key_metrics.md
+compliance:
+  level: green
+  issues: []

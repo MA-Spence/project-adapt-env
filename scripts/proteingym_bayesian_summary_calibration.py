@@ -25,6 +25,7 @@ from project_adapt_env.adapt_env_bayes import (  # noqa: E402
     AdaptEnvSMCABCProblem,
     build_empirical_target,
     build_parameter_specs,
+    build_validation_objective_target,
     posterior_mean_updates,
     restore_summary_target,
     run_synthetic_truth_recovery,
@@ -340,12 +341,13 @@ def main() -> None:
         )
 
     abc_options = calibration_options_from_config(abc_cfg["calibration"])
-    selected_features = tuple(str(item) for item in abc_cfg.get("selected_features", [])) or None
-    if selected_features is None:
+    distance_mode = str(abc_cfg.get("distance_mode") or "summary_vector").strip().lower()
+    selected_features = tuple(str(item) for item in abc_cfg.get("selected_features", []))
+    if distance_mode == "summary_vector" and not selected_features:
         raise ValueError("abc.selected_features must be configured explicitly")
 
     target_cache_path = checkpoint_dir / "empirical_target.json"
-    if target_cache_path.is_file():
+    if distance_mode == "summary_vector" and target_cache_path.is_file():
         empirical_collection = summarize_empirical_landscapes(
             panel.raw_landscapes,
             kind="functional",
@@ -364,7 +366,7 @@ def main() -> None:
             total=int(abc_cfg["bootstrap_replicates"]),
             message="Restored cached empirical summary target.",
         )
-    else:
+    elif distance_mode == "summary_vector":
         report(
             stage="empirical_target_bootstrap",
             completed=0,
@@ -389,9 +391,27 @@ def main() -> None:
             ),
         )
         atomic_write_json(target_cache_path, serialize_summary_target(target))
+    elif distance_mode == "validation_objective":
+        target = build_validation_objective_target(
+            landscapes=panel.raw_landscapes,
+            alignment_paths=panel.alignment_paths,
+            wildtypes=panel.wildtypes,
+            options=abc_options,
+        )
+        report(
+            stage="empirical_target_bootstrap",
+            completed=1,
+            total=1,
+            message="Built validation-objective target.",
+        )
+    else:
+        raise ValueError(f"Unsupported abc.distance_mode: {distance_mode}")
 
     target_features_path = output_dir / "target_features.csv"
-    bootstrap_sd = np.std(target.bootstrap_vectors, axis=0, ddof=1)
+    if target.bootstrap_vectors.shape[0] >= 2:
+        bootstrap_sd = np.std(target.bootstrap_vectors, axis=0, ddof=1)
+    else:
+        bootstrap_sd = np.zeros(len(target.feature_names), dtype=np.float64)
     atomic_write_dataframe_csv(
         target_features_path,
         pd.DataFrame(
@@ -410,8 +430,9 @@ def main() -> None:
         base_config=base_config,
         options=abc_options,
         specs=specs,
-        selected_features=selected_features,
+        selected_features=selected_features or tuple(),
         replicates_per_particle=int(abc_cfg["replicates_per_particle"]),
+        distance_mode=distance_mode,
     )
     smc_result = run_smc_abc(
         specs=specs,
@@ -536,28 +557,46 @@ def main() -> None:
     atomic_write_dataframe_csv(branch_validations_path, pd.DataFrame(shared_branch_rows), index=False)
 
     synthetic_truth_path = output_dir / "synthetic_truth_recovery.csv"
-    recovery_rows = run_synthetic_truth_recovery(
-        target=target,
-        base_config=base_config,
-        options=abc_options,
-        specs=specs,
-        smc_config=SMCABCConfig(**recovery_cfg["smc"]),
-        backend=recovery_backend,
-        truths=list(recovery_cfg["truths"]),
-        replicates_per_particle=int(recovery_cfg["replicates_per_particle"]),
-        selected_features=selected_features,
-        checkpoint_dir=checkpoint_dir / "synthetic_truth",
-        partial_csv_path=synthetic_truth_path,
-        progress_callback=lambda label, event: report(
-            stage=f"synthetic_truth_{label}_round_{int(event['round_index'])}",
-            completed=int(event["completed_attempts"]),
-            total=int(event["total_attempts"]),
-            message=smc_event_message(event),
-            details={"label": label, **event},
-        ),
-        logger=logger,
-    )
-    atomic_write_dataframe_csv(synthetic_truth_path, pd.DataFrame(recovery_rows), index=False)
+    recovery_enabled = bool(recovery_cfg.get("enabled", True))
+    recovery_rows: list[dict[str, Any]] = []
+    if recovery_enabled:
+        if distance_mode != "summary_vector":
+            raise ValueError(
+                "synthetic_truth_recovery is only supported when abc.distance_mode=summary_vector"
+            )
+        recovery_rows = run_synthetic_truth_recovery(
+            target=target,
+            base_config=base_config,
+            options=abc_options,
+            specs=specs,
+            smc_config=SMCABCConfig(**recovery_cfg["smc"]),
+            backend=recovery_backend,
+            truths=list(recovery_cfg["truths"]),
+            replicates_per_particle=int(recovery_cfg["replicates_per_particle"]),
+            selected_features=selected_features,
+            checkpoint_dir=checkpoint_dir / "synthetic_truth",
+            partial_csv_path=synthetic_truth_path,
+            progress_callback=lambda label, event: report(
+                stage=f"synthetic_truth_{label}_round_{int(event['round_index'])}",
+                completed=int(event["completed_attempts"]),
+                total=int(event["total_attempts"]),
+                message=smc_event_message(event),
+                details={"label": label, **event},
+            ),
+            logger=logger,
+        )
+        atomic_write_dataframe_csv(
+            synthetic_truth_path,
+            pd.DataFrame(recovery_rows),
+            index=False,
+        )
+    else:
+        report(
+            stage="synthetic_truth_recovery",
+            completed=1,
+            total=1,
+            message="Synthetic truth recovery disabled for this run.",
+        )
 
     summary_payload = {
         "experiment_id": config["experiment"]["id"],
@@ -578,7 +617,9 @@ def main() -> None:
         "posterior_rounds_csv_path": str(posterior_rounds_path),
         "posterior_parameter_summary_csv_path": str(posterior_parameter_summary_path),
         "target_features_csv_path": str(target_features_path),
-        "synthetic_truth_recovery_csv_path": str(synthetic_truth_path),
+        "synthetic_truth_recovery_csv_path": (
+            str(synthetic_truth_path) if synthetic_truth_path.exists() else None
+        ),
         "panel": panel.summary_payload(),
         "target_features": {
             "feature_names": target.feature_names,
@@ -586,6 +627,7 @@ def main() -> None:
         },
         "branches": branch_summary,
         "smc_abc": {
+            "distance_mode": distance_mode,
             "selected_features": list(selected_features),
             "replicates_per_particle": int(abc_cfg["replicates_per_particle"]),
             "particle_count": int(abc_cfg["smc"]["n_particles"]),
