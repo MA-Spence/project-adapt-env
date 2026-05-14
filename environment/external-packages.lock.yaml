@@ -7,7 +7,7 @@ packages:
   exists: true
   git_repo: true
   branch: feat/multi-trait-latent-blocks
-  commit: 5bc54cd9d3a66e981da5d89effdcc50d462ef8e7
+  commit: a150cdcb5bb557bf8f9f9b7829b2fc36a8629b4e
   dirty: null
   detached_head: false
   remote: https://github.com/MA-Spence/Adapt-Env.git

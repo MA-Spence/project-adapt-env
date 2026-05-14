@@ -1,0 +1,41 @@
+id: RES-015
+title: RUN-041 flexible monotone two-latent PHOT diagnostic improves ranking but not
+  epistasis
+status: completed
+created: '2026-05-14T12:57:10+10:00'
+owner: matthew-spence
+analyses:
+- ANA-015
+experiments:
+- EXP-015
+runs:
+- RUN-041
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: 'On PHOT_CHLRE_Chen_2023, the EXP-015 flexible monotone stability/activity
+  readout diagnostic improved held-out single- and double-mutant ranking relative
+  to the explicit product/gate two-trait failure, and double-mutant ranking slightly
+  exceeded the stability-targeted validation-objective control. It did not rescue
+  epistasis prediction: epistasis Spearman was near zero and KS was poor. The result
+  suggests the hard-coded product/gate readout contributed to ranking failure, but
+  a flexible two-latent monotone surface is still not a sufficient HYP-007 rescue.'
+artifacts: []
+evidence_paths:
+- analyses/2026-05-14_ANA-015_run-041-phot-flexible-monotone-two-latent-readout-diagnostic-review/tables/run-041_key_metrics.md
+- data/processed/proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/RUN-041/summary.json
+- data/processed/proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/RUN-041/selected_panel.csv
+- data/processed/proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/RUN-041/mavenn_assay_metrics.csv
+- data/processed/proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/RUN-041/model_validations.csv
+- data/processed/proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/RUN-041/progress.json
+- experiments/2026-05-14_EXP-015_proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/config.yaml
+- experiments/2026-05-14_EXP-015_proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/runs/RUN-041.yaml
+- scripts/proteingym_phot_structural_mismatch_diagnostic.py
+- results/RES-013_run-039-stability-readout-validation-objective-improves-phot-recovery/metrics.json
+- results/RES-014_run-040-explicit-two-trait-replicate-reproduces-phot-validation-objective-failure/metrics.json
+compliance:
+  level: green
+  issues: []

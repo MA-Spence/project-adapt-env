@@ -1,0 +1,81 @@
+{
+  "run_id": "RUN-028",
+  "experiment_id": "EXP-009",
+  "analysis_id": "ANA-012",
+  "result_id": "RES-012",
+  "assays": {
+    "abundance": {
+      "dms_id": "RASK_HUMAN_Weng_2022_abundance",
+      "total_variants": 26012,
+      "single_mutants": 3066,
+      "multiple_mutants": 22946,
+      "mavenn_test_spearman": 0.8177858789144437,
+      "mavenn_test_nrmse": 0.6144510232638927
+    },
+    "binding": {
+      "dms_id": "RASK_HUMAN_Weng_2022_binding-DARPin_K55",
+      "total_variants": 24873,
+      "single_mutants": 3084,
+      "multiple_mutants": 21789,
+      "mavenn_test_spearman": 0.9332335249209058,
+      "mavenn_test_nrmse": 0.36206399066092215
+    }
+  },
+  "branches": {
+    "binding_only_raw": {
+      "abundance_ks": null,
+      "binding_functional_ks": 0.5064204513270094,
+      "single_holdout_spearman": 0.3076425233970508,
+      "double_holdout_spearman": 0.1949177087772567,
+      "epistasis_prediction_spearman": 0.10577056372957681,
+      "epistasis_prediction_ks": 0.6729296141060847,
+      "reference_fraction_of_peak": 1.0,
+      "reference_distance_to_peak": 0.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.0
+    },
+    "binding_only_biophysical_binding": {
+      "abundance_ks": null,
+      "binding_functional_ks": 0.3841936781684321,
+      "single_holdout_spearman": 0.29299643810238973,
+      "double_holdout_spearman": 0.29811980606907956,
+      "epistasis_prediction_spearman": 0.17208474013728903,
+      "epistasis_prediction_ks": 0.4809998555122092,
+      "reference_fraction_of_peak": 0.9989855152732714,
+      "reference_distance_to_peak": 1.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.025
+    },
+    "paired_abundance_binding_raw": {
+      "abundance_ks": 0.5820884183644772,
+      "binding_functional_ks": 0.38143370471878846,
+      "single_holdout_spearman": 0.26478427081879424,
+      "double_holdout_spearman": 0.2522321824624947,
+      "epistasis_prediction_spearman": 0.10411359220675596,
+      "epistasis_prediction_ks": 0.48820143884892087,
+      "reference_fraction_of_peak": 0.9986108323758602,
+      "reference_distance_to_peak": 6.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.0
+    },
+    "paired_abundance_binding_biophysical_binding": {
+      "abundance_ks": 0.831677890441639,
+      "binding_functional_ks": 0.2584077338806076,
+      "single_holdout_spearman": 0.104735739415741,
+      "double_holdout_spearman": 0.14446672980976102,
+      "epistasis_prediction_spearman": 0.2873165336365003,
+      "epistasis_prediction_ks": 0.4277431511813306,
+      "reference_fraction_of_peak": 0.9992230601222587,
+      "reference_distance_to_peak": 6.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.05
+    }
+  },
+  "interpretation": {
+    "best_binding_ks_branch": "paired_abundance_binding_biophysical_binding",
+    "best_epistasis_spearman_branch": "paired_abundance_binding_biophysical_binding",
+    "best_single_holdout_spearman_branch": "binding_only_raw",
+    "best_double_holdout_spearman_branch": "binding_only_biophysical_binding",
+    "hypothesis_effect": "weakens HYP-007 for the current paired KRAS thermodynamic implementation"
+  }
+}

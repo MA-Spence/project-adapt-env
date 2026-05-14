@@ -1,0 +1,36 @@
+id: RES-019
+title: RUN-053 KCNJ2 paired state-function diagnostic does not improve function recovery
+status: completed
+created: '2026-05-14T15:24:12+10:00'
+owner: matthew-spence
+analyses:
+- ANA-019
+experiments:
+- EXP-019
+runs:
+- RUN-053
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: On matched KCNJ2_MOUSE surface trafficking and ion-conduction single-mutant
+  assays, paired state/function branches did not improve function holdout recovery
+  over the function-only branch and left the reference near the peak. The result weakens
+  the current HYP-007 implementation for this KCNJ2 diagnostic, with the caveat that
+  the function observation layer itself was weak, and does not directly update HYP-001.
+artifacts: []
+evidence_paths:
+- analyses/2026-05-14_ANA-019_run-053-kcnj2-surface-function-paired-latent-trait-diagnostic-review/tables/run-053_key_metrics.md
+- data/processed/proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/RUN-053/summary.json
+- data/processed/proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/RUN-053/selected_panel.csv
+- data/processed/proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/RUN-053/mavenn_assay_metrics.csv
+- data/processed/proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/RUN-053/paired_readout_correlations.csv
+- data/processed/proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/RUN-053/branch_validations.csv
+- data/processed/proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/RUN-053.dvc
+- experiments/2026-05-14_EXP-019_proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/config.yaml
+- experiments/2026-05-14_EXP-019_proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/runs/RUN-053.yaml
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,42 @@
+id: RES-016
+title: RUN-042 residual photophysical trait improves double ranking but not PHOT epistasis
+status: completed
+created: '2026-05-14T13:06:11+10:00'
+owner: matthew-spence
+analyses:
+- ANA-016
+experiments:
+- EXP-016
+runs:
+- RUN-042
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: On PHOT_CHLRE_Chen_2023, the EXP-016 stability-first residual-trait diagnostic
+  improved double-mutant holdout ranking after fitting an additional photophysical
+  residual trait, but it slightly reduced single-mutant ranking and did not rescue
+  epistasis prediction. The sparse pair-residual layer learned 133 residual effects
+  yet produced the same held-out metrics as the residual-trait model, so the run does
+  not support sparse residual epistasis as the missing PHOT structure. The result
+  weakens HYP-007 as a complete empirical recovery claim while preserving residual
+  readout structure as a narrower contributor to the mismatch.
+artifacts: []
+evidence_paths:
+- analyses/2026-05-14_ANA-016_run-042-phot-stability-first-residual-trait-sparse-residual-diagnostic-review/tables/run-042_key_metrics.md
+- data/processed/proteingym-phot-photophysical-trait-sparse-residual-diagnostic/RUN-042/summary.json
+- data/processed/proteingym-phot-photophysical-trait-sparse-residual-diagnostic/RUN-042/selected_panel.csv
+- data/processed/proteingym-phot-photophysical-trait-sparse-residual-diagnostic/RUN-042/mavenn_assay_metrics.csv
+- data/processed/proteingym-phot-photophysical-trait-sparse-residual-diagnostic/RUN-042/model_validations.csv
+- data/processed/proteingym-phot-photophysical-trait-sparse-residual-diagnostic/RUN-042/progress.json
+- experiments/2026-05-14_EXP-016_proteingym-phot-photophysical-trait-sparse-residual-diagnostic/config.yaml
+- experiments/2026-05-14_EXP-016_proteingym-phot-photophysical-trait-sparse-residual-diagnostic/runs/RUN-042.yaml
+- scripts/proteingym_phot_structural_mismatch_diagnostic.py
+- results/RES-013_run-039-stability-readout-validation-objective-improves-phot-recovery/metrics.json
+- results/RES-014_run-040-explicit-two-trait-replicate-reproduces-phot-validation-objective-failure/metrics.json
+- results/RES-015_run-041-flexible-monotone-two-latent-phot-diagnostic-improves-ranking-not-epistasis/metrics.json
+compliance:
+  level: green
+  issues: []

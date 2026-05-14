@@ -1,0 +1,87 @@
+experiment_id: EXP-017
+title: PHOT Oracle Global-Epistasis Baseline
+stack: STACK-000
+target: lab-slurm
+experiment:
+  id: EXP-017
+
+proteingym:
+  version: v1.3
+  reference_csv_url: https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/main/reference_files/DMS_substitutions.csv
+  substitutions_parquet_url: https://proteingym.s3.us-east-2.amazonaws.com/DMS_substitutions.parquet
+  reference_csv_path: data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  substitutions_parquet_path: data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  assay_output_dir: data/raw/proteingym/v1.3/assays
+
+panel:
+  panel_size: 1
+  assays_per_taxon: 1
+  allowed_taxa:
+    - Eukaryote
+  coarse_selection_type: Activity
+  selection_type: FACS
+  require_multiple_mutants: true
+  min_single_mutants: 1000
+  min_multiple_mutants: 30000
+  max_sequence_length: 140
+  assay_ids:
+    - PHOT_CHLRE_Chen_2023
+
+mmseqs:
+  alignment_dir: data/interim/proteingym_mmseqs_alignments
+  cache_dir: data/interim/proteingym_mmseqs_cache
+  max_alignment_sequences: 512
+  timeout_seconds: 20.0
+  poll_interval_seconds: 5.0
+  max_retries: 6
+
+mavenn:
+  alphabet: protein
+  regression_type: GE
+  gpmap_type: additive
+  ge_nonlinearity_type: nonlinear
+  ge_noise_model_type: SkewedT
+  ge_nonlinearity_monotonic: true
+  ge_heteroskedasticity_order: 2
+  theta_regularization: 0.0001
+  eta_regularization: 0.0001
+  max_mutation_count: 3
+  max_variants_per_assay: 12000
+  sample_seed: 17
+  test_holdout_modulo: 10
+  test_holdout_remainder: 0
+  report_information_metrics: false
+  validation_fraction: 0.1
+  epochs: 60
+  learning_rate: 0.005
+  early_stopping_patience: 8
+  batch_size: 256
+
+calibration_max_mutation_count: 5
+
+diagnostic:
+  mode: oracle_global_epistasis
+  max_train_mutation_count: 5
+  max_train_variants: 24000
+  sample_seed: 17
+  splits:
+    single_holdout_modulo: 5
+    single_holdout_remainder: 0
+    double_holdout_modulo: 5
+    double_holdout_remainder: 0
+  model:
+    ridge_alpha: 2.0
+    n_bins: 40
+    max_epistasis_pairs: 30000
+
+quick:
+  mavenn:
+    max_variants_per_assay: 2000
+    epochs: 5
+    early_stopping_patience: 2
+    batch_size: 128
+  diagnostic:
+    max_train_variants: 4000
+    model:
+      n_bins: 12
+      max_epistasis_pairs: 2000

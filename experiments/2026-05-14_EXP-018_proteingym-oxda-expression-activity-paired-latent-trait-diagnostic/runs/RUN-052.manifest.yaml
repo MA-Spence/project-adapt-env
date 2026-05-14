@@ -1,0 +1,29 @@
+run: RUN-052
+target: lab-slurm
+experiment: EXP-018
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic
+  run_script: experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/run.sh
+inputs:
+  declared_files: []
+  datasets: []
+outputs:
+  expected:
+  - paired readout correlations
+  - MAVE-NN assay diagnostics
+  - branch-level state/function calibration metrics
+  - and a summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-052/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-052
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-052/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-052/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-052
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-052/project/experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-052/project/experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/runs/RUN-052.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

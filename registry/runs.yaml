@@ -330,7 +330,7 @@ items:
 - id: RUN-026
   experiment: EXP-008
   target: lab-slurm
-  status: failed
+  status: completed
   dry_run: false
   created: '2026-05-12T21:05:00+10:00'
   path: experiments/2026-05-12_EXP-008_proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/runs/RUN-026.yaml
@@ -388,7 +388,7 @@ items:
 - id: RUN-030
   experiment: EXP-010
   target: lab-slurm
-  status: failed
+  status: completed
   dry_run: false
   created: '2026-05-13T10:28:06+10:00'
   path: experiments/2026-05-13_EXP-010_proteingym-single-assay-latent-activity-observed-fitness-smc-abc-phot-chlre/runs/RUN-030.yaml
@@ -532,3 +532,153 @@ items:
     - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/checkpoints/synthetic_truth/synthetic_truth_moderate_epistatic.json'
     - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/prepared_assay.csv'
     - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-stability-readout-control-smc-abc-phot-chlre/RUN-038/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/mavenn_metrics.json'
+- id: RUN-039
+  experiment: EXP-013
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-14T09:43:11+10:00'
+  path: experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/runs/RUN-039.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-040
+  experiment: EXP-014
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-14T09:44:38+10:00'
+  path: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/runs/RUN-040.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-041
+  experiment: EXP-015
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-14T09:46:00+10:00'
+  path: experiments/2026-05-14_EXP-015_proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/runs/RUN-041.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-042
+  experiment: EXP-016
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-14T09:47:30+10:00'
+  path: experiments/2026-05-14_EXP-016_proteingym-phot-photophysical-trait-sparse-residual-diagnostic/runs/RUN-042.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-043
+  experiment: EXP-017
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-14T09:48:58+10:00'
+  path: experiments/2026-05-14_EXP-017_proteingym-phot-oracle-global-epistasis-baseline/runs/RUN-043.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-044
+  experiment: EXP-018
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-14T14:24:42+10:00'
+  path: experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/runs/RUN-044.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-045
+  experiment: EXP-019
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-14T14:24:46+10:00'
+  path: experiments/2026-05-14_EXP-019_proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/runs/RUN-045.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-046
+  experiment: EXP-018
+  target: lab-slurm
+  status: failed
+  dry_run: false
+  created: '2026-05-14T14:25:03+10:00'
+  path: experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/runs/RUN-046.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-047
+  experiment: EXP-019
+  target: lab-slurm
+  status: failed
+  dry_run: false
+  created: '2026-05-14T14:27:35+10:00'
+  path: experiments/2026-05-14_EXP-019_proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/runs/RUN-047.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-048
+  experiment: EXP-017
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-14T14:28:55+10:00'
+  path: experiments/2026-05-14_EXP-017_proteingym-phot-oracle-global-epistasis-baseline/runs/RUN-048.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-049
+  experiment: EXP-018
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-14T14:31:20+10:00'
+  path: experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/runs/RUN-049.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-050
+  experiment: EXP-019
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-05-14T14:31:24+10:00'
+  path: experiments/2026-05-14_EXP-019_proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/runs/RUN-050.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-051
+  experiment: EXP-018
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-14T14:31:25+10:00'
+  path: experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/runs/RUN-051.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-052
+  experiment: EXP-018
+  target: lab-slurm
+  status: failed
+  dry_run: false
+  created: '2026-05-14T14:31:30+10:00'
+  path: experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/runs/RUN-052.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-053
+  experiment: EXP-019
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-05-14T14:35:49+10:00'
+  path: experiments/2026-05-14_EXP-019_proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/runs/RUN-053.yaml
+  compliance:
+    level: green
+    issues: []

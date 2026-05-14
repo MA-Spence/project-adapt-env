@@ -1,0 +1,73 @@
+id: EXP-015
+type: experiment
+title: PHOT Flexible Monotone Two-Latent Readout Diagnostic
+slug: proteingym-phot-flexible-monotone-two-latent-readout-diagnostic
+status: planned
+created: '2026-05-14T09:31:10+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-011
+  - EXP-012
+  motivating_results:
+  - RES-010
+  - RES-011
+question: Does replacing the forced stability-gate times readout-capacity collapse
+  with a flexible monotone two-latent readout surface improve PHOT_CHLRE recovery?
+pre_experiment_prediction: If the structural mismatch is mainly the imposed product/gate
+  readout, then a constrained monotone readout over stability and readout-trait scores
+  should improve held-out ranking and epistasis prediction without requiring a near-peak
+  reference solution.
+rationale: RES-010 tested the explicit two-trait implementation but forced the public
+  scalar to stability_gate * trait:readout:capacity. RES-011 suggests stability alone
+  is a strong predictive surrogate. This experiment isolates whether the failure is
+  the hard-coded nonlinear collapse rather than the existence of two latent traits.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 6
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - PHOT panel preparation
+  - fitted monotone two-latent readout diagnostic metrics
+  - held-out single/double ranking metrics
+  - epistasis-prediction metrics
+  - and summary.json.
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 27145290866b73761dd2ad4b90b0c382cf8b9c6b
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

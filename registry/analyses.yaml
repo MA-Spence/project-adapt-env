@@ -101,9 +101,8 @@ items:
   - RUN-026
   path: analyses/2026-05-13_ANA-008_run-026-single-assay-biophysical-function-readout-calibration-review
   compliance:
-    level: yellow
-    issues:
-    - ANA-008 is completed but none of its linked runs are completed.
+    level: green
+    issues: []
 - id: ANA-009
   title: RUN-030 latent-activity observed-fitness calibration review
   status: completed
@@ -115,9 +114,8 @@ items:
   - RUN-030
   path: analyses/2026-05-13_ANA-009_run-030-latent-activity-observed-fitness-calibration-review
   compliance:
-    level: yellow
-    issues:
-    - ANA-009 is completed but none of its linked runs are completed.
+    level: green
+    issues: []
 - id: ANA-010
   title: RUN-036 explicit two-latent-trait validation-objective calibration review
   status: completed
@@ -141,6 +139,110 @@ items:
   runs:
   - RUN-038
   path: analyses/2026-05-14_ANA-011_run-038-single-assay-stability-readout-control-calibration-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-012
+  title: RUN-028 paired KRAS abundance-binding thermodynamic diagnostic review
+  status: completed
+  created: '2026-05-14T09:56:06+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-009
+  runs:
+  - RUN-028
+  path: analyses/2026-05-14_ANA-012_run-028-paired-kras-abundance-binding-thermodynamic-diagnostic-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-013
+  title: RUN-039 PHOT stability-readout validation-objective control review
+  status: completed
+  created: '2026-05-14T11:56:50+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-013
+  runs:
+  - RUN-039
+  path: analyses/2026-05-14_ANA-013_run-039-phot-stability-readout-validation-objective-control-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-014
+  title: RUN-040 PHOT explicit two-trait validation-objective replicate review
+  status: completed
+  created: '2026-05-14T12:44:08+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-014
+  runs:
+  - RUN-040
+  path: analyses/2026-05-14_ANA-014_run-040-phot-explicit-two-trait-validation-objective-replicate-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-015
+  title: RUN-041 PHOT flexible monotone two-latent readout diagnostic review
+  status: completed
+  created: '2026-05-14T12:57:02+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-015
+  runs:
+  - RUN-041
+  path: analyses/2026-05-14_ANA-015_run-041-phot-flexible-monotone-two-latent-readout-diagnostic-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-016
+  title: RUN-042 PHOT stability-first residual-trait sparse-residual diagnostic review
+  status: completed
+  created: '2026-05-14T13:06:04+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-016
+  runs:
+  - RUN-042
+  path: analyses/2026-05-14_ANA-016_run-042-phot-stability-first-residual-trait-sparse-residual-diagnostic-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-017
+  title: RUN-043 PHOT oracle global-epistasis baseline review
+  status: completed
+  created: '2026-05-14T13:14:24+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-017
+  runs:
+  - RUN-043
+  path: analyses/2026-05-14_ANA-017_run-043-phot-oracle-global-epistasis-baseline-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-018
+  title: RUN-051 OXDA expression-activity paired latent trait diagnostic review
+  status: completed
+  created: '2026-05-14T15:10:04+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-018
+  runs:
+  - RUN-051
+  path: analyses/2026-05-14_ANA-018_run-051-oxda-expression-activity-paired-latent-trait-diagnostic-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-019
+  title: RUN-053 KCNJ2 surface-function paired latent trait diagnostic review
+  status: completed
+  created: '2026-05-14T15:24:03+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-019
+  runs:
+  - RUN-053
+  path: analyses/2026-05-14_ANA-019_run-053-kcnj2-surface-function-paired-latent-trait-diagnostic-review
   compliance:
     level: green
     issues: []

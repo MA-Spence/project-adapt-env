@@ -1,0 +1,40 @@
+id: RES-014
+title: RUN-040 explicit two-trait replicate reproduces PHOT validation-objective failure
+status: completed
+created: '2026-05-14T12:46:13+10:00'
+owner: matthew-spence
+analyses:
+- ANA-014
+experiments:
+- EXP-014
+runs:
+- RUN-040
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: 'On PHOT_CHLRE_Chen_2023, the EXP-014 explicit two-trait validation-objective
+  replicate reproduced the RUN-036 failure pattern almost exactly: single- and double-mutant
+  holdout ranking remained weak, functional KS worsened, the fitted reference stayed
+  near the peak, and empirical pairwise strength again sat at the top of its prior.
+  This strengthens the evidence that the current PHOT explicit two-trait implementation
+  is structurally mismatched rather than just noisy.'
+artifacts: []
+evidence_paths:
+- analyses/2026-05-14_ANA-014_run-040-phot-explicit-two-trait-validation-objective-replicate-review/tables/run-040_key_metrics.md
+- data/processed/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040/summary.json
+- data/processed/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040/selected_panel.csv
+- data/processed/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040/mavenn_assay_metrics.csv
+- data/processed/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040/branch_validations.csv
+- data/processed/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040/posterior_parameter_summary.csv
+- data/processed/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040/posterior_rounds.csv
+- data/processed/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040/target_features.csv
+- results/RES-010_run-036-explicit-two-latent-trait-validation-objective-does-not-rescue-phot-chlre-recovery/metrics.json
+- results/RES-013_run-039-stability-readout-validation-objective-improves-phot-recovery/metrics.json
+- experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/config.yaml
+- experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/runs/RUN-040.yaml
+compliance:
+  level: green
+  issues: []

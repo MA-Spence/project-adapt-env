@@ -5,7 +5,7 @@ target_profile:
   display_name: HomeLab
   cluster_name: homelab
 scheduler: slurm
-status: failed
+status: completed
 dry_run: false
 created: '2026-05-13T10:28:06+10:00'
 last_submitted: '2026-05-13T10:28:06+10:00'

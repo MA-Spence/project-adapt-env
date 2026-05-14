@@ -2,7 +2,8 @@
 
 ## HYP-001: Local-Protein-Landscape-Statistics-Without-Exact-Reconstruction
 
-- Status: active
+- Status: superseded
+- Superseded by: CLAIM-001
 - Owner: matthew-spence
 - Aims: AIM-001
 
@@ -233,7 +234,8 @@ Falsification criteria:
 
 ## HYP-007: Multiple-Latent-Molecular-Phenotypes-Improve-Empirical-Recovery
 
-- Status: active
+- Status: superseded
+- Superseded by: CLAIM-002
 - Owner: matthew-spence
 - Aims: AIM-001
 

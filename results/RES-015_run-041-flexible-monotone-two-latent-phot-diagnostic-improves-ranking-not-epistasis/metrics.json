@@ -1,0 +1,85 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "assay_taxon": "Eukaryote",
+  "assay_selection_type": "FACS",
+  "assay_coarse_selection_type": "Activity",
+  "assay_sequence_length": 118,
+  "assay_total_variants": 167529,
+  "assay_single_mutants": 2122,
+  "assay_multiple_mutants": 165407,
+  "mavenn_test_metrics": {
+    "fit_variant_count": 3276,
+    "train_variant_count": 2966,
+    "test_variant_count": 310,
+    "nrmse": 0.9470804025580183,
+    "spearman": 0.6573950637854896,
+    "wildtype_phi": 0.7852845788002014,
+    "wildtype_yhat": 1.3067844187324762
+  },
+  "diagnostic_semantics": {
+    "mode": "flexible_monotone_two_latent",
+    "is_full_adaptenv_landscape_fit": false,
+    "stability_coordinate": "alignment_frequency_proxy",
+    "activity_coordinate": "ridge_additive_mutation_score",
+    "readout": "monotone_2d_binned_surface",
+    "functional_ks_available": false,
+    "reference_geometry_available": false,
+    "synthetic_truth_recovery_available": false
+  },
+  "diagnostic_configuration": {
+    "max_train_mutation_count": 5,
+    "max_train_variants": 24000,
+    "train_variant_count": 15997,
+    "single_holdout_count": 404,
+    "double_holdout_count": 43,
+    "ridge_alpha": 2.0,
+    "n_bins_2d": 16,
+    "max_epistasis_pairs": 30000
+  },
+  "model_validations": {
+    "flexible_monotone_stability_activity_surface": {
+      "single_holdout": {
+        "count": 404,
+        "rmse": 0.4345608951795156,
+        "nrmse": 1.2087461938015138,
+        "pearson": 0.3642990604125561,
+        "spearman": 0.47304783884320745
+      },
+      "double_holdout": {
+        "count": 43,
+        "rmse": 0.13450367530775728,
+        "nrmse": 0.7168866194126731,
+        "pearson": 0.8318838623488192,
+        "spearman": 0.8066719253783079
+      },
+      "epistasis_prediction": {
+        "count": 43,
+        "spearman": 0.03456002587489562,
+        "ks": 0.813953488372093
+      }
+    }
+  },
+  "comparison_to_run_040_explicit_product_gate_two_trait_best": {
+    "single_holdout_spearman_delta": 0.2749669387708429,
+    "double_holdout_spearman_delta": 0.5546130228750001,
+    "epistasis_prediction_spearman_delta": -0.22973428692271244,
+    "epistasis_prediction_ks_delta": 0.34804439746300214,
+    "functional_ks_delta": null,
+    "reference_fraction_of_peak_delta": null,
+    "reference_distance_to_peak_delta": null
+  },
+  "comparison_to_run_039_stability_validation_objective_best": {
+    "single_holdout_spearman_delta": -0.033285064984920565,
+    "double_holdout_spearman_delta": 0.02387821585009331,
+    "epistasis_prediction_spearman_delta": -0.599835747842912,
+    "epistasis_prediction_ks_delta": 0.06395348837209303,
+    "functional_ks_delta": null,
+    "reference_fraction_of_peak_delta": null,
+    "reference_distance_to_peak_delta": null
+  },
+  "scientific_interpretation": {
+    "ranking_signal": "The flexible monotone readout substantially improves held-out single and double ranking relative to the product/gate two-trait fit.",
+    "epistasis_signal": "Epistasis prediction remains poor and is worse than both the product/gate two-trait replicate and the stability-targeted control.",
+    "hypothesis_effect": "Weakens HYP-007 as a complete empirical recovery claim while preserving readout misspecification as a narrower contributor to the PHOT structural mismatch."
+  }
+}

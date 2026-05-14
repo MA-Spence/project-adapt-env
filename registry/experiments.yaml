@@ -307,3 +307,178 @@ items:
   compliance:
     level: green
     issues: []
+- id: EXP-013
+  title: PHOT Stability-Readout Validation-Objective Control
+  status: planned
+  created: '2026-05-14T09:30:50+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-011
+  - EXP-012
+  motivating_results:
+  - RES-010
+  - RES-011
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control
+  metadata_path: experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-014
+  title: PHOT Explicit Two-Trait Validation-Objective Replicate
+  status: planned
+  created: '2026-05-14T09:31:00+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-010
+  - EXP-012
+  motivating_results:
+  - RES-010
+  - RES-011
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate
+  metadata_path: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-015
+  title: PHOT Flexible Monotone Two-Latent Readout Diagnostic
+  status: planned
+  created: '2026-05-14T09:31:10+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-011
+  - EXP-012
+  motivating_results:
+  - RES-010
+  - RES-011
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-14_EXP-015_proteingym-phot-flexible-monotone-two-latent-readout-diagnostic
+  metadata_path: experiments/2026-05-14_EXP-015_proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-016
+  title: PHOT Photophysical-Trait Sparse-Residual Diagnostic
+  status: planned
+  created: '2026-05-14T09:31:21+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-011
+  - EXP-012
+  - EXP-015
+  motivating_results:
+  - RES-010
+  - RES-011
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-14_EXP-016_proteingym-phot-photophysical-trait-sparse-residual-diagnostic
+  metadata_path: experiments/2026-05-14_EXP-016_proteingym-phot-photophysical-trait-sparse-residual-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-017
+  title: PHOT Oracle Global-Epistasis Baseline
+  status: planned
+  created: '2026-05-14T09:31:31+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-011
+  - EXP-012
+  - EXP-015
+  - EXP-016
+  motivating_results:
+  - RES-010
+  - RES-011
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-14_EXP-017_proteingym-phot-oracle-global-epistasis-baseline
+  metadata_path: experiments/2026-05-14_EXP-017_proteingym-phot-oracle-global-epistasis-baseline/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-018
+  title: ProteinGym OXDA Expression-Activity Paired Latent Trait Diagnostic
+  status: planned
+  created: '2026-05-14T14:19:20+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-009
+  - EXP-012
+  - EXP-015
+  - EXP-017
+  motivating_results:
+  - RES-012
+  - RES-017
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic
+  metadata_path: experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-019
+  title: ProteinGym KCNJ2 Surface-Function Paired Latent Trait Diagnostic
+  status: completed
+  created: '2026-05-14T14:19:34+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-009
+  - EXP-012
+  - EXP-015
+  - EXP-017
+  motivating_results:
+  - RES-012
+  - RES-017
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-14_EXP-019_proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic
+  metadata_path: experiments/2026-05-14_EXP-019_proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []

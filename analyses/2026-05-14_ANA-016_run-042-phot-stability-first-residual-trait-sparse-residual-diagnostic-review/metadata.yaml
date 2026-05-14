@@ -1,0 +1,24 @@
+id: ANA-016
+title: RUN-042 PHOT stability-first residual-trait sparse-residual diagnostic review
+status: completed
+created: '2026-05-14T13:06:04+10:00'
+owner: matthew-spence
+experiments:
+- EXP-016
+runs:
+- RUN-042
+purpose: Assess whether the EXP-016 stability-first residual-trait and sparse pair-residual
+  PHOT diagnostic isolates additional readout structure beyond the stability component
+  and improves held-out ranking or epistasis recovery.
+path: analyses/2026-05-14_ANA-016_run-042-phot-stability-first-residual-trait-sparse-residual-diagnostic-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-14_ANA-016_run-042-phot-stability-first-residual-trait-sparse-residual-diagnostic-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-14_ANA-016_run-042-phot-stability-first-residual-trait-sparse-residual-diagnostic-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-042
+  produced_artifacts:
+  - analyses/2026-05-14_ANA-016_run-042-phot-stability-first-residual-trait-sparse-residual-diagnostic-review/tables/run-042_key_metrics.md
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#PBS -P ${GADI_PROJECT}
+#PBS -q normal
+#PBS -l walltime=01:00:00
+#PBS -l ncpus=4
+#PBS -l mem=16GB
+#PBS -l jobfs=20GB
+#PBS -l storage=scratch/${GADI_PROJECT}+gdata/${GADI_PROJECT}
+#PBS -N EXP-014_RUN-TEMPLATE
+#PBS -o /scratch/${GADI_PROJECT}/${GADI_USER}/labproj-project-adapt-env-RUN-TEMPLATE.out
+#PBS -e /scratch/${GADI_PROJECT}/${GADI_USER}/labproj-project-adapt-env-RUN-TEMPLATE.err
+#PBS -l wd
+
+set -euo pipefail
+if ! command -v module >/dev/null 2>&1; then
+  source /etc/profile
+fi
+module purge
+export LABPROJ_TARGET=gadi
+export LABPROJ_EXPERIMENT_ID=EXP-014
+export LABPROJ_RUN_ID=RUN-TEMPLATE
+export LABPROJ_OUTPUT_DIR="/scratch/${GADI_PROJECT}/${GADI_USER}/labproj/project-adapt-env/runs/RUN-TEMPLATE/outputs"
+export LABPROJ_LOG_DIR="/scratch/${GADI_PROJECT}/${GADI_USER}/labproj/project-adapt-env/runs/RUN-TEMPLATE/logs"
+export LABPROJ_WORKDIR="${PBS_JOBFS:-${PBS_JOBFS}/RUN-TEMPLATE}"
+
+mkdir -p "${LABPROJ_OUTPUT_DIR}" "${LABPROJ_LOG_DIR}" "${LABPROJ_WORKDIR}"
+
+bash "/Users/matthewspence/Documents/Documents/project-adapt-env/experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/run.sh"

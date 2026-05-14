@@ -1,0 +1,31 @@
+run: RUN-039
+target: lab-slurm
+experiment: EXP-013
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control
+  run_script: experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/run.sh
+inputs:
+  declared_files: []
+  datasets: []
+outputs:
+  expected:
+  - Validation-objective SMC posterior
+  - deterministic stability-control comparisons
+  - PHOT assay MAVE-NN diagnostics
+  - branch validations
+  - posterior summaries
+  - and summary.json.
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-039/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-039
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-039/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-039/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-039
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-039/project/experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-039/project/experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/runs/RUN-039.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

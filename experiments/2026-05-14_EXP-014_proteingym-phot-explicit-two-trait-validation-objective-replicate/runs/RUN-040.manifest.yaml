@@ -1,0 +1,31 @@
+run: RUN-040
+target: lab-slurm
+experiment: EXP-014
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate
+  run_script: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/run.sh
+inputs:
+  declared_files: []
+  datasets: []
+outputs:
+  expected:
+  - Validation-objective SMC posterior for the current explicit two-trait model
+  - deterministic two-trait controls
+  - PHOT MAVE-NN diagnostics
+  - posterior summaries
+  - branch validations
+  - and summary.json.
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-040/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-040
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-040/project/experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-040/project/experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/runs/RUN-040.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

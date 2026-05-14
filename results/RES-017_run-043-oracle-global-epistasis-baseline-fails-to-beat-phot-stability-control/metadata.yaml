@@ -1,0 +1,43 @@
+id: RES-017
+title: RUN-043 oracle global-epistasis baseline fails to beat the PHOT stability control
+status: completed
+created: '2026-05-14T13:14:37+10:00'
+owner: matthew-spence
+analyses:
+- ANA-017
+experiments:
+- EXP-017
+runs:
+- RUN-043
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: On PHOT_CHLRE_Chen_2023, the EXP-017 oracle additive latent score plus flexible
+  monotone global-epistasis baseline did not beat the recent mechanistic PHOT controls
+  on the full prespecified metric package. The oracle models had near-zero single-mutant
+  holdout Spearman, strong double-mutant ranking near 0.80, and only modest epistasis
+  Spearman near 0.24-0.25 with poor KS. This fails the preregistered condition for
+  blaming restrictive AdaptEnv latent priors alone and instead points back toward
+  scalar-assay measurement limits, insufficient identifiability, or missing stability-specific/epistatic
+  structure.
+artifacts: []
+evidence_paths:
+- analyses/2026-05-14_ANA-017_run-043-phot-oracle-global-epistasis-baseline-review/tables/run-043_key_metrics.md
+- data/processed/proteingym-phot-oracle-global-epistasis-baseline/RUN-043/summary.json
+- data/processed/proteingym-phot-oracle-global-epistasis-baseline/RUN-043/selected_panel.csv
+- data/processed/proteingym-phot-oracle-global-epistasis-baseline/RUN-043/mavenn_assay_metrics.csv
+- data/processed/proteingym-phot-oracle-global-epistasis-baseline/RUN-043/model_validations.csv
+- data/processed/proteingym-phot-oracle-global-epistasis-baseline/RUN-043/progress.json
+- experiments/2026-05-14_EXP-017_proteingym-phot-oracle-global-epistasis-baseline/config.yaml
+- experiments/2026-05-14_EXP-017_proteingym-phot-oracle-global-epistasis-baseline/runs/RUN-043.yaml
+- scripts/proteingym_phot_structural_mismatch_diagnostic.py
+- results/RES-013_run-039-stability-readout-validation-objective-improves-phot-recovery/metrics.json
+- results/RES-014_run-040-explicit-two-trait-replicate-reproduces-phot-validation-objective-failure/metrics.json
+- results/RES-015_run-041-flexible-monotone-two-latent-phot-diagnostic-improves-ranking-not-epistasis/metrics.json
+- results/RES-016_run-042-residual-photophysical-trait-improves-double-ranking-not-epistasis/metrics.json
+compliance:
+  level: green
+  issues: []

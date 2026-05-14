@@ -1,0 +1,131 @@
+id: RUN-040
+experiment: EXP-014
+target: lab-slurm
+target_profile:
+  display_name: HomeLab
+  cluster_name: homelab
+scheduler: slurm
+status: completed
+dry_run: false
+created: '2026-05-14T09:44:38+10:00'
+last_submitted: '2026-05-14T09:44:38+10:00'
+submitted_by: matthewspence
+attempt: 1
+attempts:
+- attempt: 1
+  submitted_at: '2026-05-14T09:44:38+10:00'
+  status: completed
+  dry_run: false
+  scheduler_job_id: '173'
+  resumed: false
+  resume_from_attempt: null
+  checkpoint_path: null
+  checkpoint_dir: null
+  scheduler_state: INFERRED_EXIT_CODE
+  scheduler_exit_code: '0'
+resume:
+  enabled: false
+  checkpoint_path: null
+  checkpoint_dir: null
+  source: null
+  previous_attempt: null
+  previous_scheduler_job_id: null
+  previous_status: null
+git:
+  branch: main
+  commit: 27145290866b73761dd2ad4b90b0c382cf8b9c6b
+  dirty: true
+dvc:
+  available: true
+  pointer_files:
+  - data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012.dvc
+  - data/processed/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010.dvc
+environment:
+  base_stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+    lock_sha256: 23823737cbc3bd705308e834e08df86eed8ac548ad4a0e072fb6653c59dbd73a
+  external_packages_lock:
+    path: environment/external-packages.lock.yaml
+    sha256: 90fa2bc21d786512b4cb38a55179afc940af4adb11d42552fa75a7d55331085d
+  external_packages:
+  - name: Adapt-Env
+    path: external/Adapt-Env
+    editable: true
+    exists: true
+    git_repo: true
+    branch: feat/multi-trait-latent-blocks
+    commit: 6b7132789ddec906be13c7416390f92c483ebfa4
+    dirty: false
+    detached_head: false
+    remote: https://github.com/MA-Spence/Adapt-Env.git
+    submodule: true
+    tracking_branch: null
+software_stack:
+  id: STACK-000
+  name: homelab-default
+  version: '2026.05'
+resources_requested:
+  cpus: 6
+  memory_gb: 48
+  gpus: 0
+  gpu_memory_expected_gb: null
+  walltime: '48:00:00'
+  jobfs_gb: 0
+resources_observed: {}
+paths:
+  experiment_dir: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate
+  run_metadata: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/runs/RUN-040.yaml
+  local_run_record_dir: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/runs
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-040
+  remote_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-040/project
+staging:
+  manifest: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/runs/RUN-040.manifest.yaml
+  mode: source-staged
+container:
+  runtime: native
+scheduler_script: experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/runs/RUN-040.slurm
+remote_scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-040/project/experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/runs/RUN-040.slurm
+scheduler_job_id: '173'
+logs:
+  stdout: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040/logs/stdout.txt
+  stderr: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040/logs/stderr.txt
+outputs:
+  expected:
+  - Validation-objective SMC posterior for the current explicit two-trait model
+  - deterministic two-trait controls
+  - PHOT MAVE-NN diagnostics
+  - posterior summaries
+  - branch validations
+  - and summary.json.
+  artifacts: []
+remote_cleanup:
+  eligible: true
+  status: not-requested
+remote_staging:
+  destination: matthew-spence@raspi-1
+  command: rm -rf /tank/data/labproj/staging/project-adapt-env/RUN-040/project &&
+    mkdir -p /tank/data/labproj/staging/project-adapt-env/RUN-040/project && tar -xzf
+    - -C /tank/data/labproj/staging/project-adapt-env/RUN-040/project
+execution_result:
+  returncode: 0
+  stdout: '173'
+  stderr: ''
+remote_submission:
+  destination: matthew-spence@raspi-1
+  command: mkdir -p /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040 /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040/logs
+    /tank/data/labproj/runtime/project-adapt-env/runs/RUN-040/outputs && cd /tank/data/labproj/staging/project-adapt-env/RUN-040/project
+    && sbatch --parsable /tank/data/labproj/staging/project-adapt-env/RUN-040/project/experiments/2026-05-14_EXP-014_proteingym-phot-explicit-two-trait-validation-objective-replicate/runs/RUN-040.slurm
+  staged_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-040/project
+scheduler_state: INFERRED_EXIT_CODE
+compliance:
+  level: green
+  issues: []
+scheduler_exit_code: '0'

@@ -237,3 +237,176 @@ items:
   compliance:
     level: green
     issues: []
+- id: RES-012
+  title: RUN-028 paired KRAS thermodynamic readout improves some diagnostics but does
+    not rescue predictive recovery
+  status: completed
+  created: '2026-05-14T09:56:13+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-012
+  experiments:
+  - EXP-009
+  runs:
+  - RUN-028
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-012_run-028-paired-kras-thermodynamic-readout-does-not-rescue-predictive-recovery
+  compliance:
+    level: green
+    issues: []
+- id: RES-013
+  title: RUN-039 stability-readout validation objective strongly improves PHOT recovery
+    relative to two-trait variants
+  status: completed
+  created: '2026-05-14T11:56:50+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-013
+  experiments:
+  - EXP-013
+  runs:
+  - RUN-039
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-013_run-039-stability-readout-validation-objective-improves-phot-recovery
+  compliance:
+    level: green
+    issues: []
+- id: RES-014
+  title: RUN-040 explicit two-trait replicate reproduces PHOT validation-objective
+    failure
+  status: completed
+  created: '2026-05-14T12:46:13+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-014
+  experiments:
+  - EXP-014
+  runs:
+  - RUN-040
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-014_run-040-explicit-two-trait-replicate-reproduces-phot-validation-objective-failure
+  compliance:
+    level: green
+    issues: []
+- id: RES-015
+  title: RUN-041 flexible monotone two-latent PHOT diagnostic improves ranking but
+    not epistasis
+  status: completed
+  created: '2026-05-14T12:57:10+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-015
+  experiments:
+  - EXP-015
+  runs:
+  - RUN-041
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-015_run-041-flexible-monotone-two-latent-phot-diagnostic-improves-ranking-not-epistasis
+  compliance:
+    level: green
+    issues: []
+- id: RES-016
+  title: RUN-042 residual photophysical trait improves double ranking but not PHOT
+    epistasis
+  status: completed
+  created: '2026-05-14T13:06:11+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-016
+  experiments:
+  - EXP-016
+  runs:
+  - RUN-042
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-016_run-042-residual-photophysical-trait-improves-double-ranking-not-epistasis
+  compliance:
+    level: green
+    issues: []
+- id: RES-017
+  title: RUN-043 oracle global-epistasis baseline fails to beat the PHOT stability
+    control
+  status: completed
+  created: '2026-05-14T13:14:37+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-017
+  experiments:
+  - EXP-017
+  runs:
+  - RUN-043
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-017_run-043-oracle-global-epistasis-baseline-fails-to-beat-phot-stability-control
+  compliance:
+    level: green
+    issues: []
+- id: RES-018
+  title: RUN-051 OXDA paired state-function diagnostic does not improve activity recovery
+  status: completed
+  created: '2026-05-14T15:10:11+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-018
+  experiments:
+  - EXP-018
+  runs:
+  - RUN-051
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-018_run-051-oxda-paired-state-function-diagnostic-does-not-improve-activity-recovery
+  compliance:
+    level: green
+    issues: []
+- id: RES-019
+  title: RUN-053 KCNJ2 paired state-function diagnostic does not improve function
+    recovery
+  status: completed
+  created: '2026-05-14T15:24:12+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-019
+  experiments: []
+  runs: []
+  supports: []
+  weakens:
+  - HYP-007
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-019_run-053-kcnj2-paired-state-function-diagnostic-does-not-improve-function-recovery
+  compliance:
+    level: green
+    issues: []

@@ -20,6 +20,5 @@ notebook_record:
   produced_artifacts:
   - analyses/2026-05-13_ANA-008_run-026-single-assay-biophysical-function-readout-calibration-review/tables/run-026_key_metrics.md
 compliance:
-  level: yellow
-  issues:
-  - ANA-008 is completed but none of its linked runs are completed.
+  level: green
+  issues: []

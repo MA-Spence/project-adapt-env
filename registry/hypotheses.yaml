@@ -1,7 +1,7 @@
 items:
 - id: HYP-001
   title: Local-Protein-Landscape-Statistics-Without-Exact-Reconstruction
-  status: active
+  status: superseded
   created: '2026-05-07T16:18:33+10:00'
   owner: matthew-spence
   aim: AIM-001
@@ -37,7 +37,8 @@ items:
   - RES-005
   - RES-006
   refuted_by: []
-  superseded_by: []
+  superseded_by:
+  - CLAIM-001
   path: docs/hypotheses.md
   compliance:
     level: green
@@ -179,7 +180,7 @@ items:
     - 'Active hypothesis has no linked experiment: HYP-006'
 - id: HYP-007
   title: Multiple-Latent-Molecular-Phenotypes-Improve-Empirical-Recovery
-  status: active
+  status: superseded
   created: '2026-05-12T04:00:01+10:00'
   owner: matthew-spence
   aim: AIM-001
@@ -202,13 +203,29 @@ items:
   - EXP-010
   - EXP-011
   - EXP-012
+  - EXP-013
+  - EXP-014
+  - EXP-015
+  - EXP-016
+  - EXP-017
+  - EXP-018
+  - EXP-019
   supported_by: []
   weakened_by:
   - RES-009
   - RES-010
   - RES-011
+  - RES-012
+  - RES-013
+  - RES-014
+  - RES-015
+  - RES-016
+  - RES-017
+  - RES-018
+  - RES-019
   refuted_by: []
-  superseded_by: []
+  superseded_by:
+  - CLAIM-002
   path: docs/hypotheses.md
   compliance:
     level: green

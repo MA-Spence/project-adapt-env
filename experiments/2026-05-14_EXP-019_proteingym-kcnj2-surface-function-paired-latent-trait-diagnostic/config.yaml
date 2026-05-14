@@ -1,0 +1,231 @@
+experiment_id: EXP-019
+title: ProteinGym KCNJ2 Surface-Function Paired Latent Trait Diagnostic
+stack: STACK-000
+target: lab-slurm
+experiment:
+  id: EXP-019
+
+proteingym:
+  version: v1.3
+  reference_csv_url: https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/main/reference_files/DMS_substitutions.csv
+  substitutions_parquet_url: https://proteingym.s3.us-east-2.amazonaws.com/DMS_substitutions.parquet
+  reference_csv_path: data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  substitutions_parquet_path: data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  assay_output_dir: data/raw/proteingym/v1.3/assays
+
+panel:
+  panel_size: 2
+  assays_per_taxon: 2
+  allowed_taxa:
+    - Eukaryote
+  require_multiple_mutants: false
+  min_single_mutants: 6000
+  min_multiple_mutants: 0
+  max_sequence_length: 450
+  assay_ids:
+    - KCNJ2_MOUSE_Coyote-Maestas_2022_surface
+    - KCNJ2_MOUSE_Coyote-Maestas_2022_function
+
+trait_roles:
+  state:
+    - KCNJ2_MOUSE_Coyote-Maestas_2022_surface
+  function:
+    - KCNJ2_MOUSE_Coyote-Maestas_2022_function
+
+mmseqs:
+  alignment_dir: data/interim/proteingym_mmseqs_alignments
+  cache_dir: data/interim/proteingym_mmseqs_cache
+  max_alignment_sequences: 512
+  timeout_seconds: 20.0
+  poll_interval_seconds: 5.0
+  max_retries: 6
+
+mavenn:
+  alphabet: protein
+  regression_type: GE
+  gpmap_type: additive
+  ge_nonlinearity_type: linear
+  ge_nonlinearity_monotonic: false
+  ge_noise_model_type: SkewedT
+  ge_heteroskedasticity_order: 2
+  theta_regularization: 0.0001
+  eta_regularization: 0.0001
+  max_mutation_count: 1
+  max_variants_per_assay: 8000
+  sample_seed: 17
+  test_holdout_modulo: 10
+  test_holdout_remainder: 0
+  report_information_metrics: false
+  validation_fraction: 0.1
+  epochs: 50
+  learning_rate: 0.005
+  early_stopping_patience: 8
+  batch_size: 256
+
+adapt_env:
+  base_config:
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    n_functional_dims: 4
+    functional_sigma_base: 20.0
+    functional_sigma_anisotropy: 0.35
+    functional_weight: 1.0
+    fitness_output_scale: 10.0
+    n_epistatic_terms: 0
+    epistasis_strength: 0.0
+    empirical_pairwise_strength: 0.0
+    n_higher_order_epistatic_terms: 0
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 300
+    peak_search_top_single_starts: 8
+    peak_search_random_starts: 8
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 2
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+    seed: 42
+
+calibration_max_mutation_count: 1
+
+calibration_defaults:
+  state:
+    neutral_threshold: 0.05
+    beneficial_threshold: 0.05
+    lethal_relative_threshold: 0.1
+    max_landscapes_per_fit: 2
+    max_observed_sequences: 8192
+    max_double_mutants: 0
+    synthetic_seed: 2301
+    query_missing_alignments: false
+    single_mutant_holdout_modulo: 5
+    single_mutant_holdout_remainder: 0
+    double_mutant_holdout_modulo: 5
+    double_mutant_holdout_remainder: 0
+    double_mutant_holdout_scheme: pair
+    synthetic_readout_mode: stability_margin
+    empirical_pairwise_target: stability
+    observation_model_kind: auto
+    observation_model_max_knots: 12
+    observation_model_min_bin_size: 16
+    stability_scale_grid: [0.5, 1.0, 1.5]
+    blosum_blend_grid: [0.25, 0.5, 0.75]
+    stability_conservation_power_grid: [0.75, 1.0, 1.25]
+    stability_margin_grid: [4.0, 8.0, 12.0]
+    functional_sigma_grid: [12.0, 20.0, 28.0]
+    n_functional_dims_grid: [1, 2, 4]
+    peak_distance_grid: [1, 2, 4]
+    epistasis_strength_grid: [0.0]
+    empirical_pairwise_strength_grid: [0.0]
+    noise_amplitude_grid: [0.0]
+    functional_core_objective: dfe_objective
+    functional_fit_strategy: staged
+    dfe_predictive_holdout_weight: 5.0
+    dfe_predictive_rank_weight: 3.0
+    dfe_double_predictive_weight: 0.0
+    reference_peak_fraction_max: 0.85
+    reference_peak_fraction_weight: 1.0
+    reference_peak_distance_min: 1
+    reference_peak_distance_weight: 0.5
+  function:
+    neutral_threshold: 0.05
+    beneficial_threshold: 0.05
+    lethal_relative_threshold: 0.1
+    max_landscapes_per_fit: 2
+    max_observed_sequences: 8192
+    max_double_mutants: 0
+    synthetic_seed: 2401
+    query_missing_alignments: false
+    single_mutant_holdout_modulo: 5
+    single_mutant_holdout_remainder: 0
+    double_mutant_holdout_modulo: 5
+    double_mutant_holdout_remainder: 0
+    double_mutant_holdout_scheme: pair
+    synthetic_readout_mode: fitness
+    empirical_pairwise_target: score
+    observation_model_kind: auto
+    observation_model_max_knots: 12
+    observation_model_min_bin_size: 16
+    stability_scale_grid: [0.5, 1.0, 1.5]
+    blosum_blend_grid: [0.25, 0.5, 0.75]
+    stability_conservation_power_grid: [0.75, 1.0, 1.25]
+    stability_margin_grid: [4.0, 8.0, 12.0]
+    functional_sigma_grid: [10.0, 18.0, 28.0]
+    n_functional_dims_grid: [1, 2, 4]
+    peak_distance_grid: [1, 2, 4]
+    epistasis_strength_grid: [0.0]
+    empirical_pairwise_strength_grid: [0.0]
+    noise_amplitude_grid: [0.0]
+    functional_core_objective: dfe_objective
+    functional_fit_strategy: staged
+    dfe_predictive_holdout_weight: 5.0
+    dfe_predictive_rank_weight: 3.0
+    dfe_double_predictive_weight: 0.0
+    reference_peak_fraction_max: 0.85
+    reference_peak_fraction_weight: 1.0
+    reference_peak_distance_min: 1
+    reference_peak_distance_weight: 0.5
+
+branches:
+  function_only_single_trait:
+    source: raw
+    use_state: false
+    use_function: true
+    function_calibration:
+      synthetic_seed: 2402
+
+  paired_state_function_single_trait:
+    source: raw
+    use_state: true
+    use_function: true
+    state_calibration:
+      synthetic_seed: 2303
+    function_calibration:
+      synthetic_seed: 2403
+
+  paired_state_function_explicit_two_trait:
+    source: raw
+    use_state: true
+    use_function: true
+    base_config:
+      n_functional_dims: 1
+      functional_sigma_base: 18.0
+      functional_sigma_anisotropy: 0.0
+      latent_trait_blocks:
+        - name: readout
+          dims: 1
+          sigma_base: 18.0
+          sigma_anisotropy: 0.0
+          weight: 1.0
+          use_conservation_scaling: true
+      observed_fitness_combine_mode: product
+      observed_fitness_terms:
+        - source: stability_gate
+        - source: trait:readout:capacity
+      generic_epistasis_target: score
+    state_calibration:
+      synthetic_seed: 2304
+    function_calibration:
+      synthetic_seed: 2404
+      empirical_pairwise_target: trait:readout
+      n_functional_dims_grid: [1]
+
+quick:
+  mavenn:
+    max_variants_per_assay: 2000
+    epochs: 5
+    early_stopping_patience: 2
+    batch_size: 128
+  calibration_defaults:
+    state:
+      max_observed_sequences: 2000
+      stability_scale_grid: [1.0]
+      blosum_blend_grid: [0.5]
+      stability_conservation_power_grid: [1.0]
+    function:
+      max_observed_sequences: 2000
+      functional_sigma_grid: [18.0]
+      n_functional_dims_grid: [1]
+      peak_distance_grid: [2]

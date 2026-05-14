@@ -1,0 +1,25 @@
+id: ANA-017
+title: RUN-043 PHOT oracle global-epistasis baseline review
+status: completed
+created: '2026-05-14T13:14:24+10:00'
+owner: matthew-spence
+experiments:
+- EXP-017
+runs:
+- RUN-043
+purpose: Assess whether the EXP-017 oracle additive latent score plus flexible monotone
+  global-epistasis baseline outperforms recent mechanistic PHOT variants, thereby
+  distinguishing restrictive AdaptEnv latent priors from scalar-assay measurement
+  or identifiability limits.
+path: analyses/2026-05-14_ANA-017_run-043-phot-oracle-global-epistasis-baseline-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-14_ANA-017_run-043-phot-oracle-global-epistasis-baseline-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-14_ANA-017_run-043-phot-oracle-global-epistasis-baseline-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-043
+  produced_artifacts:
+  - analyses/2026-05-14_ANA-017_run-043-phot-oracle-global-epistasis-baseline-review/tables/run-043_key_metrics.md
+compliance:
+  level: green
+  issues: []

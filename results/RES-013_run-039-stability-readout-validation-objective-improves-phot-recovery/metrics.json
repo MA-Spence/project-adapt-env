@@ -1,0 +1,232 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "assay_taxon": "Eukaryote",
+  "assay_selection_type": "FACS",
+  "assay_coarse_selection_type": "Activity",
+  "assay_sequence_length": 118,
+  "assay_total_variants": 167529,
+  "assay_single_mutants": 2122,
+  "assay_multiple_mutants": 165407,
+  "mavenn_test_metrics": {
+    "fit_variant_count": 3276,
+    "train_variant_count": 2966,
+    "test_variant_count": 310,
+    "nrmse": 0.9662660854872487,
+    "spearman": 0.6885561095289371,
+    "wildtype_phi": 0.7438784837722778,
+    "wildtype_yhat": 1.3442931067827097
+  },
+  "bayesian_calibration_semantics": {
+    "synthetic_readout_mode": "stability_margin",
+    "empirical_pairwise_target": "stability",
+    "distance_mode": "validation_objective",
+    "objective_target_features": [
+      "objective_core",
+      "objective_double",
+      "objective_total"
+    ],
+    "branch_label_caveat": "summary artifacts retain historical smc_abc_*_raw labels even though EXP-013 config calibrates the stability-targeted readout"
+  },
+  "deterministic_controls": {
+    "baseline_shared_raw": {
+      "functional_holdout_spearman": 0.06645773266073202,
+      "functional_holdout_nrmse": 0.9961437435436166,
+      "functional_double_holdout_spearman": 0.4423387096774194,
+      "functional_double_holdout_nrmse": 0.8859170756316325,
+      "functional_epistasis_prediction_spearman": 0.5187695355491966,
+      "functional_epistasis_prediction_ks": 0.20454545454545456,
+      "functional_ks": 0.8463368760725116,
+      "functional_reference_fraction_of_peak": 0.2844390760108307,
+      "functional_reference_distance_to_peak": 12.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.025
+    },
+    "predictive_richpair_shared_raw": {
+      "functional_holdout_spearman": 0.3381957274699377,
+      "functional_holdout_nrmse": 0.9566578432029644,
+      "functional_double_holdout_spearman": 0.4152328091273512,
+      "functional_double_holdout_nrmse": 1.0466029187980375,
+      "functional_epistasis_prediction_spearman": 0.39717147259520147,
+      "functional_epistasis_prediction_ks": 0.24431818181818182,
+      "functional_ks": 0.3289601902165917,
+      "functional_reference_fraction_of_peak": 0.07929035152189769,
+      "functional_reference_distance_to_peak": 84.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.025
+    },
+    "baseline_shared_stability_readout": {
+      "functional_holdout_spearman": 0.5040907799003865,
+      "functional_holdout_nrmse": 0.8507227278503003,
+      "functional_double_holdout_spearman": 0.5379032258064517,
+      "functional_double_holdout_nrmse": 0.958471286415591,
+      "functional_epistasis_prediction_spearman": -0.25397812444835816,
+      "functional_epistasis_prediction_ks": 0.6931818181818182,
+      "functional_ks": 0.18331762488218661,
+      "functional_reference_fraction_of_peak": 1.0,
+      "functional_reference_distance_to_peak": 0.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.025
+    },
+    "predictive_richpair_shared_stability_readout": {
+      "functional_holdout_spearman": 0.5054483020817381,
+      "functional_holdout_nrmse": 0.8708648068281573,
+      "functional_double_holdout_spearman": 0.7027443724946038,
+      "functional_double_holdout_nrmse": 0.7724737671381499,
+      "functional_epistasis_prediction_spearman": 0.031998679286814886,
+      "functional_epistasis_prediction_ks": 0.6988636363636364,
+      "functional_ks": 0.19009173679418118,
+      "functional_reference_fraction_of_peak": 0.9872600607977574,
+      "functional_reference_distance_to_peak": 3.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.05
+    }
+  },
+  "smc_abc": {
+    "best_particle_distance": 17.38137952801212,
+    "best_particle": {
+      "parameters": {
+        "stability_scale": 1.1196603121465492,
+        "stability_margin": 5.662039274711141,
+        "blosum_blend": 0.20198159966998186,
+        "stability_conservation_power": 1.2264068659460587,
+        "functional_sigma_base": 19.451336328501014,
+        "n_functional_dims": 5,
+        "peak_distance_from_consensus": 1,
+        "epistasis_strength": 0.017270272891708054,
+        "empirical_pairwise_strength": 0.07449754934072142,
+        "noise_amplitude": 0.001951563990709506
+      }
+    },
+    "best_validation": {
+      "functional_holdout_spearman": 0.506332903828128,
+      "functional_holdout_nrmse": 0.8702561925684902,
+      "functional_double_holdout_spearman": 0.7827937095282146,
+      "functional_double_holdout_nrmse": 0.688092914060899,
+      "functional_epistasis_prediction_spearman": 0.6343957737178076,
+      "functional_epistasis_prediction_ks": 0.75,
+      "functional_ks": 0.17645060750087652,
+      "functional_reference_fraction_of_peak": 0.3228044178330208,
+      "functional_reference_distance_to_peak": 45.0
+    },
+    "posterior_mean_validation": {
+      "functional_holdout_spearman": 0.5065895460449467,
+      "functional_holdout_nrmse": 0.868269226479201,
+      "functional_double_holdout_spearman": 0.7491211840888066,
+      "functional_double_holdout_nrmse": 0.740744594298776,
+      "functional_epistasis_prediction_spearman": -0.14678626458287478,
+      "functional_epistasis_prediction_ks": 0.7215909090909091,
+      "functional_ks": 0.1970092005841694,
+      "functional_reference_fraction_of_peak": 0.2872621118930277,
+      "functional_reference_distance_to_peak": 22.0
+    },
+    "round_summaries": [
+      {
+        "round_index": 0,
+        "epsilon": 17.77964373604091,
+        "attempts": 384,
+        "best_distance": 17.351269036462757,
+        "median_distance": 17.685599337323232
+      },
+      {
+        "round_index": 1,
+        "epsilon": 18.075513782866107,
+        "attempts": 512,
+        "best_distance": 17.385928167563797,
+        "median_distance": 17.617543547387207
+      },
+      {
+        "round_index": 2,
+        "epsilon": 18.03854683360862,
+        "attempts": 512,
+        "best_distance": 17.170369781345286,
+        "median_distance": 17.590759159579864
+      },
+      {
+        "round_index": 3,
+        "epsilon": 18.03015404355947,
+        "attempts": 512,
+        "best_distance": 17.38137952801212,
+        "median_distance": 17.58174194426889
+      }
+    ]
+  },
+  "comparison_to_run_036_explicit_two_latent_validation_objective_best": {
+    "single_holdout_spearman_delta": 0.3082520037557634,
+    "double_holdout_spearman_delta": 0.5313585608049199,
+    "epistasis_prediction_spearman_delta": 0.3758719287657867,
+    "functional_ks_delta": -0.3197440517378367,
+    "reference_fraction_of_peak_delta": -0.6631538960146705,
+    "reference_distance_to_peak_delta": 39.0
+  },
+  "comparison_to_run_038_stability_summary_vector_best": {
+    "single_holdout_spearman_delta": 0.0011215645505589,
+    "double_holdout_spearman_delta": 0.0615479494295406,
+    "epistasis_prediction_spearman_delta": 0.5684129429892141,
+    "functional_ks_delta": 0.01009810985714419,
+    "reference_fraction_of_peak_delta": -0.5441798369435072,
+    "reference_distance_to_peak_delta": 41.0
+  },
+  "comparison_to_within_run_predictive_stability_deterministic": {
+    "single_holdout_spearman_delta": 0.0008846017463899,
+    "double_holdout_spearman_delta": 0.0800493370336108,
+    "epistasis_prediction_spearman_delta": 0.6023970944309927,
+    "functional_ks_delta": -0.01364112929330466,
+    "reference_fraction_of_peak_delta": -0.6644556429647366,
+    "reference_distance_to_peak_delta": 42.0
+  },
+  "posterior_parameter_summary": {
+    "stability_scale": {
+      "weighted_mean": 0.9601890221192554,
+      "q05": 0.5441196068726597,
+      "q95": 1.3732002992259944
+    },
+    "stability_margin": {
+      "weighted_mean": 8.769557561738136,
+      "q05": 5.663141299309365,
+      "q95": 11.642496973843258
+    },
+    "blosum_blend": {
+      "weighted_mean": 0.3265700418950739,
+      "q05": 0.20371620679753738,
+      "q95": 0.45224978526633625
+    },
+    "stability_conservation_power": {
+      "weighted_mean": 1.0586608925448275,
+      "q05": 0.7766980647874399,
+      "q95": 1.2453687528809783
+    },
+    "functional_sigma_base": {
+      "weighted_mean": 20.31007339251868,
+      "q05": 11.069868785712934,
+      "q95": 29.459116043029297
+    },
+    "n_functional_dims": {
+      "weighted_mean": 3.7728316486576494,
+      "q05": 2.0,
+      "q95": 6.0
+    },
+    "peak_distance_from_consensus": {
+      "weighted_mean": 1.8655986787647836,
+      "q05": 0.0,
+      "q95": 3.8499999999999943
+    },
+    "epistasis_strength": {
+      "weighted_mean": 0.04520327164561577,
+      "q05": 0.006621774279622177,
+      "q95": 0.07723862161545712
+    },
+    "empirical_pairwise_strength": {
+      "weighted_mean": 0.03822982072559026,
+      "q05": 0.0033980837733570027,
+      "q95": 0.07684576555995931
+    },
+    "noise_amplitude": {
+      "weighted_mean": 0.00481088041017083,
+      "q05": 0.0008730314792349764,
+      "q95": 0.008912439849780318
+    }
+  },
+  "synthetic_truth_recovery": null,
+  "synthetic_truth_recovery_note": "validation_objective mode currently disables the matched synthetic-truth scaffold for this experiment family",
+  "hypothesis_effect": "weakens"
+}

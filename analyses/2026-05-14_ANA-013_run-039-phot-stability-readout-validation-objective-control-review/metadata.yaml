@@ -1,0 +1,24 @@
+id: ANA-013
+title: RUN-039 PHOT stability-readout validation-objective control review
+status: completed
+created: '2026-05-14T11:56:50+10:00'
+owner: matthew-spence
+experiments:
+- EXP-013
+runs:
+- RUN-039
+purpose: Assess whether the EXP-013 PHOT stability-targeted control retains its predictive
+  advantage when fitted with the held-out validation objective used in EXP-012, and
+  record the implication for HYP-007.
+path: analyses/2026-05-14_ANA-013_run-039-phot-stability-readout-validation-objective-control-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-14_ANA-013_run-039-phot-stability-readout-validation-objective-control-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-14_ANA-013_run-039-phot-stability-readout-validation-objective-control-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-039
+  produced_artifacts:
+  - analyses/2026-05-14_ANA-013_run-039-phot-stability-readout-validation-objective-control-review/tables/run-039_key_metrics.md
+compliance:
+  level: green
+  issues: []

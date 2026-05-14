@@ -1,0 +1,75 @@
+id: EXP-016
+type: experiment
+title: PHOT Photophysical-Trait Sparse-Residual Diagnostic
+slug: proteingym-phot-photophysical-trait-sparse-residual-diagnostic
+status: planned
+created: '2026-05-14T09:31:21+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-011
+  - EXP-012
+  - EXP-015
+  motivating_results:
+  - RES-010
+  - RES-011
+question: After accounting for stability and a photophysical readout trait, is the
+  remaining PHOT_CHLRE mismatch explained by sparse residual epistasis rather than
+  by the latent mapping itself?
+pre_experiment_prediction: If PHOT fluorescence depends on a brightness or FMN-occupancy
+  trait plus a small set of specific interactions, then adding sparse residual epistasis
+  after the additive latent readout should improve epistasis prediction and double-mutant
+  recovery more than broad extra latent capacity does.
+rationale: PHOT_CHLRE reports CreiLOV fluorescence rather than a clean activity phenotype.
+  The missing trait may be photophysical brightness or FMN occupancy, and residual
+  pairwise structure may identify specific chromophore-pocket or allosteric interactions
+  rather than generic ruggedness.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 6
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - PHOT photophysical-trait diagnostic metrics
+  - residual epistasis fit diagnostics
+  - held-out single/double ranking
+  - epistasis-prediction metrics
+  - and summary.json.
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 27145290866b73761dd2ad4b90b0c382cf8b9c6b
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

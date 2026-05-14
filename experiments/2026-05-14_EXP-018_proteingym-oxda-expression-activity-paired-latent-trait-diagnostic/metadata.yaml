@@ -1,0 +1,77 @@
+id: EXP-018
+type: experiment
+title: ProteinGym OXDA Expression-Activity Paired Latent Trait Diagnostic
+slug: proteingym-oxda-expression-activity-paired-latent-trait-diagnostic
+status: planned
+created: '2026-05-14T14:19:20+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-009
+  - EXP-012
+  - EXP-015
+  - EXP-017
+  motivating_results:
+  - RES-012
+  - RES-017
+question: Does paired expression plus enzyme activity on OXDA_RHOTO support a two-trait
+  state/function calibration better than a function-only single-trait fit?
+pre_experiment_prediction: If HYP-007 is failing on KRAS/PHOT partly because the tested
+  systems are structurally mismatched, then OXDA_RHOTO expression plus enzymatic activity
+  should show improved activity holdout recovery or readout agreement when expression
+  constrains the state/stability-facing layer and activity constrains a separate function-facing
+  layer. Because the assays contain single mutants only, this experiment will not
+  test double-mutant epistasis recovery.
+rationale: OXDA_RHOTO provides matched ProteinGym expression and enzyme-activity measurements
+  with weak readout correlation, making it an immediate non-KRAS paired-readout diagnostic
+  for HYP-007. The system is not merely a folding/proteolysis assay, but the absence
+  of multiple mutants limits inference to single-mutant recovery and cross-readout
+  structure.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 16
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 01:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - paired readout correlations
+  - MAVE-NN assay diagnostics
+  - branch-level state/function calibration metrics
+  - and a summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 27145290866b73761dd2ad4b90b0c382cf8b9c6b
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

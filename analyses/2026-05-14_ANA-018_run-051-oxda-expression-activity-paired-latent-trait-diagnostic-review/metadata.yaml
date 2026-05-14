@@ -1,0 +1,23 @@
+id: ANA-018
+title: RUN-051 OXDA expression-activity paired latent trait diagnostic review
+status: completed
+created: '2026-05-14T15:10:04+10:00'
+owner: matthew-spence
+experiments:
+- EXP-018
+runs:
+- RUN-051
+purpose: Assess whether the EXP-018 paired OXDA expression/activity diagnostic supports
+  a two-trait state/function calibration over a function-only single-trait fit.
+path: analyses/2026-05-14_ANA-018_run-051-oxda-expression-activity-paired-latent-trait-diagnostic-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-14_ANA-018_run-051-oxda-expression-activity-paired-latent-trait-diagnostic-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-14_ANA-018_run-051-oxda-expression-activity-paired-latent-trait-diagnostic-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-051
+  produced_artifacts:
+  - analyses/2026-05-14_ANA-018_run-051-oxda-expression-activity-paired-latent-trait-diagnostic-review/tables/run-051_key_metrics.md
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,23 @@
+id: ANA-019
+title: RUN-053 KCNJ2 surface-function paired latent trait diagnostic review
+status: completed
+created: '2026-05-14T15:24:03+10:00'
+owner: matthew-spence
+experiments:
+- EXP-019
+runs:
+- RUN-053
+purpose: Assess whether the EXP-019 paired KCNJ2 surface/function diagnostic supports
+  a two-trait state/function calibration over a function-only single-trait fit.
+path: analyses/2026-05-14_ANA-019_run-053-kcnj2-surface-function-paired-latent-trait-diagnostic-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-14_ANA-019_run-053-kcnj2-surface-function-paired-latent-trait-diagnostic-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-14_ANA-019_run-053-kcnj2-surface-function-paired-latent-trait-diagnostic-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-053
+  produced_artifacts:
+  - analyses/2026-05-14_ANA-019_run-053-kcnj2-surface-function-paired-latent-trait-diagnostic-review/tables/run-053_key_metrics.md
+compliance:
+  level: green
+  issues: []

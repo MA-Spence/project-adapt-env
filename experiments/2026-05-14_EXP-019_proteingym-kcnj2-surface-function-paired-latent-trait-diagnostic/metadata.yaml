@@ -1,0 +1,77 @@
+id: EXP-019
+type: experiment
+title: ProteinGym KCNJ2 Surface-Function Paired Latent Trait Diagnostic
+slug: proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic
+status: completed
+created: '2026-05-14T14:19:34+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-009
+  - EXP-012
+  - EXP-015
+  - EXP-017
+  motivating_results:
+  - RES-012
+  - RES-017
+question: Does paired surface trafficking plus ion-conduction function on KCNJ2_MOUSE
+  support a two-trait state/function calibration better than a function-only single-trait
+  fit?
+pre_experiment_prediction: If the multi-latent direction is more appropriate for mechanistically
+  separable non-folding-limited assays, then KCNJ2_MOUSE surface abundance plus channel
+  function should benefit from a state/function decomposition relative to a function-only
+  single-trait fit. Because the assays contain single mutants only, this experiment
+  will not test double-mutant epistasis recovery.
+rationale: KCNJ2_MOUSE separates surface trafficking from potassium-channel function,
+  giving a cleaner biological split than PHOT scalar fluorescence and a different
+  paired-readout system than KRAS abundance/binding. It is therefore an appropriate
+  single-mutant diagnostic of whether measured state and function traits are non-redundant
+  for HYP-007.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 16
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 01:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - paired readout correlations
+  - MAVE-NN assay diagnostics
+  - branch-level state/function calibration metrics
+  - and a summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 27145290866b73761dd2ad4b90b0c382cf8b9c6b
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

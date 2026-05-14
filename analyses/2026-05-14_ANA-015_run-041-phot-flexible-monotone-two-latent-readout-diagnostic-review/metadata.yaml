@@ -1,0 +1,24 @@
+id: ANA-015
+title: RUN-041 PHOT flexible monotone two-latent readout diagnostic review
+status: completed
+created: '2026-05-14T12:57:02+10:00'
+owner: matthew-spence
+experiments:
+- EXP-015
+runs:
+- RUN-041
+purpose: Assess whether the EXP-015 flexible monotone two-latent PHOT diagnostic improves
+  held-out ranking and epistasis recovery relative to the explicit product/gate two-trait
+  failure and the stability-targeted control.
+path: analyses/2026-05-14_ANA-015_run-041-phot-flexible-monotone-two-latent-readout-diagnostic-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-14_ANA-015_run-041-phot-flexible-monotone-two-latent-readout-diagnostic-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-14_ANA-015_run-041-phot-flexible-monotone-two-latent-readout-diagnostic-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-041
+  produced_artifacts:
+  - analyses/2026-05-14_ANA-015_run-041-phot-flexible-monotone-two-latent-readout-diagnostic-review/tables/run-041_key_metrics.md
+compliance:
+  level: green
+  issues: []

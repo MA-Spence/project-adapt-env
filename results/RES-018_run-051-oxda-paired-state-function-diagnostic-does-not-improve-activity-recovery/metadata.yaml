@@ -1,0 +1,36 @@
+id: RES-018
+title: RUN-051 OXDA paired state-function diagnostic does not improve activity recovery
+status: completed
+created: '2026-05-14T15:10:11+10:00'
+owner: matthew-spence
+analyses:
+- ANA-018
+experiments:
+- EXP-018
+runs:
+- RUN-051
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: On matched OXDA_RHOTO expression and activity single-mutant assays, the paired
+  state/function branches did not improve activity holdout recovery over the function-only
+  branch and left the fitted reference effectively at the peak. The result weakens
+  the current HYP-007 implementation for this OXDA diagnostic without directly updating
+  HYP-001.
+artifacts: []
+evidence_paths:
+- analyses/2026-05-14_ANA-018_run-051-oxda-expression-activity-paired-latent-trait-diagnostic-review/tables/run-051_key_metrics.md
+- data/processed/proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/RUN-051/summary.json
+- data/processed/proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/RUN-051/selected_panel.csv
+- data/processed/proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/RUN-051/mavenn_assay_metrics.csv
+- data/processed/proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/RUN-051/paired_readout_correlations.csv
+- data/processed/proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/RUN-051/branch_validations.csv
+- data/processed/proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/RUN-051.dvc
+- experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/config.yaml
+- experiments/2026-05-14_EXP-018_proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/runs/RUN-051.yaml
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,23 @@
+id: ANA-014
+title: RUN-040 PHOT explicit two-trait validation-objective replicate review
+status: completed
+created: '2026-05-14T12:44:08+10:00'
+owner: matthew-spence
+experiments:
+- EXP-014
+runs:
+- RUN-040
+purpose: Assess whether the EXP-014 explicit two-trait PHOT validation-objective replicate
+  reproduces the RUN-036 failure pattern and record the implication for HYP-007.
+path: analyses/2026-05-14_ANA-014_run-040-phot-explicit-two-trait-validation-objective-replicate-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-14_ANA-014_run-040-phot-explicit-two-trait-validation-objective-replicate-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-14_ANA-014_run-040-phot-explicit-two-trait-validation-objective-replicate-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-040
+  produced_artifacts:
+  - analyses/2026-05-14_ANA-014_run-040-phot-explicit-two-trait-validation-objective-replicate-review/tables/run-040_key_metrics.md
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,73 @@
+id: EXP-014
+type: experiment
+title: PHOT Explicit Two-Trait Validation-Objective Replicate
+slug: proteingym-phot-explicit-two-trait-validation-objective-replicate
+status: planned
+created: '2026-05-14T09:31:00+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-010
+  - EXP-012
+  motivating_results:
+  - RES-010
+  - RES-011
+question: Does a direct replicate of the current explicit stability-plus-readout trait
+  model reproduce the RES-010 failure pattern under the validation objective?
+pre_experiment_prediction: If RES-010 reflects structural mismatch rather than stochastic
+  SMC noise, then a new run of the current explicit two-trait formulation should again
+  show weak single- and double-mutant recovery, near-peak geometry, and posterior
+  pressure on empirical pairwise strength.
+rationale: RES-010 is the first clean explicit two-latent PHOT test, but interpretation
+  is stronger if the failure is reproducible under a new experiment entry paired with
+  the stability-objective control and downstream mismatch diagnostics.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 6
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '48:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - Validation-objective SMC posterior for the current explicit two-trait model
+  - deterministic two-trait controls
+  - PHOT MAVE-NN diagnostics
+  - posterior summaries
+  - branch validations
+  - and summary.json.
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 27145290866b73761dd2ad4b90b0c382cf8b9c6b
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

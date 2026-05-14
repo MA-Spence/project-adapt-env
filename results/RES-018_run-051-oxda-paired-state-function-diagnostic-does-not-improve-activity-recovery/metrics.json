@@ -1,0 +1,72 @@
+{
+  "run_id": "RUN-051",
+  "experiment_id": "EXP-018",
+  "assays": {
+    "state": "OXDA_RHOTO_Vanella_2023_expression",
+    "function": "OXDA_RHOTO_Vanella_2023_activity",
+    "sequence_length": 364,
+    "state_single_mutants": 6769,
+    "function_single_mutants": 6396,
+    "multiple_mutants": 0,
+    "matched_variants": 6387,
+    "state_function_spearman": 0.245668548592404
+  },
+  "mavenn_test_metrics": {
+    "state_spearman": 0.5667081580961366,
+    "state_nrmse": 0.8647862904455272,
+    "function_spearman": 0.542045485915721,
+    "function_nrmse": 0.8931811662990445
+  },
+  "branch_validations": {
+    "function_only_single_trait": {
+      "function_holdout_spearman": 0.18332410997777743,
+      "function_holdout_nrmse": 0.9809534666770041,
+      "function_ks": 0.5198561601000625,
+      "function_reference_fraction_of_peak": 0.9995343920625102,
+      "function_reference_distance_to_peak": 1.0,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.0,
+      "noise_amplitude": 0.0
+    },
+    "paired_state_function_single_trait": {
+      "function_holdout_spearman": 0.06092087621657774,
+      "function_holdout_nrmse": 0.9990106501404143,
+      "function_ks": 0.5231512176313203,
+      "function_reference_fraction_of_peak": 0.9995139950916463,
+      "function_reference_distance_to_peak": 6.0,
+      "state_unfolding_ks": 0.4110663461613225,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.0,
+      "noise_amplitude": 0.0
+    },
+    "paired_state_function_explicit_two_trait": {
+      "function_holdout_spearman": 0.18001343719972057,
+      "function_holdout_nrmse": 0.984857405282575,
+      "function_ks": 0.5261100687929956,
+      "function_reference_fraction_of_peak": 0.9999185560270659,
+      "function_reference_distance_to_peak": 3.0,
+      "state_unfolding_ks": 0.42424906231851206,
+      "epistasis_strength": 0.0,
+      "empirical_pairwise_strength": 0.0,
+      "noise_amplitude": 0.0
+    }
+  },
+  "primary_comparison": {
+    "best_activity_holdout_spearman_branch": "function_only_single_trait",
+    "best_activity_functional_ks_branch": "function_only_single_trait",
+    "explicit_two_trait_minus_function_only_activity_spearman": -0.0033106727780568647,
+    "explicit_two_trait_minus_function_only_activity_nrmse": 0.0039039386055709223,
+    "explicit_two_trait_minus_function_only_functional_ks": 0.006253908692933097,
+    "paired_single_trait_minus_function_only_activity_spearman": -0.12240323376119969,
+    "paired_single_trait_minus_function_only_activity_nrmse": 0.018057183463410194,
+    "paired_single_trait_minus_function_only_functional_ks": 0.003295057531257825
+  },
+  "interpretation": {
+    "supports_hypotheses": [],
+    "weakens_hypotheses": [
+      "HYP-007"
+    ],
+    "directly_updates_hyp_001": false,
+    "double_mutant_or_epistasis_test_available": false
+  }
+}

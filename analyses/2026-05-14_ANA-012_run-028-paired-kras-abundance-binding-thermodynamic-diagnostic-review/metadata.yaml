@@ -1,0 +1,24 @@
+id: ANA-012
+title: RUN-028 paired KRAS abundance-binding thermodynamic diagnostic review
+status: completed
+created: '2026-05-14T09:56:06+10:00'
+owner: matthew-spence
+experiments:
+- EXP-009
+runs:
+- RUN-028
+purpose: Assess whether the EXP-009 paired KRAS abundance-plus-binding thermodynamic
+  readout improves empirical recovery relative to binding-only and paired raw-readout
+  controls, and determine the implication for HYP-007.
+path: analyses/2026-05-14_ANA-012_run-028-paired-kras-abundance-binding-thermodynamic-diagnostic-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-14_ANA-012_run-028-paired-kras-abundance-binding-thermodynamic-diagnostic-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-14_ANA-012_run-028-paired-kras-abundance-binding-thermodynamic-diagnostic-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-028
+  produced_artifacts:
+  - analyses/2026-05-14_ANA-012_run-028-paired-kras-abundance-binding-thermodynamic-diagnostic-review/tables/run-028_key_metrics.md
+compliance:
+  level: green
+  issues: []

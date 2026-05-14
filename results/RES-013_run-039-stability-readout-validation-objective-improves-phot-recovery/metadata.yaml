@@ -1,0 +1,43 @@
+id: RES-013
+title: RUN-039 stability-readout validation objective strongly improves PHOT recovery
+  relative to two-trait variants
+status: completed
+created: '2026-05-14T11:56:50+10:00'
+owner: matthew-spence
+analyses:
+- ANA-013
+experiments:
+- EXP-013
+runs:
+- RUN-039
+supports: []
+weakens:
+- HYP-007
+refutes: []
+motivates: []
+supersedes: []
+summary: 'On PHOT_CHLRE_Chen_2023, the stability-targeted validation-objective Bayesian
+  fit improves the full predictive package relative to the explicit two-trait validation-objective
+  run: single-mutant holdout ranking remains strong, double-mutant holdout ranking
+  and epistasis prediction improve sharply, KS stays low, and the fitted reference
+  moves away from the peak. This indicates that the current PHOT multi-latent/readout
+  implementations are still structurally mismatched, while a stability-targeted causal
+  mapping fits the scalar activity assay much better.'
+artifacts:
+- results/RES-013_run-039-stability-readout-validation-objective-improves-phot-recovery/metrics.json
+evidence_paths:
+- analyses/2026-05-14_ANA-013_run-039-phot-stability-readout-validation-objective-control-review/tables/run-039_key_metrics.md
+- data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/summary.json
+- data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/selected_panel.csv
+- data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/mavenn_assay_metrics.csv
+- data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/branch_validations.csv
+- data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/posterior_parameter_summary.csv
+- data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/posterior_rounds.csv
+- data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/target_features.csv
+- results/RES-010_run-036-explicit-two-latent-trait-validation-objective-does-not-rescue-phot-chlre-recovery/metrics.json
+- results/RES-011_run-038-stability-readout-control-improves-phot-chlre-recovery-but-does-not-fully-rescue-the-assay/metrics.json
+- experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/config.yaml
+- experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/runs/RUN-039.yaml
+compliance:
+  level: green
+  issues: []

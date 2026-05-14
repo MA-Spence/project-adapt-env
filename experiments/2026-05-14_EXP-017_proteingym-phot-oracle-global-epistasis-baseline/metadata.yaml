@@ -1,0 +1,76 @@
+id: EXP-017
+type: experiment
+title: PHOT Oracle Global-Epistasis Baseline
+slug: proteingym-phot-oracle-global-epistasis-baseline
+status: planned
+created: '2026-05-14T09:31:31+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-007
+  previous_experiments:
+  - EXP-011
+  - EXP-012
+  - EXP-015
+  - EXP-016
+  motivating_results:
+  - RES-010
+  - RES-011
+question: Can an oracle additive latent score plus flexible monotone global-epistasis
+  nonlinearity outperform the mechanistic PHOT variants, thereby implicating restrictive
+  AdaptEnv latent priors rather than measurement noise or scalar-assay non-identifiability?
+pre_experiment_prediction: If AdaptEnv's latent priors are too restrictive, a MAVE-NN/MoCHI-style
+  additive latent score with flexible monotone global epistasis should beat the mechanistic
+  variants on held-out single mutants, double mutants, and epistasis prediction. If
+  it does not, the dominant limitation is more likely measurement noise or insufficient
+  identifiability from the scalar PHOT assay.
+rationale: The oracle baseline separates mechanistic misspecification from assay information
+  limits. It gives the data a flexible additive-to-observed map without requiring
+  the AdaptEnv stability/activity priors to be correct.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 6
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: gpu
+  queue: normal
+outputs:
+  expected:
+  - MAVE-NN/MoCHI-style oracle baseline metrics on PHOT_CHLRE
+  - including held-out single/double ranking
+  - epistasis-prediction metrics
+  - comparison to RES-010/RES-011 metrics
+  - and summary.json.
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 27145290866b73761dd2ad4b90b0c382cf8b9c6b
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

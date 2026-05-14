@@ -1,0 +1,157 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "assay_taxon": "Eukaryote",
+  "assay_selection_type": "FACS",
+  "assay_coarse_selection_type": "Activity",
+  "assay_sequence_length": 118,
+  "assay_total_variants": 167529,
+  "assay_single_mutants": 2122,
+  "assay_multiple_mutants": 165407,
+  "mavenn_test_metrics": {
+    "fit_variant_count": 3276,
+    "train_variant_count": 2966,
+    "test_variant_count": 310,
+    "nrmse": 0.8850599616066555,
+    "spearman": 0.68197723238683,
+    "wildtype_phi": 0.7501554489135742,
+    "wildtype_yhat": 1.279589313107048
+  },
+  "diagnostic_semantics": {
+    "mode": "photophysical_sparse_residual",
+    "is_full_adaptenv_landscape_fit": false,
+    "stability_coordinate": "alignment_frequency_proxy",
+    "residual_trait": "ridge_additive_mutation_score_fit_to_residual_after_stability_first_monotone_model",
+    "readout": "monotone_2d_binned_surface",
+    "sparse_residual_layer": "pair_effects_fit_to_residual_after_two_coordinate_surface",
+    "functional_ks_available": false,
+    "reference_geometry_available": false,
+    "posterior_available": false,
+    "synthetic_truth_recovery_available": false
+  },
+  "diagnostic_configuration": {
+    "max_train_mutation_count": 5,
+    "max_train_variants": 24000,
+    "train_variant_count": 15997,
+    "single_holdout_count": 404,
+    "double_holdout_count": 43,
+    "ridge_alpha": 2.0,
+    "n_bins": 32,
+    "n_bins_2d": 16,
+    "pair_residual_shrinkage": 4.0,
+    "max_epistasis_pairs": 30000
+  },
+  "model_validations": {
+    "stability_first_monotone": {
+      "single_holdout": {
+        "count": 404,
+        "rmse": 0.3198722663482629,
+        "nrmse": 0.8897357970771975,
+        "pearson": 0.48735948412518015,
+        "spearman": 0.5143295454154426
+      },
+      "double_holdout": {
+        "count": 43,
+        "rmse": 0.1535735999693327,
+        "nrmse": 0.8185267700762937,
+        "pearson": 0.5865200995925364,
+        "spearman": 0.5548338891206218
+      },
+      "epistasis_prediction": {
+        "count": 43,
+        "spearman": -0.19771174313031462,
+        "ks": 0.9069767441860465
+      }
+    },
+    "stability_plus_photophysical_residual_trait": {
+      "single_holdout": {
+        "count": 404,
+        "rmse": 0.33051772354013165,
+        "nrmse": 0.919346505276408,
+        "pearson": 0.4644176449728632,
+        "spearman": 0.49721211179556724
+      },
+      "double_holdout": {
+        "count": 43,
+        "rmse": 0.10892165723137791,
+        "nrmse": 0.580537880877706,
+        "pearson": 0.8417892038944756,
+        "spearman": 0.8225429590965381
+      },
+      "epistasis_prediction": {
+        "count": 43,
+        "spearman": -0.0006844543458324198,
+        "ks": 0.8604651162790697
+      }
+    },
+    "stability_plus_photophysical_trait_sparse_pair_residual": {
+      "single_holdout": {
+        "count": 404,
+        "rmse": 0.33051772354013165,
+        "nrmse": 0.919346505276408,
+        "pearson": 0.4644176449728632,
+        "spearman": 0.49721211179556724
+      },
+      "double_holdout": {
+        "count": 43,
+        "rmse": 0.10892165723137791,
+        "nrmse": 0.580537880877706,
+        "pearson": 0.8417892038944756,
+        "spearman": 0.8225429590965381
+      },
+      "epistasis_prediction": {
+        "count": 43,
+        "spearman": -0.0006844543458324198,
+        "ks": 0.8604651162790697
+      },
+      "sparse_pair_effect_count": 133,
+      "photophysical_mutation_feature_count": 1721,
+      "photophysical_beta_nonzero_count": 1721
+    }
+  },
+  "comparison_to_within_run_stability_first": {
+    "single_holdout_spearman_delta": -0.01711743361987539,
+    "double_holdout_spearman_delta": 0.26770906997591626,
+    "epistasis_prediction_spearman_delta": 0.1970272887844822,
+    "epistasis_prediction_ks_delta": -0.046511627906976716
+  },
+  "comparison_to_run_040_explicit_product_gate_two_trait_best": {
+    "single_holdout_spearman_delta": 0.2991312117232027,
+    "double_holdout_spearman_delta": 0.5704840565932303,
+    "epistasis_prediction_spearman_delta": -0.2649787671434405,
+    "epistasis_prediction_ks_delta": 0.39455602536997886,
+    "functional_ks_delta": null,
+    "reference_fraction_of_peak_delta": null,
+    "reference_distance_to_peak_delta": null
+  },
+  "comparison_to_run_039_stability_validation_objective_best": {
+    "single_holdout_spearman_delta": -0.009120792032560776,
+    "double_holdout_spearman_delta": 0.039749249568323486,
+    "epistasis_prediction_spearman_delta": -0.6350802280636401,
+    "epistasis_prediction_ks_delta": 0.11046511627906974,
+    "functional_ks_delta": null,
+    "reference_fraction_of_peak_delta": null,
+    "reference_distance_to_peak_delta": null
+  },
+  "comparison_to_run_041_flexible_monotone_two_latent_diagnostic": {
+    "single_holdout_spearman_delta": 0.02416427295235979,
+    "double_holdout_spearman_delta": 0.015871033718230176,
+    "epistasis_prediction_spearman_delta": -0.03524448022072804,
+    "epistasis_prediction_ks_delta": 0.046511627906976716,
+    "functional_ks_delta": null,
+    "reference_fraction_of_peak_delta": null,
+    "reference_distance_to_peak_delta": null
+  },
+  "sparse_pair_layer": {
+    "fitted_pair_effect_count": 133,
+    "heldout_metrics_identical_to_residual_trait_model": true,
+    "single_holdout_spearman_delta_vs_residual_trait": 0.0,
+    "double_holdout_spearman_delta_vs_residual_trait": 0.0,
+    "epistasis_prediction_spearman_delta_vs_residual_trait": 0.0,
+    "epistasis_prediction_ks_delta_vs_residual_trait": 0.0
+  },
+  "scientific_interpretation": {
+    "ranking_signal": "Stability-first residualization exposes additional double-mutant ranking signal, with residual-trait double holdout Spearman 0.823.",
+    "epistasis_signal": "The residual-trait and sparse-pair models leave epistasis Spearman approximately zero and KS poor, so ranking improvement is not equivalent to epistasis recovery.",
+    "hypothesis_effect": "Weakens HYP-007 as a complete empirical recovery claim while preserving residual readout structure as a narrower contributor to PHOT mismatch."
+  }
+}

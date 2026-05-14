@@ -20,6 +20,5 @@ notebook_record:
   produced_artifacts:
   - analyses/2026-05-13_ANA-009_run-030-latent-activity-observed-fitness-calibration-review/tables/run-030_key_metrics.md
 compliance:
-  level: yellow
-  issues:
-  - ANA-009 is completed but none of its linked runs are completed.
+  level: green
+  issues: []

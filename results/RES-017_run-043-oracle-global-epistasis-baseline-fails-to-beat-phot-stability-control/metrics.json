@@ -1,0 +1,133 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "assay_taxon": "Eukaryote",
+  "assay_selection_type": "FACS",
+  "assay_coarse_selection_type": "Activity",
+  "assay_sequence_length": 118,
+  "assay_total_variants": 167529,
+  "assay_single_mutants": 2122,
+  "assay_multiple_mutants": 165407,
+  "mavenn_test_metrics": {
+    "fit_variant_count": 3276,
+    "train_variant_count": 2966,
+    "test_variant_count": 310,
+    "nrmse": 0.8717570070126405,
+    "spearman": 0.6816352371202583,
+    "wildtype_phi": 0.6512349247932434,
+    "wildtype_yhat": 1.2579974112716754
+  },
+  "diagnostic_semantics": {
+    "mode": "oracle_global_epistasis",
+    "is_full_adaptenv_landscape_fit": false,
+    "latent_score": "ridge_additive_mutation_score_fit_directly_to_assay_score",
+    "readout": "monotone_1d_binned_global_epistasis_map",
+    "functional_ks_available": false,
+    "reference_geometry_available": false,
+    "posterior_available": false,
+    "synthetic_truth_recovery_available": false
+  },
+  "diagnostic_configuration": {
+    "max_train_mutation_count": 5,
+    "max_train_variants": 24000,
+    "train_variant_count": 15997,
+    "single_holdout_count": 404,
+    "double_holdout_count": 43,
+    "ridge_alpha": 2.0,
+    "n_bins": 40,
+    "max_epistasis_pairs": 30000
+  },
+  "model_validations": {
+    "oracle_additive_linear": {
+      "single_holdout": {
+        "count": 404,
+        "rmse": 0.41311293762915396,
+        "nrmse": 1.1490879563912966,
+        "pearson": -0.02297657538942068,
+        "spearman": 0.004563680311934349
+      },
+      "double_holdout": {
+        "count": 43,
+        "rmse": 0.11750189523129582,
+        "nrmse": 0.6262694030791855,
+        "pearson": 0.8401693556395837,
+        "spearman": 0.8051948051948052
+      },
+      "epistasis_prediction": {
+        "count": 43,
+        "spearman": 0.2519929622734269,
+        "ks": 0.9069767441860465
+      }
+    },
+    "oracle_additive_monotone_global_epistasis": {
+      "single_holdout": {
+        "count": 404,
+        "rmse": 0.40217372331467194,
+        "nrmse": 1.1186601525725777,
+        "pearson": -0.023811553672146955,
+        "spearman": 0.004563680311934349
+      },
+      "double_holdout": {
+        "count": 43,
+        "rmse": 0.109928183264092,
+        "nrmse": 0.5859025301580489,
+        "pearson": 0.819488360140173,
+        "spearman": 0.8029624320695554
+      },
+      "epistasis_prediction": {
+        "count": 43,
+        "spearman": 0.23950468136514647,
+        "ks": 0.8837209302325582
+      }
+    }
+  },
+  "monotone_vs_linear_oracle": {
+    "single_holdout_spearman_delta": 0.0,
+    "single_holdout_nrmse_delta": -0.0304278038187189,
+    "double_holdout_spearman_delta": -0.0022323731252498202,
+    "double_holdout_nrmse_delta": -0.04036687292113661,
+    "epistasis_prediction_spearman_delta": -0.012488280908280414,
+    "epistasis_prediction_ks_delta": -0.023255813953488302
+  },
+  "comparison_to_run_039_stability_validation_objective_best": {
+    "single_holdout_spearman_delta": -0.5017692235161937,
+    "double_holdout_spearman_delta": 0.020168722541340833,
+    "epistasis_prediction_spearman_delta": -0.3948910923526612,
+    "epistasis_prediction_ks_delta": 0.13372093023255816,
+    "functional_ks_delta": null,
+    "reference_fraction_of_peak_delta": null,
+    "reference_distance_to_peak_delta": null
+  },
+  "comparison_to_run_040_explicit_product_gate_two_trait_best": {
+    "single_holdout_spearman_delta": -0.19351721976043024,
+    "double_holdout_spearman_delta": 0.5509035295662477,
+    "epistasis_prediction_spearman_delta": -0.0247896314324616,
+    "epistasis_prediction_ks_delta": 0.41781183932346727,
+    "functional_ks_delta": null,
+    "reference_fraction_of_peak_delta": null,
+    "reference_distance_to_peak_delta": null
+  },
+  "comparison_to_run_041_flexible_monotone_two_latent_diagnostic": {
+    "single_holdout_spearman_delta": -0.4684841585312731,
+    "double_holdout_spearman_delta": -0.003709493308752476,
+    "epistasis_prediction_spearman_delta": 0.20494465549025084,
+    "epistasis_prediction_ks_delta": 0.06976744186046513,
+    "functional_ks_delta": null,
+    "reference_fraction_of_peak_delta": null,
+    "reference_distance_to_peak_delta": null
+  },
+  "comparison_to_run_042_stability_first_residual_trait_diagnostic": {
+    "single_holdout_spearman_delta": -0.4926484314836329,
+    "double_holdout_spearman_delta": -0.019580527026982653,
+    "epistasis_prediction_spearman_delta": 0.24018913571097888,
+    "epistasis_prediction_ks_delta": 0.023255813953488413,
+    "functional_ks_delta": null,
+    "reference_fraction_of_peak_delta": null,
+    "reference_distance_to_peak_delta": null
+  },
+  "scientific_interpretation": {
+    "single_mutant_signal": "The oracle additive/global-epistasis baseline essentially fails held-out single-mutant ranking with Spearman 0.005.",
+    "double_mutant_signal": "The oracle can rank held-out double mutants, with Spearman 0.803-0.805, but this does not coincide with strong epistasis recovery.",
+    "epistasis_signal": "Epistasis Spearman remains modest at 0.240-0.252 and KS remains poor at 0.884-0.907.",
+    "hypothesis_effect": "Weakens HYP-007 as a complete empirical recovery claim and fails the preregistered condition for assigning the PHOT mismatch mainly to restrictive AdaptEnv latent priors."
+  }
+}

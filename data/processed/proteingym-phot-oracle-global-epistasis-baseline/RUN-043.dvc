@@ -1,0 +1,6 @@
+outs:
+- md5: 13beb898c6ac0dac20634e0ad4b7f39c.dir
+  size: 38853806
+  nfiles: 8
+  hash: md5
+  path: RUN-043
