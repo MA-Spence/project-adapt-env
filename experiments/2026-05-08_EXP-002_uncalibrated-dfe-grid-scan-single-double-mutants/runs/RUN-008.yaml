@@ -89,7 +89,7 @@ scheduler_state: INFERRED_EXIT_CODE
 compliance:
   level: yellow
   issues:
-  - 'File under default durable data root is not tracked by DVC: data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/summary.json'
-  - 'File under default durable data root is not tracked by DVC: data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_setting.csv'
-  - 'File under default durable data root is not tracked by DVC: data/processed/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_landscape.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/summary.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_setting.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/uncalibrated-dfe-grid-scan-single-double-mutants/RUN-008/single_double_dfe_per_landscape.csv'
 scheduler_exit_code: '0'

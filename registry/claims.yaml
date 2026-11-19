@@ -1,6 +1,7 @@
 items:
 - id: CLAIM-001
-  title: Single-family empirical-like statistics are recoverable with assay-specific thermodynamic calibration
+  title: Single-family empirical-like statistics are recoverable with assay-specific
+    thermodynamic calibration
   status: completed
   created: '2026-05-14T19:54:54+10:00'
   owner: matthew-spence
@@ -35,7 +36,8 @@ items:
     level: green
     issues: []
 - id: CLAIM-002
-  title: Empirical biophysical fits are supported only as a single latent thermodynamic trait
+  title: Empirical biophysical fits are supported only as a single latent thermodynamic
+    trait
   status: completed
   created: '2026-05-14T19:54:54+10:00'
   owner: matthew-spence
@@ -78,6 +80,81 @@ items:
   - RES-018
   - RES-019
   path: claims/CLAIM-002_single-latent-biophysical-empirical-fits.md
+  compliance:
+    level: green
+    issues: []
+- id: CLAIM-003
+  title: Coupled auxiliary capacity improves PHOT ruggedness benchmarks without empirical
+    module specificity
+  status: completed
+  created: '2026-05-17T21:53:09+10:00'
+  owner: Codex
+  aim: AIM-001
+  aims:
+  - AIM-001
+  supersedes:
+  - HYP-008
+  supported_by:
+  - RES-035
+  - RES-036
+  - RES-037
+  - RES-038
+  constrained_by:
+  - RES-037
+  - RES-038
+  - RES-039
+  results:
+  - RES-035
+  - RES-036
+  - RES-037
+  - RES-038
+  - RES-039
+  path: claims/CLAIM-003_structured-high-order-residual-capacity-improves-phot-benchmarks.md
+  compliance:
+    level: green
+    issues: []
+- id: CLAIM-004
+  title: Thermodynamic GNK landscapes support conditional aggregate and adaptive-search
+    resemblance to TrpB
+  status: completed
+  created: '2026-10-08T22:06:56+11:00'
+  owner: matthew-spence
+  results:
+  - RES-063
+  path: claims/CLAIM-004_thermodynamic-gnk-trpb-aggregate-and-adaptive-search-resemblance.md
+  aim: AIM-001
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  analyses:
+  - ANA-069
+  - ANA-068
+  - ANA-067
+  - ANA-066
+  experiments:
+  - EXP-065
+  - EXP-066
+  runs:
+  - RUN-175
+  - RUN-172
+  - RUN-170
+  supported_by:
+  - ANA-069
+  constrained_by:
+  - ANA-069
+  - ANA-067
+  - ANA-068
+  evidence_basis: Direct ANA-069/RUN-175 evidence, now synthesized in RES-063 without
+    expanding the original synthetic-prior claim.
+  implementation:
+    package: Adapt-Env
+    version: 0.4.0
+    model: thermodynamic_gnk_v2
+    commit: 37d23c64b15a26cafa41232940feabc218505cd5
+    branch: dev
+  verification: claims/CLAIM-004_evidence/verification.json
   compliance:
     level: green
     issues: []

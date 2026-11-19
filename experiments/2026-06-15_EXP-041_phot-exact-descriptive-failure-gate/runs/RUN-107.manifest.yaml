@@ -1,0 +1,40 @@
+run: RUN-107
+target: lab-slurm
+experiment: EXP-041
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-15_EXP-041_phot-exact-descriptive-failure-gate
+  run_script: experiments/2026-06-15_EXP-041_phot-exact-descriptive-failure-gate/run.sh
+inputs:
+  declared_files:
+  - data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/summary.json
+  - data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/selected_panel.csv
+  - data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/prepared_assay.csv
+  - data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/mavenn_metrics.json
+  - data/interim/proteingym_mmseqs_alignments/PHOT_CHLRE_Chen_2023.fasta
+  - experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/config.yaml
+  - scripts/phot_exact_descriptive_failure_analysis.py
+  - src/project_adapt_env/dense_descriptive.py
+  datasets: []
+outputs:
+  expected:
+  - summary.json
+  - graphlet_catalog.csv
+  - exact_graphlet_values.csv
+  - exact_graphlet_metrics.csv
+  - exact_model_failures.csv
+  - exact_model_distances.csv
+  - abc_descriptive_gate.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-107/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-107
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-107/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-107/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-107
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-107/project/experiments/2026-06-15_EXP-041_phot-exact-descriptive-failure-gate/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-107/project/experiments/2026-06-15_EXP-041_phot-exact-descriptive-failure-gate/runs/RUN-107.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

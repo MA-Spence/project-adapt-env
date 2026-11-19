@@ -1,0 +1,136 @@
+experiment_id: EXP-057
+title: Stage 4B design-matched support-aware GNK probe
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-057
+  stage: 4B-fixed-probe
+  mode: design_matched_support_aware_probe
+  planned_runner: scripts/design_matched_support_aware_probe_exp057.py
+  scientific_boundary:
+    advisory_source: scratch/RES-054_assessment_and_path_to_finishing_component1.md#3
+    public_protocol: additive_thermodynamic_gnk
+    stop_rule: do_not_run_overlap_joint_or_heldout_until_core_gnk_separation_and_monotone_knobs_pass
+    controls:
+      - additive_core_only_observable
+      - bare_gnk_texture
+      - structured_vs_shuffled_vs_random_support
+      - unfolded_vs_fold_transition_vs_plateau_anchors
+
+data:
+  processed_root: data/processed/ensemble-landscape-validation-datasets
+  dataset_ids:
+    - gb1_wu2016_four_site_graphfla
+    - trpb_johnston2024_four_site_graphfla
+    - dhfr_papkou2023_full_wagner_tsv
+    - cr9114_h1_phillips2021_graphfla
+    - cr9114_h3_phillips2021_graphfla
+    - cr9114_flub_phillips2021_graphfla
+    - cr6261_h1_phillips2021_graphfla
+    - cr6261_h9_phillips2021_graphfla
+    - pard2_lite2020_graphfla
+    - pard3_lite2020_graphfla
+
+generator:
+  sequence_length: 48
+  subcube_dim: 0
+  support_modes: [structured, shuffled, random]
+  seeds: [701, 702, 703]
+  stability_margin_grid: [6.0, 10.0, 14.0]
+  epi_weight_grid: [0.0, 0.15, 0.3, 0.6, 1.0]
+  gnk_terms: 384
+  gnk_min_order: 2
+  gnk_max_order: 4
+  gnk_order_weights: [0.35, 0.45, 0.20]
+  stability_scale: 1.0
+  threshold_steepness: 20.0
+  fitness_output_scale: 10.0
+
+probe:
+  support_graphlets_per_template: 3
+  potts_graphlets_per_template: 1
+  anchor_candidate_samples: 4096
+  eval_chunk_size: 32768
+  site_seed_offset: 51000
+  anchor_seed_offset: 41000
+  anchor_regimes:
+    - name: unfolded
+      target_margin: -2.0
+    - name: fold_transition
+      target_margin: 0.0
+    - name: plateau
+      target_margin: 2.0
+
+descriptors:
+  neutrality:
+    abs_tolerance: 1.0e-6
+    sd_fraction: 0.02
+  single_step_effect_samples: 20000
+  pairwise_epistasis_samples: 8000
+  reachability_starts: 256
+  random_walk_steps: 2048
+
+expectations:
+  high_order_fraction: increase
+  sign_epistasis_fraction: increase
+  reciprocal_sign_epistasis_fraction: increase
+  local_maxima_density: increase
+  peak_targeted_reachability_fraction: decrease
+  random_walk_lag1_autocorrelation: decrease
+
+gates:
+  monotonicity_abs_rho_floor: 0.5
+  core_gnk_separation_metrics:
+    - high_order_fraction
+    - sign_epistasis_fraction
+    - local_maxima_density
+  core_gnk_effect_thresholds:
+    - metric: high_order_fraction
+      min_abs_delta: 0.03
+    - metric: sign_epistasis_fraction
+      min_abs_delta: 0.03
+    - metric: local_maxima_density
+      min_abs_delta: 0.005
+
+outputs:
+  expected:
+    - preflight.json
+    - empirical_design_templates.csv
+    - empirical_template_descriptor_metrics.csv
+    - generator_parameter_grid.csv
+    - support_catalog.csv
+    - support_aware_graphlet_audit.csv
+    - anchor_regime_audit.csv
+    - generator_descriptor_metrics.csv
+    - generator_knob_monotonicity.csv
+    - core_texture_ablation_controls.csv
+    - core_gnk_separation_gates.csv
+    - checkpoint_resume_summary.json
+    - summary.json
+
+quick:
+  data:
+    dataset_ids:
+      - gb1_wu2016_four_site_graphfla
+      - cr9114_h3_phillips2021_graphfla
+  generator:
+    sequence_length: 16
+    support_modes: [structured, random]
+    seeds: [701]
+    stability_margin_grid: [10.0]
+    epi_weight_grid: [0.0, 0.6]
+    gnk_terms: 64
+  probe:
+    support_graphlets_per_template: 1
+    potts_graphlets_per_template: 1
+    anchor_candidate_samples: 256
+    eval_chunk_size: 16384
+    anchor_regimes:
+      - name: fold_transition
+        target_margin: 0.0
+  descriptors:
+    single_step_effect_samples: 2000
+    pairwise_epistasis_samples: 1000
+    reachability_starts: 64
+    random_walk_steps: 512

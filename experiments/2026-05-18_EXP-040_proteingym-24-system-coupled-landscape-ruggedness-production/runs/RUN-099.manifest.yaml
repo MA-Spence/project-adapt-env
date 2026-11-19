@@ -1,0 +1,39 @@
+run: RUN-099
+target: lab-slurm
+experiment: EXP-040
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-18_EXP-040_proteingym-24-system-coupled-landscape-ruggedness-production
+  run_script: experiments/2026-05-18_EXP-040_proteingym-24-system-coupled-landscape-ruggedness-production/run.sh
+inputs:
+  declared_files: []
+  datasets: []
+outputs:
+  expected:
+  - summary.json
+  - resolved_config.json
+  - selected_systems.csv
+  - target_selection_audit.json
+  - system_fit_summary.csv
+  - system_variant_validation.csv
+  - system_graphlet_metrics.csv
+  - system_model_distances.csv
+  - system_walk_step_metrics.csv
+  - coupled_parameter_summary.csv
+  - coupling_function_stats.csv
+  - coupled_particles.csv
+  - system_walsh_terms.csv
+  - system_gft_coefficients.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-099/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-099
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-099/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-099/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-099
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-099/project/experiments/2026-05-18_EXP-040_proteingym-24-system-coupled-landscape-ruggedness-production/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-099/project/experiments/2026-05-18_EXP-040_proteingym-24-system-coupled-landscape-ruggedness-production/runs/RUN-099.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

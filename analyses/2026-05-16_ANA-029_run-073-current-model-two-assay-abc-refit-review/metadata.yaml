@@ -1,0 +1,31 @@
+id: ANA-029
+title: RUN-073 current-model two-assay ABC refit review
+status: completed
+created: '2026-05-16T17:08:38+10:00'
+owner: matthew-spence
+experiments:
+- EXP-029
+runs:
+- RUN-073
+purpose: Assess whether current-model ABC refitting on PHOT and Tsuboyama stability
+  assays resolves stale empirical-cache concerns and produces a calibrated basis for
+  comparing model epistasis/ruggedness statistics.
+path: analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-073
+  produced_artifacts:
+  - analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_branch_validation.md
+  - analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_panel.md
+  - analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_posterior_parameters.md
+  - analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_preflight.md
+  - analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_prior_fit_comparison.md
+  - analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_smc_rounds.md
+  - analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_synthetic_truth_recovery.md
+  - analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_target_features.md
+compliance:
+  level: green
+  issues: []

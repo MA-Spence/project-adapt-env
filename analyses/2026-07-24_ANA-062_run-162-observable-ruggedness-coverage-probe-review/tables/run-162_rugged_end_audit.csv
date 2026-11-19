@@ -1,0 +1,4 @@
+template,n_empirical_descriptors_available,maximum_descriptors_in_band,any_joint_reach_pass,any_navigable_joint_reach_pass,maximum_accessibility_among_joint_rows
+cr9114_flub_phillips2021_graphfla,6,3,False,False,
+cr9114_h1_phillips2021_graphfla,8,7,True,True,1.0
+cr9114_h3_phillips2021_graphfla,8,7,True,True,1.0

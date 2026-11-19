@@ -1,0 +1,10 @@
+| panel     | quantity           | value                                                                                                                                                                        |
+|:----------|:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| synthetic | landscape seeds    | 2                                                                                                                                                                            |
+| synthetic | graphlets          | 60                                                                                                                                                                           |
+| synthetic | metric rows        | 1200                                                                                                                                                                         |
+| synthetic | start class counts | {"distant_low_fitness_homologue": 12, "high_fitness_close_homologue": 12, "marginal_stability_homologue": 12, "reference_or_consensus_like": 12, "viable_off_consensus": 12} |
+| synthetic | walk stage counts  | {"early": 20, "late": 20, "middle": 20}                                                                                                                                      |
+| empirical | assays             | 3                                                                                                                                                                            |
+| empirical | graphlets          | 56                                                                                                                                                                           |
+| empirical | metric rows        | 336                                                                                                                                                                          |

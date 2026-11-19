@@ -1,0 +1,11 @@
+| support_mode | anchor_regime   | n   | pass_n | pass_fraction | median_spearman_rho |
+| ------------ | --------------- | --- | ------ | ------------- | ------------------- |
+| random       | fold_transition | 180 | 33     | 0.183333      | 0.1                 |
+| random       | plateau         | 180 | 41     | 0.227778      | 0.288675            |
+| random       | unfolded        | 180 | 28     | 0.155556      | -0.0512989          |
+| shuffled     | fold_transition | 180 | 37     | 0.205556      | 0.2                 |
+| shuffled     | plateau         | 180 | 43     | 0.238889      | 0.3                 |
+| shuffled     | unfolded        | 180 | 22     | 0.122222      | 0.3                 |
+| structured   | fold_transition | 180 | 35     | 0.194444      | -0.0512989          |
+| structured   | plateau         | 180 | 45     | 0.25          | 0.2                 |
+| structured   | unfolded        | 180 | 34     | 0.188889      | 0.2                 |

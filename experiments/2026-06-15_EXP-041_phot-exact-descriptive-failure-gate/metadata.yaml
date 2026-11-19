@@ -1,0 +1,88 @@
+id: EXP-041
+type: experiment
+title: PHOT exact descriptive failure gate for full ABC fit
+slug: phot-exact-descriptive-failure-gate
+status: completed
+created: '2026-06-15T23:14:20+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-013
+  - EXP-030
+  - EXP-036
+  - EXP-038
+  motivating_results:
+  - RES-013
+  - RES-030
+  - RES-036
+  - RES-038
+question: Before running any new ABC search, which exact dense PHOT graphlet summaries
+  does the existing RUN-039 full ABC fit fail relative to the empirical latent_phi
+  landscape?
+pre_experiment_prediction: The RUN-039 full ABC fit will retain useful low-order predictive
+  structure but will fail exact dense-subspace topology or spectral/local-energy summaries
+  that were not part of the original validation objective.
+rationale: The current ABC workflow is expensive and can obscure model misspecification
+  by optimizing a broad summary vector. This experiment first computes deterministic
+  complete-graphlet summaries on PHOT and emits a ranked failure ledger; a later ABC
+  objective is justified only for summaries shown to fail descriptively.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/summary.json
+  - data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/selected_panel.csv
+  - data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/prepared_assay.csv
+  - data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/mavenn_metrics.json
+  - data/interim/proteingym_mmseqs_alignments/PHOT_CHLRE_Chen_2023.fasta
+  - experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/config.yaml
+  - scripts/phot_exact_descriptive_failure_analysis.py
+  - src/project_adapt_env/dense_descriptive.py
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 04:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - graphlet_catalog.csv
+  - exact_graphlet_values.csv
+  - exact_graphlet_metrics.csv
+  - exact_model_failures.csv
+  - exact_model_distances.csv
+  - abc_descriptive_gate.csv
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

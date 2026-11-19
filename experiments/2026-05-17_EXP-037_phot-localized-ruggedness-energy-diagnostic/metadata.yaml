@@ -1,0 +1,103 @@
+id: EXP-037
+type: experiment
+title: PHOT localized ruggedness energy diagnostic
+slug: phot-localized-ruggedness-energy-diagnostic
+status: completed
+created: '2026-05-17T13:43:03+10:00'
+owner: Codex
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  - EXP-036
+  motivating_results:
+  - RES-030
+  - RES-036
+question: In PHOT empirical, frozen ABC-refit current a(x), smooth-core, RUN-091 ABC
+  fitted coupled families, and the random/shuffled/uncoupled controls, is Dirichlet
+  ruggedness locally clustered on neighboring graphlet edges, sites, plaquettes, or
+  empirical modules rather than diffuse across the dense graphlet landscape?
+pre_experiment_prediction: 'Support for HYP-008 requires PHOT empirical residual ruggedness
+  and the empirical-module ABC family to show stronger localized energy clustering
+  than fitted current, smooth core, no-module, random-module, shuffled-module, and
+  uncoupled-module controls: positive adjacent-edge Dirichlet-energy autocorrelation,
+  lower effective edge/site/pair counts, higher top-edge/site/pair fractions, and
+  empirical-module enrichment. If RUN-091''s diffuse-module diagnosis is correct,
+  the empirical-module family will not show specific localization beyond random or
+  uncoupled controls.'
+rationale: 'RUN-091 improved held-out graphlet distance with ABC but failed mechanism
+  specificity: random-module was fractionally better, uncoupled-module was better,
+  and empirical-module energy was diffuse. This experiment does not introduce a new
+  operator. It reuses the fitted RUN-091 parameters and directly tests whether the
+  observed and fitted landscapes localize ruggedness or distribute Dirichlet energy
+  broadly.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/phot-coupled-family-discriminating-abc/RUN-091.dvc
+  - scripts/phot_localized_ruggedness_energy_diagnostic.py
+  - scripts/phot_coupled_family_discriminating_abc.py
+  - scripts/phot_coupled_landscape_grid_search.py
+  - src/project_adapt_env/coupled_landscape.py
+  datasets:
+  - RUN-077 PHOT system-specific current-model refit outputs
+  - RUN-091 PHOT coupled-family discriminating ABC fitted parameter/output tables
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 2
+    memory_gb: 16
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 01:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - localized_ruggedness_graphlet_metrics.csv
+  - edge_dirichlet_energy_rows.csv
+  - module_enrichment_by_graphlet.csv
+  - model_localization_summary.csv
+  - module_enrichment_summary.csv
+  - selected_vs_empirical_localization_delta.csv
+  - localization_metric_ranks.csv
+  - run091_selected_family_distances.csv
+  - run091_reused_parameter_sets.csv
+  artifacts:
+  - data/processed/phot-localized-ruggedness-energy-diagnostic/RUN-093.dvc
+downstream:
+  planned_analyses:
+  - ANA-037
+  planned_results:
+  - RES-037
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- Reuses fitted RUN-091 ABC parameter sets only; no new ABC or operator fitting is
+  part of this experiment.
+- Primary localization metrics are adjacent-edge Dirichlet-energy autocorrelation,
+  effective edge/site/node/pair counts, top-energy fractions, and module energy enrichment
+  against empirical/random/shuffled/uncoupled module sets.
+template: generic
+compliance:
+  level: green
+  issues: []

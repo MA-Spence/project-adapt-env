@@ -1,0 +1,20 @@
+| support_mode | stability_margin | knob | metric | expected_direction | spearman_rho | direction_pass | n_parameter_sets |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| random | 6.0 | epi_weight | sign_epistasis_fraction | increase |  | False | 15 |
+| random | 6.0 | epi_weight | reciprocal_sign_epistasis_fraction_local | increase |  | False | 15 |
+| random | 6.0 | epi_weight | accessible_path_fraction_dp | decrease |  | False | 15 |
+| random | 10.0 | epi_weight | sign_epistasis_fraction | increase |  | False | 15 |
+| random | 10.0 | epi_weight | reciprocal_sign_epistasis_fraction_local | increase |  | False | 15 |
+| random | 10.0 | epi_weight | accessible_path_fraction_dp | decrease |  | False | 15 |
+| random | 14.0 | epi_weight | sign_epistasis_fraction | increase |  | False | 15 |
+| random | 14.0 | epi_weight | reciprocal_sign_epistasis_fraction_local | increase |  | False | 15 |
+| random | 14.0 | epi_weight | accessible_path_fraction_dp | decrease |  | False | 15 |
+| shuffled | 6.0 | epi_weight | reciprocal_sign_epistasis_fraction_local | increase |  | False | 15 |
+| shuffled | 6.0 | epi_weight | accessible_path_fraction_dp | decrease |  | False | 15 |
+| shuffled | 10.0 | epi_weight | reciprocal_sign_epistasis_fraction_local | increase |  | False | 15 |
+| shuffled | 10.0 | epi_weight | accessible_path_fraction_dp | decrease |  | False | 15 |
+| shuffled | 14.0 | epi_weight | reciprocal_sign_epistasis_fraction_local | increase |  | False | 15 |
+| shuffled | 14.0 | epi_weight | accessible_path_fraction_dp | decrease |  | False | 15 |
+| structured | 6.0 | epi_weight | reciprocal_sign_epistasis_fraction_local | increase |  | False | 15 |
+| structured | 6.0 | epi_weight | accessible_path_fraction_dp | decrease |  | False | 15 |
+| structured | 10.0 | epi_weight | reciprocal_sign_epistasis_fraction_local | increase |  | False | 15 |

@@ -1,0 +1,94 @@
+id: EXP-040
+type: experiment
+title: ProteinGym 24-system coupled landscape ruggedness production
+slug: proteingym-24-system-coupled-landscape-ruggedness-production
+status: running
+created: '2026-05-18T14:29:36+10:00'
+owner: Codex
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-013
+  - EXP-030
+  - EXP-036
+  - EXP-038
+  - EXP-039
+  motivating_results:
+  - RES-013
+  - RES-030
+  - RES-036
+  - RES-038
+  - RES-039
+question: Across a diverse 24-system ProteinGym multi-mutant panel, do base thermodynamic
+  residual-epistasis, aligned two-way coupled, and aligned three-way coupled landscape
+  fits reproduce empirical predictive and topological ruggedness behaviour on held-out
+  variants and graphlets?
+pre_experiment_prediction: The base thermodynamic residual model should recover coarse
+  single/double-mutant predictive structure in some systems but underfit high-order
+  and local ruggedness summaries; aligned coupled capacity should improve bulk graphlet,
+  DFE, walk, and spectral statistics while preserving correlation to the base function;
+  three-way coupling may add capacity but should not be interpreted as residue-specific
+  mechanism.
+rationale: CLAIM-001 and CLAIM-003 support system-specific thermodynamic calibration
+  and coupled auxiliary capacity, but almost all coupled-landscape evidence is PHOT-only.
+  A production multi-system experiment is needed to certify whether the same model
+  hierarchy improves empirical-like landscape topology across activity, binding, expression,
+  organismal-fitness, and stability assays with real combinatorial mutation coverage.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 12
+    memory_gb: 24
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '168:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - resolved_config.json
+  - selected_systems.csv
+  - target_selection_audit.json
+  - system_fit_summary.csv
+  - system_variant_validation.csv
+  - system_graphlet_metrics.csv
+  - system_model_distances.csv
+  - system_walk_step_metrics.csv
+  - coupled_parameter_summary.csv
+  - coupling_function_stats.csv
+  - coupled_particles.csv
+  - system_walsh_terms.csv
+  - system_gft_coefficients.csv
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

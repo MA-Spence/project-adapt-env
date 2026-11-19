@@ -1,0 +1,29 @@
+id: ANA-024
+title: RUN-063 TEM-1 DCA clique haplotype high-order epistasis review
+status: completed
+created: '2026-05-15T14:35:27+10:00'
+owner: matthew-spence
+experiments:
+- EXP-024
+runs:
+- RUN-063
+purpose: Review whether DCA/contact-graph clique exact-match haplotype terms create
+  controllable third-, fourth-, and fifth-order Walsh components in dense local TEM-1
+  Hamming maps, and record sign epistasis/RSE side effects.
+path: analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-063
+  produced_artifacts:
+  - analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_dca_haplotype_terms_summary.md
+  - analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_key_metrics.md
+  - analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_order5_upper_walsh_variance.md
+  - analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_order_strength_summary.md
+  - analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_upper_strength_topology.md
+  - analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_validation_tests.md
+compliance:
+  level: green
+  issues: []

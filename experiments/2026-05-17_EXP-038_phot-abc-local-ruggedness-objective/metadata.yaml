@@ -1,0 +1,111 @@
+id: EXP-038
+type: experiment
+title: PHOT ABC local ruggedness objective
+slug: phot-abc-local-ruggedness-objective
+status: completed
+created: '2026-05-17T15:09:24+10:00'
+owner: Codex
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-036
+  - EXP-037
+  motivating_results:
+  - RES-036
+  - RES-037
+question: For PHOT, does adding adjacent-edge Dirichlet-energy localization statistics
+  to the SMC-ABC calibration objective yield coupled-family candidates whose held-out
+  graphlet fit and ruggedness diffuseness match empirical PHOT better than current/smooth,
+  no-module, random/shuffled-module, and uncoupled controls?
+pre_experiment_prediction: If the RUN-093 diagnosis is actionable, including adjacent-edge
+  Dirichlet-energy autocorrelation and edge/site concentration terms in the ABC objective
+  should select particles that better match empirical PHOT held-out ruggedness localization
+  without losing the RUN-091 held-out graphlet-distance gain. Support for HYP-008
+  still requires empirical-module specificity over no-module, random/shuffled-module,
+  uncoupled-module, residual, and GNK controls.
+rationale: RUN-091 showed ABC can improve PHOT held-out graphlet distance but failed
+  locality specificity, while RUN-093 showed PHOT has residual localized ruggedness
+  that was not optimized during ABC fitting. This experiment keeps the same PHOT base
+  and candidate/control families, but adds explicit local ruggedness diffuseness statistics
+  to the calibration objective.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - scripts/phot_coupled_family_discriminating_abc.py
+  - scripts/phot_coupled_landscape_grid_search.py
+  - scripts/phot_localized_ruggedness_energy_diagnostic.py
+  - src/project_adapt_env/coupled_landscape.py
+  - src/project_adapt_env/smc_abc.py
+  datasets:
+  - RUN-077 PHOT system-specific current-model refit outputs
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 04:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - progress.json
+  - parameter_specs.csv
+  - posterior_particles.csv
+  - posterior_rounds.csv
+  - evaluated_parameter_sets.csv
+  - graphlet_catalog.csv
+  - module_catalog.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - graphlet_summary.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - selected_family_distances.csv
+  - selected_family_pairwise_deltas.csv
+  - component_guardrail_summary.csv
+  - module_energy_rows.csv
+  - module_energy_by_graphlet.csv
+  - module_energy_summary.csv
+  - base_correlation.csv
+  - empirical_readout_fit.json
+  artifacts:
+  - data/processed/phot-abc-local-ruggedness-objective/RUN-096.dvc
+downstream:
+  planned_analyses:
+  - ANA-038
+  planned_results:
+  - RES-038
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- Extends the RUN-091 SMC-ABC objective by adding adjacent-edge Dirichlet-energy Moran
+  I plus edge, site, and plaquette energy concentration metrics from the RUN-093 localized-ruggedness
+  diagnostic.
+- This is still a calibration/test graphlet experiment; held-out graphlets remain
+  reserved for evidence after ABC selection.
+template: generic
+compliance:
+  level: green
+  issues: []

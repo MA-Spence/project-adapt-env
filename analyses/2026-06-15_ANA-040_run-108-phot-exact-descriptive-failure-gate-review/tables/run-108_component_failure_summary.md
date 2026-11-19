@@ -1,0 +1,21 @@
+| metric                             |   mean_abs_scaled_error |   max_abs_scaled_error |   mean_signed_scaled_error |   n_candidates |
+|:-----------------------------------|------------------------:|-----------------------:|---------------------------:|---------------:|
+| edge_energy_top10_fraction         |             2.38073     |            2.40966     |                2.38073     |              4 |
+| edge_energy_effective_fraction     |             2.2622      |            2.30691     |               -2.2622      |              4 |
+| site_energy_effective_fraction     |             2.2622      |            2.30691     |               -2.2622      |              4 |
+| site_energy_top1_fraction          |             2.22696     |            2.25739     |                2.22696     |              4 |
+| accessible_path_fraction           |             1.18322     |            1.18322     |               -1.18322     |              4 |
+| node_incident_top10_fraction       |             1.44695e-05 |            1.44695e-05 |               -1.44695e-05 |              4 |
+| gft_mid_energy_fraction            |             5.09219e-07 |            5.09219e-07 |               -5.09219e-07 |              4 |
+| walsh_high_order_fraction          |             1.61252e-07 |            1.61252e-07 |               -1.61252e-07 |              4 |
+| gft_high_energy_fraction           |             7.19818e-08 |            7.19818e-08 |               -7.19818e-08 |              4 |
+| edge_energy_adjacent_moran_i       |             3.47497e-11 |            3.47497e-11 |               -3.47497e-11 |              4 |
+| node_incident_effective_fraction   |             9.87765e-12 |            9.87765e-12 |                9.87765e-12 |              4 |
+| gft_low_energy_fraction            |             5.81202e-12 |            5.81202e-12 |                5.81202e-12 |              4 |
+| random_walk_lag1_autocorrelation   |             4.77725e-12 |            4.77847e-12 |                4.77725e-12 |              4 |
+| basin_count                        |             0           |            0           |                0           |              4 |
+| n_local_minima                     |             0           |            0           |                0           |              4 |
+| reciprocal_sign_epistasis_fraction |             0           |            0           |                0           |              4 |
+| sign_epistasis_fraction            |             0           |            0           |                0           |              4 |
+| basin_largest_fraction             |             0           |            0           |                0           |              4 |
+| n_local_maxima                     |             0           |            0           |                0           |              4 |

@@ -1,0 +1,87 @@
+{
+  "result_id": "RES-060",
+  "analysis_id": "ANA-060",
+  "experiment_id": "EXP-062",
+  "run_id": "RUN-153",
+  "registered_decision": "CALIBRATED_SIGMOID_TRANSMISSION_FAILED",
+  "registered_required_checks": {
+    "passed": 6,
+    "total": 9
+  },
+  "tolerance_1e-12_required_checks": {
+    "passed": 7,
+    "total": 9,
+    "overall_decision_unchanged": true
+  },
+  "calibration": {
+    "global_sigma_a": 2.7448641782814067,
+    "global_sigma_a_cv": 0.02273956119194029,
+    "selected_beta": 4.0,
+    "selected_mu": 4.595119850134589,
+    "selected_reference_occupancy": 0.99,
+    "heldout_core_pass_cells": 60,
+    "heldout_core_cells": 60
+  },
+  "global_edges_a1": {
+    "pass_cells": 360,
+    "cells": 360,
+    "median_practical_fraction": 0.8827751196172249,
+    "median_correlation": 0.8716756440116575,
+    "median_rms": 1.5341582331470822
+  },
+  "global_actual_texture_a1": {
+    "practical_pass_cells": 24,
+    "cells": 360,
+    "median_practical_fraction": 0.1927083333333333,
+    "median_correlation": 0.7321689970367629,
+    "median_projection": 0.9181556150722152,
+    "median_rms": 0.41753495039632416,
+    "projection_bootstrap_lower": 0.8731094934200944,
+    "minimum_actual_to_frozen_rms_ratio": 1.2626577513776163
+  },
+  "global_frozen_texture_a1": {
+    "practical_pass_cells": 0,
+    "cells": 360,
+    "median_practical_fraction": 0.0807291666666666,
+    "median_correlation": 0.595449909773939,
+    "median_projection": 0.2223831287257709,
+    "median_rms": 0.13167622050818484
+  },
+  "exact_actual_texture_a1": {
+    "practical_pass_cells": 23,
+    "cells": 360,
+    "median_practical_fraction": 0.1901041666666666,
+    "median_correlation": 0.7297472777811134,
+    "median_projection": 0.9094532308667512,
+    "median_rms": 0.4153310901745995
+  },
+  "directionality": {
+    "registered_global_pass": false,
+    "registered_global_cell_passes": 305,
+    "tolerance_1e-12_global_pass": true,
+    "tolerance_1e-12_global_cell_passes": 354,
+    "cell_count": 360
+  },
+  "length_stability": {
+    "global_slope": -0.10220742086428523,
+    "global_slope_ci": [
+      -0.11388430152289476,
+      -0.09011563353457504
+    ],
+    "exact_slope": -0.113582768368266,
+    "exact_slope_ci": [
+      -0.1253135568539385,
+      -0.10254901347524413
+    ]
+  },
+  "hypothesis_effect": {
+    "supports": [],
+    "weakens": [
+      "HYP-005"
+    ],
+    "refutes": []
+  },
+  "candidate_is_experiment_local": true,
+  "public_model_changed": false,
+  "stage_4c_4d_4e_hard_stop_retained": true
+}

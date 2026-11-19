@@ -1,0 +1,22 @@
+{
+  "protocol": "paired_interaction_strength_walk_tradeoff_v1",
+  "adaptenv_commit": "dd0bb7a52d7d92af48bbfba115331742b9a0c2eb",
+  "files": {
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.yaml": "64fe64c7a752b026df8587d188635792aac1e202988f3b4caef0e63a633a8a85",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.md": "c7da6a88583e648352b9922e042bbdb899b37c61a65c4502d0ca61c0a55b1b9a",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh": "209971d40872cbd9d9a0c93d60e6d1959bd14b9a3a030cc3101e309f5e163cd0",
+    "scripts/interaction_strength_exp065.py": "ebe480146ec7405de2ca2e02af6c55352836905db971975aab20be99dcfcd7f8",
+    "scripts/landscape_graph.py": "b38b33f7a14254d611bcd76ae67d5a12919d8538f6c5fa532f143a0d259cc074",
+    "scripts/landscape_graph_kernel.cpp": "152e75c7add7876e09ca9e82d24e2b7f2b176e099910fd8ff3593ccc8df0bf75",
+    "scripts/production_landscapes_exp066.py": "05675eb80a341f2d508d105fe49f1a77edf357885b753f2ac87fff340cecdd66",
+    "scripts/replicate_observation_exp065.py": "e184de7a29a505af115bc4e3abf88a021f2c323c46e7b2d8bceed4fe9653dc0e",
+    "scripts/observation_calibration_exp065.py": "ab7458b312ff73710fb8e25c51c9104edc7a073a1d1e50ba342891e3e81c8502",
+    "external/Adapt-Env/adaptenv/__init__.py": "d3eb33ff7e4c0a222a783d031565716a23d864e293e4b88effbb246a3c5fb932",
+    "external/Adapt-Env/adaptenv/landscape.py": "b87ca31c1687073b113fa94b785e6788733fac923b67408ac782334a3e72f26c",
+    "external/Adapt-Env/adaptenv/thermodynamic.py": "9ec75c87855feedcab49fffdeab83c64f62d06121ae9be667d29114f4327942b",
+    "external/Adapt-Env/adaptenv/extensive_gnk.py": "56f65392b9e2134171b5fd7758a4276c4195c3b4bd77f625f2552047449ccf8c",
+    "external/Adapt-Env/adaptenv/ranked_categorical_gnk.py": "d7eb55231ae87e130dd8c8e015b4b7fc3b872e25668b0b529d65718a3136021f",
+    "external/Adapt-Env/adaptenv/amino_acids.py": "0a0714f05e35fc3e665e33f0f5d50de054d6813e29c12dba6ad20ca33aefc7b9",
+    "tests/test_interaction_strength_exp065.py": "fff8f48665290986b41e4e60a2216fca42fd33ccd5dbe9d47acf095370914214"
+  }
+}

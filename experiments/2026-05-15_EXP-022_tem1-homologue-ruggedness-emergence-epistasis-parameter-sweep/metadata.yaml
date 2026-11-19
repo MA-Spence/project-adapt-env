@@ -1,0 +1,90 @@
+id: EXP-022
+type: experiment
+title: TEM-1 homologue ruggedness emergence epistasis parameter sweep
+slug: tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep
+status: planned
+created: '2026-05-15T09:54:52+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-021
+  motivating_results:
+  - RES-021
+question: At what epistatic density, strength, rank, covariation bias, and higher-order
+  term settings does the TEM-1 homologue stability-margin landscape stop behaving
+  as a nearly smooth additive landscape and begin showing measurable ruggedness in
+  pairwise epistasis and random-walk diagnostics?
+pre_experiment_prediction: If the RUN-057 smoothness arose because epistasis terms
+  were too sparse and weak relative to the additive stability layer, then increasing
+  pairwise density and strength, using higher-rank pairwise matrices, enriching placement
+  toward covarying MSA positions, and adding sparse higher-order exact-match terms
+  should increase nonzero and strong pairwise epistasis, increase random-walk step
+  variance, reduce random-walk autocorrelation/correlation length, and potentially
+  increase sign or diminishing-returns epistasis. If the landscape remains smooth,
+  then the current stability-margin readout is damping or hiding epistatic ruggedness
+  even under stress settings.
+rationale: RES-021 supports the TEM-1 homologue consensus-distance adaptive-walk diagnostic
+  but shows that RUN-057 used epistasis settings that left the random walks almost
+  perfectly autocorrelated and sampled sign epistasis absent. This experiment repeats
+  the EXP-021 TEM-1 design while sweeping stronger, denser, higher-rank, and covariation-enriched
+  epistasis regimes to isolate where ruggedness emerges and to test HYP-005 knob directionality
+  more directly.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - external/Adapt-Env
+  - scripts/tem1_homologue_walk_parameter_grid.py
+  - experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/config.yaml
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - tem1_mmseqs_alignment.fasta
+  - alignment_profile_summary.json
+  - homologue_starts.csv
+  - background_neighborhoods.csv
+  - walk_trajectories.csv
+  - walk_summaries.csv
+  - walk_summaries.json
+  - epistasis_pairs.csv
+  - parameter_grid_summary.csv
+  - literature_baselines.json
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

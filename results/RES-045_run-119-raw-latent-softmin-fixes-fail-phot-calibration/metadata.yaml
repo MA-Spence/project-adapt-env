@@ -1,0 +1,41 @@
+id: RES-045
+title: RUN-119 raw-latent soft-min fixes fail PHOT calibration
+status: completed
+created: '2026-06-17T10:16:06+10:00'
+owner: matthew-spence
+analyses:
+- ANA-045
+experiments:
+- EXP-046
+runs:
+- RUN-119
+supports: []
+weakens:
+- HYP-004
+refutes: []
+motivates:
+- HYP-009
+supersedes: []
+summary: EXP-046/RUN-119 produced 0/24 operationally equivalent rows. The low-dimensional
+  soft-min stage partially improved raw accessibility but left raw scale hundreds-fold
+  too large and held-out distance 1.2240; raw-latent constraints and up-weighted accessibility
+  worsened the fit and collapsed observable variation.
+artifacts: []
+evidence_paths:
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/metrics.json
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_stage_equivalence_decision.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_stage_best_test_distances.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_bounded_gate_test_distances.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_abc_comparator_test_distances.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_top_component_distances.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_observable_vs_raw_epistasis_and_landscape.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_raw_latent_pathology_diagnostics.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_stage_failure_modes.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_best_candidate_parameters.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/tables/run-119_output_collection_audit.md
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/source_tables/run-119_bounded_gate_equivalence.csv
+- analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review/source_tables/run-119_graphlet_summary.csv
+- /tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs
+compliance:
+  level: green
+  issues: []

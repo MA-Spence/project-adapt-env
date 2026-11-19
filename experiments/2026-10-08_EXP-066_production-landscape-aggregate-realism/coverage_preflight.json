@@ -1,0 +1,2462 @@
+{
+  "purpose": "Geometry only; no model fitting or confirmation outcome inspected",
+  "assays": [
+    {
+      "dataset_id": "gb1_wu2016_four_site_graphfla",
+      "length": 4,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 91,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 20,
+            "reused_vertex": 7
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "trpb_johnston2024_four_site_graphfla",
+      "length": 4,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 73,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 4,
+            "reused_vertex": 5
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "cr9114_h1_phillips2021_graphfla",
+      "length": 16,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 74,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 7,
+            "reused_vertex": 3
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "cr9114_h3_phillips2021_graphfla",
+      "length": 16,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 70,
+          "cubes": 64,
+          "rejected": {
+            "reused_vertex": 6
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "cr9114_flub_phillips2021_graphfla",
+      "length": 16,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 72,
+          "cubes": 64,
+          "rejected": {
+            "reused_vertex": 8
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "cr6261_h1_phillips2021_graphfla",
+      "length": 11,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 4779,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 1518,
+            "reused_vertex": 3197
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "cr6261_h9_phillips2021_graphfla",
+      "length": 11,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 10662,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 4593,
+            "reused_vertex": 6005
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "pard2_lite2020_graphfla",
+      "length": 3,
+      "dimension": 3,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 3,
+          "attempts": 86,
+          "cubes": 64,
+          "rejected": {
+            "reused_vertex": 13,
+            "missing_vertex": 9
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "pard3_lite2020_graphfla",
+      "length": 3,
+      "dimension": 3,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 3,
+          "attempts": 97,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 9,
+            "reused_vertex": 24
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_amfr_human_tsuboyama_2023_4g3o",
+      "length": 47,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 402,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 111,
+            "missing_vertex": 111,
+            "reused_vertex": 116
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_argr_ecoli_tsuboyama_2023_1aoy",
+      "length": 69,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_bbc1_yeast_tsuboyama_2023_1tg0",
+      "length": 64,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 476,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 259,
+            "missing_vertex": 68,
+            "reused_vertex": 85
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_bchb_chlte_tsuboyama_2023_2kru",
+      "length": 52,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 678,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 93,
+            "too_few_mutated_sites": 383,
+            "reused_vertex": 138
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_catr_chlre_tsuboyama_2023_2ami",
+      "length": 72,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 4164,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 2936,
+            "missing_vertex": 667,
+            "reused_vertex": 497
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_cbpa2_human_tsuboyama_2023_1o6x",
+      "length": 72,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 833,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 72,
+            "too_few_mutated_sites": 544,
+            "reused_vertex": 153
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_cbx4_human_tsuboyama_2023_2k28",
+      "length": 50,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 445,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 116,
+            "too_few_mutated_sites": 183,
+            "reused_vertex": 82
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_csn4_mouse_tsuboyama_2023_1ufm",
+      "length": 72,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 453,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 89,
+            "too_few_mutated_sites": 193,
+            "reused_vertex": 107
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_cue1_yeast_tsuboyama_2023_2myx",
+      "length": 52,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 1164,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 677,
+            "missing_vertex": 199,
+            "reused_vertex": 224
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_dn7a_sacs2_tsuboyama_2023_1jic",
+      "length": 55,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_dnja1_human_tsuboyama_2023_2lo1",
+      "length": 65,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 545,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 309,
+            "missing_vertex": 77,
+            "reused_vertex": 95
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_dock1_mouse_tsuboyama_2023_2m0y",
+      "length": 66,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 307,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 130,
+            "missing_vertex": 65,
+            "reused_vertex": 48
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_ephb2_human_tsuboyama_2023_1f0m",
+      "length": 66,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 666,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 429,
+            "missing_vertex": 67,
+            "reused_vertex": 106
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_f7ybw8_mesow_aakre_2015",
+      "length": 4,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 606,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 59,
+            "too_few_mutated_sites": 240,
+            "reused_vertex": 243
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_f7ybw8_mesow_ding_2023",
+      "length": 10,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "missing_vertex": 18079,
+            "too_few_mutated_sites": 1921
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "missing_vertex": 19620,
+            "too_few_mutated_sites": 380
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 2,
+          "rejected": {
+            "missing_vertex": 19790,
+            "too_few_mutated_sites": 208
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_feca_ecoli_tsuboyama_2023_2d1u",
+      "length": 72,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 1297,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 809,
+            "missing_vertex": 172,
+            "reused_vertex": 252
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_fkbp3_human_tsuboyama_2023_2kfv",
+      "length": 69,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_gfp_aeqvi_sarkisyan_2016",
+      "length": 233,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 10113,
+            "missing_vertex": 9887
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "missing_vertex": 14623,
+            "too_few_mutated_sites": 5377
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 18506,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 18022,
+            "too_few_mutated_sites": 401,
+            "reused_vertex": 19
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_hcp_lambd_tsuboyama_2023_2l6q",
+      "length": 55,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_hecd1_human_tsuboyama_2023_3dkm",
+      "length": 72,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 223,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 77,
+            "reused_vertex": 32,
+            "too_few_mutated_sites": 50
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_his7_yeast_pokusaeva_2019",
+      "length": 171,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 1761,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 1666,
+            "too_few_mutated_sites": 27,
+            "reused_vertex": 4
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_ilf3_human_tsuboyama_2023_2l33",
+      "length": 71,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_isdh_staaw_tsuboyama_2023_2lhr",
+      "length": 55,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 545,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 102,
+            "too_few_mutated_sites": 249,
+            "reused_vertex": 130
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_mafg_mouse_tsuboyama_2023_1k1v",
+      "length": 41,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 998,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 572,
+            "missing_vertex": 142,
+            "reused_vertex": 220
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_mbd11_arath_tsuboyama_2023_6acv",
+      "length": 66,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 611,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 354,
+            "missing_vertex": 101,
+            "reused_vertex": 92
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_myo3_yeast_tsuboyama_2023_2btt",
+      "length": 61,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 267,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 83,
+            "too_few_mutated_sites": 78,
+            "reused_vertex": 42
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_nkx31_human_tsuboyama_2023_2l9r",
+      "length": 61,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 405,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 72,
+            "too_few_mutated_sites": 182,
+            "reused_vertex": 87
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_nusa_ecoli_tsuboyama_2023_1wcl",
+      "length": 69,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 578,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 63,
+            "too_few_mutated_sites": 353,
+            "reused_vertex": 98
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_nusg_myctu_tsuboyama_2023_2mi6",
+      "length": 55,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 6529,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 4834,
+            "reused_vertex": 1161,
+            "missing_vertex": 470
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_obscn_human_tsuboyama_2023_1v1c",
+      "length": 65,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 281,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 72,
+            "too_few_mutated_sites": 97,
+            "reused_vertex": 48
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_odp2_geose_tsuboyama_2023_1w4g",
+      "length": 44,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 4939,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 2917,
+            "missing_vertex": 1259,
+            "reused_vertex": 699
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_otu7a_human_tsuboyama_2023_2l2d",
+      "length": 42,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_phot_chlre_chen_2023",
+      "length": 118,
+      "dimension": 4,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 2299,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 2176,
+            "too_few_mutated_sites": 52,
+            "reused_vertex": 7
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_pin1_human_tsuboyama_2023_1i6c",
+      "length": 39,
+      "dimension": 2,
+      "cubes": 22,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 22,
+          "rejected": {
+            "too_few_mutated_sites": 17060,
+            "missing_vertex": 2461,
+            "reused_vertex": 457
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_pitx2_human_tsuboyama_2023_2l7m",
+      "length": 52,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 689,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 139,
+            "too_few_mutated_sites": 368,
+            "reused_vertex": 118
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_pkn1_human_tsuboyama_2023_1urf",
+      "length": 71,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_polg_pesv_tsuboyama_2023_2mxd",
+      "length": 53,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 171,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 48,
+            "too_few_mutated_sites": 30,
+            "reused_vertex": 29
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_pr40a_human_tsuboyama_2023_1uzc",
+      "length": 63,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 842,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 153,
+            "too_few_mutated_sites": 479,
+            "reused_vertex": 146
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_psae_picp2_tsuboyama_2023_1pse",
+      "length": 68,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 9959,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 7705,
+            "reused_vertex": 1567,
+            "missing_vertex": 623
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_rad_antma_tsuboyama_2023_2cjj",
+      "length": 54,
+      "dimension": 2,
+      "cubes": 16,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 17,
+          "rejected": {
+            "too_few_mutated_sites": 17009,
+            "missing_vertex": 2771,
+            "reused_vertex": 203
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_rbp1_human_tsuboyama_2023_2kwh",
+      "length": 52,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 9062,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 708,
+            "too_few_mutated_sites": 6609,
+            "reused_vertex": 1681
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_rcd1_arath_tsuboyama_2023_5oao",
+      "length": 57,
+      "dimension": 2,
+      "cubes": 48,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 48,
+          "rejected": {
+            "too_few_mutated_sites": 15652,
+            "missing_vertex": 2876,
+            "reused_vertex": 1424
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_rcro_lambd_tsuboyama_2023_1orc",
+      "length": 63,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 420,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 234,
+            "missing_vertex": 56,
+            "reused_vertex": 66
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_rd23a_human_tsuboyama_2023_1ify",
+      "length": 44,
+      "dimension": 2,
+      "cubes": 42,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 42,
+          "rejected": {
+            "too_few_mutated_sites": 15577,
+            "missing_vertex": 2868,
+            "reused_vertex": 1513
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_rfah_ecoli_tsuboyama_2023_2lcl",
+      "length": 55,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 8221,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 5996,
+            "missing_vertex": 635,
+            "reused_vertex": 1526
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_rl20_aquae_tsuboyama_2023_1gyz",
+      "length": 59,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 9818,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 7524,
+            "missing_vertex": 802,
+            "reused_vertex": 1428
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_rpc1_bp434_tsuboyama_2023_1r69",
+      "length": 61,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 13881,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 10613,
+            "reused_vertex": 1816,
+            "missing_vertex": 1388
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_rs15_geose_tsuboyama_2023_1a32",
+      "length": 63,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_sav1_mouse_tsuboyama_2023_2ysb",
+      "length": 42,
+      "dimension": 2,
+      "cubes": 58,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 58,
+          "rejected": {
+            "missing_vertex": 2696,
+            "too_few_mutated_sites": 14111,
+            "reused_vertex": 3135
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_sbi_staam_tsuboyama_2023_2jvg",
+      "length": 56,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_scin_staar_tsuboyama_2023_2qff",
+      "length": 70,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_sda_bacsu_tsuboyama_2023_1pv0",
+      "length": 44,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 370,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 117,
+            "missing_vertex": 98,
+            "reused_vertex": 91
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_sox30_human_tsuboyama_2023_7jjk",
+      "length": 57,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_spa_staau_tsuboyama_2023_1lp1",
+      "length": 55,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 498,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 251,
+            "missing_vertex": 72,
+            "reused_vertex": 111
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_spg1_strsg_olson_2014",
+      "length": 55,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 96,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 26,
+            "reused_vertex": 6
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_spg2_strsg_tsuboyama_2023_5ubs",
+      "length": 56,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 4858,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 3463,
+            "missing_vertex": 532,
+            "reused_vertex": 799
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_sptn1_chick_tsuboyama_2023_1tud",
+      "length": 60,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 284,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 108,
+            "missing_vertex": 70,
+            "reused_vertex": 42
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_sqstm_mouse_tsuboyama_2023_2rru",
+      "length": 40,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_sr43c_arath_tsuboyama_2023_2n88",
+      "length": 48,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 930,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 529,
+            "missing_vertex": 122,
+            "reused_vertex": 215
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_srbs1_human_tsuboyama_2023_2o2w",
+      "length": 67,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 13801,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 10735,
+            "missing_vertex": 1014,
+            "reused_vertex": 1988
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_tcrg1_mouse_tsuboyama_2023_1e0l",
+      "length": 35,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 2382,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 1375,
+            "missing_vertex": 497,
+            "reused_vertex": 446
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_tho1_yeast_tsuboyama_2023_2wqg",
+      "length": 41,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 984,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 200,
+            "too_few_mutated_sites": 509,
+            "reused_vertex": 211
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_tnks2_human_tsuboyama_2023_5jrt",
+      "length": 59,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 7997,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 6046,
+            "missing_vertex": 540,
+            "reused_vertex": 1347
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_ube4b_human_tsuboyama_2023_3l1x",
+      "length": 69,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 266,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 79,
+            "missing_vertex": 89,
+            "reused_vertex": 34
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_ubr5_human_tsuboyama_2023_1i2t",
+      "length": 58,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 9008,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 640,
+            "too_few_mutated_sites": 6756,
+            "reused_vertex": 1548
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_vg08_bpp22_tsuboyama_2023_2gp8",
+      "length": 40,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_vili_chick_tsuboyama_2023_1yu5",
+      "length": 65,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 337,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 171,
+            "missing_vertex": 48,
+            "reused_vertex": 54
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_vrpi_bpt7_tsuboyama_2023_2wnm",
+      "length": 56,
+      "dimension": null,
+      "cubes": 0,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_yaia_ecoli_tsuboyama_2023_2kvt",
+      "length": 52,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 550,
+          "cubes": 64,
+          "rejected": {
+            "too_few_mutated_sites": 274,
+            "missing_vertex": 124,
+            "reused_vertex": 88
+          }
+        }
+      ]
+    },
+    {
+      "dataset_id": "proteingym_ynzc_bacsu_tsuboyama_2023_2jvd",
+      "length": 39,
+      "dimension": 2,
+      "cubes": 64,
+      "audit": [
+        {
+          "dimension": 4,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 3,
+          "attempts": 20000,
+          "cubes": 0,
+          "rejected": {
+            "too_few_mutated_sites": 20000
+          }
+        },
+        {
+          "dimension": 2,
+          "attempts": 313,
+          "cubes": 64,
+          "rejected": {
+            "missing_vertex": 80,
+            "too_few_mutated_sites": 112,
+            "reused_vertex": 57
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,65 +1,101 @@
-# Example chemical biology computational project
+# AdaptEnv scientific project
 
-This repository is a project-facing example of the `labproj` scientific record
-model for a computational chemical biology / protein engineering workflow.
+This repository records the development and empirical evaluation of AdaptEnv,
+a procedural synthetic protein-fitness environment for online ML testing.
+The supported implementation lives in the independently installable
+[Adapt-Env package](external/Adapt-Env/README.md), now the unpublished **0.5.0rc1** release candidate.
 
-It is intended to show what a student-facing scientific project repo should
-look like when:
+## Current model and usage
 
-- the scientific record lives in the project repository
-- infrastructure policy lives in a separate `lab-infra-config`
-- durable data is backed up with DVC
-- external source packages remain independently installable
+The default model uses alignment/profile-derived additive amino-acid preferences
+with normalized synthetic interactions, followed by a sigmoid. A supplied profile
+is required; fully synthetic additive effects are an explicit control. It evaluates arbitrary sequences
+of a configured length without enumerating their complete sequence space.
 
-## Scientific Record Model
+- [How the model works](external/Adapt-Env/docs/THERMODYNAMIC_V2.md)
+- [Python and HTTP APIs](external/Adapt-Env/docs/API_AND_SERVICE.md)
+- [Configuration and presets](external/Adapt-Env/docs/CONFIGURATION_AND_PRESETS.md)
+- [Profile-default migration](external/Adapt-Env/docs/MIGRATION_0_5.md)
+- [Release decision and source lock](docs/model_release/0.5.0rc1/decision.md)
 
-This project follows the lineage chain:
+Install from the project root with:
 
-`AIM -> HYP -> EXP -> RUN -> ANA -> RES -> CLAIM`
+```bash
+python -m pip install -e 'external/Adapt-Env[api]'
+```
 
-Each layer should correspond to a real scientific object, not a convenience
-label.
+```python
+from adaptenv import build_landscape_from_preset
 
-## What Belongs Here
+# Recorded four-site TrpB profile and its own RUN-178 intrinsic readout.
+model = build_landscape_from_preset(
+    "trpb_run178_r05_profile_shared_stop_intrinsic", seed=7
+)
+fitness = model.evaluate(model.random_sequence())
+```
 
-- aims, hypotheses, experiments, analyses, results, and claims
-- project code, notebooks, and small configuration files
-- DVC pointer files for durable data and promoted artifacts
+The project-side `project_adapt_env` namespace delegates its model API to the
+same package when `src` is on the Python path. Existing statistical helpers remain available through their
+explicit submodules. Historical experiment scripts can require an earlier
+package revision; reproduce them with their frozen RUN source and environment.
 
-## What Does Not Belong Here
+## Current empirical evidence
 
-- machine-specific credentials in `.env`
-- the only copy of important evidence in scratch or runtime paths
-- lab-wide execution policy that belongs in `lab-infra-config`
+[CLAIM-004](claims/CLAIM-004_thermodynamic-gnk-trpb-aggregate-and-adaptive-search-resemblance.md)
+records useful approximate joint resemblance to TrpB global statistics and
+adaptive-search behaviour under a specified observation model. Its evidence is
+[ANA-069](analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/analysis.md)
+and the linked RUN-175 data. The claim preserves observation dependence, seed
+variation, pooled-WHT discrepancies and limits on cross-assay and length transfer.
 
-## Project Configuration
+[ANA-070](analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/analysis.md)
+compares profile-conditioned RUN-178 with the recorded synthetic control. It
+finds mixed descriptor trade-offs, without consistent superiority or established
+statistical equivalence. The scientist selected the profile-conditioned model
+as the release default for its explicit biological marginal preferences; ML/pLM
+benefits remain untested. CLAIM-004 retains its original synthetic-prior scope.
 
-- Project ID: `example-chemical-biology-project`
-- Default target: `local`
-- Default stack: `STACK-000`
-- Infra config source: `../lab-infra-config`
+[RES-063](results/RES-063_profile-model-readiness-and-learning-search-research-boundary/result.md)
+synthesizes that evidence and distinguishes current model controls from untested
+benchmark advantages. New prospective HYP-010, HYP-011 and HYP-012 address
+computational efficiency, learning versus search difficulty, and the role of
+biological information. Their definitions, controls and falsifiers are in the
+[hypothesis record](docs/hypotheses.md#hyp-010-procedural-landscapes-provide-competitive-computation-and-efficiency).
 
-## Scientific and Agent Guidance
+The public generator is intrinsically noiseless. The TrpB research observation
+model is separate; the API's optional Gaussian draws do not reproduce it.
+The new `trpb_run178_r05_profile_shared_stop_intrinsic` preset packages the
+matched profile and intrinsic readout. The RUN-175 preset remains an explicit
+synthetic control. Neither applies an assay-specific observation layer.
 
-Agent-facing operating rules live in [AGENTS.md](/Users/matthewspence/Documents/Documents/labproj_collection/scientific-project-repo/AGENTS.md).
-Project-local agent tooling guidance lives in [.agents/skills/labproj/SKILL.md](/Users/matthewspence/Documents/Documents/labproj_collection/scientific-project-repo/.agents/skills/labproj/SKILL.md).
+## Scientific record and reproduction
 
-## Repository Layout
+- [Aims](AIM.md), [hypotheses](docs/hypotheses.md), and [current state](PROJECT_STATE.md)
+- `experiments/`: EXP protocols and RUN metadata
+- `analyses/`: executed notebooks, figures and numerical audits
+- `results/` and `claims/`: interpreted evidence and manuscript-facing claims
+- `registry/`: machine-readable record links
+- `data/processed/`: durable datasets tracked with DVC
+- `external/`: independently versioned source packages
+- `src/` and `scripts/`: project analysis and experiment helpers
 
-- `registry/`: machine-readable lineage and record state
-- `experiments/`: experiment definitions and RUN records
-- `analyses/`: notebook-backed analysis records
-- `results/`: interpreted result records
-- `claims/`: manuscript-facing claims
-- `data/`: durable project data, typically backed up with DVC
-- `external/`: external source packages that remain independently installable
-- `scratch_space/`: exploratory, non-record work only
-- `environment/`: lightweight project overlay dependencies
+Scientific records preserve earlier evidence even when runtime implementations
+are removed. RUN bundles retain exact source snapshots and input hashes. Data
+restoration and queue operations use [labproj](.agents/skills/labproj/SKILL.md).
+Keep `.env` and machine credentials untracked. Agent guidance is in [AGENTS.md](AGENTS.md).
 
-## Data and Reproducibility
+## Current checks versus historical tests
 
-- Keep `.env` local and untracked.
-- Treat `data/processed` as durable by default.
-- Track promoted data with DVC rather than Git.
-- Promote important outputs out of scratch/runtime into tracked project locations.
-- Keep infrastructure changes in `lab-infra-config`, not hardcoded into the project.
+The maintained package suite is `python -m pytest external/Adapt-Env/tests`.
+The accumulated project overlay has a documented stale dependency lock and base
+stack mismatch; see [environment validity](environment/README.md). This is separate
+from the tested standalone model installation above.
+The release replay in `docs/model_release/0.5.0rc1/replay.py` compares both
+profile and synthetic presets against frozen RUN-178/RUN-175 source and outputs.
+Its numerical checks do not rerun calibration or replace the scientific analyses.
+
+Historical experiment scripts and project experiment tests preserve their
+original synthetic-default assumptions and frozen source identities. Run them
+with their recorded package/environment; they are not a compatibility target
+for the new profile-required default. The current public project API delegates
+to the release candidate, including `build_landscape_from_preset`.

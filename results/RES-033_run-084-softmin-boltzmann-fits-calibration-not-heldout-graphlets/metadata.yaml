@@ -1,0 +1,39 @@
+id: RES-033
+title: RUN-084 soft-min Boltzmann ABC fits calibration but not held-out graphlets
+status: completed
+created: '2026-05-17T08:41:48+10:00'
+owner: Codex
+analyses:
+- ANA-033
+experiments:
+- EXP-033
+runs:
+- RUN-084
+supports: []
+weakens:
+- HYP-008
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-084 shows that soft-min/Boltzmann ABC can improve PHOT calibration
+  graphlet distance and slightly improve an assay objective, but calibration-selected
+  posterior candidates do not beat fitted-current or smooth-core held-out graphlet
+  controls and do not validate empirical-like locality.
+artifacts:
+- analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/metrics.json
+- analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/tables/run-084_hyp008_decision_table.md
+- results/RES-033_run-084-softmin-boltzmann-fits-calibration-not-heldout-graphlets/metrics.json
+evidence_paths:
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084.dvc
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/summary.json
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/posterior_particles.csv
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/posterior_rounds.csv
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/model_distances.csv
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/graphlet_summary.csv
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/assay_fit_metrics.csv
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/local_signal_graphlet_energy_summary.csv
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/local_signal_feature_energy_summary.csv
+- data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/locality_covariance_summary.csv
+compliance:
+  level: green
+  issues: []

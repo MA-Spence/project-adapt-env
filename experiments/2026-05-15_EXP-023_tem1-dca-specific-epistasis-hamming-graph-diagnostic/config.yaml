@@ -1,0 +1,109 @@
+experiment_id: EXP-023
+title: TEM-1 DCA-specific epistasis dense Hamming graph diagnostic
+stack: STACK-000
+target: lab-slurm
+seed: 9401
+
+reference:
+  protein: TEM-1 beta-lactamase
+  uniprot_id: P62593
+  source: UniProt reviewed BLAT_ECOLX sequence
+  sequence: MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYIELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRVDAGQEQLGRRIHYSQNDLVEYSPVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRWEPELNEAIPNDERDTTMPAAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSALPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGASLIKHW
+
+alignment:
+  source: MMSeqs ColabFold MSA API
+  max_sequences: 768
+  mmseqs_cache_dir: .labproj/cache/mmseqs
+  poll_interval_seconds: 5
+  timeout_seconds: 20
+  max_retries: 6
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_scale: 1.0
+    stability_margin: 8.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    empirical_pairwise_strength: null
+    n_epistatic_terms: 0
+    epistasis_strength: 0.0
+    epistasis_covariation_bias: 0.0
+    pairwise_epistasis_rank: 2
+    n_higher_order_epistatic_terms: 0
+    epistasis_order_max: 3
+    epistasis_order_decay: 1.5
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 40
+    peak_search_top_single_starts: 2
+    peak_search_random_starts: 2
+    peak_search_random_radius: 1
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+
+anchor_selection:
+  mode: closest_realized_margin
+  target_effective_stability_margin: 1.0
+  include_reference_candidate: true
+  max_reported_candidates: 5000
+
+dca_specific_epistasis:
+  mutation_count: 10
+  pair_count: 5
+  min_selected_pairs: 5
+  scan_top_couplings: 900
+  candidate_state_pairs_per_coupling: 12
+  min_joint_frequency: 0.001
+  min_pair_log2_enrichment: 0.0
+  max_single_delta_for_compensation: 0.0
+  target_single_delta_for_compensation: -30.0
+  single_delta_tolerance: 50.0
+  require_disjoint_pairs: true
+  raw_matrix_entry: 1.0
+  pairwise_strength: 0.30
+
+analysis:
+  walsh_max_order: 4
+  random_walk:
+    n_walks: 400
+    steps: 240
+    lag_max: 8
+
+quick:
+  seed: 19401
+  alignment:
+    max_sequences: 96
+    synthetic_smoke_sequences: true
+    synthetic_smoke_seed: 1901
+  adapt_env:
+    base_config:
+      peak_search_steps: 4
+      peak_search_top_single_starts: 1
+      peak_search_random_starts: 1
+      peak_search_random_radius: 1
+  anchor_selection:
+    mode: reference
+    max_reported_candidates: 128
+  dca_specific_epistasis:
+    mutation_count: 4
+    pair_count: 2
+    min_selected_pairs: 2
+    scan_top_couplings: 80
+    candidate_state_pairs_per_coupling: 8
+    min_joint_frequency: 0.0001
+    min_pair_log2_enrichment: -5.0
+    max_single_delta_for_compensation: .inf
+    target_single_delta_for_compensation: -30.0
+    single_delta_tolerance: 50.0
+    require_disjoint_pairs: true
+    pairwise_strength: 0.30
+  analysis:
+    walsh_max_order: 3
+    random_walk:
+      n_walks: 20
+      steps: 40
+      lag_max: 5

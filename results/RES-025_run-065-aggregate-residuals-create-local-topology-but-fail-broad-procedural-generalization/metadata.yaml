@@ -1,0 +1,47 @@
+id: RES-025
+title: RUN-065 aggregate residuals create local topology but fail broad procedural
+  generalization
+status: completed
+created: '2026-05-15T17:41:43+10:00'
+owner: matthew-spence
+analyses:
+- ANA-025
+experiments:
+- EXP-025
+runs:
+- RUN-065
+supports:
+- HYP-005
+weakens:
+- HYP-004
+refutes: []
+motivates: []
+supersedes: []
+summary: Aggregate residual fields created held-out local graphlet topology with low-order-dominated
+  spectra in sampled reference-like TEM-1 graphlets, but the graphlet cap excluded
+  other start classes and matched controls showed little DCA/contact-specific advantage.
+artifacts:
+- analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/metrics.json
+- analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_key_metrics.md
+- analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_graphlet_sampling_audit.md
+- analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_selected_test_model_comparison.md
+- analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_primary_calibration_test_transfer.md
+- analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_primary_test_by_dimension.md
+- analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_validation_tests.md
+- results/RES-025_run-065-aggregate-residuals-create-local-topology-but-fail-broad-procedural-generalization/metrics.json
+evidence_paths:
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065/summary.json
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065/module_parameter_sweep.csv
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065/graphlet_catalog.csv
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065/calibration_graphlet_metrics.csv
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065/test_graphlet_metrics.csv
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065/graphlet_walsh_terms.csv
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065/graphlet_gft_coefficients.csv
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065/graphlet_sign_epistasis_pairs.csv
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065/graphlet_accessibility.csv
+- data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065.dvc
+- experiments/2026-05-15_EXP-025_tem1-aggregate-graphlet-residual-ruggedness-generalization/config.yaml
+- experiments/2026-05-15_EXP-025_tem1-aggregate-graphlet-residual-ruggedness-generalization/runs/RUN-065.yaml
+compliance:
+  level: green
+  issues: []

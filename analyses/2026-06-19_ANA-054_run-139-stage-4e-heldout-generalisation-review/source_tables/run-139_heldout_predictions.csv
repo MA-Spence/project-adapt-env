@@ -1,0 +1,11 @@
+heldout_dataset_id,selected_parameter_set_id,selected_support_mode,selected_stability_margin,selected_epi_weight,train_mean_z_distance,heldout_mean_z_distance,heldout_fraction_metrics_in_band,heldout_n_metrics_in_band,heldout_n_metrics_considered
+gb1_wu2016_four_site_graphfla,random__sm6.000__ew1.000__seed703,random,6.0,1.0,5.072479080958443,17.02851054993177,0.5,4,8
+trpb_johnston2024_four_site_graphfla,random__sm6.000__ew1.000__seed703,random,6.0,1.0,5.072479080958443,27.603258716053894,0.375,3,8
+dhfr_papkou2023_full_wagner_tsv,random__sm6.000__ew1.000__seed703,random,6.0,1.0,5.072479080958443,17.209356530432384,0.5,4,8
+cr9114_h1_phillips2021_graphfla,random__sm6.000__ew1.000__seed703,random,6.0,1.0,5.072479080958443,13.226304814873462,0.375,3,8
+cr9114_h3_phillips2021_graphfla,shuffled__sm6.000__ew0.600__seed703,shuffled,6.0,0.6,12.846852059286114,5.080760688910051,0.625,5,8
+cr9114_flub_phillips2021_graphfla,random__sm6.000__ew1.000__seed703,random,6.0,1.0,5.072479080958443,9560500762.54982,0.42857142857142855,3,7
+cr6261_h1_phillips2021_graphfla,random__sm6.000__ew1.000__seed703,random,6.0,1.0,5.072479080958443,31.30316936339155,0.375,3,8
+cr6261_h9_phillips2021_graphfla,random__sm6.000__ew1.000__seed703,random,6.0,1.0,5.072479080958443,36.16400710345793,0.625,5,8
+pard2_lite2020_graphfla,random__sm6.000__ew1.000__seed703,random,6.0,1.0,5.072479080958443,22.67368522352349,0.5,4,8
+pard3_lite2020_graphfla,random__sm6.000__ew1.000__seed703,random,6.0,1.0,5.072479080958443,41.00118700305579,0.5,4,8

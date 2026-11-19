@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=EXP-066RUN-172
+#SBATCH --partition=cpu
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+#SBATCH --time=02:00:00
+#SBATCH --output=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-172/logs/stdout.txt
+#SBATCH --error=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-172/logs/stderr.txt
+set -euo pipefail
+export LABPROJ_RUN_ATTEMPT=3
+export LABPROJ_RESUME_RUN=1
+export LABPROJ_RESUME_FROM_ATTEMPT=2
+export LABPROJ_PREVIOUS_JOB_ID=2316
+export LABPROJ_PREVIOUS_STATUS=failed
+export LABPROJ_CHECKPOINT_DIR=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-172/outputs/checkpoints
+export LABPROJ_STACK_PREFIX="/tank/data/labproj/stacks/STACK-000"
+export PATH="/tank/data/labproj/stacks/STACK-000/bin:${PATH}"
+if ! command -v module >/dev/null 2>&1; then
+  set +u
+  source /etc/profile
+  set -u
+fi
+if command -v module >/dev/null 2>&1; then
+  module purge
+fi
+if [ -x "/tank/data/labproj/stacks/STACK-000/bin/python" ] && [ ! -x "/tank/data/labproj/envs/matthew-spence/project-adapt-env/bin/python" ]; then
+  mkdir -p "/tank/data/labproj/envs/matthew-spence/project-adapt-env"
+  "/tank/data/labproj/stacks/STACK-000/bin/python" -m venv --system-site-packages "/tank/data/labproj/envs/matthew-spence/project-adapt-env"
+fi
+if [ -x "/tank/data/labproj/envs/matthew-spence/project-adapt-env/bin/python" ]; then
+  export LABPROJ_PROJECT_ENV_ROOT="/tank/data/labproj/envs/matthew-spence/project-adapt-env"
+  export VIRTUAL_ENV="/tank/data/labproj/envs/matthew-spence/project-adapt-env"
+  export PATH="/tank/data/labproj/envs/matthew-spence/project-adapt-env/bin:${PATH}"
+fi
+export LABPROJ_TARGET=lab-slurm
+export LABPROJ_CLUSTER_NAME=homelab
+export LABPROJ_EXPERIMENT_ID=EXP-066
+export LABPROJ_RUN_ID=RUN-172
+export LABPROJ_OUTPUT_DIR="/tank/data/labproj/runtime/project-adapt-env/runs/RUN-172/outputs"
+export LABPROJ_LOG_DIR="/tank/data/labproj/runtime/project-adapt-env/runs/RUN-172/logs"
+export LABPROJ_WORKDIR="${TMPDIR:-/tmp/labproj/project-adapt-env/RUN-172}"
+
+mkdir -p "${LABPROJ_OUTPUT_DIR}" "${LABPROJ_LOG_DIR}" "${LABPROJ_WORKDIR}"
+
+set +e
+bash "/tank/data/labproj/staging/project-adapt-env/RUN-172/project/experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/run.sh"
+LABPROJ_EXIT_CODE=$?
+echo "${LABPROJ_EXIT_CODE}" > "${LABPROJ_LOG_DIR}/labproj-exit-code.txt"
+set -e
+exit "${LABPROJ_EXIT_CODE}"

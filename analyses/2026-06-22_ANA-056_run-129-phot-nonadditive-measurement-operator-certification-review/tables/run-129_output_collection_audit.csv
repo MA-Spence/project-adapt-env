@@ -1,0 +1,13 @@
+run_id,role,source_path,bytes,sha256
+RUN-129,run_output,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs/graphlet_catalog.csv,2430,9404e8132557a6169e99d336e9ed48158ced631fa479230e148a7f6ec91f0e03
+RUN-129,run_output,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs/injected_terms.csv,20165,4727fbe73d489113570b210df75e84baf26bff066bbac88b42a378ec466c3e0f
+RUN-129,run_output,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs/mavenn_metrics.csv,3243,323ae7539bed7e00b4b7a472314120dc2685f9402ba1eae71747aa843129a1b7
+RUN-129,run_output,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs/operator_certification_summary.csv,306,878436e83f4bbc6c4b550329a81cbb659c29623dc8ed2b42c940171d94f6481d
+RUN-129,run_output,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs/operator_profile_catalog.csv,503,473a8da04216a6229ace3a888b1703bb80ac0f8452f04efdd253314a7b1a2bf7
+RUN-129,run_output,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs/preflight.json,841,a7ba3a988d765bd421a66ca1531c544df8515d880162c42cc8e99ab3486d98b5
+RUN-129,run_output,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs/roundtrip_graphlet_metrics.csv,200012,12c9984dc03458a8a38f1997a2557cf09ac0e3204a77470e9f80b0d539c7d00a
+RUN-129,run_output,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs/roundtrip_transfer.csv,8212,09bc3bb3c84b7816e2740e864edd0beb09610bc308ee182e26a89eb7ded5eab1
+RUN-129,run_output,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs/summary.json,1750,9a4d0aaa092b1c30dd051bd31a272c6f924130235eee14046dd2f2d9c5587d41
+RUN-129,run_log,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/logs/labproj-exit-code.txt,2,9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa
+RUN-129,run_log,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/logs/stderr.txt,717,45b5fdad593a48c37215166c20b8e7e7aec3c4690d3a84737aa4d42e9fec7c3b
+RUN-129,run_log,data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/logs/stdout.txt,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855

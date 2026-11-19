@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-10-07T21:18:49.470467+11:00",
+  "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-168.dvc",
+  "directory_md5": "b71af13a0354c4a7a8a65cb77e8f019a.dir",
+  "files": 165,
+  "bytes": 224508438,
+  "unique_cache_objects": 159,
+  "local_md5_verified": true,
+  "remote_md5_verified": true,
+  "remote": "/tank/data/labproj/projects/project-adapt-env/data/files/md5",
+  "gateway": "matthew-spence@raspi-1",
+  "remote_sha256_manifest": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-168/remote_sha256.json",
+  "remote_file_hashes_verified": 162,
+  "collection": "SSH/rsync; labproj collect preview could not access the client share",
+  "tracking": "Temporary DVC 3.63.0 / pathspec 0.12.1; project configuration unchanged",
+  "input_bundle": {
+    "pointer": "data/processed/trpb-replicate-observation-exp065.dvc",
+    "directory_md5": "ad4e31a4a5704520d0a4be2cab9fa281.dir",
+    "files": 15,
+    "bytes": 90025877,
+    "source_and_prepared_sha256_verified_this_analysis": 14,
+    "remote_objects_md5_verified_at_submission": 16
+  }
+}

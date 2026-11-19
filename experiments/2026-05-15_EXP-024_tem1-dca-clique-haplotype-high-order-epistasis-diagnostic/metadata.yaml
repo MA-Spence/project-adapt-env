@@ -1,0 +1,84 @@
+id: EXP-024
+type: experiment
+title: TEM-1 DCA clique haplotype high-order epistasis diagnostic
+slug: tem1-dca-clique-haplotype-high-order-epistasis-diagnostic
+status: planned
+created: '2026-05-15T14:12:12+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-023
+  motivating_results:
+  - RES-023
+question: Can DCA/contact-graph cliques with observed MSA haplotype exact-match terms
+  create controllable third-, fourth-, and fifth-order Walsh-Hadamard components in
+  local TEM-1 Adapt-Env Hamming maps when the old generic epistasis layer is disabled?
+pre_experiment_prediction: Increasing the DCA haplotype exact-match coefficient should
+  monotonically increase the target-order Walsh coefficient and target-order variance
+  fraction. The upper strength setting should produce a clearly nonzero fifth-order
+  Walsh term in order-5 maps. Sign epistasis may change as a secondary diagnostic,
+  but reciprocal sign epistasis is not the primary success criterion for this experiment.
+rationale: 'RES-023 showed that DCA-prior state-specific pair terms create strong
+  pairwise/sign epistasis but leave higher-order Walsh terms essentially absent. This
+  experiment tests a structurally different mechanism: sparse exact-match terms on
+  observed MSA haplotypes supported by DCA/contact-graph cliques. Each order-n term
+  is evaluated in a dense 2^(n+1) local Hamming grid so the expected interaction order
+  is directly measurable.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - tem1_mmseqs_alignment.fasta
+  - alignment_profile_summary.json
+  - anchor_summary.csv
+  - anchor_candidates.csv
+  - dca_haplotype_terms.csv
+  - dca_clique_rejections.csv
+  - hamming_map_specs.csv
+  - hamming_map_summary.csv
+  - hamming_nodes.csv
+  - hamming_walsh_terms.csv
+  - hamming_sign_epistasis_pairs.csv
+  - order_strength_summary.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

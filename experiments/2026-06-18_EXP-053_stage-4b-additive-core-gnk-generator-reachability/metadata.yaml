@@ -1,0 +1,78 @@
+id: EXP-053
+type: experiment
+title: Stage 4B additive-core GNK generator reachability
+slug: stage-4b-additive-core-gnk-generator-reachability
+status: planned
+created: '2026-06-18T22:48:58+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-051
+  motivating_results:
+  - RES-049
+question: Does the locked public additive thermodynamic core plus hashed GNK texture
+  produce a protein-scale reachable descriptor manifold with directional knob maps
+  and required ablation failures?
+pre_experiment_prediction: Increasing GNK weight will raise ruggedness, local maxima,
+  sign epistasis, and high-order fraction while lowering accessibility/autocorrelation;
+  additive-core-only and bare-GNK controls will fail complementary descriptor blocks.
+rationale: This is Step 4B and extends RUN-127 from small enumerable coordinates to
+  the public AdaptEnv additive_thermodynamic_gnk surface with core-removal, GNK-removal,
+  and routing controls.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/science_plan_part1_ensemble_landscape_validation.md
+  - scripts/ensemble_landscape_validation_stage4.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/landscapy/README.md
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 08:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - generator_parameter_grid.csv
+  - generator_descriptor_metrics.csv
+  - generator_knob_monotonicity.csv
+  - core_texture_ablation_controls.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,60 @@
+{
+  "abc_comparator": {
+    "output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-117/project/data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098",
+    "run_id": "RUN-098"
+  },
+  "best_objective_distance": 0.5480181248525555,
+  "experiment_id": "EXP-045",
+  "fix_stage_summaries": [
+    {
+      "best_objective_distance": 9.588809021038772,
+      "fix_stage": "A",
+      "fix_stage_index": 1,
+      "fixes_applied": "A",
+      "n_candidate_evaluations": 78,
+      "n_selected_candidates": 8
+    },
+    {
+      "best_objective_distance": 5.969702814560435,
+      "fix_stage": "A+B",
+      "fix_stage_index": 2,
+      "fixes_applied": "A+B",
+      "n_candidate_evaluations": 78,
+      "n_selected_candidates": 8
+    },
+    {
+      "best_objective_distance": 7.9334239387197405,
+      "fix_stage": "A+B+C",
+      "fix_stage_index": 3,
+      "fixes_applied": "A+B+C",
+      "n_candidate_evaluations": 78,
+      "n_selected_candidates": 8
+    },
+    {
+      "best_objective_distance": 0.5480181248525555,
+      "fix_stage": "A+B+C+D",
+      "fix_stage_index": 4,
+      "fixes_applied": "A+B+C+D",
+      "n_candidate_evaluations": 78,
+      "n_selected_candidates": 8
+    }
+  ],
+  "n_candidate_evaluations": 312,
+  "n_equivalence_rows": 32,
+  "n_graphlets": 24,
+  "n_operationally_equivalent": 0,
+  "n_selected_candidates": 32,
+  "output_files": {
+    "abc_comparator_selected_family_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/abc_comparator_selected_family_distances.csv",
+    "bounded_gate_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/bounded_gate_candidates.csv",
+    "bounded_gate_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/bounded_gate_distances.csv",
+    "bounded_gate_equivalence": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/bounded_gate_equivalence.csv",
+    "gft_coefficients": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/gft_coefficients.csv",
+    "graphlet_metrics": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/graphlet_metrics.csv",
+    "graphlet_summary": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/graphlet_summary.csv",
+    "preflight": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/preflight.json",
+    "selected_bounded_gate_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/selected_bounded_gate_candidates.csv",
+    "walsh_terms": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs/walsh_terms.csv"
+  },
+  "run_mode": "phot_cumulative_epistasis_calibration_fix_ablation"
+}

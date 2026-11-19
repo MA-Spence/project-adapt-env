@@ -1,0 +1,52 @@
+{
+  "abc_comparator": {
+    "output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-119/project/data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098",
+    "run_id": "RUN-098"
+  },
+  "best_objective_distance": 1.9426666113367992,
+  "experiment_id": "EXP-046",
+  "fix_stage_summaries": [
+    {
+      "best_objective_distance": 1.9426666113367992,
+      "fix_stage": "1",
+      "fix_stage_index": 1,
+      "fixes_applied": "1",
+      "n_candidate_evaluations": 73,
+      "n_selected_candidates": 8
+    },
+    {
+      "best_objective_distance": 21.21258392490949,
+      "fix_stage": "1+2",
+      "fix_stage_index": 2,
+      "fixes_applied": "1+2",
+      "n_candidate_evaluations": 73,
+      "n_selected_candidates": 8
+    },
+    {
+      "best_objective_distance": 24.972537612853642,
+      "fix_stage": "1+2+3",
+      "fix_stage_index": 3,
+      "fixes_applied": "1+2+3",
+      "n_candidate_evaluations": 73,
+      "n_selected_candidates": 8
+    }
+  ],
+  "n_candidate_evaluations": 219,
+  "n_equivalence_rows": 24,
+  "n_graphlets": 24,
+  "n_operationally_equivalent": 0,
+  "n_selected_candidates": 24,
+  "output_files": {
+    "abc_comparator_selected_family_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/abc_comparator_selected_family_distances.csv",
+    "bounded_gate_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/bounded_gate_candidates.csv",
+    "bounded_gate_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/bounded_gate_distances.csv",
+    "bounded_gate_equivalence": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/bounded_gate_equivalence.csv",
+    "gft_coefficients": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/gft_coefficients.csv",
+    "graphlet_metrics": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/graphlet_metrics.csv",
+    "graphlet_summary": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/graphlet_summary.csv",
+    "preflight": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/preflight.json",
+    "selected_bounded_gate_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/selected_bounded_gate_candidates.csv",
+    "walsh_terms": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs/walsh_terms.csv"
+  },
+  "run_mode": "phot_raw_latent_softmin_pathology_fix_ablation"
+}

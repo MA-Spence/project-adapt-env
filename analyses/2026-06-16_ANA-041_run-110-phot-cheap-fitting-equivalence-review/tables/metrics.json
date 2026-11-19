@@ -1,0 +1,35 @@
+{
+  "all_best_any_equivalent": false,
+  "all_same_family_equivalent_methods": [
+    "exact_descriptive_gated",
+    "surrogate_assisted"
+  ],
+  "best_abc_nested_family": "random_module",
+  "best_abc_nested_family_test_distance": 0.4826302319598656,
+  "best_any_comparator_family": "empirical_readout_residual",
+  "best_any_comparator_test_distance": 0.2114554115835448,
+  "best_any_equivalent_by_method": {
+    "deterministic_summary_loss": 0,
+    "exact_descriptive_gated": 0,
+    "local_abc_after_cheap_fit": 0,
+    "surrogate_assisted": 0
+  },
+  "best_protocol_family": "random_module",
+  "best_protocol_fit_method": "surrogate_assisted",
+  "best_protocol_test_distance": 0.4288489604648748,
+  "copied_compact_bytes": 186584,
+  "experiment_id": "EXP-042",
+  "n_candidate_evaluations": 730,
+  "n_equivalence_rows": 40,
+  "n_graphlets": 24,
+  "n_operationally_equivalent_rows": 18,
+  "n_selected_candidates": 20,
+  "remote_output_dir": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs",
+  "run_id": "RUN-110",
+  "same_family_equivalent_by_method": {
+    "deterministic_summary_loss": 4,
+    "exact_descriptive_gated": 5,
+    "local_abc_after_cheap_fit": 4,
+    "surrogate_assisted": 5
+  }
+}

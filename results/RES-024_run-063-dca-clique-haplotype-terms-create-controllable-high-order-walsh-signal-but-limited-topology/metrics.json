@@ -1,0 +1,61 @@
+{
+  "analysis_id": "ANA-024",
+  "experiment_id": "EXP-024",
+  "run_id": "RUN-063",
+  "run_status": "completed",
+  "scheduler_job_id": "223",
+  "scheduler_exit_code": "0",
+  "dvc_pointer": "data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063.dvc",
+  "n_terms": 48,
+  "n_maps": 240,
+  "n_node_rows": 7200,
+  "term_counts_by_order": {
+    "2": 12,
+    "3": 12,
+    "4": 12,
+    "5": 12
+  },
+  "old_epistasis_disabled": {
+    "epistasis_covariation_bias": 0.0,
+    "epistasis_strength": 0.0,
+    "n_epistatic_terms": 0,
+    "n_higher_order_epistatic_terms": 0
+  },
+  "max_zero_strength_target_order_abs_walsh_coefficient": 2.8421709430404007e-13,
+  "max_zero_strength_order_variance_fraction": 1.6603942041806074e-29,
+  "max_target_coefficient_formula_error": 2.8421709430404007e-13,
+  "target_coefficient_monotonic_all_orders": true,
+  "target_order_variance_fraction_non_decreasing_by_order": {
+    "2": false,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "upper_order5": {
+    "strength": 3000.0,
+    "mean_target_order_abs_walsh_coefficient": 93.75000000000007,
+    "mean_order_variance_fraction": 0.02944714108693111,
+    "mean_sign_epistasis_fraction": 0.06111111111111111,
+    "mean_reciprocal_sign_epistasis_fraction": 0.019444444444444445,
+    "mean_local_maxima": 1.5,
+    "max_local_maxima": 2,
+    "maps_with_multiple_local_maxima": 6
+  },
+  "upper_order5_walsh_variance_by_order": {
+    "1": 0.23437433173979247,
+    "2": 0.29447141086931067,
+    "3": 0.29447141086931045,
+    "4": 0.14723570543465533,
+    "5": 0.02944714108693111,
+    "6": 2.756859486523906e-31
+  },
+  "hypothesis_effect": {
+    "supports": [
+      "HYP-005"
+    ],
+    "weakens": [
+      "HYP-004"
+    ],
+    "refutes": []
+  }
+}

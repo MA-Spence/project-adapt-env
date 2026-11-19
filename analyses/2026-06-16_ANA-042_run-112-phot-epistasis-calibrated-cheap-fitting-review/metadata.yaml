@@ -1,0 +1,37 @@
+id: ANA-042
+title: RUN-112 PHOT epistasis-calibrated cheap fitting review
+status: completed
+created: '2026-06-16T15:01:50+10:00'
+owner: matthew-spence
+experiments:
+- EXP-043
+runs:
+- RUN-112
+purpose: Review compact RUN-112 outputs to determine whether positive affine observable
+  calibration plus epistasis-amplitude objective makes the cheap PHOT nested-min fitting
+  protocol behave similarly to the prior full ABC fitted-family comparator while preserving
+  graphlet, accessibility, local-energy, raw latent epistasis, and module-locality
+  diagnostics.
+path: analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-112
+  produced_artifacts:
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/metrics.json
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_best_epistasis_amplitude_rows.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_best_rows_landscape_deltas.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_calibrated_test_distances.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_empirical_module_locality_test.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_equivalence_by_method_reference.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_local_abc_rounds.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_observable_vs_raw_epistasis_and_locality.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_original_abc_comparator_test_distances.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_output_collection_audit.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_same_family_equivalence.md
+  - analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_top_component_failures.md
+compliance:
+  level: green
+  issues: []

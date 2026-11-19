@@ -1,0 +1,476 @@
+experiment_id: EXP-048
+title: PHOT sparse Walsh Potts spectrum-calibrated generator probe
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-048
+  status: planned
+  mode: phot_sparse_walsh_potts_spectrum_calibrated_generator_probe
+  planned_runner: scripts/phot_trait_space_bounded_gate_fast_fit.py
+  scientific_boundary:
+    primary_hypotheses:
+      - HYP-004
+      - HYP-009
+    motivating_results:
+      - RES-046
+    advisory_source: scratch/RES-046_scalable_multipeak_generator_design.md
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    generator_scope: Generator A only; FGM/H2 is deliberately not implemented in this run
+    fitting_rule: freeze empirical Walsh spectrum target, run forward H1 generative probe, then promote sparse_walsh_field to deterministic/random numerical fast fit only if H1 passes
+    comparator_rule: compare sequence-conditioned selected candidates against empirical PHOT graphlets and RUN-098 full-ABC PHOT distances
+    limitation: PHOT-only calibration diagnostics do not validate a general GB1/TrpB-scale benchmark route
+
+observation_calibration:
+  enabled: true
+  method: monotone_sigmoid
+  fit_split: calibration
+  apply_to_objective: true
+  apply_to_reporting: true
+  n_midpoint_grid: 17
+  slope_multipliers:
+    - 0.25
+    - 0.5
+    - 1.0
+    - 2.0
+    - 4.0
+    - 8.0
+    - 16.0
+  y_quantile_low: 0.02
+  y_quantile_high: 0.98
+  interpretation: Restricted monotone readout retained as the J readout floor; do not use a flexible inverse readout in the H1 forward gate.
+
+source_run:
+  run_id: RUN-077
+  result_id: RES-030
+  output_dir: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  dvc_pointer: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: frozen_current_phot_base_prepared_assay_and_empirical_graphlets
+
+abc_comparator:
+  experiment_id: EXP-039
+  run_id: RUN-098
+  result_id: RES-039
+  output_dir: data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098
+  dvc_pointer: data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  role: previously computed full nested-min PHOT ABC comparator
+  primary_comparator_file: selected_family_distances.csv
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    trait_space_epistasis_bound: null
+    trait_space_epistasis_bound_mode: tanh
+    n_epistatic_terms: 220
+    epistasis_strength: 0.025
+    empirical_pairwise_strength: 0.025
+    pairwise_epistasis_rank: 2
+    epistasis_covariation_bias: 0.8
+    n_higher_order_epistatic_terms: 0
+    sparse_walsh_terms: 0
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 0
+    peak_search_top_single_starts: 0
+    peak_search_random_starts: 0
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+    seed: 42
+
+phot_graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 8
+  top_feature_pool: 42
+
+graphlet_evaluation:
+  primary_score_column: latent_phi
+  score_columns:
+    - latent_phi
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+    - magnitude_epistasis_to_single_mutant_sd_ratio
+    - sign_epistasis_fraction_local
+    - reciprocal_sign_epistasis_fraction_local
+    - diminishing_returns_epistasis_fraction
+
+empirical_innovation:
+  base_anchor: fitted_current_best
+  global_readout_polynomial_degree: 3
+  use_calibration_graphlets_only: true
+  residual_definition: empirical_latent_phi_minus_polynomial_readout_of_frozen_current_best
+
+module_selection:
+  source: empirical_calibration_plaquette_energy
+  max_modules: 12
+  module_size: 5
+  selection_split: calibration
+
+abc:
+  fit_families:
+    - sparse_walsh_field
+  base_anchors:
+    - fitted_current_best
+    - fitted_smooth_core_only
+  component_guardrails:
+    default_max_component_distance: 2.5
+    penalty_weight: 0.5
+    metric_max_component_distance:
+      sign_epistasis_fraction: 2.5
+      reciprocal_sign_epistasis_fraction: 2.5
+      n_local_maxima: 2.0
+      accessible_path_fraction: 2.0
+      random_walk_lag1_autocorrelation: 2.0
+      walsh_high_order_fraction: 2.0
+      gft_low_energy_fraction: 2.5
+      gft_mid_energy_fraction: 2.5
+      gft_high_energy_fraction: 2.5
+      edge_energy_adjacent_moran_i: 2.0
+      edge_energy_top10_fraction: 2.0
+      edge_energy_effective_fraction: 2.0
+      site_energy_top1_fraction: 2.0
+      site_energy_effective_fraction: 2.0
+      plaquette_energy_top1_fraction: 2.0
+      plaquette_energy_effective_fraction: 2.0
+      magnitude_epistasis_to_single_mutant_sd_ratio: 1.5
+      single_mutant_effect_sd: 2.0
+      magnitude_epistasis_mean: 2.0
+      magnitude_epistasis_median: 2.0
+      magnitude_epistasis_sd: 2.5
+      signed_pairwise_epistasis_sd: 2.0
+      signed_pairwise_epistasis_q10: 2.5
+      signed_pairwise_epistasis_q90: 2.5
+      sign_epistasis_fraction_local: 2.5
+      reciprocal_sign_epistasis_fraction_local: 2.5
+      diminishing_returns_epistasis_fraction: 2.0
+
+bounded_trait_space_fast_fit:
+  enabled: false
+  seed: 20260617
+  bound_mode: tanh
+  random_candidates: 36
+  local_rounds: 1
+  local_top_n: 5
+  local_candidates_per_round: 10
+  local_width_fraction: 0.16
+  select_top_n: 8
+  initial_bounds: []
+  initial_candidates:
+    - sparse_walsh_epi_weight: 0.010
+    - sparse_walsh_epi_weight: 0.020
+    - sparse_walsh_epi_weight: 0.040
+    - sparse_walsh_epi_weight: 0.080
+  parameter_specs:
+    - name: stability_margin
+      kind: float
+      low: 4.0
+      high: 14.0
+    - name: stability_scale
+      kind: float
+      low: 0.4
+      high: 1.8
+    - name: stability_conservation_power
+      kind: float
+      low: 0.3
+      high: 1.5
+    - name: threshold_steepness
+      kind: float
+      low: 2.0
+      high: 30.0
+    - name: blosum_blend
+      kind: float
+      low: 0.0
+      high: 1.0
+    - name: sparse_walsh_epi_weight
+      kind: float
+      low: 0.002
+      high: 0.20
+  raw_latent_objective:
+    enabled: true
+    objective_weight: 0.45
+    scale_floor_fraction: 0.10
+    absolute_scale_floor: 1.0e-6
+    terms:
+      - single_mutant_effect_sd
+      - n_local_maxima
+      - accessible_path_fraction
+      - magnitude_epistasis_to_single_mutant_sd_ratio
+    metric_weights:
+      single_mutant_effect_sd: 0.75
+      n_local_maxima: 1.0
+      accessible_path_fraction: 1.0
+      magnitude_epistasis_to_single_mutant_sd_ratio: 1.0
+  sparse_walsh_field:
+    enabled: true
+    seed: 20260617
+    terms: 2048
+    min_order: 2
+    max_order: 5
+    epi_weight: 0.025
+    support_source: empirical_calibration_plaquette
+    include_graphlet_feature_clusters: true
+    support_graphlet_splits:
+      - calibration
+      - test
+    spectrum_calibration:
+      enabled: false
+      seed: 20260617
+      graphlet_splits:
+        - calibration
+      bootstrap_iterations: 500
+      noise_floor_fraction: 0.01
+      support_monte_carlo_samples: 6000
+      min_support_probability: 1.0e-4
+    forward_probe:
+      enabled: false
+      graphlet_splits:
+        - calibration
+      n_realizations: 12
+      epi_weight_grid:
+        - 0.010
+        - 0.020
+        - 0.040
+        - 0.080
+      high_order_weight_multipliers:
+        - 0.75
+        - 1.0
+        - 1.25
+      central_interval_low: 0.10
+      central_interval_high: 0.90
+      target_metrics:
+        - n_local_maxima
+        - accessible_path_fraction
+        - magnitude_epistasis_to_single_mutant_sd_ratio
+        - sign_epistasis_fraction_local
+        - reciprocal_sign_epistasis_fraction_local
+        - diminishing_returns_epistasis_fraction
+        - walsh_high_order_fraction
+
+cumulative_fix_stages:
+  - label: "G"
+    fixes: "G"
+    description: measure empirical PHOT Walsh spectrum over calibration graphlets, bootstrap the noise floor, map local order variance to global sparse-field order weights by Monte Carlo over the aligned support pool, and freeze the target
+    bounded_trait_space_fast_fit:
+      enabled: false
+      sparse_walsh_field:
+        spectrum_calibration:
+          enabled: true
+  - label: "G+H1"
+    fixes: "G+H1"
+    description: run the forward generative sparse_walsh_field capability probe over a small grid around the frozen spectrum and epi_weight; no inverse graphlet fitting is allowed here
+    bounded_trait_space_fast_fit:
+      enabled: false
+      sparse_walsh_field:
+        spectrum_calibration:
+          enabled: false
+        forward_probe:
+          enabled: true
+  - label: "G+H1+FIT"
+    fixes: "G+H1+FIT"
+    description: promote sparse_walsh_field to sequence-conditioned deterministic/random fast fitting only if H1 clears the forward joint gate; keep anchored scale, scale-invariant objective, and restricted monotone readout
+    bounded_trait_space_fast_fit:
+      enabled: true
+      random_candidates: 48
+      local_rounds: 2
+      local_top_n: 6
+      local_candidates_per_round: 10
+      local_width_fraction: 0.14
+      select_top_n: 8
+      sparse_walsh_field:
+        spectrum_calibration:
+          enabled: false
+        forward_probe:
+          enabled: false
+        requires_forward_probe_pass: true
+
+equivalence:
+  reference_split: test
+  absolute_distance_margin: 0.05
+  relative_distance_margin: 0.10
+  max_component_distance_margin: 2.5
+  distance_metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+    - magnitude_epistasis_to_single_mutant_sd_ratio
+    - single_mutant_effect_sd
+    - magnitude_epistasis_mean
+    - magnitude_epistasis_median
+    - magnitude_epistasis_sd
+    - signed_pairwise_epistasis_sd
+    - signed_pairwise_epistasis_q10
+    - signed_pairwise_epistasis_q90
+    - sign_epistasis_fraction_local
+    - reciprocal_sign_epistasis_fraction_local
+    - diminishing_returns_epistasis_fraction
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+    - magnitude_epistasis_to_single_mutant_sd_ratio
+    - single_mutant_effect_sd
+    - magnitude_epistasis_mean
+    - magnitude_epistasis_median
+    - magnitude_epistasis_sd
+    - signed_pairwise_epistasis_sd
+    - signed_pairwise_epistasis_q10
+    - signed_pairwise_epistasis_q90
+    - sign_epistasis_fraction_local
+    - reciprocal_sign_epistasis_fraction_local
+    - diminishing_returns_epistasis_fraction
+  report_metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+    - magnitude_epistasis_to_single_mutant_sd_ratio
+    - single_mutant_effect_sd
+    - magnitude_epistasis_mean
+    - magnitude_epistasis_median
+    - magnitude_epistasis_sd
+    - signed_pairwise_epistasis_sd
+    - signed_pairwise_epistasis_q10
+    - signed_pairwise_epistasis_q90
+    - sign_epistasis_fraction_local
+    - reciprocal_sign_epistasis_fraction_local
+    - diminishing_returns_epistasis_fraction
+    - raw_magnitude_epistasis_to_single_mutant_sd_ratio
+    - raw_single_mutant_effect_sd
+    - raw_n_local_maxima
+    - raw_accessible_path_fraction
+    - raw_magnitude_epistasis_mean
+    - raw_magnitude_epistasis_median
+    - raw_magnitude_epistasis_sd
+    - raw_signed_pairwise_epistasis_sd
+    - raw_signed_pairwise_epistasis_q10
+    - raw_signed_pairwise_epistasis_q90
+    - raw_sign_epistasis_fraction_local
+    - raw_reciprocal_sign_epistasis_fraction_local
+    - raw_diminishing_returns_epistasis_fraction
+
+analysis:
+  random_walk:
+    n_walks_per_graphlet: 20
+    steps: 32
+    lag_max: 5
+
+outputs:
+  output_dir_name: phot-sparse-walsh-potts-spectrum-calibrated-generator-probe
+
+quick:
+  phot_graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 2
+    top_feature_pool: 18
+  bounded_trait_space_fast_fit:
+    random_candidates: 4
+    local_rounds: 1
+    local_top_n: 2
+    local_candidates_per_round: 2
+    select_top_n: 2
+    sparse_walsh_field:
+      terms: 96
+      spectrum_calibration:
+        bootstrap_iterations: 20
+        support_monte_carlo_samples: 100
+      forward_probe:
+        n_realizations: 2
+        epi_weight_grid:
+          - 0.02
+        high_order_weight_multipliers:
+          - 1.0
+  cumulative_fix_stages:
+    - label: "G"
+      fixes: "G"
+      description: quick G spectrum/noise-floor smoke
+      bounded_trait_space_fast_fit:
+        enabled: false
+        sparse_walsh_field:
+          spectrum_calibration:
+            enabled: true
+    - label: "G+H1"
+      fixes: "G+H1"
+      description: quick H1 forward sparse-Walsh probe smoke
+      bounded_trait_space_fast_fit:
+        enabled: false
+        sparse_walsh_field:
+          spectrum_calibration:
+            enabled: false
+          forward_probe:
+            enabled: true
+    - label: "G+H1+FIT"
+      fixes: "G+H1+FIT"
+      description: quick sparse-Walsh fast-fit smoke; do not gate on H1 in quick mode
+      bounded_trait_space_fast_fit:
+        enabled: true
+        sparse_walsh_field:
+          spectrum_calibration:
+            enabled: false
+          forward_probe:
+            enabled: false
+          requires_forward_probe_pass: false

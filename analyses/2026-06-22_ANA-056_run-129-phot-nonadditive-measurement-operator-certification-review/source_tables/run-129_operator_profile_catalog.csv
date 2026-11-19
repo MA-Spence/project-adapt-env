@@ -1,0 +1,3 @@
+operator_profile,description,gpmap_type,ge_nonlinearity_type,theta_regularization,eta_regularization,epochs,batch_size,max_variants_per_assay,sample_seed
+pairwise_low_regularization,MAVE-NN pairwise GP-map profile from WS-A; preflight-skipped if PHOT length makes the pairwise tensor infeasible.,pairwise,nonlinear,0.001,0.001,60,128,8000,20260618
+blackbox_ge_neural,MAVE-NN black-box/GE profile; failures are recorded as transfer-function evidence.,blackbox,nonlinear,0.0001,0.001,80,256,6000,20260618

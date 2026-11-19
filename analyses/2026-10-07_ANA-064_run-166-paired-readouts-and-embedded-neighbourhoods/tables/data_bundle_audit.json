@@ -1,0 +1,16 @@
+{
+  "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-166.dvc",
+  "directory_md5": "c128be3fda98517848f7d5533b5d2f52.dir",
+  "files": 83,
+  "size_bytes": 54423275,
+  "unique_cache_objects": 82,
+  "local_files_and_cache_hash_verified": true,
+  "remote_backup_hash_verified": true,
+  "configured_remote": "labcluster",
+  "configured_remote_url": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data",
+  "ssh_path_to_same_project_store": "matthew-spence@raspi-1:/tank/data/labproj/projects/project-adapt-env/data/files/md5/",
+  "remote_verification": {
+    "verified_objects": 82,
+    "remote_root": "/tank/data/labproj/projects/project-adapt-env/data/files/md5"
+  }
+}

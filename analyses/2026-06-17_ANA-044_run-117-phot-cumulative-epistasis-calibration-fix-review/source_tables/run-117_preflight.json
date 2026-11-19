@@ -1,0 +1,66 @@
+{
+  "abc_comparator_run": "RUN-098",
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "fit_protocol": "deterministic_random_search_with_local_refinement",
+  "graphlet_dimensions": [
+    4,
+    5,
+    6
+  ],
+  "mode": "phot_cumulative_epistasis_calibration_fix_ablation",
+  "model_patch": "trait_space_epistasis_bound",
+  "module_counts": {
+    "empirical_calibration_plaquette": 12,
+    "none": 0,
+    "random_module": 12,
+    "shuffled_module": 12,
+    "uncoupled_empirical_module": 12
+  },
+  "n_calibration_graphlets": 12,
+  "n_graphlets": 24,
+  "n_test_graphlets": 12,
+  "objective_metric_columns": [
+    "sign_epistasis_fraction",
+    "reciprocal_sign_epistasis_fraction",
+    "n_local_maxima",
+    "accessible_path_fraction",
+    "random_walk_lag1_autocorrelation",
+    "walsh_high_order_fraction",
+    "gft_low_energy_fraction",
+    "gft_mid_energy_fraction",
+    "gft_high_energy_fraction",
+    "edge_energy_adjacent_moran_i",
+    "edge_energy_top10_fraction",
+    "edge_energy_effective_fraction",
+    "site_energy_top1_fraction",
+    "site_energy_effective_fraction",
+    "plaquette_energy_top1_fraction",
+    "plaquette_energy_effective_fraction",
+    "magnitude_epistasis_mean",
+    "magnitude_epistasis_median",
+    "magnitude_epistasis_sd",
+    "signed_pairwise_epistasis_mean",
+    "sign_epistasis_fraction_local",
+    "reciprocal_sign_epistasis_fraction_local",
+    "diminishing_returns_epistasis_fraction"
+  ],
+  "observation_calibration": {
+    "apply_to_objective": true,
+    "apply_to_reporting": true,
+    "enabled": true,
+    "fit_split": "calibration",
+    "interpretation": "Fix A; fitted monotone link replaces the positive-affine map so second and first finite differences are not constrained to share one scale factor",
+    "max_knots": 16,
+    "method": "monotone_piecewise",
+    "min_bin_size": 8
+  },
+  "primary_score_column": "latent_phi",
+  "readout_base_anchor": "fitted_current_best",
+  "run077_phot_best_objective": 10.253823213086244,
+  "score_columns": [
+    "latent_phi"
+  ],
+  "source_output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-117/project/data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077",
+  "source_result": "RES-030",
+  "source_run_id": "RUN-077"
+}

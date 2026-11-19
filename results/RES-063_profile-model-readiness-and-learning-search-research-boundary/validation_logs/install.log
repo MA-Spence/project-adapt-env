@@ -1,0 +1,4 @@
+Processing /var/folders/dm/sqfv0msd3g50txf84szl1c4m0000gn/T/codex-adaptenv-publish-audit-ic8eok6h/dist/adaptenv-0.5.0rc1-py3-none-any.whl
+Installing collected packages: adaptenv
+Successfully installed adaptenv-0.5.0rc1
+WARNING: The directory '/Users/matthewspence/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.

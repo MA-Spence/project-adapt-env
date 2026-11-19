@@ -1,0 +1,44 @@
+id: RES-042
+title: RUN-112 calibrated cheap PHOT fit fails component-equivalence despite readout
+  rescaling
+status: completed
+created: '2026-06-16T15:49:12+10:00'
+owner: matthew-spence
+analyses:
+- ANA-042
+experiments:
+- EXP-043
+runs:
+- RUN-112
+supports: []
+weakens:
+- HYP-004
+refutes: []
+motivates:
+- HYP-009
+supersedes: []
+summary: RUN-112 completed EXP-043 and found zero operationally equivalent calibrated
+  cheap-fitting rows. Positive affine observable calibration reduced visible epistasis
+  scale for selected candidates but did not match empirical epistasis amplitude, left
+  raw latent magnitude epistasis tens to hundreds of units too large, and failed component
+  guardrails dominated by signed pairwise epistasis and accessibility/local-summary
+  mismatch. The protocol is therefore not an equivalent replacement for full ABC or
+  a validated scale-up path for GB1/TrpB.
+artifacts:
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/metrics.json
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_equivalence_by_method_reference.md
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_same_family_equivalence.md
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_calibrated_test_distances.md
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_top_component_failures.md
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_observable_vs_raw_epistasis_and_locality.md
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_best_epistasis_amplitude_rows.md
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/tables/run-112_empirical_module_locality_test.md
+evidence_paths:
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/source_tables/run-112_fit_protocol_equivalence.csv
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/source_tables/run-112_fit_protocol_distances.csv
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/source_tables/run-112_graphlet_summary.csv
+- analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review/source_tables/run-112_module_energy_summary.csv
+- /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs
+compliance:
+  level: green
+  issues: []

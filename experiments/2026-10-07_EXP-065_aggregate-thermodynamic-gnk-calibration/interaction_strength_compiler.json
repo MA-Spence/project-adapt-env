@@ -1,0 +1,51 @@
+{
+  "version": "1",
+  "pip_version": "26.0.1",
+  "install": [
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/0c/b7/ecfdce6368cc3664d301f7f52db4fe1004aa7da7a12c4a9bf1de534ff6ab/ziglang-0.13.0-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=3ce0c9f16547e5d61b32e0d226926e9a2552ef4b91fccf7ab5ea1a623a77824b",
+          "hashes": {
+            "sha256": "3ce0c9f16547e5d61b32e0d226926e9a2552ef4b91fccf7ab5ea1a623a77824b"
+          }
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.1",
+        "name": "ziglang",
+        "version": "0.13.0",
+        "summary": "       Zig is a general-purpose programming language and toolchain for\nmaintaining robust, optimal, and reusable software.",
+        "description": "Zig PyPI distribution\n=====================\n\n[Zig][] is a general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software. The [ziglang][pypi] Python package redistributes the Zig toolchain so that it can be used as a dependency of Python projects.\n\n[zig]: https://ziglang.org/\n[pypi]: https://pypi.org/project/ziglang/\n\nRationale\n---------\n\nAlthough Zig is useful in itself, the Zig toolchain includes a drop-in C and C++ compiler, [`zig cc`][zigcc], based on [clang][]. Unlike clang itself, `zig cc` is standalone: it does not require additional development files to be installed to target any of the platforms it supports. Through `zig cc`, Python code that generates C or C++ code can build it without any external dependencies.\n\n[clang]: https://clang.llvm.org/\n[zigcc]: https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html\n\nUsage\n-----\n\nTo run the Zig toolchain from the command line, use:\n\n```shell\npython -m ziglang\n```\n\nTo run the Zig toolchain from a Python program, use `sys.executable` to locate the Python binary to invoke. For example:\n\n```python\nimport sys, subprocess\n\nsubprocess.call([sys.executable, \"-m\", \"ziglang\"])\n```\n\nLicense\n-------\n\nThe [Zig license](https://github.com/ziglang/zig#license).\n",
+        "description_content_type": "text/markdown",
+        "license": "MIT",
+        "classifier": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "requires_python": "~=3.5",
+        "project_url": [
+          "Homepage, https://ziglang.org",
+          "Source Code, https://github.com/ziglang/zig-pypi",
+          "Bug Tracker, https://github.com/ziglang/zig-pypi/issues"
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.11.15",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_release": "7.0.0-34-generic",
+    "platform_system": "Linux",
+    "platform_version": "#34~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 15:38:29 UTC 2",
+    "python_full_version": "3.11.15",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.11",
+    "sys_platform": "linux"
+  }
+}

@@ -1,0 +1,30 @@
+id: ANA-033
+title: RUN-084 PHOT soft-min Boltzmann ABC review
+status: completed
+created: '2026-05-17T08:41:44+10:00'
+owner: Codex
+experiments:
+- EXP-033
+runs:
+- RUN-084
+purpose: Assess whether the PHOT soft-min/Boltzmann two-state ABC run supports HYP-008
+  by improving calibration-selected held-out graphlet topology, spectra, and locality
+  relative to frozen RUN-077 controls.
+path: analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-084
+  produced_artifacts:
+  - analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/tables/run-084_assay_fit_comparison.md
+  - analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/tables/run-084_graphlet_distance_comparison.md
+  - analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/tables/run-084_hyp008_decision_table.md
+  - analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/tables/run-084_locality_tests.md
+  - analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/tables/run-084_preflight_and_output_audit.md
+  - analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/tables/run-084_selected_graphlet_metrics.md
+  - analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review/tables/run-084_smc_posterior_summary.md
+compliance:
+  level: green
+  issues: []

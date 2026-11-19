@@ -1,0 +1,7 @@
+dataset,assay,comparison,difference,bootstrap_low,bootstrap_high
+gb1_wu2016_four_site_graphfla,GB1,composite - additive,-0.10025806851548613,-0.6926010189278545,0.5210574870862502
+gb1_wu2016_four_site_graphfla,GB1,composite - bare_gnk,-1.1474181799262269,-1.54990541283559,-0.5869028458682816
+trpb_johnston2024_four_site_graphfla,TrpB,composite - additive,-1.942310272597557,-2.306114823697151,-1.568132588883679
+trpb_johnston2024_four_site_graphfla,TrpB,composite - bare_gnk,0.4360259653124994,0.20603355705394952,0.7187671209791416
+cr9114_h1_phillips2021_graphfla,CR9114-H1,composite - additive,-1.0113069203536935,-1.14252603962638,-0.8713745453784998
+cr9114_h1_phillips2021_graphfla,CR9114-H1,composite - bare_gnk,0.05106954234071703,-0.03210053515581944,0.17241286004131764

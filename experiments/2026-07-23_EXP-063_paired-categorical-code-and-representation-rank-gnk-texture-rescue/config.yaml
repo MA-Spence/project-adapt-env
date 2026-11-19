@@ -1,0 +1,292 @@
+experiment_id: EXP-063
+title: Paired categorical-code and representation-rank GNK texture rescue
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  mode: frozen_exp062_operator_paired_categorical_representation_intervention
+  scientific_boundary:
+    aim: AIM-001
+    primary_hypothesis: HYP-005
+    previous_experiment: EXP-062
+    motivating_result: RES-060
+    primary_estimand: paired_residual_F_of_A_plus_aG_minus_F_of_A
+    only_intervention: categorical_allele_code_by_cp_representation_rank
+    forbidden_claims:
+      - empirical_fitness_realism
+      - independent_population_level_protein_generalization
+      - dca_or_potts_inference
+      - structural_contact_mechanism
+      - optimizer_performance
+      - accessibility_validation
+      - public_model_replacement
+    downstream_stop: retain_stage_4c_4d_4e_hard_stop_on_every_outcome
+
+references:
+  catalog: experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/reference_catalog.yaml
+  split: confirmation
+  include_ids:
+    - meltome_f8w3h2_51_conf
+    - meltome_q6kz94_49_conf
+    - meltome_a0a0k2hc44_93_conf
+    - meltome_f1r7u7_93_conf
+    - meltome_a0a0k2hbm3_118_conf
+    - meltome_f8w522_118_conf
+    - meltome_a0a0k2h628_220_conf
+    - meltome_d6rck1_220_conf
+    - meltome_g3uxz5_238_conf
+    - meltome_o49203_238_conf
+    - meltome_a0a0k2hbk5_448_conf
+    - meltome_o34824_448_conf
+  expected_length_bins: 6
+  expected_references_per_length_bin: 2
+  reuse_role: paired_mechanistic_development_panel_not_new_protein_holdout
+  sequence_context_only: true
+  empirical_outcomes_loaded: false
+
+replication:
+  core_seeds: [6311, 6312, 6313, 6314, 6315]
+  gnk_seeds: [6321, 6322, 6323, 6324, 6325, 6326]
+  design: crossed_core_by_gnk_by_arm_within_protein
+  primary_generalization_unit: protein
+  random_effects: [protein, additive_core_seed, gnk_seed]
+  fresh_relative_to_exp062: true
+  arm_is_excluded_from_sampling_keys: true
+
+additive_core:
+  implementation: external/Adapt-Env/adaptenv/landscape.py
+  model_system: additive_thermodynamic_gnk
+  observed_fitness_combine_mode: stability_gate
+  generic_epistasis_target: stability
+  alphabet_size: 20
+  stability_scale: 1.0
+  use_blosum_kernel: true
+  blosum_blend: 0.5
+  disable_gnk_during_construction: true
+  disable_legacy_epistasis: true
+  disable_noise_and_peak_lock: true
+
+frozen_operator:
+  source_experiment: EXP-062
+  source_run: RUN-153
+  global_sigma_a: 2.7448641782814067
+  beta: 4.0
+  mu: 4.595119850134589
+  reference_occupancy: 0.99
+  output_scale: 10.0
+  recalibration_forbidden: true
+
+candidate:
+  implementation: src/project_adapt_env/ranked_categorical_gnk.py
+  seed_offset: 30000
+  surrogate_seed_offset: 50000
+  orders: [2, 3, 4]
+  order_weights: [0.35, 0.45, 0.20]
+  target_degrees: [6, 11, 7]
+  reference_centered: true
+  coefficient_rule: exact_uniform_q20_nonself_mutation_operator_gram_energy
+  normalization_target: identical_total_and_per_order_single_mutation_energy
+  rank_constant_across_orders_and_lengths: true
+  component_zero_shared_between_rank1_and_rank8: true
+  component_base_coefficient_draws_shared_between_coding_families: true
+  arm_specific_amplitude_tuning: false
+  arms:
+    - id: binary_r1
+      contrast_family: binary
+      representation_rank: 1
+      role: incumbent_control
+    - id: dense_q20_r1
+      contrast_family: dense_q20
+      representation_rank: 1
+      role: remove_binary_allele_ties_only
+    - id: binary_r8
+      contrast_family: binary
+      representation_rank: 8
+      role: increase_rank_with_binary_components
+    - id: dense_q20_r8
+      contrast_family: dense_q20
+      representation_rank: 8
+      role: combined_allele_code_and_rank_intervention
+  public_model_status: experiment_local_only
+
+readout:
+  function: output_scale_times_logistic_of_dimensionless_additive_and_gnk_coordinates
+  formula: C_sigmoid_mu_plus_beta_times_A_minus_Aref_over_sigmaA_plus_a_times_G_over_sigmaG
+  raw_equivalence: k_equals_beta_over_sigmaA_theta_equals_Aref_minus_mu_over_k_w_equals_a_over_k_sigmaG
+  direct_float64_is_gate: true
+  stable_residual_role: cancellation_diagnostic_only
+
+intervention:
+  dimensionless_amplitudes: [0.0, 0.25, 0.5, 1.0, 2.0, 4.0]
+  directionality_amplitudes: [0.25, 0.5, 1.0, 2.0]
+  saturation_stress_amplitude: 4.0
+  saturation_stress_can_fail_primary_monotonicity_gate: false
+  same_supports_genotypes_and_base_coefficient_draws_across_arms: true
+  same_genotypes_and_fields_across_amplitudes: true
+
+probe:
+  complete_reference_single_mutant_panel: true
+  square_strata:
+    - candidate_supported_order_2
+    - candidate_supported_order_3
+    - candidate_supported_order_4
+    - uniform_unsupported_site_pair
+  square_backgrounds: [reference, uniform_q20]
+  squares_per_stratum: 128
+  eval_chunk_size: 2048
+  sampling_key_excludes:
+    - candidate_arm
+    - amplitude
+    - additive_core_mode
+  controls:
+    - incumbent_binary_rank1
+    - frozen_reference_occupancy_0.99_saturation_diagnostic
+    - frozen_midpoint_occupancy_0.5_transition_positive_control
+    - candidate_additivized_double_mutant
+    - order1_RMS_matched_additive_surrogate
+    - zero_amplitude
+    - dimensionless_raw_formula_parity
+
+acceptance:
+  expected_length_bins: 6
+  bootstrap_replicates: 5000
+  bootstrap_seed: 63063
+  permutation_replicates: 499
+  texture_permutation_alpha: 0.05
+  technical:
+    reference_center_atol: 1.0e-12
+    contrast_mean_atol: 1.0e-12
+    contrast_second_moment_atol: 1.0e-12
+    formula_parity_atol: 1.0e-12
+    binary_rank1_score_parity_atol: 1.0e-12
+    additive_surrogate_epistasis_atol: 1.0e-12
+    zero_amplitude_atol: 0.0
+    operator_energy_relative_error_max: 1.0e-10
+    rank_relative_singular_value_min: 1.0e-10
+    support_hashes_must_match_across_arms: true
+    square_hashes_must_match_across_arms: true
+    binary_rank1_matches_incumbent_implementation: true
+    strict_json: true
+  core:
+    reference_fitness_min: 9.5
+    h1_dynamic_fraction_min: 0.50
+    h1_effect_rms_min: 1.0
+    fraction_0.1_low_plateau_min: 0.50
+    fraction_0.5_low_plateau_min: 0.90
+    minimum_cell_pass_fraction_per_length_bin: 0.80
+  manipulation:
+    dense_q20_nonself_tie_fraction_max: 0.0
+    rank8_effective_rank_min: 4.0
+    median_practical_fraction_gain_min: 0.05
+    candidate_minus_incumbent_practical_fraction_bootstrap_lower_min: 0.0
+  transmission:
+    primary_amplitude: 1.0
+    operational_detection_threshold: 0.10
+    edge_practical_fraction_min: 0.25
+    texture_practical_fraction_min: 0.25
+    correlation_min: 0.50
+    projection_bootstrap_lower_min: 0.0
+    minimum_cell_pass_fraction_per_length_bin: 0.80
+  dose_response:
+    spearman_min: 0.80
+    rho_comparison_atol: 1.0e-12
+    minimum_protein_pass_fraction: 0.80
+    minimum_protein_pass_fraction_per_length_bin: 0.80
+    minimum_cell_pass_fraction_per_length_bin: 0.80
+    rms_growth_floor: 0.02
+    practical_fraction_growth_floor: 0.05
+  length_stability:
+    slope_abs_max: 0.15
+    slope_ci_abs_max: 0.25
+  threshold_status: preregistered_mechanistic_heuristics_not_empirical_detection_limits
+
+decision:
+  precedence:
+    - QUICK_SMOKE_ONLY_NO_SCIENTIFIC_DECISION
+    - EXECUTION_PAIRING_OR_MANIPULATION_INVALID
+    - FROZEN_EXP062_CORE_OPERATING_POINT_NOT_REPRODUCED
+    - INCUMBENT_PREVALENCE_FAILURE_NOT_REPLICATED
+    - DENSE_Q20_RANK1_SUFFICIENT
+    - BINARY_RANK8_SUFFICIENT
+    - ALTERNATIVE_SINGLE_FACTOR_REPAIRS_BOTH_SUFFICIENT
+    - COMBINED_DENSE_Q20_RANK8_REQUIRED
+    - APPARENT_RESCUE_NOT_PAIRED_SUPERIOR_TO_BINARY_R1
+    - NO_INTERVENTION_PASSES_MIDPOINT_CONTROL
+    - NO_INTERVENTION_PASSES_EDGE_TRANSFER
+    - NO_INTERVENTION_RESCUES_TEXTURE_PREVALENCE
+    - REPRESENTATION_RESCUE_NOT_DIRECTIONAL
+    - REPRESENTATION_RESCUE_NOT_LENGTH_STABLE
+    - REPRESENTATION_REPAIR_INSUFFICIENT_AT_FIXED_SIGMOID
+  prefer_lower_component_count_if_multiple_arms_pass: true
+
+outputs:
+  expected:
+    - preflight.json
+    - reference_catalog.csv
+    - core_guardrail_metrics.csv
+    - representation_catalog.csv
+    - representation_audit.csv
+    - latent_geometry_metrics.csv
+    - validation_edge_metrics.csv
+    - validation_texture_metrics.csv
+    - paired_arm_effects.csv
+    - factorial_effects.csv
+    - dose_response_metrics.csv
+    - scale_law_fits.csv
+    - acceptance_checks.csv
+    - decision_table.csv
+    - summary.json
+  checkpoint_unit:
+    - reference_id
+    - core_seed
+    - gnk_seed
+    - effective_config_hash
+    - implementation_hash
+  atomic_writes: true
+  implementation_hash_components:
+    - scripts/categorical_representation_rank_rescue_exp063.py
+    - experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/config.yaml
+    - scripts/dimensionless_sigmoid_calibration_exp062.py
+    - scripts/extensive_gnk_sigmoid_transmission_exp061.py
+    - scripts/extensive_gnk_latent_scaling_exp060.py
+    - src/project_adapt_env/ranked_categorical_gnk.py
+    - src/project_adapt_env/extensive_gnk.py
+    - external/Adapt-Env/adaptenv/landscape.py
+    - external/Adapt-Env/adaptenv/presets.py
+    - external/Adapt-Env/.config.yaml
+
+quick:
+  references:
+    include_ids: [meltome_f8w3h2_51_conf, meltome_o34824_448_conf]
+    expected_length_bins: 2
+    expected_references_per_length_bin: 1
+  replication:
+    core_seeds: [6311]
+    gnk_seeds: [6321]
+  candidate:
+    arms:
+      - id: binary_r1
+        contrast_family: binary
+        representation_rank: 1
+        role: incumbent_control
+      - id: dense_q20_r1
+        contrast_family: dense_q20
+        representation_rank: 1
+        role: remove_binary_allele_ties_only
+      - id: binary_r8
+        contrast_family: binary
+        representation_rank: 8
+        role: increase_rank_with_binary_components
+      - id: dense_q20_r8
+        contrast_family: dense_q20
+        representation_rank: 8
+        role: combined_allele_code_and_rank_intervention
+  intervention:
+    dimensionless_amplitudes: [0.0, 1.0]
+  probe:
+    squares_per_stratum: 16
+    eval_chunk_size: 512
+  acceptance:
+    expected_length_bins: 2
+    bootstrap_replicates: 100
+    permutation_replicates: 49

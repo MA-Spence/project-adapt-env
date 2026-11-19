@@ -1,0 +1,43 @@
+{
+  "result_id": "RES-033",
+  "analysis_id": "ANA-033",
+  "experiment_id": "EXP-033",
+  "run_id": "RUN-084",
+  "supports": [],
+  "weakens": [
+    "HYP-008"
+  ],
+  "refutes": [],
+  "main_interpretation": "soft-min/Boltzmann ABC improves calibration graphlets and slightly improves an assay objective, but calibration-selected posterior candidates do not beat fitted-current or smooth-core held-out graphlet controls and do not validate empirical-like locality",
+  "calibration_selected_distance": {
+    "calibration": 0.6100102949144408,
+    "test": 0.4434134017599398
+  },
+  "heldout_controls": {
+    "fitted_current_best": 0.40157082034740577,
+    "fitted_smooth_core_only": 0.41190406684777836,
+    "fitted_current_posterior_mean": 0.44081922838930265,
+    "empirical_readout_residual": 0.2707662564186795
+  },
+  "test_oracle_softmin": {
+    "parameter_set_id": "abc_particle_rank_023",
+    "test_distance": 0.3963784983669744,
+    "calibration_distance": 0.7125843993688698,
+    "valid_as_support": false
+  },
+  "assay_best": {
+    "parameter_set_id": "abc_posterior_mean",
+    "assay_fit_objective_distance": 0.4570284154736037,
+    "holdout_spearman": 0.7526861775168419,
+    "single_spearman": 0.4571282146443998,
+    "double_holdout_spearman": 0.5358543417366948,
+    "epistasis_prediction_spearman": -0.08814662325454393
+  },
+  "hypothesis_decision": {
+    "supports_hyp008": false,
+    "weakens_hyp008": true,
+    "calibration_selected_heldout_graphlet_distance_beats_fitted_current": false,
+    "calibration_selected_heldout_graphlet_distance_beats_smooth_core": false,
+    "locality_empirical_like": false
+  }
+}

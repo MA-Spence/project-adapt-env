@@ -1,0 +1,87 @@
+id: EXP-049
+type: experiment
+title: PHOT miscalibration P0 target-operator isolation
+slug: phot-miscalibration-p0-target-operator-isolation
+status: completed
+created: '2026-06-18T08:46:01+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-048
+  motivating_results:
+  - RES-047
+question: Are the PHOT target summaries and sparse-Walsh support sampler measured
+  on a common footing, as tested by P0.1 target uncertainty, P0.2 round-trip measurement
+  calibration, and P0.3 support-containment audit?
+pre_experiment_prediction: The local-energy and high-order empirical target components
+  will be unstable under bootstrap or MAVE-NN refit, injected order-3 spectra will
+  be distorted by the empirical measurement operator, and support containment will
+  quantify whether sparse-Walsh supports are visible to sampled dense graphlets.
+rationale: RES-047 and scratch/RES-047_miscalibration_root_cause_and_isolation_plan.md
+  argue that the spectrum-calibrated sparse-Walsh forward gate may be failing because
+  target summaries, MAVE-NN latent measurement, and dense graphlet sampling are not
+  on a common footing. This experiment pauses new generator engineering and isolates
+  P0.1, P0.2, and P0.3 in one PHOT-only diagnostic.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/RES-047_miscalibration_root_cause_and_isolation_plan.md
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_module_catalog.csv
+  datasets:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - graphlet_catalog.csv
+  - p0_1_target_graphlet_metrics.csv
+  - p0_1_target_bootstrap.csv
+  - p0_1_mavenn_refit_metrics.csv
+  - p0_1_replicate_audit.csv
+  - p0_2_injected_terms.csv
+  - p0_2_roundtrip_graphlet_metrics.csv
+  - p0_2_roundtrip_transfer.csv
+  - p0_2_mavenn_metrics.csv
+  - p0_3_position_pool_audit.csv
+  - p0_3_support_terms.csv
+  - p0_3_support_containment_summary.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

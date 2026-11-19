@@ -1,0 +1,15 @@
+{
+  "descriptor_implementation": "scripts/ensemble_landscape_validation_stage4.py::metrics_from_cube",
+  "descriptor_source": "RUN-135_frozen_operator_free_graphlet_metrics",
+  "empirical_fitness_values_loaded": false,
+  "experiment_id": "EXP-064",
+  "observable_operating_point_override": "experiment_local_beta_and_p0_no_public_preset_change",
+  "quick": false,
+  "rugged_end_templates": [
+    "cr9114_flub_phillips2021_graphfla",
+    "cr9114_h3_phillips2021_graphfla",
+    "cr9114_h1_phillips2021_graphfla"
+  ],
+  "tier1_template_count": 10,
+  "uses_exp050_transfer_function": false
+}

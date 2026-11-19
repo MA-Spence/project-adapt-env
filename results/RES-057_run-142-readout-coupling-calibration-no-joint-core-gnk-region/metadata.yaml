@@ -1,0 +1,40 @@
+id: RES-057
+title: RUN-142 readout-coupling calibration finds no joint core-guardrail and GNK-separation
+  region
+status: completed
+created: '2026-07-22T12:45:00+10:00'
+owner: matthew-spence
+analyses:
+- ANA-057
+experiments:
+- EXP-058
+runs:
+- RUN-142
+supports: []
+weakens:
+- HYP-004
+- HYP-005
+- HYP-009
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-142 ran the full preregistered EXP-058 A/B/C readout-coupling sweep (5022
+  parameter sets, 10 templates). All three fixes fail all three gates (0/5022 core-guardrail,
+  0/5022 GNK-separation, 20.4 percent monotonicity with wrong-direction medians); the
+  terminal preregistered decision fires and Stage 4C/4D/4E reruns stay blocked. The
+  binding failure is that no high-fitness plateau forms in the re-centred margin regime,
+  so specific-epistasis transmission (achieved cleanly by Fix B mixed routing) and
+  diminishing-returns plateau structure are not obtained together.
+artifacts: []
+evidence_paths:
+- analyses/2026-07-22_ANA-057_run-142-generator-readout-coupling-calibration-review/tables/metrics.json
+- analyses/2026-07-22_ANA-057_run-142-generator-readout-coupling-calibration-review/tables/run-142_calibration_decision_table.csv
+- analyses/2026-07-22_ANA-057_run-142-generator-readout-coupling-calibration-review/tables/run-142_core_guardrail_summary_by_fix.csv
+- analyses/2026-07-22_ANA-057_run-142-generator-readout-coupling-calibration-review/tables/run-142_gnk_separation_summary_by_fix.csv
+- analyses/2026-07-22_ANA-057_run-142-generator-readout-coupling-calibration-review/tables/run-142_monotonicity_by_metric.csv
+- analyses/2026-07-22_ANA-057_run-142-generator-readout-coupling-calibration-review/tables/run-142_high_plateau_collapse_fixA.csv
+- data/processed/generator-readout-coupling-calibration/RUN-142/outputs.dvc
+- data/processed/generator-readout-coupling-calibration/RUN-142/logs.dvc
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,32 @@
+id: ANA-026
+title: RUN-067 TEM-1 relative-scale residual exposure graphlet review
+status: completed
+created: '2026-05-15T19:08:58+10:00'
+owner: matthew-spence
+experiments:
+- EXP-026
+runs:
+- RUN-067
+purpose: Review the scaled EXP-026 relative-scale residual exposure graphlet experiment,
+  including balanced graphlet sampling, diminishing-return proxies, fixed versus local
+  residual scaling, Walsh/GFT spectra, topology, and controls.
+path: analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-067
+  produced_artifacts:
+  - analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_contact_calibration_test_transfer.md
+  - analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_diminishing_returns_by_walk_stage.md
+  - analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_graphlet_sampling_audit.md
+  - analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_key_metrics.md
+  - analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_primary_by_start_class.md
+  - analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_relative_scale_correlations.md
+  - analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_selected_test_model_comparison.md
+  - analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_validation_tests.md
+  - analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_walk_stage_relative_scale.md
+compliance:
+  level: green
+  issues: []

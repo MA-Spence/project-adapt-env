@@ -1,0 +1,95 @@
+id: EXP-045
+type: experiment
+title: PHOT cumulative epistasis calibration fix ablation
+slug: phot-cumulative-epistasis-calibration-fix-ablation
+status: completed
+created: '2026-06-17T04:40:10+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments: []
+  motivating_results:
+  - RES-040
+  - RES-042
+  - RES-043
+question: Do the RES-043 epistasis-calibration fixes A through D, added cumulatively,
+  resolve the PHOT magnitude-epistasis/accessibility tradeoff under the existing numerical
+  fast-fit protocol?
+pre_experiment_prediction: Fix A should test whether a monotone observation link alone
+  can raise observable magnitude epistasis without collapsing accessibility; if not,
+  the cumulative A+B, A+B+C, and A+B+C+D stages should show whether global-nonlinearity
+  sourcing, an explicit specific-epistasis variance-ratio knob, and scale-invariant/distribution-conditioned
+  objectives are needed.
+rationale: RES-043 showed that bounded trait-space routing improved component guardrails
+  but left raw latent epistasis far too large and accessibility unstable. The scratch
+  RES-043 calibration review argues that the defect is a combination of affine readout
+  ratio invariance, sourcing magnitude epistasis from specific J, lack of an explicit
+  epistasis/additive variance-ratio target, and poor objective conditioning around
+  near-zero signed means. This experiment tests those fixes cumulatively on PHOT before
+  any broader scale-up.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  - scratch/RES-043_epistasis_calibration_review.md
+  - scripts/phot_trait_space_bounded_gate_fast_fit.py
+  - scripts/phot_nested_fit_protocol_benchmark.py
+  - external/Adapt-Env/adaptenv/calibration.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  datasets:
+  - RUN-077 PHOT prepared assay and empirical graphlets
+  - RUN-098 PHOT full-ABC comparator distances
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - bounded_gate_candidates.csv
+  - selected_bounded_gate_candidates.csv
+  - bounded_gate_distances.csv
+  - bounded_gate_equivalence.csv
+  - graphlet_metrics.csv
+  - graphlet_summary.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - abc_comparator_selected_family_distances.csv
+  artifacts: []
+downstream:
+  planned_analyses:
+  - ANA-044
+  planned_results:
+  - RES-044
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

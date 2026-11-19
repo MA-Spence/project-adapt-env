@@ -1,0 +1,41 @@
+id: RES-062
+title: RUN-162 formally fails observable coverage and specificity with a plateau-confounded
+  rugged target
+status: completed
+created: '2026-07-24T13:08:28+10:00'
+owner: matthew-spence
+analyses:
+- ANA-062
+experiments:
+- EXP-064
+runs:
+- RUN-162
+supports: []
+weakens:
+- HYP-005
+refutes: []
+motivates: []
+supersedes: []
+summary: 'RUN-162 independently reproduces OBSERVABLE_CONSTRUCTION_LIMIT: G1 passes
+  for 1/3 rugged-end templates, G2 and G4 for 2/3, and G3 for 0/6 descriptors, so
+  EXP-065 remains blocked. The strongest biological construction-limit interpretation
+  is withheld because the local-maxima-density rugged-end selector misclassifies flat
+  CR9114 graphlets as maximally rugged.'
+artifacts: []
+evidence_paths:
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/metrics.json
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_acceptance_audit.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_collection_audit.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_coverage_by_descriptor.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_coverage_by_template.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_operating_region_audit.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_protocol_output_audit.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_rugged_end_audit.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_rugged_target_diagnostic.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_source_hash_audit.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_specificity_audit.csv
+- analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_specificity_by_descriptor.csv
+- data/processed/observable-ruggedness-coverage-probe/RUN-162.dvc
+compliance:
+  level: green
+  issues: []

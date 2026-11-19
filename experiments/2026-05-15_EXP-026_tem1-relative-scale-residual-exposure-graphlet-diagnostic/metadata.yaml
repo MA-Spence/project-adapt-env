@@ -1,0 +1,88 @@
+id: EXP-026
+type: experiment
+title: TEM-1 relative-scale residual exposure graphlet diagnostic
+slug: tem1-relative-scale-residual-exposure-graphlet-diagnostic
+status: planned
+created: '2026-05-15T18:30:33+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-025
+  motivating_results:
+  - RES-025
+question: Do fixed-scale residual and high-order components become more topologically
+  relevant as adaptive-walk diminishing returns reduce the smooth thermodynamic/additive
+  gain, when dense graphlets are balanced across start classes and walk stages?
+pre_experiment_prediction: If the relative-scale mechanism is correct, absolute residual
+  high-order variance should remain controlled while residual exposure relative to
+  available beneficial effects or base order-1 variance increases in later walk stages,
+  accompanied by increased WHT high-order fraction, SE/RSE, local maxima, and reduced
+  accessibility compared with the smooth core. Local-DFE-scaled residuals and placement
+  controls test whether this is merely strength scaling rather than a biologically
+  meaningful procedural mechanism.
+rationale: RUN-065 showed that aggregate residuals can create local topology but failed
+  the multi-start sampling design and did not make the relative-scale causal chain
+  explicit. This scaled follow-up fixes graphlet-cap sampling, keeps outputs small,
+  and directly records whether residual/high-order terms are unmasked as smooth adaptive
+  gains diminish.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 08:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - tem1_mmseqs_alignment.fasta
+  - adaptive_walk_starts.csv
+  - adaptive_walk_trajectories.csv
+  - adaptive_walk_graphlet_backgrounds.csv
+  - start_candidate_report.csv
+  - summary.json
+  - module_parameter_sweep.csv
+  - graphlet_catalog.csv
+  - calibration_graphlet_metrics.csv
+  - test_graphlet_metrics.csv
+  - graphlet_walsh_terms.csv
+  - graphlet_gft_coefficients.csv
+  - graphlet_sign_epistasis_pairs.csv
+  - graphlet_accessibility.csv
+  - calibration_target_summary.json
+  - heldout_test_summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

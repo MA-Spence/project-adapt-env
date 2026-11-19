@@ -1,0 +1,76 @@
+id: EXP-052
+type: experiment
+title: Stage 4A empirical ensemble descriptor envelope
+slug: stage-4a-empirical-ensemble-descriptor-envelope
+status: planned
+created: '2026-06-18T22:48:58+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-051
+  motivating_results:
+  - RES-049
+question: What operator-free descriptor envelope is observed across the current Tier-1
+  combinatorial landscape library, with ProteinGym restricted to order-1/global summaries?
+pre_experiment_prediction: Tier-1 landscapes will show broad but structured bands
+  for DFE, ruggedness, accessibility, sign epistasis, and order spectrum; sparse ProteinGym
+  assays will provide only order-1/global summaries under the scope audit.
+rationale: This is Step 4A from scratch/science_plan_part1_ensemble_landscape_validation.md
+  and creates the empirical reference distribution before any generator overlap claim.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/science_plan_part1_ensemble_landscape_validation.md
+  - scripts/ensemble_landscape_validation_stage4.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/landscapy/README.md
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - descriptor_metrics.csv
+  - graphlet_metrics.csv
+  - empirical_bands.csv
+  - descriptor_scope_audit.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

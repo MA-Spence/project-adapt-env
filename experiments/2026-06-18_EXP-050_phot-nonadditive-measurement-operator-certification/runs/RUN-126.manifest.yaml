@@ -1,0 +1,39 @@
+run: RUN-126
+target: lab-slurm
+experiment: EXP-050
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-18_EXP-050_phot-nonadditive-measurement-operator-certification
+  run_script: experiments/2026-06-18_EXP-050_phot-nonadditive-measurement-operator-certification/run.sh
+inputs:
+  declared_files:
+  - scratch/RES-048_forward_plan_tunable_benchmark_generator.md
+  - scripts/phot_nonadditive_operator_certification.py
+  - scripts/phot_miscalibration_p0_isolation.py
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  datasets:
+  - RUN-077
+outputs:
+  expected:
+  - preflight.json
+  - graphlet_catalog.csv
+  - operator_profile_catalog.csv
+  - injected_terms.csv
+  - roundtrip_graphlet_metrics.csv
+  - roundtrip_transfer.csv
+  - mavenn_metrics.csv
+  - operator_certification_summary.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-126/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-126
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-126/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-126/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-126
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-126/project/experiments/2026-06-18_EXP-050_phot-nonadditive-measurement-operator-certification/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-126/project/experiments/2026-06-18_EXP-050_phot-nonadditive-measurement-operator-certification/runs/RUN-126.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

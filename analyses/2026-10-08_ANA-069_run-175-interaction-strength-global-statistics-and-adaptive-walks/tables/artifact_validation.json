@@ -1,0 +1,25 @@
+{
+  "code_cells": 8,
+  "inline_figures": 5,
+  "exported_figures": 10,
+  "notebook_errors": 0,
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "all_local_analysis_links_exist": true,
+  "figures_visually_inspected": true,
+  "record_links": {
+    "experiment": "EXP-065",
+    "run": "RUN-175",
+    "analysis": "ANA-069"
+  },
+  "data_backup_objects": 184,
+  "verified_at": "2026-10-08T10:00:08.795655+00:00"
+}

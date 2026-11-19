@@ -101,6 +101,148 @@ def test_empirical_pairwise_target_stability_changes_effective_stability() -> No
     )
 
 
+def test_trait_space_epistasis_bound_caps_stability_routed_signal() -> None:
+    config = LandscapeConfig(
+        L=4,
+        seed=7,
+        stability_margin=0.5,
+        threshold_steepness=5.0,
+        noise_amplitude=0.0,
+        n_epistatic_terms=1,
+        n_higher_order_epistatic_terms=0,
+        trait_space_epistasis_bound=0.25,
+    )
+    reference = np.asarray([0, 0, 0, 0], dtype=np.int64)
+    override = {
+        "positions": np.asarray([[0, 1]], dtype=np.int64),
+        "matrices": _pairwise_override_matrix()[None, :, :],
+    }
+    mutant = np.asarray([1, 1, 0, 0], dtype=np.int64)
+
+    landscape = FitnessLandscapeEnv(
+        config,
+        reference_sequence=reference,
+        pairwise_epistasis_override=override,
+        _empirical_pairwise_target="stability",
+    )
+
+    components = landscape.evaluate(mutant, return_components=True)
+    routed_shift = components["effective_stability"] - components["stability"]
+
+    assert components["empirical_pairwise_score"] > 0.25
+    assert routed_shift <= 0.25 + 1e-12
+    assert routed_shift == pytest.approx(
+        0.25 * np.tanh(components["empirical_pairwise_score"] / 0.25)
+    )
+
+
+def test_trait_space_epistasis_bound_does_not_change_score_routing() -> None:
+    reference = np.asarray([0, 0, 0, 0], dtype=np.int64)
+    override = {
+        "positions": np.asarray([[0, 1]], dtype=np.int64),
+        "matrices": _pairwise_override_matrix()[None, :, :],
+    }
+    mutant = np.asarray([1, 1, 0, 0], dtype=np.int64)
+    base_kwargs = {
+        "L": 4,
+        "seed": 7,
+        "stability_margin": 0.5,
+        "threshold_steepness": 5.0,
+        "noise_amplitude": 0.0,
+        "n_epistatic_terms": 1,
+        "n_higher_order_epistatic_terms": 0,
+        "generic_epistasis_target": "score",
+    }
+
+    unbounded = FitnessLandscapeEnv(
+        LandscapeConfig(**base_kwargs),
+        reference_sequence=reference,
+        pairwise_epistasis_override=override,
+        _empirical_pairwise_target="score",
+    )
+    bounded = FitnessLandscapeEnv(
+        LandscapeConfig(**base_kwargs, trait_space_epistasis_bound=0.25),
+        reference_sequence=reference,
+        pairwise_epistasis_override=override,
+        _empirical_pairwise_target="score",
+    )
+
+    assert bounded.evaluate(mutant, return_components=True)["raw_fitness"] == pytest.approx(
+        unbounded.evaluate(mutant, return_components=True)["raw_fitness"]
+    )
+
+
+def test_sparse_walsh_field_routes_through_stability_deterministically() -> None:
+    reference = np.asarray([0, 0, 0, 0, 0], dtype=np.int64)
+    mutant = np.asarray([1, 2, 0, 3, 0], dtype=np.int64)
+    config = LandscapeConfig(
+        L=5,
+        seed=31,
+        stability_margin=0.5,
+        threshold_steepness=5.0,
+        noise_amplitude=0.0,
+        n_epistatic_terms=0,
+        n_higher_order_epistatic_terms=0,
+        sparse_walsh_terms=32,
+        sparse_walsh_min_order=2,
+        sparse_walsh_max_order=3,
+        sparse_walsh_order_weights=(0.25, 0.75),
+        sparse_walsh_cluster_positions=((0, 1, 2), (2, 3, 4)),
+        sparse_walsh_seed=20260617,
+        epistasis_strength=0.4,
+        generic_epistasis_target="stability",
+    )
+
+    first = FitnessLandscapeEnv(config, reference_sequence=reference)
+    second = FitnessLandscapeEnv(config, reference_sequence=reference)
+    first_components = first.evaluate(mutant, return_components=True)
+    second_components = second.evaluate(mutant, return_components=True)
+
+    assert first_components["sparse_walsh_score"] == pytest.approx(
+        second_components["sparse_walsh_score"]
+    )
+    assert abs(first_components["sparse_walsh_score"]) > 1e-9
+    assert first_components["generic_pairwise_score"] == pytest.approx(0.0)
+    assert first_components["effective_stability"] == pytest.approx(
+        first_components["stability"] + first_components["sparse_walsh_score"]
+    )
+    assert first_components["score_space_epistasis"] == pytest.approx(0.0)
+
+
+def test_sparse_walsh_contrast_is_uniform_gauge_centered() -> None:
+    config = LandscapeConfig(
+        L=4,
+        seed=37,
+        n_epistatic_terms=0,
+        n_higher_order_epistatic_terms=0,
+        sparse_walsh_terms=4,
+        sparse_walsh_min_order=2,
+        sparse_walsh_max_order=2,
+        sparse_walsh_cluster_positions=((0, 1), (2, 3)),
+    )
+    landscape = FitnessLandscapeEnv(config, reference_sequence=np.zeros(4, dtype=np.int64))
+
+    contrast = landscape._sparse_walsh_contrast_vector(0, 1)
+
+    assert float(np.mean(contrast)) == pytest.approx(0.0, abs=1e-12)
+    assert float(np.std(contrast)) == pytest.approx(1.0, rel=1e-12)
+
+
+def test_peak_search_steps_zero_skips_local_climb_bookkeeping() -> None:
+    reference = np.asarray([0, 0, 0, 0], dtype=np.int64)
+    config = LandscapeConfig(
+        L=4,
+        seed=29,
+        peak_search_steps=0,
+        peak_search_top_single_starts=0,
+        peak_search_random_starts=0,
+    )
+
+    landscape = FitnessLandscapeEnv(config, reference_sequence=reference)
+
+    assert np.array_equal(landscape._peak_seq, landscape._designed_peak)
+
+
 def test_empirical_pairwise_target_function_changes_effective_functional_fitness() -> None:
     config = LandscapeConfig(
         L=4,

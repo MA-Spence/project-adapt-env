@@ -1,0 +1,25 @@
+{
+  "queue": "JOBID|STATE|TIME|TIME_LIMIT|NODELIST|NODELIST(REASON)\n2313|RUNNING|0:44|2:00:00|dutch|dutch\n",
+  "queue_stderr": "",
+  "sha256": {
+    "scripts/replicate_observation_exp065.py": "e184de7a29a505af115bc4e3abf88a021f2c323c46e7b2d8bceed4fe9653dc0e",
+    "scripts/fetch_trpb_replicates_exp065.py": "404884cd1e6dc0ac060d8e5fed086d1a52aca8c88ae47f78619cdfb09a12da8b",
+    "scripts/prepare_trpb_replicates_exp065.py": "f7612dbbb5259b08ec27282e07075af62ceac66d657e6f044a6ee1b799fca317",
+    "tests/test_replicate_observation_exp065.py": "7497c1714af964855a16094880dafe44527f8361bc5ce1e98bd668329f79bc37",
+    "data/processed/trpb-replicate-observation-exp065.dvc": "0325f4a2fe7d65ce63510c416f5b7ddf29cf6cb3211e6496d2aeac4b0fa7df9e",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh": "0dab4bdf15306a7cbc1df7cc4aa419b35ead47e868b4a65566d81f76e2e59359",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/replicate_observation.yaml": "1c54a1443d4b5d23ec62c47c62969dff295226f1c698202b92a66fd9ed70518f",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/replicate_observation.md": "858ae176ce370238eb418045dff15eb3174e11fb2f9e4a4f799d3786c5b7deec"
+  },
+  "logs": {
+    "stdout.txt": "PRODUCTION: frozen RUN-166, 128 observation draws\nCompleted frozen arm linear, ratio 0\nCompleted frozen arm linear, ratio 0.25\nCompleted frozen arm linear, ratio 1\n",
+    "stderr.txt": "",
+    "labproj-exit-code.txt": null
+  },
+  "verified_at": "2026-10-07T20:44:18.325022+11:00",
+  "source_hashes_match": true,
+  "numerical_tests": "8 passed",
+  "smoke_only_draws": 2,
+  "smoke_only_observation_seed": 659901,
+  "remote_input_checks": "14 SHA256 inputs/source members; 16 DVC MD5 objects verified"
+}

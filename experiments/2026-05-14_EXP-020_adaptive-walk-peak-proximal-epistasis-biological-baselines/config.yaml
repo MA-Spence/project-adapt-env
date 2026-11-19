@@ -1,0 +1,89 @@
+experiment_id: EXP-020
+title: Adaptive Walk And Peak-Proximal Epistasis Biological Baselines
+stack: STACK-000
+target: lab-slurm
+experiment:
+  id: EXP-020
+
+landscape:
+  sequence_length: 72
+
+conditions:
+  - name: unconditioned
+    alignment: none
+  - name: synthetic_alignment
+    alignment: synthetic
+    alignment_size: 320
+    alignment_seed_offset: 10000
+    alignment_generation_seed_offset: 20000
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    n_epistatic_terms: 240
+    epistasis_strength: 0.035
+    generic_epistasis_target: stability
+    empirical_pairwise_strength: null
+    pairwise_epistasis_rank: 2
+    n_higher_order_epistatic_terms: 0
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 500
+    peak_search_top_single_starts: 8
+    peak_search_random_starts: 8
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+
+sampling:
+  seeds: [8101, 8102, 8103, 8104, 8105]
+  target_fractions:
+    - name: low
+      fraction: 0.20
+    - name: mid
+      fraction: 0.50
+    - name: high
+      fraction: 0.80
+    - name: near_peak
+      fraction: 0.95
+  starts_per_level: 3
+  candidate_count: 384
+  adaptive_walk_modes: [greedy, random_beneficial]
+  max_walk_steps: 40
+  epistasis_pairs_per_background: 256
+  batch_size: 4096
+  neutral_threshold_abs: 0.02
+  neutral_threshold_fraction_of_parent: 0.02
+  beneficial_threshold_abs: 0.02
+  beneficial_threshold_fraction_of_parent: 0.02
+  min_epistasis_effect_threshold: 0.02
+
+validation_thresholds:
+  min_abs_spearman: 0.20
+  min_sign_epistasis_spearman: 0.10
+  min_negative_epistasis_spearman: 0.10
+  max_median_deceleration_ratio: 0.75
+
+quick:
+  landscape:
+    sequence_length: 32
+  sampling:
+    seeds: [8101]
+    target_fractions:
+      - name: low
+        fraction: 0.25
+      - name: mid
+        fraction: 0.60
+      - name: near_peak
+        fraction: 0.90
+    starts_per_level: 1
+    candidate_count: 64
+    max_walk_steps: 12
+    epistasis_pairs_per_background: 48
+    batch_size: 1024

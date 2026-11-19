@@ -1,0 +1,96 @@
+run: RUN-176
+target: lab-slurm
+experiment: EXP-065
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration
+  run_script: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - PROJECT_STATE.md
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - data/processed/interaction-strength-exp065-inputs.dvc
+  - data/processed/trpb-profile-additive-inputs.dvc
+  - docs/hypotheses.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_control.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_model_audit.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_validation.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_alignment_prior.py
+  - external/Adapt-Env/README.md
+  - external/Adapt-Env/adaptenv/README.md
+  - external/Adapt-Env/adaptenv/__init__.py
+  - external/Adapt-Env/adaptenv/alignment.py
+  - external/Adapt-Env/adaptenv/amino_acids.py
+  - external/Adapt-Env/adaptenv/api.py
+  - external/Adapt-Env/adaptenv/extensive_gnk.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/Adapt-Env/adaptenv/mmseqs.py
+  - external/Adapt-Env/adaptenv/presets.py
+  - external/Adapt-Env/adaptenv/ranked_categorical_gnk.py
+  - external/Adapt-Env/adaptenv/service.py
+  - external/Adapt-Env/adaptenv/thermodynamic.py
+  - external/Adapt-Env/docs/API_AND_SERVICE.md
+  - external/Adapt-Env/docs/THERMODYNAMIC_V2.md
+  - external/Adapt-Env/pyproject.toml
+  - external/Adapt-Env/tests/test_alignment_profile.py
+  - external/Adapt-Env/tests/test_amino_acids.py
+  - external/Adapt-Env/tests/test_mmseqs_client.py
+  - external/Adapt-Env/tests/test_profile_additive_prior.py
+  - external/Adapt-Env/tests/test_public_thermodynamic.py
+  - scripts/alignment_prior_exp065.py
+  - scripts/fetch_trpb_replicates_exp065.py
+  - scripts/interaction_strength_exp065.py
+  - scripts/landscape_graph.py
+  - scripts/landscape_graph_kernel.cpp
+  - scripts/observation_calibration_exp065.py
+  - scripts/prepare_trpb_profile_exp065.py
+  - scripts/production_landscapes_exp066.py
+  - scripts/replicate_observation_exp065.py
+  - tests/test_alignment_prior_exp065.py
+  - tests/test_interaction_strength_exp065.py
+  - tests/test_prepare_trpb_profile_exp065.py
+  datasets:
+  - data/processed/interaction-strength-exp065-inputs
+  - data/processed/trpb-profile-additive-inputs
+outputs:
+  expected:
+  - manifest.json
+  - config.yaml
+  - input_manifest.json
+  - source_manifest.json
+  - worker_environment.json
+  - kernel_validation.json
+  - selected_parameters.json
+  - graph_summary.csv
+  - latent_graph_summary.csv
+  - cube_summary.csv
+  - seed_audit.csv
+  - coverage.csv
+  - additive_matrix.npy
+  - prior_manifest.json
+  - intervention.json
+  - calibration_prior_audit.json
+  - latent_calibration.npz
+  - latent_calibration_index.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-176/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-176
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-176/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-176/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-176
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-176/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-176/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-176.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.
+preparation_note: Nonexecuting planned manifest corrected to current frozen prior-repeat declarations;
+  inherited declarations retained in EXP-065 metadata. No scheduler submission.

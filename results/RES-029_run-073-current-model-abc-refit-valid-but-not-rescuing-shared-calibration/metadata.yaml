@@ -1,0 +1,44 @@
+id: RES-029
+title: RUN-073 current-model ABC refit is valid but does not rescue shared empirical
+  calibration
+status: completed
+created: '2026-05-16T17:08:46+10:00'
+owner: matthew-spence
+analyses:
+- ANA-029
+experiments:
+- EXP-029
+runs:
+- RUN-073
+supports: []
+weakens:
+- HYP-001
+refutes: []
+motivates: []
+supersedes: []
+summary: 'RUN-073 confirms that the PHOT and Tsuboyama ABC refit used current epistasis/stability
+  definitions and that synthetic truth recovery works under matched current-model
+  semantics. However, the empirical posterior remains broad and plateau-like, and
+  the joint two-assay fit trades off assay-specific structure: aggregate double-mutant
+  ranking is reasonable, but empirical epistasis prediction remains weak relative
+  to stronger prior assay-specific fits. This resolves the stale-cache procedural
+  concern for this refit but does not validate a shared empirical calibration or graphlet
+  ruggedness hypothesis.'
+artifacts:
+- results/RES-029_run-073-current-model-abc-refit-valid-but-not-rescuing-shared-calibration/metrics.json
+evidence_paths:
+- analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/metrics.json
+- analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_preflight.md
+- analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_branch_validation.md
+- analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_posterior_parameters.md
+- analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_synthetic_truth_recovery.md
+- analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review/tables/run-073_prior_fit_comparison.md
+- data/processed/proteingym-current-model-abc-refit-residual-ruggedness/RUN-073.dvc
+- data/processed/proteingym-current-model-abc-refit-residual-ruggedness/RUN-073/summary.json
+- data/processed/proteingym-current-model-abc-refit-residual-ruggedness/RUN-073/current_model_preflight.json
+- data/processed/proteingym-current-model-abc-refit-residual-ruggedness/RUN-073/branch_validations.csv
+- data/processed/proteingym-current-model-abc-refit-residual-ruggedness/RUN-073/posterior_parameter_summary.csv
+- data/processed/proteingym-current-model-abc-refit-residual-ruggedness/RUN-073/synthetic_truth_recovery.csv
+compliance:
+  level: green
+  issues: []

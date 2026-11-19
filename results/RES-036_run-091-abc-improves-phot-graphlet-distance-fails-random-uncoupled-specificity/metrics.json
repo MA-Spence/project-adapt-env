@@ -1,0 +1,50 @@
+{
+  "analysis_id": "ANA-036",
+  "decision": {
+    "refutes": [],
+    "supports": [],
+    "weakens": [
+      "HYP-008"
+    ]
+  },
+  "experiment_id": "EXP-036",
+  "interpretation_flags": {
+    "abc_empirical_module_beats_current_and_smooth": true,
+    "abc_empirical_module_beats_no_module": true,
+    "empirical_module_component_guardrails_pass": true,
+    "empirical_module_energy_localized": false,
+    "passes_random_module_specificity_control": false,
+    "passes_shuffled_module_control": true,
+    "passes_uncoupled_module_specificity_control": false,
+    "supports_hyp008_mechanism": false
+  },
+  "primary_evidence": {
+    "empirical_module_accessibility_mean": 0.018287037037037,
+    "empirical_module_delta_vs_fitted_current": -0.1462851926197395,
+    "empirical_module_delta_vs_no_module": -0.0936626759466441,
+    "empirical_module_delta_vs_random_module": 9.72169661728195e-05,
+    "empirical_module_delta_vs_shuffled_module": -0.0981660474126779,
+    "empirical_module_delta_vs_smooth_core": -0.156618439120112,
+    "empirical_module_delta_vs_uncoupled_module": 0.0316102729425433,
+    "empirical_module_lag1_mean": 0.1562977241704306,
+    "empirical_module_local_maxima_mean": 4.333333333333333,
+    "empirical_module_plaquette_effective_modules": 9.11424682239412,
+    "empirical_module_plaquette_normalized_entropy": 0.9373831988048932,
+    "empirical_module_test_distance": 0.2552856277276663,
+    "empirical_target_accessibility_mean": 0.1974537037037036,
+    "empirical_target_lag1_mean": 0.1905046595011568,
+    "empirical_target_local_maxima_mean": 5.166666666666667,
+    "fitted_current_test_distance": 0.4015708203474057,
+    "n_calibration_graphlets": 12,
+    "n_graphlets": 24,
+    "n_test_graphlets": 12,
+    "no_module_test_distance": 0.3489483036743104,
+    "random_module_test_distance": 0.2551884107614934,
+    "shuffled_module_test_distance": 0.3534516751403442,
+    "smooth_core_test_distance": 0.4119040668477783,
+    "uncoupled_module_test_distance": 0.2236753547851229
+  },
+  "result_id": "RES-036",
+  "run_id": "RUN-091",
+  "summary": "ABC fitting moves the empirical-module family below current, smooth, no-module, and shuffled controls on the fixed held-out PHOT graphlets, but random modules are effectively tied and the uncoupled-module control is better; the empirical-module energy remains diffuse, so HYP-008 is weakened rather than supported."
+}

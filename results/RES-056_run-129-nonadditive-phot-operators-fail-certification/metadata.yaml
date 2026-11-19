@@ -1,0 +1,43 @@
+id: RES-056
+title: RUN-129 non-additive PHOT operators fail certification
+status: completed
+created: '2026-06-22T14:24:37+10:00'
+owner: matthew-spence
+analyses:
+- ANA-056
+experiments:
+- EXP-050
+runs:
+- RUN-129
+supports: []
+weakens:
+- HYP-004
+- HYP-006
+- HYP-009
+refutes: []
+motivates: []
+supersedes: []
+summary: 'RUN-129 completed EXP-050 but certified no non-additive MAVE-NN PHOT measurement
+  operator: pairwise profiles were preflight-skipped at PHOT length 118, black-box/GE
+  profiles failed under the installed MAVE-NN/Keras build interface, and 0/24 certification
+  checks passed.'
+artifacts: []
+evidence_paths:
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/metrics.json
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_certification_metric_matrix.csv
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_certification_metric_matrix.md
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_fit_failure_modes.csv
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_fit_failure_modes.md
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_graphlet_catalog_summary.csv
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_graphlet_catalog_summary.md
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_injected_spectrum_summary.csv
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_injected_spectrum_summary.md
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_metric_pass_summary.csv
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_metric_pass_summary.md
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_operator_certification_status.csv
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_operator_certification_status.md
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_output_collection_audit.csv
+- analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review/tables/run-129_output_collection_audit.md
+compliance:
+  level: green
+  issues: []

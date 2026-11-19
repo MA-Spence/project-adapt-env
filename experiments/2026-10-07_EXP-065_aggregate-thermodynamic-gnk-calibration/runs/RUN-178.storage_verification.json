@@ -1,0 +1,10 @@
+{
+  "status": "tracked_and_local_cache_verified",
+  "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc",
+  "directory_md5": "47ee9d6365692f4ea2a896befdc0a421.dir",
+  "files": 208,
+  "bytes": 73239327,
+  "unique_cache_objects_verified": 203,
+  "remote_backup": "pending_Dutch_unavailable",
+  "bundle_record_timing": "Archived RUN sidecars reflect collection before DVC pointer creation; this live RUN records final tracking."
+}

@@ -1,0 +1,8 @@
+{
+  "experiment_id": "EXP-055",
+  "mode": "stage_4d_joint_realism_gate",
+  "project_root": "/tank/data/labproj/staging/project-adapt-env/RUN-138/project",
+  "public_model_system": "additive_thermodynamic_gnk",
+  "quick": false,
+  "stage": "4D"
+}

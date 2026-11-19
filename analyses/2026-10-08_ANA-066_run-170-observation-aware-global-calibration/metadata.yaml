@@ -1,0 +1,69 @@
+id: ANA-066
+title: RUN-170 observation-aware global calibration and withheld predictions
+status: completed
+created: '2026-10-08T10:01:44+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-170
+purpose: Audit observation-aware global parameter fits and compare withheld empirical
+  WHT, diminishing returns, activity and variance distributions through executable
+  notebook figures, judging usefulness for synthetic ML testing without scientific
+  success gates.
+path: analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration
+notebook_record:
+  primary_notebook_path: analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-170
+  produced_artifacts:
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/01_calibration.pdf
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/01_calibration.png
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/02_heldout_marginals.pdf
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/02_heldout_marginals.png
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/03_withheld_wht.pdf
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/03_withheld_wht.png
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/04_withheld_slopes.pdf
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/04_withheld_slopes.png
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/05_activity_and_structure.pdf
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/figures/05_activity_and_structure.png
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/tables/audit.json
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/tables/confirmation_estimates.csv
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/tables/data_bundle_audit.json
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/tables/portable_parameters.json
+  - analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration/tables/selected_parameters.csv
+data_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-170.dvc
+data_dependencies:
+- data/processed/trpb-replicate-observation-exp065.dvc
+verification:
+  notebook_executed: true
+  executed_code_cells: 8
+  cell_errors: 0
+  inline_figures: 5
+  exports_per_figure:
+  - png
+  - pdf
+  output_hashes: 103
+  remote_hashes: 212
+  source_hashes: 7
+  empirical_genotypes: 2048
+  excluded_genotypes: 3712
+  independent_statistic_rows: 114432
+  replicate_pair_cubes: 38144
+  replayed_observations: 1179648
+  fits_recomputed: 6
+  checks: Numerical/provenance identities, not scientific gates.
+  data_backup:
+    verified_objects: 208
+    all_md5_match: true
+    remote_store: /tank/data/labproj/projects/project-adapt-env/data/files/md5
+    directory_md5: 1f928b0b95c7ec39570765c6a051f8c9.dir
+    bytes: 166435332
+    files: 215
+  full_repository_strict_check: 'unavailable: historical cloud-backed file timeouts'
+compliance:
+  level: yellow
+  issues:
+  - ANA-066 is completed but has no linked results.

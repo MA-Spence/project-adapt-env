@@ -1,0 +1,33 @@
+id: ANA-044
+title: RUN-117 PHOT cumulative epistasis calibration fix review
+status: completed
+created: '2026-06-17T05:50:51+10:00'
+owner: matthew-spence
+experiments:
+- EXP-045
+runs:
+- RUN-117
+purpose: Review the four cumulative EXP-045 PHOT calibration stages A, A+B, A+B+C,
+  and A+B+C+D against empirical PHOT and the RUN-098 full-ABC comparator.
+path: analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-117
+  produced_artifacts:
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/metrics.json
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_abc_comparator_test_distances.md
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_best_candidate_parameters.md
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_bounded_gate_test_distances.md
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_graphlet_and_module_catalog_summary.md
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_observable_vs_raw_epistasis_and_landscape.md
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_output_collection_audit.md
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_stage_best_test_distances.md
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_stage_equivalence_decision.md
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_stage_failure_modes.md
+  - analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review/tables/run-117_top_component_distances.md
+compliance:
+  level: green
+  issues: []

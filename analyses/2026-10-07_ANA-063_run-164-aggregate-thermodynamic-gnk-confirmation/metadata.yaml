@@ -1,0 +1,51 @@
+id: ANA-063
+title: RUN-164 aggregate thermodynamic GNK confirmation analysis
+status: completed
+created: '2026-10-07T14:44:51+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-164
+purpose: Audit RUN-164 and communicate held-out aggregate statistical recovery, baseline
+  comparisons, resolution sensitivity, and finite-length scaling through reproducible
+  figures in an executable notebook.
+path: analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation
+notebook_record:
+  primary_notebook_path: analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-164
+  produced_artifacts:
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/01_heldout_comparison.pdf
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/01_heldout_comparison.png
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/02_descriptor_mismatches.pdf
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/02_descriptor_mismatches.png
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/03_wht_and_diminishing_returns.pdf
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/03_wht_and_diminishing_returns.png
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/04_resolution_sensitivity.pdf
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/04_resolution_sensitivity.png
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/05_scaling_and_saturation.pdf
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/figures/05_scaling_and_saturation.png
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/tables/aggregate_summary.csv
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/tables/audit.json
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/tables/descriptor_summary.csv
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/tables/metrics.json
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/tables/model_contrasts.csv
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/tables/scaling_replay.csv
+verification:
+  notebook_executed: true
+  executed_code_cells: 7
+  cell_errors: 0
+  empirical_cubes_independently_audited: 144
+  figures: 5
+  exports_per_figure:
+  - png
+  - pdf
+  full_repository_strict_check: 'unavailable: historical cloud-backed file timeouts'
+data_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-164.dvc
+compliance:
+  level: yellow
+  issues:
+  - ANA-063 is completed but has no linked results.

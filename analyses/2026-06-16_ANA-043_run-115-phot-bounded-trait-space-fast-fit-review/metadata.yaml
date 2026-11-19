@@ -1,0 +1,33 @@
+id: ANA-043
+title: RUN-115 PHOT bounded trait-space fast-fit review
+status: completed
+created: '2026-06-16T19:16:43+10:00'
+owner: matthew-spence
+experiments:
+- EXP-044
+runs:
+- RUN-115
+purpose: Review RUN-115 compact outputs to determine whether bounded trait-space epistasis
+  in the current AdaptEnv model, fitted by a numerical fast fitter, produces PHOT
+  graphlet, accessibility, epistasis, diminishing-return, spectral, and local-energy
+  summaries comparable to empirical PHOT and the RUN-098 full-ABC comparator.
+path: analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-115
+  produced_artifacts:
+  - analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/metrics.json
+  - analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_abc_comparator_test_distances.md
+  - analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_best_candidate_parameters.md
+  - analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_bounded_gate_test_distances.md
+  - analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_equivalence_decision.md
+  - analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_graphlet_and_module_catalog_summary.md
+  - analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_observable_vs_raw_epistasis_and_landscape.md
+  - analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_output_collection_audit.md
+  - analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_top_component_distances.md
+compliance:
+  level: green
+  issues: []

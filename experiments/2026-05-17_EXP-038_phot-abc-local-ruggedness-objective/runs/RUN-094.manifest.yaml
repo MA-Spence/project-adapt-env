@@ -1,0 +1,55 @@
+run: RUN-094
+target: lab-slurm
+experiment: EXP-038
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-17_EXP-038_phot-abc-local-ruggedness-objective
+  run_script: experiments/2026-05-17_EXP-038_phot-abc-local-ruggedness-objective/run.sh
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - scripts/phot_coupled_family_discriminating_abc.py
+  - scripts/phot_coupled_landscape_grid_search.py
+  - scripts/phot_localized_ruggedness_energy_diagnostic.py
+  - src/project_adapt_env/coupled_landscape.py
+  - src/project_adapt_env/smc_abc.py
+  datasets:
+  - RUN-077 PHOT system-specific current-model refit outputs
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - progress.json
+  - parameter_specs.csv
+  - posterior_particles.csv
+  - posterior_rounds.csv
+  - evaluated_parameter_sets.csv
+  - graphlet_catalog.csv
+  - module_catalog.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - graphlet_summary.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - selected_family_distances.csv
+  - selected_family_pairwise_deltas.csv
+  - component_guardrail_summary.csv
+  - module_energy_rows.csv
+  - module_energy_by_graphlet.csv
+  - module_energy_summary.csv
+  - base_correlation.csv
+  - empirical_readout_fit.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-094/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-094
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-094/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-094/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-094
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-094/project/experiments/2026-05-17_EXP-038_phot-abc-local-ruggedness-objective/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-094/project/experiments/2026-05-17_EXP-038_phot-abc-local-ruggedness-objective/runs/RUN-094.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

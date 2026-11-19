@@ -1,0 +1,4 @@
+| panel                                 |   n_graphlets |   global_readout_r2_mean |   observed_high_order_fraction_mean |   post_global_readout_residual_high_order_fraction_mean |   high_order_fraction_retained_after_readout_fit_mean |
+|:--------------------------------------|--------------:|-------------------------:|------------------------------------:|--------------------------------------------------------:|------------------------------------------------------:|
+| all empirical graphlets               |            56 |                   0.8403 |                              0.169  |                                                  0.4062 |                                                 4.821 |
+| primary PHOT graphlets, dimension >=4 |            24 |                   0.6273 |                              0.3944 |                                                  0.9479 |                                                 4.821 |

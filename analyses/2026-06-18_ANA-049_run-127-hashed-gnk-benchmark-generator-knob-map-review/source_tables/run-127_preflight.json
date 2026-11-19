@@ -1,0 +1,25 @@
+{
+  "epi_weight_grid": [
+    0.0,
+    0.15,
+    0.3,
+    0.6,
+    1.0
+  ],
+  "experiment_id": "EXP-051",
+  "mode": "hashed_gnk_benchmark_generator_knob_map_validation",
+  "n_parameter_sets": 45,
+  "quick": false,
+  "scratch_source": "scratch/RES-048_forward_plan_tunable_benchmark_generator.md",
+  "seeds": [
+    501,
+    502,
+    503
+  ],
+  "sequence_length": 8,
+  "support_modes": [
+    "structured_block",
+    "shuffled_block",
+    "random"
+  ]
+}

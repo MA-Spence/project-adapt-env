@@ -1,0 +1,7 @@
+{
+  "min_assays_hit": 2,
+  "min_fraction_metrics_in_band": 0.6,
+  "n_joint_candidate_rows": 103,
+  "n_joint_pass": 0,
+  "stage": "4D"
+}

@@ -1,0 +1,45 @@
+id: RES-024
+title: RUN-063 DCA clique haplotype terms create controllable high-order Walsh signal
+  but limited topology
+status: completed
+created: '2026-05-15T14:38:23+10:00'
+owner: matthew-spence
+analyses:
+- ANA-024
+experiments:
+- EXP-024
+runs:
+- RUN-063
+supports:
+- HYP-005
+weakens:
+- HYP-004
+refutes: []
+motivates: []
+supersedes: []
+summary: DCA/contact-graph clique exact-match MSA haplotype terms create controllable
+  high-order Walsh coefficients, including a nonzero fifth-order signal at the upper
+  strength, but lower-order/additive variance remains substantial and sign epistasis,
+  RSE, and multi-maximum topology remain limited.
+artifacts:
+- analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/metrics.json
+- analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_key_metrics.md
+- analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_validation_tests.md
+- analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_order_strength_summary.md
+- analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_upper_strength_topology.md
+- analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_order5_upper_walsh_variance.md
+- analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review/tables/run-063_dca_haplotype_terms_summary.md
+- results/RES-024_run-063-dca-clique-haplotype-terms-create-controllable-high-order-walsh-signal-but-limited-topology/metrics.json
+evidence_paths:
+- data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063/summary.json
+- data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063/dca_haplotype_terms.csv
+- data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063/hamming_map_summary.csv
+- data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063/hamming_walsh_terms.csv
+- data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063/hamming_sign_epistasis_pairs.csv
+- data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063/order_strength_summary.csv
+- data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063.dvc
+- experiments/2026-05-15_EXP-024_tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/config.yaml
+- experiments/2026-05-15_EXP-024_tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/runs/RUN-063.yaml
+compliance:
+  level: green
+  issues: []

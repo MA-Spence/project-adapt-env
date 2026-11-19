@@ -1,0 +1,82 @@
+{
+  "purpose": "Engineering replay of release numerics and prior-matched intrinsic presets",
+  "passed": true,
+  "runs": [
+    {
+      "run": "RUN-175",
+      "preset": "trpb_run175_r05_shared_stop_intrinsic",
+      "seeds": 24,
+      "latent_genotypes_per_seed": 1020,
+      "cube_genotypes_per_seed": 128,
+      "output_hashes": 139,
+      "source_hashes": 16,
+      "maximum_absolute_differences": {
+        "current_vs_archived_a": 0.0,
+        "current_vs_archived_g": 0.0,
+        "current_vs_archived_cube_fitness": 0.0,
+        "current_vs_archived_matrices": 0.0,
+        "current_vs_saved_a": 0.0,
+        "current_vs_saved_g": 2.220446049250313e-15,
+        "current_preset_vs_saved_intrinsic_fitness": 1.1102230246251565e-16
+      },
+      "profile_payload_hashes": 0,
+      "archived_version": "0.3.0",
+      "current_version": "0.5.0rc1",
+      "changed_fingerprints": 24
+    },
+    {
+      "run": "RUN-178",
+      "preset": "trpb_run178_r05_profile_shared_stop_intrinsic",
+      "seeds": 24,
+      "latent_genotypes_per_seed": 1020,
+      "cube_genotypes_per_seed": 128,
+      "output_hashes": 99,
+      "source_hashes": 42,
+      "maximum_absolute_differences": {
+        "current_vs_archived_a": 0.0,
+        "current_vs_archived_g": 0.0,
+        "current_vs_archived_cube_fitness": 0.0,
+        "current_vs_archived_matrices": 0.0,
+        "current_vs_saved_a": 0.0,
+        "current_vs_saved_g": 0.0,
+        "current_preset_vs_saved_intrinsic_fitness": 1.1102230246251565e-16
+      },
+      "profile_payload_hashes": 10,
+      "archived_version": "0.4.0",
+      "current_version": "0.5.0rc1",
+      "changed_fingerprints": 24
+    }
+  ],
+  "replay_script_sha256": "e6e9c2f5ea1051a8b63cc456bd958293aa282ea22cc4b6b4bf6eb2a6121cfc6e",
+  "current_package_input_sha256": {
+    "adaptenv/__init__.py": "a996b5d2c7ffb5ca4eb74ad40fecadb23a880ac77ef1d5eb41c2e790582aff2f",
+    "adaptenv/alignment.py": "77faa24306a570a39061b1a03704605b95ec52e463771fea10ecf2d7baf205d7",
+    "adaptenv/amino_acids.py": "0a0714f05e35fc3e665e33f0f5d50de054d6813e29c12dba6ad20ca33aefc7b9",
+    "adaptenv/api.py": "bbb80f25bc4f778d69edcade7f378c0043e462cc1de59189443f34d81dec0c1b",
+    "adaptenv/extensive_gnk.py": "56f65392b9e2134171b5fd7758a4276c4195c3b4bd77f625f2552047449ccf8c",
+    "adaptenv/landscape.py": "a301be0203cbb29037d39990718d097ceeab7cbff37911f9bc9921b624d8cc91",
+    "adaptenv/mmseqs.py": "6d392fa836bc5614498f5a50e737fc9bac750f847fe4ffdd99eff1c66701d76a",
+    "adaptenv/presets.py": "d1e28a3a0eab313bd54772e149acf9ceee8630a7b485833ac0c62c23ae6ce323",
+    "adaptenv/ranked_categorical_gnk.py": "d7eb55231ae87e130dd8c8e015b4b7fc3b872e25668b0b529d65718a3136021f",
+    "adaptenv/service.py": "3cf1468d49efcb89bdfac0fe0d7c73b64034b608b35eb010ae83f336d662f225",
+    "adaptenv/thermodynamic.py": "08645b27a28b69c8d7f631dae84cb65facc01ed686a596d2b2b38c067cd78d47",
+    "adaptenv/presets.yaml": "2931613f8e405b67030deb2e0942075b925fa68f9ac738f5638a1d43c5086866",
+    "adaptenv/trpb_profile_run178.json": "88a81792b4d481785d8f6b1301a09a1f8d01da91be2bed7f2fda4154a3ee3634",
+    "pyproject.toml": "3a9b51feb55004431bc277ab36d6edb602c17963044eb0d22a2c27215b3beeb8"
+  },
+  "environment": {
+    "python": "3.11.15 (main, Jun  2 2026, 22:36:57) [Clang 22.1.3 ]",
+    "executable": "/Users/matthewspence/Documents/Documents/project-adapt-env/.labproj/envs/trpb-py31115/bin/python",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "numpy": "2.4.4",
+    "pandas": "2.3.0",
+    "scipy": "1.17.1",
+    "pyyaml": "6.0.3"
+  },
+  "limitations": [
+    "No optimization, scientific control campaign or observed-map reconstruction was performed.",
+    "The packaged readouts are intrinsic; shared-stop calibration provenance does not enable observation noise.",
+    "Numeric agreement does not establish profile superiority, biological realism or ML performance.",
+    "A new prior-policy configuration field may change fingerprints even when the numerical map is unchanged."
+  ]
+}

@@ -1,0 +1,81 @@
+id: EXP-023
+type: experiment
+title: TEM-1 DCA-specific epistasis dense Hamming graph diagnostic
+slug: tem1-dca-specific-epistasis-hamming-graph-diagnostic
+status: planned
+created: '2026-05-15T12:29:00+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-022
+  motivating_results:
+  - RES-022
+question: Can DCA-prior, state-specific pairwise epistasis alone create local topological
+  ruggedness, sign epistasis, and constrained adaptive paths in a TEM-1 stability-margin
+  landscape when the old generic low-rank epistasis layer is disabled?
+pre_experiment_prediction: If smooth low-rank pairwise terms were the limiting architecture,
+  then sparse DCA-selected state-specific compensatory and incompatibility terms should
+  produce measurable reciprocal/sign epistasis, local optima, reduced random-walk
+  autocorrelation, and restricted monotonic paths on dense 2^k local Hamming graphs.
+rationale: RUN-059 showed that increasing generic epistasis magnitude can create pairwise
+  nonadditivity but leaves random walks highly autocorrelated and sign epistasis nearly
+  absent. This experiment isolates a more biologically specific architecture by routing
+  DCA-prior state-specific pair terms into latent stability and disabling the old
+  generic pairwise and higher-order epistasis layers.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - tem1_mmseqs_alignment.fasta
+  - alignment_profile_summary.json
+  - anchor_candidates.csv
+  - selected_dca_pairs.csv
+  - dca_pairwise_override.npz
+  - hamming_variables.csv
+  - hamming_nodes.csv
+  - hamming_pair_epistasis.csv
+  - hamming_walsh_terms.csv
+  - hamming_graph_metrics.json
+  - summary.json
+  - landscapy_hamming_landscape/manifest.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

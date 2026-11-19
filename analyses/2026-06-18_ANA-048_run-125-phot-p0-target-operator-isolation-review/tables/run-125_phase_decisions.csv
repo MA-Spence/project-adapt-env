@@ -1,0 +1,4 @@
+phase,decision,evidence
+P0.1,target is smooth/additive-like rather than high-order/rugged under this MAVE-NN latent operator,"cached and refit high-order means are effectively zero; local maxima are 1.0 for every cached/refit graphlet summary, while accessibility is refit-sensitive and ranges from 0.0 to 0.5417"
+P0.2,measurement operator is strongly non-identity and smoothing rather than spectrum-preserving,"known injected spectra recover high-order fraction <= 1.009e-14, magnitude ratio <= 4.004e-07, local maxima exactly 1.0, and local sign epistasis 0.0"
+P0.3,support-to-sampler position containment is not the limiting failure mode in this run,all 2048 generated order-3 supports are contained in at least one sampled graphlet; calibration containment is 0.9521 and test containment is 0.9292

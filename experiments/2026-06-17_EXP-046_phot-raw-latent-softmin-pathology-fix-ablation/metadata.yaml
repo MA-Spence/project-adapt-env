@@ -1,0 +1,88 @@
+id: EXP-046
+type: experiment
+title: PHOT raw-latent soft-min pathology fix ablation
+slug: phot-raw-latent-softmin-pathology-fix-ablation
+status: completed
+created: '2026-06-17T06:28:47+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-045
+  motivating_results:
+  - RES-044
+question: Do the three RES-044 path-forward fixes, phased in cumulatively, repair
+  PHOT raw-latent accessibility and scale pathologies while retaining the working
+  A/C/D observable calibration protocol?
+pre_experiment_prediction: If the dominant failure is latent geometry, adding a low-dimensional
+  soft-min latent should improve raw accessibility relative to EXP-045, raw-latent
+  constraints should prevent collapse or explosion, and making raw accessibility first-class
+  should isolate whether accessibility can be fitted without losing magnitude/ratio
+  calibration.
+rationale: RES-044 showed that A/C/D improved observable magnitude and ratio but left
+  raw accessibility roughly an order of magnitude too low, with the monotone readout
+  unable to repair topology. This experiment keeps the PHOT source graphlets, RUN-098
+  comparator, and recent deterministic numerical fast-fit protocol fixed while cumulatively
+  testing the three RES-044 path-forward points.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  - docs/RES-044_epistasis_calibration_followup.md
+  - src/project_adapt_env/coupled_landscape.py
+  - scripts/phot_trait_space_bounded_gate_fast_fit.py
+  datasets:
+  - RUN-077
+  - RUN-098
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - bounded_gate_candidates.csv
+  - selected_bounded_gate_candidates.csv
+  - bounded_gate_distances.csv
+  - bounded_gate_equivalence.csv
+  - graphlet_metrics.csv
+  - graphlet_summary.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - abc_comparator_selected_family_distances.csv
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

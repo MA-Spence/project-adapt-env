@@ -1,0 +1,36 @@
+run: RUN-136
+target: lab-slurm
+experiment: EXP-053
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-18_EXP-053_stage-4b-additive-core-gnk-generator-reachability
+  run_script: experiments/2026-06-18_EXP-053_stage-4b-additive-core-gnk-generator-reachability/run.sh
+inputs:
+  declared_files:
+  - scratch/science_plan_part1_ensemble_landscape_validation.md
+  - scripts/ensemble_landscape_validation_stage4.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/landscapy/README.md
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+outputs:
+  expected:
+  - generator_parameter_grid.csv
+  - generator_descriptor_metrics.csv
+  - generator_knob_monotonicity.csv
+  - core_texture_ablation_controls.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-136/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-136
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-136/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-136/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-136
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-136/project/experiments/2026-06-18_EXP-053_stage-4b-additive-core-gnk-generator-reachability/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-136/project/experiments/2026-06-18_EXP-053_stage-4b-additive-core-gnk-generator-reachability/runs/RUN-136.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

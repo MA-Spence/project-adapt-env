@@ -1,0 +1,12 @@
+check_id,family,required,recorded_pass,recomputed_strict_pass,recomputed_tolerance_1e-12_pass,strict_matches_recorded,sensitivity_note
+reference_split_disjoint,technical,True,True,True,True,True,
+calibration_scale_finite,technical,True,True,True,True,True,
+validation_execution_and_algebra,technical,True,True,True,True,True,
+core_operating_point_selected,calibration,True,True,True,True,True,
+global_core_calibration_heldout,confirmation_core,True,True,True,True,True,
+global_actual_core_gnk_transmission,transmission,True,False,False,False,True,
+global_actual_core_gnk_directionality,directionality,True,False,False,True,True,rho mathematically equal to 0.80 is stored as 0.7999999999999999 and fails a literal comparison
+global_actual_core_gnk_length_stability,length_stability,True,True,True,True,True,
+frozen_core_texture_positive_control,control,True,False,False,False,True,
+exact_per_landscape_beta_diagnostic,diagnostic,False,False,False,False,True,
+steepness_threshold_margin_ablation_reported,diagnostic,False,True,True,True,True,

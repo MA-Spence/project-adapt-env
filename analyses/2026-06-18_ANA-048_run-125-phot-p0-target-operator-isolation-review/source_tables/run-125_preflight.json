@@ -1,0 +1,23 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "experiment_id": "EXP-049",
+  "graphlet_dimensions": [
+    4,
+    5,
+    6
+  ],
+  "n_assay_rows": 167529,
+  "n_graphlets": 24,
+  "p0_1_refit_count": 10,
+  "p0_2_known_spectrum_profiles": [
+    "pure_order3",
+    "order2_order3_mixture",
+    "low_order_control"
+  ],
+  "p0_3_sparse_walsh_terms": 2048,
+  "quick": false,
+  "run_mode": "phot_miscalibration_p0_target_operator_isolation",
+  "scratch_source": "scratch/RES-047_miscalibration_root_cause_and_isolation_plan.md",
+  "source_output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-125/project/data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077",
+  "source_run_id": "RUN-077"
+}

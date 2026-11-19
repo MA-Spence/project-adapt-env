@@ -1,0 +1,46 @@
+id: RES-060
+title: RUN-153 validates global core calibration and edge transfer but fails GNK texture
+  prevalence
+status: completed
+created: '2026-07-23T14:13:39+10:00'
+owner: matthew-spence
+analyses:
+- ANA-060
+experiments:
+- EXP-062
+runs:
+- RUN-153
+supports: []
+weakens:
+- HYP-005
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-153 formally passed 6/9 required EXP-062 checks and issued CALIBRATED_SIGMOID_TRANSMISSION_FAILED.
+  The globally frozen mutation-unit calibration passed all 60 held-out core cells
+  and all 360 complete-h1 edge cells, and GNK-specific texture remained aligned and
+  dose-directional. However, only 24/360 actual-core cells and 0/360 frozen-core cells
+  met the preregistered texture practical-prevalence floor; exact per-landscape normalization
+  did not rescue it. The recorded directionality failure is a floating-point equality
+  artifact and becomes a pass under 1e-12 tolerance, changing the audit to 7/9 without
+  changing the overall decision. This weakens the full observable protein-scale form
+  of HYP-005 while preserving narrow calibration, edge, dose, and length-stability
+  evidence.
+artifacts: []
+evidence_paths:
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/metrics.json
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_ablation_by_length.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_acceptance_audit.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_collection_audit.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_core_calibration_by_length.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_directionality_by_length.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_dose_curve.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_heldout_core_by_length.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_protocol_output_audit.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_scale_law_summary.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_source_hash_audit.csv
+- analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_transmission_by_length.csv
+- data/processed/dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/RUN-153.dvc
+compliance:
+  level: green
+  issues: []

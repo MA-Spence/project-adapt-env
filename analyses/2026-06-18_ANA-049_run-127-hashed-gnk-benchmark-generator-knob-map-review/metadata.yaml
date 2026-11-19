@@ -1,0 +1,42 @@
+id: ANA-049
+title: RUN-127 hashed GNK benchmark generator knob-map review
+status: completed
+created: '2026-06-18T12:41:02+10:00'
+owner: matthew-spence
+experiments:
+- EXP-051
+runs:
+- RUN-127
+purpose: Collect and interpret RUN-127 hashed GNK forward-generator output tables,
+  testing whether retained core/readout guardrails and epistasis-weight knob maps
+  match the EXP-051 scratch-plan acceptance checks.
+path: analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-127
+  produced_artifacts:
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/metrics.json
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_core_readout_guardrail_summary.csv
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_core_readout_guardrail_summary.md
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_epi0_hamming_beneficial_summary.csv
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_epi0_hamming_beneficial_summary.md
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_epi_weight_metric_summary.csv
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_epi_weight_metric_summary.md
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_joint_regime_summary.csv
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_joint_regime_summary.md
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_monotonicity_summary.csv
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_monotonicity_summary.md
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_output_collection_audit.csv
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_output_collection_audit.md
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_support_mode_knob_summary.csv
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_support_mode_knob_summary.md
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_support_order_summary.csv
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_support_order_summary.md
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_threshold_epistasis_summary.csv
+  - analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_threshold_epistasis_summary.md
+compliance:
+  level: green
+  issues: []

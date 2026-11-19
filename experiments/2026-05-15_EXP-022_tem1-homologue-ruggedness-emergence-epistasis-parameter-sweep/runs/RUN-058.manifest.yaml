@@ -1,0 +1,39 @@
+run: RUN-058
+target: lab-slurm
+experiment: EXP-022
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep
+  run_script: experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/run.sh
+inputs:
+  declared_files:
+  - external/Adapt-Env
+  - scripts/tem1_homologue_walk_parameter_grid.py
+  - experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/config.yaml
+  datasets: []
+outputs:
+  expected:
+  - tem1_mmseqs_alignment.fasta
+  - alignment_profile_summary.json
+  - homologue_starts.csv
+  - background_neighborhoods.csv
+  - walk_trajectories.csv
+  - walk_summaries.csv
+  - walk_summaries.json
+  - epistasis_pairs.csv
+  - parameter_grid_summary.csv
+  - literature_baselines.json
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-058/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-058
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-058/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-058/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-058
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-058/project/experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-058/project/experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/runs/RUN-058.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

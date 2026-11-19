@@ -1,0 +1,92 @@
+id: EXP-025
+type: experiment
+title: TEM-1 aggregate graphlet residual ruggedness generalization diagnostic
+slug: tem1-aggregate-graphlet-residual-ruggedness-generalization
+status: planned
+created: '2026-05-15T15:50:17+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-024
+  motivating_results:
+  - RES-024
+question: Can sparse contact-conditioned residual fields calibrated only to aggregate
+  local graphlet distributions produce held-out TEM-1 dense-Hamming graphlets with
+  nontrivial SE/RSE, multiple local maxima, shorter random-walk autocorrelation, and
+  empirical-looking Walsh/GFT spectra across adaptive walks from very different starting
+  states, without per-graphlet hard certification or global peak conditioning?
+pre_experiment_prediction: A contact-conditioned residual ensemble calibrated on aggregate
+  graphlet statistics should improve held-out SE/RSE prevalence, local maxima counts,
+  accessibility reduction, random-walk autocorrelation, and Walsh/GFT spectral envelopes
+  relative to smooth-core and exact-match controls. If improvements appear only in
+  calibration graphlets or only in one adaptive-walk region, the procedural residual
+  design should be treated as overfit or region-specific rather than a scalable biological
+  ruggedness solution.
+rationale: 'RES-024 showed that DCA clique exact-match haplotype terms provide precise
+  high-order Walsh coefficient control but only weak topology: lower Walsh orders
+  remain dominant, RSE is weak, and local maxima remain few. The proposed alternative
+  is not to certify each local graphlet individually, but to sample sparse contact-conditioned
+  residual fields and accept parameter regimes by aggregate graphlet-distribution
+  targets, then test them on held-out dense Hamming graphlets sampled along several
+  adaptive walks from very different starting positions. This directly tests whether
+  the procedural residual architecture generalizes as a landscape-family mechanism
+  rather than overfitting selected graphlets.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 64
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - tem1_mmseqs_alignment.fasta
+  - adaptive_walk_starts.csv
+  - adaptive_walk_trajectories.csv
+  - graphlet_catalog.csv
+  - calibration_graphlet_metrics.csv
+  - test_graphlet_metrics.csv
+  - graphlet_walsh_terms.csv
+  - graphlet_gft_coefficients.csv
+  - graphlet_sign_epistasis_pairs.csv
+  - graphlet_accessibility.csv
+  - module_parameter_sweep.csv
+  - calibration_target_summary.json
+  - heldout_test_summary.json
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

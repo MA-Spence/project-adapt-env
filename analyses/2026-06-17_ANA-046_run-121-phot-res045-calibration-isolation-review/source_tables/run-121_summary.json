@@ -1,0 +1,84 @@
+{
+  "abc_comparator": {
+    "output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-121/project/data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098",
+    "run_id": "RUN-098"
+  },
+  "best_objective_distance": 0.4884293399828197,
+  "experiment_id": "EXP-047",
+  "fix_stage_summaries": [
+    {
+      "best_objective_distance": 2.9810046599486855,
+      "fast_fit_enabled": true,
+      "fix_stage": "A",
+      "fix_stage_index": 1,
+      "fixes_applied": "A",
+      "n_candidate_evaluations": 56,
+      "n_selected_candidates": 6
+    },
+    {
+      "best_objective_distance": 2.971922456049368,
+      "fast_fit_enabled": true,
+      "fix_stage": "A+F",
+      "fix_stage_index": 2,
+      "fixes_applied": "A+F",
+      "n_candidate_evaluations": 56,
+      "n_selected_candidates": 6
+    },
+    {
+      "best_objective_distance": NaN,
+      "fast_fit_enabled": false,
+      "fix_stage": "A+F+B",
+      "fix_stage_index": 3,
+      "fixes_applied": "A+F+B",
+      "n_candidate_evaluations": 0,
+      "n_selected_candidates": 0
+    },
+    {
+      "best_objective_distance": 0.8983191208113985,
+      "fast_fit_enabled": true,
+      "fix_stage": "A+F+B+C",
+      "fix_stage_index": 4,
+      "fixes_applied": "A+F+B+C",
+      "n_candidate_evaluations": 61,
+      "n_selected_candidates": 6
+    },
+    {
+      "best_objective_distance": 0.5170204955079808,
+      "fast_fit_enabled": true,
+      "fix_stage": "A+F+B+C+D",
+      "fix_stage_index": 5,
+      "fixes_applied": "A+F+B+C+D",
+      "n_candidate_evaluations": 69,
+      "n_selected_candidates": 6
+    },
+    {
+      "best_objective_distance": 0.4884293399828197,
+      "fast_fit_enabled": true,
+      "fix_stage": "A+F+B+C+D+E",
+      "fix_stage_index": 6,
+      "fixes_applied": "A+F+B+C+D+E",
+      "n_candidate_evaluations": 173,
+      "n_selected_candidates": 8
+    }
+  ],
+  "n_candidate_evaluations": 415,
+  "n_equivalence_rows": 32,
+  "n_graphlets": 24,
+  "n_operationally_equivalent": 0,
+  "n_selected_candidates": 32,
+  "n_softmin_capability_probe_rows": 48,
+  "output_files": {
+    "abc_comparator_selected_family_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/abc_comparator_selected_family_distances.csv",
+    "bounded_gate_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/bounded_gate_candidates.csv",
+    "bounded_gate_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/bounded_gate_distances.csv",
+    "bounded_gate_equivalence": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/bounded_gate_equivalence.csv",
+    "gft_coefficients": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/gft_coefficients.csv",
+    "graphlet_metrics": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/graphlet_metrics.csv",
+    "graphlet_summary": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/graphlet_summary.csv",
+    "preflight": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/preflight.json",
+    "selected_bounded_gate_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/selected_bounded_gate_candidates.csv",
+    "softmin_capability_probe": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/softmin_capability_probe.csv",
+    "walsh_terms": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-121/outputs/walsh_terms.csv"
+  },
+  "run_mode": "phot_res045_calibration_isolation_cumulative_ablation"
+}

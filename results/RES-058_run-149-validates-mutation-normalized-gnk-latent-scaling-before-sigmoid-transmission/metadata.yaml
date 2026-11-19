@@ -1,0 +1,36 @@
+id: RES-058
+title: RUN-149 validates mutation-normalized GNK latent scaling before sigmoid transmission
+status: completed
+created: '2026-07-23T02:33:00+10:00'
+owner: matthew-spence
+analyses:
+- ANA-058
+experiments:
+- EXP-060
+runs:
+- RUN-149
+supports:
+- HYP-005
+weakens: []
+refutes: []
+motivates: []
+supersedes: []
+summary: 'RUN-149 passes all 26 preregistered required latent gates: mutation-operator
+  normalization removes the protein-length-dependent GNK amplitude defect, and the
+  experiment-local extensive balanced bounded candidate preserves field and full-distance
+  scale laws over lengths 48-448. This supports HYP-005 only at the latent pre-sigmoid
+  boundary.'
+artifacts: []
+evidence_paths:
+- analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/metrics.json
+- analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_acceptance_audit.csv
+- analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_candidate_support_by_length_order.csv
+- analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_collection_audit.csv
+- analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_local_ratio_by_length.csv
+- analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_order_allocation_and_curvature.csv
+- analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_scale_law_summary.csv
+- analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_structural_audit.csv
+- data/processed/extensive-operator-normalized-gnk-latent-scale-law-validation/RUN-149.dvc
+compliance:
+  level: green
+  issues: []

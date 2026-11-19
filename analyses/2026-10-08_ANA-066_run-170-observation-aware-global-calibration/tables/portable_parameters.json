@@ -1,0 +1,336 @@
+[
+  {
+    "arm": "r4_linear",
+    "observation": "independent_difference",
+    "parameters": [
+      0.029016065704451057,
+      -4.814624588789608
+    ],
+    "offset": 0.029016065704451057,
+    "scale": 0.00811026619131728,
+    "position": null,
+    "steepness": null,
+    "occupancy": null,
+    "interaction_ratio": 4,
+    "objective": {
+      "quantile": 0.9981377023194257,
+      "mean_sd": 0.0037095892144835482,
+      "floor_cdf": 0.013876333832740784,
+      "total": 1.01572362536665
+    },
+    "evaluations": 448,
+    "optimizer_converged": true,
+    "optimizer_message": "Optimization terminated successfully.",
+    "bounds": [
+      [
+        -0.1,
+        0.1
+      ],
+      [
+        -6.907755278982137,
+        0.6931471805599453
+      ]
+    ],
+    "relative_boundary_distance": [
+      0.3549196714777447,
+      0.2753792331020953
+    ]
+  },
+  {
+    "arm": "r4_sigmoid",
+    "observation": "independent_difference",
+    "parameters": [
+      -0.0059659060633462935,
+      0.6846105975702699,
+      -5.043865959583775,
+      -1.1642062260634605
+    ],
+    "offset": -0.0059659060633462935,
+    "scale": 1.9829995003487304,
+    "position": -5.043865959583775,
+    "steepness": 0.3121703564056475,
+    "occupancy": 0.006407449221453726,
+    "interaction_ratio": 4,
+    "objective": {
+      "quantile": 0.03238094827962745,
+      "mean_sd": 0.014651173267255022,
+      "floor_cdf": 0.0005044937133789062,
+      "total": 0.04753661526026138
+    },
+    "evaluations": 1952,
+    "optimizer_converged": false,
+    "optimizer_message": "Maximum number of iterations has been exceeded.",
+    "bounds": [
+      [
+        -0.1,
+        0.1
+      ],
+      [
+        -6.907755278982137,
+        0.6931471805599453
+      ],
+      [
+        -14.0,
+        4.0
+      ],
+      [
+        -2.995732273553991,
+        2.0794415416798357
+      ]
+    ],
+    "relative_boundary_distance": [
+      0.47017046968326853,
+      0.0011231012416109468,
+      0.4975630022453458,
+      0.36087947214594995
+    ],
+    "thermodynamic_config": {
+      "length": 4,
+      "seed": 652401,
+      "reference_rank": 0.5,
+      "representation_rank": 8,
+      "order_weights": [
+        0.35,
+        0.45,
+        0.2
+      ],
+      "reference_occupancy": 0.006407449221453726,
+      "steepness": 0.3121703564056475,
+      "interaction_ratio": 4,
+      "fitness_min": -0.0059659060633462935,
+      "fitness_max": 1.977033594285384
+    }
+  },
+  {
+    "arm": "r0_sigmoid",
+    "observation": "independent_difference",
+    "parameters": [
+      -0.0030093234237188794,
+      0.6925855531141538,
+      -5.801588018310463,
+      0.18277018248755128
+    ],
+    "offset": -0.0030093234237188794,
+    "scale": 1.9988770604747625,
+    "position": -5.801588018310463,
+    "steepness": 1.2005384716093843,
+    "occupancy": 0.003013641262050977,
+    "interaction_ratio": 0,
+    "objective": {
+      "quantile": 0.06983401026018153,
+      "mean_sd": 0.026709676291124085,
+      "floor_cdf": 2.504885196685791e-05,
+      "total": 0.09656873540327247
+    },
+    "evaluations": 1952,
+    "optimizer_converged": false,
+    "optimizer_message": "Maximum number of iterations has been exceeded.",
+    "bounds": [
+      [
+        -0.1,
+        0.1
+      ],
+      [
+        -6.907755278982137,
+        0.6931471805599453
+      ],
+      [
+        -14.0,
+        4.0
+      ],
+      [
+        -2.995732273553991,
+        2.0794415416798357
+      ]
+    ],
+    "relative_boundary_distance": [
+      0.48495338288140566,
+      7.388957413687212e-05,
+      0.4554673323160854,
+      0.3737155471403101
+    ],
+    "thermodynamic_config": {
+      "length": 4,
+      "seed": 652401,
+      "reference_rank": 0.5,
+      "representation_rank": 8,
+      "order_weights": [
+        0.35,
+        0.45,
+        0.2
+      ],
+      "reference_occupancy": 0.003013641262050977,
+      "steepness": 1.2005384716093843,
+      "interaction_ratio": 0,
+      "fitness_min": -0.0030093234237188794,
+      "fitness_max": 1.9958677370510436
+    }
+  },
+  {
+    "arm": "r4_linear",
+    "observation": "shared_stop_sensitivity",
+    "parameters": [
+      0.02677758256363747,
+      -5.212939560926836
+    ],
+    "offset": 0.02677758256363747,
+    "scale": 0.00544564233918016,
+    "position": null,
+    "steepness": null,
+    "occupancy": null,
+    "interaction_ratio": 4,
+    "objective": {
+      "quantile": 0.47605862817807865,
+      "mean_sd": 0.005997049514313003,
+      "floor_cdf": 0.005030050873756409,
+      "total": 0.48708572856614807
+    },
+    "evaluations": 640,
+    "optimizer_converged": true,
+    "optimizer_message": "Optimization terminated successfully.",
+    "bounds": [
+      [
+        -0.1,
+        0.1
+      ],
+      [
+        -6.907755278982137,
+        0.6931471805599453
+      ]
+    ],
+    "relative_boundary_distance": [
+      0.3661120871818127,
+      0.22297559100073036
+    ]
+  },
+  {
+    "arm": "r4_sigmoid",
+    "observation": "shared_stop_sensitivity",
+    "parameters": [
+      0.010853068548991596,
+      -0.5105854550915567,
+      -7.474921124678879,
+      -0.32569820785824816
+    ],
+    "offset": 0.010853068548991596,
+    "scale": 0.6001441185103434,
+    "position": -7.474921124678879,
+    "steepness": 0.7220230554389311,
+    "occupancy": 0.0005668090437788478,
+    "interaction_ratio": 4,
+    "objective": {
+      "quantile": 0.007647517070947056,
+      "mean_sd": 0.0002953941625701452,
+      "floor_cdf": 2.2664666175842285e-05,
+      "total": 0.007965575899693043
+    },
+    "evaluations": 1952,
+    "optimizer_converged": false,
+    "optimizer_message": "Maximum number of iterations has been exceeded.",
+    "bounds": [
+      [
+        -0.1,
+        0.1
+      ],
+      [
+        -6.907755278982137,
+        0.6931471805599453
+      ],
+      [
+        -14.0,
+        4.0
+      ],
+      [
+        -2.995732273553991,
+        2.0794415416798357
+      ]
+    ],
+    "relative_boundary_distance": [
+      0.445734657255042,
+      0.15836706786578356,
+      0.3625043819622845,
+      0.4739029316234901
+    ],
+    "thermodynamic_config": {
+      "length": 4,
+      "seed": 652401,
+      "reference_rank": 0.5,
+      "representation_rank": 8,
+      "order_weights": [
+        0.35,
+        0.45,
+        0.2
+      ],
+      "reference_occupancy": 0.0005668090437788478,
+      "steepness": 0.7220230554389311,
+      "interaction_ratio": 4,
+      "fitness_min": 0.010853068548991596,
+      "fitness_max": 0.610997187059335
+    }
+  },
+  {
+    "arm": "r0_sigmoid",
+    "observation": "shared_stop_sensitivity",
+    "parameters": [
+      0.009113408652869404,
+      0.6928840126091247,
+      -7.374403065964675,
+      0.45540710251884886
+    ],
+    "offset": 0.009113408652869404,
+    "scale": 1.999473733349654,
+    "position": -7.374403065964675,
+    "steepness": 1.5768151778176396,
+    "occupancy": 0.0006267079155153764,
+    "interaction_ratio": 0,
+    "objective": {
+      "quantile": 0.010522236954012786,
+      "mean_sd": 0.005358585132328557,
+      "floor_cdf": 7.301568984985352e-07,
+      "total": 0.01588155224323984
+    },
+    "evaluations": 1952,
+    "optimizer_converged": false,
+    "optimizer_message": "Maximum number of iterations has been exceeded.",
+    "bounds": [
+      [
+        -0.1,
+        0.1
+      ],
+      [
+        -6.907755278982137,
+        0.6931471805599453
+      ],
+      [
+        -14.0,
+        4.0
+      ],
+      [
+        -2.995732273553991,
+        2.0794415416798357
+      ]
+    ],
+    "relative_boundary_distance": [
+      0.454432956735653,
+      3.4623250623380864e-05,
+      0.36808871855751807,
+      0.3199958264062259
+    ],
+    "thermodynamic_config": {
+      "length": 4,
+      "seed": 652401,
+      "reference_rank": 0.5,
+      "representation_rank": 8,
+      "order_weights": [
+        0.35,
+        0.45,
+        0.2
+      ],
+      "reference_occupancy": 0.0006267079155153764,
+      "steepness": 1.5768151778176396,
+      "interaction_ratio": 0,
+      "fitness_min": 0.009113408652869404,
+      "fitness_max": 2.0085871420025234
+    }
+  }
+]

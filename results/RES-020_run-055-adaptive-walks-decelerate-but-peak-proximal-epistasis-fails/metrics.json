@@ -1,0 +1,71 @@
+{
+  "run_id": "RUN-055",
+  "experiment_id": "EXP-020",
+  "hypothesis_id": "HYP-004",
+  "sample_sizes": {
+    "backgrounds": 120,
+    "walk_summaries": 240,
+    "walk_trajectory_rows": 3029,
+    "sampled_epistasis_pairs": 30720
+  },
+  "validation": {
+    "pass_count": 2,
+    "test_count": 7,
+    "all_pass": false,
+    "tests": {
+      "adaptive_total_gain_declines_with_start_fitness": {
+        "pass": false,
+        "spearman_start_fraction_of_peak": -0.25415747894782525,
+        "low_start_mean": 1199.5500668789045,
+        "high_start_mean": 1416.2574781152387
+      },
+      "adaptive_walks_decelerate": {
+        "pass": true,
+        "median_greedy_deceleration_ratio": 0.42059386018345996,
+        "expected_max": 0.75
+      },
+      "beneficial_fraction_declines_near_peak": {
+        "pass": true,
+        "spearman_fraction_of_peak": -0.2747692105054616,
+        "low_fraction_mean": 0.06591739766081871,
+        "high_fraction_mean": 0.055244883040935666
+      },
+      "mean_abs_epistasis_increases_near_peak": {
+        "pass": false,
+        "spearman_fraction_of_peak": 0.15097360037377325,
+        "low_fraction_mean": 0.03475955184970249,
+        "high_fraction_mean": 0.037919913973968614
+      },
+      "mean_beneficial_effect_declines_near_peak": {
+        "pass": false,
+        "spearman_fraction_of_peak": 0.05800156263564544,
+        "low_fraction_mean": 37.43867999256247,
+        "high_fraction_mean": 69.12281701638683
+      },
+      "negative_epistasis_increases_near_peak": {
+        "pass": false,
+        "spearman_fraction_of_peak": -0.6608994230442673,
+        "low_fraction_mean": 0.01416015625,
+        "high_fraction_mean": 0.00087890625
+      },
+      "sign_epistasis_increases_near_peak": {
+        "pass": false,
+        "spearman_fraction_of_peak": null,
+        "low_fraction_mean": 0.0,
+        "high_fraction_mean": 0.0
+      }
+    }
+  },
+  "condition_notes": {
+    "synthetic_alignment_near_peak_mean_fraction_of_peak": 1.748,
+    "synthetic_alignment_peak_axis_confounded": true
+  },
+  "interpretation": {
+    "supports_hypotheses": [],
+    "weakens_hypotheses": [
+      "HYP-004"
+    ],
+    "narrow_adaptive_walk_component_supported": true,
+    "peak_proximal_epistasis_component_supported": false
+  }
+}

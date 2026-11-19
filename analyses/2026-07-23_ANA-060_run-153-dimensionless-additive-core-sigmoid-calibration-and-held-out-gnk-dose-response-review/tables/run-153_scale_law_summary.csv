@@ -1,0 +1,3 @@
+fit_id,metric,n_proteins,n_length_bins,slope,intercept,slope_ci_low,slope_ci_high,bootstrap_replicates_realized,recomputed_pass,recorded_slope,slope_matches
+combined_global_actual_tau_a1,protein_median_direct_tau_y_rms,12,6,-0.10220742086428523,-0.35705495756212313,-0.11388430152289476,-0.09011563353457504,5000,True,-0.1022074208642852,True
+exact_per_landscape_beta_actual_tau_a1,protein_median_direct_tau_y_rms,12,6,-0.113582768368266,-0.3082726004915758,-0.1253135568539385,-0.10254901347524413,5000,True,-0.1135827683682659,True

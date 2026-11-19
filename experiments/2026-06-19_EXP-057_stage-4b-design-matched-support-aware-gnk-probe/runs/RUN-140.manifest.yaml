@@ -1,0 +1,44 @@
+run: RUN-140
+target: lab-slurm
+experiment: EXP-057
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe
+  run_script: experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/run.sh
+inputs:
+  declared_files:
+  - scratch/RES-054_assessment_and_path_to_finishing_component1.md
+  - scripts/design_matched_support_aware_probe_exp057.py
+  - scripts/ensemble_landscape_validation_stage4.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/landscapy/README.md
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+outputs:
+  expected:
+  - preflight.json
+  - empirical_design_templates.csv
+  - empirical_template_descriptor_metrics.csv
+  - generator_parameter_grid.csv
+  - support_catalog.csv
+  - support_aware_graphlet_audit.csv
+  - anchor_regime_audit.csv
+  - generator_descriptor_metrics.csv
+  - generator_knob_monotonicity.csv
+  - core_texture_ablation_controls.csv
+  - core_gnk_separation_gates.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-140/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-140
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-140/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-140/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-140
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-140/project/experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-140/project/experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/runs/RUN-140.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

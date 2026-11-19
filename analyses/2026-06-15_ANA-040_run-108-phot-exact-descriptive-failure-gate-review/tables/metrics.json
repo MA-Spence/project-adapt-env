@@ -1,0 +1,185 @@
+{
+  "all_candidate_distance_rows": [
+    {
+      "candidate_model": "run039_smc_abc_best_stability_margin",
+      "max_abs_scaled_error": 2.336933616001472,
+      "mean_abs_scaled_error": 0.5307236488143667,
+      "median_abs_scaled_error": 3.474973489362239e-11,
+      "n_components": 19,
+      "n_components_ge_2sd": 4,
+      "score_column": "latent_phi",
+      "top_failed_metrics": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction;accessible_path_fraction"
+    },
+    {
+      "candidate_model": "run039_smc_abc_posterior_mean_stability_margin",
+      "max_abs_scaled_error": 2.3666903864952498,
+      "mean_abs_scaled_error": 0.5394405908113568,
+      "median_abs_scaled_error": 3.474973489362239e-11,
+      "n_components": 19,
+      "n_components_ge_2sd": 4,
+      "score_column": "latent_phi",
+      "top_failed_metrics": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction;accessible_path_fraction"
+    },
+    {
+      "candidate_model": "run039_predictive_richpair_shared_stability_readout",
+      "max_abs_scaled_error": 2.4096578492705443,
+      "mean_abs_scaled_error": 0.5507421891211933,
+      "median_abs_scaled_error": 3.474973489362239e-11,
+      "n_components": 19,
+      "n_components_ge_2sd": 4,
+      "score_column": "latent_phi",
+      "top_failed_metrics": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction;accessible_path_fraction"
+    },
+    {
+      "candidate_model": "run039_baseline_shared_stability_readout",
+      "max_abs_scaled_error": 2.4096578492705443,
+      "mean_abs_scaled_error": 0.5507421891211933,
+      "median_abs_scaled_error": 3.474973489362239e-11,
+      "n_components": 19,
+      "n_components_ge_2sd": 4,
+      "score_column": "latent_phi",
+      "top_failed_metrics": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction;accessible_path_fraction"
+    }
+  ],
+  "analysis_id": "ANA-040",
+  "best_candidate_by_mean_abs_scaled_error": {
+    "candidate_model": "run039_smc_abc_best_stability_margin",
+    "max_abs_scaled_error": 2.336933616001472,
+    "mean_abs_scaled_error": 0.5307236488143667,
+    "median_abs_scaled_error": 3.474973489362239e-11,
+    "n_components": 19,
+    "n_components_ge_2sd": 4,
+    "score_column": "latent_phi",
+    "top_failed_metrics": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction;accessible_path_fraction"
+  },
+  "copied_source_table_bytes": {
+    "run-108_abc_descriptive_gate.csv": 1404,
+    "run-108_exact_model_distances.csv": 1189,
+    "run-108_exact_model_failures.csv": 13401,
+    "run-108_graphlet_catalog.csv": 4210,
+    "run-108_summary.json": 6565
+  },
+  "descriptive_gate_rows": [
+    {
+      "abc_allowed_by_descriptive_gate": true,
+      "candidate_model": "run039_baseline_shared_stability_readout",
+      "n_failed_summary_components": 4,
+      "recommended_abc_summary_columns": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction",
+      "severe_abs_scaled_error_threshold": 2.0,
+      "top_failure_signed_scaled_errors": "edge_energy_top10_fraction:2.41;edge_energy_effective_fraction:-2.31;site_energy_effective_fraction:-2.31;site_energy_top1_fraction:2.26"
+    },
+    {
+      "abc_allowed_by_descriptive_gate": true,
+      "candidate_model": "run039_predictive_richpair_shared_stability_readout",
+      "n_failed_summary_components": 4,
+      "recommended_abc_summary_columns": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction",
+      "severe_abs_scaled_error_threshold": 2.0,
+      "top_failure_signed_scaled_errors": "edge_energy_top10_fraction:2.41;edge_energy_effective_fraction:-2.31;site_energy_effective_fraction:-2.31;site_energy_top1_fraction:2.26"
+    },
+    {
+      "abc_allowed_by_descriptive_gate": true,
+      "candidate_model": "run039_smc_abc_best_stability_margin",
+      "n_failed_summary_components": 4,
+      "recommended_abc_summary_columns": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction",
+      "severe_abs_scaled_error_threshold": 2.0,
+      "top_failure_signed_scaled_errors": "edge_energy_top10_fraction:2.34;edge_energy_effective_fraction:-2.19;site_energy_effective_fraction:-2.19;site_energy_top1_fraction:2.18"
+    },
+    {
+      "abc_allowed_by_descriptive_gate": true,
+      "candidate_model": "run039_smc_abc_posterior_mean_stability_margin",
+      "n_failed_summary_components": 4,
+      "recommended_abc_summary_columns": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction",
+      "severe_abs_scaled_error_threshold": 2.0,
+      "top_failure_signed_scaled_errors": "edge_energy_top10_fraction:2.37;edge_energy_effective_fraction:-2.24;site_energy_effective_fraction:-2.24;site_energy_top1_fraction:2.21"
+    }
+  ],
+  "experiment_id": "EXP-041",
+  "failed_components_union": [
+    "edge_energy_effective_fraction",
+    "edge_energy_top10_fraction",
+    "site_energy_effective_fraction",
+    "site_energy_top1_fraction"
+  ],
+  "graphlet_dimensions_observed": [
+    4,
+    5,
+    6
+  ],
+  "n_complete_graphlets": 48,
+  "n_mutation_sets": 167530,
+  "n_prepared_rows": 167529,
+  "run_id": "RUN-108",
+  "source_output_policy": "selective small-table copy only; full labproj collect was not run",
+  "top_component_failures": [
+    {
+      "max_abs_scaled_error": 2.4096578492705443,
+      "mean_abs_scaled_error": 2.3807349252594525,
+      "mean_signed_scaled_error": 2.3807349252594525,
+      "metric": "edge_energy_top10_fraction",
+      "n_candidates": 4
+    },
+    {
+      "max_abs_scaled_error": 2.3069125486325284,
+      "mean_abs_scaled_error": 2.262204484927543,
+      "mean_signed_scaled_error": -2.262204484927543,
+      "metric": "edge_energy_effective_fraction",
+      "n_candidates": 4
+    },
+    {
+      "max_abs_scaled_error": 2.3069125486300845,
+      "mean_abs_scaled_error": 2.262204484925424,
+      "mean_signed_scaled_error": -2.262204484925424,
+      "metric": "site_energy_effective_fraction",
+      "n_candidates": 4
+    },
+    {
+      "max_abs_scaled_error": 2.2573874780957235,
+      "mean_abs_scaled_error": 2.226955871087272,
+      "mean_signed_scaled_error": 2.226955871087272,
+      "metric": "site_energy_top1_fraction",
+      "n_candidates": 4
+    },
+    {
+      "max_abs_scaled_error": 1.1832159566199232,
+      "mean_abs_scaled_error": 1.1832159566199232,
+      "mean_signed_scaled_error": -1.1832159566199232,
+      "metric": "accessible_path_fraction",
+      "n_candidates": 4
+    },
+    {
+      "max_abs_scaled_error": 1.4469545217143116e-05,
+      "mean_abs_scaled_error": 1.4469545126491124e-05,
+      "mean_signed_scaled_error": -1.4469545126491124e-05,
+      "metric": "node_incident_top10_fraction",
+      "n_candidates": 4
+    },
+    {
+      "max_abs_scaled_error": 5.09219350224398e-07,
+      "mean_abs_scaled_error": 5.092193502243978e-07,
+      "mean_signed_scaled_error": -5.092193502243978e-07,
+      "metric": "gft_mid_energy_fraction",
+      "n_candidates": 4
+    },
+    {
+      "max_abs_scaled_error": 1.612523731776173e-07,
+      "mean_abs_scaled_error": 1.612523731776172e-07,
+      "mean_signed_scaled_error": -1.612523731776172e-07,
+      "metric": "walsh_high_order_fraction",
+      "n_candidates": 4
+    },
+    {
+      "max_abs_scaled_error": 7.1981842420264e-08,
+      "mean_abs_scaled_error": 7.198184242026392e-08,
+      "mean_signed_scaled_error": -7.198184242026392e-08,
+      "metric": "gft_high_energy_fraction",
+      "n_candidates": 4
+    },
+    {
+      "max_abs_scaled_error": 3.474973489362239e-11,
+      "mean_abs_scaled_error": 3.474973489362239e-11,
+      "mean_signed_scaled_error": -3.474973489362239e-11,
+      "metric": "edge_energy_adjacent_moran_i",
+      "n_candidates": 4
+    }
+  ]
+}

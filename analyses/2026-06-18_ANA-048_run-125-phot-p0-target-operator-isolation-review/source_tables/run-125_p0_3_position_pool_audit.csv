@@ -1,0 +1,2 @@
+phase,assay_id,n_dense_graphlets,n_graphlet_positions,n_generator_clusters,n_generator_cluster_positions,n_shared_positions,generator_cluster_position_fraction_in_graphlet_pool,graphlet_position_fraction_in_generator_cluster_pool
+P0.3,PHOT_CHLRE_Chen_2023,24,13,28,13,13,1.0,1.0

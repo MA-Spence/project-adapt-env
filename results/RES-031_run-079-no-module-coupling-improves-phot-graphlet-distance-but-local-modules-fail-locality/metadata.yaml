@@ -1,0 +1,51 @@
+id: RES-031
+title: RUN-079 no-module coupling improves PHOT graphlet distance but local modules
+  fail the locality test
+status: completed
+created: '2026-05-16T21:44:52+10:00'
+owner: Codex
+analyses:
+- ANA-031
+experiments:
+- EXP-031
+runs:
+- RUN-079
+supports: []
+weakens:
+- HYP-008
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-079 is a valid deterministic PHOT-only frozen-base grid test of HYP-008.
+  It shows that a correlated nonlinear no-module operator can improve held-out PHOT
+  graphlet distance over the frozen current model while preserving base correlation,
+  but the local empirical plaquette-module coupled candidates do not beat no-module,
+  random, shuffled, or uncoupled controls under calibration-selected held-out evaluation.
+  Module-energy diagnostics show diffuse rather than concentrated innovation. The
+  result weakens the current local-module coupled-landscape mechanism while leaving
+  broader nonlinear trait-operator ideas unvalidated rather than refuted.
+artifacts:
+- results/RES-031_run-079-no-module-coupling-improves-phot-graphlet-distance-but-local-modules-fail-locality/metrics.json
+evidence_paths:
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/metrics.json
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_base_correlation_heldout.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_calibration_selected_by_module_source.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_calibration_selected_distances.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_empirical_target_graphlet_metrics.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_hyp008_decision_table.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_module_catalog.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_module_energy_locality_heldout.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_preflight_and_output_audit.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_relevant_test_graphlet_summaries.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_static_control_distances.md
+- analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_test_oracle_distances_capacity_only.md
+- results/RES-031_run-079-no-module-coupling-improves-phot-graphlet-distance-but-local-modules-fail-locality/metrics.json
+- data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079.dvc
+- data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079/summary.json
+- data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079/model_distances.csv
+- data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079/graphlet_summary.csv
+- data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079/module_energy_summary.csv
+- data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079/base_correlation.csv
+compliance:
+  level: green
+  issues: []

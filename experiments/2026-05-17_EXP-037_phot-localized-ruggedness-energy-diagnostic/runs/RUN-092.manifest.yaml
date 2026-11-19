@@ -1,0 +1,44 @@
+run: RUN-092
+target: lab-slurm
+experiment: EXP-037
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-17_EXP-037_phot-localized-ruggedness-energy-diagnostic
+  run_script: experiments/2026-05-17_EXP-037_phot-localized-ruggedness-energy-diagnostic/run.sh
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/phot-coupled-family-discriminating-abc/RUN-091.dvc
+  - scripts/phot_localized_ruggedness_energy_diagnostic.py
+  - scripts/phot_coupled_family_discriminating_abc.py
+  - scripts/phot_coupled_landscape_grid_search.py
+  - src/project_adapt_env/coupled_landscape.py
+  datasets:
+  - RUN-077 PHOT system-specific current-model refit outputs
+  - RUN-091 PHOT coupled-family discriminating ABC fitted parameter/output tables
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - localized_ruggedness_graphlet_metrics.csv
+  - edge_dirichlet_energy_rows.csv
+  - module_enrichment_by_graphlet.csv
+  - model_localization_summary.csv
+  - module_enrichment_summary.csv
+  - selected_vs_empirical_localization_delta.csv
+  - localization_metric_ranks.csv
+  - run091_selected_family_distances.csv
+  - run091_reused_parameter_sets.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-092/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-092
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-092/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-092/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-092
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-092/project/experiments/2026-05-17_EXP-037_phot-localized-ruggedness-energy-diagnostic/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-092/project/experiments/2026-05-17_EXP-037_phot-localized-ruggedness-energy-diagnostic/runs/RUN-092.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

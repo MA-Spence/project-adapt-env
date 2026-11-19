@@ -1,0 +1,39 @@
+run: RUN-057
+target: lab-slurm
+experiment: EXP-021
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-15_EXP-021_tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic
+  run_script: experiments/2026-05-15_EXP-021_tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/run.sh
+inputs:
+  declared_files:
+  - external/Adapt-Env
+  - scripts/tem1_homologue_walk_parameter_grid.py
+  - experiments/2026-05-15_EXP-021_tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/config.yaml
+  datasets: []
+outputs:
+  expected:
+  - tem1_mmseqs_alignment.fasta
+  - alignment_profile_summary.json
+  - homologue_starts.csv
+  - background_neighborhoods.csv
+  - walk_trajectories.csv
+  - walk_summaries.csv
+  - walk_summaries.json
+  - epistasis_pairs.csv
+  - parameter_grid_summary.csv
+  - literature_baselines.json
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-057/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-057
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-057/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-057/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-057
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-057/project/experiments/2026-05-15_EXP-021_tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-057/project/experiments/2026-05-15_EXP-021_tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/runs/RUN-057.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

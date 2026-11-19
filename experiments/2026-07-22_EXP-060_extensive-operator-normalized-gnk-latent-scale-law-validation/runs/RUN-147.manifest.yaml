@@ -1,0 +1,48 @@
+run: RUN-147
+target: lab-slurm
+experiment: EXP-060
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-07-22_EXP-060_extensive-operator-normalized-gnk-latent-scale-law-validation
+  run_script: experiments/2026-07-22_EXP-060_extensive-operator-normalized-gnk-latent-scale-law-validation/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - results/RES-049_run-127-hashed-gnk-knobs-validate-forward-ruggedness-accessibility-map/result.md
+  - results/RES-055_run-141-fixed-support-aware-probe-fails-core-gnk-validation-gates/result.md
+  - results/RES-057_run-142-readout-coupling-calibration-no-joint-core-gnk-region/result.md
+  - claims/CLAIM-003_structured-high-order-residual-capacity-improves-phot-benchmarks.md
+  - src/project_adapt_env/extensive_gnk.py
+  - scripts/extensive_gnk_latent_scaling_exp060.py
+  - tests/test_extensive_gnk.py
+  - tests/test_extensive_gnk_latent_scaling_exp060.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+outputs:
+  expected:
+  - preflight.json
+  - reference_catalog.csv
+  - pairing_audit.csv
+  - support_audit.csv
+  - contrast_audit.csv
+  - latent_scale_metrics.csv
+  - order_component_metrics.csv
+  - scale_law_fits.csv
+  - acceptance_checks.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-147/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-147
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-147/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-147/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-147
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-147/project/experiments/2026-07-22_EXP-060_extensive-operator-normalized-gnk-latent-scale-law-validation/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-147/project/experiments/2026-07-22_EXP-060_extensive-operator-normalized-gnk-latent-scale-law-validation/runs/RUN-147.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

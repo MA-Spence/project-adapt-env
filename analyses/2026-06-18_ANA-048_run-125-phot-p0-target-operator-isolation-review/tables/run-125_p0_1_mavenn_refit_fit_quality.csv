@@ -1,0 +1,3 @@
+inference_profile,n_refits,test_spearman_min,test_spearman_median,test_spearman_max,test_nrmse_min,test_nrmse_median,test_nrmse_max,any_quick_surrogate
+additive_high_regularization,5,0.6801516463466616,0.6890185483581766,0.6930189664881218,0.8208852083466415,0.9051378702019196,1.0863554500787544,False
+additive_low_regularization,5,0.6774072249672116,0.6857045376890537,0.6882938728757708,0.863426575121992,0.8924470176674334,1.0930343422445434,False

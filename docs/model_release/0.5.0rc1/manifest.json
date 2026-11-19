@@ -1,0 +1,197 @@
+{
+  "version": "0.5.0rc1",
+  "status": "unpublished_release_candidate",
+  "model_family": "thermodynamic_gnk_v2",
+  "default_additive_prior": "profile",
+  "default_requires_supplied_profile": true,
+  "synthetic_control_requires_explicit_selection": true,
+  "evidence": [
+    "EXP-065",
+    "RUN-178",
+    "RUN-175",
+    "ANA-070"
+  ],
+  "no_release_tag_deployment_or_publication": true,
+  "files": {
+    "docs/model_release/0.5.0rc1/decision.md": {
+      "sha256": "a9ba7eb69f54379db1a3fb7a3a89dd8c2a800624e0f35008150472489b7f688b",
+      "bytes": 4002
+    },
+    "docs/model_release/0.5.0rc1/lock.py": {
+      "sha256": "93c612dddb9e81d2f9d20b9f0944ec5e1a4484cd867e75bb9127b9ef90af35c6",
+      "bytes": 2516
+    },
+    "docs/model_release/0.5.0rc1/replay.json": {
+      "sha256": "941b45cc72ee640117dc5b3392c98b8678424cea911c710f6c2a645425182b3b",
+      "bytes": 3963
+    },
+    "docs/model_release/0.5.0rc1/replay.py": {
+      "sha256": "e6e9c2f5ea1051a8b63cc456bd958293aa282ea22cc4b6b4bf6eb2a6121cfc6e",
+      "bytes": 10584
+    },
+    "docs/model_release/0.5.0rc1/verification.json": {
+      "sha256": "6b14bd4965f5d96ba39d61890031a9ce2d8242bdd80cd6758600d74fdac45386",
+      "bytes": 1387
+    },
+    "external/Adapt-Env/LICENSE": {
+      "sha256": "368d5efcb6a3d42c444d813bd6e00fa5fb6464cea120a345f862deb41c3c2648",
+      "bytes": 1066
+    },
+    "external/Adapt-Env/README.md": {
+      "sha256": "cc3bc5a18ddfc4fabba259461c49e587d8e5909d5041becf186777ef65357828",
+      "bytes": 5338
+    },
+    "external/Adapt-Env/adaptenv/__init__.py": {
+      "sha256": "a996b5d2c7ffb5ca4eb74ad40fecadb23a880ac77ef1d5eb41c2e790582aff2f",
+      "bytes": 932
+    },
+    "external/Adapt-Env/adaptenv/alignment.py": {
+      "sha256": "77faa24306a570a39061b1a03704605b95ec52e463771fea10ecf2d7baf205d7",
+      "bytes": 24214
+    },
+    "external/Adapt-Env/adaptenv/amino_acids.py": {
+      "sha256": "0a0714f05e35fc3e665e33f0f5d50de054d6813e29c12dba6ad20ca33aefc7b9",
+      "bytes": 4407
+    },
+    "external/Adapt-Env/adaptenv/api.py": {
+      "sha256": "bbb80f25bc4f778d69edcade7f378c0043e462cc1de59189443f34d81dec0c1b",
+      "bytes": 2766
+    },
+    "external/Adapt-Env/adaptenv/extensive_gnk.py": {
+      "sha256": "56f65392b9e2134171b5fd7758a4276c4195c3b4bd77f625f2552047449ccf8c",
+      "bytes": 26681
+    },
+    "external/Adapt-Env/adaptenv/landscape.py": {
+      "sha256": "a301be0203cbb29037d39990718d097ceeab7cbff37911f9bc9921b624d8cc91",
+      "bytes": 505
+    },
+    "external/Adapt-Env/adaptenv/mmseqs.py": {
+      "sha256": "6d392fa836bc5614498f5a50e737fc9bac750f847fe4ffdd99eff1c66701d76a",
+      "bytes": 8515
+    },
+    "external/Adapt-Env/adaptenv/presets.py": {
+      "sha256": "d1e28a3a0eab313bd54772e149acf9ceee8630a7b485833ac0c62c23ae6ce323",
+      "bytes": 4734
+    },
+    "external/Adapt-Env/adaptenv/presets.yaml": {
+      "sha256": "2931613f8e405b67030deb2e0942075b925fa68f9ac738f5638a1d43c5086866",
+      "bytes": 5380
+    },
+    "external/Adapt-Env/adaptenv/ranked_categorical_gnk.py": {
+      "sha256": "d7eb55231ae87e130dd8c8e015b4b7fc3b872e25668b0b529d65718a3136021f",
+      "bytes": 32197
+    },
+    "external/Adapt-Env/adaptenv/service.py": {
+      "sha256": "3cf1468d49efcb89bdfac0fe0d7c73b64034b608b35eb010ae83f336d662f225",
+      "bytes": 6503
+    },
+    "external/Adapt-Env/adaptenv/thermodynamic.py": {
+      "sha256": "08645b27a28b69c8d7f631dae84cb65facc01ed686a596d2b2b38c067cd78d47",
+      "bytes": 18398
+    },
+    "external/Adapt-Env/adaptenv/trpb_profile_run178.json": {
+      "sha256": "88a81792b4d481785d8f6b1301a09a1f8d01da91be2bed7f2fda4154a3ee3634",
+      "bytes": 2644
+    },
+    "external/Adapt-Env/docs/API_AND_SERVICE.md": {
+      "sha256": "ca59a2cd241fc364fb697b3ec25f3290e94056f3cb65ef72bce01f705025c148",
+      "bytes": 15396
+    },
+    "external/Adapt-Env/docs/BIOLOGICAL_MODEL.md": {
+      "sha256": "bd30c2a1d9e5e62c77757e484924cccde7879f713dc604d58b37bc00f9dc0b47",
+      "bytes": 232
+    },
+    "external/Adapt-Env/docs/CONFIGURATION_AND_PRESETS.md": {
+      "sha256": "3ba3a60b8b2778f84b854978aa30d059461287a765ba1e54e020b1ae4f795153",
+      "bytes": 5321
+    },
+    "external/Adapt-Env/docs/EMPIRICAL_CALIBRATION.md": {
+      "sha256": "474fca69124107c9ed5c7da807dd27b2f77f029157c822c7f2ed81323db68714",
+      "bytes": 227
+    },
+    "external/Adapt-Env/docs/EXPERIMENTS_AND_VALIDATION.md": {
+      "sha256": "fc19f100e0026b5d61da5a74af80ce1d88bd642df274502e37b195ed8ee47941",
+      "bytes": 215
+    },
+    "external/Adapt-Env/docs/FUTURE_ADDITIONS.md": {
+      "sha256": "481453431a64822ed6b56d955f55e726c3d64fa85771e7f672ed4851852cf65b",
+      "bytes": 212
+    },
+    "external/Adapt-Env/docs/MIGRATION_0_3.md": {
+      "sha256": "aefa114f7324694d9495fbba68476154d850c2183600b1c883509791790f37f7",
+      "bytes": 197
+    },
+    "external/Adapt-Env/docs/MIGRATION_0_4.md": {
+      "sha256": "ee56d17a2bc88c63c5c72a13aecae4159091d55c7467df96ddc938e93f3a652a",
+      "bytes": 2511
+    },
+    "external/Adapt-Env/docs/MIGRATION_0_5.md": {
+      "sha256": "5e388ce9f516214f9b3a5f1cd9bd67791d78cb0d4eee843d32bfdd04665be26b",
+      "bytes": 4812
+    },
+    "external/Adapt-Env/docs/README.md": {
+      "sha256": "580d1f4c4ace33161c4ddca874dcd4b9affc72acb9ca0e009ab7f10b758bd752",
+      "bytes": 492
+    },
+    "external/Adapt-Env/docs/REFERENCES.md": {
+      "sha256": "950a675e2d1b06200d1464d3000b333edc5d08ccdf9f94b646af13bdd920d2d0",
+      "bytes": 1560
+    },
+    "external/Adapt-Env/docs/TECHNICAL_ARCHITECTURE.md": {
+      "sha256": "39bffa6dde4c89d237f222f09da1864bab295dff5620ae6490cfcd13193f048a",
+      "bytes": 239
+    },
+    "external/Adapt-Env/docs/THEORETICAL_FOUNDATIONS.md": {
+      "sha256": "8a35423682c8fa2cf84263286076ac10f29d1d5c2939842bec5db9d87cf7e9ba",
+      "bytes": 230
+    },
+    "external/Adapt-Env/docs/THERMODYNAMIC_V2.md": {
+      "sha256": "b14f8a3dbfacf2252ded31edcc3868436ee4568cff595dfdcfe859e168d053f9",
+      "bytes": 10873
+    },
+    "external/Adapt-Env/docs/TRPB_EVIDENCE.md": {
+      "sha256": "7255692c240630084149a7215d7c08cbe7b83ee07f68e85e3112f0cf94acf05e",
+      "bytes": 9639
+    },
+    "external/Adapt-Env/docs/adapt-env/MANIFOLD_RULE.md": {
+      "sha256": "9502b1423fa706e23efe43f1f1cf1a5a215c9e979ec19ce79bb17b12b4b12d28",
+      "bytes": 475
+    },
+    "external/Adapt-Env/docs/adapt-env/SKILL.md": {
+      "sha256": "31be2c940908896df157526fb32f614b984fb62c83790c9f93a6fb92e2b8b5a7",
+      "bytes": 2378
+    },
+    "external/Adapt-Env/pyproject.toml": {
+      "sha256": "3a9b51feb55004431bc277ab36d6edb602c17963044eb0d22a2c27215b3beeb8",
+      "bytes": 1165
+    },
+    "external/Adapt-Env/tests/test_alignment_profile.py": {
+      "sha256": "87210639b3f909578ee416c78e0adafb946b8df57960733c7fde3defffd0abf6",
+      "bytes": 2698
+    },
+    "external/Adapt-Env/tests/test_amino_acids.py": {
+      "sha256": "7ecbc6010934f126f983134cc004e7ac560d82d6476bceac91f8ee99e3f032ea",
+      "bytes": 1539
+    },
+    "external/Adapt-Env/tests/test_mmseqs_client.py": {
+      "sha256": "f0b853b8facab889ae305cb9006c67cd91df664d28706e8c687c95bc06345b1b",
+      "bytes": 5556
+    },
+    "external/Adapt-Env/tests/test_profile_additive_prior.py": {
+      "sha256": "af214d03eb45c7a0297d922e07eb6d11ee159244914188655e081bb36ebd106b",
+      "bytes": 11038
+    },
+    "external/Adapt-Env/tests/test_profile_default.py": {
+      "sha256": "35fbe477622748a8d32965aa00639d9dfef05898c0a0a3cd67f3b95cd14bcb9a",
+      "bytes": 12687
+    },
+    "external/Adapt-Env/tests/test_public_thermodynamic.py": {
+      "sha256": "d3570a56ef77593a0a7abc89233710f5c1b679f0fe268047ca328ade9f0860ce",
+      "bytes": 6581
+    },
+    "src/project_adapt_env/__init__.py": {
+      "sha256": "4a5139f809294b88a22d068db34782cc70b922edc42ff7039f71c1c20318e4df",
+      "bytes": 896
+    }
+  }
+}

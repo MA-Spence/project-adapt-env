@@ -1,0 +1,53 @@
+id: RES-022
+title: RUN-059 strong TEM-1 epistasis sweep creates pairwise epistasis but leaves
+  random walks smooth
+status: completed
+created: '2026-05-15T11:09:24+10:00'
+owner: matthew-spence
+analyses:
+- ANA-022
+experiments:
+- EXP-022
+runs:
+- RUN-059
+supports:
+- HYP-005
+weakens:
+- HYP-004
+refutes: []
+motivates: []
+supersedes: []
+summary: 'RUN-059 passes 10/13 validation checks: stronger TEM-1 epistasis regimes
+  increase sampled pairwise epistasis magnitude, variance, and nonzero fraction, while
+  the consensus-distance adaptive-walk pattern from RUN-057 persists. However, random-step
+  variance and lag-1 autocorrelation do not respond directionally to the ruggedness
+  score, lag-1 autocorrelation remains near 0.9993 across regimes, and sign epistasis
+  remains nearly absent even in the strongest settings. The result supports HYP-005
+  only for the direct epistasis-knob subcomponent and weakens the richer HYP-004 rugged-landscape
+  interpretation.'
+artifacts:
+- results/RES-022_run-059-strong-tem1-epistasis-sweep-creates-pairwise-epistasis-but-leaves-random-walks-smooth/metrics.json
+evidence_paths:
+- analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_background_summary_by_start_stratum.md
+- analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_key_metrics.md
+- analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_parameter_grid_summary.md
+- analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_ruggedness_regime_deltas.md
+- analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_selected_regimes_by_start_stratum.md
+- analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_validation_tests.md
+- analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_walk_summary_by_mode_and_stratum.md
+- results/RES-022_run-059-strong-tem1-epistasis-sweep-creates-pairwise-epistasis-but-leaves-random-walks-smooth/metrics.json
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059/summary.json
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059/literature_baselines.json
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059/alignment_profile_summary.json
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059/homologue_starts.csv
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059/background_neighborhoods.csv
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059/walk_summaries.csv
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059/walk_trajectories.csv
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059/epistasis_pairs.csv
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059/parameter_grid_summary.csv
+- data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059.dvc
+- experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/config.yaml
+- experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/runs/RUN-059.yaml
+compliance:
+  level: green
+  issues: []

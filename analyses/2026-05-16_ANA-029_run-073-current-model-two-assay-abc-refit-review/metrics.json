@@ -1,0 +1,29 @@
+{
+  "run_id": "RUN-073",
+  "experiment_id": "EXP-029",
+  "preflight_legacy_parameter_guard": "passed",
+  "observed_fitness_combine_mode": "stability_margin",
+  "generic_epistasis_target": "stability",
+  "assay_count": 2,
+  "assay_ids": [
+    "PHOT_CHLRE_Chen_2023",
+    "SPTN1_CHICK_Tsuboyama_2023_1TUD"
+  ],
+  "smc_particle_count": 64,
+  "smc_round_count": 4,
+  "smc_best_distance_final": 10.82281727929542,
+  "smc_best_distance_over_rounds_min": 10.702752871112029,
+  "smc_round0_best_distance": 10.797453676938828,
+  "smc_final_round_best_distance": 10.82281727929542,
+  "best_functional_ks": 0.1861829268724526,
+  "best_single_holdout_spearman": 0.4766723852382178,
+  "best_double_holdout_spearman": 0.7691026827012025,
+  "best_epistasis_prediction_spearman": 0.1680715604830118,
+  "best_epistasis_prediction_ks": 0.5101547388781431,
+  "best_reference_fraction_of_peak": 0.7665415659877091,
+  "best_reference_distance_to_peak": 49.5,
+  "truth_recovery_parameters_in_q90": 20,
+  "truth_recovery_parameters_tested": 20,
+  "truth_recovery_rows": 2,
+  "graphlet_or_wht_outputs_present": false
+}

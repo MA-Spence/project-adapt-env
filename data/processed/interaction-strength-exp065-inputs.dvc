@@ -1,0 +1,6 @@
+outs:
+- md5: 19a7fd4e78acd13a649e37d78616a7d4.dir
+  size: 17609756
+  nfiles: 25
+  hash: md5
+  path: interaction-strength-exp065-inputs

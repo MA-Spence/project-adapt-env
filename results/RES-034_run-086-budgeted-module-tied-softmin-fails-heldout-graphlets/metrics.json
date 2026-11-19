@@ -1,0 +1,31 @@
+{
+  "result_id": "RES-034",
+  "analysis_id": "ANA-034",
+  "experiment_id": "EXP-034",
+  "run_id": "RUN-086",
+  "decision": {
+    "supports": [],
+    "weakens": [
+      "HYP-008"
+    ],
+    "refutes": []
+  },
+  "primary_evidence": {
+    "calibration_distance_abc_best": 0.7239882986895994,
+    "calibration_distance_fitted_current": 0.7318355865425226,
+    "calibration_distance_smooth_core": 0.7453779779327878,
+    "test_distance_abc_best": 0.4060351813345315,
+    "test_distance_fitted_current": 0.40157082034740577,
+    "test_distance_smooth_core": 0.4119039864538632,
+    "test_distance_shuffled_module": 0.4028967849374474,
+    "test_distance_best_posterior_particle": 0.4032680183173202,
+    "abc_best_values_to_base_correlation": 1.0,
+    "abc_best_innovation_var_ratio_to_base": 1.4047063099059999e-25,
+    "abc_best_edge_innovation_ratio_to_empirical_residual": 5.976081489057901e-22,
+    "abc_best_plaquette_innovation_ratio_to_empirical_residual": 1.153470175546921e-21,
+    "best_control_assay_objective": 0.46310686111398375,
+    "best_budgeted_assay_objective": 0.5349685252542562,
+    "abc_best_assay_objective": 0.5559642761180215
+  },
+  "summary": "Budgeted module-tied soft-min ABC slightly improves calibration graphlet distance but does not beat fitted current on held-out graphlets, does not validate empirical module locality, and collapses to near-zero innovation."
+}

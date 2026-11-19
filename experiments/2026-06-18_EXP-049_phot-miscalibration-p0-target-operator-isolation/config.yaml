@@ -1,0 +1,211 @@
+experiment_id: EXP-049
+title: PHOT miscalibration P0 target-operator isolation
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-049
+  status: planned
+  runner_status: ready_for_submission
+  mode: phot_miscalibration_p0_target_operator_isolation
+  planned_runner: scripts/phot_miscalibration_p0_isolation.py
+  scientific_boundary:
+    primary_hypotheses:
+      - HYP-004
+      - HYP-009
+    motivating_results:
+      - RES-047
+    previous_experiments:
+      - EXP-048
+    advisory_source: scratch/RES-047_miscalibration_root_cause_and_isolation_plan.md
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    p0_scope: P0.1 target bootstrap/refit stability, P0.2 synthetic round-trip measurement-operator calibration, and P0.3 support-to-sampler containment audit
+    no_generator_repair_rule: do not fit or promote a new generator in this experiment; this run only tests target commensurability and sampler support visibility
+    common_footing_rule: use the same dense_descriptive complete-graphlet operator for cached target, MAVE-NN refits, synthetic injected landscapes, recovered latent_phi, and support-containment reporting
+
+source_run:
+  run_id: RUN-077
+  result_id: RES-030
+  output_dir: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  dvc_pointer: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: frozen_current_phot_prepared_assay_and_cached_mavenn_latent_phi
+
+previous_generator_context:
+  experiment_id: EXP-048
+  run_id: RUN-123
+  result_id: RES-047
+  role: source of sparse-Walsh support-selection settings audited by P0.3
+
+mavenn:
+  alphabet: protein
+  regression_type: GE
+  gpmap_type: additive
+  ge_nonlinearity_type: nonlinear
+  ge_nonlinearity_monotonic: true
+  ge_noise_model_type: SkewedT
+  ge_heteroskedasticity_order: 2
+  theta_regularization: 0.0001
+  eta_regularization: 0.0001
+  max_mutation_count: 3
+  max_variants_per_assay: 12000
+  sample_seed: 17
+  test_holdout_modulo: 10
+  test_holdout_remainder: 0
+  report_information_metrics: false
+  validation_fraction: 0.1
+  epochs: 60
+  learning_rate: 0.005
+  early_stopping_patience: 8
+  batch_size: 256
+
+phot_graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 8
+  top_feature_pool: 42
+  max_combinations_per_dimension: null
+
+p0_1:
+  description: Bootstrap every target summary over graphlets and refit MAVE-NN latent_phi with at least five seeds and at least two regularisation profiles.
+  bootstrap_iterations: 1000
+  bootstrap_seed: 20260618
+  target_metrics:
+    - walsh_high_order_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+  replicate_columns: []
+  mavenn_refits:
+    quick_surrogate_without_mavenn: true
+    seeds:
+      - 101
+      - 102
+      - 103
+      - 104
+      - 105
+    profiles:
+      - name: additive_low_regularization
+        gpmap_type: additive
+        ge_nonlinearity_type: nonlinear
+        theta_regularization: 0.0001
+        eta_regularization: 0.0001
+      - name: additive_high_regularization
+        gpmap_type: additive
+        ge_nonlinearity_type: nonlinear
+        theta_regularization: 0.01
+        eta_regularization: 0.001
+
+p0_2:
+  description: Generate assay-scale landscapes with known injected order spectra, fit MAVE-NN latent_phi, select dense complete graphlets, and compare recovered against injected summaries.
+  quick_surrogate_without_mavenn: true
+  mavenn_seed: 20260618
+  mavenn_overrides:
+    sample_seed: 20260618
+  known_spectrum_profiles:
+    - name: pure_order3
+      seed: 3103
+      additive_weight: 0.10
+      n_terms: 64
+      order_weights:
+        3: 1.0
+    - name: order2_order3_mixture
+      seed: 3203
+      additive_weight: 0.20
+      n_terms: 64
+      order_weights:
+        2: 0.35
+        3: 0.65
+    - name: low_order_control
+      seed: 3202
+      additive_weight: 0.40
+      n_terms: 48
+      order_weights:
+        2: 1.0
+
+p0_3:
+  description: Audit whether generated sparse-Walsh order-k supports are fully contained in sampled dense_descriptive graphlets.
+  module_catalog_path: analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_module_catalog.csv
+
+bounded_trait_space_fast_fit:
+  sparse_walsh_field:
+    enabled: true
+    seed: 20260617
+    terms: 2048
+    min_order: 2
+    max_order: 5
+    epi_weight: 0.025
+    support_source: empirical_calibration_plaquette
+    include_graphlet_feature_clusters: true
+    support_graphlet_splits:
+      - calibration
+      - test
+    order_weights:
+      - 0.0
+      - 1.0
+      - 0.0
+      - 0.0
+
+outputs:
+  output_dir_name: phot-miscalibration-p0-target-operator-isolation
+  expected:
+    - preflight.json
+    - graphlet_catalog.csv
+    - p0_1_target_graphlet_metrics.csv
+    - p0_1_target_bootstrap.csv
+    - p0_1_mavenn_refit_metrics.csv
+    - p0_1_replicate_audit.csv
+    - p0_2_injected_terms.csv
+    - p0_2_roundtrip_graphlet_metrics.csv
+    - p0_2_roundtrip_transfer.csv
+    - p0_2_mavenn_metrics.csv
+    - p0_3_position_pool_audit.csv
+    - p0_3_support_terms.csv
+    - p0_3_support_containment_summary.csv
+    - summary.json
+
+quick:
+  mavenn:
+    epochs: 2
+    batch_size: 128
+    max_variants_per_assay: 1024
+    force_quick_surrogate: true
+  phot_graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 1
+    top_feature_pool: 12
+  p0_1:
+    bootstrap_iterations: 20
+    mavenn_refits:
+      quick_surrogate_without_mavenn: true
+      seeds:
+        - 101
+      profiles:
+        - name: additive_low_regularization
+          gpmap_type: additive
+          ge_nonlinearity_type: nonlinear
+          theta_regularization: 0.0001
+          eta_regularization: 0.0001
+        - name: additive_high_regularization
+          gpmap_type: additive
+          ge_nonlinearity_type: nonlinear
+          theta_regularization: 0.01
+          eta_regularization: 0.001
+  p0_2:
+    quick_surrogate_without_mavenn: true
+    known_spectrum_profiles:
+      - name: pure_order3
+        seed: 3103
+        additive_weight: 0.10
+        n_terms: 8
+        order_weights:
+          3: 1.0
+  bounded_trait_space_fast_fit:
+    sparse_walsh_field:
+      terms: 12

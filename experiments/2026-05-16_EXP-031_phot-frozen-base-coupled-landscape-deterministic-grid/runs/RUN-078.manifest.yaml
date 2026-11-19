@@ -1,0 +1,46 @@
+run: RUN-078
+target: lab-slurm
+experiment: EXP-031
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-16_EXP-031_phot-frozen-base-coupled-landscape-deterministic-grid
+  run_script: experiments/2026-05-16_EXP-031_phot-frozen-base-coupled-landscape-deterministic-grid/run.sh
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077/summary.json
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077/systems/PHOT_CHLRE_Chen_2023/fit/summary.json
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077/systems/PHOT_CHLRE_Chen_2023/fit/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/prepared_assay.csv
+  datasets:
+  - RUN-077 PHOT current-model fit and prepared assay outputs
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - graphlet_catalog.csv
+  - module_catalog.csv
+  - parameter_grid.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - graphlet_summary.csv
+  - module_energy_rows.csv
+  - module_energy_by_graphlet.csv
+  - module_energy_summary.csv
+  - base_correlation.csv
+  - empirical_readout_fit.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-078/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-078
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-078/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-078/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-078
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-078/project/experiments/2026-05-16_EXP-031_phot-frozen-base-coupled-landscape-deterministic-grid/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-078/project/experiments/2026-05-16_EXP-031_phot-frozen-base-coupled-landscape-deterministic-grid/runs/RUN-078.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

@@ -1,0 +1,6 @@
+| predictor                                          |   sign_epistasis_fraction |   reciprocal_sign_epistasis_fraction |   n_local_maxima |   walsh_high_order_fraction |   random_walk_lag1_autocorrelation |
+|:---------------------------------------------------|--------------------------:|-------------------------------------:|-----------------:|----------------------------:|-----------------------------------:|
+| residual_scale_multiplier                          |                 0.418486  |                            0.423137  |        0.442542  |                    0.610484 |                          -0.614049 |
+| available_mean_beneficial_effect                   |                 0.0398911 |                            0.0237017 |        0.0689367 |                    0.276338 |                          -0.159067 |
+| residual_to_available_mean_beneficial_effect_ratio |                 0.493084  |                            0.483207  |        0.503943  |                    0.6403   |                          -0.685276 |
+| residual_high_order_to_base_order1_variance_ratio  |                 0.75534   |                            0.517013  |        0.531636  |                    0.998429 |                          -0.620095 |

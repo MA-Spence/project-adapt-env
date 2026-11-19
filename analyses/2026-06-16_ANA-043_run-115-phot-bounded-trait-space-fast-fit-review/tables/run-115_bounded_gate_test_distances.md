@@ -1,0 +1,16 @@
+# RUN-115 Bounded Candidate Test Distances
+
+| fit_method               | parameter_set_id                                          |   distance_to_empirical_primary |   guardrail_penalty |   n_guardrail_violations |   guardrail_violations |   worst_guardrail_fractional_margin |
+|:-------------------------|:----------------------------------------------------------|--------------------------------:|--------------------:|-------------------------:|-----------------------:|------------------------------------:|
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__4177169950 |                        0.426882 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__2679312734 |                        0.458809 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__1728420717 |                        0.460139 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__2222181564 |                        0.460143 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__4160204212 |                        0.460187 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__3681230024 |                        0.462198 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__0434075681 |                        0.474393 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__0358596434 |                        0.531923 |                   0 |                        0 |                    nan |                                   0 |
+| random_prior             | bounded_trait_space__random_prior__3397378336             |                        0.533371 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__3125652698 |                        0.535022 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__1383364779 |                        0.535182 |                   0 |                        0 |                    nan |                                   0 |
+| local_refinement_round_1 | bounded_trait_space__local_refinement_round_1__2420872418 |                        0.536996 |                   0 |                        0 |                    nan |                                   0 |

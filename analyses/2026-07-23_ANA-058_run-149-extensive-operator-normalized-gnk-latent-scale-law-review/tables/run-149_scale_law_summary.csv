@@ -1,0 +1,13 @@
+arm,bootstrap_ci_high,bootstrap_ci_low,bootstrap_replicates,distance_label,fit_id,intercept,metric,n_lengths,n_seeds,r2,regime,slope
+legacy_public_global_fixed,-0.4822529716496049,-0.5352047961096114,10000,fixed_1,legacy_public_global_fixed_local,0.9365596664498214,gnk_delta_rms,6,30,0.9997055628815756,uniform_background,-0.5103641362590605
+legacy_support_local_normalized,0.0189131897831548,-0.0342903701594894,10000,fixed_1,legacy_support_local_normalized_local,0.5485051649941414,gnk_delta_rms,6,30,0.3248363764336744,uniform_background,-0.0131449738800002
+extensive_balanced_bounded,0.0064527005608902,-0.0124041823575019,10000,fixed_1,extensive_balanced_bounded_local,0.5244709881896554,gnk_delta_rms,6,30,0.3281740115735182,uniform_background,-0.0063160261991293
+extensive_balanced_bounded,1.0070035259915495,0.9889143068379008,10000,fixed_1,candidate_field_variance,-0.7103952862221632,expected_field_variance,6,30,0.9999455751748768,uniform_background,0.9950763277055016
+extensive_balanced_bounded,1.0089673718579804,0.9750345326833054,10000,fixed_1,candidate_empirical_field_variance,-0.6957022944057512,source_field_variance,6,30,0.9998090266108328,uniform_background,0.9903987612088088
+extensive_balanced_bounded,0.013728799244237,-0.0122894101683519,10000,fixed_2,candidate_reference_shell_delta_fixed_2,0.823234830199551,gnk_delta_rms,6,30,0.0348266225206074,reference_shell,0.0019644854564756
+extensive_balanced_bounded,0.025928106706428,-0.0090929589276047,10000,fixed_4,candidate_reference_shell_delta_fixed_4,1.154011569082851,gnk_delta_rms,6,30,0.0819458148387508,reference_shell,0.0040630614760103
+extensive_balanced_bounded,0.0575455214509239,0.0193170143267493,10000,fixed_8,candidate_reference_shell_delta_fixed_8,1.2638036666396957,gnk_delta_rms,6,30,0.7920463687164243,reference_shell,0.0459727933312433
+extensive_balanced_bounded,0.0028203990592773,-0.0145062825061968,10000,fraction_0.1,candidate_ratio_fraction_0.1,-0.0146298605262487,gnk_to_additive_rms_ratio,6,30,0.357512909867705,uniform_background,-0.0052553931290397
+extensive_balanced_bounded,0.4983550134057942,0.4523146403634769,10000,fraction_0.1,candidate_reference_shell_delta_fraction_0.1,-0.6260711421490012,gnk_delta_rms,6,30,0.999677425954315,reference_shell,0.4819628512455381
+extensive_balanced_bounded,0.0052629829540182,-0.0193133122818127,10000,fraction_0.5,candidate_ratio_fraction_0.5,-0.2175331261658597,gnk_to_additive_rms_ratio,6,30,0.3920610949414477,uniform_background,-0.0069161156044587
+extensive_balanced_bounded,0.4943900093828294,0.3839794400149955,10000,fraction_0.5,candidate_reference_shell_delta_fraction_0.5,0.1580823424372335,gnk_delta_rms,6,30,0.983882441596844,reference_shell,0.4303381144146845

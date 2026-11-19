@@ -1,0 +1,33 @@
+{
+  "abc_comparator": {
+    "output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-110/project/data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098",
+    "run_id": "RUN-098"
+  },
+  "experiment_id": "EXP-042",
+  "n_candidate_evaluations": 730,
+  "n_equivalence_rows": 40,
+  "n_graphlets": 24,
+  "n_operationally_equivalent": 18,
+  "n_selected_candidates": 20,
+  "output_files": {
+    "abc_comparator_selected_family_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/abc_comparator_selected_family_distances.csv",
+    "fit_protocol_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/fit_protocol_candidates.csv",
+    "fit_protocol_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/fit_protocol_distances.csv",
+    "fit_protocol_equivalence": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/fit_protocol_equivalence.csv",
+    "full_abc_comparator_selected_particles": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/full_abc_comparator_selected_particles.csv",
+    "gft_coefficients": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/gft_coefficients.csv",
+    "graphlet_metrics": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/graphlet_metrics.csv",
+    "graphlet_summary": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/graphlet_summary.csv",
+    "module_energy_summary": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/module_energy_summary.csv",
+    "preflight": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/preflight.json",
+    "selected_fit_protocol_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/selected_fit_protocol_candidates.csv",
+    "walsh_terms": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs/walsh_terms.csv"
+  },
+  "protocols": [
+    "deterministic_summary_loss",
+    "exact_descriptive_gated",
+    "local_abc_after_cheap_fit",
+    "surrogate_assisted"
+  ],
+  "run_mode": "phot_nested_min_fit_protocol_equivalence_benchmark"
+}

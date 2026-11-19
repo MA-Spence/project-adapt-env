@@ -1,0 +1,67 @@
+experiment_id: EXP-037
+title: PHOT localized ruggedness energy diagnostic
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-037
+  status: planned
+  planned_runner: scripts/phot_localized_ruggedness_energy_diagnostic.py
+  scientific_boundary:
+    primary_hypothesis: HYP-008
+    motivating_results:
+      - RES-030
+      - RES-036
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    reuse_rule: reuse RUN-091 ABC fitted parameter sets; do not refit ABC
+    diagnostic_rule: measure localization of Dirichlet energy, not only graphlet-distance fit
+    support_rule: empirical-module localization must exceed fitted-current, smooth-core, no-module, random/shuffled-module, and uncoupled-module controls
+
+source_abc_run:
+  run_id: RUN-091
+  experiment_id: EXP-036
+  result_id: RES-036
+  output_dir: data/processed/phot-coupled-family-discriminating-abc/RUN-091
+  dvc_pointer: data/processed/phot-coupled-family-discriminating-abc/RUN-091.dvc
+  config_path: experiments/2026-05-17_EXP-036_phot-coupled-family-discriminating-abc/config.yaml
+  use_policy: fitted_abc_parameter_reuse_only
+
+diagnostic:
+  abc_families:
+    - no_module
+    - empirical_module
+    - random_module
+    - shuffled_module
+    - uncoupled_module
+  selected_only: false
+  primary_comparison_policy: calibration-selected RUN-091 candidates plus static controls
+  retained_distribution_policy: retain all RUN-091 posterior predictive candidates to show fitted-particle spread
+  quick_max_graphlets: 4
+  quick_max_parameters_per_family: 2
+  metrics:
+    - adjacent-edge Pearson autocorrelation of edge Dirichlet energy
+    - adjacent-edge Moran I of edge Dirichlet energy
+    - edge, node-incident, site, and plaquette energy concentration
+    - empirical/random/shuffled/uncoupled module energy enrichment
+    - selected-model deltas against empirical PHOT localization
+
+outputs:
+  output_dir_name: phot-localized-ruggedness-energy-diagnostic
+  expected_files:
+    - summary.json
+    - preflight.json
+    - localized_ruggedness_graphlet_metrics.csv
+    - edge_dirichlet_energy_rows.csv
+    - module_enrichment_by_graphlet.csv
+    - model_localization_summary.csv
+    - module_enrichment_summary.csv
+    - selected_vs_empirical_localization_delta.csv
+    - localization_metric_ranks.csv
+    - run091_selected_family_distances.csv
+    - run091_reused_parameter_sets.csv
+
+quick:
+  diagnostic:
+    selected_only: true
+    quick_max_graphlets: 2
+    quick_max_parameters_per_family: 1

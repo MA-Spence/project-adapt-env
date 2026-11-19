@@ -1,0 +1,9 @@
+metric,within_band_rate,n_rows
+accessible_path_fraction_dp,0.75,3240
+reciprocal_sign_epistasis_fraction_local,0.640741,3240
+magnitude_epistasis_to_single_mutant_sd_ratio,0.477778,3240
+walsh_high_order_fraction,0.408642,3240
+n_local_maxima,0.307407,3240
+sign_epistasis_fraction,0.285802,3240
+random_walk_lag1_autocorrelation,0.205185,2700
+fitness_sd,0.130556,3240

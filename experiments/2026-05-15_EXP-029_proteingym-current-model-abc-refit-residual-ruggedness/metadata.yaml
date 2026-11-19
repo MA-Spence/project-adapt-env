@@ -1,0 +1,129 @@
+id: EXP-029
+type: experiment
+title: ProteinGym empirical refit with current residual-ruggedness model
+slug: proteingym-current-model-abc-refit-residual-ruggedness
+status: planned
+created: '2026-05-15T22:42:09+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-005
+  - EXP-006
+  - EXP-007
+  - EXP-008
+  - EXP-010
+  - EXP-012
+  - EXP-025
+  - EXP-026
+  - EXP-027
+  - EXP-028
+  motivating_results:
+  - RES-005
+  - RES-006
+  - RES-007
+  - RES-025
+  - RES-026
+  - RES-027
+  - RES-028
+question: Do current-model ABC refits of the relevant ProteinGym assays remove the
+  stale-cache confound exposed by RUN-071 and yield empirical graphlet and spectral
+  targets that can be fairly compared to the new residual-ruggedness model?
+pre_experiment_prediction: If RUN-071's mismatch is partly a stale empirical-target
+  artifact, then refitting PHOT, SPTN1, KRAS and matched stability/activity controls
+  under the current smooth-core plus fixed-scale residual model should change empirical
+  latent targets and graphlet spectra enough that model-vs-empirical distances improve
+  relative to RES-028 while retaining held-out predictive checks. If mismatch persists
+  after refit, it is evidence against the current model rather than against old cached
+  preprocessing.
+rationale: RES-028 deliberately used cached prepared ProteinGym outputs from older
+  calibration and latent-trait definitions, which makes it a valid falsification of
+  comparisons to those cached targets but not a definitive test of the current model
+  after the residual-scale and epistasis semantics were revised. This experiment rebuilds
+  the empirical targets and ABC posteriors under the current model before using any
+  parameterized empirical information.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - experiments/2026-05-15_EXP-029_proteingym-current-model-abc-refit-residual-ruggedness/config.yaml
+  - results/RES-005_run-019-bayesian-smc-abc-recovers-nonzero-epistasis-but-still-weakens-hyp-001/result.md
+  - results/RES-006_run-022-single-assay-bayesian-smc-abc-improves-on-the-shared-fit-but-still-weakens-hyp-001/result.md
+  - results/RES-007_run-024-stability-targeted-single-assay-calibration-materially-improves-sptn1-recovery/result.md
+  - results/RES-025_run-065-aggregate-residuals-create-local-topology-but-fail-broad-procedural-generalization/result.md
+  - results/RES-026_run-067-relative-scale-residual-exposure-adds-diagnostics-but-not-fixed-scale-peak-proximal-serse/result.md
+  - results/RES-027_run-069-fixed-residual-scale-sweep-validates-scale-knob-but-not-peak-stage-unmasking/result.md
+  - results/RES-028_run-071-empirical-controls-falsify-strong-residual-ruggedness-benchmark-adequacy/result.md
+  datasets:
+  - id: proteingym_v1_3_raw_substitutions
+    role: primary_empirical_refit_source
+    paths:
+    - data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+    - data/raw/proteingym/v1.3/DMS_substitutions.parquet
+    note: Raw ProteinGym data must be used for current-model ABC refits.
+  - id: run071_cached_empirical_graphlets
+    role: stale_cache_replay_control
+    paths:
+    - data/processed/empirical-graphlet-falsification-residual-ruggedness/RUN-071
+    note: Comparison-only control; not valid as a current-model empirical parameter
+      source.
+  - id: prior_prepared_assay_caches
+    role: stale_cache_replay_control
+    paths:
+    - data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024
+    - data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026
+    - data/processed/proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic/RUN-028
+    note: May be replayed only to quantify stale-cache differences from the current
+      refit.
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 64
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - current_model_preflight.json
+  - synthetic_truth_recovery.csv
+  - empirical_refit_summary.json
+  - assay_refit_metrics.csv
+  - selected_panel.csv
+  - mavenn_assay_metrics.csv
+  - target_features.csv
+  - posterior_particles.csv
+  - posterior_rounds.csv
+  - posterior_parameter_summary.csv
+  - branch_validations.csv
+  - progress.json
+  - progress.log
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

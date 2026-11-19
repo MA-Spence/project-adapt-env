@@ -1,0 +1,36 @@
+{
+  "analysis_id": "ANA-032",
+  "decision": {
+    "assay_fit_improves_over_controls": true,
+    "heldout_graphlet_distance_beats_fitted_current": false,
+    "heldout_graphlet_distance_beats_smooth_core": false,
+    "locality_empirical_like": false,
+    "main_interpretation": "hard-min candidates improve PHOT assay objective but do not improve held-out graphlet package over the fitted current model and do not validate empirical-like local non-diffuse ruggedness",
+    "supports_hyp008": false,
+    "weakens_hyp008": true
+  },
+  "experiment_id": "EXP-032",
+  "key_metrics": {
+    "best_assay_hard_min_test_local_maxima": 3.4166666666666665,
+    "best_assay_hard_min_test_plaquette_energy": 32593.48922409469,
+    "best_assay_hard_min_test_wht_high_order_fraction": 0.5076977469784617,
+    "best_hard_min_assay_objective": 0.42230447388118,
+    "best_hard_min_test_graphlet_distance": 0.412427406419001,
+    "best_test_hard_min_test_wht_high_order_fraction": 0.4976195795084457,
+    "calibration_selected_hard_min_test_distance": 0.4631373462554163,
+    "empirical_readout_residual_test_plaquette_energy": 15.398014662253622,
+    "empirical_test_local_maxima": 5.166666666666667,
+    "empirical_test_wht_high_order_fraction": 0.378783705619082,
+    "fitted_current_assay_objective": 0.48556235966942257,
+    "fitted_current_test_graphlet_distance": 0.40157082034740577,
+    "posterior_mean_assay_objective": 0.46310686111398375,
+    "smooth_core_assay_objective": 0.4813562733761828,
+    "smooth_core_test_graphlet_distance": 0.41190406684777836
+  },
+  "result_id": "RES-032",
+  "run_id": "RUN-081",
+  "supports": [],
+  "weakens": [
+    "HYP-008"
+  ]
+}

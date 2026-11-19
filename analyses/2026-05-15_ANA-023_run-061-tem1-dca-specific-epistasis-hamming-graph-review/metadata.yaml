@@ -1,0 +1,28 @@
+id: ANA-023
+title: RUN-061 TEM-1 DCA-specific epistasis Hamming graph review
+status: completed
+created: '2026-05-15T13:27:31+10:00'
+owner: matthew-spence
+experiments:
+- EXP-023
+runs:
+- RUN-061
+purpose: Review whether disabling old epistasis and using DCA-prior state-specific
+  pair terms creates sign epistasis, lower random-walk autocorrelation, constrained
+  accessibility, and topological ruggedness in the dense TEM-1 local Hamming cube.
+path: analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-061
+  produced_artifacts:
+  - analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_key_metrics.md
+  - analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_pair_epistasis_summary.md
+  - analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_selected_dca_pairs.md
+  - analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_validation_tests.md
+  - analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_walsh_summary.md
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,40 @@
+id: RES-051
+title: RUN-136 protein-scale GNK reachability weakens broad directional knob claim
+status: completed
+created: '2026-06-19T07:19:24+10:00'
+owner: matthew-spence
+analyses:
+- ANA-051
+experiments:
+- EXP-053
+runs:
+- RUN-136
+supports: []
+weakens:
+- HYP-005
+refutes: []
+motivates:
+- HYP-004
+- HYP-009
+supersedes: []
+summary: 'RUN-136 weakens the broad protein-scale HYP-005 directional-knob claim:
+  only 20/54 monotonicity checks passed, accessibility and reciprocal-sign epistasis
+  passed 0/9 checks, and the public observable was not clearly separated from controls.'
+artifacts: []
+evidence_paths:
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/metrics.json
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_epi_weight_metric_means.csv
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_epi_weight_metric_means.md
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_failed_monotonicity_checks.csv
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_failed_monotonicity_checks.md
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_monotonicity_by_metric.csv
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_monotonicity_by_metric.md
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_monotonicity_by_stability_margin.csv
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_monotonicity_by_stability_margin.md
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_monotonicity_by_support_mode.csv
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_monotonicity_by_support_mode.md
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_output_collection_audit.csv
+- analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review/tables/run-136_output_collection_audit.md
+compliance:
+  level: green
+  issues: []

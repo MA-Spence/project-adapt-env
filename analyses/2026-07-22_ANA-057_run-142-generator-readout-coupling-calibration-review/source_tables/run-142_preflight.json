@@ -1,0 +1,10 @@
+{
+  "experiment_id": "EXP-058",
+  "mode": "generator_readout_coupling_calibration",
+  "operator_free": true,
+  "project_root": "/tank/data/labproj/staging/project-adapt-env/RUN-142/project",
+  "public_model_system": "additive_thermodynamic_gnk",
+  "quick": false,
+  "scratch_design_source": "scratch/RES-056_assessment_readout_coupling_and_next_steps.md",
+  "uses_exp050_transfer_function": false
+}

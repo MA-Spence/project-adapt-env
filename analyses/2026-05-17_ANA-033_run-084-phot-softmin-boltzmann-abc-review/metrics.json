@@ -1,0 +1,215 @@
+{
+  "analysis_id": "ANA-033",
+  "result_id": "RES-033",
+  "experiment_id": "EXP-033",
+  "run_id": "RUN-084",
+  "source_results": [
+    "RES-030",
+    "RES-031",
+    "RES-032"
+  ],
+  "preflight": {
+    "assay_id": "PHOT_CHLRE_Chen_2023",
+    "source_run_id": "RUN-077",
+    "operator": "soft-min/Boltzmann two-state competition",
+    "a_anchor": "fitted_smooth_core_only",
+    "n_assay_variants_evaluated": 167529,
+    "n_assay_guardrail_variants": 8000,
+    "n_graphlets": 24,
+    "n_calibration_graphlets": 12,
+    "n_test_graphlets": 12,
+    "n_particles": 32,
+    "n_rounds": 3,
+    "n_posterior_evaluated": 26
+  },
+  "smc_rounds": [
+    {
+      "round_index": 0,
+      "epsilon": 0.8258345633623901,
+      "attempts": 160,
+      "best_distance": 0.7267431552342309,
+      "median_distance": 0.7716928888796574
+    },
+    {
+      "round_index": 1,
+      "epsilon": 0.8403724028702262,
+      "attempts": 160,
+      "best_distance": 0.6493898228972187,
+      "median_distance": 0.7649929640105189
+    },
+    {
+      "round_index": 2,
+      "epsilon": 0.7799649329415328,
+      "attempts": 160,
+      "best_distance": 0.6583116996825145,
+      "median_distance": 0.7441803630216633
+    }
+  ],
+  "selected_parameters": {
+    "abc_best_particle": {
+      "distance": 0.6583116996825145,
+      "graphlet_distance": 0.6100102949144408,
+      "assay_guardrail_distance": 0.3220093651204911,
+      "tau": 1.0853784080040298,
+      "log_tau": 0.08192868932605157,
+      "auxiliary_correlation": 0.6708136998083811,
+      "auxiliary_scale": 0.6740739434012137,
+      "auxiliary_offset_sd": 1.1961956935741733,
+      "auxiliary_pairwise_scale": 0.046372588078408356,
+      "auxiliary_pairwise_density": 0.04,
+      "mean_values_to_a_correlation": 0.9449235423686329,
+      "mean_edge_gradient_correlation_to_a": 0.9505175926817023,
+      "mean_innovation_to_a_sd_ratio": 0.18531454694602592,
+      "mean_auxiliary_weight_sd": 0.29232190102012734,
+      "total_penalty": 0.0
+    }
+  },
+  "graphlet_distances": {
+    "calibration": {
+      "empirical_global_readout_residual": 0.5428315712874023,
+      "abc_best_particle": 0.6100102949144408,
+      "abc_posterior_mean": 0.7178914611197158,
+      "fitted_current_best": 0.7318364284769245,
+      "fitted_smooth_core_only": 0.7453777545039357,
+      "fitted_current_posterior_mean": 0.783857184804536,
+      "gnk_local_null": 0.8411137149702368,
+      "abc_particle_rank_023": 0.7125843993688698
+    },
+    "test": {
+      "empirical_global_readout_residual": 0.2707662564186795,
+      "abc_particle_rank_023_test_oracle": 0.3963784983669744,
+      "fitted_current_best": 0.40157082034740577,
+      "abc_particle_rank_024": 0.4028923712071354,
+      "fitted_smooth_core_only": 0.41190406684777836,
+      "fitted_current_posterior_mean": 0.44081922838930265,
+      "abc_best_particle": 0.4434134017599398,
+      "abc_posterior_mean": 0.45432341427084197,
+      "gnk_local_null": 0.7604879496638441
+    },
+    "all": {
+      "empirical_global_readout_residual": 0.3627816223112989,
+      "abc_particle_rank_023": 0.4837778942877485,
+      "abc_particle_rank_024": 0.4839367156145986,
+      "fitted_current_best": 0.49085766752288834,
+      "abc_best_particle": 0.49323048165222975,
+      "fitted_smooth_core_only": 0.5025859467594308,
+      "abc_posterior_mean": 0.5197593290604347,
+      "fitted_current_posterior_mean": 0.552665450403762,
+      "gnk_local_null": 0.7690917855417387
+    }
+  },
+  "assay_fit": {
+    "abc_posterior_mean": {
+      "assay_fit_objective_distance": 0.4570284154736037,
+      "holdout_spearman": 0.7526861775168419,
+      "single_spearman": 0.4571282146443998,
+      "double_holdout_spearman": 0.5358543417366948,
+      "epistasis_prediction_spearman": -0.08814662325454393
+    },
+    "fitted_current_posterior_mean": {
+      "assay_fit_objective_distance": 0.46310686111398375,
+      "holdout_spearman": 0.7532030316067769,
+      "single_spearman": 0.4820152940768465,
+      "double_holdout_spearman": 0.5980392156862746,
+      "epistasis_prediction_spearman": -0.051070759032480165
+    },
+    "fitted_smooth_core_only": {
+      "assay_fit_objective_distance": 0.4813562733761828,
+      "holdout_spearman": 0.7572960488136301,
+      "single_spearman": 0.47823890272619873,
+      "double_holdout_spearman": 0.6394957983193277,
+      "epistasis_prediction_spearman": -0.17453212872822518
+    },
+    "fitted_current_best": {
+      "assay_fit_objective_distance": 0.48556235966942257,
+      "holdout_spearman": 0.7573830994217569,
+      "single_spearman": 0.47823890272619873,
+      "double_holdout_spearman": 0.6394957983193277,
+      "epistasis_prediction_spearman": -0.2041902529084128
+    },
+    "abc_best_particle": {
+      "assay_fit_objective_distance": 0.48602740537537353,
+      "holdout_spearman": 0.7555289952669856,
+      "single_spearman": 0.4378383745330647,
+      "double_holdout_spearman": 0.5330532212885154,
+      "epistasis_prediction_spearman": -0.18353971972304928
+    }
+  },
+  "heldout_graphlet_summaries": {
+    "empirical_observed": {
+      "sign_epistasis_fraction": 0.6145833333333334,
+      "reciprocal_sign_epistasis_fraction": 0.2583333333333333,
+      "n_local_maxima": 5.166666666666667,
+      "accessible_path_fraction": 0.19745370370370366,
+      "random_walk_lag1_autocorrelation": 0.1905046595011569,
+      "walsh_high_order_fraction": 0.378783705619082,
+      "gft_low_energy_fraction": 0.6212162943804115,
+      "gft_mid_energy_fraction": 0.22358059703703356,
+      "gft_high_energy_fraction": 0.1552031085825549
+    },
+    "fitted_current_best": {
+      "n_local_maxima": 3.5,
+      "accessible_path_fraction": 0.028009259259259258,
+      "random_walk_lag1_autocorrelation": 0.09477600736762619,
+      "walsh_high_order_fraction": 0.4984481253979647
+    },
+    "abc_best_particle": {
+      "n_local_maxima": 4.25,
+      "accessible_path_fraction": 0.0037037037037037034,
+      "random_walk_lag1_autocorrelation": 0.04045975043104406,
+      "walsh_high_order_fraction": 0.5268213205658619,
+      "soft_switch_edge_fraction": 0.1935763888888889,
+      "soft_switch_plaquette_fraction": 0.3638888888888889,
+      "values_to_a_correlation": 0.9089454877862435,
+      "edge_gradient_correlation_to_a": 0.9222954149929055
+    },
+    "abc_particle_rank_023_test_oracle": {
+      "n_local_maxima": 3.6666666666666665,
+      "accessible_path_fraction": 0.027546296296296294,
+      "random_walk_lag1_autocorrelation": 0.0868314373792665,
+      "walsh_high_order_fraction": 0.49723226585225536
+    }
+  },
+  "locality": {
+    "empirical_readout_residual_test": {
+      "graphlet_edge_energy_total": 4.01754160632896,
+      "graphlet_edge_effective_count": 9.0416514948696,
+      "graphlet_edge_normalized_entropy": 0.9375144847171185,
+      "graphlet_plaquette_energy_total": 15.398014662253622,
+      "graphlet_plaquette_effective_count": 6.720688590733816,
+      "graphlet_plaquette_normalized_entropy": 0.8405384821419342
+    },
+    "abc_best_particle_test": {
+      "graphlet_edge_energy_total": 41436.91578269893,
+      "graphlet_edge_effective_count": 2.0227915449758644,
+      "graphlet_edge_normalized_entropy": 0.4426759379854924,
+      "graphlet_plaquette_energy_total": 179907.93126299005,
+      "graphlet_plaquette_effective_count": 1.9054372153876623,
+      "graphlet_plaquette_normalized_entropy": 0.4095337495101559,
+      "shared_feature_vs_edge_energy_similarity_spearman": 0.0663140306544024,
+      "shared_feature_vs_plaquette_energy_similarity_spearman": 0.09335660516978216
+    },
+    "abc_particle_rank_023_test_oracle": {
+      "graphlet_edge_energy_total": 22259.975799708333,
+      "graphlet_edge_effective_count": 1.3440444929539592,
+      "graphlet_edge_normalized_entropy": 0.1869573896013474,
+      "graphlet_plaquette_energy_total": 92458.32632342588,
+      "graphlet_plaquette_effective_count": 1.4366728896570496,
+      "graphlet_plaquette_normalized_entropy": 0.21068026979183994,
+      "shared_feature_vs_edge_energy_similarity_spearman": -0.223606797749979,
+      "shared_feature_vs_plaquette_energy_similarity_spearman": -0.223606797749979
+    }
+  },
+  "hypothesis_decision": {
+    "assay_fit_improves_over_controls": true,
+    "calibration_selected_heldout_graphlet_distance_beats_fitted_current": false,
+    "calibration_selected_heldout_graphlet_distance_beats_smooth_core": false,
+    "posterior_mean_heldout_graphlet_distance_beats_fitted_current": false,
+    "test_oracle_particle_beats_fitted_current": true,
+    "test_oracle_particle_valid_as_support": false,
+    "locality_empirical_like": false,
+    "supports_hyp008": false,
+    "weakens_hyp008": true,
+    "main_interpretation": "soft-min/Boltzmann ABC improves calibration graphlets and slightly improves an assay objective, but calibration-selected posterior candidates do not beat fitted-current or smooth-core held-out graphlet controls and do not validate empirical-like locality"
+  }
+}

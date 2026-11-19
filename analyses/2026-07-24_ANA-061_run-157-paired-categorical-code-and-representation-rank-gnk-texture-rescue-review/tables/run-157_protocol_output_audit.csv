@@ -1,0 +1,20 @@
+artifact,expected,observed,row_count
+preflight.json,True,True,
+reference_catalog.csv,True,True,12.0
+core_guardrail_metrics.csv,True,True,60.0
+representation_catalog.csv,True,True,4.0
+representation_audit.csv,True,True,3240.0
+latent_geometry_metrics.csv,True,True,11880.0
+validation_edge_metrics.csv,True,True,8640.0
+validation_texture_metrics.csv,True,True,104040.0
+paired_arm_effects.csv,True,True,39.0
+factorial_effects.csv,True,True,39.0
+dose_response_metrics.csv,True,True,1488.0
+scale_law_fits.csv,True,True,4.0
+acceptance_checks.csv,True,True,30.0
+decision_table.csv,True,True,4.0
+summary.json,True,True,
+checkpoints/*.json,360,360,
+logs/*,3,3,
+logs/labproj-exit-code.txt,0,0,
+logs/stderr.txt bytes,0,0,

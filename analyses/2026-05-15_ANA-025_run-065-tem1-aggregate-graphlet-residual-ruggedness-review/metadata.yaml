@@ -1,0 +1,28 @@
+id: ANA-025
+title: RUN-065 TEM-1 aggregate graphlet residual ruggedness review
+status: completed
+created: '2026-05-15T17:39:00+10:00'
+owner: matthew-spence
+experiments:
+- EXP-025
+runs:
+- RUN-065
+purpose: Review aggregate graphlet residual ruggedness generalization, held-out topology,
+  Walsh/GFT spectra, controls, and sampling limitations.
+path: analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-065
+  produced_artifacts:
+  - analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_graphlet_sampling_audit.md
+  - analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_key_metrics.md
+  - analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_primary_calibration_test_transfer.md
+  - analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_primary_test_by_dimension.md
+  - analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_selected_test_model_comparison.md
+  - analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review/tables/run-065_validation_tests.md
+compliance:
+  level: green
+  issues: []

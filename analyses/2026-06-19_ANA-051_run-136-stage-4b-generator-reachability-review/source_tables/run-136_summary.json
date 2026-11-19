@@ -1,0 +1,8 @@
+{
+  "n_direction_pass": 20,
+  "n_generator_metric_rows": 540,
+  "n_monotonicity_checks": 54,
+  "n_parameter_sets": 135,
+  "public_model_system": "additive_thermodynamic_gnk",
+  "stage": "4B"
+}

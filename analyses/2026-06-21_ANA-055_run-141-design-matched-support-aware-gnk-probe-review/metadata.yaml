@@ -1,0 +1,43 @@
+id: ANA-055
+title: RUN-141 design-matched support-aware GNK probe review
+status: completed
+created: '2026-06-21T09:46:22+10:00'
+owner: matthew-spence
+experiments:
+- EXP-057
+runs:
+- RUN-141
+purpose: Collect and interpret RUN-141 fixed Stage 4B support-aware probe outputs
+  against the scratch RES-054 core-vs-GNK separation and monotonicity gates.
+path: analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-141
+  produced_artifacts:
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/metrics.json
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_anchor_regime_audit.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_anchor_regime_audit.md
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_core_gnk_gate_by_dataset.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_core_gnk_gate_by_dataset.md
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_core_gnk_gate_by_epi_weight.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_core_gnk_gate_by_epi_weight.md
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_core_gnk_gate_by_metric.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_core_gnk_gate_by_metric.md
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_full_core_deltas_by_epi_weight.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_full_core_deltas_by_epi_weight.md
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_monotonicity_by_dataset.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_monotonicity_by_dataset.md
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_monotonicity_by_metric.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_monotonicity_by_metric.md
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_monotonicity_by_support_anchor.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_monotonicity_by_support_anchor.md
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_output_collection_audit.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_output_collection_audit.md
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_support_template_audit.csv
+  - analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_support_template_audit.md
+compliance:
+  level: green
+  issues: []

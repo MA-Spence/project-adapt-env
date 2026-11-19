@@ -1,0 +1,48 @@
+{
+  "run": "RUN-164",
+  "remote_files_verified": [
+    "outputs/calibration.csv",
+    "outputs/confirmation.csv",
+    "outputs/empirical_cubes.csv",
+    "outputs/manifest.json",
+    "outputs/resolution_sensitivity.csv",
+    "outputs/scaling.csv",
+    "outputs/selected_parameters.json",
+    "outputs/summary.json",
+    "logs/labproj-exit-code.txt",
+    "logs/stderr.txt",
+    "logs/stdout.txt"
+  ],
+  "frozen_source_files_verified": [
+    "scripts/aggregate_thermodynamic_calibration.py",
+    "src/project_adapt_env/dense_descriptive.py",
+    "src/project_adapt_env/summary_statistics.py",
+    "external/Adapt-Env/adaptenv/thermodynamic.py",
+    "external/Adapt-Env/adaptenv/extensive_gnk.py",
+    "external/Adapt-Env/adaptenv/ranked_categorical_gnk.py"
+  ],
+  "full_inputs": [
+    {
+      "dataset": "gb1_wu2016_four_site_graphfla",
+      "sha256": "8226bdd33aadde3b24f6763f7de0bd48fc05585e6896e6bfbe63eab59a8c612e",
+      "local_full_input_verified": true
+    },
+    {
+      "dataset": "trpb_johnston2024_four_site_graphfla",
+      "sha256": "9bee3123e9bc3b42a6647999f9588b882e5bfeaa87eddf47df0fd955b078edf5",
+      "local_full_input_verified": true
+    },
+    {
+      "dataset": "cr9114_h1_phillips2021_graphfla",
+      "sha256": "d9b292840d3d81d03a1c5bde4bcce0585a9a36dca7a9f025ef76fa41acaa1550",
+      "local_full_input_verified": true
+    }
+  ],
+  "empirical_cubes_recomputed": 144,
+  "unique_genotypes_per_assay": 768,
+  "calibration_and_confirmation_genotypes_disjoint": true,
+  "generator_seed_panels_disjoint": true,
+  "notebook_parameters_refitted": false,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 63001
+}

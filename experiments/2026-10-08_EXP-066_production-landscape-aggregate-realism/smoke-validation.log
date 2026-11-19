@@ -1,0 +1,44 @@
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+START trpb_johnston2024_four_site_graphfla
+FIT trpb_johnston2024_four_site_graphfla none r4_sigmoid 1.2084768439035516
+FIT trpb_johnston2024_four_site_graphfla none r0_sigmoid 0.9303854706810745
+FIT trpb_johnston2024_four_site_graphfla none r4_linear 1.6017943930611565
+FIT trpb_johnston2024_four_site_graphfla independent_difference r4_sigmoid 1.057127338925083
+FIT trpb_johnston2024_four_site_graphfla independent_difference r0_sigmoid 1.2557406318732656
+FIT trpb_johnston2024_four_site_graphfla independent_difference r4_linear 3.2058469975052506
+FIT trpb_johnston2024_four_site_graphfla shared_stop_sensitivity r4_sigmoid 0.8403813172294063
+FIT trpb_johnston2024_four_site_graphfla shared_stop_sensitivity r0_sigmoid 0.8363392078110753
+FIT trpb_johnston2024_four_site_graphfla shared_stop_sensitivity r4_linear 1.7075620882605609
+DONE trpb_johnston2024_four_site_graphfla evaluated
+START pard2_lite2020_graphfla
+FIT pard2_lite2020_graphfla none r4_sigmoid 1.921216432805363
+FIT pard2_lite2020_graphfla none r0_sigmoid 1.8985149343038488
+FIT pard2_lite2020_graphfla none r4_linear 1.1052833532930273
+DONE pard2_lite2020_graphfla evaluated
+START proteingym_amfr_human_tsuboyama_2023_4g3o
+FIT proteingym_amfr_human_tsuboyama_2023_4g3o none r4_sigmoid 0.8384206697617947
+FIT proteingym_amfr_human_tsuboyama_2023_4g3o none r0_sigmoid 1.9080311479962533
+FIT proteingym_amfr_human_tsuboyama_2023_4g3o none r4_linear 0.9765528679014932
+DONE proteingym_amfr_human_tsuboyama_2023_4g3o evaluated
+START proteingym_phot_chlre_chen_2023
+FIT proteingym_phot_chlre_chen_2023 none r4_sigmoid 0.928591018809837
+FIT proteingym_phot_chlre_chen_2023 none r0_sigmoid 1.3403426905500218
+FIT proteingym_phot_chlre_chen_2023 none r4_linear 1.6263369256270832
+DONE proteingym_phot_chlre_chen_2023 evaluated
+START proteingym_spg1_strsg_olson_2014
+FIT proteingym_spg1_strsg_olson_2014 none r4_sigmoid 0.8434895723955113
+FIT proteingym_spg1_strsg_olson_2014 none r0_sigmoid 2.1389900269330475
+FIT proteingym_spg1_strsg_olson_2014 none r4_linear 2.096760057113203
+DONE proteingym_spg1_strsg_olson_2014 evaluated
+COMPLETE {"elapsed_seconds": 37.98936894349754, "evaluated": 5, "errors": 0}

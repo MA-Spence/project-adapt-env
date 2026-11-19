@@ -1,0 +1,296 @@
+experiment_id: EXP-027
+title: TEM-1 fixed-scale residual ratio sweep graphlet diagnostic
+stack: STACK-000
+target: lab-slurm
+
+reference:
+  protein: TEM-1 beta-lactamase
+  uniprot_id: P62593
+  source: UniProt reviewed BLAT_ECOLX sequence
+  sequence: MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYIELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRVDAGQEQLGRRIHYSQNDLVEYSPVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRWEPELNEAIPNDERDTTMPAAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSALPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGASLIKHW
+
+alignment:
+  source: MMSeqs ColabFold MSA API
+  max_sequences: 384
+  mmseqs_cache_dir: .labproj/cache/mmseqs
+  poll_interval_seconds: 5
+  timeout_seconds: 20
+  max_retries: 6
+
+seeds:
+  landscape:
+    - 9701
+  residual_parameter:
+    - 20701
+
+scale_grid_design:
+  baseline_experiment: EXP-026
+  baseline_graphlet_budget: 90
+  residual_scale_mode: constant_walk_initial_beneficial_effect
+  residual_scale_grid_size: 3
+  residual_scale_relative_to_reference_grid:
+    - 1.0
+    - 4.0
+    - 16.0
+  graphlet_budget_after_grid_reduction: 30
+  reduction_rule: graphlet_budget_after_grid_reduction = baseline_graphlet_budget / residual_scale_grid_size
+  purpose: Scan fixed residual/additive scale ratios without local DFE normalization while keeping the primary scale-sweep graphlet workload comparable to EXP-026.
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_scale: 1.0
+    stability_margin: 8.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    empirical_pairwise_strength: 0.0
+    n_epistatic_terms: 0
+    epistasis_strength: 0.0
+    epistasis_covariation_bias: 0.0
+    pairwise_epistasis_rank: 2
+    n_higher_order_epistatic_terms: 0
+    epistasis_order_max: 5
+    epistasis_order_decay: 1.5
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 40
+    peak_search_top_single_starts: 2
+    peak_search_random_starts: 2
+    peak_search_random_radius: 1
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+
+start_selection:
+  start_classes:
+    - reference_or_consensus_like
+    - high_fitness_close_homologue
+    - marginal_stability_homologue
+    - distant_low_fitness_homologue
+    - viable_off_consensus
+  starts_per_class: 1
+  max_reported_candidates: 2500
+  selection_variables:
+    - consensus_identity
+    - consensus_bitscore
+    - realized_background_fitness
+    - effective_stability_margin_used
+    - local_neutral_fraction
+    - local_deleterious_fraction
+    - local_beneficial_fraction
+
+adaptive_walks:
+  modes:
+    - greedy_best_step
+    - stochastic_beneficial_step
+  replicates_per_start: 1
+  max_steps: 16
+  stop_when_no_beneficial: true
+  graphlet_step_classes:
+    early:
+      step_indices:
+        - 0
+        - 1
+    middle:
+      fractional_walk_positions:
+        - 0.5
+    late:
+      include_final: true
+      include_stalled: true
+
+graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_nodes: 64
+  graphlets_per_background_per_dimension: 1
+  contact_sources:
+    - dca_contact_neighborhood
+    - matched_random_positions
+  background_sampling:
+    mode: balanced_round_robin
+    balance_keys:
+      - start_class
+      - walk_step_class
+  state_selection:
+    require_observed_alignment_state: true
+    min_state_frequency: 0.0005
+    prefer_mild_single_effects: true
+    target_single_delta: -20.0
+    single_delta_tolerance: 120.0
+  calibration_test_split:
+    calibration_fraction: 0.5
+    split_by:
+      - landscape_seed
+      - walk_id
+      - contact_neighborhood_id
+    heldout_start_classes:
+      - marginal_stability_homologue
+      - distant_low_fitness_homologue
+    leakage_rule: no residual parameter may be selected using a graphlet from the same walk_id or contact_neighborhood_id as a held-out test graphlet
+
+candidate_models:
+  - id: smooth_core_only
+    role: negative_control
+    description: Thermodynamic core with all residual and legacy epistasis layers disabled.
+  - id: res024_exact_match_haplotype
+    role: high_order_coefficient_control
+    description: DCA clique exact-match haplotype overlay matching the RES-024 mechanism.
+  - id: dca_pair_override
+    role: pairwise_sign_epistasis_control
+    description: DCA state-specific pair terms matching the RES-023 mechanism.
+  - id: contact_residual_ensemble
+    role: primary_candidate
+    description: Sparse contact-conditioned residual field with fixed walk-initial beneficial-effect scaling only.
+  - id: shuffled_contact_residual
+    role: placement_control
+    description: Same fixed-scale residual generator with DCA/contact neighborhoods permuted across positions.
+  - id: random_position_residual
+    role: strength_density_control
+    description: Same fixed-scale coefficient distribution placed on random positions matched for graphlet dimension.
+  - id: gnk_local_null
+    role: non_procedural_statistical_null
+    description: Local GNK-style graphlet comparator matched for graphlet dimension and fixed coefficient variance envelope.
+  - id: residual_only_diagnostic
+    role: embedding_diagnostic
+    description: Fixed-scale residual tensors evaluated without the smooth thermodynamic core.
+
+residual_parameter_sweep:
+  contact_residual_ensemble:
+    residual_scale_relative_to_local_dfe_sd:
+      - 1.0
+      - 4.0
+      - 16.0
+    residual_scale_mode:
+      - constant_walk_initial_beneficial_effect
+    pairwise_density:
+      - 0.10
+    higher_order_density:
+      - 0.05
+    max_interaction_order:
+      - 4
+    coefficient_distribution:
+      - laplace
+    sign_balance:
+      - symmetric
+  exact_match_strength_grid:
+    - 0.0
+    - 750.0
+  dca_pair_strength_grid:
+    - 0.0
+    - 0.6
+
+execution_limits:
+  max_graphlets_total: 30
+  max_residual_parameter_sets_per_candidate: 3
+  max_exact_match_strengths: 2
+  max_pair_strengths: 2
+  max_hard_certified_attempts: 8
+
+calibration_targets:
+  aggregate_only: true
+  reject_individual_graphlet_tuning: true
+  metrics:
+    relative_scale_exposure:
+      target: residual_high_order_absolute_variance and residual_to_available_mean_beneficial_effect_ratio should rise with the fixed scale grid and become most visible in late walk stages.
+    sign_epistasis_fraction:
+      direction: monotone_increase_with_fixed_residual_scale_if_relative_scale_mechanism_is_real
+    reciprocal_sign_epistasis_fraction:
+      direction: monotone_increase_with_fixed_residual_scale_if_relative_scale_mechanism_is_real
+    walsh_order_variance_fraction:
+      target: low_order_dominant_at_low_scale_with_nonzero_high_order_tail_increasing_toward_mid_high_scales
+    gft_energy_by_eigenvalue_band:
+      target: low_frequency_dominant_with_mid_high_tail_increasing_with_fixed_residual_scale
+
+analysis:
+  random_walk:
+    n_walks_per_graphlet: 20
+    steps: 32
+    lag_max: 5
+  walsh:
+    max_order: 6
+    record_all_terms: false
+    max_recorded_terms_per_graphlet_model: 12
+  gft:
+    record_all_coefficients: false
+    max_recorded_terms_per_graphlet_model: 12
+    eigenvalue_bands:
+      low:
+        max_quantile: 0.33
+      mid:
+        min_quantile: 0.33
+        max_quantile: 0.67
+      high:
+        min_quantile: 0.67
+  sign_epistasis:
+    record_pair_rows: false
+  topology:
+    record_local_extrema: true
+    record_basins: true
+    record_accessible_paths: true
+  stratification:
+    - candidate_model
+    - parameter_set_id
+    - residual_scale_mode
+    - residual_scale_multiplier
+    - calibration_or_test
+    - start_class
+    - walk_mode
+    - walk_step_class
+    - distance_to_walk_terminal_step
+    - graphlet_dimension
+    - contact_source
+    - background_fitness_quantile
+    - local_dfe_variance_quantile
+
+quick:
+  seeds:
+    landscape:
+      - 30701
+    residual_parameter:
+      - 40701
+  alignment:
+    max_sequences: 96
+    synthetic_smoke_sequences: true
+    synthetic_smoke_seed: 1907
+  start_selection:
+    starts_per_class: 1
+  adaptive_walks:
+    replicates_per_start: 1
+    max_steps: 8
+  graphlets:
+    dimensions:
+      - 4
+      - 5
+    graphlets_per_background_per_dimension: 1
+  execution_limits:
+    max_graphlets_total: 15
+    max_residual_parameter_sets_per_candidate: 3
+    max_exact_match_strengths: 2
+    max_pair_strengths: 2
+  candidate_models:
+    include:
+      - smooth_core_only
+      - res024_exact_match_haplotype
+      - dca_pair_override
+      - contact_residual_ensemble
+      - shuffled_contact_residual
+      - random_position_residual
+      - gnk_local_null
+      - residual_only_diagnostic
+  analysis:
+    random_walk:
+      n_walks_per_graphlet: 10
+      steps: 24
+      lag_max: 5
+    walsh:
+      record_all_terms: false
+      max_recorded_terms_per_graphlet_model: 8
+    gft:
+      record_all_coefficients: false
+      max_recorded_terms_per_graphlet_model: 8
+    sign_epistasis:
+      record_pair_rows: false

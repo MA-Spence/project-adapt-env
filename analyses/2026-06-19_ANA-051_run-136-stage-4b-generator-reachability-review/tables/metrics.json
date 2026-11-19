@@ -1,0 +1,14 @@
+{
+  "n_direction_pass": 20,
+  "n_generator_metric_rows": 540,
+  "n_monotonicity_checks": 54,
+  "n_parameter_sets": 135,
+  "public_model_system": "additive_thermodynamic_gnk",
+  "stage": "4B",
+  "n_direction_checks": 54,
+  "direction_pass_fraction": 0.37037037037037035,
+  "accessible_path_monotonicity_passes": 0,
+  "reciprocal_sign_monotonicity_passes": 0,
+  "best_support_mode_passes": 8,
+  "best_stability_margin_passes": 8
+}

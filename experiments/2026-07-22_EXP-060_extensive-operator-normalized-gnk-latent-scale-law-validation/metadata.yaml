@@ -1,0 +1,102 @@
+id: EXP-060
+type: experiment
+title: Extensive operator-normalized GNK latent scale-law validation
+slug: extensive-operator-normalized-gnk-latent-scale-law-validation
+status: completed
+created: '2026-07-22T19:17:08+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-059
+  motivating_results:
+  - RES-049
+  - RES-055
+  - RES-057
+question: Does an operator-normalized, extensive, balanced-support, bounded-contrast
+  GNK latent field preserve controllable mutation-effect scale from local substitutions
+  through protein-scale sequence differences before any sigmoid readout?
+pre_experiment_prediction: At fixed mutation-RMS weight, the candidate GNK field will
+  have length-invariant local effects, field variance proportional to sequence length,
+  and square-root scaling across extensive Hamming distances, while the current fixed-term
+  public GNK control reproduces its length defect.
+rationale: Protein-scale failures remain confounded by latent GNK scale semantics.
+  This experiment isolates and preregisters the latent repair before any transmission
+  through the public sigmoid.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - results/RES-049_run-127-hashed-gnk-knobs-validate-forward-ruggedness-accessibility-map/result.md
+  - results/RES-055_run-141-fixed-support-aware-probe-fails-core-gnk-validation-gates/result.md
+  - results/RES-057_run-142-readout-coupling-calibration-no-joint-core-gnk-region/result.md
+  - claims/CLAIM-003_structured-high-order-residual-capacity-improves-phot-benchmarks.md
+  - src/project_adapt_env/extensive_gnk.py
+  - scripts/extensive_gnk_latent_scaling_exp060.py
+  - tests/test_extensive_gnk.py
+  - tests/test_extensive_gnk_latent_scaling_exp060.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 64
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - reference_catalog.csv
+  - pairing_audit.csv
+  - support_audit.csv
+  - contrast_audit.csv
+  - latent_scale_metrics.csv
+  - order_component_metrics.csv
+  - scale_law_fits.csv
+  - acceptance_checks.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- This experiment ends at the additive and GNK latent components. It neither invokes
+  observable fitness nor transmits GNK through a sigmoid.
+- The extensive candidate remains experiment-local. A pass does not change the public
+  AdaptEnv method, establish empirical realism, or validate optimizer behavior.
+- HYP-004 and HYP-009 remain downstream; only HYP-005 is tested directly.
+- Reference-shell GNK differences test full-protein scaling. Uniform-background pairs
+  identify the mutation-operator amplitude ratio without the directional mean drift
+  of mutations away from a natural reference.
+- The six exact reference sequences and their SHA-256 digests are frozen in config.yaml;
+  dataset identifiers and source CSV paths retain provenance without requiring the
+  full Stage-4 bundle at run time.
+template: generic
+compliance:
+  level: green
+  issues: []

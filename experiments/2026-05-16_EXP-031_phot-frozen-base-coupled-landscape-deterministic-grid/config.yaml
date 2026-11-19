@@ -1,0 +1,186 @@
+experiment_id: EXP-031
+title: PHOT frozen-base coupled-landscape deterministic grid search
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-031
+  status: planned
+  planned_runner: scripts/phot_coupled_landscape_grid_search.py
+  scientific_boundary:
+    primary_hypothesis: HYP-008
+    motivating_results:
+      - RES-030
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    no_abc_rule: freeze the RES-030/RUN-077 PHOT current-model fit; do not rerun ABC in this experiment
+    base_anchor_rule: enumerate coupled parameters conditionally on frozen current-model base anchors
+    locality_rule: evaluate empirical and model innovation with edge energy, plaquette energy, module concentration, and held-out graphlet fit
+
+source_run:
+  run_id: RUN-077
+  result_id: RES-030
+  output_dir: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  dvc_pointer: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: frozen_current_phot_base_and_prepared_empirical_graphlets
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    n_epistatic_terms: 220
+    epistasis_strength: 0.025
+    empirical_pairwise_strength: 0.025
+    pairwise_epistasis_rank: 2
+    epistasis_covariation_bias: 0.8
+    n_higher_order_epistatic_terms: 0
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 400
+    peak_search_top_single_starts: 8
+    peak_search_random_starts: 8
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+    seed: 42
+
+phot_graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 8
+  top_feature_pool: 42
+
+graphlet_evaluation:
+  primary_score_column: latent_phi
+  score_columns:
+    - latent_phi
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+
+empirical_innovation:
+  base_anchor: fitted_current_best
+  global_readout_polynomial_degree: 3
+  use_calibration_graphlets_only: true
+  residual_definition: empirical_latent_phi_minus_polynomial_readout_of_frozen_current_best
+
+module_selection:
+  source: empirical_calibration_plaquette_energy
+  max_modules: 12
+  module_size: 3
+  selection_split: calibration
+
+coupled_grid:
+  base_anchors:
+    - fitted_current_best
+    - fitted_smooth_core_only
+  module_sources:
+    - none
+    - empirical_calibration_plaquette
+    - shuffled_module
+    - random_module
+    - uncoupled_empirical_module
+  auxiliary_correlations:
+    - 0.6
+    - 0.8
+  operator_lambdas:
+    - 0.2
+    - 0.4
+  operator_gate_midpoints:
+    - -0.5
+    - 0.5
+  operator_gate_steepnesses:
+    - 0.7
+  operator_gate_directions:
+    - high
+  module_residual_scales:
+    - 0.15
+    - 0.35
+  module_residual_densities:
+    - 0.75
+  module_residual_orders:
+    - 2
+    - 3
+
+analysis:
+  random_walk:
+    n_walks_per_graphlet: 20
+    steps: 32
+    lag_max: 5
+
+outputs:
+  output_dir_name: phot-frozen-base-coupled-landscape-deterministic-grid
+  expected_files:
+    - summary.json
+    - preflight.json
+    - graphlet_catalog.csv
+    - module_catalog.csv
+    - parameter_grid.csv
+    - graphlet_metrics.csv
+    - walsh_terms.csv
+    - gft_coefficients.csv
+    - model_distances.csv
+    - top_model_distances.csv
+    - graphlet_summary.csv
+    - module_energy_rows.csv
+    - module_energy_by_graphlet.csv
+    - module_energy_summary.csv
+    - base_correlation.csv
+    - empirical_readout_fit.json
+
+quick:
+  phot_graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 2
+    top_feature_pool: 42
+  module_selection:
+    max_modules: 4
+    module_size: 3
+  coupled_grid:
+    base_anchors:
+      - fitted_current_best
+      - fitted_smooth_core_only
+    module_sources:
+      - none
+      - empirical_calibration_plaquette
+      - shuffled_module
+      - random_module
+      - uncoupled_empirical_module
+    auxiliary_correlations:
+      - 0.7
+    operator_lambdas:
+      - 0.25
+    operator_gate_midpoints:
+      - 0.0
+    operator_gate_steepnesses:
+      - 0.8
+    operator_gate_directions:
+      - high
+    module_residual_scales:
+      - 0.25
+    module_residual_densities:
+      - 1.0
+    module_residual_orders:
+      - 2
+      - 3
+  analysis:
+    random_walk:
+      n_walks_per_graphlet: 4
+      steps: 12
+      lag_max: 3

@@ -1,0 +1,198 @@
+experiment_id: EXP-064
+title: Observable-ruggedness coverage probe
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  mode: forward_observable_ruggedness_coverage_and_specificity_probe
+  uses_exp050_transfer_function: false
+  empirical_fitness_values_loaded: false
+  public_model_changed: false
+  scientific_boundary:
+    aim: AIM-001
+    hypotheses: [HYP-004, HYP-005, HYP-009]
+    previous_experiment: EXP-063
+    motivating_results: [RES-050, RES-051, RES-052, RES-054, RES-058, RES-059, RES-060, RES-061]
+    downstream_stop: retain_stage_4c_4d_4e_hard_stop_on_every_outcome
+    fitting_experiment_blocked_until: PROCEED_TO_FITTING
+
+data:
+  processed_root: data/processed/ensemble-landscape-validation-datasets
+  tier1_dataset_ids:
+    - gb1_wu2016_four_site_graphfla
+    - trpb_johnston2024_four_site_graphfla
+    - dhfr_papkou2023_full_wagner_tsv
+    - cr9114_h1_phillips2021_graphfla
+    - cr9114_h3_phillips2021_graphfla
+    - cr9114_flub_phillips2021_graphfla
+    - cr6261_h1_phillips2021_graphfla
+    - cr6261_h9_phillips2021_graphfla
+    - pard2_lite2020_graphfla
+    - pard3_lite2020_graphfla
+
+empirical:
+  published_key_bands:
+    path: analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_empirical_key_bands.csv
+    sha256: fc402fe6418d844908f512cd1b8112609e4bf7b1fae8b11cec7431ce70ccaf36
+  published_dataset_medians:
+    path: analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_graphlet_dataset_medians.csv
+    sha256: 9dbce70092795aad17d47c4be2ca77ecd18fe89b3bb0f36cccf0f79fe66a6a77
+  frozen_graphlet_metrics:
+    path: analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/source_tables/run-135_graphlet_metrics.csv
+    sha256: 232222eb60770000076739b9c14d5e0f8b47d28537060a1a876a2fcee91bb59c
+  frozen_scope_audit:
+    path: analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/source_tables/run-135_descriptor_scope_audit.csv
+    sha256: a076e3913a1770b0872b3d1d345854a41cf6790afaec0b33dfc22e7fe60047a1
+  reproduction_atol: 1.0e-6
+  per_template_band_rule: q05_median_q90_q95_from_frozen_run135_graphlets
+  rugged_quantile_rule: q90_in_preregistered_rugged_direction
+
+generator:
+  sequence_length: 48
+  seeds: [6401, 6402, 6403, 6404, 6405, 6406, 6407, 6408, 6409, 6410, 6411, 6412, 6413, 6414, 6415, 6416, 6417, 6418, 6419, 6420, 6421, 6422, 6423, 6424, 6425, 6426, 6427, 6428, 6429, 6430]
+  core_seed_offset: 10000
+  gnk_seed_offset: 30000
+  random_support_seed_offset: 100000
+  orders: [2, 3, 4]
+  order_weights: [0.35, 0.45, 0.20]
+  target_degrees: [6, 11, 7]
+  representations:
+    - id: binary_r8
+      contrast_family: binary
+      rank: 8
+      role: primary
+    - id: binary_r1
+      contrast_family: binary
+      rank: 1
+      role: incumbent_replay
+    - id: dense_q20_r8
+      contrast_family: dense_q20
+      rank: 8
+      role: representation_contrast
+  support_modes: [structured, shuffled, random]
+  beta_grid: [1.0, 2.0, 4.0, 8.0]
+  p0_grid: [0.5, 0.7, 0.9, 0.99]
+  amplitudes: [0.0, 0.25, 0.5, 1.0, 2.0, 4.0]
+  graphlets_per_template_seed: 12
+  graphlet_sampling:
+    geometry: frozen_run135_binary_subcube_dimension
+    support_aware: true
+    same_nodes_across_amplitude_operating_point_representation_and_support_controls: true
+    aggregation: median_across_fixed_graphlet_budget_with_seed_as_replicate
+
+readout:
+  formula: 10_sigmoid_mu_plus_beta_times_A_minus_Aref_over_sigmaA_plus_aG_over_sigmaG
+  sigma_a: 2.7448641782814067
+  sigma_g: analytic_uniform_q20_nonself_mutation_rms
+  output_scale: 10.0
+  operating_point_override: experiment_local_beta_and_p0
+  public_preset_used: false
+
+core_helper:
+  additive_core:
+    model_system: additive_thermodynamic_gnk
+    observed_fitness_combine_mode: stability_gate
+    generic_epistasis_target: stability
+    alphabet_size: 20
+    stability_scale: 1.0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+  readout:
+    threshold_steepness: 20.0
+    output_scale: 10.0
+    public_base:
+      stability_margin: 8.0
+
+descriptors:
+  implementation: scripts/ensemble_landscape_validation_stage4.py::metrics_from_cube
+  rugged_direction:
+    local_maxima_density: increase
+    accessible_path_fraction: decrease
+    walsh_high_order_fraction: increase
+    sign_epistasis_fraction: increase
+    reciprocal_sign_epistasis_fraction: increase
+    random_walk_lag1_autocorrelation: decrease
+    roughness_to_slope_ratio: increase
+    dirichlet_energy_localisation: increase
+  aliases:
+    roughness_to_slope_ratio: magnitude_epistasis_to_single_mutant_sd_ratio
+    dirichlet_energy_localisation: edge_energy_top10_fraction
+
+technical:
+  operator_energy_relative_error_max: 1.0e-10
+  support_hashes_must_match_across_representation_arms: true
+  graphlet_hashes_must_match_across_all_paired_arms: true
+  binary_rank1_matches_incumbent_bitwise: true
+  dense_q20_nonself_tie_fraction_max: 0.0
+  rank8_effective_rank_min: 4
+  strict_json: true
+
+gates:
+  rugged_end_top_fraction: 0.25
+  rugged_end_landscape_fraction_min: 0.80
+  range_descriptor_fraction_min: 0.625
+  joint_descriptors_min: 5
+  accessibility_floor: 0.05
+  specificity_landscape_fraction_min: 0.50
+  specificity_descriptor_majority_fraction: 0.50
+  specificity_deltas:
+    local_maxima_density: 0.0625
+    walsh_high_order_fraction: 0.02
+    sign_epistasis_fraction: 0.05
+    reciprocal_sign_epistasis_fraction: 0.025
+    roughness_to_slope_ratio: 0.10
+    dirichlet_energy_localisation: 0.05
+  threshold_status: noiseless_preregistered_engineering_criteria
+
+decision:
+  precedence:
+    - QUICK_SMOKE_ONLY_NO_SCIENTIFIC_DECISION
+    - EXECUTION_OR_PAIRING_INVALID
+    - EMPIRICAL_BANDS_NOT_REPRODUCED
+    - COVERAGE_NONSPECIFIC
+    - OBSERVABLE_CONSTRUCTION_LIMIT
+    - NAVIGABILITY_DEGENERATE
+    - PROCEED_TO_FITTING
+  note: Band reproduction failures are included in the technical package and are reported as EXECUTION_OR_PAIRING_INVALID before scientific interpretation.
+
+outputs:
+  expected:
+    - preflight.json
+    - template_catalog.csv
+    - support_catalog.csv
+    - support_aware_graphlet_audit.csv
+    - empirical_bands_resolved.csv
+    - generated_descriptor_metrics.csv
+    - coverage_matrix.csv
+    - rugged_end_reachability.csv
+    - specificity_table.csv
+    - selected_operating_region.csv
+    - technical_checks.csv
+    - checkpoint_resume_summary.json
+    - decision_table.csv
+    - summary.json
+
+quick:
+  data:
+    tier1_dataset_ids:
+      - gb1_wu2016_four_site_graphfla
+  generator:
+    seeds: [6401]
+    representations:
+      - id: binary_r8
+        contrast_family: binary
+        rank: 8
+        role: primary
+      - id: binary_r1
+        contrast_family: binary
+        rank: 1
+        role: incumbent_replay
+      - id: dense_q20_r8
+        contrast_family: dense_q20
+        rank: 8
+        role: representation_contrast
+    support_modes: [structured, shuffled, random]
+    beta_grid: [2.0]
+    p0_grid: [0.5, 0.99]
+    amplitudes: [0.0, 1.0]
+    graphlets_per_template_seed: 1

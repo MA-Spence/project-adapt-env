@@ -1,0 +1,52 @@
+experiment_id: EXP-066
+protocol: production_aggregate_realism_v1
+data:
+  root: data/processed/ensemble-landscape-validation-datasets
+  replicate_root: data/processed/trpb-replicate-observation-exp065
+  index_sha256: 80b97da2d9155c1738168f41cc580408be2cd4615b25213330cfe69ef865bc0f
+sampling:
+  empirical_seed: 660001
+  max_dimension: 4
+  max_attempts_per_dimension: 20000
+  calibration_cubes: 32
+  confirmation_cubes: 32
+  minimum_cubes_per_split: 8
+  synthetic_cubes_per_seed: 8
+  calibration_seeds: [660101, 660102, 660103, 660104, 660105, 660106, 660107, 660108]
+  confirmation_seeds: [660201, 660202, 660203, 660204, 660205, 660206, 660207, 660208, 660209, 660210, 660211, 660212, 660213, 660214, 660215, 660216]
+  donor_split_seed: 660301
+  training_fraction: 0.8
+  observation_seed: 660401
+  fit_observation_draws: 8
+  confirmation_observation_draws: 16
+model:
+  config:
+    representation_rank: 8
+    reference_rank: 0.5
+    order_weights: [0.35, 0.45, 0.20]
+  arms: [r4_sigmoid, r0_sigmoid, r4_linear]
+measurement:
+  relative_resolutions: [0.000000000001, 0.001, 0.01]
+  activity_cutoffs: [0.05396940664223584, 0.05369397352521348]
+observation:
+  count_quantiles: [0.25, 0.5, 0.75]
+  modes: [independent_difference, shared_stop_sensitivity]
+  minimum_donors_per_cell: 30
+fit:
+  seed: 660501
+  maxiter: 60
+  popsize: 8
+  quantiles: 101
+  offset_bounds: [-2.0, 2.0]
+  scale_bounds: [0.001, 10.0]
+  position_bounds: [-14.0, 8.0]
+  steepness_bounds: [0.05, 8.0]
+smoke_datasets: [trpb_johnston2024_four_site_graphfla, pard2_lite2020_graphfla, proteingym_phot_chlre_chen_2023, proteingym_spg1_strsg_olson_2014, proteingym_amfr_human_tsuboyama_2023_4g3o]
+interpretation: >-
+  Conditional aggregate resemblance on complete measured cubes of each sampled
+  library geometry. No fitting of empirical interaction identities, no universal
+  success threshold, no perfect-fit or unique thermodynamic mechanism claim.
+  Related assays are not independent proteins. Primary fits target observed
+  fitness without an identified noise decomposition; TrpB observation branches
+  are explicit sensitivities. Whole-protein transfer and invariant statistics
+  with arbitrary length are not tested here. Linear readout is an analysis-only control.

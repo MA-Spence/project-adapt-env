@@ -1,0 +1,121 @@
+experiment_id: EXP-041
+title: PHOT exact descriptive failure gate for full ABC fit
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-041
+  mode: exact_dense_descriptive_failure_gate
+  planned_runner: scripts/phot_exact_descriptive_failure_analysis.py
+  status: planned
+  scientific_boundary:
+    primary_hypotheses:
+      - HYP-004
+      - HYP-009
+    motivating_claims:
+      - CLAIM-001
+      - CLAIM-003
+    motivating_results:
+      - RES-013
+      - RES-030
+      - RES-036
+      - RES-038
+    interpretation_rule: >
+      This experiment is a deterministic descriptive failure ledger. It does
+      not fit a new model and must not be interpreted as ABC evidence by
+      itself. A later ABC objective is justified only for summary components
+      shown here to fail against complete empirical PHOT graphlets.
+
+source_full_abc:
+  experiment_id: EXP-013
+  run_id: RUN-039
+  result_id: RES-013
+  config_path: experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/config.yaml
+  summary_path: data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/summary.json
+  role: full_validation_objective_abc_fit_to_benchmark_without_refitting
+
+phot:
+  assay_id: PHOT_CHLRE_Chen_2023
+  selected_panel_path: data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/selected_panel.csv
+  prepared_assay_path: data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/prepared_assay.csv
+  mavenn_metrics_path: data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/mavenn_metrics.json
+  alignment_path: data/interim/proteingym_mmseqs_alignments/PHOT_CHLRE_Chen_2023.fasta
+
+score_columns:
+  - latent_phi
+  - mavenn_yhat
+primary_score_column: latent_phi
+model_readout_mode: stability_margin
+accessibility_max_dim: 8
+
+model_candidates:
+  - candidate_model: run039_smc_abc_best_stability_margin
+    source_branch: smc_abc_best_raw
+    readout_mode: stability_margin
+    seed_offset: 0
+    interpretation: primary full-ABC best particle from RES-013
+  - candidate_model: run039_smc_abc_posterior_mean_stability_margin
+    source_branch: smc_abc_posterior_mean_raw
+    readout_mode: stability_margin
+    seed_offset: 1
+    interpretation: posterior mean of the full RUN-039 ABC search
+  - candidate_model: run039_baseline_shared_stability_readout
+    source_branch: baseline_shared_stability_readout
+    readout_mode: stability_margin
+    seed_offset: 2
+    interpretation: deterministic stability-readout baseline from EXP-013
+  - candidate_model: run039_predictive_richpair_shared_stability_readout
+    source_branch: predictive_richpair_shared_stability_readout
+    readout_mode: stability_margin
+    seed_offset: 3
+    interpretation: deterministic rich-pair stability-readout baseline from EXP-013
+
+graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 16
+  top_feature_pool: 48
+  max_combinations_per_dimension: 250000
+  selection_policy: >
+    Enumerate complete observed PHOT subcubes deterministically from the most
+    frequent mutation features; evaluate every node in binary hypercube order.
+
+metric_columns:
+  - sign_epistasis_fraction
+  - reciprocal_sign_epistasis_fraction
+  - n_local_maxima
+  - n_local_minima
+  - accessible_path_fraction
+  - basin_count
+  - basin_largest_fraction
+  - random_walk_lag1_autocorrelation
+  - walsh_high_order_fraction
+  - gft_low_energy_fraction
+  - gft_mid_energy_fraction
+  - gft_high_energy_fraction
+  - edge_energy_adjacent_moran_i
+  - edge_energy_top10_fraction
+  - edge_energy_effective_fraction
+  - node_incident_top10_fraction
+  - node_incident_effective_fraction
+  - site_energy_top1_fraction
+  - site_energy_effective_fraction
+  - plaquette_energy_top1_fraction
+  - plaquette_energy_effective_fraction
+
+failure_gate:
+  severe_abs_scaled_error: 2.0
+  abc_policy: >
+    Do not launch ABC just because a model can be fit. Only summary columns
+    exceeding this exact descriptive failure threshold are eligible as targets
+    for a subsequent ABC experiment.
+
+quick:
+  graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 1
+    top_feature_pool: 32
+    max_combinations_per_dimension: 50000

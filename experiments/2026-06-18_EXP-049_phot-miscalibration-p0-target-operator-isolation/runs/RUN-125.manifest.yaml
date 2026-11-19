@@ -1,0 +1,43 @@
+run: RUN-125
+target: lab-slurm
+experiment: EXP-049
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-18_EXP-049_phot-miscalibration-p0-target-operator-isolation
+  run_script: experiments/2026-06-18_EXP-049_phot-miscalibration-p0-target-operator-isolation/run.sh
+inputs:
+  declared_files:
+  - scratch/RES-047_miscalibration_root_cause_and_isolation_plan.md
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_module_catalog.csv
+  datasets:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+outputs:
+  expected:
+  - preflight.json
+  - graphlet_catalog.csv
+  - p0_1_target_graphlet_metrics.csv
+  - p0_1_target_bootstrap.csv
+  - p0_1_mavenn_refit_metrics.csv
+  - p0_1_replicate_audit.csv
+  - p0_2_injected_terms.csv
+  - p0_2_roundtrip_graphlet_metrics.csv
+  - p0_2_roundtrip_transfer.csv
+  - p0_2_mavenn_metrics.csv
+  - p0_3_position_pool_audit.csv
+  - p0_3_support_terms.csv
+  - p0_3_support_containment_summary.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-125/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-125
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-125/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-125/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-125
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-125/project/experiments/2026-06-18_EXP-049_phot-miscalibration-p0-target-operator-isolation/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-125/project/experiments/2026-06-18_EXP-049_phot-miscalibration-p0-target-operator-isolation/runs/RUN-125.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

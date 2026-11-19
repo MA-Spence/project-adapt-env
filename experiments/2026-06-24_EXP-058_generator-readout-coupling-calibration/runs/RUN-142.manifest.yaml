@@ -1,0 +1,45 @@
+run: RUN-142
+target: lab-slurm
+experiment: EXP-058
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-24_EXP-058_generator-readout-coupling-calibration
+  run_script: experiments/2026-06-24_EXP-058_generator-readout-coupling-calibration/run.sh
+inputs:
+  declared_files:
+  - scratch/RES-056_assessment_readout_coupling_and_next_steps.md
+  - results/RES-055_run-141-fixed-support-aware-probe-fails-core-gnk-validation-gates/result.md
+  - results/RES-056_run-129-nonadditive-phot-operators-fail-certification/result.md
+  - scripts/generator_readout_coupling_calibration_exp058.py
+  - scripts/design_matched_support_aware_probe_exp057.py
+  - scripts/ensemble_landscape_validation_stage4.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+outputs:
+  expected:
+  - preflight.json
+  - generator_calibration_grid.csv
+  - support_catalog.csv
+  - support_aware_graphlet_audit.csv
+  - anchor_regime_audit.csv
+  - generator_descriptor_metrics.csv
+  - core_guardrail_checks.csv
+  - gnk_separation_checks.csv
+  - knob_monotonicity_checks.csv
+  - calibration_decision_table.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-142/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-142
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-142/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-142/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-142
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-142/project/experiments/2026-06-24_EXP-058_generator-readout-coupling-calibration/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-142/project/experiments/2026-06-24_EXP-058_generator-readout-coupling-calibration/runs/RUN-142.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

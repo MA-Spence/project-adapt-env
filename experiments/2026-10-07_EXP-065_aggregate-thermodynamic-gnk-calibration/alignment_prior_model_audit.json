@@ -1,0 +1,68 @@
+{
+  "purpose": "Independent engineering verification of the prior-only adapter; not empirical adequacy evidence",
+  "frozen_source": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/source/external/Adapt-Env/adaptenv/thermodynamic.py",
+  "frozen_source_sha256": "9ec75c87855feedcab49fffdeab83c64f62d06121ae9be667d29114f4327942b",
+  "current_source": "external/Adapt-Env/adaptenv/thermodynamic.py",
+  "current_source_sha256": "4901186fa5d4c6ce3b86ee357913dca7e1457f4e65b0ef568f888d68f234cfbe",
+  "ast_comparison": "Python ast.dump(include_attributes=False), ThermodynamicLandscape method definitions",
+  "exactly_unchanged_computational_methods": [
+    "__init__",
+    "_sequences",
+    "latent_components",
+    "readout",
+    "evaluate_batch_components",
+    "evaluate_batch",
+    "evaluate",
+    "random_sequence",
+    "str_to_seq",
+    "seq_to_str",
+    "hamming_distance",
+    "mutation_effects"
+  ],
+  "changed_existing_methods": [
+    "summary"
+  ],
+  "added_methods": [
+    "from_alignment_profile",
+    "from_frequency_profile"
+  ],
+  "normalized_g_audit": {
+    "input_npz": "data/processed/interaction-strength-exp065-inputs/TrpB/latent_calibration.npz",
+    "input_sha256": "98a4eec06f296e7277d31cecc3525997c315fad31f6940442ccc01dc780596d8",
+    "calibration_rows": 16,
+    "cube_vertices": 256,
+    "prior": "engineering-only Dirichlet(ones(20)), NumPy default_rng seed71; natural log(20*p)",
+    "maximum_absolute_difference": 2.220446049250313e-15,
+    "per_seed": [
+      {
+        "seed": 57117694,
+        "cubes": 8,
+        "reference": [
+          3,
+          13,
+          9,
+          18
+        ],
+        "maximum_normalized_g_difference": 1.7763568394002505e-15,
+        "fingerprint": "36a8519405f9adc259c6a1a482c2ed62ac1540c19259a319dac9a4099ba5f227",
+        "sigma_a": 1.8278240265080263
+      },
+      {
+        "seed": 57117695,
+        "cubes": 8,
+        "reference": [
+          9,
+          7,
+          13,
+          16
+        ],
+        "maximum_normalized_g_difference": 2.220446049250313e-15,
+        "fingerprint": "079f6deb69f97a1f80c2cbc3c3e0b619372a67855023d7481ad3470095f92759",
+        "sigma_a": 1.8278240265080263
+      }
+    ],
+    "interpretation": "Checks unchanged interaction field after additive-prior replacement and global normalization; no synthetic control calibration was rerun."
+  },
+  "profile_conversion_source": "external/Adapt-Env/adaptenv/alignment.py",
+  "profile_conversion_source_sha256": "77faa24306a570a39061b1a03704605b95ec52e463771fea10ecf2d7baf205d7"
+}

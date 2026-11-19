@@ -1,0 +1,22 @@
+| file                                         |    bytes | copied_to_analysis   | path                                                                                                           |
+|:---------------------------------------------|---------:|:---------------------|:---------------------------------------------------------------------------------------------------------------|
+| gft_coefficients.csv                         | 30441383 | False                | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/gft_coefficients.csv                         |
+| walsh_terms.csv                              | 29948113 | False                | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/walsh_terms.csv                              |
+| graphlet_metrics.csv                         |  1907788 | False                | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/graphlet_metrics.csv                         |
+| fit_protocol_candidates.csv                  |  1268244 | False                | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/fit_protocol_candidates.csv                  |
+| PHOT_CHLRE_Chen_2023.alignment.fasta         |    74752 | False                | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/PHOT_CHLRE_Chen_2023.alignment.fasta         |
+| graphlet_summary.csv                         |    69234 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/graphlet_summary.csv                         |
+| fit_protocol_distances.csv                   |    53291 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/fit_protocol_distances.csv                   |
+| selected_fit_protocol_candidates.csv         |    37983 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/selected_fit_protocol_candidates.csv         |
+| abc_comparator_selected_family_distances.csv |    18173 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/abc_comparator_selected_family_distances.csv |
+| module_energy_summary.csv                    |    12969 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/module_energy_summary.csv                    |
+| fit_protocol_equivalence.csv                 |    12464 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/fit_protocol_equivalence.csv                 |
+| full_abc_comparator_selected_particles.csv   |     9335 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/full_abc_comparator_selected_particles.csv   |
+| preflight.json                               |     6396 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/preflight.json                               |
+| local_abc_parameter_specs.csv                |     4420 | False                | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/local_abc_parameter_specs.csv                |
+| module_catalog.csv                           |     4004 | False                | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/module_catalog.csv                           |
+| graphlet_catalog.csv                         |     2209 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/graphlet_catalog.csv                         |
+| summary.json                                 |     2139 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/summary.json                                 |
+| local_abc_rounds.csv                         |     1097 | True                 | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/local_abc_rounds.csv                         |
+| locked_first_stage_transform.json            |      494 | False                | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/locked_first_stage_transform.json            |
+| progress.json                                |      344 | False                | /tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/progress.json                                |

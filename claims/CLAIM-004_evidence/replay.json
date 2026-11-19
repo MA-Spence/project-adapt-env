@@ -1,0 +1,10 @@
+{
+  "seed_fields_replayed": 48,
+  "settings": 24,
+  "configuration_seed_pairs": 576,
+  "fitness_values_replayed": 437184,
+  "maximum_absolute_difference": 1.0658141036401503e-14,
+  "stored_latent_values_agree_at_1e12_tolerance": true,
+  "local_frozen_source_fitness_and_fingerprints_match_exactly": true,
+  "run175_preset_replayed_on_all_24_trpb_seeds": true
+}

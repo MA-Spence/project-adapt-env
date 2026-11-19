@@ -1,0 +1,29 @@
+id: ANA-054
+title: RUN-139 Stage 4E held-out descriptor generalisation review
+status: completed
+created: '2026-06-19T07:12:32+10:00'
+owner: matthew-spence
+experiments:
+- EXP-056
+runs:
+- RUN-139
+purpose: Collect and interpret RUN-139 leave-one-landscape-out held-out descriptor
+  generalisation outputs.
+path: analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-139
+  produced_artifacts:
+  - analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/metrics.json
+  - analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_heldout_predictions_ranked.csv
+  - analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_heldout_predictions_ranked.md
+  - analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_output_collection_audit.csv
+  - analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_output_collection_audit.md
+  - analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_selected_parameter_counts.csv
+  - analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_selected_parameter_counts.md
+compliance:
+  level: green
+  issues: []

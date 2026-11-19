@@ -1,0 +1,10 @@
+| phase   | operator_profile            | metric                        |   n_spectra |   n_pass |   n_failed_fits |   n_reported_ratios |
+|:--------|:----------------------------|:------------------------------|------------:|---------:|----------------:|--------------------:|
+| WS-A    | blackbox_ge_neural          | accessible_path_fraction      |           3 |        0 |               3 |                   0 |
+| WS-A    | blackbox_ge_neural          | n_local_maxima                |           3 |        0 |               3 |                   0 |
+| WS-A    | blackbox_ge_neural          | sign_epistasis_fraction_local |           3 |        0 |               3 |                   0 |
+| WS-A    | blackbox_ge_neural          | walsh_high_order_fraction     |           3 |        0 |               3 |                   0 |
+| WS-A    | pairwise_low_regularization | accessible_path_fraction      |           3 |        0 |               3 |                   0 |
+| WS-A    | pairwise_low_regularization | n_local_maxima                |           3 |        0 |               3 |                   0 |
+| WS-A    | pairwise_low_regularization | sign_epistasis_fraction_local |           3 |        0 |               3 |                   0 |
+| WS-A    | pairwise_low_regularization | walsh_high_order_fraction     |           3 |        0 |               3 |                   0 |

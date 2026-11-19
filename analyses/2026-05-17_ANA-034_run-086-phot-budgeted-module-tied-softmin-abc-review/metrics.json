@@ -1,0 +1,92 @@
+{
+  "analysis_id": "ANA-034",
+  "result_id": "RES-034",
+  "experiment_id": "EXP-034",
+  "run_id": "RUN-086",
+  "collected_output_path": "data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086",
+  "dvc_pointer": "data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086.dvc",
+  "output_nfiles": 27,
+  "output_size_bytes": 58097813,
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "n_assay_variants_evaluated": 167529,
+  "n_graphlets": 24,
+  "n_calibration_graphlets": 12,
+  "n_test_graphlets": 12,
+  "n_particles": 32,
+  "n_rounds": 3,
+  "n_posterior_evaluated": 26,
+  "smc_best_particle": {
+    "distance": 1.2799941677895057,
+    "graphlet_distance": 0.7239882986895994,
+    "assay_guardrail_distance": 0.31884036481892636,
+    "total_penalty": 0.5081798143770675,
+    "mean_values_to_a_correlation": 1.0,
+    "mean_edge_gradient_correlation_to_a": 1.0,
+    "mean_innovation_var_ratio_to_base": 1.4047063099059999e-25,
+    "mean_innovation_edge_ratio_to_empirical_residual": 5.976081489057901e-22,
+    "mean_innovation_plaquette_ratio_to_empirical_residual": 1.153470175546921e-21,
+    "mean_difference_edge_median_abs_over_tau": 2.507352782670622,
+    "penalty_low_temperature_relative_to_d": 0.5073798143771228,
+    "penalty_low_state_transition": 0.0007999999999447301
+  },
+  "graphlet_distances": {
+    "calibration": {
+      "empirical_global_readout_residual": 0.5428315712874023,
+      "fitted_current_best": 0.7318355865425226,
+      "fitted_current_posterior_mean": 0.7838568730993522,
+      "fitted_smooth_core_only": 0.7453779779327878,
+      "gnk_local_null": 0.8411137149702368,
+      "abc_best_particle": 0.7239882986895994,
+      "abc_posterior_mean": 0.7239881676369331,
+      "abc_best_particle_no_module": 0.7262582036842304,
+      "abc_best_particle_random_module": 0.7239318206070834,
+      "abc_best_particle_shuffled_module": 0.7430825813507265
+    },
+    "test": {
+      "empirical_global_readout_residual": 0.2707662564186795,
+      "fitted_current_best": 0.40157082034740577,
+      "fitted_current_posterior_mean": 0.4408190868788795,
+      "fitted_smooth_core_only": 0.4119039864538632,
+      "gnk_local_null": 0.7605200450318077,
+      "abc_best_particle": 0.4060351813345315,
+      "abc_posterior_mean": 0.4060829273574512,
+      "abc_best_particle_no_module": 0.41443560989475696,
+      "abc_best_particle_random_module": 0.40805556309772876,
+      "abc_best_particle_shuffled_module": 0.4028967849374474,
+      "best_posterior_particle": 0.4032680183173202
+    }
+  },
+  "heldout_empirical_graphlets": {
+    "sign_epistasis_fraction": 0.6145833333333334,
+    "reciprocal_sign_epistasis_fraction": 0.25833333333333336,
+    "n_local_maxima": 5.166666666666667,
+    "accessible_path_fraction": 0.19745370370370366,
+    "random_walk_lag1_autocorrelation": 0.19050465950115683,
+    "walsh_high_order_fraction": 0.3787837056190819,
+    "gft_high_energy_fraction": 0.1552031085825549
+  },
+  "heldout_abc_best_particle_graphlets": {
+    "sign_epistasis_fraction": 0.5680555555555555,
+    "reciprocal_sign_epistasis_fraction": 0.23263888888888884,
+    "n_local_maxima": 3.5,
+    "accessible_path_fraction": 0.028009259259259258,
+    "random_walk_lag1_autocorrelation": 0.08509158020658153,
+    "walsh_high_order_fraction": 0.49844812539563654,
+    "gft_high_energy_fraction": 0.18441606101717647
+  },
+  "assay_guardrail": {
+    "best_control_objective": 0.46310686111398375,
+    "best_budgeted_objective": 0.5349685252542562,
+    "abc_best_particle_objective": 0.5559642761180215,
+    "abc_best_particle_holdout_spearman": 0.7572960488136301,
+    "abc_best_particle_epistasis_prediction_spearman": -0.17453212872822518
+  },
+  "decision": {
+    "supports": [],
+    "weakens": [
+      "HYP-008"
+    ],
+    "refutes": [],
+    "summary": "Budgeted module-tied soft-min ABC slightly improves calibration graphlet distance but fails the fitted-current held-out graphlet control, does not validate module locality, and collapses to near-zero innovation."
+  }
+}

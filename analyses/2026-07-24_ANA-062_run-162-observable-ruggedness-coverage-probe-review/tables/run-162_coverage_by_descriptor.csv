@@ -1,0 +1,17 @@
+rugged_end_template,descriptor,n_templates,n_available,n_cover,n_contains_median,n_reaches_rugged_q90,maximum_rugged_shortfall,cover_fraction
+False,accessible_path_fraction,7,7,7,7,7,0.0,1.0
+False,dirichlet_energy_localisation,7,7,7,7,7,0.0,1.0
+False,local_maxima_density,7,7,0,5,0,0.1875,0.0
+False,random_walk_lag1_autocorrelation,7,7,5,7,5,0.12578579274060248,0.7142857142857143
+False,reciprocal_sign_epistasis_fraction,7,7,0,3,0,0.5,0.0
+False,roughness_to_slope_ratio,7,7,5,7,5,0.0859788999667177,0.7142857142857143
+False,sign_epistasis_fraction,7,7,0,2,0,0.5,0.0
+False,walsh_high_order_fraction,7,7,4,7,4,0.07962764243086945,0.5714285714285714
+True,accessible_path_fraction,3,3,3,3,3,0.0,1.0
+True,dirichlet_energy_localisation,3,2,1,2,1,0.00042845837144955823,0.3333333333333333
+True,local_maxima_density,3,3,0,0,0,0.9375,0.0
+True,random_walk_lag1_autocorrelation,3,2,1,2,1,0.01056955818805149,0.3333333333333333
+True,reciprocal_sign_epistasis_fraction,3,3,2,2,2,0.22916666666666669,0.6666666666666666
+True,roughness_to_slope_ratio,3,3,1,1,3,0.0,0.3333333333333333
+True,sign_epistasis_fraction,3,3,2,2,2,0.43750000000000006,0.6666666666666666
+True,walsh_high_order_fraction,3,3,1,1,3,0.0,0.3333333333333333

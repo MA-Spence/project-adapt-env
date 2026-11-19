@@ -1,0 +1,41 @@
+id: RES-055
+title: RUN-141 fixed support-aware probe fails core-GNK validation gates
+status: completed
+created: '2026-06-21T09:46:30+10:00'
+owner: matthew-spence
+analyses:
+- ANA-055
+experiments:
+- EXP-057
+runs:
+- RUN-141
+supports: []
+weakens:
+- HYP-005
+- HYP-004
+- HYP-009
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-141 completed the design-matched, support-aware Stage 4B repair probe,
+  but only 318/1620 monotonicity checks passed and only 34/1080 positive-epistasis
+  core-vs-GNK separation gates passed; downstream overlap, joint-realism, and held-out
+  reruns remain blocked for the current implementation.
+artifacts: []
+evidence_paths:
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/metrics.json
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_output_collection_audit.csv
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_support_template_audit.csv
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_anchor_regime_audit.csv
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_monotonicity_by_metric.csv
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_monotonicity_by_support_anchor.csv
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_monotonicity_by_dataset.csv
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_core_gnk_gate_by_metric.csv
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_core_gnk_gate_by_epi_weight.csv
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_core_gnk_gate_by_dataset.csv
+- analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review/tables/run-141_full_core_deltas_by_epi_weight.csv
+- data/processed/stage-4b-design-matched-support-aware-gnk-probe/RUN-141/outputs.dvc
+- data/processed/stage-4b-design-matched-support-aware-gnk-probe/RUN-141/logs.dvc
+compliance:
+  level: green
+  issues: []

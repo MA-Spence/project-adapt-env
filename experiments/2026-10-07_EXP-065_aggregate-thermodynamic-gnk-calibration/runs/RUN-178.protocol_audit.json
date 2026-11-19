@@ -1,0 +1,49 @@
+{
+  "run": "RUN-178",
+  "stage": "calibration_and_input_audit",
+  "review": "independent read-only protocol audit",
+  "status": "passed; final evaluation completeness checked separately at collection",
+  "frozen_source_hashes": 42,
+  "original_input_payload_hashes": 24,
+  "unchanged_scientific_kernels": 9,
+  "unchanged_config_sections": [
+    "interaction_ratios",
+    "model",
+    "seed_design",
+    "fit",
+    "sampling",
+    "measurement"
+  ],
+  "worker_versions_match_RUN_172_and_RUN_175": true,
+  "calibration": {
+    "seeds": 8,
+    "cubes": 64,
+    "latent_values": 1024,
+    "genotypes_and_index_metadata_unchanged": true,
+    "reference_algorithm_unchanged": true,
+    "maximum_normalized_g_difference": 2.6645352591003757e-15
+  },
+  "fits": {
+    "settings": 18,
+    "endpoint_settings": 6,
+    "endpoint_optimizer_seeds_match_RUN_172": true,
+    "intermediate_settings": 12,
+    "intermediate_optimizer_seeds_match_RUN_175": true,
+    "evaluations_per_DE_search": 1952,
+    "extra_candidates_per_intermediate_search": 2,
+    "extra_candidates_are_refitted_profile_endpoints": true,
+    "selected_objective_is_best_trace_value": true,
+    "all_searches_hit_original_60_iteration_cap": true,
+    "convergence_claim": false
+  },
+  "noise": {
+    "diagnostics_breaks_covariances_and_cell_audits_identical": true,
+    "donor_assignments_and_splits_identical": true,
+    "serialized_donor_values_differing": 7,
+    "maximum_serialization_difference": 3.39e-21,
+    "qualification": "Cross-platform float serialization changes a compressed membership checksum; assignment/split identity is preserved."
+  },
+  "synthetic_control_recalibrated": false,
+  "empirical_graph_check": "RUN-178.empirical_graph_check.json",
+  "interpretation": "Execution/protocol fidelity audit, not a scientific adequacy conclusion."
+}

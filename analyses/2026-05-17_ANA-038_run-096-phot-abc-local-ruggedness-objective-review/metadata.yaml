@@ -1,0 +1,27 @@
+id: ANA-038
+title: RUN-096 PHOT ABC local ruggedness objective review
+status: completed
+created: '2026-05-17T20:43:19+10:00'
+owner: Codex
+experiments:
+- EXP-038
+runs:
+- RUN-096
+purpose: Review RUN-096 SMC-ABC results after adding local Dirichlet-energy localization
+  statistics to the PHOT calibration objective, testing held-out fit and empirical-module
+  specificity.
+path: analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-096
+  produced_artifacts:
+  - analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/tables/run-096_hyp008_decision_table.md
+  - analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/tables/run-096_localization_components_test.md
+  - analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/tables/run-096_preflight_and_collection_audit.md
+  - analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/tables/run-096_selected_test_distances.md
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,39 @@
+{
+  "run_inputs": {
+    "Synthetic": {
+      "manifest.json": "f6d3a74826bd70cfef5578346f5f8edd5d64de811f8730403227f89b7ce74455",
+      "graph_summary.csv": "15de2a01909bbe286239e580e15d162f8e561741ebbb8bcb2b72b7966a5fd2ba",
+      "cube_summary.csv": "a23e6b25092051d4a84368b713484664075fa4d6e4893146a8db866095ebaa84",
+      "selected_parameters.json": "dc5eff40aab23fba816ba3aea6f6bdfa100921dd5d04481364a645210681d8f7"
+    },
+    "Profile": {
+      "manifest.json": "65a3216c2773cea1b2c7789554df58415a931d15bde317cbd8c807421219c129",
+      "graph_summary.csv": "d71698c086fcba8c4a9829465013464bf449d240f4854160fb8e46355360adc0",
+      "cube_summary.csv": "30df5d67e9022e19c55ba7312fa7f6c772b2119093d2924c4715bad5126559f2",
+      "selected_parameters.json": "96b8557206ee12f7d96ebffd596d34b67d79676aed015b528b9fbfccc22f9787"
+    }
+  },
+  "primary_display": {
+    "cohort": "fresh",
+    "seeds": 8,
+    "relative_resolution": 0.001,
+    "inherited_ratio": 0.5,
+    "inherited_observation": "shared_stop_sensitivity"
+  },
+  "pairing_keys": [
+    "protein",
+    "seed",
+    "cohort",
+    "ratio",
+    "observation",
+    "layer",
+    "relative_resolution"
+  ],
+  "paired_rows": 45360,
+  "aggregate_rows": 7686,
+  "range_interpretation": "10th\u201390th percentiles of generator-seed outcomes, not confidence intervals",
+  "closer_definition": "Absolute error to the empirical descriptor decreases by more than 1e-10; this numerical tie tolerance is not a scientific acceptance threshold.",
+  "no_aggregate_weighted_score": true,
+  "scientific_acceptance_gate": false,
+  "no_new_fit_or_simulation": true
+}

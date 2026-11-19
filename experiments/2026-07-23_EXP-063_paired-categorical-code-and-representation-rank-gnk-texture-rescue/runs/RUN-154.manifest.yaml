@@ -1,0 +1,59 @@
+run: RUN-154
+target: lab-slurm
+experiment: EXP-063
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-07-23_EXP-063_paired-categorical-code-and-representation-rank-gnk-texture-rescue
+  run_script: experiments/2026-07-23_EXP-063_paired-categorical-code-and-representation-rank-gnk-texture-rescue/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - PROJECT_STATE.md
+  - results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission/result.md
+  - results/RES-059_run-151-validates-frozen-core-gnk-texture-transmission-but-fails-real-core-and-margin-8-gates/result.md
+  - results/RES-060_run-153-validates-global-core-calibration-and-edge-transfer-but-fails-gnk-texture-prevalence/result.md
+  - experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/reference_catalog.yaml
+  - experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/config.yaml
+  - scripts/categorical_representation_rank_rescue_exp063.py
+  - scripts/dimensionless_sigmoid_calibration_exp062.py
+  - scripts/extensive_gnk_sigmoid_transmission_exp061.py
+  - scripts/extensive_gnk_latent_scaling_exp060.py
+  - src/project_adapt_env/ranked_categorical_gnk.py
+  - src/project_adapt_env/extensive_gnk.py
+  - tests/test_categorical_representation_rank_rescue_exp063.py
+  - tests/test_ranked_categorical_gnk.py
+  - external/Adapt-Env/.config.yaml
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/Adapt-Env/adaptenv/presets.py
+  datasets: []
+outputs:
+  expected:
+  - preflight.json
+  - reference_catalog.csv
+  - core_guardrail_metrics.csv
+  - representation_catalog.csv
+  - representation_audit.csv
+  - latent_geometry_metrics.csv
+  - validation_edge_metrics.csv
+  - validation_texture_metrics.csv
+  - paired_arm_effects.csv
+  - factorial_effects.csv
+  - dose_response_metrics.csv
+  - scale_law_fits.csv
+  - acceptance_checks.csv
+  - decision_table.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-154/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-154
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-154/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-154/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-154
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-154/project/experiments/2026-07-23_EXP-063_paired-categorical-code-and-representation-rank-gnk-texture-rescue/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-154/project/experiments/2026-07-23_EXP-063_paired-categorical-code-and-representation-rank-gnk-texture-rescue/runs/RUN-154.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

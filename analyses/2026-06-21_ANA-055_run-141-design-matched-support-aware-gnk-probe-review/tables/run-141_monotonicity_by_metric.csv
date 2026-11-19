@@ -1,0 +1,7 @@
+metric,expected_direction,n,pass_n,pass_fraction,median_spearman_rho
+sign_epistasis_fraction,increase,270,119,0.44074074074074077,0.7071067811865475
+peak_targeted_reachability_fraction,decrease,270,58,0.21481481481481482,-0.10129891760425765
+reciprocal_sign_epistasis_fraction,increase,270,40,0.14814814814814814,0.7071067811865475
+random_walk_lag1_autocorrelation,decrease,270,37,0.13703703703703704,0.3
+high_order_fraction,increase,270,36,0.13333333333333333,-0.0999999999999999
+local_maxima_density,increase,270,28,0.1037037037037037,-0.18165477671272484

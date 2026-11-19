@@ -1,0 +1,103 @@
+{
+  "analysis_id": "ANA-060",
+  "calibration": {
+    "global_sigma_a": 2.7448641782814067,
+    "global_sigma_a_cv": 0.02273956119194029,
+    "heldout_global_core_cells": 60,
+    "heldout_global_core_pass_cells": 60,
+    "selected_beta": 4.0,
+    "selected_mu": 4.595119850134589,
+    "selected_reference_occupancy": 0.99
+  },
+  "collection": {
+    "checkpoint_nonstandard_nan_token_count": 401773,
+    "dvc_dir_hash": "02986be42c5b575ff8d7b75b3abad31c.dir",
+    "dvc_md5_all_match": true,
+    "file_count": 373,
+    "remote_sha256_all_match": true,
+    "size_bytes": 332322278
+  },
+  "directionality": {
+    "global_cell_count": 360,
+    "registered_global_cell_passes": 305,
+    "registered_global_pass": false,
+    "tolerance_1e-12_global_cell_passes": 354,
+    "tolerance_1e-12_global_pass": true
+  },
+  "exact_actual_texture_a1": {
+    "cells": 360,
+    "median_correlation": 0.7297472777811134,
+    "median_practical_fraction": 0.1901041666666666,
+    "median_projection": 0.9094532308667512,
+    "median_rms": 0.4153310901745995,
+    "practical_pass_cells": 23
+  },
+  "experiment_id": "EXP-062",
+  "global_actual_texture_a1": {
+    "cells": 360,
+    "median_actual_to_frozen_rms_ratio": 3.286234874626563,
+    "median_correlation": 0.7321689970367629,
+    "median_practical_fraction": 0.1927083333333333,
+    "median_projection": 0.9181556150722152,
+    "median_rms": 0.41753495039632416,
+    "minimum_actual_to_frozen_rms_ratio": 1.2626577513776163,
+    "practical_pass_cells": 24,
+    "projection_bootstrap_lower": 0.8731094934200944,
+    "texture_gate_pass_cells": 24
+  },
+  "global_edges_a1": {
+    "cells": 360,
+    "median_correlation": 0.8716756440116575,
+    "median_practical_fraction": 0.8827751196172249,
+    "median_rms": 1.5341582331470822,
+    "pass_cells": 360
+  },
+  "global_frozen_texture_a1": {
+    "cells": 360,
+    "median_correlation": 0.595449909773939,
+    "median_practical_fraction": 0.0807291666666666,
+    "median_projection": 0.2223831287257709,
+    "median_rms": 0.13167622050818484,
+    "practical_pass_cells": 0,
+    "projection_bootstrap_lower": 0.20145238340414398,
+    "texture_gate_pass_cells": 0
+  },
+  "hypothesis_effect": {
+    "narrow_positive_evidence": [
+      "global additive-core calibration",
+      "complete-h1 GNK edge transmission",
+      "tolerance-aware dose directionality",
+      "registered length stability"
+    ],
+    "refutes": [],
+    "supports": [],
+    "weakens": [
+      "HYP-005"
+    ]
+  },
+  "independent_tolerance_1e-12_required_checks": {
+    "overall_decision_unchanged": true,
+    "passed": 7,
+    "total": 9
+  },
+  "length_stability": {
+    "exact_slope": -0.113582768368266,
+    "exact_slope_ci": [
+      -0.1253135568539385,
+      -0.10254901347524413
+    ],
+    "global_slope": -0.10220742086428523,
+    "global_slope_ci": [
+      -0.11388430152289476,
+      -0.09011563353457504
+    ]
+  },
+  "public_model_changed": false,
+  "registered_decision": "CALIBRATED_SIGMOID_TRANSMISSION_FAILED",
+  "registered_required_checks": {
+    "passed": 6,
+    "total": 9
+  },
+  "run_id": "RUN-153",
+  "stage_4c_4d_4e_hard_stop_retained": true
+}

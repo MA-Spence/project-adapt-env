@@ -1,0 +1,29 @@
+id: ANA-021
+title: RUN-057 TEM-1 homologue walk parameter-grid diagnostic review
+status: completed
+created: '2026-05-15T09:27:08+10:00'
+owner: matthew-spence
+experiments:
+- EXP-021
+runs:
+- RUN-057
+purpose: Assess whether RUN-057 supports HYP-004 and HYP-005 by reviewing TEM-1 homologue
+  adaptive/random walk behaviour, consensus-distance trends, and directional parameter-grid
+  effects.
+path: analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-057
+  produced_artifacts:
+  - analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_background_summary_by_start_stratum.md
+  - analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_key_metrics.md
+  - analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_parameter_grid_summary.md
+  - analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_stability_margin_propagation_check.md
+  - analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_validation_tests.md
+  - analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_walk_summary_by_mode_and_stratum.md
+compliance:
+  level: green
+  issues: []

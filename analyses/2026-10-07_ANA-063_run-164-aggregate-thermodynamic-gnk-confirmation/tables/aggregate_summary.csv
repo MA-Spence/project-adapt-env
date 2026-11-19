@@ -1,0 +1,10 @@
+dataset,assay,family,joint_distance,bootstrap_low,bootstrap_high,calibration_distance,empirical_cubes,generated_cubes,generator_seeds,parameters
+gb1_wu2016_four_site_graphfla,GB1,additive,1.0567266122626424,0.776814622256758,1.5884202275942276,0.7929999624970359,24,64,8,"{""beta"": 4.0, ""family"": ""additive"", ""mixture"": 0, ""p0"": 0.99, ""ratio"": 0.0}"
+gb1_wu2016_four_site_graphfla,GB1,bare_gnk,2.103886723673383,1.795329932739408,2.5818371674054736,2.277857485768627,24,64,8,"{""family"": ""bare_gnk"", ""mixture"": 0, ""offset"": 0.0, ""scale"": 0.05}"
+gb1_wu2016_four_site_graphfla,GB1,composite,0.9564685437471563,0.651093319902189,1.5569256884937979,0.42065347359437766,24,64,8,"{""beta"": 2.0, ""family"": ""composite"", ""mixture"": 0, ""p0"": 0.99, ""ratio"": 1.0}"
+trpb_johnston2024_four_site_graphfla,TrpB,additive,2.517296948629303,2.221937923194218,3.051099491579933,3.30117793305587,24,64,8,"{""beta"": 2.0, ""family"": ""additive"", ""mixture"": 0, ""p0"": 0.99, ""ratio"": 0.0}"
+trpb_johnston2024_four_site_graphfla,TrpB,bare_gnk,0.13896071071924676,0.11322180270097433,0.37709978334817496,0.40904346853110307,24,64,8,"{""family"": ""bare_gnk"", ""mixture"": 1, ""offset"": 0.0, ""scale"": 0.05}"
+trpb_johnston2024_four_site_graphfla,TrpB,composite,0.5749866760317461,0.3942232009265965,0.9846559572836866,0.5530121899723228,24,64,8,"{""beta"": 0.5, ""family"": ""composite"", ""mixture"": 1, ""p0"": 0.8, ""ratio"": 4.0}"
+cr9114_h1_phillips2021_graphfla,CR9114-H1,additive,1.3221636774467656,1.1285799707907096,1.7114190055912504,0.8879783986902821,24,64,8,"{""beta"": 2.0, ""family"": ""additive"", ""mixture"": 0, ""p0"": 0.8, ""ratio"": 0.0}"
+cr9114_h1_phillips2021_graphfla,CR9114-H1,bare_gnk,0.2597872147523551,0.2000251384686926,0.5196044718069817,0.23864115265208197,24,64,8,"{""family"": ""bare_gnk"", ""mixture"": 0, ""offset"": 0.5, ""scale"": 0.1}"
+cr9114_h1_phillips2021_graphfla,CR9114-H1,composite,0.31085675709307214,0.20193295296890396,0.6217851472354881,0.15686541416848243,24,64,8,"{""beta"": 0.5, ""family"": ""composite"", ""mixture"": 1, ""p0"": 0.5, ""ratio"": 1.0}"

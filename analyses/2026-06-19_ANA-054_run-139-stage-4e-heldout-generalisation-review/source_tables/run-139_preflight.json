@@ -1,0 +1,8 @@
+{
+  "experiment_id": "EXP-056",
+  "mode": "stage_4e_heldout_generalisation",
+  "project_root": "/tank/data/labproj/staging/project-adapt-env/RUN-139/project",
+  "public_model_system": "additive_thermodynamic_gnk",
+  "quick": false,
+  "stage": "4E"
+}

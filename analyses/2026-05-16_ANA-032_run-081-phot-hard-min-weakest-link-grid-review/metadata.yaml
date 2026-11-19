@@ -1,0 +1,31 @@
+id: ANA-032
+title: RUN-081 PHOT hard-min weakest-link grid review
+status: completed
+created: '2026-05-16T23:08:25+10:00'
+owner: Codex
+experiments:
+- EXP-032
+runs:
+- RUN-081
+purpose: Assess whether the deterministic PHOT hard-min weakest-link grid supports
+  HYP-008 by improving assay fit and held-out graphlet ruggedness relative to frozen
+  RUN-077 controls.
+path: analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-081
+  produced_artifacts:
+  - analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/tables/run-081_assay_fit_comparison.md
+  - analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/tables/run-081_feature_plaquette_locality_test.md
+  - analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/tables/run-081_graphlet_distance_comparison.md
+  - analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/tables/run-081_graphlet_energy_locality_test.md
+  - analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/tables/run-081_hyp008_decision_table.md
+  - analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/tables/run-081_locality_covariance_test.md
+  - analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/tables/run-081_preflight_and_output_audit.md
+  - analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/tables/run-081_selected_graphlet_metrics.md
+compliance:
+  level: green
+  issues: []

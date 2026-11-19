@@ -1,0 +1,181 @@
+experiment_id: EXP-032
+title: PHOT hard-min coupled weakest-link landscape grid search
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-032
+  status: planned
+  planned_runner: scripts/phot_hard_min_coupled_landscape_grid_search.py
+  scientific_boundary:
+    primary_hypothesis: HYP-008
+    motivating_results:
+      - RES-030
+      - RES-031
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    no_abc_rule: freeze the RES-030/RUN-077 PHOT current-model fit; do not rerun ABC
+    hard_min_rule: evaluate f(x)=min(a(x), b(x)) with a(x) fixed to the fitted smooth/additive PHOT base
+    comparison_rule: compare assay fit, DFE, double-mutant epistasis, WHT/GFT, topology, and local energy against empirical PHOT, A-only, fitted-current, and GNK controls
+
+source_run:
+  run_id: RUN-077
+  result_id: RES-030
+  output_dir: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  dvc_pointer: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: frozen_current_phot_base_prepared_assay_and_empirical_graphlets
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    n_epistatic_terms: 220
+    epistasis_strength: 0.025
+    empirical_pairwise_strength: 0.025
+    pairwise_epistasis_rank: 2
+    epistasis_covariation_bias: 0.8
+    n_higher_order_epistatic_terms: 0
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 400
+    peak_search_top_single_starts: 8
+    peak_search_random_starts: 8
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+    seed: 42
+
+assay_fit:
+  primary_score_column: latent_phi
+  holdout_fraction: 0.20
+  neutral_effect_threshold: 0.05
+  evaluation_chunk_size: 4096
+  max_variants: 0
+
+phot_graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 8
+  top_feature_pool: 42
+
+graphlet_evaluation:
+  primary_score_column: latent_phi
+  score_columns:
+    - latent_phi
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+
+empirical_local_signal:
+  a_anchor: fitted_smooth_core_only
+  global_readout_polynomial_degree: 3
+  residual_definition: empirical_latent_phi_minus_polynomial_readout_of_fitted_smooth_core_A
+  primary_locality_metrics:
+    - edge_innovation_energy_concentration
+    - plaquette_innovation_energy_concentration
+    - graphlet_energy_concentration
+    - hard_min_switch_edge_fraction
+    - hard_min_switch_plaquette_fraction
+    - shared_feature_count_vs_energy_similarity
+
+hard_min_grid:
+  coefficient_seed: 20260516
+  auxiliary_seeds:
+    - 0
+  auxiliary_correlations:
+    - 0.60
+    - 0.80
+    - 0.95
+  auxiliary_scales:
+    - 0.75
+    - 1.00
+    - 1.25
+  auxiliary_offset_sds:
+    - -1.00
+    - -0.50
+    - 0.00
+    - 0.50
+    - 1.00
+  auxiliary_pairwise_scales:
+    - 0.00
+    - 0.20
+  auxiliary_pairwise_densities:
+    - 0.00
+    - 0.04
+
+analysis:
+  random_walk:
+    n_walks_per_graphlet: 20
+    steps: 32
+    lag_max: 5
+
+outputs:
+  output_dir_name: phot-hard-min-coupled-weakest-link-grid
+  expected_files:
+    - summary.json
+    - preflight.json
+    - parameter_grid.csv
+    - assay_fit_metrics.csv
+    - assay_dfe_metrics.csv
+    - assay_epistasis_metrics.csv
+    - assay_fit_rankings.csv
+    - graphlet_catalog.csv
+    - graphlet_metrics.csv
+    - walsh_terms.csv
+    - gft_coefficients.csv
+    - graphlet_summary.csv
+    - model_distances.csv
+    - top_model_distances.csv
+    - local_signal_by_graphlet.csv
+    - local_signal_energy_by_feature.csv
+    - local_signal_feature_energy_summary.csv
+    - local_signal_graphlet_energy_summary.csv
+    - locality_covariance_summary.csv
+    - empirical_readout_fit.json
+
+quick:
+  assay_fit:
+    max_variants: 2500
+    evaluation_chunk_size: 1024
+  phot_graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 2
+    top_feature_pool: 42
+  hard_min_grid:
+    coefficient_seed: 20260516
+    auxiliary_seeds:
+      - 0
+    auxiliary_correlations:
+      - 0.80
+    auxiliary_scales:
+      - 1.00
+    auxiliary_offset_sds:
+      - -0.50
+      - 0.50
+    auxiliary_pairwise_scales:
+      - 0.00
+      - 0.20
+    auxiliary_pairwise_densities:
+      - 0.00
+      - 0.04
+  analysis:
+    random_walk:
+      n_walks_per_graphlet: 4
+      steps: 12
+      lag_max: 3

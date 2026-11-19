@@ -1,0 +1,15 @@
+artifact,expected,observed,row_count
+preflight.json,True,True,
+reference_catalog.csv,True,True,24.0
+core_calibration_metrics.csv,True,True,1260.0
+calibration_selection.csv,True,True,18.0
+validation_edge_metrics.csv,True,True,17280.0
+validation_texture_metrics.csv,True,True,78120.0
+dose_response_metrics.csv,True,True,744.0
+scale_law_fits.csv,True,True,2.0
+acceptance_checks.csv,True,True,11.0
+summary.json,True,True,
+checkpoints/*.json,360,360,
+checkpoint non-standard NaN tokens,strict JSON would contain 0,401773,
+logs/labproj-exit-code.txt,0,0,
+logs/stderr.txt bytes,0,0,

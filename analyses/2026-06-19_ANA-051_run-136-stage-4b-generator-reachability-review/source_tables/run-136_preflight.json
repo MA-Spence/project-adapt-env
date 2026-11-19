@@ -1,0 +1,8 @@
+{
+  "experiment_id": "EXP-053",
+  "mode": "stage_4b_generator_reachability",
+  "project_root": "/tank/data/labproj/staging/project-adapt-env/RUN-136/project",
+  "public_model_system": "additive_thermodynamic_gnk",
+  "quick": false,
+  "stage": "4B"
+}

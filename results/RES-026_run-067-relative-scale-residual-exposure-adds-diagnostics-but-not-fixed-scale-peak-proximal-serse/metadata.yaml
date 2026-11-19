@@ -1,0 +1,63 @@
+id: RES-026
+title: RUN-067 relative-scale residual exposure adds diagnostics but not a fixed-scale
+  peak-proximal SE/RSE mechanism
+status: completed
+created: '2026-05-15T19:15:33+10:00'
+owner: matthew-spence
+analyses:
+- ANA-026
+experiments:
+- EXP-026
+runs:
+- RUN-067
+supports:
+- HYP-005
+weakens:
+- HYP-004
+refutes: []
+motivates: []
+supersedes: []
+summary: The scaled relative-scale graphlet repeat fixed RUN-065's sampling defect
+  and showed that residual exposure correlates with high-order spectra and local topology,
+  but fixed walk-initial residual scaling did not produce a clean peak-proximal SE/RSE
+  increase and matched controls still weaken contact-specific biological interpretation.
+artifacts:
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/metrics.json
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_key_metrics.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_graphlet_sampling_audit.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_diminishing_returns_by_walk_stage.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_selected_test_model_comparison.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_contact_calibration_test_transfer.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_walk_stage_relative_scale.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_primary_by_start_class.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_relative_scale_correlations.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_validation_tests.md
+- results/RES-026_run-067-relative-scale-residual-exposure-adds-diagnostics-but-not-fixed-scale-peak-proximal-serse/metrics.json
+evidence_paths:
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/metrics.json
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_key_metrics.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_graphlet_sampling_audit.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_diminishing_returns_by_walk_stage.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_selected_test_model_comparison.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_contact_calibration_test_transfer.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_walk_stage_relative_scale.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_primary_by_start_class.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_relative_scale_correlations.md
+- analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review/tables/run-067_validation_tests.md
+- results/RES-026_run-067-relative-scale-residual-exposure-adds-diagnostics-but-not-fixed-scale-peak-proximal-serse/metrics.json
+- data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067/summary.json
+- data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067/module_parameter_sweep.csv
+- data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067/graphlet_catalog.csv
+- data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067/calibration_graphlet_metrics.csv
+- data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067/test_graphlet_metrics.csv
+- data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067/graphlet_walsh_terms.csv
+- data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067/graphlet_gft_coefficients.csv
+- data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067/graphlet_accessibility.csv
+- data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067.dvc
+- experiments/2026-05-15_EXP-026_tem1-relative-scale-residual-exposure-graphlet-diagnostic/config.yaml
+- experiments/2026-05-15_EXP-026_tem1-relative-scale-residual-exposure-graphlet-diagnostic/runs/RUN-067.yaml
+- results/RES-025_run-065-aggregate-residuals-create-local-topology-but-fail-broad-procedural-generalization/result.md
+- results/RES-024_run-063-dca-clique-haplotype-terms-create-controllable-high-order-walsh-signal-but-limited-topology/result.md
+compliance:
+  level: green
+  issues: []

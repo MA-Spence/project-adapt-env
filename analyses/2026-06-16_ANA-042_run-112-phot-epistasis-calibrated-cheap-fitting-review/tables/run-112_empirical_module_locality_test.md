@@ -1,0 +1,7 @@
+| parameter_set_id                                    |   edge_module_effective_module_count |   edge_module_normalized_entropy |   plaquette_module_effective_module_count |   plaquette_module_normalized_entropy |
+|:----------------------------------------------------|-------------------------------------:|---------------------------------:|------------------------------------------:|--------------------------------------:|
+| empirical_module__local_abc_after_cheap_fit_rank001 |                              11.415  |                         0.989558 |                                   8.43087 |                              0.91862  |
+| empirical_module__surrogate_train_0018              |                              11.4851 |                         0.990885 |                                   8.78745 |                              0.929903 |
+| empirical_module__deterministic_0034                |                              11.556  |                         0.992174 |                                   9.77483 |                              0.956131 |
+| empirical_module__RUN-098_posterior_rank007         |                              11.7245 |                         0.995263 |                                  10.5109  |                              0.971552 |
+| empirical_module__exact_gate_promoted_0001          |                              11.7871 |                         0.996373 |                                  10.7237  |                              0.975807 |

@@ -1,0 +1,42 @@
+experiment_id: EXP-065
+protocol: observation_aware_calibration_v1
+data:
+  root: data/processed/trpb-replicate-observation-exp065
+sampling:
+  empirical_seed: 652001
+  calibration_cubes: 64
+  confirmation_cubes: 64
+  donor_split_seed: 652101
+  training_fraction: 0.8
+  observation_seed: 652201
+  fit_observation_draws: 8
+  confirmation_observation_draws: 32
+  synthetic_cubes_per_seed: 8
+  calibration_seeds: [652301, 652302, 652303, 652304, 652305, 652306, 652307, 652308]
+  confirmation_seeds: [652401, 652402, 652403, 652404, 652405, 652406, 652407, 652408, 652409, 652410, 652411, 652412, 652413, 652414, 652415, 652416]
+model:
+  representation_rank: 8
+  reference_rank: 0.5
+  order_weights: [0.35, 0.45, 0.20]
+  arms: [r4_linear, r4_sigmoid, r0_sigmoid]
+measurement:
+  # Raw published fitness units; availability checks, never scientific success gates.
+  resolution: 0.00066408129
+  sensitivity_resolutions: [0.000000000001, 0.00066408129, 0.0066408129]
+  activity_cutoffs: [0.05396940664223584, 0.05369397352521348]
+observation:
+  count_quantiles: [0.25, 0.5, 0.75]
+  modes: [independent_difference, shared_stop_sensitivity]
+  minimum_donors_per_cell: 30
+fit:
+  optimizer: differential_evolution
+  seed: 652501
+  maxiter: 60
+  popsize: 8
+  quantiles: 101
+  # Parameters: offset, log(scale), and (sigmoids only) position, log(steepness).
+  offset_bounds: [-0.10, 0.10]
+  scale_bounds: [0.001, 2.0]
+  position_bounds: [-14.0, 4.0]
+  steepness_bounds: [0.05, 8.0]
+  objective: quantile_MSE_over_empirical_variance + relative_mean_within_cube_SD_error_squared + near_floor_CDF_error_squared

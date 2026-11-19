@@ -1,0 +1,30 @@
+{
+  "remote_hashes": 162,
+  "output_hashes": 73,
+  "submitted_source_hashes": 8,
+  "input_hashes": 14,
+  "empirical_measurements": 768,
+  "activity_flags": 193170,
+  "excluded_genotypes": 1664,
+  "synthetic_pair_cubes": 131584,
+  "synthetic_statistic_rows": 394752,
+  "empirical_statistic_rows": 144,
+  "empirical_mutation_rows": 1728,
+  "replayed_observation_values": 4210688,
+  "maximum_statistic_absolute_error": 3.0831688491161913e-06,
+  "comparison_rtol": 2e-07,
+  "comparison_atol": 2e-10,
+  "component_rtol": 1e-10,
+  "component_atol": 2e-12,
+  "versions": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.0",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.4.0"
+  },
+  "independently_reaggregated_synthetic_summary_rows": 1440,
+  "empirical_bootstrap_rows_reproduced": 108,
+  "analysis_source_sha256": "04f1229a674c0e215d1b2194ed838d0211ec3c6a09ff509d4c312e8813770f74"
+}

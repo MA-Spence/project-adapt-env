@@ -1,0 +1,30 @@
+id: ANA-034
+title: RUN-086 PHOT budgeted module-tied soft-min ABC review
+status: completed
+created: '2026-05-17T10:00:35+10:00'
+owner: Codex
+experiments:
+- EXP-034
+runs:
+- RUN-086
+purpose: Assess whether the PHOT budgeted module-tied soft-min ABC run supports HYP-008
+  by improving calibration-selected held-out graphlet topology, spectra, locality,
+  and assay guardrails relative to frozen RUN-077 controls.
+path: analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-086
+  produced_artifacts:
+  - analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/tables/run-086_assay_fit_comparison.md
+  - analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/tables/run-086_graphlet_distance_comparison.md
+  - analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/tables/run-086_hyp008_decision_table.md
+  - analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/tables/run-086_locality_tests.md
+  - analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/tables/run-086_preflight_and_output_audit.md
+  - analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/tables/run-086_selected_graphlet_metrics.md
+  - analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/tables/run-086_smc_posterior_summary.md
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,133 @@
+{
+  "analysis_id": "ANA-025",
+  "experiment_id": "EXP-025",
+  "run_id": "RUN-065",
+  "run_status": "completed",
+  "scheduler_job_id": "226",
+  "scheduler_exit_code": "0",
+  "dvc_pointer": "data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065.dvc",
+  "run_counts": {
+    "n_alignment_sequences": 768,
+    "n_landscape_seeds": 2,
+    "n_starts": 20,
+    "n_walk_rows": 1000,
+    "n_graphlet_backgrounds": 240,
+    "n_graphlets": 240,
+    "calibration_graphlets": 127,
+    "test_graphlets": 113,
+    "n_parameter_sets": 25,
+    "n_metric_rows": 6000,
+    "n_walsh_rows": 720000,
+    "n_gft_rows": 720000,
+    "n_sign_pair_rows": 111000
+  },
+  "sampling_audit": {
+    "start_class_counts": {
+      "reference_or_consensus_like": 4,
+      "high_fitness_close_homologue": 4,
+      "marginal_stability_homologue": 4,
+      "distant_low_fitness_homologue": 4,
+      "viable_off_consensus": 4
+    },
+    "background_start_class_counts": {
+      "reference_or_consensus_like": 48,
+      "high_fitness_close_homologue": 48,
+      "marginal_stability_homologue": 48,
+      "distant_low_fitness_homologue": 48,
+      "viable_off_consensus": 48
+    },
+    "graphlet_start_class_counts": {
+      "reference_or_consensus_like": 240
+    },
+    "sampling_limitation": "All evaluated graphlets came from reference_or_consensus_like starts."
+  },
+  "selected_primary_contact_residual": {
+    "parameter_set_id": "contact_residual_ensemble__pset-002",
+    "calibration": {
+      "sign_epistasis_fraction": 0.3201956200787402,
+      "reciprocal_sign_epistasis_fraction": 0.09561070491188602,
+      "n_local_maxima": 3.661417322834646,
+      "accessible_path_fraction": 0.03693678915135608,
+      "random_walk_lag1_autocorrelation": 0.5077640781911152,
+      "walsh_high_order_fraction": 0.06875187428035005,
+      "gft_low_energy_fraction": 0.7915693158649287,
+      "gft_mid_energy_fraction": 0.20755039508270492,
+      "gft_high_energy_fraction": 0.0008802890523661403
+    },
+    "test": {
+      "sign_epistasis_fraction": 0.3212507901390645,
+      "reciprocal_sign_epistasis_fraction": 0.10298244574378423,
+      "n_local_maxima": 3.5398230088495577,
+      "accessible_path_fraction": 0.034961239289226016,
+      "random_walk_lag1_autocorrelation": 0.4976458791897954,
+      "walsh_high_order_fraction": 0.07367618158520961,
+      "gft_low_energy_fraction": 0.7718509511628998,
+      "gft_mid_energy_fraction": 0.21973000305049437,
+      "gft_high_energy_fraction": 0.008419045786606266
+    }
+  },
+  "heldout_test_comparators": {
+    "smooth_core_only": {
+      "sign_epistasis_fraction": 0.0,
+      "reciprocal_sign_epistasis_fraction": 0.0,
+      "n_local_maxima": 1.0,
+      "accessible_path_fraction": 0.30973451327433627,
+      "random_walk_lag1_autocorrelation": 0.6455125945913293,
+      "walsh_high_order_fraction": 4.316932731478474e-28
+    },
+    "res024_exact_match_haplotype_strength_750": {
+      "sign_epistasis_fraction": 0.055697890328697854,
+      "reciprocal_sign_epistasis_fraction": 0.03934365781710915,
+      "n_local_maxima": 1.920353982300885,
+      "accessible_path_fraction": 0.003539823008849558,
+      "random_walk_lag1_autocorrelation": 0.49733298808610776,
+      "walsh_high_order_fraction": 0.1814085552836681
+    },
+    "shuffled_contact_residual_pset_002": {
+      "sign_epistasis_fraction": 0.2980671223135271,
+      "reciprocal_sign_epistasis_fraction": 0.09450754582806575,
+      "n_local_maxima": 3.398230088495575,
+      "accessible_path_fraction": 0.03841107423795477,
+      "random_walk_lag1_autocorrelation": 0.5161198664977618,
+      "walsh_high_order_fraction": 0.05270711153707588
+    },
+    "random_position_residual_pset_002": {
+      "sign_epistasis_fraction": 0.28010265223345976,
+      "reciprocal_sign_epistasis_fraction": 0.09535036083017279,
+      "n_local_maxima": 3.504424778761062,
+      "accessible_path_fraction": 0.0521158168282062,
+      "random_walk_lag1_autocorrelation": 0.5042249229129026,
+      "walsh_high_order_fraction": 0.06634404199505632
+    },
+    "dca_pair_override_strength_0_6": {
+      "sign_epistasis_fraction": 0.44411313474504843,
+      "reciprocal_sign_epistasis_fraction": 0.13348181363253267,
+      "n_local_maxima": 6.017699115044247,
+      "accessible_path_fraction": 0.007694198623402163,
+      "random_walk_lag1_autocorrelation": 0.481391681150803,
+      "walsh_high_order_fraction": 1.3520473064757332e-28
+    },
+    "gnk_local_null_pset_001": {
+      "sign_epistasis_fraction": 0.627056336915297,
+      "reciprocal_sign_epistasis_fraction": 0.2769865412979351,
+      "n_local_maxima": 11.858407079646017,
+      "accessible_path_fraction": 0.008915402444163507,
+      "random_walk_lag1_autocorrelation": 0.19981261729536443,
+      "walsh_high_order_fraction": 0.45323969169344114
+    }
+  },
+  "validation_status_counts": {
+    "PASS": 5,
+    "MIXED": 2,
+    "FAIL": 4
+  },
+  "hypothesis_effect": {
+    "supports": [
+      "HYP-005"
+    ],
+    "weakens": [
+      "HYP-004"
+    ],
+    "refutes": []
+  }
+}

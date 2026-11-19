@@ -1,0 +1,8 @@
+{
+  "experiment_id": "EXP-052",
+  "mode": "stage_4a_empirical_reference_distribution",
+  "project_root": "/tank/data/labproj/staging/project-adapt-env/RUN-135/project",
+  "public_model_system": "additive_thermodynamic_gnk",
+  "quick": false,
+  "stage": "4A"
+}

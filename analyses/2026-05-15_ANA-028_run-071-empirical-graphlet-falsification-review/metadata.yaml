@@ -1,0 +1,32 @@
+id: ANA-028
+title: RUN-071 empirical graphlet falsification review
+status: completed
+created: '2026-05-15T22:27:04+10:00'
+owner: matthew-spence
+experiments:
+- EXP-028
+runs:
+- RUN-071
+purpose: Review the EXP-028 empirical graphlet falsification suite, including the
+  six preregistered falsifiers, empirical spectral envelope, synthetic-control comparisons,
+  nonlinear readout confounding, and implications for HYP-004 and HYP-005.
+path: analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-071
+  produced_artifacts:
+  - analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_empirical_assay_audit.md
+  - analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_empirical_observed_by_assay_dimension.md
+  - analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_falsification_tests.md
+  - analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_fixed_scale_directionality.md
+  - analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_global_readout_confounding.md
+  - analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_key_metrics.md
+  - analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_primary_empirical_readout_components.md
+  - analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_sampling_audit.md
+  - analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_synthetic_empirical_best_by_model.md
+compliance:
+  level: green
+  issues: []

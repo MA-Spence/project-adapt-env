@@ -1,0 +1,14 @@
+PHOT_CHLRE_Chen_2023.alignment.fasta	74752
+abc_comparator_selected_family_distances.csv	18173
+bounded_gate_candidates.csv	116295
+bounded_gate_distances.csv	25846
+bounded_gate_equivalence.csv	4444
+gft_coefficients.csv	6404642
+graphlet_catalog.csv	2209
+graphlet_metrics.csv	713761
+graphlet_summary.csv	36759
+module_catalog.csv	4004
+preflight.json	2209
+selected_bounded_gate_candidates.csv	15213
+summary.json	1764
+walsh_terms.csv	6167423

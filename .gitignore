@@ -15,6 +15,17 @@ environment/.venv/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+.pytest_cache/
+
+# Local execution caches and copied run payloads are archived through DVC.
+.labproj/
+experiments/**/outputs/
+experiments/**/runs/**/checkpoints/
+experiments/**/logs/*
+!experiments/**/logs/.gitkeep
+
+.dvc/cache/
+.dvc/tmp/
 
 data/raw/*
 data/interim/*
@@ -25,8 +36,28 @@ data/external/*
 !data/processed/.gitkeep
 !data/external/.gitkeep
 !data/**/*.dvc
+!data/processed/aggregate-thermodynamic-gnk-calibration/
+data/processed/aggregate-thermodynamic-gnk-calibration/*
+!data/processed/aggregate-thermodynamic-gnk-calibration/*.dvc
+!data/processed/aggregate-thermodynamic-gnk-calibration/.gitignore
 
 results/models/*
 results/predictions/*
 !results/.gitkeep
 !results/**/*.dvc
+
+scratch/
+
+# Production EXP-066 data: keep pointers and routing metadata in Git.
+!data/processed/production_landscapes/
+data/processed/production_landscapes/*
+!data/processed/production_landscapes/*.dvc
+!data/processed/production_landscapes/.gitignore
+!data/processed/production_landscapes/README.md
+!data/processed/production_landscapes/*.location.json
+
+# Keep the model snapshot pointer, not its source/wheel/data payloads.
+!data/processed/model-release-candidates/
+data/processed/model-release-candidates/*
+!data/processed/model-release-candidates/*.dvc
+!data/processed/model-release-candidates/.gitignore

@@ -1,0 +1,107 @@
+id: EXP-042
+type: experiment
+title: PHOT nested-min cheaper fitting protocol equivalence benchmark
+slug: phot-nested-min-cheap-fitting-equivalence-benchmark
+status: planned
+created: '2026-06-16T11:11:58+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-038
+  - EXP-039
+  - EXP-041
+  motivating_results:
+  - RES-038
+  - RES-039
+  - RES-040
+question: Can deterministic summary-loss optimization, surrogate-assisted fitting,
+  exact-descriptive-gated fitting, and local ABC initialized from cheap fits recover
+  PHOT nested min-coupled residual landscape behavior similar to the previously computed
+  full ABC fit, well enough to justify scaling the protocol to complete GB1, TrpB,
+  and related combinatorial landscapes?
+pre_experiment_prediction: At least one cheaper protocol will approach the full RUN-098
+  nested-min ABC comparator on held-out PHOT graphlet distance and component summaries,
+  but parameter equality is not required and failures will be judged on graphlet spectral,
+  epistasis, local ruggedness, accessibility, and diminishing-return summaries.
+rationale: Full SMC-ABC is too expensive to use as the default fitting protocol for
+  complete 160,000-variant landscapes. This experiment keeps the latest PHOT nested
+  min-coupled sequential residual model family fixed and tests cheaper search protocols
+  against the already computed full ABC comparator before using those protocols on
+  larger complete empirical landscapes.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  - scripts/phot_nested_fit_protocol_benchmark.py
+  - scripts/phot_nested_softmin_ensemble_abc.py
+  - scripts/phot_coupled_family_discriminating_abc.py
+  - src/project_adapt_env/smc_abc.py
+  datasets:
+  - id: RUN-077
+    role: frozen PHOT prepared-assay, current-model base fit, and empirical graphlet
+      source
+    path: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  - id: RUN-098
+    role: full nested-min sequential residual ABC comparator
+    path: data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - progress.json
+  - locked_first_stage_transform.json
+  - graphlet_catalog.csv
+  - module_catalog.csv
+  - fit_protocol_candidates.csv
+  - selected_fit_protocol_candidates.csv
+  - local_abc_rounds.csv
+  - local_abc_parameter_specs.csv
+  - fit_protocol_distances.csv
+  - fit_protocol_equivalence.csv
+  - graphlet_metrics.csv
+  - graphlet_summary.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - module_energy_summary.csv
+  - abc_comparator_selected_family_distances.csv
+  - full_abc_comparator_selected_particles.csv
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

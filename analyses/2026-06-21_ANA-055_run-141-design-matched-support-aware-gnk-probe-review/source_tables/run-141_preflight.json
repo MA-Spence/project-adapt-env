@@ -1,0 +1,9 @@
+{
+  "experiment_id": "EXP-057",
+  "mode": "design_matched_support_aware_probe",
+  "project_root": "/tank/data/labproj/staging/project-adapt-env/RUN-141/project",
+  "public_model_system": "additive_thermodynamic_gnk",
+  "quick": false,
+  "scratch_design_source": "scratch/RES-054_assessment_and_path_to_finishing_component1.md#3",
+  "stage": "4B-fixed-probe"
+}

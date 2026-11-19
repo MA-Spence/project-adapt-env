@@ -1,0 +1,346 @@
+experiment_id: EXP-061
+title: Operator-normalized GNK sigmoid-transmission paired-residual validation
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  mode: operator_normalized_gnk_sigmoid_transmission
+  disable_scientific_decision: false
+  scientific_boundary:
+    aim: AIM-001
+    primary_hypothesis: HYP-005
+    previous_experiment: EXP-060
+    motivating_results: [RES-055, RES-057, RES-058]
+    estimands:
+      pointwise_residual: F_theta(A_plus_wG) - F_theta(A)
+      edge_residual: delta_F_full - delta_F_core
+      plaquette_residual: epsilon_F_full - epsilon_F_core
+    forbidden_claims:
+      - empirical_fitness_realism
+      - optimizer_performance
+      - accessibility_validation
+      - public_model_replacement
+      - biological_necessity_of_extensive_support
+
+references:
+  source_config: experiments/2026-07-22_EXP-060_extensive-operator-normalized-gnk-latent-scale-law-validation/config.yaml
+  source_section: references
+  quick_reference_ids: [sr43c_48, phot_118, gfp_238]
+
+replication:
+  independent_unit: generator_seed
+  seeds:
+    - 2601
+    - 2602
+    - 2603
+    - 2604
+    - 2605
+    - 2606
+    - 2607
+    - 2608
+    - 2609
+    - 2610
+    - 2611
+    - 2612
+    - 2613
+    - 2614
+    - 2615
+    - 2616
+    - 2617
+    - 2618
+    - 2619
+    - 2620
+    - 2621
+    - 2622
+    - 2623
+    - 2624
+    - 2625
+    - 2626
+    - 2627
+    - 2628
+    - 2629
+    - 2630
+
+additive_core:
+  implementation: external/Adapt-Env/adaptenv/landscape.py
+  model_system: additive_thermodynamic_gnk
+  observed_fitness_combine_mode: stability_gate
+  generic_epistasis_target: stability
+  alphabet_size: 20
+  stability_scale: 1.0
+  use_blosum_kernel: true
+  blosum_blend: 0.5
+  disable_gnk_during_construction: true
+  disable_legacy_epistasis: true
+  disable_noise_and_peak_lock: true
+
+candidate:
+  arm: extensive_balanced_bounded
+  implementation: src/project_adapt_env/extensive_gnk.py
+  seed_offset: 30000
+  orders: [2, 3, 4]
+  order_weights: [0.35, 0.45, 0.20]
+  target_degrees: [6, 11, 7]
+  reference_centered: true
+  coefficient_rule: exact_uniform_background_mutation_operator_energy
+
+legacy_control:
+  public_arm: legacy_public_global_fixed
+  local_normalized_arm: legacy_support_local_normalized
+  terms: 256
+  min_order: 2
+  max_order: 4
+  order_weights: [0.35, 0.45, 0.20]
+  support_mode: structured
+  seed_offset: 10000
+  local_normalization_operator: uniform_q20_nonself_substitution
+  reference_center_local_normalized: true
+
+additive_surrogate:
+  arm: additive_surrogate
+  seed_offset: 50000
+  order: 1
+  reference_centered: true
+  mutation_operator_rms_match: extensive_balanced_bounded
+  role: distinguish_sigmoid_curvature_epistasis_from_latent_gnk_texture
+
+readout:
+  function: output_scale_times_logistic_of_steepness_times_margin
+  threshold_steepness: 20.0
+  output_scale: 10.0
+  public_margin: 8.0
+  public_base:
+    model_system: additive_thermodynamic_gnk
+    observed_fitness_combine_mode: stability_gate
+    generic_epistasis_target: stability
+    stability_margin: 8.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    gnk_epistasis_weight: 0.6
+    gnk_terms: 256
+    evaluation_add_noise: false
+  deployment_margins:
+    base_template_margin8: 8.0
+    python_constructor_default: 10.0
+  mechanistic_reference_occupancies: [0.10, 0.50, 0.90, 0.99]
+  pointwise_occupancies: [0.10, 0.50, 0.90, 0.99]
+  dynamic_occupancy_band: [0.05, 0.95]
+  operating_point_scopes:
+    pointwise_occupancy:
+      theta_rule: set_per_genotype_from_additive_score_and_target_occupancy
+      permitted_estimands: [pointwise_residual, normalized_secant_gain, linearization]
+      forbidden_inference: landscape_topology
+    reference_anchored:
+      theta_rule: set_once_from_reference_additive_score_and_target_occupancy
+      frozen_across: [genotypes, weights, arms]
+      permitted_estimands: [edge_residual, plaquette_residual]
+    deployment:
+      theta_rule: additive_core_threshold_at_declared_margin
+      frozen_across: [genotypes, weights, arms]
+      evaluate_direct_float64_and_stable_residual: true
+  detection_thresholds:
+    numerical_nonzero: 1.0e-12
+    existing_diagnostic: 0.02
+    optional_fixed_sigma_example: 0.05
+    heuristic_practical_resolution_floor: 0.10
+  pointwise_latent_shift_abs_floor: 1.0e-10
+  pointwise_near_zero_rule: use_analytic_continuous_limit
+
+intervention:
+  dimensionless_amplitudes: [0.0, 0.25, 0.50, 1.0, 2.0, 4.0]
+  amplitude_definition: threshold_steepness_times_weight_times_candidate_mutation_operator_rms
+  weight_rule: derive_per_reference_seed_from_candidate_analytic_operator_energy
+  fixed_weights: [0.6, 1.0]
+  deployment_weight: 0.6
+  working_local_gnk_rms: analytic_per_field
+  same_numeric_weight_across_paired_arms: true
+
+probe:
+  regimes: [reference_shell, uniform_background]
+  complete_reference_single_mutant_panel: true
+  single_mutant_replacements_per_site: 19
+  uniform_background_single_mutant_pairs: 512
+  fractional_hamming_distances: ["0.1L", "0.5L"]
+  pairs_per_fractional_distance: 512
+  eval_chunk_size: 2048
+  square_strata:
+    - candidate_supported_order_2
+    - candidate_supported_order_3
+    - candidate_supported_order_4
+    - uniform_site_pair
+  squares_per_stratum: 256
+  square_backgrounds: [reference, uniform_q20]
+  square_core_modes: [actual_additive_core, frozen_additive_core]
+  candidate_additivized_counterfactual:
+    enabled: true
+    rule: G_ab_null_equals_G_a_plus_G_b_minus_G_0
+    estimand: tau_texture_equals_epsilon_R_actual_minus_epsilon_R_additivized
+    hold_fixed: [A_0, A_a, A_b, A_ab, G_0, G_a, G_b]
+  mutation_operator:
+    site_distribution: uniform_without_replacement
+    source_distribution_uniform_background: uniform_q20
+    replacement_distribution: uniform_over_19_nonself_states
+  sampling_key_excludes: [arm, weight, readout_scope, occupancy, additive_core_mode]
+
+acceptance:
+  alpha: 0.05
+  bootstrap_replicates: 10000
+  bootstrap_seed: 61061
+  bootstrap_unit: generator_seed
+  bootstrap_pairing: references_within_seed
+  permutation_replicates: 1000
+  permutation_unit: within_reference_seed_stratum
+  permutation_tail: greater
+  permutation_statistic: supported_candidate_tau_texture_projection
+  identity_atol: 1.0e-12
+  zero_weight_atol: 0.0
+  occupancy_atol: 1.0e-12
+  public_formula_parity_atol: 1.0e-12
+  reference_center_atol: 1.0e-12
+  additive_surrogate_latent_epistasis_atol: 1.0e-12
+  minimum_stratum_observations: 32
+  minimum_stratum_seed_coverage_fraction_per_length: 0.80
+  operational_detection_threshold: 0.10
+  operational_resolution_sigma_multiple: 2.0
+  central_pointwise_occupancy: 0.50
+  central_pointwise_amplitude: 0.50
+  pointwise_gamma_median_min: 0.75
+  pointwise_detectable_fraction_min: 0.90
+  shoulder_gamma_median_min: 0.20
+  linearization_amplitude: 0.50
+  linearization_nrmse_max: 0.25
+  linearization_correlation_min: 0.90
+  reference_texture_occupancy: 0.50
+  reference_texture_projection_amplitude: 0.50
+  reference_texture_detection_amplitude: 1.00
+  transmission_correlation_min: 0.50
+  transmission_projection_positive_seed_fraction_min: 0.80
+  texture_permutation_pass_fraction_min: 0.80
+  texture_detectable_fraction_min: 0.25
+  local_slope_abs_max: 0.15
+  local_slope_ci_abs_max: 0.25
+  topology_non_tie_agreement_min: 1.0
+  deployment_detectable_fraction_min: 0.25
+  deployment_projection_positive_seed_fraction_min: 0.80
+  require_actual_core_texture_for_transition_pass: true
+  require_public_base_margin8_for_public_pass: true
+  constructor_margin10_comparator_required_for_execution: true
+  pointwise_calibration_is_technical_not_scientific: true
+  texture_projection_definition: sum_epsilon_g_times_epsilon_r_divided_by_sum_epsilon_g_squared
+  texture_projection_bootstrap_lower_min: 0.0
+  texture_permutation_alpha: 0.05
+  texture_permutation_alternative: greater
+  texture_permutation_within:
+    - reference_id
+    - generator_seed
+    - support_order
+    - additive_core_mode
+    - occupancy
+    - weight
+  require_supported_candidate_vs_permuted_null: true
+  require_candidate_additivized_texture_excess: true
+  require_additive_surrogate_observable_epistasis_report: true
+  minimum_nonzero_texture_count: 32
+  minimum_texture_predictor_variance: 1.0e-16
+  deployment_decision_values: direct_public_float64
+  stable_deployment_residual_role: attenuation_diagnostic_only
+
+decision_rule:
+  public_pass: CANDIDATE_GNK_MARGIN8_NOISELESS_PUBLIC_READOUT_TRANSMISSION_VALIDATED
+  transition_only: TRANSITION_REGION_GNK_TRANSMISSION_VALIDATED_PUBLIC_POINT_SATURATED
+  frozen_core_only: GNK_TEXTURE_ONLY_IN_FROZEN_CORE
+  transfer_fail: SIGMOID_TRANSFER_FAILED
+  texture_fail: SIGMOID_TRANSMISSION_NOT_ESTABLISHED
+  technical_fail: EXECUTION_OR_PAIRING_INVALID
+  quick: QUICK_SMOKE_ONLY_NO_SCIENTIFIC_DECISION
+  downstream_on_any_outcome: retain_stage_4c_4d_4e_hard_stop_pending_separate_empirical_validation
+
+outputs:
+  expected:
+    - preflight.json
+    - design_catalog.csv
+    - occupancy_calibration.csv
+    - paired_residual_metrics.csv
+    - mutation_transmission_metrics.csv
+    - epistasis_transmission_metrics.csv
+    - topology_audit.csv
+    - scale_law_fits.csv
+    - acceptance_checks.csv
+    - summary.json
+  checkpoint_unit: [reference_id, generator_seed, effective_config_hash, implementation_hash]
+  atomic_writes: true
+  sufficient_statistics_required:
+    identifiers:
+      - reference_id
+      - length
+      - generator_seed
+      - arm
+      - readout_scope
+      - operating_point
+      - weight_label
+      - weight
+      - sample_id
+      - occupancy_stratum
+      - square_stratum
+      - square_background
+      - additive_core_mode
+    pair_tables:
+      - pairing_hash
+      - core_occupancy_source_mean
+      - core_occupancy_target_mean
+      - delta_A_mean
+      - stable_sum_x
+      - stable_sum_y
+      - stable_sum_x2
+      - stable_sum_y2
+      - stable_sum_xy
+      - direct_sum_x
+      - direct_sum_y
+      - direct_sum_x2
+      - direct_sum_y2
+      - direct_sum_xy
+    square_table:
+      - square_hash
+      - support_order
+      - latent_epsilon_rms
+      - stable_tau_sum_x
+      - stable_tau_sum_y
+      - stable_tau_sum_x2
+      - stable_tau_sum_y2
+      - stable_tau_sum_xy
+      - direct_tau_sum_x
+      - direct_tau_sum_y
+      - direct_tau_sum_x2
+      - direct_tau_sum_y2
+      - direct_tau_sum_xy
+      - observed_projection
+      - null_mean
+      - null_q95
+      - one_sided_pvalue
+      - permutation_seed
+  implementation_hash_components:
+    - scripts/extensive_gnk_sigmoid_transmission_exp061.py
+    - scripts/extensive_gnk_latent_scaling_exp060.py
+    - src/project_adapt_env/extensive_gnk.py
+    - external/Adapt-Env/adaptenv/landscape.py
+    - external/Adapt-Env/adaptenv/presets.py
+    - external/Adapt-Env/.config.yaml
+
+quick:
+  experiment:
+    disable_scientific_decision: true
+  replication:
+    seeds: [2601, 2602]
+  intervention:
+    dimensionless_amplitudes: [0.0, 0.5, 1.0]
+    fixed_weights: [0.6]
+  readout:
+    mechanistic_reference_occupancies: [0.10, 0.50]
+    pointwise_occupancies: [0.10, 0.50]
+  probe:
+    pairs_per_fractional_distance: 64
+    squares_per_stratum: 32
+    eval_chunk_size: 512
+  acceptance:
+    bootstrap_replicates: 200
+    permutation_replicates: 100

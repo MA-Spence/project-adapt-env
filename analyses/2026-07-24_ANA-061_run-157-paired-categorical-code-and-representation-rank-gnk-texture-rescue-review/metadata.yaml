@@ -1,0 +1,37 @@
+id: ANA-061
+title: RUN-157 paired categorical-code and representation-rank GNK texture rescue
+  review
+status: completed
+created: '2026-07-24T07:10:19+10:00'
+owner: matthew-spence
+experiments:
+- EXP-063
+runs:
+- RUN-157
+purpose: Collect and independently audit completed RUN-157 against the preregistered
+  EXP-063 pairing, manipulation, core, edge, texture, midpoint-control, dose-directionality,
+  length-stability, paired-superiority, decision, and provenance gates without post
+  hoc retuning.
+path: analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review
+notebook_record:
+  primary_notebook_path: analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-157
+  produced_artifacts:
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/metrics.json
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_acceptance_audit.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_arm_by_length.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_arm_summary.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_collection_audit.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_dose_curve.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_factorial_effects.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_paired_effects.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_protocol_output_audit.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_representation_audit.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_scale_law_summary.csv
+  - analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_source_hash_audit.csv
+compliance:
+  level: green
+  issues: []

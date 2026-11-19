@@ -1,0 +1,22 @@
+| fit_method                 | candidate_family   |   sum |   count |   fraction |
+|:---------------------------|:-------------------|------:|--------:|-----------:|
+| deterministic_summary_loss | empirical_module   |     1 |       2 |        0.5 |
+| deterministic_summary_loss | no_module          |     1 |       2 |        0.5 |
+| deterministic_summary_loss | random_module      |     0 |       2 |        0   |
+| deterministic_summary_loss | shuffled_module    |     1 |       2 |        0.5 |
+| deterministic_summary_loss | uncoupled_module   |     1 |       2 |        0.5 |
+| exact_descriptive_gated    | empirical_module   |     1 |       2 |        0.5 |
+| exact_descriptive_gated    | no_module          |     1 |       2 |        0.5 |
+| exact_descriptive_gated    | random_module      |     1 |       2 |        0.5 |
+| exact_descriptive_gated    | shuffled_module    |     1 |       2 |        0.5 |
+| exact_descriptive_gated    | uncoupled_module   |     1 |       2 |        0.5 |
+| local_abc_after_cheap_fit  | empirical_module   |     1 |       2 |        0.5 |
+| local_abc_after_cheap_fit  | no_module          |     1 |       2 |        0.5 |
+| local_abc_after_cheap_fit  | random_module      |     0 |       2 |        0   |
+| local_abc_after_cheap_fit  | shuffled_module    |     1 |       2 |        0.5 |
+| local_abc_after_cheap_fit  | uncoupled_module   |     1 |       2 |        0.5 |
+| surrogate_assisted         | empirical_module   |     1 |       2 |        0.5 |
+| surrogate_assisted         | no_module          |     1 |       2 |        0.5 |
+| surrogate_assisted         | random_module      |     1 |       2 |        0.5 |
+| surrogate_assisted         | shuffled_module    |     1 |       2 |        0.5 |
+| surrogate_assisted         | uncoupled_module   |     1 |       2 |        0.5 |

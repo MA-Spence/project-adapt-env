@@ -89,6 +89,6 @@ scheduler_state: INFERRED_EXIT_CODE
 compliance:
   level: yellow
   issues:
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-dms-distributional-realism-panel/RUN-006/summary.json'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-dms-distributional-realism-panel/RUN-006/selected_panel.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-dms-distributional-realism-panel/RUN-006/summary.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-dms-distributional-realism-panel/RUN-006/selected_panel.csv'
 scheduler_exit_code: '0'

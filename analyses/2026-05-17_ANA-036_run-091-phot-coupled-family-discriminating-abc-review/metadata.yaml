@@ -1,0 +1,31 @@
+id: ANA-036
+title: RUN-091 PHOT coupled family discriminating ABC review
+status: completed
+created: '2026-05-17T13:13:53+10:00'
+owner: Codex
+experiments:
+- EXP-036
+runs:
+- RUN-091
+purpose: Analyze whether ABC fitting rescues PHOT coupled-family held-out graphlet
+  performance while preserving specificity against no-module, random-module, shuffled-module,
+  and uncoupled-module controls.
+path: analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-091
+  produced_artifacts:
+  - analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_component_distance_summary.md
+  - analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_component_guardrails.md
+  - analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_hyp008_decision_table.md
+  - analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_module_energy_localization.md
+  - analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_pairwise_control_deltas.md
+  - analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_preflight_and_collection_audit.md
+  - analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_raw_test_metric_means.md
+  - analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_selected_family_distances.md
+compliance:
+  level: green
+  issues: []

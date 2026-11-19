@@ -1,0 +1,17 @@
+{
+  "output_hashes": 139,
+  "input_hashes": 24,
+  "source_hashes": 16,
+  "anchor_graph_rows_replayed": 390,
+  "maximum_anchor_difference": 0.0,
+  "calibration_objectives_recomputed": 24,
+  "field_nodes_replayed": 36432,
+  "independent_wht_summary_rows": 1732,
+  "small_graph_cases": 20,
+  "settings": 24,
+  "graph_rows": 2598,
+  "latent_graph_rows": 288,
+  "model_maps": 864,
+  "elapsed_worker_seconds": 558.290295412,
+  "scientific_gates": false
+}

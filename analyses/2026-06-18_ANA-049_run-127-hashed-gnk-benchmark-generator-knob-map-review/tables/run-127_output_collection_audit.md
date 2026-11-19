@@ -1,0 +1,12 @@
+| file | bytes | sha256 |
+| --- | --- | --- |
+| run-127_core_readout_guardrail_checks.csv | 1741 | be7a4c96067eb926be757c09095a1139e7f470848f931fcfb3ec50b734336a2b |
+| run-127_graphlet_metrics.csv | 120294 | f785ac71c6c70f24e06c2e4c99e31d81322bc7d9eddf46885f5930fda210d79f |
+| run-127_hamming_layer_metrics.csv | 105522 | b5fa52d362988646abbb603c0d02768bdeb168dd3c689c483da74569b34bae3e |
+| run-127_knob_summary.csv | 7626 | a83e60f0f1138880f155f779db8992eddcb732f3e42b0186180a565a75dd5e77 |
+| run-127_monotonicity_checks.csv | 1745 | 13c4fbb6b1005f0551ae4cca8ee213ea2d57263bd8f4b14e243d5fac87649c01 |
+| run-127_parameter_grid.csv | 4582 | 688fbd37beb19e4f23a52262cd93761057215264ce39b62b5fe357c3975aa4e3 |
+| run-127_preflight.json | 450 | 856423cccbb2e683fc120a9857ae8f4cd39306e952f7c97d643f3882477efaf5 |
+| run-127_summary.json | 741 | 535c85dd32fc37dc7e0fc42d11e2813deb651c033eec1c2a4f599c6518c0dfda |
+| run-127_support_catalog.csv | 325004 | 8d58798fc2b267b5654f57123ccf078dfdf89137dd4bde8e42e309fb831ca86d |
+| run-127_threshold_epistasis_metrics.csv | 154211 | 4296ea68afa788a88038ca7a5d5b31346c51ed0f4884d491d78e7b02560cedb5 |

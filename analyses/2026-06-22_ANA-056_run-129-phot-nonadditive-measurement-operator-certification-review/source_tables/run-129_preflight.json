@@ -1,0 +1,26 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "certification_metrics": [
+    "walsh_high_order_fraction",
+    "sign_epistasis_fraction_local",
+    "n_local_maxima",
+    "accessible_path_fraction"
+  ],
+  "experiment_id": "EXP-050",
+  "known_spectrum_profiles": [
+    "pure_order3",
+    "order2_order3_mixture",
+    "low_order_control"
+  ],
+  "mode": "phot_nonadditive_measurement_operator_certification",
+  "n_assay_rows": 167529,
+  "n_graphlets": 24,
+  "operator_profiles": [
+    "pairwise_low_regularization",
+    "blackbox_ge_neural"
+  ],
+  "quick": false,
+  "scratch_source": "scratch/RES-048_forward_plan_tunable_benchmark_generator.md",
+  "source_output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-129/project/data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077",
+  "source_run_id": "RUN-077"
+}

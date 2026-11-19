@@ -1,0 +1,78 @@
+id: EXP-055
+type: experiment
+title: Stage 4D joint multi-descriptor realism gate
+slug: stage-4d-joint-multidescriptor-realism-gate
+status: planned
+created: '2026-06-18T22:48:59+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  motivating_results:
+  - RES-049
+question: Can one public-model knob setting jointly match multi-peakedness, navigability,
+  order spectrum, sign epistasis, and DFE bands on at least two Tier-1 assays?
+pre_experiment_prediction: Intermediate GNK weight near the RUN-127 joint regime will
+  be the best candidate, but the test can fail if the empirical rugged-yet-navigable
+  joint lies outside the reachable manifold.
+rationale: This is Step 4D, the hard joint-realism test from the science plan, using
+  TrpB/DHFR/GB1-style Tier-1 anchors and explicit ablation controls.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/science_plan_part1_ensemble_landscape_validation.md
+  - scripts/ensemble_landscape_validation_stage4.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/landscapy/README.md
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - joint_realism_coverage.csv
+  - joint_realism_candidates.csv
+  - posterior_knob_regions.csv
+  - descriptor_scope_audit.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

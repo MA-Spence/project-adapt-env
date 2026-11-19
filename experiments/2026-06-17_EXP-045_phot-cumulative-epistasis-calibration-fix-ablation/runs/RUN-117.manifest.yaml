@@ -1,0 +1,45 @@
+run: RUN-117
+target: lab-slurm
+experiment: EXP-045
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-17_EXP-045_phot-cumulative-epistasis-calibration-fix-ablation
+  run_script: experiments/2026-06-17_EXP-045_phot-cumulative-epistasis-calibration-fix-ablation/run.sh
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  - scratch/RES-043_epistasis_calibration_review.md
+  - scripts/phot_trait_space_bounded_gate_fast_fit.py
+  - scripts/phot_nested_fit_protocol_benchmark.py
+  - external/Adapt-Env/adaptenv/calibration.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  datasets:
+  - RUN-077 PHOT prepared assay and empirical graphlets
+  - RUN-098 PHOT full-ABC comparator distances
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - bounded_gate_candidates.csv
+  - selected_bounded_gate_candidates.csv
+  - bounded_gate_distances.csv
+  - bounded_gate_equivalence.csv
+  - graphlet_metrics.csv
+  - graphlet_summary.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - abc_comparator_selected_family_distances.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-117/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-117
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-117/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-117
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-117/project/experiments/2026-06-17_EXP-045_phot-cumulative-epistasis-calibration-fix-ablation/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-117/project/experiments/2026-06-17_EXP-045_phot-cumulative-epistasis-calibration-fix-ablation/runs/RUN-117.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

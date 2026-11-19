@@ -1,0 +1,12 @@
+{
+  "run": "RUN-175",
+  "attempt": 2,
+  "job": "2322",
+  "runtime_exit_code": 0,
+  "stderr_bytes": 0,
+  "manifest_complete": true,
+  "output_hashes_verified": 139,
+  "scientific_elapsed_seconds": 558.290295412,
+  "scheduler_accounting": "Unavailable; completion inferred from runtime evidence, not sacct",
+  "verified_at": "2026-10-08T09:55:19.941437+00:00"
+}

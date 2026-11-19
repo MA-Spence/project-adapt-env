@@ -1,0 +1,13 @@
+{
+  "n_coverage_rows": 44820,
+  "n_parameter_sets": 135,
+  "n_posterior_rows": 7560,
+  "stage": "4C",
+  "n_datasets_with_overlap_rows": 14,
+  "best_overlap_median_fraction_metrics_in_band": 0.6875,
+  "n_best_overlap_ge_0_6": 10,
+  "n_best_overlap_ge_0_5": 10,
+  "n_sparse_proteingym_best_zero_overlap": 4,
+  "full_public_coverage_rate": 0.44801427933958055,
+  "bare_gnk_coverage_rate": 0.451673360107095
+}

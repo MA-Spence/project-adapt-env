@@ -1,0 +1,83 @@
+{
+  "analysis_id": "ANA-038",
+  "experiment_id": "EXP-038",
+  "run_id": "RUN-096",
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "source_data": "data/processed/phot-abc-local-ruggedness-objective/RUN-096",
+  "dvc_pointer": "data/processed/phot-abc-local-ruggedness-objective/RUN-096.dvc",
+  "dvc_md5": "4cd3edc3c50e33ecde7c5c7e32e9ec2a.dir",
+  "dvc_nfiles": 29,
+  "dvc_size_bytes": 115223180,
+  "n_graphlets": 24,
+  "n_calibration_graphlets": 12,
+  "n_test_graphlets": 12,
+  "objective_metric_count": 16,
+  "local_ruggedness_metric_count": 7,
+  "selected_test_distance": {
+    "empirical_readout_residual": 0.211455,
+    "no_module": 0.277056,
+    "uncoupled_module": 0.291161,
+    "empirical_module": 0.365272,
+    "random_module": 0.366768,
+    "shuffled_module": 0.379458,
+    "fitted_current": 0.521007,
+    "smooth_core": 0.526819,
+    "gnk_local_null": 0.832663,
+    "residual_only_diagnostic": 2.675584
+  },
+  "selected_test_original9_mean": {
+    "empirical_readout_residual": 0.270766,
+    "no_module": 0.238360,
+    "uncoupled_module": 0.292083,
+    "empirical_module": 0.289814,
+    "random_module": 0.310224,
+    "shuffled_module": 0.323024,
+    "fitted_current": 0.401571,
+    "smooth_core": 0.411904
+  },
+  "selected_test_local7_mean": {
+    "empirical_readout_residual": 0.135199,
+    "uncoupled_module": 0.289976,
+    "no_module": 0.326809,
+    "random_module": 0.439467,
+    "shuffled_module": 0.452016,
+    "empirical_module": 0.462290,
+    "fitted_current": 0.674567,
+    "smooth_core": 0.674567
+  },
+  "key_selected_pairwise_test_deltas": {
+    "no_module_minus_fitted_current": -0.243950,
+    "no_module_minus_smooth_core": -0.249763,
+    "no_module_minus_empirical_module": -0.088216,
+    "no_module_minus_uncoupled_module": -0.014105,
+    "empirical_module_minus_fitted_current": -0.155734,
+    "empirical_module_minus_smooth_core": -0.161547,
+    "empirical_module_minus_no_module": 0.088216,
+    "empirical_module_minus_uncoupled_module": 0.074111,
+    "empirical_module_minus_random_module": -0.001496,
+    "empirical_module_minus_shuffled_module": -0.014186
+  },
+  "test_oracle_min_distance_by_family": {
+    "empirical_module": 0.259136,
+    "no_module": 0.277056,
+    "random_module": 0.286051,
+    "uncoupled_module": 0.291161,
+    "shuffled_module": 0.323367
+  },
+  "selected_empirical_module_energy_diffuseness_test": {
+    "edge_effective_module_count": 11.010808,
+    "edge_top10_fraction": 0.252668,
+    "edge_normalized_entropy": 0.982059,
+    "plaquette_effective_module_count": 9.341583,
+    "plaquette_top10_fraction": 0.319785,
+    "plaquette_normalized_entropy": 0.944129
+  },
+  "guardrail_violations_selected_fitted_families_test": 0,
+  "interpretation": {
+    "abc_local_terms_improve_over_current_smooth": true,
+    "calibration_selected_empirical_module_specificity": false,
+    "calibration_selected_best_fitted_family": "no_module",
+    "best_overall_selected_control": "empirical_readout_residual",
+    "hypothesis_effect": "weakens HYP-008 as currently operationalized"
+  }
+}

@@ -1,0 +1,53 @@
+run: RUN-143
+target: lab-slurm
+experiment: EXP-059
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-07-22_EXP-059_saturated-gate-gnk-mechanism-calibration-confirmation
+  run_script: experiments/2026-07-22_EXP-059_saturated-gate-gnk-mechanism-calibration-confirmation/run.sh
+inputs:
+  declared_files:
+  - scratch/RES-057_exp059_two_channel_viability_benchmark_spec.md
+  - results/RES-049_run-127-hashed-gnk-knobs-validate-forward-ruggedness-accessibility-map/result.md
+  - results/RES-055_run-141-fixed-support-aware-probe-fails-core-gnk-validation-gates/result.md
+  - results/RES-057_run-142-readout-coupling-calibration-no-joint-core-gnk-region/result.md
+  - claims/CLAIM-002_single-latent-biophysical-empirical-fits.md
+  - claims/CLAIM-003_structured-high-order-residual-capacity-improves-phot-benchmarks.md
+  - scripts/two_channel_viability_benchmark_exp059.py
+  - scripts/design_matched_support_aware_probe_exp057.py
+  - scripts/hashed_gnk_benchmark_knob_validation.py
+  - scripts/generator_readout_coupling_calibration_exp058.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+outputs:
+  expected:
+  - preflight.json
+  - design_catalog.csv
+  - component_metrics.csv
+  - descriptor_metrics.csv
+  - enumerable_landscape_metrics.csv
+  - support_catalog.csv
+  - calibration_decision.csv
+  - frozen_operating_point.json
+  - confirmation_seed_metrics.csv
+  - viability_checks.csv
+  - gnk_transmission_checks.csv
+  - topography_checks.csv
+  - routing_equivalence.csv
+  - mechanism_decision.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-143/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-143
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-143/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-143/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-143
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-143/project/experiments/2026-07-22_EXP-059_saturated-gate-gnk-mechanism-calibration-confirmation/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-143/project/experiments/2026-07-22_EXP-059_saturated-gate-gnk-mechanism-calibration-confirmation/runs/RUN-143.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

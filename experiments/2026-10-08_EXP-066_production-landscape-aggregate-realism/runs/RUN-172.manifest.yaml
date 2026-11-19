@@ -1,0 +1,57 @@
+run: RUN-172
+target: lab-slurm
+experiment: EXP-066
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism
+  run_script: experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/run.sh
+inputs:
+  declared_files:
+  - scripts/production_landscapes_exp066.py
+  - scripts/observation_calibration_exp065.py
+  - scripts/replicate_observation_exp065.py
+  - external/Adapt-Env/adaptenv/__init__.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/Adapt-Env/adaptenv/thermodynamic.py
+  - external/Adapt-Env/adaptenv/extensive_gnk.py
+  - external/Adapt-Env/adaptenv/ranked_categorical_gnk.py
+  - external/Adapt-Env/adaptenv/amino_acids.py
+  - scripts/publish_production_landscapes.py
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/source_manifest.json
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/config.yaml
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/experiment.md
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/run.sh
+  - tests/test_production_landscapes_exp066.py
+  - scripts/collect_production_landscapes.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - data/processed/trpb-replicate-observation-exp065.dvc
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/coverage_preflight.json
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/validation.json
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/worker_environment.json
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets
+  - data/processed/trpb-replicate-observation-exp065
+outputs:
+  expected:
+  - manifest.json
+  - suitability.csv
+  - confirmation_statistics.csv
+  - selected_parameters.json
+  - figure_data.csv
+  - source_manifest.json
+  - dataset_inventory.csv
+  - execution_errors.json
+  - worker_environment.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-172/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-172
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-172/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-172/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-172
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-172/project/experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-172/project/experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/runs/RUN-172.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

@@ -1,0 +1,265 @@
+experiment_id: EXP-059
+title: Saturated-gate GNK mechanism calibration and held-out confirmation
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  mode: saturated_gate_gnk_mechanism
+  stage_order: [calibration, confirmation]
+  scientific_boundary:
+    primary_hypothesis: HYP-005
+    interpretation: internally_controllable_candidate_mechanism_only
+    not_evidence_for:
+      - empirical_realism
+      - biological_routing_privilege
+      - optimizer_performance
+      - public_generator_readiness
+      - functional_dimensionality
+    hard_stop: do_not_run_stage_4c_4d_or_4e
+  legacy_route_decision:
+    action: run_private_compatibility_route_for_calibration
+    require_runtime_warning: true
+    downstream_use_requires_public_promotion: true
+
+data:
+  processed_root: data/processed/ensemble-landscape-validation-datasets
+  dataset_ids:
+    - gb1_wu2016_four_site_graphfla
+    - dhfr_papkou2023_full_wagner_tsv
+    - cr9114_h1_phillips2021_graphfla
+    - pard2_lite2020_graphfla
+  interpretation: dimensions_and_alphabet_cardinalities_only
+
+generator:
+  sequence_length: 48
+  alphabet_size: 20
+  weights: [0.0, 0.3, 0.6, 1.0]
+  working_weight: 1.0
+  routing_modes: [structured, shuffled, random]
+  architectures:
+    - two_channel_product
+    - mixed_score_stability
+  direct_negative_control: two_channel_closed_gate
+  lambda_score: 1.0
+  stability_scale: 1.0
+  fitness_output_scale: 10.0
+  noise_scale: 0.0
+  n_functional_dims: 1
+  functional_sigma_base: 2.0
+  functional_sigma_anisotropy: 0.0
+  functional_weight: 1.0
+  gnk_terms: 384
+  gnk_min_order: 2
+  gnk_max_order: 4
+  gnk_order_weights: [0.35, 0.45, 0.20]
+  gnk_seed_offset: 10000
+  closed_gate_target_effective_margin: -2.0
+
+calibration:
+  seeds: [701, 702, 703, 704]
+  dimension: 4
+  alphabet_size: 20
+  graphlets_per_seed: 1
+  routing_modes: [structured]
+  anchor: designed_peak
+  operating_points:
+    - {id: m14_s2, stability_margin: 14.0, threshold_steepness: 2.0}
+    - {id: m14_s4, stability_margin: 14.0, threshold_steepness: 4.0}
+    - {id: m18_s2, stability_margin: 18.0, threshold_steepness: 2.0}
+    - {id: m18_s4, stability_margin: 18.0, threshold_steepness: 4.0}
+    - {id: m22_s2, stability_margin: 22.0, threshold_steepness: 2.0}
+    - {id: m22_s4, stability_margin: 22.0, threshold_steepness: 4.0}
+  selection_rule:
+    eligibility: all_calibration_seeds_pass_component_preflight
+    ordering: listed_order
+    topology_not_used_for_selection: true
+  stop_rule: stop_before_confirmation_if_selected_point_fails_g1_g2_or_g3
+  failure_scope: selected_component_qualified_point_only_other_points_untested
+
+confirmation:
+  seeds: [1701, 1702, 1703, 1704, 1705, 1706, 1707, 1708]
+  frozen_operating_point: from_calibration
+  graphlets_per_template: 1
+  base_design_key:
+    - stage
+    - dataset_id
+    - seed
+    - graphlet_index
+  excluded_from_sampling_key:
+    - operating_point
+    - architecture
+    - support_mode
+    - gnk_weight
+  primary_architecture: two_channel_product
+  primary_support_mode: structured
+  comparator_architecture: mixed_score_stability
+  routing_modes: [structured, shuffled, random]
+
+probe:
+  allele_selection: stability_ranked_including_anchor
+  anchor_candidate_samples: 4096
+  dead_sequence_samples: 4096
+  eval_chunk_size: 32768
+  site_seed_offset: 51000
+  allele_seed_offset: 61000
+  reachability_starts: 512
+  pairwise_epistasis_samples: 20000
+  single_step_effect_samples: 50000
+  exact_shortest_path_starts: 32
+
+descriptors:
+  fixed_fitness_tolerance: 1.0e-6
+  qary_interaction_metric: complete_factorial_nonadditive_variance_fraction
+  sampled_navigability_metric: basin_convergence_fraction
+  exact_calibration_navigability_metric: accessible_shortest_path_fraction
+
+gates:
+  preflight:
+    viable_gate_threshold: 0.90
+    viable_graphlet_min_occupancy: 1.0
+    dead_gate_threshold: 0.10
+    dead_sample_min_fraction: 0.90
+    effective_capacity_min_sd: 0.05
+    effective_capacity_interior_low: 0.05
+    effective_capacity_interior_high: 0.95
+    effective_capacity_min_interior_fraction: 0.65
+    effective_capacity_apply_at_every_weight: true
+    raw_gnk_score_min_sd: 1.0e-3
+    product_reconstruction_atol: 1.0e-8
+    closed_control_target_effective_margin: -2.0
+    closed_control_gate_threshold: 0.10
+    closed_control_min_low_gate_fraction: 0.90
+    confirmation_required_fraction: 1.0
+  calibration:
+    independent_seed_count: 4
+    g1_require_all_seeds_all_weights: true
+    g2:
+      metrics: [nonadditive_variance_fraction, sign_epistasis_fraction]
+      min_median_endpoint_delta: 0.02
+      min_positive_seed_count: 4
+      zero_delta_counts_positive: false
+      use_sign_test_or_bootstrap: false
+    g3:
+      require_all_seed_trends_expected_direction: true
+      min_median_rho: 0.80
+      local_maxima_density_min_endpoint_delta: 0.005
+      local_maxima_count_min_endpoint_increase: 1
+      working_weight_basin_min: 0.05
+      working_weight_basin_max: 0.80
+      basin_max_endpoint_delta: -0.05
+      undefined_rho_is_failure: true
+  g1_viability:
+    apply_at_every_weight: true
+    observable_min: 0.0
+    observable_max_fraction_of_scale: 1.0
+    range_tolerance: 1.0e-8
+    dead_fitness_95th_max_fraction_of_scale: 0.10
+    viable_median_min_fraction_of_scale: 0.30
+    viable_sd_min_fraction_of_scale: 0.05
+    stability_titration:
+      interpretation: implementation_check_only
+      achieved_margins: [-2.0, -1.0, -0.5, 0.0, 0.5, 1.0, 2.0, 4.0]
+      transition_window: [-0.5, 0.5]
+      saturated_window: [2.0, 4.0]
+      min_transition_slope: 1.0e-4
+      min_saturated_slope: 0.0
+      max_saturated_to_transition_slope_ratio: 0.20
+  g2_transmission:
+    causal_null_weight: 0.0
+    working_weight: 1.0
+    metrics:
+      nonadditive_variance_fraction: {min_median_delta: 0.02}
+      sign_epistasis_fraction: {min_median_delta: 0.02}
+    confirmation_min_positive_seeds: 7
+    confirmation_seed_count: 8
+    require_every_template_median_positive: true
+    zero_delta_counts_positive: false
+    sign_test_max_p: 0.0352
+    sign_test_null_probability: 0.5
+    sign_test_ties_are_nonpositive: true
+    bootstrap_replicates: 10000
+    bootstrap_ci: 0.95
+    bootstrap_method: one_sided_percentile_lower
+    bootstrap_seed: 59059
+    require_bootstrap_lower_gt_zero: true
+  g3_topography:
+    rho_metrics:
+      nonadditive_variance_fraction: increase
+      sign_epistasis_fraction: increase
+      local_maxima_density: increase
+    min_overall_median_rho: 0.80
+    min_template_median_rho: 0.50
+    confirmation_min_correct_direction_seeds: 7
+    undefined_rho_is_failure: true
+    local_maxima_density_min_delta: 0.005
+    local_maxima_count_min_increase: 1
+    require_every_template_maxima_delta_positive: true
+    require_seed_maxima_floors_count: 7
+    working_weight_basin_min: 0.05
+    working_weight_basin_max: 0.80
+    basin_max_delta_from_zero: -0.05
+    require_seed_basin_gate_count: 7
+    require_every_template_basin_gate: true
+  g4_routing_equivalence:
+    diagnostic_only: true
+    interval: 0.90
+    method: paired_seed_percentile_bootstrap
+    bootstrap_replicates: 10000
+    bootstrap_seed: 59060
+    equivalence_rule: entire_interval_within_symmetric_margin
+    margins:
+      nonadditive_variance_fraction: 0.02
+      sign_epistasis_fraction: 0.02
+      local_maxima_density: 0.005
+      basin_convergence_fraction: 0.05
+
+aggregation:
+  graphlets_within_template_seed: median
+  templates_within_seed: median
+  independent_replicate: seed
+  missing_or_preflight_rejected_confirmation_design: fail
+
+outputs:
+  expected:
+    - preflight.json
+    - design_catalog.csv
+    - component_metrics.csv
+    - descriptor_metrics.csv
+    - enumerable_landscape_metrics.csv
+    - support_catalog.csv
+    - calibration_decision.csv
+    - frozen_operating_point.json
+    - confirmation_seed_metrics.csv
+    - viability_checks.csv
+    - gnk_transmission_checks.csv
+    - topography_checks.csv
+    - routing_equivalence.csv
+    - mechanism_decision.csv
+    - summary.json
+
+quick:
+  calibration:
+    seeds: [701]
+    dimension: 2
+    graphlets_per_seed: 1
+    operating_points:
+      - {id: m18_s4, stability_margin: 18.0, threshold_steepness: 4.0}
+  confirmation:
+    seeds: [1701]
+    graphlets_per_template: 1
+  data:
+    dataset_ids:
+      - gb1_wu2016_four_site_graphfla
+  generator:
+    weights: [0.0, 1.0]
+    gnk_terms: 64
+  probe:
+    dead_sequence_samples: 256
+    reachability_starts: 32
+    pairwise_epistasis_samples: 1000
+    single_step_effect_samples: 2000
+  gates:
+    preflight:
+      effective_capacity_min_interior_fraction: 0.60
+    g2_transmission:
+      bootstrap_replicates: 200

@@ -1,0 +1,37 @@
+id: RES-048
+title: RUN-125 P0 isolation shows PHOT measurement operator smooths injected spectra
+status: completed
+created: '2026-06-18T09:47:12+10:00'
+owner: matthew-spence
+analyses:
+- ANA-048
+experiments:
+- EXP-049
+runs:
+- RUN-125
+supports: []
+weakens:
+- HYP-004
+refutes: []
+motivates:
+- HYP-009
+supersedes: []
+summary: 'RUN-125 supports the PHOT target/measurement-operator mismatch diagnosis:
+  under the identical MAVE-NN plus dense-graphlet operator, cached/refit targets are
+  smooth/additive-like, known injected spectra are recovered as unimodal and nearly
+  epistasis-free, and sparse-Walsh supports are well contained in sampled graphlets.'
+artifacts: []
+evidence_paths:
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/source_tables
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/metrics.json
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_output_collection_audit.csv
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_1_target_stability.csv
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_1_mavenn_refit_fit_quality.csv
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_2_roundtrip_transfer_key_metrics.csv
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_2_profile_summary.csv
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_3_support_alignment.csv
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_graphlet_catalog_summary.csv
+- analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_phase_decisions.csv
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,56 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "certification_metrics": [
+    "walsh_high_order_fraction",
+    "sign_epistasis_fraction_local",
+    "n_local_maxima",
+    "accessible_path_fraction"
+  ],
+  "experiment_id": "EXP-050",
+  "known_spectrum_profiles": [
+    "pure_order3",
+    "order2_order3_mixture",
+    "low_order_control"
+  ],
+  "mode": "phot_nonadditive_measurement_operator_certification",
+  "n_assay_rows": 167529,
+  "n_graphlets": 24,
+  "n_injected_terms": 176,
+  "n_mavenn_metric_rows": 6,
+  "n_roundtrip_graphlet_metric_rows": 144,
+  "n_roundtrip_transfer_rows": 72,
+  "operator_certification_summary": [
+    {
+      "gpmap_type": "pairwise",
+      "n_certification_metrics": 4,
+      "n_fit_failures": 3,
+      "n_ratio_checks_passed": 0,
+      "n_ratio_checks_reported": 12,
+      "n_required_metric_profile_checks": 12,
+      "n_spectrum_profiles": 3,
+      "operator_certified": false,
+      "operator_profile": "pairwise_low_regularization",
+      "phase": "WS-A"
+    },
+    {
+      "gpmap_type": "blackbox",
+      "n_certification_metrics": 4,
+      "n_fit_failures": 3,
+      "n_ratio_checks_passed": 0,
+      "n_ratio_checks_reported": 12,
+      "n_required_metric_profile_checks": 12,
+      "n_spectrum_profiles": 3,
+      "operator_certified": false,
+      "operator_profile": "blackbox_ge_neural",
+      "phase": "WS-A"
+    }
+  ],
+  "operator_profiles": [
+    "pairwise_low_regularization",
+    "blackbox_ge_neural"
+  ],
+  "quick": false,
+  "scratch_source": "scratch/RES-048_forward_plan_tunable_benchmark_generator.md",
+  "source_output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-129/project/data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077",
+  "source_run_id": "RUN-077"
+}

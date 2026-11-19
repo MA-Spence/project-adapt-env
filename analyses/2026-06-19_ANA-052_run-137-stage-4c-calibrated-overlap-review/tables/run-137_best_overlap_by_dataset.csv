@@ -1,0 +1,15 @@
+dataset_id,parameter_set_id,model_family,support_mode,stability_margin,epi_weight,n_metrics_considered,n_metrics_in_band,fraction_metrics_in_band,mean_z_distance
+cr6261_h1_phillips2021_graphfla,structured__sm6.000__ew1.000__seed701,bare_gnk_texture,structured,6.0,1.0,8,7,0.875,1.447407
+cr6261_h9_phillips2021_graphfla,structured__sm6.000__ew1.000__seed701,bare_gnk_texture,structured,6.0,1.0,8,7,0.875,1.52162
+cr9114_flub_phillips2021_graphfla,structured__sm6.000__ew0.000__seed701,bare_gnk_texture,structured,6.0,0.0,7,6,0.857143,34285714285.714287
+cr9114_h1_phillips2021_graphfla,structured__sm6.000__ew1.000__seed701,bare_gnk_texture,structured,6.0,1.0,8,5,0.625,0.967639
+cr9114_h3_phillips2021_graphfla,random__sm6.000__ew0.150__seed703,bare_gnk_texture,random,6.0,0.15,8,6,0.75,0.863977
+dhfr_papkou2023_full_wagner_tsv,structured__sm6.000__ew0.600__seed703,bare_gnk_texture,structured,6.0,0.6,8,6,0.75,1.033242
+gb1_wu2016_four_site_graphfla,structured__sm6.000__ew1.000__seed703,bare_gnk_texture,structured,6.0,1.0,8,5,0.625,1.490929
+pard2_lite2020_graphfla,structured__sm6.000__ew0.300__seed701,bare_gnk_texture,structured,6.0,0.3,8,6,0.75,0.98743
+pard3_lite2020_graphfla,structured__sm6.000__ew0.600__seed701,bare_gnk_texture,structured,6.0,0.6,8,7,0.875,1.173724
+proteingym_gfp_aeqvi_sarkisyan_2016,structured__sm14.000__ew0.600__seed703,full_public_observable,structured,14.0,0.6,1,0,0.0,79655634.780196
+proteingym_his7_yeast_pokusaeva_2019,random__sm6.000__ew1.000__seed701,bare_gnk_texture,random,6.0,1.0,1,0,0.0,4139970.41667
+proteingym_spg1_strsg_olson_2014,random__sm14.000__ew1.000__seed703,full_public_observable,random,14.0,1.0,1,0,0.0,675973197.621815
+proteingym_spg1_strsg_wu_2016,shuffled__sm6.000__ew1.000__seed702,bare_gnk_texture,shuffled,6.0,1.0,1,0,0.0,12181172.250833
+trpb_johnston2024_four_site_graphfla,structured__sm6.000__ew0.150__seed703,bare_gnk_texture,structured,6.0,0.15,8,5,0.625,1.274266

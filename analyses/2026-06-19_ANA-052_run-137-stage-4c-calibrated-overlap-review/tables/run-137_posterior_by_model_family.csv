@@ -1,0 +1,5 @@
+model_family,n_rows,median_fraction_metrics_in_band,max_fraction_metrics_in_band
+additive_core_only_observable,1890,0.401786,0.75
+bare_gnk_texture,1890,0.375,0.875
+effective_stability_margin,1890,0.25,0.625
+full_public_observable,1890,0.375,0.75

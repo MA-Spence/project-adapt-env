@@ -1,0 +1,40 @@
+id: RES-039
+title: RUN-098 nested soft-min capacity fails calibration-selected heldout specificity
+status: completed
+created: '2026-05-18T11:04:47+10:00'
+owner: Codex
+analyses:
+- ANA-039
+experiments:
+- EXP-039
+runs:
+- RUN-098
+supports: []
+weakens:
+- HYP-008
+refutes: []
+motivates: []
+supersedes: []
+summary: Nested third-landscape soft-min capacity does not improve calibration-selected
+  held-out PHOT full-objective distance over fitted current, smooth core, or the locked
+  first-stage model; random/shuffled controls also beat empirical-module, so the run
+  weakens the current empirical-module implementation of HYP-008.
+artifacts:
+- results/RES-039_run-098-nested-softmin-capacity-fails-heldout-specificity/metrics.json
+evidence_paths:
+- analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/metrics.json
+- analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_preflight_and_collection_audit.md
+- analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_selected_test_distances.md
+- analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_localization_components_test.md
+- analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_module_locality_test.md
+- analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_test_oracle_capacity_diagnostic.md
+- analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_hyp008_decision_table.md
+- data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+- data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098/selected_family_distances.csv
+- data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098/selected_family_pairwise_deltas.csv
+- data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098/component_guardrail_summary.csv
+- data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098/module_energy_summary.csv
+- data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098/model_distances.csv
+compliance:
+  level: green
+  issues: []

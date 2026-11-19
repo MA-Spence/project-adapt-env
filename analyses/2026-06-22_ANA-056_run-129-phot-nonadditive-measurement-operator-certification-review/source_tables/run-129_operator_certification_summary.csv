@@ -1,0 +1,3 @@
+phase,operator_profile,gpmap_type,n_spectrum_profiles,n_certification_metrics,n_required_metric_profile_checks,n_ratio_checks_reported,n_ratio_checks_passed,n_fit_failures,operator_certified
+WS-A,pairwise_low_regularization,pairwise,3,4,12,12,0,3,False
+WS-A,blackbox_ge_neural,blackbox,3,4,12,12,0,3,False

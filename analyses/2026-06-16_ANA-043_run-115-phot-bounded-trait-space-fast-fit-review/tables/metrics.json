@@ -1,0 +1,73 @@
+{
+  "absolute_margin_pass_rows": 0,
+  "best_candidate_accessible_path_fraction": 0.012037037037037,
+  "best_candidate_calibrated_magnitude_epistasis_mean": 0.1707606832369843,
+  "best_candidate_delta_vs_best_full_abc_context": 0.21542648205306247,
+  "best_candidate_delta_vs_best_nested_full_abc_context": -0.05574833832325832,
+  "best_candidate_diminishing_returns_fraction": 0.3996527777777778,
+  "best_candidate_edge_energy_top10_fraction": 0.3475939062441282,
+  "best_candidate_max_component_distance": 0.986691102125262,
+  "best_candidate_raw_magnitude_epistasis_mean": 103.6469406925006,
+  "best_candidate_site_energy_top1_fraction": 0.3149399095378749,
+  "best_candidate_test_distance": 0.4268818936366073,
+  "best_candidate_test_fit_method": "local_refinement_round_1",
+  "best_candidate_test_parameter_set_id": "bounded_trait_space__local_refinement_round_1__4177169950",
+  "best_full_abc_context_family": "empirical_readout_residual",
+  "best_full_abc_context_parameter_set_id": "latent_phi__minus_poly_fitted_current_best",
+  "best_full_abc_context_test_distance": 0.2114554115835448,
+  "best_nested_full_abc_context_family": "random_module",
+  "best_nested_full_abc_context_test_distance": 0.4826302319598656,
+  "best_objective_candidate_accessible_path_fraction": 0.198611111111111,
+  "best_objective_candidate_calibrated_magnitude_epistasis_mean": 0.1698061347366712,
+  "best_objective_candidate_parameter_set_id": "bounded_trait_space__local_refinement_round_1__0434075681",
+  "best_objective_candidate_raw_magnitude_epistasis_mean": 67.84013672206892,
+  "best_objective_candidate_test_distance": 0.474392994613688,
+  "best_objective_distance": 0.6228308180201481,
+  "component_guardrail_pass_rows": 12,
+  "copied_compact_bytes": 940677,
+  "empirical_test_accessible_path_fraction": 0.1974537037037036,
+  "empirical_test_diminishing_returns_fraction": 0.3871527777777778,
+  "empirical_test_edge_energy_top10_fraction": 0.4059995258405982,
+  "empirical_test_magnitude_epistasis_mean": 0.2925836747618935,
+  "empirical_test_site_energy_top1_fraction": 0.4162160520289528,
+  "experiment_id": "EXP-044",
+  "largest_omitted_files": [
+    {
+      "bytes": 6404642,
+      "copied_to_analysis": false,
+      "file": "gft_coefficients.csv",
+      "path": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-115/outputs/gft_coefficients.csv"
+    },
+    {
+      "bytes": 6167423,
+      "copied_to_analysis": false,
+      "file": "walsh_terms.csv",
+      "path": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-115/outputs/walsh_terms.csv"
+    },
+    {
+      "bytes": 74752,
+      "copied_to_analysis": false,
+      "file": "PHOT_CHLRE_Chen_2023.alignment.fasta",
+      "path": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-115/outputs/PHOT_CHLRE_Chen_2023.alignment.fasta"
+    }
+  ],
+  "model_patch": "trait_space_epistasis_bound",
+  "n_candidate_evaluations": 102,
+  "n_equivalence_rows": 12,
+  "n_graphlets": 24,
+  "n_operationally_equivalent_rows": 0,
+  "n_selected_candidates": 12,
+  "observation_calibration": {
+    "apply_to_objective": true,
+    "apply_to_reporting": true,
+    "enabled": true,
+    "fit_split": "calibration",
+    "interpretation": "affine calibration maps model outputs onto empirical PHOT latent_phi for objective/reporting; raw_* columns retain the uncalibrated model scale",
+    "method": "positive_affine",
+    "min_slope": 1e-12
+  },
+  "relative_margin_pass_rows": 0,
+  "remote_output_dir": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-115/outputs",
+  "run_id": "RUN-115",
+  "search_fit_protocol": "deterministic_random_search_with_local_refinement"
+}

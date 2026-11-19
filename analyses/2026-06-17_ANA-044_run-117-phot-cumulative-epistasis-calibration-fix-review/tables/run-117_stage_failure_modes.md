@@ -1,0 +1,8 @@
+# RUN-117 stage failure modes
+
+| fix_stage   |   best_test_distance | component_guardrails_pass   |   observable_magnitude_epistasis |   raw_magnitude_epistasis |   accessible_path_fraction | failure_mode                                                                                                     |
+|:------------|---------------------:|:----------------------------|---------------------------------:|--------------------------:|---------------------------:|:-----------------------------------------------------------------------------------------------------------------|
+| A           |               0.4235 | True                        |                           0.2289 |                178.6      |                    0.01644 | component guardrails pass but aggregate distance fails; accessibility low and raw latent epistasis remains large |
+| A+B         |               2.921  | False                       |                           0      |                  0        |                    0       | collapsed zero-variation landscape; component guardrails fail                                                    |
+| A+B+C       |               2.921  | False                       |                           0      |                  0        |                    0       | collapsed zero-variation landscape; component guardrails fail                                                    |
+| A+B+C+D     |               0.4122 | True                        |                           0.2426 |                  1.16e-06 |                    0.01898 | component guardrails pass but aggregate distance fails; accessibility low and raw latent variation is near zero  |

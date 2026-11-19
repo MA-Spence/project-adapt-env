@@ -1,0 +1,43 @@
+run: RUN-119
+target: lab-slurm
+experiment: EXP-046
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-17_EXP-046_phot-raw-latent-softmin-pathology-fix-ablation
+  run_script: experiments/2026-06-17_EXP-046_phot-raw-latent-softmin-pathology-fix-ablation/run.sh
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  - docs/RES-044_epistasis_calibration_followup.md
+  - src/project_adapt_env/coupled_landscape.py
+  - scripts/phot_trait_space_bounded_gate_fast_fit.py
+  datasets:
+  - RUN-077
+  - RUN-098
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - bounded_gate_candidates.csv
+  - selected_bounded_gate_candidates.csv
+  - bounded_gate_distances.csv
+  - bounded_gate_equivalence.csv
+  - graphlet_metrics.csv
+  - graphlet_summary.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - abc_comparator_selected_family_distances.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-119/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-119
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-119/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-119
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-119/project/experiments/2026-06-17_EXP-046_phot-raw-latent-softmin-pathology-fix-ablation/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-119/project/experiments/2026-06-17_EXP-046_phot-raw-latent-softmin-pathology-fix-ablation/runs/RUN-119.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

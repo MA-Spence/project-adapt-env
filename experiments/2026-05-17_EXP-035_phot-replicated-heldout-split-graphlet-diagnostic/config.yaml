@@ -1,0 +1,103 @@
+experiment_id: EXP-035
+title: PHOT replicated held-out split graphlet diagnostic
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-035
+  status: planned
+  planned_runner: scripts/phot_replicated_split_graphlet_diagnostic.py
+  scientific_boundary:
+    primary_hypothesis: HYP-008
+    motivating_results:
+      - RES-030
+      - RES-031
+      - RES-032
+      - RES-033
+      - RES-034
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    no_new_operator_rule: reuse the completed RUN-079 PHOT candidate graphlet metrics; do not refit the PHOT base or introduce a new coupled operator
+    selection_rule: select candidates using calibration graphlet distance only within each replicated split
+    support_rule: treat held-out test graphlet distance, not calibration distance or test-oracle ranking, as the primary support criterion
+
+source_run:
+  run_id: RUN-079
+  experiment_id: EXP-031
+  result_id: RES-031
+  output_dir: data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079
+  dvc_pointer: data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: fixed_candidate_graphlet_metrics_from_run_079
+
+graphlet_evaluation:
+  primary_score_column: latent_phi
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+
+candidate_families:
+  fitted_current_best: fitted_current
+  fitted_smooth_core_only: smooth_core
+  coupled_no_module: no_module
+  coupled_empirical_calibration_plaquette: empirical_module
+  coupled_random_module: random_module
+  coupled_shuffled_module: shuffled_module
+  uncoupled_local_module: uncoupled_module
+  fitted_current_posterior_mean: fitted_current_posterior_mean
+  fitted_residual_only_diagnostic: residual_only_diagnostic
+  gnk_local_null: gnk_local_null
+
+diagnostic:
+  n_random_splits: 512
+  seed: 20260517
+  calibration_fraction: 0.5
+  stratify_column: graphlet_dimension
+  include_original_split: true
+  family_order:
+    - fitted_current
+    - smooth_core
+    - no_module
+    - empirical_module
+    - random_module
+    - shuffled_module
+    - uncoupled_module
+    - fitted_current_posterior_mean
+    - residual_only_diagnostic
+    - gnk_local_null
+  primary_families:
+    - fitted_current
+    - smooth_core
+    - no_module
+    - empirical_module
+    - random_module
+    - shuffled_module
+  comparison_families:
+    - fitted_current
+    - smooth_core
+    - no_module
+    - empirical_module
+    - random_module
+    - shuffled_module
+
+outputs:
+  output_dir_name: phot-replicated-heldout-split-graphlet-diagnostic
+  expected_files:
+    - summary.json
+    - preflight.json
+    - split_assignments.csv
+    - split_selected_distances.csv
+    - split_family_summary.csv
+    - split_family_pairwise_deltas.csv
+    - component_summary.csv
+    - selection_counts.csv
+
+quick:
+  diagnostic:
+    n_random_splits: 8

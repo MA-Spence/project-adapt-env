@@ -1,0 +1,34 @@
+id: ANA-031
+title: RUN-079 PHOT frozen-base coupled-landscape grid review
+status: completed
+created: '2026-05-16T21:41:09+10:00'
+owner: Codex
+experiments:
+- EXP-031
+runs:
+- RUN-079
+purpose: Assess whether the deterministic frozen-base PHOT coupled-landscape grid
+  supports HYP-008 by improving held-out graphlet spectra, topology, and localized
+  innovation relative to matched controls.
+path: analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-079
+  produced_artifacts:
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_base_correlation_heldout.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_calibration_selected_by_module_source.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_calibration_selected_distances.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_empirical_target_graphlet_metrics.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_hyp008_decision_table.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_module_catalog.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_module_energy_locality_heldout.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_preflight_and_output_audit.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_relevant_test_graphlet_summaries.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_static_control_distances.md
+  - analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review/tables/run-079_test_oracle_distances_capacity_only.md
+compliance:
+  level: green
+  issues: []

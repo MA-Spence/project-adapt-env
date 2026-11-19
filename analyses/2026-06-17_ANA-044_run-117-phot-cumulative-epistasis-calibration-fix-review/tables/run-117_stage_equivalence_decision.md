@@ -1,0 +1,10 @@
+# RUN-117 stage equivalence decision
+
+_Operational equivalence is the same RUN-098 best-any-full-ABC decision used by the EXP-045 runner._
+
+| fix_stage   | fixes_applied   |   n_candidate_evaluations |   n_selected_candidates |   best_objective_distance |   best_test_distance |   median_test_distance |   n_operationally_equivalent |   n_component_guardrail_pass |   n_absolute_margin_pass |   n_relative_margin_pass |   best_max_component_distance |
+|:------------|:----------------|--------------------------:|------------------------:|--------------------------:|---------------------:|-----------------------:|-----------------------------:|-----------------------------:|-------------------------:|-------------------------:|------------------------------:|
+| A           | A               |                        78 |                       8 |                     9.589 |               0.4235 |                 0.4553 |                            0 |                            8 |                        0 |                        0 |                        0.8261 |
+| A+B         | A+B             |                        78 |                       8 |                     5.97  |               2.921  |                 2.921  |                            0 |                            0 |                        0 |                        0 |                        8.178  |
+| A+B+C       | A+B+C           |                        78 |                       8 |                     7.933 |               2.921  |                 2.921  |                            0 |                            0 |                        0 |                        0 |                        8.178  |
+| A+B+C+D     | A+B+C+D         |                        78 |                       8 |                     0.548 |               0.4122 |                 0.4536 |                            0 |                            8 |                        0 |                        0 |                        0.8496 |

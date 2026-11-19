@@ -1,0 +1,12 @@
+| dataset_id                           | n   | pass_n | pass_fraction | median_spearman_rho |
+| ------------------------------------ | --- | ------ | ------------- | ------------------- |
+| pard2_lite2020_graphfla              | 162 | 48     | 0.296296      | 0.353553            |
+| pard3_lite2020_graphfla              | 162 | 47     | 0.290123      | 0.111803            |
+| cr6261_h1_phillips2021_graphfla      | 162 | 35     | 0.216049      | 0.1                 |
+| trpb_johnston2024_four_site_graphfla | 162 | 34     | 0.209877      | 0.158114            |
+| cr6261_h9_phillips2021_graphfla      | 162 | 33     | 0.203704      | 0.1                 |
+| gb1_wu2016_four_site_graphfla        | 162 | 33     | 0.203704      | 0.210819            |
+| dhfr_papkou2023_full_wagner_tsv      | 162 | 27     | 0.166667      | 0.1                 |
+| cr9114_flub_phillips2021_graphfla    | 162 | 22     | 0.135802      | 0.1                 |
+| cr9114_h1_phillips2021_graphfla      | 162 | 22     | 0.135802      | 0                   |
+| cr9114_h3_phillips2021_graphfla      | 162 | 17     | 0.104938      | -0.1                |

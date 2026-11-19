@@ -1,0 +1,38 @@
+run: RUN-089
+target: lab-slurm
+experiment: EXP-035
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-17_EXP-035_phot-replicated-heldout-split-graphlet-diagnostic
+  run_script: experiments/2026-05-17_EXP-035_phot-replicated-heldout-split-graphlet-diagnostic/run.sh
+inputs:
+  declared_files:
+  - data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079.dvc
+  - data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079/graphlet_metrics.csv
+  - data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079/graphlet_catalog.csv
+  - data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079/parameter_grid.csv
+  datasets:
+  - RUN-079 PHOT frozen-base coupled-landscape graphlet candidate metrics
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - split_assignments.csv
+  - split_selected_distances.csv
+  - split_family_summary.csv
+  - split_family_pairwise_deltas.csv
+  - component_summary.csv
+  - selection_counts.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-089/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-089
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-089/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-089/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-089
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-089/project/experiments/2026-05-17_EXP-035_phot-replicated-heldout-split-graphlet-diagnostic/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-089/project/experiments/2026-05-17_EXP-035_phot-replicated-heldout-split-graphlet-diagnostic/runs/RUN-089.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

@@ -1,0 +1,66 @@
+run: RUN-166
+target: lab-slurm
+experiment: EXP-065
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration
+  run_script: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - PROJECT_STATE.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/config.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - scripts/aggregate_thermodynamic_calibration.py
+  - src/project_adapt_env/dense_descriptive.py
+  - src/project_adapt_env/summary_statistics.py
+  - external/Adapt-Env/adaptenv/thermodynamic.py
+  - external/Adapt-Env/adaptenv/extensive_gnk.py
+  - external/Adapt-Env/adaptenv/ranked_categorical_gnk.py
+  - external/Adapt-Env/docs/THERMODYNAMIC_V2.md
+  - tests/test_aggregate_thermodynamic.py
+  - results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission/result.md
+  - results/RES-060_run-153-validates-global-core-calibration-and-edge-transfer-but-fails-gnk-texture-prevalence/result.md
+  - results/RES-061_run-157-binary-rank-8-representation-rescues-gnk-texture-prevalence-on-fixed-challenge-panel/result.md
+  - results/RES-062_run-162-formally-fails-observable-coverage-and-specificity-with-plateau-confounded-rugged-target/result.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/paired_readout.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/paired_readout.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/inputs/run164_trpb_nodes.json
+  - scripts/paired_readout_exp065.py
+  - tests/test_paired_readout_exp065.py
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/analysis.md
+  datasets: []
+outputs:
+  expected:
+  - manifest.json
+  - empirical_cubes.csv
+  - calibration.csv
+  - cube_statistics.csv
+  - cube_values.csv
+  - mutation_effects.csv
+  - latent_cubes.csv
+  - readout_comparison.csv
+  - conditional_summary.csv
+  - selected_parameters.json
+  - summary.json
+  - figures/01_paired_readouts.png
+  - figures/01_paired_readouts.pdf
+  - figures/02_conditional_relationships.png
+  - figures/02_conditional_relationships.pdf
+  - figures/03_embedded_neighbourhoods.png
+  - figures/03_embedded_neighbourhoods.pdf
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-166/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-166
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-166/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-166/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-166
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-166/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-166/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-166.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

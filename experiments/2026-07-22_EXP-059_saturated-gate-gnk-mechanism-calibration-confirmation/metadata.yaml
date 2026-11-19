@@ -1,0 +1,101 @@
+id: EXP-059
+type: experiment
+title: Saturated-gate GNK mechanism calibration and held-out confirmation
+slug: saturated-gate-gnk-mechanism-calibration-confirmation
+status: planned
+created: '2026-07-22T15:54:37+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-058
+  motivating_results:
+  - RES-049
+  - RES-055
+  - RES-057
+question: Can an open stability gate and non-saturated function channel transmit a
+  paired GNK-weight intervention into observable epistasis and local topology while
+  preserving nonzero navigability on held-out protein-scale subspaces?
+pre_experiment_prediction: At a component-qualified saturated-gate operating point,
+  increasing GNK weight will increase q-ary non-additive variance, sign epistasis,
+  and local-maxima density while reducing but not collapsing basin convergence on
+  held-out seeds.
+rationale: RES-057 leaves the saturated-gate two-channel product untested. This experiment
+  uses an L=48 embedded exact calibration arm, disjoint held-out seeds, treatment-independent
+  genotype designs, a weight-zero causal null, and routing controls used only for
+  equivalence diagnostics.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/RES-057_exp059_two_channel_viability_benchmark_spec.md
+  - results/RES-049_run-127-hashed-gnk-knobs-validate-forward-ruggedness-accessibility-map/result.md
+  - results/RES-055_run-141-fixed-support-aware-probe-fails-core-gnk-validation-gates/result.md
+  - results/RES-057_run-142-readout-coupling-calibration-no-joint-core-gnk-region/result.md
+  - claims/CLAIM-002_single-latent-biophysical-empirical-fits.md
+  - claims/CLAIM-003_structured-high-order-residual-capacity-improves-phot-benchmarks.md
+  - scripts/two_channel_viability_benchmark_exp059.py
+  - scripts/design_matched_support_aware_probe_exp057.py
+  - scripts/hashed_gnk_benchmark_knob_validation.py
+  - scripts/generator_readout_coupling_calibration_exp058.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 64
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '72:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - design_catalog.csv
+  - component_metrics.csv
+  - descriptor_metrics.csv
+  - enumerable_landscape_metrics.csv
+  - support_catalog.csv
+  - calibration_decision.csv
+  - frozen_operating_point.json
+  - confirmation_seed_metrics.csv
+  - viability_checks.csv
+  - gnk_transmission_checks.csv
+  - topography_checks.csv
+  - routing_equivalence.csv
+  - mechanism_decision.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- This record tests a private legacy product/function-capacity compatibility route.
+  A pass is evidence for an internally controllable candidate mechanism only, not
+  empirical realism or public-generator readiness.
+- The Stage 4C/4D/4E hard stop from RES-057 remains in force.
+template: generic
+compliance:
+  level: green
+  issues: []

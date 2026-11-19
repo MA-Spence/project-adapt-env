@@ -1,0 +1,4 @@
+fix_label,n,high_order_sep_pass,sign_epi_sep_pass,local_maxima_sep_pass,matched_core_guardrail_pass,gnk_separation_pass,high_order_absdelta_max,high_order_absdelta_median,sign_epi_absdelta_max,local_maxima_absdelta_max
+A,972,25,24,0,0,0,0.0548,0.0019,0.0367,8e-05
+B,3240,3240,3240,0,0,0,0.8662,0.708,0.1624,0.00065
+C,810,0,0,0,0,0,0.0021,0.0,0.004,5e-05

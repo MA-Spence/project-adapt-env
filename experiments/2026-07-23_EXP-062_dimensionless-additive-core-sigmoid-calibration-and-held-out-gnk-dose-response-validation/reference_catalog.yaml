@@ -1,0 +1,246 @@
+catalog_version: 1
+selection_frozen_before_model_scoring: true
+scope_note: >-
+  Real protein sequences are used only as fixed sequence contexts. No empirical
+  fitness, abundance, expression, melting-temperature, or assay outcome enters
+  calibration or confirmation. This is a fixed-panel mechanistic experiment,
+  not population-level protein generalization.
+long_strata_selection_note: >-
+  The exact-length alternatives are an outcome-blind curated fixed panel, not a
+  probability sample or a postulated representative sample of proteins. Exact
+  identifiers and hashes make the tested panel reproducible; conclusions must
+  remain conditional on it. Only the short confirmation pair uses a ranked
+  candidate-universe rule, recorded below.
+short_bin_note: >-
+  The source panel contained no valid independent exact-length-48 Meltome
+  sequence, so the preregistered short stratum spans lengths 47--52.
+short_confirmation_selection:
+  source_dataset: flip_meltome_stability_summary
+  candidate_universe: 25 unique nonempty canonical-q20 sequences of length 47--52
+  sequence_deduplication: retain the lexicographically smallest protein_id for each unique sequence
+  outcome_fields_used: false
+  rank_key: sha256("EXP-062-short-confirmation-v1|" + protein_id + "|" + sequence_sha256)
+  rule: take ranks 1 and 2 before any model score
+
+references:
+  - id: sr43c_48
+    split: calibration
+    length_bin: short_47_52
+    length: 48
+    source_dataset: proteingym_sr43c_arath_tsuboyama_2023_2n88
+    source_record: target_sequence
+    selection_rule: preexisting EXP-060 anchor assigned to calibration before EXP-062 scoring
+    sequence_sha256: 81346251006cd7699ec780db8c419274f1044e32371600068db7abd2a89b0e53
+    sequence: AVAESVIGKRVGDDGKTIEYLVKWTDMSDATWEPQDNVDSTLVLLYQQ
+  - id: amfr_47_cal
+    split: calibration
+    length_bin: short_47_52
+    length: 47
+    source_dataset: proteingym_amfr_human_tsuboyama_2023_4g3o
+    source_record: target_sequence
+    selection_rule: model-blind canonical-q20 short-stratum sequence frozen before EXP-062 scoring
+    sequence_sha256: ba8bd075361c9c8ffd9036a5afc650f92bfe2bc4f373e67d6c3c0927e49159d6
+    sequence: YFQGQLNAMAHQIQEMFPQVPYHLVLQDLQLTRSVEITTDNILEGRI
+  - id: meltome_f8w3h2_51_conf
+    split: confirmation
+    length_bin: short_47_52
+    length: 51
+    source_dataset: flip_meltome_stability_summary
+    source_record: F8W3H2_atp5e
+    selection_rule: short_confirmation_selection rank 1; outcome fields excluded
+    sequence_sha256: fcc6f76aca25325ce5f8df52b1862315a8f8de122b1d01a5935301a57e497d89
+    sequence: MVAYWRQAGLSYIRYSAICARVVRAALKPQIKAEAIKNAESNVRVIKAKTT
+  - id: meltome_q6kz94_49_conf
+    split: confirmation
+    length_bin: short_47_52
+    length: 49
+    source_dataset: flip_meltome_stability_summary
+    source_record: Q6KZ94_PTO1373
+    selection_rule: short_confirmation_selection rank 2; outcome fields excluded
+    sequence_sha256: cfa97b441abbec35554856c0186699bedc52a1f40058bf7c426a81fdad4ff2d0
+    sequence: MGLGKRDLNRKKKSLEMKLQELETRAKKNPLNKELQEEINELKKKIEKS
+
+  - id: f7ybw8_93
+    split: calibration
+    length_bin: L093
+    length: 93
+    source_dataset: proteingym_f7ybw8_mesow_aakre_2015
+    source_record: target_sequence
+    selection_rule: preexisting EXP-060 anchor assigned to calibration before EXP-062 scoring
+    sequence_sha256: 4956f0edf104dead9777f85ecc4b3c5ed53f7b0d25edb79c6c4cceca251b9238
+    sequence: MANVEKMSVAVTPQQAAVMREAVEAGEYATASEIVREAVRDWLAKRELRHDDIRRLRQLWDEGKASGRPEPVDFDALRKEARQKLTEVPPNGR
+  - id: meltome_a0a0k2ha49_93_cal
+    split: calibration
+    length_bin: L093
+    length: 93
+    source_dataset: meltome
+    source_record: A0A0K2HA49_GT50_10640
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: 9e3853179625871550a4c3098790dccfc86d35a9257f153e01a5352818a69ea5
+    sequence: MSESGATTEIVVRLPQSLLTELDVLVKQENGNRNELIYQATKMYIRERKKRQIREAMRRGYMEMAKINLSIASEAFHAEYEADHTVERLVSGG
+  - id: meltome_a0a0k2hc44_93_conf
+    split: confirmation
+    length_bin: L093
+    length: 93
+    source_dataset: meltome
+    source_record: A0A0K2HC44_GT50_16110
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: f6aac015ef90983427c1a61f100a4348b611fe798ba5578402a9d2757ad66822
+    sequence: MNGMNKTELINAVAETSGLSKKDATKAVDAVFDSITEALRKGDKVQLIGFGNFEVRERAARKGRNPQTGEEMEIPASKVPAFKPGKALKDAVK
+  - id: meltome_f1r7u7_93_conf
+    split: confirmation
+    length_bin: L093
+    length: 93
+    source_dataset: meltome
+    source_record: F1R7U7_rheb
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: 4b77b99e21853ae79799d257e0615cb4c81a9aadcc69b5376eb0dc3f3aa3cc0b
+    sequence: SFEVVKVIHEKLLDMVGKVQVPIMLVGNKKDLHMERVISCEEGKALAESWNAAFMESSAKENQTAVEVFKRIILEAEKMDGGAPQGRTPCSMM
+
+  - id: phot_118
+    split: calibration
+    length_bin: L118
+    length: 118
+    source_dataset: proteingym_phot_chlre_chen_2023
+    source_record: target_sequence
+    selection_rule: preexisting EXP-060 anchor assigned to calibration before EXP-062 scoring
+    sequence_sha256: f32baf609eab4f10975523f58475bcbaaee7ec4f879c86a855ca2f41e6f1b3e7
+    sequence: AGLRHTFVVADATLPDCPLVYASEGFYAMTGYGPDEVLGHNARFLQGEGTDPKEVQKIRDAIKKGEACSVRLLNYRKDGTPFWNLLTVTPIKTPDGRVSKFVGVQVDVTSKTEGKALA
+  - id: meltome_a0a0k2h5f7_118_cal
+    split: calibration
+    length_bin: L118
+    length: 118
+    source_dataset: meltome
+    source_record: A0A0K2H5F7_rplS
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: 4e1f1a188fd8e61630589df996a0c55b786fa6014e935b36db3afa95cb503c28
+    sequence: MHHLIQEITKEQLRTDLPDFRPGDTVRVHVKVVEGNRERIQVFEGVVIKRRGAGISETFTVRKVSYGVGVERTFPVHTPKIAKLEVIRRGKVRRAKLYYLRELRGKAARIKENTNAAQ
+  - id: meltome_a0a0k2hbm3_118_conf
+    split: confirmation
+    length_bin: L118
+    length: 118
+    source_dataset: meltome
+    source_record: A0A0K2HBM3_GT50_15690
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: 4a81f0edc7e66966bc86b618beb75a3550ed31d75f4e61faafedfed5c48c8b48
+    sequence: MLIRYRKNYEKIAMGLLSFMPTEKDLKRLQQTMKQYETNNDWQLFLWKEGDDIVGIIGVLLRAPDVVEIQHISVNPSHRHQGIGKQMVKALKEVYPGRRLCANEWTASFFDKCHACNE
+  - id: meltome_f8w522_118_conf
+    split: confirmation
+    length_bin: L118
+    length: 118
+    source_dataset: meltome
+    source_record: F8W522_arf2a
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: ea8e8088c0c6a6cf3d644b08243f0c12e5efa1795948365c20790054c096b204
+    sequence: MGNMFAGLFKNLFGKKEMRILMVGLDAAGKTTILYKLKLGEIVTTIPTIGFNVETVEYKNISFTVWDVGGQDKIRPLWRHYFQNTQGLIFVVDSNDRERVNEAREELTRMLAEDELRD
+
+  - id: his7_220
+    split: calibration
+    length_bin: L220
+    length: 220
+    source_dataset: proteingym_his7_yeast_pokusaeva_2019
+    source_record: target_sequence
+    selection_rule: preexisting EXP-060 anchor assigned to calibration before EXP-062 scoring
+    sequence_sha256: d8a86cdeaf8e8dc92742780d24c9526abc19a05518c02a1e730d0ac8d1c7043f
+    sequence: MTEQKALVKRITNETKIQIAISLKGGPLAIEHSIFPEKEAEAVAEQATQSQVINVHTGIGFLDHMIHALAKHSGWSLIVECIGDLHIDDHHTTEDCGIALGQAFKEALGAVRGVKRFGSGFAPLDEALSRAVVDLSNRPYAVVELGLQREKVGDLSCEMIPHFLESFAEASRITLHVDCLRGKNDHHRSESAFKALAVAIREATSPNGTNDVPSTKGVLM
+  - id: meltome_a0a0k2h5m1_220_cal
+    split: calibration
+    length_bin: L220
+    length: 220
+    source_dataset: meltome
+    source_record: A0A0K2H5M1_GT50_03375
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: 9e81d60da6f73f7649b03c35273c95fb0d6d188b721b62442ac1513cb63a46a6
+    sequence: MKKKQFAVIGLGRFGGSICRTLSEQGMEVLAIDIDEDRVNEFASIASHAVVGDTTDENVLKSLGIRNFDHVIVAIGDNIQASILTTLILKELGVNHITVKATNDYHEKVLKKIGADQIVHPERDMGERIAHNLISNNVLDYLELSDKYSIVEIVASERLDGHSLLELDIRARYGINIVAIKRGASVIVSPLASEIIRKGDVLVVIGADSDIDRFEEKVVG
+  - id: meltome_a0a0k2h628_220_conf
+    split: confirmation
+    length_bin: L220
+    length: 220
+    source_dataset: meltome
+    source_record: A0A0K2H628_GT50_04245
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: bb46a127ad7207c77d339112cf38d85d91a08ad7bfb2900ff0c1a6329d16f1cc
+    sequence: MANFNEQGLAYMREGKYEEAIRCFSAAVEQHPDDPAGYINIGTVLVAAGEEEKALDCFRQALKIDKKAAAAYYGMGTVHYKREQFAKAKDMFERALGLGLDDADTHFMLGMSLWRLEMPRLALPYLQRAAELNETDAEALFQLGLCLATLDYVDEAKRYFEKTLELDPRHADAYYNLGVIYAYKDELDAARNMFAAALEAKPDHVLAGYGKKLMEKRLAP
+  - id: meltome_d6rck1_220_conf
+    split: confirmation
+    length_bin: L220
+    length: 220
+    source_dataset: meltome
+    source_record: D6RCK1_Rad51
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: 3a5094e4e143cc293e11fd07854ceb0158a511f0d70a9649bfbcc511f68ec910
+    sequence: MAMQMQLEASADTSVEEESFGPQPISRLEQCGINANDVKKLEEAGYHTVEAVAYAPKKELINIKGISEAKADKILTEAAKLVPMGFTTATEFHQRRSEIIQITTGSKELDKLLQGGIETGSITEMFGEFRTGKTQICHTLAVTCQLPIDRGGGEGKAMYIDTEGTFRPERLLAVAERYGLSGSDVLDNVAYARGFNTDHQTQLLYQASAMMVESSLVSQW
+
+  - id: gfp_238
+    split: calibration
+    length_bin: L238
+    length: 238
+    source_dataset: proteingym_gfp_aeqvi_sarkisyan_2016
+    source_record: target_sequence
+    selection_rule: preexisting EXP-060 anchor assigned to calibration before EXP-062 scoring
+    sequence_sha256: 9be57dbaa8e6d8b324cd1a84684901808c38b3b84f940c08e00a0323f4215e9f
+    sequence: MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK
+  - id: meltome_a0a0k2h5u1_238_cal
+    split: calibration
+    length_bin: L238
+    length: 238
+    source_dataset: meltome
+    source_record: A0A0K2H5U1_fabG
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: d1cfc8637b73b36ce2203c3af13819cba9ed02ff36ee7ea070ab409b2620e4bb
+    sequence: MRYALITGASGGIGQSIARVLAREGYGLFLHYYRRRAPVEALKEELNDVHIVPIEADLSAPDGVEKLVSQIDRPVDAIVYNSGASYYGLLTDMNDELIERMVRLHMTSPALLIKRLIPSMVARKRGHIVFISSIWGLCGASCEAVYSMTKGGQNAFAKALAKELAPSGIRVNAVAPGAIDTDMLRVFRPEELEALTDEIPAGRLGTPDEVAETVAFLLSDAASYITGQVISVNGGWYC
+  - id: meltome_g3uxz5_238_conf
+    split: confirmation
+    length_bin: L238
+    length: 238
+    source_dataset: meltome
+    source_record: G3UXZ5_Psme1
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: b56d30932038d1dd5e81aeaf3be29bc4f71b1a931f654dc1ea55f135a4b36ee8
+    sequence: MATLRVHPEAQAKVDVFREDLCSKTENLLGSYFPKKISELDAFLKEPALNEANLSNLKAPLDIPVPDPVKEKEKEERKKQQEKEEKEEKKKGDEDDKGPPCGPVNCNEKIVVLLQRLKPEIKDVTEQLNLVTTWLQLQIPRIEDGNNFGVAVQEKVFELMTNLHTKLEGFHTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYQEIRLMVMEIRNAYAVLYDIILKNFEKLK
+  - id: meltome_o49203_238_conf
+    split: confirmation
+    length_bin: L238
+    length: 238
+    source_dataset: meltome
+    source_record: O49203_NDPK3
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: a443f6a2ac9c75678a8dbbcda5238ce2354675e5d8ff2eb3865ba33fe4250226
+    sequence: MSSQICRSASKAAKSLLSSAKNARFFSEGRAIGAAAAVSASGKIPLYASNFARSSGSGVASKSWITGLLALPAAAYMIQDQEVLAAEMERTFIAIKPDGVQRGLISEIISRFERKGFKLVGIKVIVPSKDFAQKHYHDLKERPFFNGLCDFLSSGPVIAMVWEGDGVIRYGRKLIGATDPQKSEPGTIRGDLAVTVGRNIIHGSDGPETAKDEISLWFKPQELVSYTSNSEKWLYGDN
+
+  - id: spg1_448
+    split: calibration
+    length_bin: L448
+    length: 448
+    source_dataset: proteingym_spg1_strsg_olson_2014
+    source_record: target_sequence
+    selection_rule: preexisting EXP-060 anchor assigned to calibration before EXP-062 scoring
+    sequence_sha256: 296c9ffb8add18b7266735007286ea2d58f4fa839c762d10a45b3ea72405d9f2
+    sequence: MEKEKKVKYFLRKSAFGLASVSAAFLVGSTVFAVDSPIEDTPIIRNGGELTNLLGNSETTLALRNEESATADLTAAAVADTVAAAAAENAGAAAWEAAAAADALAKAKADALKEFNKYGVSDYYKNLINNAKTVEGIKDLQAQVVESAKKARISEATDGLSDFLKSQTPAEDTVKSIELAEAKVLANRELDKYGVSDYHKNLINNAKTVEGVKELIDEILAALPKTDQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTEKPEVIDASELTPAVTTYKLVINGKTLKGETTTKAVDAETAEKAFKQYANDNGVDGVWTYDDATKTFTVTEMVTEVPGDAPTEPEKPEASIPLVPLTPATPIAKDDAKKDDTKKEDAKKPEAKKDDAKKAETLPTTGEGSNPFFTAAALAVMAGAGALAVASKRKED
+  - id: meltome_a0a0k2hb78_448_cal
+    split: calibration
+    length_bin: L448
+    length: 448
+    source_dataset: meltome
+    source_record: A0A0K2HB78_gcvPA
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: 89eb158845f50c2b83bb461531d24587d99650c54f76a92b7db85dc172e8967c
+    sequence: MLHRYLPMTEEDKQEMLKTIGVASIDDLFADIPEQVRFRGELKVKPAKSEPELWKELAALAEKNASVKQYVSFLGAGVYDHYIPAVVDHVLSRSEFYTAYTPYQPEISQGELQAIFEFQTMVCELTGMDVANSSMYDGGTALAEAVLLSAAHTKRKKVLISTAVHPQYREVVRTYAKGQKLEVKEIPYDGGITDLKALEAEMGDDVACVVVQYPNFFGQIEPLKAIAPLAHEKKSLFVVASNPLALGVLTPPGAFGADIVVGDMQPFGIPTQFGGPHCGYFAVKAPLMRKIPGRLVGQTTDEDGRRGFVLTLQAREQHIRRDKATSNICSNQALNALAASVALSALGKRGVKEMAAMNIQKAHYAKVELEKRGLSSPFAGPFFNEFVIRLGRPVSDVNDRLLEKGIIGGYDLGADYPELAGHMLVAVTELRTKEEIDRFVNELGDGHA
+  - id: meltome_a0a0k2hbk5_448_conf
+    split: confirmation
+    length_bin: L448
+    length: 448
+    source_dataset: meltome
+    source_record: A0A0K2HBK5_xseA
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: 5570db2a2ddf5f6c1d978c36c22557226f693b3082fe29ee5c4348a31afaa330
+    sequence: MEVRYVTVGALTKYIKRKFDVDPHLRDLWVKGEISNFKQHSRGHMYFTLKDSQGRIAAVMFAGYNQYLPFRPEDGMNVLARGEISVYEPNGNYQLYVKEMQPEGVGSLYLAYEQLKQRLEAEGLFSPVHKKPLPAFPRCIGVVTSPTGAAVRDIMTTIRRRYPLAKVILFPALVQGDGAAPSIVRAIERANAFGGVDVLIVGRGGGSIEELWAFNEEIVARAIFASKIPIISAVGHETDFTIADFVADLRAPTPTAAAEMAAPHVGELAERLAERKWRLIRAMKERLAADKEQLRRLQGSYAFRYPKRLYEQKEQQLDALLERLSRQRERLVDKHRQRLHELDMRLWRHHPAAELERMKERQKATANALEKAMRTAVERHRFRFRSNLARLEALSPLRIMERGYSLVYNEQGELVKRTNQLRIGEHLSIQVQDGRVDCQVTGVEEKQV
+  - id: meltome_o34824_448_conf
+    split: confirmation
+    length_bin: L448
+    length: 448
+    source_dataset: meltome
+    source_record: O34824_glmM
+    selection_rule: model-blind canonical-q20 exact-length sequence frozen before EXP-062 scoring
+    sequence_sha256: 68f91fd64dc9e8a07d40080b0d556b0d81db6af3f58057e0d267f9e94e09c069
+    sequence: MGKYFGTDGVRGVANSELTPELAFKVGRFGGYVLTKDKQRPKVLIGRDTRISGHMLEGALVAGLLSIGAEVMRLGVISTPGVSYLTKAMDAEAGVMISASHNPVQDNGIKFFGGDGFKLSDEQEAEIERLMDEPEDKLPRPVGADLGLVNDYFEGGQKYLQFLKQTADEDFTGIHVALDCANGATSSLATHLFADLDADVSTMGTSPNGLNINDGVGSTHPEALSAFVKEKNADLGLAFDGDGDRLIAVDEKGNIVDGDQIMYICSKHLKSEGRLKDDTVVSTVMSNLGFYKALEKEGIKSVQTAVGDRYVVEAMKKDGYNVGGEQSGHLIFLDYNTTGDGLLSAIMLMNTLKATGKPLSELAAEMQKFPQLLVNVRVTDKYKVEENEKVKAVISEVEKEMNGDGRILVRPSGTEPLVRVMAEAKTKELCDEYVNRIVEVVRSEMGLE

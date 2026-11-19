@@ -1,0 +1,60 @@
+run: RUN-077
+target: lab-slurm
+experiment: EXP-030
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-16_EXP-030_system-specific-current-model-refit-graphlet-falsifier-repeat
+  run_script: experiments/2026-05-16_EXP-030_system-specific-current-model-refit-graphlet-falsifier-repeat/run.sh
+inputs:
+  declared_files:
+  - scripts/proteingym_system_specific_current_graphlet_refit.py
+  - scripts/proteingym_bayesian_summary_calibration.py
+  - scripts/empirical_graphlet_falsification_suite.py
+  - scripts/tem1_aggregate_graphlet_residual_ruggedness.py
+  - src/project_adapt_env/adapt_env_bayes.py
+  - src/project_adapt_env/proteingym_panel.py
+  - external/Adapt-Env
+  - results/2026-05-15_RES-028_empirical-graphlet-falsification-residual-ruggedness
+  - results/2026-05-16_RES-029_proteingym-current-model-abc-refit-residual-ruggedness
+  datasets:
+  - data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  - data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  - data/interim/proteingym_mmseqs_alignments/PHOT_CHLRE_Chen_2023.fasta
+  - data/interim/proteingym_mmseqs_alignments/SPTN1_CHICK_Tsuboyama_2023_1TUD.fasta
+outputs:
+  expected:
+  - summary.json
+  - current_model_preflight.json
+  - falsification_tests.json
+  - system_fit_summary.csv
+  - system_branch_validations.csv
+  - system_graphlet_catalog.csv
+  - system_graphlet_metrics.csv
+  - system_walsh_terms.csv
+  - system_gft_coefficients.csv
+  - system_model_distances.csv
+  - systems/PHOT_CHLRE_Chen_2023/fit/summary.json
+  - systems/PHOT_CHLRE_Chen_2023/fit/posterior_particles.csv
+  - systems/PHOT_CHLRE_Chen_2023/fit/posterior_rounds.csv
+  - systems/PHOT_CHLRE_Chen_2023/graphlet_metrics.csv
+  - systems/PHOT_CHLRE_Chen_2023/walsh_terms.csv
+  - systems/PHOT_CHLRE_Chen_2023/gft_coefficients.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/fit/summary.json
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/fit/posterior_particles.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/fit/posterior_rounds.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/graphlet_metrics.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/walsh_terms.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/gft_coefficients.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-077/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-077
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-077/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-077/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-077
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-077/project/experiments/2026-05-16_EXP-030_system-specific-current-model-refit-graphlet-falsifier-repeat/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-077/project/experiments/2026-05-16_EXP-030_system-specific-current-model-refit-graphlet-falsifier-repeat/runs/RUN-077.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

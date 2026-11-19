@@ -1,0 +1,17 @@
+{
+  "adaptenv_commit": "dd0bb7a52d7d92af48bbfba115331742b9a0c2eb",
+  "files": {
+    "scripts/production_landscapes_exp066.py": "05675eb80a341f2d508d105fe49f1a77edf357885b753f2ac87fff340cecdd66",
+    "scripts/observation_calibration_exp065.py": "ab7458b312ff73710fb8e25c51c9104edc7a073a1d1e50ba342891e3e81c8502",
+    "scripts/replicate_observation_exp065.py": "e184de7a29a505af115bc4e3abf88a021f2c323c46e7b2d8bceed4fe9653dc0e",
+    "external/Adapt-Env/adaptenv/__init__.py": "d3eb33ff7e4c0a222a783d031565716a23d864e293e4b88effbb246a3c5fb932",
+    "external/Adapt-Env/adaptenv/landscape.py": "b87ca31c1687073b113fa94b785e6788733fac923b67408ac782334a3e72f26c",
+    "external/Adapt-Env/adaptenv/thermodynamic.py": "9ec75c87855feedcab49fffdeab83c64f62d06121ae9be667d29114f4327942b",
+    "external/Adapt-Env/adaptenv/extensive_gnk.py": "56f65392b9e2134171b5fd7758a4276c4195c3b4bd77f625f2552047449ccf8c",
+    "external/Adapt-Env/adaptenv/ranked_categorical_gnk.py": "d7eb55231ae87e130dd8c8e015b4b7fc3b872e25668b0b529d65718a3136021f",
+    "external/Adapt-Env/adaptenv/amino_acids.py": "0a0714f05e35fc3e665e33f0f5d50de054d6813e29c12dba6ad20ca33aefc7b9",
+    "scripts/publish_production_landscapes.py": "8aa71c64b4bea9d24c62e9e94cfdfbd5b7bfc637e00b7e4e96be76808ee37bf0",
+    "experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/run.sh": "3f0700089f7f459b9ea65d4371d2c1208957d93dfa0343abc363e2eb9c2a22ac",
+    "experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/worker_environment.json": "b2e5d1c48b0e7594b0d7041497b6c5e9fa2ed46cd681fa45a27531cae63f0681"
+  }
+}

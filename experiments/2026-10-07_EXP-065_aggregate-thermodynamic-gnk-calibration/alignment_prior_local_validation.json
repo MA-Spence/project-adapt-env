@@ -1,0 +1,27 @@
+{
+  "status": "local_environment_preflight_passed",
+  "python": "3.11.15",
+  "packages": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.0",
+    "scipy": "1.17.1",
+    "pyarrow": "20.0.0",
+    "PyYAML": "6.0.3"
+  },
+  "tests": {
+    "passed": 8,
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .labproj/envs/trpb-py31115/bin/python -m pytest -q tests/test_alignment_prior_exp065.py tests/test_prepare_trpb_profile_exp065.py",
+    "log": "alignment_prior_local_tests.log",
+    "log_sha256": "cf5f415def9b4d2d84ce9a43be1bdefbb3ec32f2def324e1c311bf54c3e5230b"
+  },
+  "graph_kernel": {
+    "fresh_compilation": true,
+    "platform": "macOS arm64",
+    "compiler": "Apple Clang",
+    "independent_cases_passed": 20,
+    "source_sha256": "152e75c7add7876e09ca9e82d24e2b7f2b176e099910fd8ff3593ccc8df0bf75"
+  },
+  "frozen_source_files_verified": 42,
+  "scientific_protocol_changes": null,
+  "execution_qualification": "Numerical package versions match; macOS arm64 and Apple Clang differ from Linux/Zig. Bit-for-bit cross-platform equivalence is not asserted."
+}

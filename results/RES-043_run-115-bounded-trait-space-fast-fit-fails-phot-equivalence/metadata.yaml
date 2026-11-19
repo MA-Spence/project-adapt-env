@@ -1,0 +1,47 @@
+id: RES-043
+title: RUN-115 bounded trait-space fast fit improves guardrails but fails PHOT full-ABC
+  equivalence
+status: completed
+created: '2026-06-16T19:32:42+10:00'
+owner: matthew-spence
+analyses:
+- ANA-043
+experiments:
+- EXP-044
+runs:
+- RUN-115
+supports: []
+weakens:
+- HYP-004
+refutes: []
+motivates:
+- HYP-009
+supersedes: []
+summary: RUN-115 completed EXP-044 and found zero operationally equivalent bounded
+  trait-space current-model candidates against the best available RUN-098 full-ABC
+  PHOT comparator. The minimal model patch improved the previous gross component-guardrail
+  failures, with 12/12 candidates passing component guardrails, but all rows failed
+  absolute and relative aggregate-distance equivalence. Observable epistasis moved
+  closer than previous nested-min calibrated fits, while raw latent magnitude epistasis
+  remained tens to hundreds of units and held-out accessibility/local-energy tradeoffs
+  persisted.
+artifacts:
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/metrics.json
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_equivalence_decision.md
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_observable_vs_raw_epistasis_and_landscape.md
+evidence_paths:
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/metrics.json
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_equivalence_decision.md
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_bounded_gate_test_distances.md
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_abc_comparator_test_distances.md
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_top_component_distances.md
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_observable_vs_raw_epistasis_and_landscape.md
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_best_candidate_parameters.md
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/tables/run-115_output_collection_audit.md
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/source_tables/run-115_bounded_gate_equivalence.csv
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/source_tables/run-115_bounded_gate_distances.csv
+- analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review/source_tables/run-115_graphlet_summary.csv
+- /tank/data/labproj/runtime/project-adapt-env/runs/RUN-115/outputs
+compliance:
+  level: green
+  issues: []

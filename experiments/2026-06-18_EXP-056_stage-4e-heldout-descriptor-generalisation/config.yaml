@@ -1,0 +1,100 @@
+experiment_id: EXP-056
+title: Stage 4E held-out descriptor generalisation
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-056
+  stage: 4E
+  mode: stage_4e_heldout_generalisation
+  planned_runner: scripts/ensemble_landscape_validation_stage4.py
+  scientific_boundary:
+    advisory_source: scratch/science_plan_part1_ensemble_landscape_validation.md
+    validation_rule: Leave-one-Tier-1-landscape-out descriptor prediction; failures identify missing mechanisms and are not forced into universal-realism support.
+    controls:
+      - additive_core_only_observable
+      - bare_gnk_texture
+      - structured_vs_shuffled_vs_random_support
+
+data:
+  processed_root: data/processed/ensemble-landscape-validation-datasets
+  dataset_ids:
+    - gb1_wu2016_four_site_graphfla
+    - trpb_johnston2024_four_site_graphfla
+    - dhfr_papkou2023_full_wagner_tsv
+    - cr9114_h1_phillips2021_graphfla
+    - cr9114_h3_phillips2021_graphfla
+    - cr9114_flub_phillips2021_graphfla
+    - cr6261_h1_phillips2021_graphfla
+    - cr6261_h9_phillips2021_graphfla
+    - pard2_lite2020_graphfla
+    - pard3_lite2020_graphfla
+  binary_subcube_dim: 4
+  max_binary_subcubes_per_dataset: 96
+  max_hamming1_directed_effects: 2000000
+
+generator:
+  sequence_length: 48
+  subcube_dim: 8
+  support_modes: [structured, shuffled, random]
+  seeds: [701, 702, 703]
+  stability_margin_grid: [6.0, 10.0, 14.0]
+  epi_weight_grid: [0.0, 0.15, 0.3, 0.6, 1.0]
+  gnk_terms: 384
+  gnk_min_order: 2
+  gnk_max_order: 4
+  gnk_order_weights: [0.35, 0.45, 0.20]
+  stability_scale: 1.0
+  threshold_steepness: 20.0
+  fitness_output_scale: 10.0
+
+expectations:
+  n_local_maxima: increase
+  walsh_high_order_fraction: increase
+  sign_epistasis_fraction: increase
+  reciprocal_sign_epistasis_fraction_local: increase
+  accessible_path_fraction_dp: decrease
+  random_walk_lag1_autocorrelation: decrease
+
+overlap:
+  metrics:
+    - fitness_sd
+    - single_step_effect_sd
+    - beneficial_fraction
+    - neutral_fraction
+    - n_local_maxima
+    - accessible_path_fraction_dp
+    - walsh_high_order_fraction
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction_local
+    - magnitude_epistasis_to_single_mutant_sd_ratio
+    - random_walk_lag1_autocorrelation
+
+joint_realism:
+  min_fraction_metrics_in_band: 0.6
+  min_assays_hit: 2
+
+outputs:
+  expected:
+    - preflight.json
+    - heldout_predictions.csv
+    - descriptor_scope_audit.csv
+    - summary.json
+
+quick:
+  data:
+    dataset_ids:
+      - gb1_wu2016_four_site_graphfla
+      - trpb_johnston2024_four_site_graphfla
+      - cr6261_h1_phillips2021_graphfla
+    binary_subcube_dim: 3
+    max_binary_subcubes_per_dataset: 8
+    max_hamming1_directed_effects: 50000
+  generator:
+    sequence_length: 16
+    subcube_dim: 5
+    support_modes: [structured, random]
+    seeds: [701]
+    stability_margin_grid: [10.0]
+    epi_weight_grid: [0.0, 0.6]
+    gnk_terms: 64

@@ -1,0 +1,474 @@
+experiment_id: EXP-042
+title: PHOT nested-min cheaper fitting protocol equivalence benchmark
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-042
+  status: planned
+  mode: phot_nested_min_fit_protocol_equivalence_benchmark
+  planned_runner: scripts/phot_nested_fit_protocol_benchmark.py
+  scientific_boundary:
+    primary_hypotheses:
+      - HYP-004
+      - HYP-009
+    motivating_results:
+      - RES-038
+      - RES-039
+      - RES-040
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    model_family_rule: keep the latest nested min-coupled sequential residual model family fixed
+    fitting_rule: compare cheaper search protocols against the already computed full RUN-098 ABC fit without rerunning full ABC
+    equivalence_rule: operational equivalence is judged on held-out graphlet summary distance and component guardrails, not parameter equality
+    scaling_rule: success here is only permission to attempt GB1/TrpB scale-up, not evidence that the protocol is generally valid
+
+source_run:
+  run_id: RUN-077
+  result_id: RES-030
+  output_dir: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  dvc_pointer: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: frozen_current_phot_base_prepared_assay_and_empirical_graphlets
+
+abc_comparator:
+  experiment_id: EXP-039
+  run_id: RUN-098
+  result_id: RES-039
+  output_dir: data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098
+  dvc_pointer: data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  role: full_nested_min_sequential_residual_abc_fit_to_benchmark_without_refitting
+  primary_comparator_file: selected_family_distances.csv
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    n_epistatic_terms: 220
+    epistasis_strength: 0.025
+    empirical_pairwise_strength: 0.025
+    pairwise_epistasis_rank: 2
+    epistasis_covariation_bias: 0.8
+    n_higher_order_epistatic_terms: 0
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 400
+    peak_search_top_single_starts: 8
+    peak_search_random_starts: 8
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+    seed: 42
+
+nested_operator:
+  formula: c(x)=min(a(x),b(x)); f(x)=min(c(x),d(x))
+  interpretation: latest PHOT latent residual landscape family for operational fitting-protocol comparison
+  first_stage:
+    source_experiment: EXP-033
+    source_run: RUN-084
+    source_parameter_rank: 1
+    parameter_set_id: RUN-084_rank001_locked_first_stage
+    mode: min
+    a_anchor: fitted_smooth_core_only
+    module_source: none
+    coefficient_seed: 20260517
+    auxiliary_correlation: 0.6708136998083811
+    auxiliary_scale: 0.6740739434012137
+    auxiliary_offset_sd: 1.1961956935741733
+    auxiliary_pairwise_scale: 0.046372588078408356
+    auxiliary_pairwise_density: 0.04
+    log_tau: 0.08192868932605157
+    tau: 1.0853772721162418
+    module_residual_scale: 0.0
+    module_residual_density: 0.0
+    module_residual_orders:
+      - 2
+      - 3
+  second_stage:
+    mode: min
+    coefficient_seed: 20260518
+    auxiliary_pairwise_density_choices:
+      - 0.00
+      - 0.02
+      - 0.04
+      - 0.08
+    module_residual_orders:
+      - 2
+      - 3
+
+first_stage_transform:
+  evaluation_chunk_size: 4096
+  max_variants: 0
+  sample_seed: 20260518
+
+phot_graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 8
+  top_feature_pool: 42
+
+graphlet_evaluation:
+  primary_score_column: latent_phi
+  score_columns:
+    - latent_phi
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+
+empirical_innovation:
+  base_anchor: fitted_current_best
+  global_readout_polynomial_degree: 3
+  use_calibration_graphlets_only: true
+  residual_definition: empirical_latent_phi_minus_polynomial_readout_of_frozen_current_best
+
+module_selection:
+  source: empirical_calibration_plaquette_energy
+  max_modules: 12
+  module_size: 3
+  selection_split: calibration
+
+abc:
+  fit_families:
+    - no_module
+    - empirical_module
+    - random_module
+    - shuffled_module
+    - uncoupled_module
+  posterior_predictive_particles: 16
+  resume_checkpoints: true
+  component_guardrails:
+    default_max_component_distance: 2.5
+    penalty_weight: 0.5
+    metric_max_component_distance:
+      sign_epistasis_fraction: 2.5
+      reciprocal_sign_epistasis_fraction: 2.5
+      n_local_maxima: 2.0
+      accessible_path_fraction: 2.0
+      random_walk_lag1_autocorrelation: 2.0
+      walsh_high_order_fraction: 2.0
+      gft_low_energy_fraction: 2.5
+      gft_mid_energy_fraction: 2.5
+      gft_high_energy_fraction: 2.5
+      edge_energy_adjacent_moran_i: 2.0
+      edge_energy_top10_fraction: 2.0
+      edge_energy_effective_fraction: 2.0
+      site_energy_top1_fraction: 2.0
+      site_energy_effective_fraction: 2.0
+      plaquette_energy_top1_fraction: 2.0
+      plaquette_energy_effective_fraction: 2.0
+      magnitude_epistasis_mean: 2.0
+      signed_pairwise_epistasis_mean: 2.0
+      sign_epistasis_fraction_local: 2.5
+      reciprocal_sign_epistasis_fraction_local: 2.5
+      diminishing_returns_epistasis_fraction: 2.0
+  regularization:
+    values_to_c_correlation_min: 0.40
+    edge_gradient_correlation_to_c_min: 0.15
+    second_innovation_to_c_sd_max: 0.90
+    second_auxiliary_weight_sd_min: 0.03
+    lambda_pheno: 1.0
+    lambda_edge: 0.5
+    lambda_energy: 0.75
+    lambda_state_use: 0.25
+  smc:
+    n_particles: 24
+    n_rounds: 3
+    initial_pool_multiplier: 4
+    proposal_pool_multiplier: 4
+    epsilon_quantile: 0.6
+    seed: 20260518
+  backend:
+    kind: ray
+    max_workers: 8
+    batch_size: 1
+  parameter_priors:
+    second_auxiliary_correlation:
+      kind: float
+      low: 0.0
+      high: 0.99
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    second_auxiliary_scale:
+      kind: float
+      low: 0.20
+      high: 1.70
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    second_auxiliary_offset_sd:
+      kind: float
+      low: -1.75
+      high: 1.25
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    second_auxiliary_pairwise_scale:
+      kind: float
+      low: 0.0
+      high: 0.65
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    second_auxiliary_pairwise_density_index:
+      kind: int
+      low: 0
+      high: 3
+      initial_scale_fraction: 0.35
+      min_scale_fraction: 0.20
+    second_log_tau:
+      kind: float
+      low: -3.506557897319982
+      high: 0.4054651081081644
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    second_module_residual_scale:
+      kind: float
+      low: 0.0
+      high: 1.00
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    second_module_residual_density:
+      kind: float
+      low: 0.25
+      high: 1.00
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+  family_parameter_names:
+    no_module:
+      - second_auxiliary_correlation
+      - second_auxiliary_scale
+      - second_auxiliary_offset_sd
+      - second_auxiliary_pairwise_scale
+      - second_auxiliary_pairwise_density_index
+      - second_log_tau
+    empirical_module:
+      - second_auxiliary_correlation
+      - second_auxiliary_scale
+      - second_auxiliary_offset_sd
+      - second_auxiliary_pairwise_scale
+      - second_auxiliary_pairwise_density_index
+      - second_log_tau
+      - second_module_residual_scale
+      - second_module_residual_density
+    random_module:
+      - second_auxiliary_correlation
+      - second_auxiliary_scale
+      - second_auxiliary_offset_sd
+      - second_auxiliary_pairwise_scale
+      - second_auxiliary_pairwise_density_index
+      - second_log_tau
+      - second_module_residual_scale
+      - second_module_residual_density
+    shuffled_module:
+      - second_auxiliary_correlation
+      - second_auxiliary_scale
+      - second_auxiliary_offset_sd
+      - second_auxiliary_pairwise_scale
+      - second_auxiliary_pairwise_density_index
+      - second_log_tau
+      - second_module_residual_scale
+      - second_module_residual_density
+    uncoupled_module:
+      - second_auxiliary_scale
+      - second_auxiliary_offset_sd
+      - second_auxiliary_pairwise_scale
+      - second_auxiliary_pairwise_density_index
+      - second_log_tau
+      - second_module_residual_scale
+      - second_module_residual_density
+
+fitting_methods:
+  seed: 20260616
+  deterministic_summary_loss:
+    n_initial: 24
+    n_local_rounds: 2
+    n_local_candidates: 12
+    local_scale_fraction: 0.18
+  surrogate_assisted:
+    n_train: 32
+    n_candidate_pool: 256
+    n_verify: 8
+    ridge_alpha: 0.001
+  exact_descriptive_gated:
+    metric_columns:
+      - edge_energy_top10_fraction
+      - edge_energy_effective_fraction
+      - site_energy_effective_fraction
+      - site_energy_top1_fraction
+    n_initial: 24
+    n_local_rounds: 1
+    n_local_candidates: 8
+    local_scale_fraction: 0.18
+    n_promote: 2
+  local_abc_after_cheap_fit:
+    n_particles: 8
+    n_rounds: 2
+    initial_pool_multiplier: 2
+    proposal_pool_multiplier: 2
+    epsilon_quantile: 0.6
+    prior_width_fraction: 0.25
+    seed: 20260616
+    resume_checkpoints: true
+    backend:
+      kind: ray
+      max_workers: 8
+      batch_size: 1
+
+equivalence:
+  reference_split: test
+  absolute_distance_margin: 0.05
+  relative_distance_margin: 0.10
+  max_component_distance_margin: 2.5
+  distance_metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+  report_metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+    - magnitude_epistasis_mean
+    - magnitude_epistasis_sd
+    - signed_pairwise_epistasis_mean
+    - sign_epistasis_fraction_local
+    - reciprocal_sign_epistasis_fraction_local
+    - diminishing_returns_epistasis_fraction
+
+analysis:
+  random_walk:
+    n_walks_per_graphlet: 20
+    steps: 32
+    lag_max: 5
+
+outputs:
+  output_dir_name: phot-nested-min-cheap-fitting-equivalence-benchmark
+  expected_files:
+    - summary.json
+    - preflight.json
+    - progress.json
+    - locked_first_stage_transform.json
+    - graphlet_catalog.csv
+    - module_catalog.csv
+    - fit_protocol_candidates.csv
+    - selected_fit_protocol_candidates.csv
+    - local_abc_rounds.csv
+    - local_abc_parameter_specs.csv
+    - fit_protocol_distances.csv
+    - fit_protocol_equivalence.csv
+    - graphlet_metrics.csv
+    - graphlet_summary.csv
+    - walsh_terms.csv
+    - gft_coefficients.csv
+    - module_energy_summary.csv
+    - abc_comparator_selected_family_distances.csv
+    - full_abc_comparator_selected_particles.csv
+
+quick:
+  first_stage_transform:
+    evaluation_chunk_size: 1024
+    max_variants: 4000
+    sample_seed: 20260518
+  phot_graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 2
+    top_feature_pool: 42
+  module_selection:
+    max_modules: 4
+    module_size: 3
+  fitting_methods:
+    deterministic_summary_loss:
+      n_initial: 3
+      n_local_rounds: 1
+      n_local_candidates: 2
+      local_scale_fraction: 0.20
+    surrogate_assisted:
+      n_train: 3
+      n_candidate_pool: 12
+      n_verify: 2
+      ridge_alpha: 0.001
+    exact_descriptive_gated:
+      metric_columns:
+        - edge_energy_top10_fraction
+        - edge_energy_effective_fraction
+        - site_energy_effective_fraction
+        - site_energy_top1_fraction
+      n_initial: 3
+      n_local_rounds: 1
+      n_local_candidates: 2
+      local_scale_fraction: 0.20
+      n_promote: 1
+    local_abc_after_cheap_fit:
+      n_particles: 3
+      n_rounds: 1
+      initial_pool_multiplier: 2
+      proposal_pool_multiplier: 2
+      epsilon_quantile: 0.7
+      prior_width_fraction: 0.25
+      seed: 20260616
+      resume_checkpoints: false
+      backend:
+        kind: serial
+        max_workers: 1
+        batch_size: 1

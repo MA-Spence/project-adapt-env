@@ -1,0 +1,16 @@
+{
+  "experiment": "EXP-066",
+  "run": "RUN-172",
+  "scheduler_job_id": "2317",
+  "status": "completed",
+  "runtime_outputs": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-172/outputs",
+  "published_cluster_path": "/tank/data/labproj/projects/project-adapt-env/data/processed/production_landscapes/RUN-172",
+  "local_path": "data/processed/production_landscapes/RUN-172",
+  "publication": "Complete immutable RUN outputs published on the cluster and collected locally, with exact source provenance. DVC bundle backed up via SSH and all objects MD5-verified.",
+  "elapsed_seconds": 4416.301234973595,
+  "evaluated_assays": 63,
+  "fitted_settings": 195,
+  "dvc_pointer": "data/processed/production_landscapes/RUN-172.dvc",
+  "dvc_directory_md5": "521d0e1b381ead592b0f47504e0f13ba.dir",
+  "analysis": "ANA-067"
+}

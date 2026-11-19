@@ -1,0 +1,164 @@
+{
+  "analysis_id": "ANA-037",
+  "run_id": "RUN-093",
+  "experiment_id": "EXP-037",
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "data_pointer": "data/processed/phot-localized-ruggedness-energy-diagnostic/RUN-093.dvc",
+  "dvc_md5": "8747ed319b4f1a5fed2230d543cc5d5b.dir",
+  "dvc_nfiles": 12,
+  "dvc_size_bytes": 175474957,
+  "n_graphlets": 24,
+  "n_calibration_graphlets": 12,
+  "n_test_graphlets": 12,
+  "n_abc_parameter_sets_reused": 80,
+  "test_total_landscape": {
+    "empirical_target": {
+      "edge_energy_adjacent_moran_i_median": 0.012597449299450433,
+      "edge_energy_top10_fraction_median": 0.3904024026444436,
+      "edge_energy_effective_fraction_median": 0.40852725941303447,
+      "site_energy_top1_fraction_median": 0.3863201132127676,
+      "site_energy_effective_fraction_median": 0.7838786804450636,
+      "plaquette_energy_top1_fraction_median": 0.16476440043037216,
+      "plaquette_energy_effective_fraction_median": 0.8436782758067273
+    },
+    "empirical_readout_residual": {
+      "edge_energy_adjacent_moran_i_median": 0.050480119657963354,
+      "edge_energy_top10_fraction_median": 0.38226750944199217,
+      "edge_energy_effective_fraction_median": 0.3902881279610498,
+      "site_energy_top1_fraction_median": 0.34035959989320647,
+      "site_energy_effective_fraction_median": 0.8534720282903556,
+      "plaquette_energy_top1_fraction_median": 0.17602566529008457,
+      "plaquette_energy_effective_fraction_median": 0.8664264035033509
+    },
+    "fitted_current": {
+      "edge_energy_adjacent_moran_i_median": -0.029863482787939134,
+      "edge_energy_top10_fraction_median": 0.30849571459954706,
+      "edge_energy_effective_fraction_median": 0.45580298758208393,
+      "site_energy_top1_fraction_median": 0.2644715065064908,
+      "site_energy_effective_fraction_median": 0.9047988631497784,
+      "plaquette_energy_top1_fraction_median": 0.18949079111588987,
+      "plaquette_energy_effective_fraction_median": 0.7060792899858764
+    },
+    "empirical_module": {
+      "edge_energy_adjacent_moran_i_median": 0.004507194072874795,
+      "edge_energy_top10_fraction_median": 0.3734012481831743,
+      "edge_energy_effective_fraction_median": 0.4192598241551169,
+      "site_energy_top1_fraction_median": 0.3023634530520526,
+      "site_energy_effective_fraction_median": 0.8577981700963808,
+      "plaquette_energy_top1_fraction_median": 0.18763802506164975,
+      "plaquette_energy_effective_fraction_median": 0.7048048571685511
+    },
+    "no_module": {
+      "edge_energy_adjacent_moran_i_median": 0.01802062467794384,
+      "edge_energy_top10_fraction_median": 0.4012642615116919,
+      "edge_energy_effective_fraction_median": 0.40439898083434755,
+      "site_energy_top1_fraction_median": 0.2901776422000751,
+      "site_energy_effective_fraction_median": 0.8871094407949572,
+      "plaquette_energy_top1_fraction_median": 0.18730778416564894,
+      "plaquette_energy_effective_fraction_median": 0.7504680496462663
+    },
+    "random_module": {
+      "edge_energy_adjacent_moran_i_median": -0.01601312343285062,
+      "edge_energy_top10_fraction_median": 0.38458115659170966,
+      "edge_energy_effective_fraction_median": 0.40137127839398345,
+      "site_energy_top1_fraction_median": 0.31747571731222,
+      "site_energy_effective_fraction_median": 0.8254265416226441,
+      "plaquette_energy_top1_fraction_median": 0.18835121038524488,
+      "plaquette_energy_effective_fraction_median": 0.7195058902404737
+    },
+    "uncoupled_module": {
+      "edge_energy_adjacent_moran_i_median": -0.000987833673459845,
+      "edge_energy_top10_fraction_median": 0.3754937266291508,
+      "edge_energy_effective_fraction_median": 0.42703275798047574,
+      "site_energy_top1_fraction_median": 0.305413091377972,
+      "site_energy_effective_fraction_median": 0.8729736096947429,
+      "plaquette_energy_top1_fraction_median": 0.18650819149797337,
+      "plaquette_energy_effective_fraction_median": 0.6946287113539407
+    },
+    "gnk_local_null": {
+      "edge_energy_adjacent_moran_i_median": 0.025580552625923424,
+      "edge_energy_top10_fraction_median": 0.4121657743954108,
+      "edge_energy_effective_fraction_median": 0.393097772975943,
+      "site_energy_top1_fraction_median": 0.29871913452790116,
+      "site_energy_effective_fraction_median": 0.9068441850442999,
+      "plaquette_energy_top1_fraction_median": 0.2723392793977314,
+      "plaquette_energy_effective_fraction_median": 0.5520311295526144
+    }
+  },
+  "test_innovation_from_base": {
+    "empirical_module": {
+      "edge_energy_adjacent_moran_i_median": -0.0044900864704087995,
+      "edge_energy_top10_fraction_median": 0.37051288576078567,
+      "edge_energy_effective_fraction_median": 0.4329595403738684,
+      "site_energy_top1_fraction_median": 0.4071972717395167,
+      "site_energy_effective_fraction_median": 0.7501461523712604,
+      "plaquette_energy_top1_fraction_median": 0.24943800135910899,
+      "plaquette_energy_effective_fraction_median": 0.7871702730289176
+    },
+    "no_module": {
+      "edge_energy_adjacent_moran_i_median": -0.058975778736001745,
+      "edge_energy_top10_fraction_median": 0.41045188634164864,
+      "edge_energy_effective_fraction_median": 0.39164587897651376,
+      "site_energy_top1_fraction_median": 0.4764510892804259,
+      "site_energy_effective_fraction_median": 0.6088993200013335,
+      "plaquette_energy_top1_fraction_median": 0.16661693765578134,
+      "plaquette_energy_effective_fraction_median": 0.8335050713582478
+    },
+    "random_module": {
+      "edge_energy_adjacent_moran_i_median": -0.025882298090430834,
+      "edge_energy_top10_fraction_median": 0.38080409621864575,
+      "edge_energy_effective_fraction_median": 0.47684101494078535,
+      "site_energy_top1_fraction_median": 0.3794752428623218,
+      "site_energy_effective_fraction_median": 0.6897132474932508,
+      "plaquette_energy_top1_fraction_median": 0.2127792497046196,
+      "plaquette_energy_effective_fraction_median": 0.7729659130868533
+    },
+    "shuffled_module": {
+      "edge_energy_adjacent_moran_i_median": -0.04709852863728965,
+      "edge_energy_top10_fraction_median": 0.41197321145723786,
+      "edge_energy_effective_fraction_median": 0.3819554605083221,
+      "site_energy_top1_fraction_median": 0.4262988875924246,
+      "site_energy_effective_fraction_median": 0.6233336560210879,
+      "plaquette_energy_top1_fraction_median": 0.2479641923888295,
+      "plaquette_energy_effective_fraction_median": 0.8103964143164208
+    },
+    "uncoupled_module": {
+      "edge_energy_adjacent_moran_i_median": -0.022259431294616445,
+      "edge_energy_top10_fraction_median": 0.4482894614997512,
+      "edge_energy_effective_fraction_median": 0.37335703573460555,
+      "site_energy_top1_fraction_median": 0.3567765838145084,
+      "site_energy_effective_fraction_median": 0.7462529713909232,
+      "plaquette_energy_top1_fraction_median": 0.2160442952597715,
+      "plaquette_energy_effective_fraction_median": 0.7481007974055294
+    }
+  },
+  "test_module_enrichment_medians": {
+    "empirical_target_in_empirical_modules": {
+      "edge_site_enrichment": 0.8624,
+      "plaquette_pair_enrichment": 0.9495
+    },
+    "empirical_module_total_in_empirical_modules": {
+      "edge_site_enrichment": 1.0,
+      "plaquette_pair_enrichment": 1.1119
+    },
+    "empirical_module_innovation_in_empirical_modules": {
+      "edge_site_enrichment": 1.0,
+      "plaquette_pair_enrichment": 1.1295
+    },
+    "uncoupled_module_innovation_in_empirical_modules": {
+      "edge_site_enrichment": 1.0144,
+      "plaquette_pair_enrichment": 1.1697
+    },
+    "shuffled_module_innovation_in_own_modules": {
+      "edge_site_enrichment": 1.1179,
+      "plaquette_pair_enrichment": 1.6543
+    }
+  },
+  "interpretive_flags": {
+    "empirical_more_edge_site_localized_than_fitted_current": true,
+    "empirical_readout_residual_has_localized_ruggedness_signal": true,
+    "empirical_module_unique_localization_supported": false,
+    "empirical_modules_enriched_in_empirical_energy": false,
+    "hyp008_current_implementation_weakened": true
+  }
+}

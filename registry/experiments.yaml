@@ -482,3 +482,1189 @@ items:
   compliance:
     level: green
     issues: []
+- id: EXP-020
+  title: Adaptive Walk And Peak-Proximal Epistasis Biological Baselines
+  status: planned
+  created: '2026-05-14T22:06:32+10:00'
+  owner: matthew-spence
+  aims: []
+  hypotheses:
+  - HYP-004
+  previous_experiments: []
+  motivating_results: []
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-14_EXP-020_adaptive-walk-peak-proximal-epistasis-biological-baselines
+  metadata_path: experiments/2026-05-14_EXP-020_adaptive-walk-peak-proximal-epistasis-biological-baselines/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-021
+  title: TEM-1 homologue adaptive and random walk parameter-grid diagnostic
+  status: planned
+  created: '2026-05-15T08:17:07+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-020
+  motivating_results:
+  - RES-020
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-15_EXP-021_tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic
+  metadata_path: experiments/2026-05-15_EXP-021_tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-022
+  title: TEM-1 homologue ruggedness emergence epistasis parameter sweep
+  status: planned
+  created: '2026-05-15T09:54:52+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-021
+  motivating_results:
+  - RES-021
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep
+  metadata_path: experiments/2026-05-15_EXP-022_tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-023
+  title: TEM-1 DCA-specific epistasis dense Hamming graph diagnostic
+  status: planned
+  created: '2026-05-15T12:29:00+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-022
+  motivating_results:
+  - RES-022
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-15_EXP-023_tem1-dca-specific-epistasis-hamming-graph-diagnostic
+  metadata_path: experiments/2026-05-15_EXP-023_tem1-dca-specific-epistasis-hamming-graph-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-024
+  title: TEM-1 DCA clique haplotype high-order epistasis diagnostic
+  status: planned
+  created: '2026-05-15T14:12:12+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-023
+  motivating_results:
+  - RES-023
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-15_EXP-024_tem1-dca-clique-haplotype-high-order-epistasis-diagnostic
+  metadata_path: experiments/2026-05-15_EXP-024_tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-025
+  title: TEM-1 aggregate graphlet residual ruggedness generalization diagnostic
+  status: planned
+  created: '2026-05-15T15:50:17+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-024
+  motivating_results:
+  - RES-024
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-15_EXP-025_tem1-aggregate-graphlet-residual-ruggedness-generalization
+  metadata_path: experiments/2026-05-15_EXP-025_tem1-aggregate-graphlet-residual-ruggedness-generalization/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-026
+  title: TEM-1 relative-scale residual exposure graphlet diagnostic
+  status: planned
+  created: '2026-05-15T18:30:33+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-025
+  motivating_results:
+  - RES-025
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-15_EXP-026_tem1-relative-scale-residual-exposure-graphlet-diagnostic
+  metadata_path: experiments/2026-05-15_EXP-026_tem1-relative-scale-residual-exposure-graphlet-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-027
+  title: TEM-1 fixed-scale residual ratio sweep graphlet diagnostic
+  status: completed
+  created: '2026-05-15T19:38:07+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-026
+  motivating_results:
+  - RES-026
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-15_EXP-027_tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic
+  metadata_path: experiments/2026-05-15_EXP-027_tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-028
+  title: Empirical graphlet falsification suite for residual ruggedness model
+  status: planned
+  created: '2026-05-15T21:57:57+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-025
+  - EXP-026
+  - EXP-027
+  motivating_results:
+  - RES-025
+  - RES-026
+  - RES-027
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-15_EXP-028_empirical-graphlet-falsification-residual-ruggedness
+  metadata_path: experiments/2026-05-15_EXP-028_empirical-graphlet-falsification-residual-ruggedness/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-029
+  title: ProteinGym empirical refit with current residual-ruggedness model
+  status: planned
+  created: '2026-05-15T22:42:09+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  previous_experiments:
+  - EXP-005
+  - EXP-006
+  - EXP-007
+  - EXP-008
+  - EXP-010
+  - EXP-012
+  - EXP-025
+  - EXP-026
+  - EXP-027
+  - EXP-028
+  motivating_results:
+  - RES-005
+  - RES-006
+  - RES-007
+  - RES-025
+  - RES-026
+  - RES-027
+  - RES-028
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-15_EXP-029_proteingym-current-model-abc-refit-residual-ruggedness
+  metadata_path: experiments/2026-05-15_EXP-029_proteingym-current-model-abc-refit-residual-ruggedness/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-030
+  title: System-specific current-model refit and graphlet falsifier repeat
+  status: planned
+  created: '2026-05-16T17:36:47+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-028
+  - EXP-029
+  motivating_results:
+  - RES-028
+  - RES-029
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-16_EXP-030_system-specific-current-model-refit-graphlet-falsifier-repeat
+  metadata_path: experiments/2026-05-16_EXP-030_system-specific-current-model-refit-graphlet-falsifier-repeat/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-031
+  title: PHOT frozen-base coupled-landscape deterministic grid search
+  status: planned
+  created: '2026-05-16T21:13:08+10:00'
+  owner: Codex
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  motivating_results:
+  - RES-030
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-16_EXP-031_phot-frozen-base-coupled-landscape-deterministic-grid
+  metadata_path: experiments/2026-05-16_EXP-031_phot-frozen-base-coupled-landscape-deterministic-grid/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-032
+  title: PHOT hard-min coupled weakest-link landscape grid search
+  status: completed
+  created: '2026-05-16T22:28:14+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-031
+  motivating_results:
+  - RES-031
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-16_EXP-032_phot-hard-min-coupled-weakest-link-grid
+  metadata_path: experiments/2026-05-16_EXP-032_phot-hard-min-coupled-weakest-link-grid/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-033
+  title: PHOT soft-min Boltzmann coupled landscape ABC
+  status: completed
+  created: '2026-05-17T07:46:34+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  - EXP-031
+  - EXP-032
+  motivating_results:
+  - RES-030
+  - RES-031
+  - RES-032
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-17_EXP-033_phot-softmin-boltzmann-coupled-landscape-abc
+  metadata_path: experiments/2026-05-17_EXP-033_phot-softmin-boltzmann-coupled-landscape-abc/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-034
+  title: PHOT budgeted module-tied soft-min ABC
+  status: completed
+  created: '2026-05-17T09:18:15+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  - EXP-031
+  - EXP-032
+  - EXP-033
+  motivating_results:
+  - RES-030
+  - RES-031
+  - RES-032
+  - RES-033
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-17_EXP-034_phot-budgeted-module-tied-softmin-abc
+  metadata_path: experiments/2026-05-17_EXP-034_phot-budgeted-module-tied-softmin-abc/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-035
+  title: PHOT replicated held-out split graphlet diagnostic
+  status: completed
+  created: '2026-05-17T10:30:53+10:00'
+  owner: Codex
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-034
+  motivating_results:
+  - RES-034
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-17_EXP-035_phot-replicated-heldout-split-graphlet-diagnostic
+  metadata_path: experiments/2026-05-17_EXP-035_phot-replicated-heldout-split-graphlet-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-036
+  title: PHOT coupled-family discriminating ABC
+  status: completed
+  created: '2026-05-17T12:33:40+10:00'
+  owner: Codex
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  - EXP-031
+  - EXP-035
+  motivating_results:
+  - RES-030
+  - RES-031
+  - RES-035
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-17_EXP-036_phot-coupled-family-discriminating-abc
+  metadata_path: experiments/2026-05-17_EXP-036_phot-coupled-family-discriminating-abc/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-037
+  title: PHOT localized ruggedness energy diagnostic
+  status: completed
+  created: '2026-05-17T13:43:03+10:00'
+  owner: Codex
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  - EXP-036
+  motivating_results:
+  - RES-030
+  - RES-036
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-17_EXP-037_phot-localized-ruggedness-energy-diagnostic
+  metadata_path: experiments/2026-05-17_EXP-037_phot-localized-ruggedness-energy-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-038
+  title: PHOT ABC local ruggedness objective
+  status: completed
+  created: '2026-05-17T15:09:24+10:00'
+  owner: Codex
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-036
+  - EXP-037
+  motivating_results:
+  - RES-036
+  - RES-037
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-17_EXP-038_phot-abc-local-ruggedness-objective
+  metadata_path: experiments/2026-05-17_EXP-038_phot-abc-local-ruggedness-objective/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-039
+  title: PHOT nested soft-min ensemble capacity diagnostic
+  status: completed
+  created: '2026-05-18T08:03:50+10:00'
+  owner: Codex
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-033
+  - EXP-036
+  - EXP-038
+  motivating_results:
+  - RES-033
+  - RES-036
+  - RES-038
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-18_EXP-039_phot-nested-softmin-ensemble-capacity-diagnostic
+  metadata_path: experiments/2026-05-18_EXP-039_phot-nested-softmin-ensemble-capacity-diagnostic/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-040
+  title: ProteinGym 24-system coupled landscape ruggedness production
+  status: running
+  created: '2026-05-18T14:29:36+10:00'
+  owner: Codex
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-013
+  - EXP-030
+  - EXP-036
+  - EXP-038
+  - EXP-039
+  motivating_results:
+  - RES-013
+  - RES-030
+  - RES-036
+  - RES-038
+  - RES-039
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-05-18_EXP-040_proteingym-24-system-coupled-landscape-ruggedness-production
+  metadata_path: experiments/2026-05-18_EXP-040_proteingym-24-system-coupled-landscape-ruggedness-production/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-041
+  title: PHOT exact descriptive failure gate for full ABC fit
+  status: completed
+  created: '2026-06-15T23:14:20+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-013
+  - EXP-030
+  - EXP-036
+  - EXP-038
+  motivating_results:
+  - RES-013
+  - RES-030
+  - RES-036
+  - RES-038
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-15_EXP-041_phot-exact-descriptive-failure-gate
+  metadata_path: experiments/2026-06-15_EXP-041_phot-exact-descriptive-failure-gate/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-042
+  title: PHOT nested-min cheaper fitting protocol equivalence benchmark
+  status: planned
+  created: '2026-06-16T11:11:58+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-038
+  - EXP-039
+  - EXP-041
+  motivating_results:
+  - RES-038
+  - RES-039
+  - RES-040
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-16_EXP-042_phot-nested-min-cheap-fitting-equivalence-benchmark
+  metadata_path: experiments/2026-06-16_EXP-042_phot-nested-min-cheap-fitting-equivalence-benchmark/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-043
+  title: PHOT epistasis-calibrated cheap fitting protocol
+  status: completed
+  created: '2026-06-16T13:57:47+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-039
+  - EXP-041
+  - EXP-042
+  motivating_results:
+  - RES-039
+  - RES-040
+  - RES-041
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-16_EXP-043_phot-epistasis-calibrated-cheap-fitting-protocol
+  metadata_path: experiments/2026-06-16_EXP-043_phot-epistasis-calibrated-cheap-fitting-protocol/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-044
+  title: PHOT bounded trait-space current-model fast fit
+  status: completed
+  created: '2026-06-16T18:32:34+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments: []
+  motivating_results:
+  - RES-040
+  - RES-042
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-16_EXP-044_phot-bounded-trait-space-current-model-fast-fit
+  metadata_path: experiments/2026-06-16_EXP-044_phot-bounded-trait-space-current-model-fast-fit/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-045
+  title: PHOT cumulative epistasis calibration fix ablation
+  status: completed
+  created: '2026-06-17T04:40:10+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments: []
+  motivating_results:
+  - RES-040
+  - RES-042
+  - RES-043
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-17_EXP-045_phot-cumulative-epistasis-calibration-fix-ablation
+  metadata_path: experiments/2026-06-17_EXP-045_phot-cumulative-epistasis-calibration-fix-ablation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-046
+  title: PHOT raw-latent soft-min pathology fix ablation
+  status: completed
+  created: '2026-06-17T06:28:47+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-045
+  motivating_results:
+  - RES-044
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-17_EXP-046_phot-raw-latent-softmin-pathology-fix-ablation
+  metadata_path: experiments/2026-06-17_EXP-046_phot-raw-latent-softmin-pathology-fix-ablation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-047
+  title: PHOT RES-045 calibration isolation cumulative ablation
+  status: completed
+  created: '2026-06-17T14:09:39+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-046
+  motivating_results:
+  - RES-045
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-17_EXP-047_phot-res045-calibration-isolation-cumulative-ablation
+  metadata_path: experiments/2026-06-17_EXP-047_phot-res045-calibration-isolation-cumulative-ablation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-048
+  title: PHOT sparse Walsh Potts spectrum-calibrated generator probe
+  status: completed
+  created: '2026-06-17T16:54:56+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-047
+  motivating_results:
+  - RES-046
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-17_EXP-048_phot-sparse-walsh-potts-spectrum-calibrated-generator-probe
+  metadata_path: experiments/2026-06-17_EXP-048_phot-sparse-walsh-potts-spectrum-calibrated-generator-probe/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-049
+  title: PHOT miscalibration P0 target-operator isolation
+  status: completed
+  created: '2026-06-18T08:46:01+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments:
+  - EXP-048
+  motivating_results:
+  - RES-047
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-18_EXP-049_phot-miscalibration-p0-target-operator-isolation
+  metadata_path: experiments/2026-06-18_EXP-049_phot-miscalibration-p0-target-operator-isolation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-050
+  title: PHOT non-additive measurement operator certification
+  status: completed
+  created: '2026-06-18T11:00:40+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-006
+  - HYP-009
+  previous_experiments:
+  - EXP-049
+  motivating_results:
+  - RES-048
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-18_EXP-050_phot-nonadditive-measurement-operator-certification
+  metadata_path: experiments/2026-06-18_EXP-050_phot-nonadditive-measurement-operator-certification/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-051
+  title: Hashed GNK benchmark generator knob-map validation
+  status: completed
+  created: '2026-06-18T11:00:50+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-048
+  - EXP-049
+  motivating_results:
+  - RES-047
+  - RES-048
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-18_EXP-051_hashed-gnk-benchmark-generator-knob-map-validation
+  metadata_path: experiments/2026-06-18_EXP-051_hashed-gnk-benchmark-generator-knob-map-validation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-052
+  title: Stage 4A empirical ensemble descriptor envelope
+  status: planned
+  created: '2026-06-18T22:48:58+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-051
+  motivating_results:
+  - RES-049
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-18_EXP-052_stage-4a-empirical-ensemble-descriptor-envelope
+  metadata_path: experiments/2026-06-18_EXP-052_stage-4a-empirical-ensemble-descriptor-envelope/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-053
+  title: Stage 4B additive-core GNK generator reachability
+  status: planned
+  created: '2026-06-18T22:48:58+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-051
+  motivating_results:
+  - RES-049
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-18_EXP-053_stage-4b-additive-core-gnk-generator-reachability
+  metadata_path: experiments/2026-06-18_EXP-053_stage-4b-additive-core-gnk-generator-reachability/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-054
+  title: Stage 4C empirical coverage and calibrated overlap
+  status: planned
+  created: '2026-06-18T22:48:58+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-052
+  - EXP-053
+  motivating_results:
+  - RES-049
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-18_EXP-054_stage-4c-empirical-coverage-calibrated-overlap
+  metadata_path: experiments/2026-06-18_EXP-054_stage-4c-empirical-coverage-calibrated-overlap/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-055
+  title: Stage 4D joint multi-descriptor realism gate
+  status: planned
+  created: '2026-06-18T22:48:59+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  motivating_results:
+  - RES-049
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-18_EXP-055_stage-4d-joint-multidescriptor-realism-gate
+  metadata_path: experiments/2026-06-18_EXP-055_stage-4d-joint-multidescriptor-realism-gate/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-056
+  title: Stage 4E held-out descriptor generalisation
+  status: planned
+  created: '2026-06-18T22:48:59+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  - EXP-055
+  motivating_results:
+  - RES-049
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-18_EXP-056_stage-4e-heldout-descriptor-generalisation
+  metadata_path: experiments/2026-06-18_EXP-056_stage-4e-heldout-descriptor-generalisation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-057
+  title: Stage 4B design-matched support-aware GNK probe
+  status: completed
+  created: '2026-06-19T14:55:51+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  - EXP-055
+  - EXP-056
+  motivating_results:
+  - RES-050
+  - RES-051
+  - RES-052
+  - RES-053
+  - RES-054
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe
+  metadata_path: experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-058
+  title: Generator Readout Coupling Calibration
+  status: completed
+  created: '2026-06-24T10:52:47+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-051
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  - EXP-055
+  - EXP-056
+  - EXP-057
+  motivating_results:
+  - RES-049
+  - RES-050
+  - RES-051
+  - RES-052
+  - RES-053
+  - RES-054
+  - RES-055
+  - RES-056
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-06-24_EXP-058_generator-readout-coupling-calibration
+  metadata_path: experiments/2026-06-24_EXP-058_generator-readout-coupling-calibration/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-059
+  title: Saturated-gate GNK mechanism calibration and held-out confirmation
+  status: planned
+  created: '2026-07-22T15:54:37+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-058
+  motivating_results:
+  - RES-049
+  - RES-055
+  - RES-057
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-07-22_EXP-059_saturated-gate-gnk-mechanism-calibration-confirmation
+  metadata_path: experiments/2026-07-22_EXP-059_saturated-gate-gnk-mechanism-calibration-confirmation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-060
+  title: Extensive operator-normalized GNK latent scale-law validation
+  status: completed
+  created: '2026-07-22T19:17:08+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-059
+  motivating_results:
+  - RES-049
+  - RES-055
+  - RES-057
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-07-22_EXP-060_extensive-operator-normalized-gnk-latent-scale-law-validation
+  metadata_path: experiments/2026-07-22_EXP-060_extensive-operator-normalized-gnk-latent-scale-law-validation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-061
+  title: Operator-normalized GNK sigmoid-transmission paired-residual validation
+  status: completed
+  created: '2026-07-23T03:27:15+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-060
+  motivating_results:
+  - RES-055
+  - RES-057
+  - RES-058
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-07-23_EXP-061_operator-normalized-gnk-sigmoid-transmission-paired-residual-validation
+  metadata_path: experiments/2026-07-23_EXP-061_operator-normalized-gnk-sigmoid-transmission-paired-residual-validation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-062
+  title: Dimensionless additive-core sigmoid calibration and held-out GNK dose-response
+    validation
+  status: completed
+  created: '2026-07-23T12:07:49+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-061
+  motivating_results:
+  - RES-058
+  - RES-059
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation
+  metadata_path: experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-063
+  title: Paired categorical-code and representation-rank GNK texture rescue
+  status: completed
+  created: '2026-07-23T16:51:19+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-062
+  motivating_results:
+  - RES-060
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-07-23_EXP-063_paired-categorical-code-and-representation-rank-gnk-texture-rescue
+  metadata_path: experiments/2026-07-23_EXP-063_paired-categorical-code-and-representation-rank-gnk-texture-rescue/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-064
+  title: Observable-ruggedness coverage probe
+  status: completed
+  created: '2026-07-24T12:01:52+10:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-063
+  motivating_results:
+  - RES-050
+  - RES-051
+  - RES-052
+  - RES-054
+  - RES-058
+  - RES-059
+  - RES-060
+  - RES-061
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-07-24_EXP-064_observable-ruggedness-coverage-probe
+  metadata_path: experiments/2026-07-24_EXP-064_observable-ruggedness-coverage-probe/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-065
+  title: Aggregate thermodynamic GNK calibration and confirmation
+  status: completed
+  created: '2026-10-07T13:40:05+11:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-063
+  - EXP-064
+  motivating_results:
+  - RES-058
+  - RES-060
+  - RES-061
+  - RES-062
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  - local
+  template: generic
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration
+  metadata_path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-066
+  title: Production landscape aggregate realism across empirical systems
+  status: completed
+  created: '2026-10-08T11:20:36+11:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-065
+  motivating_results:
+  - RES-061
+  stack: STACK-000
+  intended_targets:
+  - lab-slurm
+  template: generic
+  path: experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism
+  metadata_path: experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/metadata.yaml
+  compliance:
+    level: green
+    issues: []

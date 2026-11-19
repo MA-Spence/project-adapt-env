@@ -410,3 +410,992 @@ items:
   compliance:
     level: green
     issues: []
+- id: RES-020
+  title: RUN-055 adaptive walks decelerate but peak-proximal epistasis does not validate
+    HYP-004
+  status: completed
+  created: '2026-05-15T07:26:30+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-020
+  experiments:
+  - EXP-020
+  runs:
+  - RUN-055
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-020_run-055-adaptive-walks-decelerate-but-peak-proximal-epistasis-fails
+  compliance:
+    level: green
+    issues: []
+- id: RES-021
+  title: RUN-057 TEM-1 homologue walks support consensus-axis adaptive dynamics but
+    expose stability-margin knob failure
+  status: completed
+  created: '2026-05-15T09:27:36+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-021
+  experiments:
+  - EXP-021
+  runs:
+  - RUN-057
+  supports:
+  - HYP-004
+  weakens:
+  - HYP-005
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-021_run-057-tem1-homologue-walks-support-consensus-axis-dynamics-but-expose-stability-margin-knob-failure
+  compliance:
+    level: green
+    issues: []
+- id: RES-022
+  title: RUN-059 strong TEM-1 epistasis sweep creates pairwise epistasis but leaves
+    random walks smooth
+  status: completed
+  created: '2026-05-15T11:09:24+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-022
+  experiments:
+  - EXP-022
+  runs:
+  - RUN-059
+  supports:
+  - HYP-005
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-022_run-059-strong-tem1-epistasis-sweep-creates-pairwise-epistasis-but-leaves-random-walks-smooth
+  compliance:
+    level: green
+    issues: []
+- id: RES-023
+  title: RUN-061 DCA-specific epistasis creates sign epistasis but not multi-peak
+    ruggedness
+  status: completed
+  created: '2026-05-15T13:30:15+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-023
+  experiments:
+  - EXP-023
+  runs:
+  - RUN-061
+  supports:
+  - HYP-005
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-023_run-061-dca-specific-epistasis-creates-sign-epistasis-but-not-multi-peak-ruggedness
+  compliance:
+    level: green
+    issues: []
+- id: RES-024
+  title: RUN-063 DCA clique haplotype terms create controllable high-order Walsh signal
+    but limited topology
+  status: completed
+  created: '2026-05-15T14:38:23+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-024
+  experiments:
+  - EXP-024
+  runs:
+  - RUN-063
+  supports:
+  - HYP-005
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-024_run-063-dca-clique-haplotype-terms-create-controllable-high-order-walsh-signal-but-limited-topology
+  compliance:
+    level: green
+    issues: []
+- id: RES-025
+  title: RUN-065 aggregate residuals create local topology but fail broad procedural
+    generalization
+  status: completed
+  created: '2026-05-15T17:41:43+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-025
+  experiments:
+  - EXP-025
+  runs:
+  - RUN-065
+  supports:
+  - HYP-005
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-025_run-065-aggregate-residuals-create-local-topology-but-fail-broad-procedural-generalization
+  compliance:
+    level: green
+    issues: []
+- id: RES-026
+  title: RUN-067 relative-scale residual exposure adds diagnostics but not a fixed-scale
+    peak-proximal SE/RSE mechanism
+  status: completed
+  created: '2026-05-15T19:15:33+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-026
+  experiments:
+  - EXP-026
+  runs:
+  - RUN-067
+  supports:
+  - HYP-005
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-026_run-067-relative-scale-residual-exposure-adds-diagnostics-but-not-fixed-scale-peak-proximal-serse
+  compliance:
+    level: green
+    issues: []
+- id: RES-027
+  title: RUN-069 fixed residual scale sweep validates the scale knob but not peak-stage
+    unmasking
+  status: completed
+  created: '2026-05-15T20:30:37+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-027
+  experiments:
+  - EXP-027
+  runs:
+  - RUN-069
+  supports:
+  - HYP-005
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-027_run-069-fixed-residual-scale-sweep-validates-scale-knob-but-not-peak-stage-unmasking
+  compliance:
+    level: green
+    issues: []
+- id: RES-028
+  title: RUN-071 empirical controls falsify strong residual ruggedness benchmark adequacy
+    but preserve the scale knob
+  status: completed
+  created: '2026-05-15T22:30:22+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-028
+  experiments:
+  - EXP-028
+  runs:
+  - RUN-071
+  supports:
+  - HYP-005
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-028_run-071-empirical-controls-falsify-strong-residual-ruggedness-benchmark-adequacy
+  compliance:
+    level: green
+    issues: []
+- id: RES-029
+  title: RUN-073 current-model ABC refit is valid but does not rescue shared empirical
+    calibration
+  status: completed
+  created: '2026-05-16T17:08:46+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-029
+  experiments:
+  - EXP-029
+  runs:
+  - RUN-073
+  supports: []
+  weakens:
+  - HYP-001
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-029_run-073-current-model-abc-refit-valid-but-not-rescuing-shared-calibration
+  compliance:
+    level: green
+    issues: []
+- id: RES-030
+  title: RUN-077 system-specific current refit partially rescues PHOT graphlet dynamics
+    but not the spectral envelope
+  status: completed
+  created: '2026-05-16T20:44:50+10:00'
+  owner: Codex
+  analyses:
+  - ANA-030
+  experiments:
+  - EXP-030
+  runs:
+  - RUN-077
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates:
+  - HYP-008
+  supersedes: []
+  path: results/RES-030_run-077-system-specific-current-refit-partially-rescues-phot-graphlet-dynamics-not-spectral-envelope
+  compliance:
+    level: green
+    issues: []
+- id: RES-031
+  title: RUN-079 no-module coupling improves PHOT graphlet distance but local modules
+    fail the locality test
+  status: completed
+  created: '2026-05-16T21:44:52+10:00'
+  owner: Codex
+  analyses:
+  - ANA-031
+  experiments:
+  - EXP-031
+  runs:
+  - RUN-079
+  supports: []
+  weakens:
+  - HYP-008
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-031_run-079-no-module-coupling-improves-phot-graphlet-distance-but-local-modules-fail-locality
+  compliance:
+    level: green
+    issues: []
+- id: RES-032
+  title: RUN-081 hard-min improves PHOT assay fit but not held-out graphlet controls
+  status: completed
+  created: '2026-05-16T23:08:28+10:00'
+  owner: Codex
+  analyses:
+  - ANA-032
+  experiments:
+  - EXP-032
+  runs:
+  - RUN-081
+  supports: []
+  weakens:
+  - HYP-008
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-032_run-081-hard-min-improves-phot-assay-fit-not-heldout-graphlets
+  compliance:
+    level: green
+    issues: []
+- id: RES-033
+  title: RUN-084 soft-min Boltzmann ABC fits calibration but not held-out graphlets
+  status: completed
+  created: '2026-05-17T08:41:48+10:00'
+  owner: Codex
+  analyses:
+  - ANA-033
+  experiments:
+  - EXP-033
+  runs:
+  - RUN-084
+  supports: []
+  weakens:
+  - HYP-008
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-033_run-084-softmin-boltzmann-fits-calibration-not-heldout-graphlets
+  compliance:
+    level: green
+    issues: []
+- id: RES-034
+  title: RUN-086 budgeted module-tied soft-min fails held-out graphlet and locality
+    support
+  status: completed
+  created: '2026-05-17T10:00:35+10:00'
+  owner: Codex
+  analyses:
+  - ANA-034
+  experiments:
+  - EXP-034
+  runs:
+  - RUN-086
+  supports: []
+  weakens:
+  - HYP-008
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-034_run-086-budgeted-module-tied-softmin-fails-heldout-graphlets
+  compliance:
+    level: green
+    issues: []
+- id: RES-035
+  title: RUN-089 replicated splits confirm no-module graphlet gain but fail specificity
+    controls
+  status: completed
+  created: '2026-05-17T11:23:53+10:00'
+  owner: Codex
+  analyses:
+  - ANA-035
+  experiments:
+  - EXP-035
+  runs:
+  - RUN-089
+  supports: []
+  weakens:
+  - HYP-008
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-035_run-089-replicated-splits-confirm-no-module-gain-fail-specificity
+  compliance:
+    level: green
+    issues: []
+- id: RES-036
+  title: RUN-091 ABC improves PHOT graphlet distance but fails random and uncoupled
+    specificity
+  status: completed
+  created: '2026-05-17T13:20:38+10:00'
+  owner: Codex
+  analyses:
+  - ANA-036
+  experiments:
+  - EXP-036
+  runs:
+  - RUN-091
+  supports: []
+  weakens:
+  - HYP-008
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-036_run-091-abc-improves-phot-graphlet-distance-fails-random-uncoupled-specificity
+  compliance:
+    level: green
+    issues: []
+- id: RES-037
+  title: RUN-093 PHOT localized ruggedness is real but not empirical-module specific
+  status: completed
+  created: '2026-05-17T14:40:41+10:00'
+  owner: Codex
+  analyses:
+  - ANA-037
+  experiments:
+  - EXP-037
+  runs:
+  - RUN-093
+  supports: []
+  weakens:
+  - HYP-008
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-037_run-093-phot-localized-ruggedness-not-empirical-module-specific
+  compliance:
+    level: green
+    issues: []
+- id: RES-038
+  title: RUN-096 local ruggedness objective improves controls but not empirical-module
+    specificity
+  status: completed
+  created: '2026-05-17T20:43:19+10:00'
+  owner: Codex
+  analyses:
+  - ANA-038
+  experiments:
+  - EXP-038
+  runs:
+  - RUN-096
+  supports: []
+  weakens:
+  - HYP-008
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-038_run-096-local-ruggedness-objective-no-empirical-module-specificity
+  compliance:
+    level: green
+    issues: []
+- id: RES-039
+  title: RUN-098 nested soft-min capacity fails calibration-selected heldout specificity
+  status: completed
+  created: '2026-05-18T11:04:47+10:00'
+  owner: Codex
+  analyses:
+  - ANA-039
+  experiments:
+  - EXP-039
+  runs:
+  - RUN-098
+  supports: []
+  weakens:
+  - HYP-008
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-039_run-098-nested-softmin-capacity-fails-heldout-specificity
+  compliance:
+    level: green
+    issues: []
+- id: RES-040
+  title: RUN-108 exact PHOT gate isolates local-energy concentration failures
+  status: completed
+  created: '2026-06-15T23:35:33+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-040
+  experiments:
+  - EXP-041
+  runs:
+  - RUN-108
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates:
+  - HYP-009
+  supersedes: []
+  path: results/RES-040_run-108-exact-phot-gate-local-energy-failures
+  compliance:
+    level: green
+    issues: []
+- id: RES-041
+  title: RUN-110 cheaper PHOT nested-min fitting matches same-family full ABC but
+    not diagnostic ceiling
+  status: completed
+  created: '2026-06-16T12:02:16+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-041
+  experiments:
+  - EXP-042
+  runs:
+  - RUN-110
+  supports: []
+  weakens: []
+  refutes: []
+  motivates:
+  - HYP-009
+  supersedes: []
+  path: results/RES-041_run-110-cheap-phot-fitting-same-family-abc-equivalence
+  compliance:
+    level: green
+    issues: []
+- id: RES-042
+  title: RUN-112 calibrated cheap PHOT fit fails component-equivalence despite readout
+    rescaling
+  status: completed
+  created: '2026-06-16T15:49:12+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-042
+  experiments:
+  - EXP-043
+  runs:
+  - RUN-112
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates:
+  - HYP-009
+  supersedes: []
+  path: results/RES-042_run-112-calibrated-cheap-phot-fit-fails-component-equivalence
+  compliance:
+    level: green
+    issues: []
+- id: RES-043
+  title: RUN-115 bounded trait-space fast fit improves guardrails but fails PHOT full-ABC
+    equivalence
+  status: completed
+  created: '2026-06-16T19:32:42+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-043
+  experiments:
+  - EXP-044
+  runs:
+  - RUN-115
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates:
+  - HYP-009
+  supersedes: []
+  path: results/RES-043_run-115-bounded-trait-space-fast-fit-fails-phot-equivalence
+  compliance:
+    level: green
+    issues: []
+- id: RES-044
+  title: RUN-117 cumulative PHOT calibration fixes fail full-ABC equivalence
+  status: completed
+  created: '2026-06-17T05:59:00+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-044
+  experiments:
+  - EXP-045
+  runs:
+  - RUN-117
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates:
+  - HYP-009
+  supersedes: []
+  path: results/RES-044_run-117-cumulative-phot-calibration-fixes-fail-full-abc-equivalence
+  compliance:
+    level: green
+    issues: []
+- id: RES-045
+  title: RUN-119 raw-latent soft-min fixes fail PHOT calibration
+  status: completed
+  created: '2026-06-17T10:16:06+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-045
+  experiments:
+  - EXP-046
+  runs:
+  - RUN-119
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates:
+  - HYP-009
+  supersedes: []
+  path: results/RES-045_run-119-raw-latent-softmin-fixes-fail-phot-calibration
+  compliance:
+    level: green
+    issues: []
+- id: RES-046
+  title: RUN-121 calibration isolation improves raw scale but fails PHOT equivalence
+  status: completed
+  created: '2026-06-17T15:08:28+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-046
+  experiments:
+  - EXP-047
+  runs:
+  - RUN-121
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates:
+  - HYP-009
+  supersedes: []
+  path: results/RES-046_run-121-calibration-isolation-improves-raw-scale-but-fails-phot-equivalence
+  compliance:
+    level: green
+    issues: []
+- id: RES-047
+  title: RUN-123 sparse Walsh forward gate fails before PHOT equivalence fitting
+  status: completed
+  created: '2026-06-17T18:54:56+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-047
+  experiments:
+  - EXP-048
+  runs:
+  - RUN-123
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates:
+  - HYP-009
+  supersedes: []
+  path: results/RES-047_run-123-sparse-walsh-forward-gate-fails-before-phot-equivalence-fitting
+  compliance:
+    level: green
+    issues: []
+- id: RES-048
+  title: RUN-125 P0 isolation shows PHOT measurement operator smooths injected spectra
+  status: completed
+  created: '2026-06-18T09:47:12+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-048
+  experiments:
+  - EXP-049
+  runs:
+  - RUN-125
+  supports: []
+  weakens:
+  - HYP-004
+  refutes: []
+  motivates:
+  - HYP-009
+  supersedes: []
+  path: results/RES-048_run-125-p0-isolation-measurement-operator-smooths-phot-spectra
+  compliance:
+    level: green
+    issues: []
+- id: RES-049
+  title: RUN-127 hashed GNK knobs validate forward ruggedness-accessibility map
+  status: completed
+  created: '2026-06-18T12:45:00+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-049
+  experiments:
+  - EXP-051
+  runs:
+  - RUN-127
+  supports:
+  - HYP-005
+  weakens: []
+  refutes: []
+  motivates:
+  - HYP-004
+  - HYP-009
+  supersedes: []
+  path: results/RES-049_run-127-hashed-gnk-knobs-validate-forward-ruggedness-accessibility-map
+  compliance:
+    level: green
+    issues: []
+- id: RES-050
+  title: RUN-135 empirical ensemble descriptor envelope establishes operator-free
+    reference bands
+  status: completed
+  created: '2026-06-19T07:19:24+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-050
+  experiments:
+  - EXP-052
+  runs:
+  - RUN-135
+  supports: []
+  weakens: []
+  refutes: []
+  motivates:
+  - HYP-004
+  - HYP-009
+  supersedes: []
+  path: results/RES-050_run-135-empirical-ensemble-descriptor-envelope-reference-bands
+  compliance:
+    level: green
+    issues: []
+- id: RES-051
+  title: RUN-136 protein-scale GNK reachability weakens broad directional knob claim
+  status: completed
+  created: '2026-06-19T07:19:24+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-051
+  experiments:
+  - EXP-053
+  runs:
+  - RUN-136
+  supports: []
+  weakens:
+  - HYP-005
+  refutes: []
+  motivates:
+  - HYP-004
+  - HYP-009
+  supersedes: []
+  path: results/RES-051_run-136-protein-scale-gnk-reachability-weakens-directional-knob-claim
+  compliance:
+    level: green
+    issues: []
+- id: RES-052
+  title: RUN-137 calibrated overlap finds Tier-1 contact but not public-model-specific
+    coverage
+  status: completed
+  created: '2026-06-19T07:19:24+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-052
+  experiments:
+  - EXP-054
+  runs:
+  - RUN-137
+  supports: []
+  weakens:
+  - HYP-004
+  - HYP-009
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-052_run-137-calibrated-overlap-tier1-contact-not-public-model-specific
+  compliance:
+    level: green
+    issues: []
+- id: RES-053
+  title: RUN-138 joint realism gate fails across Tier-1 assays
+  status: completed
+  created: '2026-06-19T07:19:25+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-053
+  experiments:
+  - EXP-055
+  runs:
+  - RUN-138
+  supports: []
+  weakens:
+  - HYP-004
+  - HYP-009
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-053_run-138-joint-realism-gate-fails-across-tier1-assays
+  compliance:
+    level: green
+    issues: []
+- id: RES-054
+  title: RUN-139 held-out descriptor generalisation is not validated
+  status: completed
+  created: '2026-06-19T07:19:25+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-054
+  experiments:
+  - EXP-056
+  runs:
+  - RUN-139
+  supports: []
+  weakens:
+  - HYP-004
+  - HYP-009
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-054_run-139-heldout-descriptor-generalisation-not-validated
+  compliance:
+    level: green
+    issues: []
+- id: RES-055
+  title: RUN-141 fixed support-aware probe fails core-GNK validation gates
+  status: completed
+  created: '2026-06-21T09:46:30+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-055
+  experiments:
+  - EXP-057
+  runs:
+  - RUN-141
+  supports: []
+  weakens:
+  - HYP-005
+  - HYP-004
+  - HYP-009
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-055_run-141-fixed-support-aware-probe-fails-core-gnk-validation-gates
+  compliance:
+    level: green
+    issues: []
+- id: RES-056
+  title: RUN-129 non-additive PHOT operators fail certification
+  status: completed
+  created: '2026-06-22T14:24:37+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-056
+  experiments:
+  - EXP-050
+  runs:
+  - RUN-129
+  supports: []
+  weakens:
+  - HYP-004
+  - HYP-006
+  - HYP-009
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-056_run-129-nonadditive-phot-operators-fail-certification
+  compliance:
+    level: green
+    issues: []
+- id: RES-057
+  title: RUN-142 readout-coupling calibration finds no joint core-guardrail and GNK-separation
+    region
+  status: completed
+  created: '2026-07-22T12:45:00+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-057
+  experiments:
+  - EXP-058
+  runs:
+  - RUN-142
+  supports: []
+  weakens:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-057_run-142-readout-coupling-calibration-no-joint-core-gnk-region
+  compliance:
+    level: green
+    issues: []
+- id: RES-058
+  title: RUN-149 validates mutation-normalized GNK latent scaling before sigmoid transmission
+  status: completed
+  created: '2026-07-23T02:33:00+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-058
+  experiments:
+  - EXP-060
+  runs:
+  - RUN-149
+  supports:
+  - HYP-005
+  weakens: []
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission
+  compliance:
+    level: green
+    issues: []
+- id: RES-059
+  title: RUN-151 validates frozen-core GNK texture transmission but fails real-core
+    and margin-8 gates
+  status: completed
+  created: '2026-07-23T08:29:58+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-059
+  experiments:
+  - EXP-061
+  runs:
+  - RUN-151
+  supports: []
+  weakens:
+  - HYP-005
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-059_run-151-validates-frozen-core-gnk-texture-transmission-but-fails-real-core-and-margin-8-gates
+  compliance:
+    level: green
+    issues: []
+- id: RES-060
+  title: RUN-153 validates global core calibration and edge transfer but fails GNK
+    texture prevalence
+  status: completed
+  created: '2026-07-23T14:13:39+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-060
+  experiments:
+  - EXP-062
+  runs:
+  - RUN-153
+  supports: []
+  weakens:
+  - HYP-005
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-060_run-153-validates-global-core-calibration-and-edge-transfer-but-fails-gnk-texture-prevalence
+  compliance:
+    level: green
+    issues: []
+- id: RES-061
+  title: RUN-157 binary rank-8 representation rescues GNK texture prevalence on the
+    fixed challenge panel
+  status: completed
+  created: '2026-07-24T07:19:21+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-061
+  experiments:
+  - EXP-063
+  runs:
+  - RUN-157
+  supports:
+  - HYP-005
+  weakens: []
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-061_run-157-binary-rank-8-representation-rescues-gnk-texture-prevalence-on-fixed-challenge-panel
+  compliance:
+    level: green
+    issues: []
+- id: RES-062
+  title: RUN-162 formally fails observable coverage and specificity with a plateau-confounded
+    rugged target
+  status: completed
+  created: '2026-07-24T13:08:28+10:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-062
+  experiments:
+  - EXP-064
+  runs:
+  - RUN-162
+  supports: []
+  weakens:
+  - HYP-005
+  refutes: []
+  motivates: []
+  supersedes: []
+  path: results/RES-062_run-162-formally-fails-observable-coverage-and-specificity-with-plateau-confounded-rugged-target
+  compliance:
+    level: green
+    issues: []
+- id: RES-063
+  title: Profile-conditioned model supports controlled benchmark studies while efficiency
+    and learning-search advantages remain untested
+  status: completed
+  created: '2026-11-19T20:10:25+11:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-069
+  - ANA-070
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-175
+  - RUN-178
+  supports: []
+  weakens: []
+  refutes: []
+  motivates:
+  - HYP-005
+  - HYP-010
+  - HYP-011
+  - HYP-012
+  supersedes: []
+  path: results/RES-063_profile-model-readiness-and-learning-search-research-boundary
+  aims:
+  - AIM-001
+  compliance:
+    level: green
+    issues: []

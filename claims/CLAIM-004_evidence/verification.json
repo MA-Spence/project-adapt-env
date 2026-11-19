@@ -1,0 +1,38 @@
+{
+  "package_version": "0.4.0",
+  "model": "thermodynamic_gnk_v2",
+  "source_commit": "37d23c64b15a26cafa41232940feabc218505cd5",
+  "source_branch": "dev",
+  "commit_is_local": true,
+  "external_worktree_clean": true,
+  "retired_tracked_files_removed": 65,
+  "package_tests_passed": 33,
+  "current_project_tests_passed": 40,
+  "replay": {
+    "seed_fields_replayed": 48,
+    "settings": 24,
+    "configuration_seed_pairs": 576,
+    "fitness_values_replayed": 437184,
+    "maximum_absolute_difference": 1.0658141036401503e-14,
+    "stored_latent_values_agree_at_1e12_tolerance": true,
+    "local_frozen_source_fitness_and_fingerprints_match_exactly": true,
+    "run175_preset_replayed_on_all_24_trpb_seeds": true
+  },
+  "documentation": {
+    "executed_python_doc_examples": 4,
+    "verified_local_documentation_links": 36
+  },
+  "packaging": {
+    "package_version": "0.4.0",
+    "wheel_sha256": "e7da4629b595f663dc6cc82c1924d9c5d4c0b77cab6ebc0017b303a3cdd3b2f0",
+    "sdist_sha256": "509ab1c41ebc55d92f6be22866923b9c6370f7a4abb4c35844594db4570ea1a1",
+    "wheel_contains_only_current_package": true,
+    "retired_modules_absent_from_wheel_and_sdist": true,
+    "imported_from_built_wheel": true,
+    "preset_service_and_http_smoke": true
+  },
+  "labproj_checks": "status, refresh --write --strict and check --strict each timed out after 8 seconds on the historical project record; targeted record and artifact checks performed",
+  "historical_test_scope": "Older calibration/SMC integration tests depend on removed APIs and require pre-removal source. They are not part of the supported 0.4 compatibility suite.",
+  "verification_environment": "Python 3.13; dependency directories loaded without ambient editable-install .pth hooks to avoid a separate old Adapt-Env checkout supplying removed modules.",
+  "completed_at": "2026-10-08T11:26:33.488689+00:00"
+}

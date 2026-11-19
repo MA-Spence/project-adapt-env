@@ -1,0 +1,656 @@
+experiment_id: EXP-047
+title: PHOT RES-045 calibration isolation cumulative ablation
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-047
+  status: planned
+  mode: phot_res045_calibration_isolation_cumulative_ablation
+  planned_runner: scripts/phot_trait_space_bounded_gate_fast_fit.py
+  scientific_boundary:
+    primary_hypotheses:
+      - HYP-004
+      - HYP-009
+    motivating_results:
+      - RES-045
+    advisory_source: scratch/RES-045_epistasis_calibration_isolation_plan.md
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    fitting_rule: deterministic/random numerical fast fit plus a model-free k-trait capability probe
+    stage_rule: run A, A+F, A+F+B, A+F+B+C, A+F+B+C+D, and A+F+B+C+D+E in one cumulative experiment
+    comparator_rule: compare sequence-conditioned selected candidates against empirical PHOT graphlets and RUN-098 full-ABC PHOT distances
+    limitation: PHOT-only calibration diagnostics do not validate a general GB1/TrpB-scale benchmark route
+
+observation_calibration:
+  enabled: true
+  method: monotone_piecewise
+  fit_split: calibration
+  apply_to_objective: true
+  apply_to_reporting: true
+  max_knots: 16
+  min_bin_size: 8
+  interpretation: Keep the RES-045 stage-1 readout for A/AF so the first comparison isolates generator-scale anchoring.
+
+source_run:
+  run_id: RUN-077
+  result_id: RES-030
+  output_dir: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  dvc_pointer: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: frozen_current_phot_base_prepared_assay_and_empirical_graphlets
+
+abc_comparator:
+  experiment_id: EXP-039
+  run_id: RUN-098
+  result_id: RES-039
+  output_dir: data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098
+  dvc_pointer: data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  role: previously computed full nested-min PHOT ABC comparator
+  primary_comparator_file: selected_family_distances.csv
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    trait_space_epistasis_bound: null
+    trait_space_epistasis_bound_mode: tanh
+    n_epistatic_terms: 220
+    epistasis_strength: 0.025
+    empirical_pairwise_strength: 0.025
+    pairwise_epistasis_rank: 2
+    epistasis_covariation_bias: 0.8
+    n_higher_order_epistatic_terms: 0
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 0
+    peak_search_top_single_starts: 0
+    peak_search_random_starts: 0
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+    seed: 42
+
+phot_graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 8
+  top_feature_pool: 42
+
+graphlet_evaluation:
+  primary_score_column: latent_phi
+  score_columns:
+    - latent_phi
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+    - magnitude_epistasis_to_single_mutant_sd_ratio
+    - single_mutant_effect_sd
+    - magnitude_epistasis_mean
+    - magnitude_epistasis_median
+    - magnitude_epistasis_sd
+    - signed_pairwise_epistasis_sd
+    - signed_pairwise_epistasis_q10
+    - signed_pairwise_epistasis_q90
+    - sign_epistasis_fraction_local
+    - reciprocal_sign_epistasis_fraction_local
+    - diminishing_returns_epistasis_fraction
+
+scale_invariant_geometry_metrics:
+  - sign_epistasis_fraction
+  - reciprocal_sign_epistasis_fraction
+  - n_local_maxima
+  - accessible_path_fraction
+  - random_walk_lag1_autocorrelation
+  - walsh_high_order_fraction
+  - gft_low_energy_fraction
+  - gft_mid_energy_fraction
+  - gft_high_energy_fraction
+  - edge_energy_adjacent_moran_i
+  - edge_energy_top10_fraction
+  - edge_energy_effective_fraction
+  - site_energy_top1_fraction
+  - site_energy_effective_fraction
+  - plaquette_energy_top1_fraction
+  - plaquette_energy_effective_fraction
+  - magnitude_epistasis_to_single_mutant_sd_ratio
+  - sign_epistasis_fraction_local
+  - reciprocal_sign_epistasis_fraction_local
+  - diminishing_returns_epistasis_fraction
+
+empirical_innovation:
+  base_anchor: fitted_current_best
+  global_readout_polynomial_degree: 3
+  use_calibration_graphlets_only: true
+  residual_definition: empirical_latent_phi_minus_polynomial_readout_of_frozen_current_best
+
+module_selection:
+  source: empirical_calibration_plaquette_energy
+  max_modules: 12
+  module_size: 3
+  selection_split: calibration
+
+abc:
+  fit_families:
+    - bounded_trait_space
+  base_anchors:
+    - fitted_current_best
+    - fitted_smooth_core_only
+  component_guardrails:
+    default_max_component_distance: 2.5
+    penalty_weight: 0.5
+    metric_max_component_distance:
+      sign_epistasis_fraction: 2.5
+      reciprocal_sign_epistasis_fraction: 2.5
+      n_local_maxima: 2.0
+      accessible_path_fraction: 2.0
+      random_walk_lag1_autocorrelation: 2.0
+      walsh_high_order_fraction: 2.0
+      gft_low_energy_fraction: 2.5
+      gft_mid_energy_fraction: 2.5
+      gft_high_energy_fraction: 2.5
+      edge_energy_adjacent_moran_i: 2.0
+      edge_energy_top10_fraction: 2.0
+      edge_energy_effective_fraction: 2.0
+      site_energy_top1_fraction: 2.0
+      site_energy_effective_fraction: 2.0
+      plaquette_energy_top1_fraction: 2.0
+      plaquette_energy_effective_fraction: 2.0
+      magnitude_epistasis_to_single_mutant_sd_ratio: 1.5
+      single_mutant_effect_sd: 2.0
+      magnitude_epistasis_mean: 2.0
+      magnitude_epistasis_median: 2.0
+      magnitude_epistasis_sd: 2.5
+      signed_pairwise_epistasis_sd: 2.0
+      signed_pairwise_epistasis_q10: 2.5
+      signed_pairwise_epistasis_q90: 2.5
+      sign_epistasis_fraction_local: 2.5
+      reciprocal_sign_epistasis_fraction_local: 2.5
+      diminishing_returns_epistasis_fraction: 2.0
+
+bounded_trait_space_fast_fit:
+  enabled: true
+  seed: 20260617
+  bound_mode: tanh
+  random_candidates: 20
+  local_rounds: 1
+  local_top_n: 4
+  local_candidates_per_round: 8
+  local_width_fraction: 0.20
+  select_top_n: 6
+  initial_bounds: []
+  initial_candidates:
+    - softmin_output_scale: 0.18
+    - softmin_output_scale: 0.27
+    - softmin_output_scale: 0.36
+  parameter_specs:
+    - name: stability_margin
+      kind: float
+      low: 4.0
+      high: 14.0
+    - name: stability_scale
+      kind: float
+      low: 0.4
+      high: 1.8
+    - name: stability_conservation_power
+      kind: float
+      low: 0.3
+      high: 1.5
+    - name: threshold_steepness
+      kind: float
+      low: 2.0
+      high: 30.0
+    - name: blosum_blend
+      kind: float
+      low: 0.0
+      high: 1.0
+    - name: softmin_tau
+      kind: float
+      low: 0.05
+      high: 2.0
+    - name: softmin_auxiliary_scale
+      kind: float
+      low: 0.25
+      high: 4.0
+    - name: softmin_auxiliary_bias
+      kind: float
+      low: -3.0
+      high: 3.0
+    - name: softmin_auxiliary_correlation
+      kind: float
+      low: -0.75
+      high: 0.95
+    - name: softmin_output_scale
+      kind: float
+      low: 0.05
+      high: 0.80
+  softmin_latent:
+    enabled: true
+    seed: 20260617
+    disable_specific_epistasis: true
+    project_base_additive: true
+    tau_units: base_sd
+    normalize_output: true
+    output_center: base_mean
+    n_traits: 2
+    auxiliary_order: 1
+    output_scale: 0.2704
+    interpretation: Step A; anchor soft-min latent scale at the generator so raw scale is a single downstream knob.
+
+cumulative_fix_stages:
+  - label: "A"
+    fixes: "A"
+    description: anchor the two-trait soft-min latent by z-scoring generator output before applying one output-scale knob
+  - label: "A+F"
+    fixes: "A+F"
+    description: keep A and decouple the objective into scale-invariant geometry plus a separate raw single-mutant scale term
+    graphlet_evaluation:
+      metric_columns:
+        - sign_epistasis_fraction
+        - reciprocal_sign_epistasis_fraction
+        - n_local_maxima
+        - accessible_path_fraction
+        - random_walk_lag1_autocorrelation
+        - walsh_high_order_fraction
+        - gft_low_energy_fraction
+        - gft_mid_energy_fraction
+        - gft_high_energy_fraction
+        - edge_energy_adjacent_moran_i
+        - edge_energy_top10_fraction
+        - edge_energy_effective_fraction
+        - site_energy_top1_fraction
+        - site_energy_effective_fraction
+        - plaquette_energy_top1_fraction
+        - plaquette_energy_effective_fraction
+        - magnitude_epistasis_to_single_mutant_sd_ratio
+        - sign_epistasis_fraction_local
+        - reciprocal_sign_epistasis_fraction_local
+        - diminishing_returns_epistasis_fraction
+    bounded_trait_space_fast_fit:
+      raw_latent_objective:
+        enabled: true
+        objective_weight: 0.35
+        scale_floor_fraction: 0.10
+        absolute_scale_floor: 1.0e-6
+        terms:
+          - single_mutant_effect_sd
+        metric_weights:
+          single_mutant_effect_sd: 1.0
+  - label: "A+F+B"
+    fixes: "A+F+B"
+    description: add the model-free k-trait soft-min capability probe; skip duplicate sequence-conditioned fitting for this diagnostic-only step
+    bounded_trait_space_fast_fit:
+      enabled: false
+      softmin_capability_probe:
+        enabled: true
+        run_once: true
+        seed: 20260617
+        k_values:
+          - 2
+          - 3
+          - 5
+          - 8
+        tau_values:
+          - 0.05
+          - 0.10
+          - 0.25
+          - 0.50
+        random_candidates: 64
+        coefficient_noise: 1.0
+        intercept_spread: 1.0
+        graphlet_splits:
+          - calibration
+  - label: "A+F+B+C"
+    fixes: "A+F+B+C"
+    description: re-enable sequence-conditioned fitting and sweep k-trait dimensionality and higher-order auxiliary texture with scale anchored
+    bounded_trait_space_fast_fit:
+      enabled: true
+      random_candidates: 24
+      initial_candidates:
+        - softmin_n_traits: 2
+          softmin_auxiliary_order: 1
+          softmin_output_scale: 0.2704
+        - softmin_n_traits: 3
+          softmin_auxiliary_order: 2
+          softmin_output_scale: 0.2704
+        - softmin_n_traits: 5
+          softmin_auxiliary_order: 3
+          softmin_output_scale: 0.2704
+        - softmin_n_traits: 8
+          softmin_auxiliary_order: 3
+          softmin_output_scale: 0.2704
+      parameter_specs:
+        - name: stability_margin
+          kind: float
+          low: 4.0
+          high: 14.0
+        - name: stability_scale
+          kind: float
+          low: 0.4
+          high: 1.8
+        - name: stability_conservation_power
+          kind: float
+          low: 0.3
+          high: 1.5
+        - name: threshold_steepness
+          kind: float
+          low: 2.0
+          high: 30.0
+        - name: blosum_blend
+          kind: float
+          low: 0.0
+          high: 1.0
+        - name: softmin_tau
+          kind: float
+          low: 0.05
+          high: 2.0
+        - name: softmin_auxiliary_scale
+          kind: float
+          low: 0.25
+          high: 4.0
+        - name: softmin_auxiliary_bias
+          kind: float
+          low: -3.0
+          high: 3.0
+        - name: softmin_auxiliary_correlation
+          kind: float
+          low: -0.75
+          high: 0.95
+        - name: softmin_output_scale
+          kind: float
+          low: 0.05
+          high: 0.80
+        - name: softmin_n_traits
+          kind: int
+          low: 2
+          high: 8
+        - name: softmin_auxiliary_order
+          kind: int
+          low: 1
+          high: 3
+      softmin_latent:
+        n_traits: 3
+        auxiliary_order: 2
+        auxiliary_n_terms: 12
+        trait_bias_jitter: 0.10
+        trait_scale_jitter: 0.15
+  - label: "A+F+B+C+D"
+    fixes: "A+F+B+C+D"
+    description: add a small sparse structured residual to the k-trait navigable core while retaining scale anchoring and the decoupled objective
+    observation_calibration:
+      enabled: true
+      method: monotone_sigmoid
+      fit_split: calibration
+      apply_to_objective: true
+      apply_to_reporting: true
+      n_midpoint_grid: 17
+      slope_multipliers:
+        - 0.25
+        - 0.5
+        - 1.0
+        - 2.0
+        - 4.0
+        - 8.0
+        - 16.0
+      y_quantile_low: 0.02
+      y_quantile_high: 0.98
+      interpretation: Step D freezes reporting to a two-parameter monotone sigmoid after the hybrid core is introduced.
+    bounded_trait_space_fast_fit:
+      random_candidates: 32
+      initial_candidates:
+        - softmin_n_traits: 3
+          softmin_auxiliary_order: 2
+          softmin_structured_residual_scale: 0.10
+          softmin_output_scale: 0.2704
+        - softmin_n_traits: 5
+          softmin_auxiliary_order: 3
+          softmin_structured_residual_scale: 0.10
+          softmin_output_scale: 0.2704
+        - softmin_n_traits: 5
+          softmin_auxiliary_order: 3
+          softmin_structured_residual_scale: 0.20
+          softmin_output_scale: 0.2704
+        - softmin_n_traits: 8
+          softmin_auxiliary_order: 3
+          softmin_structured_residual_scale: 0.20
+          softmin_output_scale: 0.2704
+      parameter_specs:
+        - name: stability_margin
+          kind: float
+          low: 4.0
+          high: 14.0
+        - name: stability_scale
+          kind: float
+          low: 0.4
+          high: 1.8
+        - name: stability_conservation_power
+          kind: float
+          low: 0.3
+          high: 1.5
+        - name: threshold_steepness
+          kind: float
+          low: 2.0
+          high: 30.0
+        - name: blosum_blend
+          kind: float
+          low: 0.0
+          high: 1.0
+        - name: softmin_tau
+          kind: float
+          low: 0.05
+          high: 2.0
+        - name: softmin_auxiliary_scale
+          kind: float
+          low: 0.25
+          high: 4.0
+        - name: softmin_auxiliary_bias
+          kind: float
+          low: -3.0
+          high: 3.0
+        - name: softmin_auxiliary_correlation
+          kind: float
+          low: -0.75
+          high: 0.95
+        - name: softmin_output_scale
+          kind: float
+          low: 0.05
+          high: 0.80
+        - name: softmin_n_traits
+          kind: int
+          low: 2
+          high: 8
+        - name: softmin_auxiliary_order
+          kind: int
+          low: 1
+          high: 3
+        - name: softmin_structured_residual_scale
+          kind: float
+          low: 0.0
+          high: 0.45
+      softmin_latent:
+        structured_residual:
+          enabled: true
+          min_order: 2
+          max_order: 4
+          n_terms: 10
+          scale: 0.10
+          renormalize_after_residual: true
+  - label: "A+F+B+C+D+E"
+    fixes: "A+F+B+C+D+E"
+    description: keep the best hybrid form and increase random plus local-refinement search to test whether RES-045 was partly a fast-search artifact
+    bounded_trait_space_fast_fit:
+      random_candidates: 48
+      local_rounds: 2
+      local_top_n: 6
+      local_candidates_per_round: 10
+      local_width_fraction: 0.16
+      select_top_n: 8
+
+equivalence:
+  reference_split: test
+  absolute_distance_margin: 0.05
+  relative_distance_margin: 0.10
+  max_component_distance_margin: 2.5
+  distance_metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+    - magnitude_epistasis_to_single_mutant_sd_ratio
+    - single_mutant_effect_sd
+    - magnitude_epistasis_mean
+    - magnitude_epistasis_median
+    - magnitude_epistasis_sd
+    - signed_pairwise_epistasis_sd
+    - signed_pairwise_epistasis_q10
+    - signed_pairwise_epistasis_q90
+    - sign_epistasis_fraction_local
+    - reciprocal_sign_epistasis_fraction_local
+    - diminishing_returns_epistasis_fraction
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+    - magnitude_epistasis_to_single_mutant_sd_ratio
+    - single_mutant_effect_sd
+    - magnitude_epistasis_mean
+    - magnitude_epistasis_median
+    - magnitude_epistasis_sd
+    - signed_pairwise_epistasis_sd
+    - signed_pairwise_epistasis_q10
+    - signed_pairwise_epistasis_q90
+    - sign_epistasis_fraction_local
+    - reciprocal_sign_epistasis_fraction_local
+    - diminishing_returns_epistasis_fraction
+  report_metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+    - magnitude_epistasis_to_single_mutant_sd_ratio
+    - single_mutant_effect_sd
+    - magnitude_epistasis_mean
+    - magnitude_epistasis_median
+    - magnitude_epistasis_sd
+    - signed_pairwise_epistasis_sd
+    - signed_pairwise_epistasis_q10
+    - signed_pairwise_epistasis_q90
+    - sign_epistasis_fraction_local
+    - reciprocal_sign_epistasis_fraction_local
+    - diminishing_returns_epistasis_fraction
+    - raw_magnitude_epistasis_to_single_mutant_sd_ratio
+    - raw_single_mutant_effect_sd
+    - raw_n_local_maxima
+    - raw_accessible_path_fraction
+    - raw_magnitude_epistasis_mean
+    - raw_magnitude_epistasis_median
+    - raw_magnitude_epistasis_sd
+    - raw_signed_pairwise_epistasis_sd
+    - raw_signed_pairwise_epistasis_q10
+    - raw_signed_pairwise_epistasis_q90
+    - raw_sign_epistasis_fraction_local
+    - raw_reciprocal_sign_epistasis_fraction_local
+    - raw_diminishing_returns_epistasis_fraction
+
+analysis:
+  random_walk:
+    n_walks_per_graphlet: 20
+    steps: 32
+    lag_max: 5
+
+outputs:
+  output_dir_name: phot-res045-calibration-isolation-cumulative-ablation
+  expected_files:
+    - summary.json
+    - preflight.json
+    - bounded_gate_candidates.csv
+    - selected_bounded_gate_candidates.csv
+    - bounded_gate_distances.csv
+    - bounded_gate_equivalence.csv
+    - graphlet_metrics.csv
+    - graphlet_summary.csv
+    - softmin_capability_probe.csv
+    - walsh_terms.csv
+    - gft_coefficients.csv
+    - abc_comparator_selected_family_distances.csv
+
+quick:
+  phot_graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 1
+    top_feature_pool: 32
+  module_selection:
+    max_modules: 2
+    module_size: 3
+  analysis:
+    random_walk:
+      n_walks_per_graphlet: 2
+      steps: 8
+      lag_max: 2
+  bounded_trait_space_fast_fit:
+    random_candidates: 1
+    local_rounds: 0
+    local_top_n: 1
+    local_candidates_per_round: 1
+    select_top_n: 1
+    initial_candidates:
+      - softmin_output_scale: 0.2704

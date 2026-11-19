@@ -1,0 +1,110 @@
+id: EXP-033
+type: experiment
+title: PHOT soft-min Boltzmann coupled landscape ABC
+slug: phot-softmin-boltzmann-coupled-landscape-abc
+status: completed
+created: '2026-05-17T07:46:34+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  - EXP-031
+  - EXP-032
+  motivating_results:
+  - RES-030
+  - RES-031
+  - RES-032
+question: 'For PHOT, does a frozen RUN-077 base landscape combined with a correlated
+  auxiliary landscape through a temperature-controlled soft-min/Boltzmann state-competition
+  operator improve held-out graphlet topology, spectra, and locality relative to matched
+  controls?
+
+  '
+pre_experiment_prediction: 'A supporting result requires posterior concentration on
+  finite tau and correlated auxiliary parameters that improve held-out graphlet distance
+  and locality without losing base correlation. Assay-objective improvement alone
+  is not sufficient support for HYP-008.
+
+  '
+rationale: 'RES-032 showed that strict hard-min coupling improves the PHOT full-assay
+  objective but fails the held-out graphlet and locality controls. EXP-033 tests whether
+  a softer thermodynamic state-competition operator avoids that failure while keeping
+  the base landscape fixed for identifiability.
+
+  '
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - scripts/phot_softmin_coupled_landscape_abc.py
+  - src/project_adapt_env/coupled_landscape.py
+  datasets:
+  - RUN-077 PHOT system-specific current-model refit outputs
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 08:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - progress.json
+  - parameter_specs.csv
+  - posterior_particles.csv
+  - posterior_rounds.csv
+  - evaluated_parameter_sets.csv
+  - assay_fit_metrics.csv
+  - assay_dfe_metrics.csv
+  - assay_epistasis_metrics.csv
+  - assay_fit_rankings.csv
+  - graphlet_catalog.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - graphlet_summary.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - local_signal_by_graphlet.csv
+  - local_signal_energy_by_feature.csv
+  - local_signal_feature_energy_summary.csv
+  - local_signal_graphlet_energy_summary.csv
+  - locality_covariance_summary.csv
+  - empirical_readout_fit.json
+  artifacts: []
+downstream:
+  planned_analyses:
+  - ANA-033
+  planned_results:
+  - RES-033
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- Uses calibration graphlets for ABC and reserves test graphlets for held-out evidence.
+- Keeps a(x) fixed to the fitted smooth-core PHOT base in the primary branch.
+template: generic
+compliance:
+  level: green
+  issues: []

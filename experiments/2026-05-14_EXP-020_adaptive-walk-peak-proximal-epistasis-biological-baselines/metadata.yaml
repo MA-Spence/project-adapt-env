@@ -1,0 +1,80 @@
+id: EXP-020
+type: experiment
+title: Adaptive Walk And Peak-Proximal Epistasis Biological Baselines
+slug: adaptive-walk-peak-proximal-epistasis-biological-baselines
+status: planned
+created: '2026-05-14T22:06:32+10:00'
+owner: matthew-spence
+scientific_context:
+  aims: []
+  hypotheses:
+  - HYP-004
+  previous_experiments: []
+  motivating_results: []
+question: 'Do current AdaptEnv stability-margin landscapes reproduce literature-supported
+  evolutionary-landscape behaviours: adaptive walks with decelerating gains, declining
+  beneficial-mutation availability near local peaks, and stronger or more constraining
+  epistasis as backgrounds approach a peak?'
+pre_experiment_prediction: Across seeds and conditioned or unconditioned synthetic
+  family backgrounds, adaptive walks should gain fitness early and then decelerate;
+  starting closer to the stored local peak should reduce beneficial fraction and mean
+  beneficial effect size; peak-proximal neighborhoods should show larger or more sign-constraining
+  pairwise epistasis than low-fitness neighborhoods.
+rationale: HYP-004 is a biological-realism test, not a machine-learning benchmark.
+  The experiment compares synthetic walk and epistasis behaviour to qualitative expectations
+  from empirical fitness-landscape, microbial-adaptation, and Fisher-geometric-model
+  literature before any optimizer ranking is considered.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - experiments/2026-05-14_EXP-020_adaptive-walk-peak-proximal-epistasis-biological-baselines/config.yaml
+  - scripts/adaptive_walk_peak_epistasis_baselines.py
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 16
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 04:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - walk_trajectories.csv
+  - background_neighborhoods.csv
+  - epistasis_pairs.csv
+  - walk_summaries.json
+  - summary.json
+  - literature_baselines.json
+  artifacts:
+  - walk_trajectories.csv
+  - background_neighborhoods.csv
+  - epistasis_pairs.csv
+  - walk_summaries.json
+  - summary.json
+  - literature_baselines.json
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

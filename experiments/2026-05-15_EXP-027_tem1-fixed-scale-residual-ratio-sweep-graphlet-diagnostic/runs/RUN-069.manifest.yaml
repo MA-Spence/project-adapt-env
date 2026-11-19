@@ -1,0 +1,42 @@
+run: RUN-069
+target: lab-slurm
+experiment: EXP-027
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-15_EXP-027_tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic
+  run_script: experiments/2026-05-15_EXP-027_tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic/run.sh
+inputs:
+  declared_files: []
+  datasets: []
+outputs:
+  expected:
+  - tem1_mmseqs_alignment.fasta
+  - alignment_profile_summary.json
+  - adaptive_walk_starts.csv
+  - adaptive_walk_trajectories.csv
+  - adaptive_walk_graphlet_backgrounds.csv
+  - start_candidate_report.csv
+  - summary.json
+  - calibration_target_summary.json
+  - heldout_test_summary.json
+  - module_parameter_sweep.csv
+  - graphlet_catalog.csv
+  - calibration_graphlet_metrics.csv
+  - test_graphlet_metrics.csv
+  - graphlet_walsh_terms.csv
+  - graphlet_gft_coefficients.csv
+  - graphlet_sign_epistasis_pairs.csv
+  - graphlet_accessibility.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-069/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-069
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-069/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-069/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-069
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-069/project/experiments/2026-05-15_EXP-027_tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-069/project/experiments/2026-05-15_EXP-027_tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic/runs/RUN-069.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

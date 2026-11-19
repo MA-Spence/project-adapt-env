@@ -1,0 +1,88 @@
+id: EXP-027
+type: experiment
+title: TEM-1 fixed-scale residual ratio sweep graphlet diagnostic
+slug: tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic
+status: completed
+created: '2026-05-15T19:38:07+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-026
+  motivating_results:
+  - RES-026
+question: Does scanning fixed residual-to-additive scale ratios reveal a threshold
+  where high-order residual variance becomes exposed as adaptive-walk additive gains
+  diminish, without using graphlet-local DFE normalization?
+pre_experiment_prediction: If the corrected relative-scale mechanism is present, increasing
+  fixed residual scale should monotonically increase residual exposure, WHT high-order
+  fraction, SE/RSE, local maxima, reduced accessibility, and shorter random-walk autocorrelation,
+  with stronger effects in later walk stages where available beneficial effects are
+  smaller. Smooth-core, pairwise, exact-match, placement, and GNK controls distinguish
+  this from direct local scaling or non-procedural ruggedness.
+rationale: RES-026 showed that the locally DFE-scaled contact residual creates topology
+  but is not the intended fixed residual/additive mechanism. This repeat removes the
+  local-DFE primary calibration setting, scans fixed residual scale values directly,
+  and reduces evaluated graphlets by the scale-grid size so the primary scale-sweep
+  workload remains comparable to the previous single-scale diagnostic.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 08:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - tem1_mmseqs_alignment.fasta
+  - alignment_profile_summary.json
+  - adaptive_walk_starts.csv
+  - adaptive_walk_trajectories.csv
+  - adaptive_walk_graphlet_backgrounds.csv
+  - start_candidate_report.csv
+  - summary.json
+  - calibration_target_summary.json
+  - heldout_test_summary.json
+  - module_parameter_sweep.csv
+  - graphlet_catalog.csv
+  - calibration_graphlet_metrics.csv
+  - test_graphlet_metrics.csv
+  - graphlet_walsh_terms.csv
+  - graphlet_gft_coefficients.csv
+  - graphlet_sign_epistasis_pairs.csv
+  - graphlet_accessibility.csv
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,40 @@
+id: RES-028
+title: RUN-071 empirical controls falsify strong residual ruggedness benchmark adequacy
+  but preserve the scale knob
+status: completed
+created: '2026-05-15T22:30:22+10:00'
+owner: matthew-spence
+analyses:
+- ANA-028
+experiments:
+- EXP-028
+runs:
+- RUN-071
+supports:
+- HYP-005
+weakens:
+- HYP-004
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-071 rejects smooth-core-only and global-readout-only explanations and
+  confirms that fixed residual scale is directional across the synthetic graphlet
+  grid, but the primary empirical PHOT graphlets violate the preregistered modest
+  high-order-tail spectral envelope and no embedded procedural candidate matches empirical
+  spectra, SE/RSE, local maxima, accessibility, and random-walk statistics as a package.
+  The result falsifies the strong current residual-ruggedness benchmark-adequacy claim
+  while preserving only the narrow HYP-005 residual-scale knob.
+artifacts:
+- results/RES-028_run-071-empirical-controls-falsify-strong-residual-ruggedness-benchmark-adequacy/metrics.json
+evidence_paths:
+- analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/metrics.json
+- analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_key_metrics.md
+- analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_falsification_tests.md
+- analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_synthetic_empirical_best_by_model.md
+- analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review/tables/run-071_fixed_scale_directionality.md
+- data/processed/empirical-graphlet-falsification-residual-ruggedness/RUN-071.dvc
+- data/processed/empirical-graphlet-falsification-residual-ruggedness/RUN-071/summary.json
+- data/processed/empirical-graphlet-falsification-residual-ruggedness/RUN-071/falsification_tests.json
+compliance:
+  level: green
+  issues: []

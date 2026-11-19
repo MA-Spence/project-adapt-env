@@ -1,0 +1,44 @@
+id: RES-061
+title: RUN-157 binary rank-8 representation rescues GNK texture prevalence on the
+  fixed challenge panel
+status: completed
+created: '2026-07-24T07:19:21+10:00'
+owner: matthew-spence
+analyses:
+- ANA-061
+experiments:
+- EXP-063
+runs:
+- RUN-157
+supports:
+- HYP-005
+weakens: []
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-157 reproduced the incumbent binary-rank-1 prevalence failure and issued
+  the preregistered BINARY_RANK8_SUFFICIENT decision. At nearly unchanged median texture
+  RMS, binary rank 8 raised median practical texture prevalence from 0.198 to 0.461
+  and passed all 360/360 paired cells, with protein-level median gain 0.262 and bootstrap
+  lower bound 0.248. Dense q20 coding alone worsened prevalence, and dense q20 rank
+  8 remained below the per-length package gate. This narrowly supports an experiment-local,
+  dose-directional GNK knob on the reused challenge panel; it is not independent protein
+  generalization or public-model validation, and the Stage 4C/4D/4E hard stop remains.
+artifacts: []
+evidence_paths:
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/metrics.json
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_acceptance_audit.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_arm_by_length.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_arm_summary.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_collection_audit.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_dose_curve.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_factorial_effects.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_paired_effects.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_protocol_output_audit.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_representation_audit.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_scale_law_summary.csv
+- analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review/tables/run-157_source_hash_audit.csv
+- data/processed/paired-categorical-code-and-representation-rank-gnk-texture-rescue/RUN-157.dvc
+compliance:
+  level: green
+  issues: []

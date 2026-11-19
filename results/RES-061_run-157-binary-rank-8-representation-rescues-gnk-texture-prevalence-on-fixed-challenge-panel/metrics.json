@@ -1,0 +1,101 @@
+{
+  "analysis_id": "ANA-061",
+  "candidate_is_experiment_local": true,
+  "collection": {
+    "configured_backup_succeeded": false,
+    "dvc_dir_hash": "7f2e06c1c337fa49b0e9c4006be443ff.dir",
+    "file_count": 378,
+    "local_and_cache_md5_match": true,
+    "remote_runtime_sha256_match": true,
+    "size_bytes": 456516694,
+    "strict_json_failures": 0
+  },
+  "experiment_id": "EXP-063",
+  "factorial_effects": {
+    "dense_by_rank_interaction": {
+      "interval": [
+        -0.1171875,
+        -0.0794270833333333
+      ],
+      "median": -0.0970052083333333
+    },
+    "dense_main_effect": {
+      "interval": [
+        -0.1455078125,
+        -0.1416015625
+      ],
+      "median": -0.1432291666666666
+    },
+    "rank_main_effect": {
+      "interval": [
+        0.2073567708333333,
+        0.2184244791666666
+      ],
+      "median": 0.2112630208333333
+    }
+  },
+  "hypothesis_effect": {
+    "refutes": [],
+    "supports": [
+      "HYP-005"
+    ],
+    "weakens": []
+  },
+  "independent_protein_generalization_tested": false,
+  "public_model_changed": false,
+  "registered_decision": "BINARY_RANK8_SUFFICIENT",
+  "required_checks": {
+    "all_recorded_states_reproduced": true,
+    "passed": 3,
+    "total": 3
+  },
+  "representation_arms": {
+    "binary_r1": {
+      "actual_cell_passes": 45,
+      "actual_cells": 360,
+      "actual_practical_fraction_median": 0.1979166666666666,
+      "actual_tau_rms_median": 0.4252000988088964,
+      "full_package_pass": false,
+      "latent_excess_kurtosis_median": 6.513744017691252,
+      "latent_near_zero_fraction_median": 0.6705729166666667
+    },
+    "binary_r8": {
+      "actual_cell_passes": 360,
+      "actual_cells": 360,
+      "actual_practical_fraction_median": 0.4609375,
+      "actual_tau_rms_median": 0.4243903844277088,
+      "full_package_pass": true,
+      "latent_excess_kurtosis_median": 1.2131982628461389,
+      "latent_near_zero_fraction_median": 0.0572916666666666,
+      "length_slope": -0.123472631945214,
+      "length_slope_interval": [
+        -0.1335593721615967,
+        -0.1133024191563202
+      ],
+      "paired_gain": 0.2623697916666667,
+      "paired_gain_bootstrap_lower": 0.248046875
+    },
+    "dense_q20_r1": {
+      "actual_cell_passes": 0,
+      "actual_cells": 360,
+      "actual_practical_fraction_median": 0.1067708333333333,
+      "actual_tau_rms_median": 0.3121579239965051,
+      "full_package_pass": false,
+      "latent_excess_kurtosis_median": 67.086050064666
+    },
+    "dense_q20_r8": {
+      "actual_cell_passes": 255,
+      "actual_cells": 360,
+      "actual_practical_fraction_median": 0.265625,
+      "actual_tau_rms_median": 0.3909288735728372,
+      "full_package_pass": false,
+      "paired_gain": 0.0677083333333333,
+      "paired_gain_bootstrap_lower": 0.05859375
+    }
+  },
+  "run_id": "RUN-157",
+  "scientific_pass": true,
+  "shared_core_passes": 60,
+  "shared_core_cells": 60,
+  "stage_4c_4d_4e_hard_stop_retained": true
+}

@@ -1,0 +1,246 @@
+experiment_id: EXP-034
+title: PHOT budgeted module-tied soft-min ABC
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-034
+  status: planned
+  planned_runner: scripts/phot_budgeted_softmin_coupled_landscape_abc.py
+  scientific_boundary:
+    primary_hypothesis: HYP-008
+    motivating_results:
+      - RES-030
+      - RES-031
+      - RES-032
+      - RES-033
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    abc_rule: fit only the state-difference field d(x)=b(x)-a(x), soft-min temperature, and finite-difference budgets; keep the RUN-077 PHOT base fixed
+    graphlet_rule: fit on calibration graphlets and evaluate scientific support only on held-out graphlets
+    assay_rule: use PHOT full-assay fit as a guardrail/reporting output, not as sufficient evidence for HYP-008
+    identifiability_rule: do not jointly refit the smooth core, do not use peak distance, do not replay held-out graphlets, and do not select on held-out graphlets
+
+source_run:
+  run_id: RUN-077
+  result_id: RES-030
+  output_dir: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  dvc_pointer: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: frozen_current_phot_base_prepared_assay_and_empirical_graphlets
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    n_epistatic_terms: 220
+    epistasis_strength: 0.025
+    empirical_pairwise_strength: 0.025
+    pairwise_epistasis_rank: 2
+    epistasis_covariation_bias: 0.8
+    n_higher_order_epistatic_terms: 0
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 400
+    peak_search_top_single_starts: 8
+    peak_search_random_starts: 8
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+    seed: 42
+
+operator:
+  class: budgeted_module_tied_softmin
+  mode: min
+  a_anchor: fitted_smooth_core_only
+  coefficient_seed: 20260517
+  formula: d(x)=b(x)-a(x); g_tau(a,d)=a - tau log(1 + exp(-d/tau))
+
+module_selection:
+  source: empirical_calibration_readout_residual_plaquette_energy
+  max_modules: 12
+  module_size: 3
+
+module_difference:
+  use_modules: true
+  module_residual_orders:
+    - 2
+
+assay_fit:
+  primary_score_column: latent_phi
+  holdout_fraction: 0.20
+  neutral_effect_threshold: 0.05
+  evaluation_chunk_size: 4096
+  max_variants: 0
+
+phot_graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 8
+  top_feature_pool: 42
+
+graphlet_evaluation:
+  primary_score_column: latent_phi
+  score_columns:
+    - latent_phi
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+
+empirical_local_signal:
+  a_anchor: fitted_smooth_core_only
+  global_readout_polynomial_degree: 3
+  residual_definition: empirical_latent_phi_minus_polynomial_readout_of_fitted_smooth_core_A
+  primary_locality_metrics:
+    - edge_innovation_energy_concentration
+    - plaquette_innovation_energy_concentration
+    - graphlet_energy_concentration
+    - soft_state_transition_edge_fraction
+    - soft_state_transition_plaquette_fraction
+    - shared_feature_count_vs_energy_similarity
+
+abc:
+  assay_guardrail_weight: 0.15
+  assay_guardrail_max_variants: 8000
+  posterior_predictive_particles: 24
+  smc:
+    n_particles: 32
+    n_rounds: 3
+    initial_pool_multiplier: 5
+    proposal_pool_multiplier: 5
+    epsilon_quantile: 0.6
+    seed: 20260517
+  backend:
+    kind: ray
+    max_workers: 4
+    batch_size: 1
+  parameters:
+    - name: difference_bias_sd
+      kind: float
+      low: -2.00
+      high: 2.00
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.04
+    - name: difference_base_slope
+      kind: float
+      low: -2.00
+      high: 2.00
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.04
+    - name: difference_module_scale
+      kind: float
+      low: 0.00
+      high: 2.00
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.04
+    - name: module_residual_density
+      kind: float
+      low: 0.25
+      high: 1.00
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.04
+    - name: log_tau
+      kind: float
+      low: -1.6094379124341003
+      high: 1.3862943611198906
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.04
+  regularization:
+    phenotype_correlation_min: 0.70
+    edge_gradient_correlation_min: 0.45
+    innovation_to_base_sd_max: 0.50
+    auxiliary_weight_sd_min: 0.04
+    lambda_pheno: 2.0
+    lambda_edge: 1.0
+    lambda_energy: 1.0
+    lambda_state_use: 0.5
+    innovation_var_ratio_max: 0.25
+    edge_energy_ratio_to_empirical_max: 8.0
+    plaquette_energy_ratio_to_empirical_max: 8.0
+    state_weight_edge_energy_max: 0.20
+    state_weight_plaquette_energy_max: 0.20
+    difference_edge_median_abs_over_tau_max: 1.50
+    lambda_innovation_var: 1.0
+    lambda_edge_energy: 0.05
+    lambda_plaquette_energy: 0.05
+    lambda_state_boundary: 0.5
+    lambda_relative_temperature: 0.5
+
+analysis:
+  random_walk:
+    n_walks_per_graphlet: 20
+    steps: 32
+    lag_max: 5
+
+outputs:
+  output_dir_name: phot-budgeted-module-tied-softmin-abc
+  expected_files:
+    - summary.json
+    - preflight.json
+    - progress.json
+    - parameter_specs.csv
+    - module_catalog.csv
+    - posterior_particles.csv
+    - posterior_rounds.csv
+    - evaluated_parameter_sets.csv
+    - assay_fit_metrics.csv
+    - assay_dfe_metrics.csv
+    - assay_epistasis_metrics.csv
+    - assay_fit_rankings.csv
+    - graphlet_catalog.csv
+    - graphlet_metrics.csv
+    - walsh_terms.csv
+    - gft_coefficients.csv
+    - graphlet_summary.csv
+    - model_distances.csv
+    - top_model_distances.csv
+    - local_signal_by_graphlet.csv
+    - local_signal_energy_by_feature.csv
+    - local_signal_feature_energy_summary.csv
+    - local_signal_graphlet_energy_summary.csv
+    - locality_covariance_summary.csv
+    - empirical_readout_fit.json
+
+quick:
+  assay_fit:
+    max_variants: 2500
+    evaluation_chunk_size: 1024
+  phot_graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 2
+    top_feature_pool: 42
+  abc:
+    assay_guardrail_weight: 0.15
+    assay_guardrail_max_variants: 600
+    posterior_predictive_particles: 4
+    smc:
+      n_particles: 4
+      n_rounds: 2
+      initial_pool_multiplier: 2
+      proposal_pool_multiplier: 2
+      epsilon_quantile: 0.6
+      seed: 20260517
+    backend:
+      kind: serial
+      max_workers: 1
+      batch_size: 1
+  analysis:
+    random_walk:
+      n_walks_per_graphlet: 4
+      steps: 12
+      lag_max: 3

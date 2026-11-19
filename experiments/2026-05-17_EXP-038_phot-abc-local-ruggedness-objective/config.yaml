@@ -1,0 +1,301 @@
+experiment_id: EXP-038
+title: PHOT ABC local ruggedness objective
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-038
+  status: planned
+  mode: abc_with_local_dirichlet_energy_objective
+  planned_runner: scripts/phot_coupled_family_discriminating_abc.py
+  scientific_boundary:
+    primary_hypothesis: HYP-008
+    motivating_results:
+      - RES-036
+      - RES-037
+    assay_scope: PHOT_CHLRE_Chen_2023 only
+    family_rule: fit the same no-module, empirical-module, random-module, shuffled-module, and uncoupled-module families used in RUN-091
+    abc_rule: fit each family independently using calibration graphlets only
+    objective_change: add adjacent-edge Dirichlet-energy autocorrelation and edge/site/plaquette concentration metrics to the ABC objective
+    support_rule: require calibration-selected held-out improvement plus empirical-module specificity over no-module, random/shuffled-module, uncoupled-module, residual, and GNK controls
+
+source_run:
+  run_id: RUN-077
+  result_id: RES-030
+  output_dir: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  dvc_pointer: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: frozen_current_phot_base_prepared_assay_and_empirical_graphlets
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_margin: 8.0
+    stability_scale: 1.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    n_epistatic_terms: 220
+    epistasis_strength: 0.025
+    empirical_pairwise_strength: 0.025
+    pairwise_epistasis_rank: 2
+    epistasis_covariation_bias: 0.8
+    n_higher_order_epistatic_terms: 0
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 400
+    peak_search_top_single_starts: 8
+    peak_search_random_starts: 8
+    peak_search_random_radius: 2
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+    seed: 42
+
+phot_graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 8
+  top_feature_pool: 42
+
+graphlet_evaluation:
+  primary_score_column: latent_phi
+  score_columns:
+    - latent_phi
+  metric_columns:
+    - sign_epistasis_fraction
+    - reciprocal_sign_epistasis_fraction
+    - n_local_maxima
+    - accessible_path_fraction
+    - random_walk_lag1_autocorrelation
+    - walsh_high_order_fraction
+    - gft_low_energy_fraction
+    - gft_mid_energy_fraction
+    - gft_high_energy_fraction
+    - edge_energy_adjacent_moran_i
+    - edge_energy_top10_fraction
+    - edge_energy_effective_fraction
+    - site_energy_top1_fraction
+    - site_energy_effective_fraction
+    - plaquette_energy_top1_fraction
+    - plaquette_energy_effective_fraction
+
+empirical_innovation:
+  base_anchor: fitted_current_best
+  global_readout_polynomial_degree: 3
+  use_calibration_graphlets_only: true
+  residual_definition: empirical_latent_phi_minus_polynomial_readout_of_frozen_current_best
+
+module_selection:
+  source: empirical_calibration_plaquette_energy
+  max_modules: 12
+  module_size: 3
+  selection_split: calibration
+
+coupled_family:
+  module_residual_orders:
+    - 2
+    - 3
+
+abc:
+  fit_families:
+    - no_module
+    - empirical_module
+    - random_module
+    - shuffled_module
+    - uncoupled_module
+  posterior_predictive_particles: 16
+  resume_checkpoints: true
+  base_anchors:
+    - fitted_current_best
+    - fitted_smooth_core_only
+  operator_gate_directions:
+    - high
+    - low
+  component_guardrails:
+    default_max_component_distance: 2.5
+    penalty_weight: 0.5
+    metric_max_component_distance:
+      sign_epistasis_fraction: 2.5
+      reciprocal_sign_epistasis_fraction: 2.5
+      n_local_maxima: 2.0
+      accessible_path_fraction: 2.0
+      random_walk_lag1_autocorrelation: 2.0
+      walsh_high_order_fraction: 2.0
+      gft_low_energy_fraction: 2.5
+      gft_mid_energy_fraction: 2.5
+      gft_high_energy_fraction: 2.5
+      edge_energy_adjacent_moran_i: 2.0
+      edge_energy_top10_fraction: 2.0
+      edge_energy_effective_fraction: 2.0
+      site_energy_top1_fraction: 2.0
+      site_energy_effective_fraction: 2.0
+      plaquette_energy_top1_fraction: 2.0
+      plaquette_energy_effective_fraction: 2.0
+  smc:
+    n_particles: 24
+    n_rounds: 3
+    initial_pool_multiplier: 4
+    proposal_pool_multiplier: 4
+    epsilon_quantile: 0.6
+    seed: 20260518
+  backend:
+    kind: ray
+    max_workers: 4
+    batch_size: 1
+  parameter_priors:
+    base_anchor_index:
+      kind: int
+      low: 0
+      high: 1
+      initial_scale_fraction: 0.30
+      min_scale_fraction: 0.15
+    auxiliary_correlation:
+      kind: float
+      low: 0.0
+      high: 0.98
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    operator_lambda:
+      kind: float
+      low: 0.0
+      high: 0.80
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    operator_gate_midpoint:
+      kind: float
+      low: -1.50
+      high: 1.50
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    operator_gate_steepness:
+      kind: float
+      low: 0.25
+      high: 2.50
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    operator_gate_direction_index:
+      kind: int
+      low: 0
+      high: 1
+      initial_scale_fraction: 0.30
+      min_scale_fraction: 0.15
+    module_residual_scale:
+      kind: float
+      low: 0.0
+      high: 0.75
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+    module_residual_density:
+      kind: float
+      low: 0.25
+      high: 1.00
+      initial_scale_fraction: 0.18
+      min_scale_fraction: 0.05
+  family_parameter_names:
+    no_module:
+      - base_anchor_index
+      - auxiliary_correlation
+      - operator_lambda
+      - operator_gate_midpoint
+      - operator_gate_steepness
+      - operator_gate_direction_index
+    empirical_module:
+      - base_anchor_index
+      - auxiliary_correlation
+      - operator_lambda
+      - operator_gate_midpoint
+      - operator_gate_steepness
+      - operator_gate_direction_index
+      - module_residual_scale
+      - module_residual_density
+    random_module:
+      - base_anchor_index
+      - auxiliary_correlation
+      - operator_lambda
+      - operator_gate_midpoint
+      - operator_gate_steepness
+      - operator_gate_direction_index
+      - module_residual_scale
+      - module_residual_density
+    shuffled_module:
+      - base_anchor_index
+      - auxiliary_correlation
+      - operator_lambda
+      - operator_gate_midpoint
+      - operator_gate_steepness
+      - operator_gate_direction_index
+      - module_residual_scale
+      - module_residual_density
+    uncoupled_module:
+      - base_anchor_index
+      - operator_lambda
+      - operator_gate_midpoint
+      - operator_gate_steepness
+      - operator_gate_direction_index
+      - module_residual_scale
+      - module_residual_density
+
+analysis:
+  random_walk:
+    n_walks_per_graphlet: 20
+    steps: 32
+    lag_max: 5
+
+outputs:
+  output_dir_name: phot-abc-local-ruggedness-objective
+  expected_files:
+    - summary.json
+    - preflight.json
+    - progress.json
+    - parameter_specs.csv
+    - posterior_particles.csv
+    - posterior_rounds.csv
+    - evaluated_parameter_sets.csv
+    - graphlet_catalog.csv
+    - module_catalog.csv
+    - graphlet_metrics.csv
+    - walsh_terms.csv
+    - gft_coefficients.csv
+    - graphlet_summary.csv
+    - model_distances.csv
+    - top_model_distances.csv
+    - selected_family_distances.csv
+    - selected_family_pairwise_deltas.csv
+    - component_guardrail_summary.csv
+    - module_energy_rows.csv
+    - module_energy_by_graphlet.csv
+    - module_energy_summary.csv
+    - base_correlation.csv
+    - empirical_readout_fit.json
+
+quick:
+  phot_graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 2
+    top_feature_pool: 42
+  module_selection:
+    max_modules: 4
+    module_size: 3
+  abc:
+    posterior_predictive_particles: 2
+    smc:
+      n_particles: 4
+      n_rounds: 2
+      initial_pool_multiplier: 2
+      proposal_pool_multiplier: 2
+      epsilon_quantile: 0.6
+      seed: 20260518
+    backend:
+      kind: serial
+      max_workers: 1
+      batch_size: 1
+  analysis:
+    random_walk:
+      n_walks_per_graphlet: 4
+      steps: 12
+      lag_max: 3

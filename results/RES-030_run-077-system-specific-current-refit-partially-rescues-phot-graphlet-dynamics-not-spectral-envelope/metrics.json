@@ -1,0 +1,304 @@
+{
+  "analysis_id": "ANA-030",
+  "branch_validation": {
+    "PHOT_CHLRE_Chen_2023": {
+      "smc_abc_best_raw": {
+        "double_holdout_spearman": 0.7180388529139686,
+        "epistasis_prediction_spearman": 0.0576733436055469,
+        "functional_ks": 0.2214042430474339,
+        "holdout_spearman": 0.5033454394115228,
+        "objective_distance": 10.253823213086244,
+        "reference_distance_to_peak": 59.0,
+        "reference_fraction_of_peak": 1.1565943960326082
+      },
+      "smc_abc_posterior_mean_raw": {
+        "double_holdout_spearman": 0.6927536231884058,
+        "epistasis_prediction_spearman": -0.2152982610609729,
+        "functional_ks": 0.229886806666661,
+        "holdout_spearman": 0.5032016096301817,
+        "objective_distance": 11.0682990451075,
+        "reference_distance_to_peak": 59.0,
+        "reference_fraction_of_peak": 1.1891327049594689
+      }
+    },
+    "SPTN1_CHICK_Tsuboyama_2023_1TUD": {
+      "smc_abc_best_raw": {
+        "double_holdout_spearman": 0.4887629165213622,
+        "epistasis_prediction_spearman": 0.5263870333244294,
+        "functional_ks": 0.3735406546814229,
+        "holdout_spearman": 0.5539239320438266,
+        "objective_distance": 10.673217766910351,
+        "reference_distance_to_peak": 31.0,
+        "reference_fraction_of_peak": 0.2601401022313989
+      },
+      "smc_abc_posterior_mean_raw": {
+        "double_holdout_spearman": 0.4955847547547577,
+        "epistasis_prediction_spearman": 0.5141031061841388,
+        "functional_ks": 0.3954704792428263,
+        "holdout_spearman": 0.5459286848629566,
+        "objective_distance": 11.227834380642172,
+        "reference_distance_to_peak": 37.0,
+        "reference_fraction_of_peak": 0.2356001234563502
+      }
+    }
+  },
+  "dvc_pointer": "data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc",
+  "empirical_primary_graphlet_metrics": {
+    "PHOT_CHLRE_Chen_2023": {
+      "calibration": {
+        "accessible_path_fraction": 0.23194444444444443,
+        "gft_high_energy_fraction": 0.11423637730718772,
+        "gft_low_energy_fraction": 0.656683805815116,
+        "gft_mid_energy_fraction": 0.22907981687769627,
+        "max_dim": 6,
+        "n_graphlets": 12,
+        "n_local_maxima": 5.166666666666667,
+        "random_walk_lag1_autocorrelation": 0.21213224183431453,
+        "reciprocal_sign_epistasis_fraction": 0.24027777777777778,
+        "score_column": "latent_phi",
+        "sign_epistasis_fraction": 0.5972222222222222,
+        "walsh_high_order_fraction": 0.3433161941843443
+      },
+      "test": {
+        "accessible_path_fraction": 0.19745370370370366,
+        "gft_high_energy_fraction": 0.1552031085825549,
+        "gft_low_energy_fraction": 0.6212162943804116,
+        "gft_mid_energy_fraction": 0.22358059703703356,
+        "max_dim": 6,
+        "n_graphlets": 12,
+        "n_local_maxima": 5.166666666666667,
+        "random_walk_lag1_autocorrelation": 0.19050465950115683,
+        "reciprocal_sign_epistasis_fraction": 0.25833333333333336,
+        "score_column": "latent_phi",
+        "sign_epistasis_fraction": 0.6145833333333334,
+        "walsh_high_order_fraction": 0.378783705619082
+      }
+    },
+    "SPTN1_CHICK_Tsuboyama_2023_1TUD": {
+      "calibration": {
+        "accessible_path_fraction": 0.75,
+        "gft_high_energy_fraction": 5.953428655265004e-15,
+        "gft_low_energy_fraction": 0.0,
+        "gft_mid_energy_fraction": 0.999999999999994,
+        "max_dim": 2,
+        "n_graphlets": 4,
+        "n_local_maxima": 1.0,
+        "random_walk_lag1_autocorrelation": -0.053258670983139474,
+        "reciprocal_sign_epistasis_fraction": 0.0,
+        "score_column": "latent_phi",
+        "sign_epistasis_fraction": 0.0,
+        "walsh_high_order_fraction": 0.0
+      },
+      "test": {
+        "accessible_path_fraction": 1.0,
+        "gft_high_energy_fraction": 2.1157439766880497e-14,
+        "gft_low_energy_fraction": 0.0,
+        "gft_mid_energy_fraction": 0.9999999999999788,
+        "max_dim": 2,
+        "n_graphlets": 4,
+        "n_local_maxima": 1.0,
+        "random_walk_lag1_autocorrelation": -0.04072291093982022,
+        "reciprocal_sign_epistasis_fraction": 0.0,
+        "score_column": "latent_phi",
+        "sign_epistasis_fraction": 0.0,
+        "walsh_high_order_fraction": 0.0
+      }
+    }
+  },
+  "experiment_id": "EXP-030",
+  "falsification_tests": {
+    "PHOT_CHLRE_Chen_2023": {
+      "scale_confounding_control": {
+        "falsifier": "High-order WHT signal disappears after nonlinear global-readout correction.",
+        "fires": false,
+        "mean_high_order_fraction_retained_after_readout_fit": 5.871051032076537,
+        "passes_not_scale_artifact_screen": true
+      },
+      "smooth_core_control": {
+        "falsifier": "Smooth-core-only fitted model explains the empirical graphlet statistics as well as the residual current model.",
+        "fitted_current_best_distance": 0.40157082034740577,
+        "passes_smooth_core_rejection_screen": false,
+        "smooth_core_distance": 0.41190406684777836
+      },
+      "wrong_evolutionary_dynamics": {
+        "best_overall_model": {
+          "assay_id": "PHOT_CHLRE_Chen_2023",
+          "candidate_model": "fitted_current_best",
+          "distance_component__accessible_path_fraction": 0.7966943753564123,
+          "distance_component__gft_high_energy_fraction": 0.15545795048447764,
+          "distance_component__gft_low_energy_fraction": 0.43870876888731936,
+          "distance_component__gft_mid_energy_fraction": 0.4018979220159277,
+          "distance_component__n_local_maxima": 0.42371359860703584,
+          "distance_component__random_walk_lag1_autocorrelation": 0.3971639497385973,
+          "distance_component__reciprocal_sign_epistasis_fraction": 0.1925829945666866,
+          "distance_component__sign_epistasis_fraction": 0.3692090545810528,
+          "distance_component__walsh_high_order_fraction": 0.43870876888914284,
+          "distance_to_empirical_primary": 0.40157082034740577,
+          "graphlet_split": "test"
+        },
+        "distance_split_used": "test",
+        "falsifier": "The fitted embedded current model fails the joint graphlet package: spectra, SE/RSE, local maxima, accessibility and random-walk autocorrelation.",
+        "fires": false,
+        "fitted_current_best_distance": 0.40157082034740577,
+        "gnk_distance": 0.7593710371173099,
+        "residual_only_distance": 2.6755835409392157,
+        "smooth_core_distance": 0.41190406684777836
+      },
+      "wrong_spectral_envelope": {
+        "empirical_primary_spectrum": {
+          "gft_high_energy_fraction_mean": 0.1552031085825549,
+          "gft_low_energy_fraction_mean": 0.6212162943804115,
+          "walsh_high_order_fraction_mean": 0.3787837056190819
+        },
+        "falsifier": "Empirical graphlets do not show low-order dominance with a measurable but non-dominant high-order WHT/GFT tail.",
+        "fires": true,
+        "max_graphlet_dimension": 6,
+        "passes_expected_envelope": false,
+        "testable": true
+      }
+    },
+    "SPTN1_CHICK_Tsuboyama_2023_1TUD": {
+      "scale_confounding_control": {
+        "falsifier": "High-order WHT signal disappears after nonlinear global-readout correction.",
+        "fires": false,
+        "mean_high_order_fraction_retained_after_readout_fit": null,
+        "passes_not_scale_artifact_screen": false
+      },
+      "smooth_core_control": {
+        "falsifier": "Smooth-core-only fitted model explains the empirical graphlet statistics as well as the residual current model.",
+        "fitted_current_best_distance": 0.02169699770347651,
+        "passes_smooth_core_rejection_screen": true,
+        "smooth_core_distance": 0.030945572779758925
+      },
+      "wrong_evolutionary_dynamics": {
+        "best_overall_model": {
+          "assay_id": "SPTN1_CHICK_Tsuboyama_2023_1TUD",
+          "candidate_model": "fitted_current_posterior_mean",
+          "distance_component__accessible_path_fraction": 0.0,
+          "distance_component__gft_high_energy_fraction": 2.1157439766880492e-08,
+          "distance_component__gft_low_energy_fraction": 0.0,
+          "distance_component__gft_mid_energy_fraction": 2.120525977034094e-13,
+          "distance_component__n_local_maxima": 0.0,
+          "distance_component__random_walk_lag1_autocorrelation": 0.025890746219951962,
+          "distance_component__reciprocal_sign_epistasis_fraction": 0.0,
+          "distance_component__sign_epistasis_fraction": 0.0,
+          "distance_component__walsh_high_order_fraction": 0.0,
+          "distance_to_empirical_primary": 0.0028767519308448646,
+          "graphlet_split": "test"
+        },
+        "distance_split_used": "test",
+        "falsifier": "The fitted embedded current model fails the joint graphlet package: spectra, SE/RSE, local maxima, accessibility and random-walk autocorrelation.",
+        "fires": true,
+        "fitted_current_best_distance": 0.02169699770347651,
+        "gnk_distance": 65966.74676352712,
+        "residual_only_distance": 6.25000000264468,
+        "smooth_core_distance": 0.030945572779758925
+      },
+      "wrong_spectral_envelope": {
+        "empirical_primary_spectrum": {
+          "gft_high_energy_fraction_mean": 2.115743976688049e-14,
+          "gft_low_energy_fraction_mean": 0.0,
+          "walsh_high_order_fraction_mean": 0.0
+        },
+        "falsifier": "Empirical graphlets do not show low-order dominance with a measurable but non-dominant high-order WHT/GFT tail.",
+        "fires": false,
+        "max_graphlet_dimension": 2,
+        "passes_expected_envelope": false,
+        "testable": false
+      }
+    }
+  },
+  "graphlet_catalog_summary": [
+    {
+      "assay_id": "PHOT_CHLRE_Chen_2023",
+      "graphlet_split": "calibration",
+      "max_dim": 6,
+      "min_dim": 4,
+      "n_graphlets": 12
+    },
+    {
+      "assay_id": "PHOT_CHLRE_Chen_2023",
+      "graphlet_split": "test",
+      "max_dim": 6,
+      "min_dim": 4,
+      "n_graphlets": 12
+    },
+    {
+      "assay_id": "SPTN1_CHICK_Tsuboyama_2023_1TUD",
+      "graphlet_split": "calibration",
+      "max_dim": 2,
+      "min_dim": 2,
+      "n_graphlets": 4
+    },
+    {
+      "assay_id": "SPTN1_CHICK_Tsuboyama_2023_1TUD",
+      "graphlet_split": "test",
+      "max_dim": 2,
+      "min_dim": 2,
+      "n_graphlets": 4
+    }
+  ],
+  "interpretation_flags": {
+    "gnk_control_not_equivalent_on_test_distance": true,
+    "phot_smooth_core_equivalence_remains_concern": true,
+    "phot_wrong_evolutionary_dynamics_not_reproduced_under_current_refit": true,
+    "phot_wrong_spectral_envelope_reproduced": true,
+    "residual_only_diagnostic_not_viable_as_procedural_model": true,
+    "run077_fixes_run073_pooling_and_missing_graphlet_outputs": true,
+    "sptn1_high_order_graphlet_falsifiers_not_testable_at_dimension_2": true
+  },
+  "model_distances": {
+    "PHOT_CHLRE_Chen_2023": {
+      "all": {
+        "fitted_current_best": 0.4908576675228883,
+        "fitted_current_posterior_mean": 0.552665450403762,
+        "fitted_residual_only_diagnostic": 2.6406677731580857,
+        "fitted_smooth_core_only": 0.5025859467594308,
+        "gnk_local_null": 0.7644915230844507
+      },
+      "calibration": {
+        "fitted_current_best": 0.7318364284769245,
+        "fitted_current_posterior_mean": 0.783857184804536,
+        "fitted_residual_only_diagnostic": 2.709940149134871,
+        "fitted_smooth_core_only": 0.7453777545039357,
+        "gnk_local_null": 0.818847783642414
+      },
+      "test": {
+        "fitted_current_best": 0.4015708203474057,
+        "fitted_current_posterior_mean": 0.4408192283893026,
+        "fitted_residual_only_diagnostic": 2.675583540939216,
+        "fitted_smooth_core_only": 0.4119040668477783,
+        "gnk_local_null": 0.7593710371173099
+      }
+    },
+    "SPTN1_CHICK_Tsuboyama_2023_1TUD": {
+      "all": {
+        "fitted_current_best": 0.0847702677450935,
+        "fitted_current_posterior_mean": 0.217070635662422,
+        "fitted_residual_only_diagnostic": 5.330718915577504,
+        "fitted_smooth_core_only": 0.1594621360011796,
+        "gnk_local_null": 72961.10741592028
+      },
+      "calibration": {
+        "fitted_current_best": 0.1303423684471399,
+        "fitted_current_posterior_mean": 0.4129774621702934,
+        "fitted_residual_only_diagnostic": 5.216506351690288,
+        "fitted_smooth_core_only": 0.2702608530398784,
+        "gnk_local_null": 79955.73653173927
+      },
+      "test": {
+        "fitted_current_best": 0.0216969977034765,
+        "fitted_current_posterior_mean": 0.0028767519308448,
+        "fitted_residual_only_diagnostic": 6.25000000264468,
+        "fitted_smooth_core_only": 0.0309455727797589,
+        "gnk_local_null": 65966.74676352712
+      }
+    }
+  },
+  "n_gft_rows": 14848,
+  "n_graphlets": 32,
+  "n_metric_rows": 512,
+  "n_walsh_rows": 14848,
+  "run_id": "RUN-077",
+  "source_data": "data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077"
+}

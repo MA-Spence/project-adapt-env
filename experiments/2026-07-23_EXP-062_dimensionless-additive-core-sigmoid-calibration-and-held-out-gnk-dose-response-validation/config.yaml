@@ -1,0 +1,222 @@
+experiment_id: EXP-062
+title: Dimensionless additive-core sigmoid calibration and held-out GNK dose-response validation
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  mode: global_additive_core_calibration_then_heldout_gnk_validation
+  scientific_boundary:
+    aim: AIM-001
+    primary_hypothesis: HYP-005
+    previous_experiment: EXP-061
+    motivating_results: [RES-058, RES-059]
+    primary_estimand: paired_residual_F_of_A_plus_aG_minus_F_of_A
+    selection_outcomes: additive_core_only
+    forbidden_claims:
+      - empirical_fitness_realism
+      - population_level_protein_generalization
+      - optimizer_performance
+      - accessibility_validation
+      - public_model_replacement
+      - biological_necessity_of_extensive_support
+    downstream_stop: retain_stage_4c_4d_4e_hard_stop_on_every_outcome
+
+references:
+  catalog: experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/reference_catalog.yaml
+  include_ids: []
+  split_unit: whole_protein_sequence
+  calibration_per_length_bin: 2
+  confirmation_per_length_bin: 2
+  sequence_context_only: true
+  empirical_outcomes_loaded: false
+
+replication:
+  calibration_core_seeds: [6201, 6202, 6203, 6204, 6205]
+  confirmation_core_seeds: [6211, 6212, 6213, 6214, 6215]
+  confirmation_gnk_seeds: [6221, 6222, 6223, 6224, 6225, 6226]
+  confirmation_design: crossed_core_by_gnk_within_protein
+  primary_generalization_unit: heldout_protein
+  random_effects: [protein, additive_core_seed, gnk_seed]
+  seed_sets_must_be_disjoint: true
+
+additive_core:
+  implementation: external/Adapt-Env/adaptenv/landscape.py
+  model_system: additive_thermodynamic_gnk
+  observed_fitness_combine_mode: stability_gate
+  generic_epistasis_target: stability
+  alphabet_size: 20
+  stability_scale: 1.0
+  use_blosum_kernel: true
+  blosum_blend: 0.5
+  disable_gnk_during_construction: true
+  disable_legacy_epistasis: true
+  disable_noise_and_peak_lock: true
+
+candidate:
+  arm: extensive_balanced_bounded
+  implementation: src/project_adapt_env/extensive_gnk.py
+  seed_offset: 30000
+  surrogate_seed_offset: 50000
+  orders: [2, 3, 4]
+  order_weights: [0.35, 0.45, 0.20]
+  target_degrees: [6, 11, 7]
+  reference_centered: true
+  coefficient_rule: exact_uniform_background_mutation_operator_energy
+  public_model_status: experiment_local_only
+
+readout:
+  function: output_scale_times_logistic_of_dimensionless_additive_and_gnk_coordinates
+  formula: C_sigmoid_mu_plus_beta_times_A_minus_Aref_over_sigmaA_plus_a_times_G_over_sigmaG
+  output_scale: 10.0
+  threshold_steepness: 20.0
+  public_steepness: 20.0
+  public_gnk_weight: 0.6
+  constructor_margin_increment: 2.0
+  public_base:
+    model_system: additive_thermodynamic_gnk
+    observed_fitness_combine_mode: stability_gate
+    generic_epistasis_target: stability
+    stability_margin: 8.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    gnk_epistasis_weight: 0.6
+    gnk_terms: 256
+    evaluation_add_noise: false
+  global_scale_rule: median_complete_reference_h1_delta_A_RMS_over_calibration_proteins_and_core_seeds
+  exact_beta_arm_role: diagnostic_upper_bound_only
+  raw_equivalence: k_equals_beta_over_sigmaA_theta_equals_Aref_minus_mu_over_k_w_equals_a_over_k_sigmaG
+  direct_float64_is_gate: true
+  stable_residual_role: cancellation_diagnostic_only
+
+calibration:
+  beta_grid: [0.5, 1.0, 1.5, 2.0, 2.25, 2.5, 3.0, 4.0, 8.0]
+  reference_occupancies: [0.95, 0.99]
+  mu_rule: logit_of_reference_occupancy
+  selection_rule: lexicographically_largest_eligible_beta_then_mu
+  gnk_outcomes_available_during_selection: false
+  freeze_after_selection: [global_sigma_a, beta, mu]
+
+intervention:
+  dimensionless_amplitudes: [0.0, 0.25, 0.5, 1.0, 2.0, 4.0]
+  directionality_amplitudes: [0.25, 0.5, 1.0, 2.0]
+  saturation_stress_amplitude: 4.0
+  saturation_stress_can_fail_primary_monotonicity_gate: false
+  gnk_normalization: analytic_uniform_q20_nonself_single_mutation_RMS
+  same_genotypes_and_fields_across_amplitudes: true
+
+probe:
+  complete_reference_single_mutant_panel: true
+  core_plateau_distances:
+    fraction_0.1: 0.1
+    fraction_0.5: 0.5
+  core_plateau_pairs: 512
+  validation_distances:
+    reference_shell_fraction_0.1: 0.1
+    reference_shell_fraction_0.5: 0.5
+  validation_pairs_per_distance: 512
+  square_strata:
+    - candidate_supported_order_2
+    - candidate_supported_order_3
+    - candidate_supported_order_4
+    - uniform_site_pair
+  square_backgrounds: [reference, uniform_q20]
+  squares_per_stratum: 128
+  eval_chunk_size: 2048
+  sampling_key_excludes: [scale_mode, amplitude, additive_core_mode]
+  controls:
+    - frozen_additive_core
+    - candidate_additivized_double_mutant
+    - order1_RMS_matched_additive_surrogate
+    - zero_amplitude
+    - steepness_only_margin8
+    - threshold_only_k20
+    - candidate_raw_margin8_w0.6
+    - candidate_raw_margin10_w0.6
+    - dimensionless_raw_formula_parity
+
+acceptance:
+  expected_length_bins: 6
+  bootstrap_replicates: 5000
+  bootstrap_seed: 62062
+  permutation_replicates: 499
+  texture_permutation_alpha: 0.05
+  texture_permutation_within:
+    - reference_id
+    - core_seed
+    - gnk_seed
+    - support_order
+  technical:
+    reference_center_atol: 1.0e-12
+    formula_parity_atol: 1.0e-12
+    additive_surrogate_epistasis_atol: 1.0e-12
+    zero_amplitude_atol: 0.0
+  core:
+    reference_fitness_min: 9.5
+    h1_dynamic_fraction_min: 0.50
+    h1_effect_rms_min: 1.0
+    fraction_0.1_low_plateau_min: 0.50
+    fraction_0.5_low_plateau_min: 0.90
+    minimum_cell_pass_fraction_per_length_bin: 0.80
+  transmission:
+    operational_detection_threshold: 0.10
+    edge_practical_fraction_min: 0.25
+    texture_practical_fraction_min: 0.25
+    correlation_min: 0.50
+    projection_bootstrap_lower_min: 0.0
+    actual_to_frozen_rms_ratio_min: 0.50
+    minimum_cell_pass_fraction_per_length_bin: 0.80
+  dose_response:
+    spearman_min: 0.80
+    minimum_protein_pass_fraction: 0.80
+    minimum_protein_pass_fraction_per_length_bin: 0.80
+    minimum_cell_pass_fraction_per_length_bin: 0.80
+    rms_growth_floor: 0.02
+    practical_fraction_growth_floor: 0.05
+  length_stability:
+    slope_abs_max: 0.15
+    slope_ci_abs_max: 0.25
+  threshold_status: preregistered_mechanistic_heuristics_not_empirical_detection_limits
+
+outputs:
+  expected:
+    - preflight.json
+    - reference_catalog.csv
+    - core_calibration_metrics.csv
+    - calibration_selection.csv
+    - validation_edge_metrics.csv
+    - validation_texture_metrics.csv
+    - dose_response_metrics.csv
+    - scale_law_fits.csv
+    - acceptance_checks.csv
+    - summary.json
+  checkpoint_unit: [reference_id, core_seed, gnk_seed, effective_config_hash, implementation_hash]
+  atomic_writes: true
+  implementation_hash_components:
+    - scripts/dimensionless_sigmoid_calibration_exp062.py
+    - scripts/extensive_gnk_sigmoid_transmission_exp061.py
+    - scripts/extensive_gnk_latent_scaling_exp060.py
+    - src/project_adapt_env/extensive_gnk.py
+    - external/Adapt-Env/adaptenv/landscape.py
+    - external/Adapt-Env/adaptenv/presets.py
+    - external/Adapt-Env/.config.yaml
+
+quick:
+  references:
+    include_ids: [sr43c_48, meltome_f8w3h2_51_conf]
+  replication:
+    calibration_core_seeds: [6201]
+    confirmation_core_seeds: [6211]
+    confirmation_gnk_seeds: [6221]
+  calibration:
+    beta_grid: [2.0, 4.0]
+    reference_occupancies: [0.95, 0.99]
+  intervention:
+    dimensionless_amplitudes: [0.0, 0.25, 0.5, 1.0, 2.0]
+  probe:
+    core_plateau_pairs: 64
+    validation_pairs_per_distance: 64
+    squares_per_stratum: 16
+    eval_chunk_size: 512
+  acceptance:
+    bootstrap_replicates: 100
+    permutation_replicates: 49

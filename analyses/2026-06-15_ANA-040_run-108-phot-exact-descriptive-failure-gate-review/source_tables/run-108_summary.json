@@ -1,0 +1,127 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "best_distance_rows": [
+    {
+      "candidate_model": "run039_smc_abc_best_stability_margin",
+      "max_abs_scaled_error": 2.3369336160014718,
+      "mean_abs_scaled_error": 0.5307236488143667,
+      "median_abs_scaled_error": 3.474973489362239e-11,
+      "n_components": 19,
+      "n_components_ge_2sd": 4,
+      "score_column": "latent_phi",
+      "top_failed_metrics": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction;accessible_path_fraction"
+    },
+    {
+      "candidate_model": "run039_smc_abc_posterior_mean_stability_margin",
+      "max_abs_scaled_error": 2.3666903864952498,
+      "mean_abs_scaled_error": 0.5394405908113568,
+      "median_abs_scaled_error": 3.474973489362239e-11,
+      "n_components": 19,
+      "n_components_ge_2sd": 4,
+      "score_column": "latent_phi",
+      "top_failed_metrics": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction;accessible_path_fraction"
+    },
+    {
+      "candidate_model": "run039_predictive_richpair_shared_stability_readout",
+      "max_abs_scaled_error": 2.4096578492705443,
+      "mean_abs_scaled_error": 0.5507421891211933,
+      "median_abs_scaled_error": 3.474973489362239e-11,
+      "n_components": 19,
+      "n_components_ge_2sd": 4,
+      "score_column": "latent_phi",
+      "top_failed_metrics": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction;accessible_path_fraction"
+    },
+    {
+      "candidate_model": "run039_baseline_shared_stability_readout",
+      "max_abs_scaled_error": 2.4096578492705443,
+      "mean_abs_scaled_error": 0.5507421891211933,
+      "median_abs_scaled_error": 3.474973489362239e-11,
+      "n_components": 19,
+      "n_components_ge_2sd": 4,
+      "score_column": "latent_phi",
+      "top_failed_metrics": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction;accessible_path_fraction"
+    }
+  ],
+  "descriptive_gate": [
+    {
+      "abc_allowed_by_descriptive_gate": true,
+      "candidate_model": "run039_baseline_shared_stability_readout",
+      "n_failed_summary_components": 4,
+      "recommended_abc_summary_columns": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction",
+      "severe_abs_scaled_error_threshold": 2.0,
+      "top_failure_signed_scaled_errors": "edge_energy_top10_fraction:2.41;edge_energy_effective_fraction:-2.31;site_energy_effective_fraction:-2.31;site_energy_top1_fraction:2.26"
+    },
+    {
+      "abc_allowed_by_descriptive_gate": true,
+      "candidate_model": "run039_predictive_richpair_shared_stability_readout",
+      "n_failed_summary_components": 4,
+      "recommended_abc_summary_columns": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction",
+      "severe_abs_scaled_error_threshold": 2.0,
+      "top_failure_signed_scaled_errors": "edge_energy_top10_fraction:2.41;edge_energy_effective_fraction:-2.31;site_energy_effective_fraction:-2.31;site_energy_top1_fraction:2.26"
+    },
+    {
+      "abc_allowed_by_descriptive_gate": true,
+      "candidate_model": "run039_smc_abc_best_stability_margin",
+      "n_failed_summary_components": 4,
+      "recommended_abc_summary_columns": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction",
+      "severe_abs_scaled_error_threshold": 2.0,
+      "top_failure_signed_scaled_errors": "edge_energy_top10_fraction:2.34;edge_energy_effective_fraction:-2.19;site_energy_effective_fraction:-2.19;site_energy_top1_fraction:2.18"
+    },
+    {
+      "abc_allowed_by_descriptive_gate": true,
+      "candidate_model": "run039_smc_abc_posterior_mean_stability_margin",
+      "n_failed_summary_components": 4,
+      "recommended_abc_summary_columns": "edge_energy_top10_fraction;edge_energy_effective_fraction;site_energy_effective_fraction;site_energy_top1_fraction",
+      "severe_abs_scaled_error_threshold": 2.0,
+      "top_failure_signed_scaled_errors": "edge_energy_top10_fraction:2.37;edge_energy_effective_fraction:-2.24;site_energy_effective_fraction:-2.24;site_energy_top1_fraction:2.21"
+    }
+  ],
+  "experiment_id": "EXP-041",
+  "graphlet_dimensions_observed": [
+    4,
+    5,
+    6
+  ],
+  "metric_columns": [
+    "sign_epistasis_fraction",
+    "reciprocal_sign_epistasis_fraction",
+    "n_local_maxima",
+    "n_local_minima",
+    "accessible_path_fraction",
+    "basin_count",
+    "basin_largest_fraction",
+    "random_walk_lag1_autocorrelation",
+    "walsh_high_order_fraction",
+    "gft_low_energy_fraction",
+    "gft_mid_energy_fraction",
+    "gft_high_energy_fraction",
+    "edge_energy_adjacent_moran_i",
+    "edge_energy_top10_fraction",
+    "edge_energy_effective_fraction",
+    "node_incident_top10_fraction",
+    "node_incident_effective_fraction",
+    "site_energy_top1_fraction",
+    "site_energy_effective_fraction",
+    "plaquette_energy_top1_fraction",
+    "plaquette_energy_effective_fraction"
+  ],
+  "n_complete_graphlets": 48,
+  "n_mutation_sets": 167530,
+  "n_prepared_rows": 167529,
+  "output_files": {
+    "abc_descriptive_gate": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-108/outputs/abc_descriptive_gate.csv",
+    "exact_graphlet_metrics": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-108/outputs/exact_graphlet_metrics.csv",
+    "exact_graphlet_values": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-108/outputs/exact_graphlet_values.csv",
+    "exact_model_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-108/outputs/exact_model_distances.csv",
+    "exact_model_failures": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-108/outputs/exact_model_failures.csv",
+    "graphlet_catalog": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-108/outputs/graphlet_catalog.csv"
+  },
+  "primary_score_column": "latent_phi",
+  "score_columns": [
+    "latent_phi",
+    "mavenn_yhat"
+  ],
+  "source_full_abc_config_path": "/tank/data/labproj/staging/project-adapt-env/RUN-108/project/experiments/2026-05-14_EXP-013_proteingym-phot-stability-readout-validation-objective-control/config.yaml",
+  "source_full_abc_run": "RUN-039",
+  "source_full_abc_summary_path": "/tank/data/labproj/staging/project-adapt-env/RUN-108/project/data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039/summary.json"
+}

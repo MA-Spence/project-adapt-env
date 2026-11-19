@@ -1,0 +1,19 @@
+{
+  "higher_order_dataset_ids": [
+    "gb1_wu2016_four_site_graphfla",
+    "trpb_johnston2024_four_site_graphfla",
+    "dhfr_papkou2023_full_wagner_tsv",
+    "cr9114_h1_phillips2021_graphfla",
+    "cr9114_h3_phillips2021_graphfla",
+    "cr9114_flub_phillips2021_graphfla",
+    "cr6261_h1_phillips2021_graphfla",
+    "cr6261_h9_phillips2021_graphfla",
+    "pard2_lite2020_graphfla",
+    "pard3_lite2020_graphfla"
+  ],
+  "n_datasets": 17,
+  "n_descriptor_rows": 340,
+  "n_graphlet_rows": 960,
+  "n_scope_audit_rows": 17,
+  "stage": "4A"
+}

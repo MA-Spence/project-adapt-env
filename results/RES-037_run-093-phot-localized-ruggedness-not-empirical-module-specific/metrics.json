@@ -1,0 +1,47 @@
+{
+  "result_id": "RES-037",
+  "analysis_id": "ANA-037",
+  "run_id": "RUN-093",
+  "experiment_id": "EXP-037",
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "weakens": ["HYP-008"],
+  "data_pointer": "data/processed/phot-localized-ruggedness-energy-diagnostic/RUN-093.dvc",
+  "dvc_md5": "8747ed319b4f1a5fed2230d543cc5d5b.dir",
+  "n_graphlets": 24,
+  "n_test_graphlets": 12,
+  "empirical_target_test": {
+    "edge_moran_i_median": 0.012597449299450433,
+    "edge_top10_fraction_median": 0.3904024026444436,
+    "edge_effective_fraction_median": 0.40852725941303447,
+    "site_top1_fraction_median": 0.3863201132127676,
+    "site_effective_fraction_median": 0.7838786804450636
+  },
+  "fitted_current_test": {
+    "edge_moran_i_median": -0.029863482787939134,
+    "edge_top10_fraction_median": 0.30849571459954706,
+    "edge_effective_fraction_median": 0.45580298758208393,
+    "site_top1_fraction_median": 0.2644715065064908,
+    "site_effective_fraction_median": 0.9047988631497784
+  },
+  "empirical_module_test": {
+    "edge_moran_i_median": 0.004507194072874795,
+    "edge_top10_fraction_median": 0.3734012481831743,
+    "edge_effective_fraction_median": 0.4192598241551169,
+    "site_top1_fraction_median": 0.3023634530520526,
+    "site_effective_fraction_median": 0.8577981700963808
+  },
+  "module_enrichment": {
+    "empirical_target_in_empirical_modules_edge_site": 0.8624,
+    "empirical_target_in_empirical_modules_plaquette_pair": 0.9495,
+    "empirical_module_total_in_empirical_modules_edge_site": 1.0,
+    "empirical_module_total_in_empirical_modules_plaquette_pair": 1.1119,
+    "empirical_module_innovation_in_empirical_modules_plaquette_pair": 1.1295,
+    "uncoupled_module_innovation_in_empirical_modules_plaquette_pair": 1.1697
+  },
+  "decision": {
+    "empirical_phot_localized_relative_to_current": true,
+    "empirical_modules_enrich_empirical_energy": false,
+    "empirical_module_candidate_uniquely_matches_localization": false,
+    "supports_current_hyp008_mechanism": false
+  }
+}

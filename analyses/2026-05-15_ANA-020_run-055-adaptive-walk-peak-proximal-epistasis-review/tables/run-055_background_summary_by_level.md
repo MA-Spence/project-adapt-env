@@ -1,0 +1,10 @@
+| condition | target_level | backgrounds | mean_fraction_of_peak | mean_distance_to_peak | beneficial_fraction | mean_beneficial_effect | abs_epistasis | negative_epistasis_fraction | sign_epistasis_fraction | diminishing_returns_fraction |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| unconditioned | low | 15 | 0.2093 | 3.133 | 0.01993 | 12.37 | 0.02931 | 0.01536 | 0 | 0.0007813 |
+| unconditioned | mid | 15 | 0.4958 | 1.867 | 0.01389 | 12.96 | 0.03085 | 0.002344 | 0 | 0 |
+| unconditioned | high | 15 | 0.7994 | 1.133 | 0.004971 | 8.676 | 0.02759 | 0 | 0 | 0 |
+| unconditioned | near_peak | 15 | 0.9452 | 2.867 | 0.001072 | 3.14 | 0.02653 | 0.0002604 | 0 | 0 |
+| synthetic_alignment | low | 15 | 0.3083 | 16.73 | 0.1235 | 70.06 | 0.04132 | 0.01719 | 0 | 0.002865 |
+| synthetic_alignment | mid | 15 | 0.5208 | 16.6 | 0.1106 | 70.39 | 0.04297 | 0.008594 | 0 | 0.001042 |
+| synthetic_alignment | high | 15 | 0.826 | 16.13 | 0.1169 | 78.41 | 0.04202 | 0.003385 | 0 | 0 |
+| synthetic_alignment | near_peak | 15 | 1.748 | 10.13 | 0.07865 | 146.9 | 0.04948 | 0.0005208 | 0 | 0 |

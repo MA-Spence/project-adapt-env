@@ -1,0 +1,134 @@
+id: EXP-066
+type: experiment
+title: Production landscape aggregate realism across empirical systems
+slug: production-landscape-aggregate-realism
+status: completed
+created: '2026-10-08T11:20:36+11:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-065
+  motivating_results:
+  - RES-061
+question: Can the public thermodynamic model produce useful global empirical resemblance
+  across every available assay with appropriate measured combinatorial coverage, without
+  fitting empirical interaction identities?
+pre_experiment_prediction: Global sigmoid calibration will provide useful regimes
+  across multiple assay classes, with system-specific residuals and observation dependence;
+  no universal setting or scientific success gate is imposed.
+rationale: Production figure dataset extending EXP-065 using the released public method,
+  geometry-matched synthetic panels, disjoint empirical calibration/confirmation,
+  fresh generator seeds, explicit suitability and noise assumptions.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: false
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+  validated_worker:
+    python: 3.11.15
+    packages:
+      numpy: 2.4.4
+      pandas: 2.3.0
+      scipy: 1.17.1
+      pyarrow: 20.0.0
+      PyYAML: 6.0.3
+inputs:
+  declared_files:
+  - scripts/production_landscapes_exp066.py
+  - scripts/observation_calibration_exp065.py
+  - scripts/replicate_observation_exp065.py
+  - external/Adapt-Env/adaptenv/__init__.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/Adapt-Env/adaptenv/thermodynamic.py
+  - external/Adapt-Env/adaptenv/extensive_gnk.py
+  - external/Adapt-Env/adaptenv/ranked_categorical_gnk.py
+  - external/Adapt-Env/adaptenv/amino_acids.py
+  - scripts/publish_production_landscapes.py
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/source_manifest.json
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/config.yaml
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/experiment.md
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/run.sh
+  - tests/test_production_landscapes_exp066.py
+  - scripts/collect_production_landscapes.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - data/processed/trpb-replicate-observation-exp065.dvc
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/coverage_preflight.json
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/validation.json
+  - experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/worker_environment.json
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets
+  - data/processed/trpb-replicate-observation-exp065
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 16
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 02:00:00
+    jobfs_gb: 0
+  partition: cpu
+  queue: normal
+outputs:
+  expected:
+  - manifest.json
+  - suitability.csv
+  - confirmation_statistics.csv
+  - selected_parameters.json
+  - figure_data.csv
+  - source_manifest.json
+  - dataset_inventory.csv
+  - execution_errors.json
+  - worker_environment.json
+  artifacts:
+  - data/processed/production_landscapes/RUN-172.dvc
+downstream:
+  planned_analyses:
+  - ANA-067
+  - ANA-068
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- Public Adapt-Env dev commit dd0bb7a52d7d92af48bbfba115331742b9a0c2eb; full package
+  regression 87 passed, 1 skipped.
+- All 86 inventory entries audited; 79 protein assay candidates receive outcome-blind
+  complete-cube coverage testing.
+- Verified complete outputs publish automatically to /tank/data/labproj/projects/project-adapt-env/data/processed/production_landscapes/<RUN-ID>;
+  local namespace data/processed/production_landscapes.
+- Source-only staging; exact source and shared input SHA-256 checks occur before fitting.
+  No scientific success gates.
+- RUN-172 attempt 1 (Slurm 2315) failed during overlay setup before science. Source-only
+  attempt 2 disables global overlay installation in the staged project and verifies
+  the already-tested worker versions; local global config is restored.
+- RUN-172 attempt 2 (Slurm 2316) was stopped after a compact TrpB mirror versus replicate
+  mean check exposed float32 rounding (maximum 3.17e-8). Attempt 3 permits one float32
+  epsilon in that consistency check; no data, fit or summary definition changed. Attempt-2
+  partial outputs/logs remain archived in its runtime folder.
+- Submitted RUN-172 attempt 3 as Slurm 2317; source hashes and exact worker versions
+  verified, GB1 and TrpB fitting started with empty stderr. RUN-171/RUN-173 were dry
+  previews.
+- RUN-172 attempt 3 completed (Slurm 2317, exit 0, 4416.3 seconds); ANA-067 executes
+  the six-figure production analysis. The complete 1842-file bundle and frozen source
+  are collected, DVC-tracked and remotely MD5-verified. Scientific interpretation
+  is in ANA-067; no success gate is applied.
+- ANA-068 reuses frozen RUN-172 fits and seeds for whole-library GB1/TrpB adaptive
+  walks, accessibility and neutral components. Six executed notebook figures; no refitting,
+  new RUN or scientific success gate. Derived data are DVC-tracked as production_landscapes/ANA-068.
+template: generic
+compliance:
+  level: green
+  issues: []

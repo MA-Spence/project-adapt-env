@@ -1,0 +1,39 @@
+{
+  "result_id": "RES-038",
+  "analysis_id": "ANA-038",
+  "experiment_id": "EXP-038",
+  "run_id": "RUN-096",
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "dvc_pointer": "data/processed/phot-abc-local-ruggedness-objective/RUN-096.dvc",
+  "selected_test_distance": {
+    "empirical_readout_residual": 0.211455,
+    "no_module": 0.277056,
+    "uncoupled_module": 0.291161,
+    "empirical_module": 0.365272,
+    "random_module": 0.366768,
+    "shuffled_module": 0.379458,
+    "fitted_current": 0.521007,
+    "smooth_core": 0.526819
+  },
+  "selected_test_local7_mean": {
+    "empirical_readout_residual": 0.135199,
+    "uncoupled_module": 0.289976,
+    "no_module": 0.326809,
+    "random_module": 0.439467,
+    "shuffled_module": 0.452016,
+    "empirical_module": 0.462290,
+    "fitted_current": 0.674567,
+    "smooth_core": 0.674567
+  },
+  "empirical_module_minus_controls_test_full_distance": {
+    "fitted_current": -0.155734,
+    "smooth_core": -0.161547,
+    "no_module": 0.088216,
+    "uncoupled_module": 0.074111,
+    "random_module": -0.001496,
+    "shuffled_module": -0.014186
+  },
+  "calibration_selected_best_fitted_family": "no_module",
+  "best_overall_selected_family": "empirical_readout_residual",
+  "hypothesis_effect": "weakens HYP-008 as currently operationalized"
+}

@@ -1,0 +1,104 @@
+{
+  "analysis_id": "ANA-058",
+  "decision": "LATENT_GNK_EXTENSIVE_SCALE_LAW_VALIDATED",
+  "experiment_id": "EXP-060",
+  "field_and_distance_scaling": {
+    "analytic_field_variance_slope": 0.9950763277055015,
+    "reference_shell_fixed_distance_slopes": {
+      "1": -0.001480565221747935,
+      "2": 0.0019644854564756756,
+      "4": 0.004063061476010351,
+      "8": 0.04597279333124333
+    },
+    "reference_shell_fractional_slopes": {
+      "0.1L": 0.4819628512455381,
+      "0.5L": 0.43033811441468456
+    },
+    "reference_shell_fractional_seed_slopes_in_band": {
+      "0.1L": {
+        "in_band": 30,
+        "total": 30
+      },
+      "0.5L": {
+        "in_band": 24,
+        "total": 30
+      }
+    },
+    "reference_shell_fractional_sd_slopes": {
+      "0.1L": 0.4916182569015756,
+      "0.5L": 0.495854470052352
+    },
+    "variance_per_length_cv": 0.006415577658324374
+  },
+  "diagnostic_comparator": {
+    "legacy_support_local_normalized": {
+      "empirical_field_variance_slope": 0.9939667566414623,
+      "local_slope": -0.013144973880000289,
+      "reference_shell_fractional_slopes": [
+        0.47074388394280064,
+        0.47841082707329363
+      ],
+      "uniform_background_fractional_slopes": [
+        0.4980901965156727,
+        0.49518180553767205
+      ]
+    },
+    "local_kurtosis_candidate_median_p95_max": [
+      3.085673147868932,
+      3.5999781168032015,
+      4.141705153897638
+    ],
+    "local_kurtosis_normalized_control_median_p95_max": [
+      9.402093565871182,
+      29.586201142224397,
+      80.11288590477425
+    ]
+  },
+  "local_scale": {
+    "candidate_bootstrap_ci": [
+      -0.012404182357501998,
+      0.006452700560890266
+    ],
+    "candidate_length_median_ratio_range": [
+      0.9911901234725077,
+      1.0120057737868482
+    ],
+    "candidate_seed_fraction_in_replication_band": 1.0,
+    "candidate_slope": -0.006316026199129316,
+    "legacy_local_normalized_slope": -0.013144973880000289,
+    "legacy_public_bootstrap_ci": [
+      -0.5352047961096114,
+      -0.48225297164960496
+    ],
+    "legacy_public_slope": -0.5103641362590605
+  },
+  "required_checks": {
+    "passed": 26,
+    "total": 26
+  },
+  "run_id": "RUN-149",
+  "scope": {
+    "direct_hypothesis": "HYP-005",
+    "latent_only": true,
+    "observable_fitness_tested": false,
+    "fixed_distance_h1_omitted_from_runner_gate": true,
+    "order_share_columns_are_mutation_energy_not_field_variance": true,
+    "public_model_changed": false,
+    "sigmoid_transmission_tested": false
+  },
+  "scientific_pass": true,
+  "structure": {
+    "actual_field_variance_shares_by_order": {
+      "2": 0.4666666666666666,
+      "3": 0.39999999999999997,
+      "4": 0.13333333333333333
+    },
+    "maximum_order_mutation_energy_share_error": 0.00906237680341937,
+    "minimum_supported_pair_curvature_rms": 0.34012236426597775,
+    "q20_local_effect_kurtosis_median": 3.085673147868932,
+    "support_max_degree_cv": 0.01839558721223166,
+    "support_max_degree_range": 1,
+    "support_max_duplicate_fraction": 0.0,
+    "support_uncovered_sites": 0
+  }
+}

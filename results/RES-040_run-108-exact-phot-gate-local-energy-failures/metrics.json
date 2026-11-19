@@ -1,0 +1,57 @@
+{
+  "analysis_id": "ANA-040",
+  "run_id": "RUN-108",
+  "experiment_id": "EXP-041",
+  "source_output_policy": "selective compact-table copy only; full labproj collect was not run",
+  "n_complete_graphlets": 48,
+  "graphlet_dimensions_observed": [4, 5, 6],
+  "n_prepared_rows": 167529,
+  "n_mutation_sets": 167530,
+  "best_candidate": {
+    "candidate_model": "run039_smc_abc_best_stability_margin",
+    "mean_abs_scaled_error": 0.5307236488143667,
+    "max_abs_scaled_error": 2.336933616001472,
+    "n_components": 19,
+    "n_components_ge_2sd": 4
+  },
+  "descriptive_gate_threshold_abs_scaled_error": 2.0,
+  "failed_components_union": [
+    "edge_energy_effective_fraction",
+    "edge_energy_top10_fraction",
+    "site_energy_effective_fraction",
+    "site_energy_top1_fraction"
+  ],
+  "next_abc_target_policy": "restrict later PHOT ABC targets to failed local-energy concentration summaries unless another exact descriptive diagnostic identifies additional failures",
+  "top_component_failures": [
+    {
+      "metric": "edge_energy_top10_fraction",
+      "mean_signed_scaled_error": 2.3807349252594525,
+      "mean_abs_scaled_error": 2.3807349252594525,
+      "max_abs_scaled_error": 2.4096578492705443
+    },
+    {
+      "metric": "edge_energy_effective_fraction",
+      "mean_signed_scaled_error": -2.262204484927543,
+      "mean_abs_scaled_error": 2.262204484927543,
+      "max_abs_scaled_error": 2.3069125486325284
+    },
+    {
+      "metric": "site_energy_effective_fraction",
+      "mean_signed_scaled_error": -2.262204484925424,
+      "mean_abs_scaled_error": 2.262204484925424,
+      "max_abs_scaled_error": 2.3069125486300845
+    },
+    {
+      "metric": "site_energy_top1_fraction",
+      "mean_signed_scaled_error": 2.226955871087272,
+      "mean_abs_scaled_error": 2.226955871087272,
+      "max_abs_scaled_error": 2.2573874780957235
+    },
+    {
+      "metric": "accessible_path_fraction",
+      "mean_signed_scaled_error": -1.1832159566199232,
+      "mean_abs_scaled_error": 1.1832159566199232,
+      "max_abs_scaled_error": 1.1832159566199232
+    }
+  ]
+}

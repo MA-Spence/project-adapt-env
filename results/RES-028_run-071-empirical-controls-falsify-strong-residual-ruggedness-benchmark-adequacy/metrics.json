@@ -1,0 +1,196 @@
+{
+  "analysis_id": "ANA-028",
+  "data_dir": "data/processed/empirical-graphlet-falsification-residual-ruggedness/RUN-071",
+  "data_size_bytes": 11839638,
+  "dvc_pointer": "data/processed/empirical-graphlet-falsification-residual-ruggedness/RUN-071.dvc",
+  "empirical_counts": {
+    "n_assays": 3,
+    "n_empirical_graphlets": 56,
+    "n_empirical_metric_rows": 336,
+    "primary_phot_graphlets_dimension_ge_4": 24
+  },
+  "experiment_id": "EXP-028",
+  "falsification_calls": [
+    {
+      "evidence": "smooth distance 1.999 versus contact residual distance 0.843; smooth-core test graphlets have SE/RSE 0 and one local maximum, unlike empirical PHOT graphlets",
+      "falsifier": "Smooth-core-only empirical fit",
+      "falsifier_supported": false,
+      "interpretation": "The smooth core alone is rejected as an empirical graphlet fit; this falsifier did not break the model."
+    },
+    {
+      "evidence": "Fixed contact scale 1->4->16 moves SE, RSE, local maxima, WHT/GFT high-order fraction upward and lag-1 autocorrelation downward; all six registered directional Spearman tests pass.",
+      "falsifier": "No residual-scale effect",
+      "falsifier_supported": false,
+      "interpretation": "The fixed residual-scale knob survives and supports HYP-005 narrowly."
+    },
+    {
+      "evidence": "primary PHOT empirical graphlets have low GFT fraction 0.606, GFT high fraction 0.147, and WHT high-order fraction 0.394; the WHT high-order component exceeds the preregistered non-dominant tail ceiling of 0.35",
+      "falsifier": "Wrong spectral envelope",
+      "falsifier_supported": true,
+      "interpretation": "This falsifies the clean low-order-dominant plus modest high-order-tail envelope for the relevant primary empirical panel."
+    },
+    {
+      "evidence": "contact residual distance 0.843 is better than random-position 1.285, shuffled-contact 1.300, and GNK 1.241 under the registered distance criterion",
+      "falsifier": "Control equivalence",
+      "falsifier_supported": false,
+      "interpretation": "Matched controls do not equal the contact residual as written, but this does not prove biological contact causality because residual-only is closer than all embedded procedural models."
+    },
+    {
+      "evidence": "best overall distance is residual-only diagnostic (0.739), not the embedded contact residual (0.843); contact residual underestimates empirical local maxima (2.02 vs 4.96) and WHT high-order fraction (0.044 vs 0.394), while residual-only gives negative lag-1 autocorrelation (-0.197 vs empirical 0.174) and zero accessibility",
+      "falsifier": "Wrong evolutionary dynamics",
+      "falsifier_supported": true,
+      "interpretation": "No tested procedural candidate matches empirical spectra, local-maxima, accessibility, and random-walk statistics as a package; this falsifies the strong empirical procedural adequacy claim."
+    },
+    {
+      "evidence": "global-readout residuals retain high-order signal: mean retained high-order fraction is 4.821 overall and 4.821 in the primary PHOT panel; PHOT residual high-order fraction is 0.948 after additive-plus-polynomial readout subtraction",
+      "falsifier": "Scale confounding",
+      "falsifier_supported": false,
+      "interpretation": "High-order signal is not explained away by the nonlinear/global-readout control; this falsifier did not break the model."
+    }
+  ],
+  "falsification_tests_raw": {
+    "control_equivalence": {
+      "contact_distance": 0.8432168840224319,
+      "equivalent_or_better_controls": [],
+      "falsifier": "Matched controls match empirical graphlets as well as contact residuals.",
+      "passes_specificity_screen": true
+    },
+    "no_residual_scale_effect": {
+      "falsifier": "Residual scale is not directional across the fixed-scale grid.",
+      "passes_directional_screen": true,
+      "scale_values_by_parameter_set": {
+        "contact_residual_ensemble__pset-000": 1.0,
+        "contact_residual_ensemble__pset-001": 4.0,
+        "contact_residual_ensemble__pset-002": 16.0
+      },
+      "spearman_by_metric": {
+        "gft_high_energy_fraction": {
+          "directional_score": 1.0,
+          "expected_direction": 1.0,
+          "spearman": 1.0
+        },
+        "n_local_maxima": {
+          "directional_score": 1.0,
+          "expected_direction": 1.0,
+          "spearman": 1.0
+        },
+        "random_walk_lag1_autocorrelation": {
+          "directional_score": 1.0,
+          "expected_direction": -1.0,
+          "spearman": -1.0
+        },
+        "reciprocal_sign_epistasis_fraction": {
+          "directional_score": 1.0,
+          "expected_direction": 1.0,
+          "spearman": 1.0
+        },
+        "sign_epistasis_fraction": {
+          "directional_score": 1.0,
+          "expected_direction": 1.0,
+          "spearman": 1.0
+        },
+        "walsh_high_order_fraction": {
+          "directional_score": 1.0,
+          "expected_direction": 1.0,
+          "spearman": 1.0
+        }
+      }
+    },
+    "scale_confounding": {
+      "falsifier": "Observed high-order WHT signal disappears after nonlinear global-readout correction.",
+      "mean_high_order_fraction_retained_after_readout_fit": 4.820595956968688,
+      "passes_not_scale_artifact_screen": true
+    },
+    "smooth_core_only_empirical_fit": {
+      "contact_distance": 0.8432168840224319,
+      "falsifier": "Smooth core or additive global-readout model matches empirical topology and spectra.",
+      "passes_smooth_core_rejection_screen": true,
+      "smooth_core_distance": 1.9990335741868044
+    },
+    "wrong_evolutionary_dynamics": {
+      "best_overall_model": {
+        "candidate_model": "residual_only_diagnostic",
+        "distance_to_empirical_primary": 0.7387084522445218,
+        "empirical_accessible_path_fraction_mean": 0.0398148148148148,
+        "empirical_gft_high_energy_fraction_mean": 0.14728181171661806,
+        "empirical_n_local_maxima_mean": 4.958333333333333,
+        "empirical_random_walk_lag1_autocorrelation_mean": 0.17440713725158621,
+        "empirical_reciprocal_sign_epistasis_fraction_mean": 0.25243055555555555,
+        "empirical_sign_epistasis_fraction_mean": 0.5979166666666665,
+        "empirical_walsh_high_order_fraction_mean": 0.3944417471165657,
+        "model_accessible_path_fraction_mean": 0.0,
+        "model_gft_high_energy_fraction_mean": 0.3364013920675356,
+        "model_n_local_maxima_mean": 4.454545454545454,
+        "model_random_walk_lag1_autocorrelation_mean": -0.1969790813645281,
+        "model_reciprocal_sign_epistasis_fraction_mean": 0.3390151515151515,
+        "model_sign_epistasis_fraction_mean": 0.6439393939393938,
+        "model_walsh_high_order_fraction_mean": 0.3364013920675356,
+        "parameter_set_id": "residual_only_diagnostic__pset-001",
+        "split": "test"
+      },
+      "comparison_metrics_include_spectra": [
+        "walsh_high_order_fraction",
+        "gft_high_energy_fraction"
+      ],
+      "comparison_metrics_include_topology": [
+        "accessible_path_fraction",
+        "n_local_maxima",
+        "random_walk_lag1_autocorrelation"
+      ],
+      "falsifier": "Closest spectral models fail topology/accessibility/random-walk dynamics.",
+      "passes_joint_metric_screen": true
+    },
+    "wrong_spectral_envelope": {
+      "empirical_primary_spectrum": {
+        "gft_high_energy_fraction_mean": 0.0631207764500041,
+        "gft_low_energy_fraction_mean": 0.2595249655213276,
+        "walsh_high_order_fraction_mean": 0.1690464630499567
+      },
+      "falsifier": "Empirical graphlets lack low-order dominance with a measurable high-order tail.",
+      "passes_envelope_screen": false
+    }
+  },
+  "model_distances": {
+    "contact_residual_ensemble": 0.8432168840224319,
+    "gnk_local_null": 1.241414030360748,
+    "random_position_residual": 1.2853033391501754,
+    "residual_only_diagnostic": 0.7387084522445218,
+    "shuffled_contact_residual": 1.300188004195202,
+    "smooth_core_only": 1.9990335741868044
+  },
+  "overall_interpretation": {
+    "formal_hypothesis_effect_hyp004": "weakens; falsifies strong current implementation/benchmark adequacy form, but does not alone refute every adaptive-walk prediction in HYP-004",
+    "formal_hypothesis_effect_hyp005": "supports fixed residual-scale knob narrowly",
+    "strong_empirical_procedural_model_falsified": true,
+    "summary": "RUN-071 supports residual scale directionality and rejects smooth/readout-only explanations, but the empirical PHOT graphlets have a stronger WHT high-order component than the preregistered envelope and no embedded procedural candidate matches spectra plus topology plus evolutionary dynamics as a package."
+  },
+  "primary_empirical_means": {
+    "accessible_path_fraction": 0.0398148148148148,
+    "gft_high_energy_fraction": 0.14728181171661806,
+    "gft_low_energy_fraction": 0.6055582528830977,
+    "gft_mid_energy_fraction": 0.24715993540028414,
+    "n_local_maxima": 4.958333333333333,
+    "random_walk_lag1_autocorrelation": 0.17440713725158621,
+    "reciprocal_sign_epistasis_fraction": 0.25243055555555555,
+    "sign_epistasis_fraction": 0.5979166666666665,
+    "walsh_high_order_fraction": 0.3944417471165657
+  },
+  "primary_spectral_envelope": {
+    "gft_high_energy_fraction": 0.14728181171661806,
+    "gft_low_energy_fraction": 0.6055582528830977,
+    "high_not_dominant": false,
+    "high_tail_present": true,
+    "low_order_ok": true,
+    "passes_envelope": false,
+    "walsh_high_order_fraction": 0.3944417471165657
+  },
+  "run_id": "RUN-071",
+  "synthetic_counts": {
+    "n_gft_rows": 14400,
+    "n_graphlets": 60,
+    "n_landscape_seeds": 2,
+    "n_metric_rows": 1200,
+    "n_sign_pair_rows": 0,
+    "n_walsh_rows": 14400
+  }
+}

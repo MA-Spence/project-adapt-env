@@ -1,0 +1,22 @@
+| model_family | epi_weight | n_local_maxima | accessible_path_fraction_dp | walsh_high_order_fraction | sign_epistasis_fraction_local | random_walk_lag1_autocorrelation |
+| --- | --- | --- | --- | --- | --- | --- |
+| additive_core_only_observable | 0.0 | 140.0 | 0.0 | 0.3231 | 0.0 | 0.4408 |
+| additive_core_only_observable | 0.15 | 140.0 | 0.0 | 0.3231 | 0.0 | 0.4408 |
+| additive_core_only_observable | 0.3 | 140.0 | 0.0 | 0.3231 | 0.0 | 0.4408 |
+| additive_core_only_observable | 0.6 | 140.0 | 0.0 | 0.3231 | 0.0 | 0.4408 |
+| additive_core_only_observable | 1.0 | 140.0 | 0.0 | 0.3231 | 0.0 | 0.4408 |
+| bare_gnk_texture | 0.0 | 256.0 | 0.0 | 0.0 | 0.0 |  |
+| bare_gnk_texture | 0.15 | 2.111111 | 0.0 | 0.032761 | 0.140501 | 0.704105 |
+| bare_gnk_texture | 0.3 | 2.111111 | 0.0 | 0.032761 | 0.140501 | 0.704105 |
+| bare_gnk_texture | 0.6 | 2.111111 | 0.0 | 0.032761 | 0.140501 | 0.704105 |
+| bare_gnk_texture | 1.0 | 2.111111 | 0.0 | 0.032761 | 0.140501 | 0.704105 |
+| effective_stability_margin | 0.0 | 1.0 | 1.0 | 0.0 | 0.0 | 0.75 |
+| effective_stability_margin | 0.15 | 1.0 | 1.0 | 1e-05 | 0.0 | 0.749987 |
+| effective_stability_margin | 0.3 | 1.0 | 1.0 | 4e-05 | 0.0 | 0.749948 |
+| effective_stability_margin | 0.6 | 1.0 | 1.0 | 0.000159 | 0.0 | 0.749793 |
+| effective_stability_margin | 1.0 | 1.0 | 0.959259 | 0.000442 | 0.005208 | 0.749422 |
+| full_public_observable | 0.0 | 140.0 | 0.0 | 0.3231 | 0.0 | 0.4408 |
+| full_public_observable | 0.15 | 140.148148 | 0.0 | 0.324838 | 0.0 | 0.439978 |
+| full_public_observable | 0.3 | 140.333333 | 0.0 | 0.325746 | 0.0 | 0.440003 |
+| full_public_observable | 0.6 | 141.148148 | 0.0 | 0.329861 | 0.0 | 0.437157 |
+| full_public_observable | 1.0 | 141.851852 | 0.0 | 0.331945 | 0.002108 | 0.436532 |

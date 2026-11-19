@@ -1,0 +1,40 @@
+{
+  "run": "RUN-172",
+  "job": "2317",
+  "attempt": 3,
+  "checked_at_utc": "2026-10-08T00:45:33.428612+00:00",
+  "adaptenv_commit": "dd0bb7a52d7d92af48bbfba115331742b9a0c2eb",
+  "source_hashes": {
+    "scripts/production_landscapes_exp066.py": true,
+    "scripts/observation_calibration_exp065.py": true,
+    "scripts/replicate_observation_exp065.py": true,
+    "external/Adapt-Env/adaptenv/__init__.py": true,
+    "external/Adapt-Env/adaptenv/landscape.py": true,
+    "external/Adapt-Env/adaptenv/thermodynamic.py": true,
+    "external/Adapt-Env/adaptenv/extensive_gnk.py": true,
+    "external/Adapt-Env/adaptenv/ranked_categorical_gnk.py": true,
+    "external/Adapt-Env/adaptenv/amino_acids.py": true,
+    "scripts/publish_production_landscapes.py": true,
+    "experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/run.sh": true,
+    "experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/worker_environment.json": true
+  },
+  "config_sha256": "bcba99d0d7784c70317bfe02253e9f8c42a395bfa625532c222e43b04c8fcc0d",
+  "environment": {
+    "python": "3.11.15",
+    "packages": {
+      "numpy": "2.4.4",
+      "pandas": "2.3.0",
+      "scipy": "1.17.1",
+      "pyarrow": "20.0.0",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "stderr": "",
+  "completed_assays": [
+    "gb1_wu2016_four_site_graphfla",
+    "trpb_johnston2024_four_site_graphfla",
+    "cr9114_h1_phillips2021_graphfla"
+  ],
+  "queue": "2317 RUNNING 1:04 dutch",
+  "publication_parent_exists": true
+}

@@ -1,0 +1,6 @@
+{
+  "median_heldout_fraction_metrics_in_band": 0.5,
+  "n_heldout_datasets": 10,
+  "n_prediction_rows": 10,
+  "stage": "4E"
+}

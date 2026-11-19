@@ -1,0 +1,111 @@
+id: EXP-030
+type: experiment
+title: System-specific current-model refit and graphlet falsifier repeat
+slug: system-specific-current-model-refit-graphlet-falsifier-repeat
+status: planned
+created: '2026-05-16T17:36:47+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-001
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-028
+  - EXP-029
+  motivating_results:
+  - RES-028
+  - RES-029
+question: 'When PHOT and SPTN1 are fit as two separate current-model landscapes rather
+  than pooled, do the RES-028 fired falsifiers still hold: wrong empirical spectral
+  envelope and wrong embedded evolutionary/topological dynamics?'
+pre_experiment_prediction: If the RES-028 failure was mainly caused by stale cached
+  preprocessing and the RUN-073 pooling error, then assay-specific current-model ABC
+  fits should produce posterior predictive graphlets whose WHT/GFT spectra, SE/RSE,
+  local maxima, accessibility and random-walk autocorrelation match each system better
+  than smooth-core, residual-only and GNK-style controls. If the fired falsifiers
+  persist, the current residual-ruggedness mechanism remains structurally inadequate
+  even after system-specific recalibration.
+rationale: 'CLAIM-001 supersedes the original pooled/shared-regime HYP-001 interpretation:
+  empirical-like statistics are recoverable, if at all, system by system. RUN-073
+  incorrectly pooled PHOT and SPTN1 into one shared ABC target and did not emit graphlet
+  WHT/GFT statistics. This experiment repeats the current-model refit correctly as
+  two independent landscape fits in one run, then tests the RES-028 fired graphlet
+  breakpoints on each fitted system.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scripts/proteingym_system_specific_current_graphlet_refit.py
+  - scripts/proteingym_bayesian_summary_calibration.py
+  - scripts/empirical_graphlet_falsification_suite.py
+  - scripts/tem1_aggregate_graphlet_residual_ruggedness.py
+  - src/project_adapt_env/adapt_env_bayes.py
+  - src/project_adapt_env/proteingym_panel.py
+  - external/Adapt-Env
+  - results/2026-05-15_RES-028_empirical-graphlet-falsification-residual-ruggedness
+  - results/2026-05-16_RES-029_proteingym-current-model-abc-refit-residual-ruggedness
+  datasets:
+  - data/raw/proteingym/v1.3/reference/DMS_substitutions.csv
+  - data/raw/proteingym/v1.3/DMS_substitutions.parquet
+  - data/interim/proteingym_mmseqs_alignments/PHOT_CHLRE_Chen_2023.fasta
+  - data/interim/proteingym_mmseqs_alignments/SPTN1_CHICK_Tsuboyama_2023_1TUD.fasta
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 64
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - current_model_preflight.json
+  - falsification_tests.json
+  - system_fit_summary.csv
+  - system_branch_validations.csv
+  - system_graphlet_catalog.csv
+  - system_graphlet_metrics.csv
+  - system_walsh_terms.csv
+  - system_gft_coefficients.csv
+  - system_model_distances.csv
+  - systems/PHOT_CHLRE_Chen_2023/fit/summary.json
+  - systems/PHOT_CHLRE_Chen_2023/fit/posterior_particles.csv
+  - systems/PHOT_CHLRE_Chen_2023/fit/posterior_rounds.csv
+  - systems/PHOT_CHLRE_Chen_2023/graphlet_metrics.csv
+  - systems/PHOT_CHLRE_Chen_2023/walsh_terms.csv
+  - systems/PHOT_CHLRE_Chen_2023/gft_coefficients.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/fit/summary.json
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/fit/posterior_particles.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/fit/posterior_rounds.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/graphlet_metrics.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/walsh_terms.csv
+  - systems/SPTN1_CHICK_Tsuboyama_2023_1TUD/gft_coefficients.csv
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

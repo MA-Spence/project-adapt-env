@@ -1,0 +1,41 @@
+id: RES-049
+title: RUN-127 hashed GNK knobs validate forward ruggedness-accessibility map
+status: completed
+created: '2026-06-18T12:45:00+10:00'
+owner: matthew-spence
+analyses:
+- ANA-049
+experiments:
+- EXP-051
+runs:
+- RUN-127
+supports:
+- HYP-005
+weakens: []
+refutes: []
+motivates:
+- HYP-004
+- HYP-009
+supersedes: []
+summary: 'RUN-127 supports the EXP-051 WS-B knob-map claim: on enumerable L=8 coordinates,
+  hashed GNK epistasis weight moved all preregistered ruggedness, spectrum, accessibility,
+  sign-epistasis, and autocorrelation metrics in the expected directions, while the
+  retained core/readout guardrail preserved plateaus and declining beneficial fraction
+  at epi_weight=0. The result is a forward-generator validation, not empirical PHOT
+  overlap or optimizer evidence.'
+artifacts: []
+evidence_paths:
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/source_tables
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/metrics.json
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_output_collection_audit.csv
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_monotonicity_summary.csv
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_epi_weight_metric_summary.csv
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_support_mode_knob_summary.csv
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_joint_regime_summary.csv
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_core_readout_guardrail_summary.csv
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_epi0_hamming_beneficial_summary.csv
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_threshold_epistasis_summary.csv
+- analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review/tables/run-127_support_order_summary.csv
+compliance:
+  level: green
+  issues: []

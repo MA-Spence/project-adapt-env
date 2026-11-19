@@ -1,0 +1,39 @@
+id: RES-038
+title: RUN-096 local ruggedness objective improves controls but not empirical-module
+  specificity
+status: completed
+created: '2026-05-17T20:43:19+10:00'
+owner: Codex
+analyses:
+- ANA-038
+experiments:
+- EXP-038
+runs:
+- RUN-096
+supports: []
+weakens:
+- HYP-008
+refutes: []
+motivates: []
+supersedes: []
+summary: Adding local Dirichlet-energy localization terms to the PHOT ABC objective
+  improves fitted-family held-out distance over fitted current/smooth core, but the
+  calibration-selected no-module and uncoupled controls beat the empirical-module
+  family on held-out objective distance, so the result weakens the current empirical-module
+  mechanism.
+artifacts:
+- results/RES-038_run-096-local-ruggedness-objective-no-empirical-module-specificity/metrics.json
+evidence_paths:
+- analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/metrics.json
+- analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/tables/run-096_hyp008_decision_table.md
+- analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/tables/run-096_localization_components_test.md
+- analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/tables/run-096_preflight_and_collection_audit.md
+- analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review/tables/run-096_selected_test_distances.md
+- data/processed/phot-abc-local-ruggedness-objective/RUN-096.dvc
+- data/processed/phot-abc-local-ruggedness-objective/RUN-096/selected_family_distances.csv
+- data/processed/phot-abc-local-ruggedness-objective/RUN-096/selected_family_pairwise_deltas.csv
+- data/processed/phot-abc-local-ruggedness-objective/RUN-096/component_guardrail_summary.csv
+- data/processed/phot-abc-local-ruggedness-objective/RUN-096/module_energy_summary.csv
+compliance:
+  level: green
+  issues: []

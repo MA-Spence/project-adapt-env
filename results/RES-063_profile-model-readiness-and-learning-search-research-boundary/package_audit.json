@@ -1,0 +1,32 @@
+{
+  "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:21:08) [Clang 20.1.8 ]",
+  "wheel": "Fresh temporary validation build; wheel payloads match source. Original locked release archive remains separately DVC-tracked.",
+  "wheel_sha256": "faea9bb58089fd566fa7b3ccefa9ba90dc049edfb920b42bea2c7d4b0b8a764d",
+  "runtime_payloads": [
+    "adaptenv/__init__.py",
+    "adaptenv/alignment.py",
+    "adaptenv/amino_acids.py",
+    "adaptenv/api.py",
+    "adaptenv/extensive_gnk.py",
+    "adaptenv/landscape.py",
+    "adaptenv/mmseqs.py",
+    "adaptenv/presets.py",
+    "adaptenv/presets.yaml",
+    "adaptenv/ranked_categorical_gnk.py",
+    "adaptenv/service.py",
+    "adaptenv/thermodynamic.py",
+    "adaptenv/trpb_profile_run178.json"
+  ],
+  "wheel_current_source_bytes_equal": true,
+  "removed_packages_absent": true,
+  "installed_tests_returncode": 0,
+  "build_log": "validation_logs/build.log",
+  "installed_tests_log": "validation_logs/installed_tests.log",
+  "source_tests_passed": 82,
+  "installed_wheel_tests_passed": 82,
+  "public_facade_exports_verified": 13,
+  "release_lock_files_verified": 45,
+  "scope": "engineering validation only; no new scientific performance benchmark",
+  "environment_caveat": "Ambient base Python has a stale editable hook to a different checkout. Isolated wheel verification excludes it; current distribution contains no retired modules.",
+  "package_commit": "745c00b3a369da33e7d7c7b9850ccbc212fac714"
+}

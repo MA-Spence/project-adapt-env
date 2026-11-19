@@ -1,0 +1,36 @@
+id: RES-050
+title: RUN-135 empirical ensemble descriptor envelope establishes operator-free reference
+  bands
+status: completed
+created: '2026-06-19T07:19:24+10:00'
+owner: matthew-spence
+analyses:
+- ANA-050
+experiments:
+- EXP-052
+runs:
+- RUN-135
+supports: []
+weakens: []
+refutes: []
+motivates:
+- HYP-004
+- HYP-009
+supersedes: []
+summary: 'RUN-135 establishes the Stage 4A empirical descriptor reference: 17 datasets
+  were audited, 10 Tier-1 operator-free landscapes can support higher-order/topographic
+  bands, and 7 sparse Tier-3 assays are restricted to order-1 summaries.'
+artifacts: []
+evidence_paths:
+- analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/metrics.json
+- analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_empirical_key_bands.csv
+- analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_empirical_key_bands.md
+- analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_graphlet_dataset_medians.csv
+- analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_graphlet_dataset_medians.md
+- analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_output_collection_audit.csv
+- analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_output_collection_audit.md
+- analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_scope_audit_summary.csv
+- analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_scope_audit_summary.md
+compliance:
+  level: green
+  issues: []

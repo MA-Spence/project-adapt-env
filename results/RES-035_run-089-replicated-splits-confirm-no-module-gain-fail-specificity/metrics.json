@@ -1,0 +1,41 @@
+{
+  "analysis_id": "ANA-035",
+  "decision": {
+    "refutes": [],
+    "supports": [],
+    "weakens": [
+      "HYP-008"
+    ]
+  },
+  "experiment_id": "EXP-035",
+  "interpretation_flags": {
+    "passes_random_shuffled_module_specificity_controls": false,
+    "passes_uncoupled_specificity_control": false,
+    "secondary_components_rescued": false,
+    "stable_no_module_gain_against_fitted_current": true,
+    "stable_no_module_gain_against_smooth_core": true,
+    "supports_hyp008_mechanism": false
+  },
+  "primary_evidence": {
+    "empirical_module_median_test_distance": 0.49428732631945427,
+    "fitted_current_median_test_distance": 0.5232414692291734,
+    "n_random_splits": 512,
+    "no_module_median_delta_vs_fitted_current": -0.04681950520793318,
+    "no_module_median_delta_vs_smooth_core": -0.05773026461277822,
+    "no_module_median_test_distance": 0.4838547390253398,
+    "no_module_win_rate_vs_fitted_current": 0.9375,
+    "no_module_win_rate_vs_smooth_core": 0.9765625,
+    "original_split_fitted_current_test_distance": 0.40157082034740593,
+    "original_split_no_module_test_distance": 0.31374085702237586,
+    "original_split_smooth_core_test_distance": 0.41190406684777847,
+    "random_module_median_test_distance": 0.4793297090454196,
+    "shuffled_module_median_test_distance": 0.49988377755875407,
+    "smooth_core_median_test_distance": 0.5357670318103884,
+    "uncoupled_module_best_family_rate": 0.51171875,
+    "uncoupled_module_median_test_distance": 0.44689767401521013,
+    "uncoupled_module_win_rate_vs_no_module": 0.634765625
+  },
+  "result_id": "RES-035",
+  "run_id": "RUN-089",
+  "summary": "Replicated splits validate a narrow no-module graphlet-distance gain against fitted current/smooth controls, but uncoupled, random, and shuffled controls prevent interpreting the gain as support for local non-diffuse HYP-008 mechanism."
+}

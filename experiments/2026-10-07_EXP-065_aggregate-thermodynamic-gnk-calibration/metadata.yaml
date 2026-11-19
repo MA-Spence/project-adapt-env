@@ -1,0 +1,404 @@
+id: EXP-065
+type: experiment
+title: Aggregate thermodynamic GNK calibration and confirmation
+slug: aggregate-thermodynamic-gnk-calibration
+status: completed
+created: '2026-10-07T13:40:05+11:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-063
+  - EXP-064
+  motivating_results:
+  - RES-058
+  - RES-060
+  - RES-061
+  - RES-062
+question: Can a mutation-normalized thermodynamic GNK generator recover joint aggregate
+  statistics of measured complete subspaces on held-out cubes and fresh generator
+  seeds?
+pre_experiment_prediction: The composite will reduce held-out joint summary error
+  relative to additive-only and bare-GNK baselines; remaining descriptor-specific
+  errors will be reported without a routing-specific pass gate.
+rationale: Use the supported rank-8 normalized field with corrected plateau, DFE,
+  and WHT measurements to test conditional statistical recovery directly, without
+  identifying empirical interactions.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: false
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - AIM.md
+  - PROJECT_STATE.md
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - data/processed/interaction-strength-exp065-inputs.dvc
+  - data/processed/trpb-profile-additive-inputs.dvc
+  - docs/hypotheses.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_control.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_model_audit.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_validation.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_alignment_prior.py
+  - external/Adapt-Env/README.md
+  - external/Adapt-Env/adaptenv/README.md
+  - external/Adapt-Env/adaptenv/__init__.py
+  - external/Adapt-Env/adaptenv/alignment.py
+  - external/Adapt-Env/adaptenv/amino_acids.py
+  - external/Adapt-Env/adaptenv/api.py
+  - external/Adapt-Env/adaptenv/extensive_gnk.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/Adapt-Env/adaptenv/mmseqs.py
+  - external/Adapt-Env/adaptenv/presets.py
+  - external/Adapt-Env/adaptenv/ranked_categorical_gnk.py
+  - external/Adapt-Env/adaptenv/service.py
+  - external/Adapt-Env/adaptenv/thermodynamic.py
+  - external/Adapt-Env/docs/API_AND_SERVICE.md
+  - external/Adapt-Env/docs/THERMODYNAMIC_V2.md
+  - external/Adapt-Env/pyproject.toml
+  - external/Adapt-Env/tests/test_alignment_profile.py
+  - external/Adapt-Env/tests/test_amino_acids.py
+  - external/Adapt-Env/tests/test_mmseqs_client.py
+  - external/Adapt-Env/tests/test_profile_additive_prior.py
+  - external/Adapt-Env/tests/test_public_thermodynamic.py
+  - scripts/alignment_prior_exp065.py
+  - scripts/fetch_trpb_replicates_exp065.py
+  - scripts/interaction_strength_exp065.py
+  - scripts/landscape_graph.py
+  - scripts/landscape_graph_kernel.cpp
+  - scripts/observation_calibration_exp065.py
+  - scripts/prepare_trpb_profile_exp065.py
+  - scripts/production_landscapes_exp066.py
+  - scripts/replicate_observation_exp065.py
+  - tests/test_alignment_prior_exp065.py
+  - tests/test_interaction_strength_exp065.py
+  - tests/test_prepare_trpb_profile_exp065.py
+  datasets:
+  - data/processed/interaction-strength-exp065-inputs
+  - data/processed/trpb-profile-additive-inputs
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  - local
+  resources:
+    cpus: 4
+    memory_gb: 8
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 01:00:00
+    jobfs_gb: 0
+  partition: cpu
+  queue: normal
+outputs:
+  expected:
+  - manifest.json
+  - config.yaml
+  - input_manifest.json
+  - source_manifest.json
+  - worker_environment.json
+  - kernel_validation.json
+  - selected_parameters.json
+  - graph_summary.csv
+  - latent_graph_summary.csv
+  - cube_summary.csv
+  - seed_audit.csv
+  - coverage.csv
+  - additive_matrix.npy
+  - prior_manifest.json
+  - intervention.json
+  - calibration_prior_audit.json
+  - latent_calibration.npz
+  - latent_calibration_index.csv
+  artifacts: []
+downstream:
+  planned_analyses:
+  - ANA-063
+  - ANA-064
+  - ANA-065
+  - ANA-066
+  - ANA-069
+  - ANA-070
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- User authorized a direct aggregate-recovery experiment without inherited numerical
+  gates on 2026-10-07.
+- Scientist authorized a production queue submission on 2026-10-07; quick checks remain
+  SMOKE_ONLY.
+- RUN-164 attempt 3 completed as Slurm job 2311 with exit code 0 and all eight declared
+  outputs. Experiment remains active pending collection and scientific analysis; no
+  ANA/RES record created during submission.
+- ANA-063 completes the requested descriptive analysis of RUN-164, with an executed
+  notebook and five figures. No RES or CLAIM was requested or created. Its evidence
+  does not establish uniform composite superiority or arbitrary-length observable
+  adequacy.
+- Scientist authorized one further production RUN on 2026-10-07 to execute all three
+  ANA-063 follow-up comparisons together; original protocol and source snapshot are
+  retained.
+- RUN-166 attempt 1 was accepted as Slurm job 2312 on the CPU partition (2 CPUs, 8
+  GB, 2 hours). Startup verified RUNNING on dutch, empty stderr, and matching staged
+  runner/config hashes. RUN-165 is the nonexecuting submission preview.
+- RUN-166 completed with exit code 0. ANA-064 collects and audits its full output/source
+  bundle and provides an executed notebook with five PNG/PDF figures. The primary
+  paired readout contrast is small and uncertain; local variation persists through
+  length 512 while global statistical transfer remains conditional on sampling. No
+  new RES or CLAIM was requested.
+- 'Scientist authorized a new RUN after ANA-064: recover original TrpB replicates,
+  retain the original empirical panel/activity strata, estimate differential noise
+  and a stop-control shared-error sensitivity, and compare all eight frozen RUN-166
+  model arms. Original processing shares input counts; shared error is therefore not
+  identifiable from replicate disagreement alone. Eight numerical controls and the
+  two-draw SMOKE_ONLY run pass; source/input provenance is preserved in a new DVC
+  bundle.'
+- RUN-168 attempt 1 was accepted as Slurm 2313 and verified RUNNING on dutch. All
+  eight staged runner/protocol/config/test/input-pointer hashes match local source;
+  production reports 128 observation draws and stderr is empty. RUN-167 is the nonexecuting
+  preview. Shared inputs and all 16 DVC backup objects were hash-verified.
+- RUN-168 completed with exit code 0 in 103.16 seconds. ANA-065 independently audits
+  its observations and statistics and supplies an executed eight-cell notebook with
+  five PNG/PDF figures. Replicate disagreement alone leaves the mean per-cube WHT
+  discrepancy; shared-stop correction is unstable near the assay floor, and adding
+  observation noise improves some descriptors while increasing spread. The output/log/source
+  bundle is DVC-tracked and all 159 unique cache objects are backed up and hash-verified.
+  No RES or CLAIM was created.
+- Scientist authorized observation-aware calibration, queue execution, active monitoring
+  and a figure-led notebook ANA on 2026-10-08. The aim is useful global empirical
+  resemblance for an online ML environment, without numerical scientific gates or
+  specific interaction fitting.
+- RUN-170 attempt 1 failed during source packaging before sbatch; queue inspection
+  confirmed no job. Narrowed source snapshot and resubmitted the same RUN as attempt
+  2. Twelve numerical tests and the old-panel SMOKE_ONLY pipeline passed; all seven
+  shared input checksums verified.
+- RUN-170 attempt 2 completed as Slurm 2314 in 60.86 seconds, exit 0 and empty stderr.
+  ANA-066 independently audits 114,432 statistic rows and 1,179,648 replayed observations,
+  reproduces six fitted objectives and supplies eight executed notebook code cells
+  with five inline PNG/PDF figures. The 215-file output/log/source bundle is DVC-tracked;
+  all 208 unique objects are backed up and MD5-verified. Evidence supports candidate
+  empirical-like ML regimes with explicit observation dependence and residual activity
+  mismatch; no new RES/CLAIM or scientific gate.
+- Scientist authorized one non-production follow-up RUN under EXP-065 on 2026-10-08,
+  with queue monitoring through completion and a figure-led ANA. Six interaction strengths,
+  16 paired original seeds and eight fresh seeds per assay, frozen calibration panels/noise
+  models, no scientific gates. Temporary LAB_SSH_HOST=dutch routes submission through
+  the restored worker because the gateway shared mount is unavailable; the Slurm target/partition
+  remain lab-slurm/cpu.
+- RUN-175 attempt 1 (Slurm 2321) failed before science because g++ was absent. A project-local
+  ziglang 0.13.0 compiler is installed under runtime/project-adapt-env/tools/graph-compiler,
+  with the published wheel SHA-256 verified; shared Python environments are unchanged.
+  Failed attempt records and logs are preserved.
+- RUN-175 attempt 2 completed as Slurm 2322 on dutch (4 CPUs, 8 GB), with 558.29 seconds
+  of scientific computation. Worker-side 20-case kernel validation passed with the
+  pinned project-local compiler; all 24 staged input hashes and 26 DVC backup objects
+  verified. The scientific protocol is unchanged from the approved paired sweep.
+- 'ANA-069 completes the figure-led analysis of RUN-175: eight executed notebook cells,
+  five PNG/PDF figures, all 390 earlier graph anchors reproduced exactly, 24 objectives
+  and 1,732 WHT summaries independently checked. DVC bundle and all 184 remote objects
+  verified. Evidence supports useful conditional regimes, with amplitude, seed and
+  observation limitations; no scientific acceptance gates applied.'
+- '2026-11-19: Scientist authorized restoring the alignment-profile additive option
+  and a TrpB-only matched repeat of RUN-175 under this EXP, reusing the recorded fully
+  synthetic control. RUN-172 endpoint readouts must be recalibrated with their original
+  settings under the new prior. The scientist then confirmed Dutch is down and instructed
+  preparation only; submit when the system returns. No scheduler execution is authorized
+  while that hold remains.'
+- '2026-11-19 preparation verification: 49 maintained package tests, 5 matched-run
+  tests and 3 source/profile tests pass. Actual-input SMOKE_ONLY execution completed
+  18 settings, two seeds, 183 graph rows and 12 latent graph rows in 40.81 seconds.
+  All original 12 computational method ASTs match RUN-175; original numerical kernels
+  are hash-identical. Author raw alignment is unusable; the frozen prior uses the
+  complete original b0.3 alignment-frequency table, rounded to 0.001, non-gap conditioning
+  and fixed 1% uniform smoothing. Weighting and N_eff remain unknown. This is not
+  a new empirical result.'
+- 'RUN-176 is a nonexecuting labproj submission preview: planned, dry_run=true, no
+  scheduler job ID. Current declared files were narrowed after preview to the frozen
+  prior-repeat sources and context; the inherited declaration list is retained in
+  followup.inherited_declared_files, and RUN-176.manifest.yaml reflects the corrected
+  preparation. Both input bundles are staged self-contained. Profile inputs are DVC-tracked
+  locally; remote backup and worker preflight await Dutch restoration. No scientific
+  job was submitted.'
+- '2026-11-19: Scientist authorized local MacBook execution of the prepared full-budget
+  profile repeat. Scientific source/configuration remain frozen; platform/compiler
+  change is recorded separately. RUN-176 remains the Slurm preview. New local RUN
+  records, prelaunch source/input snapshot, logs and DVC collection preserve provenance.'
+- RUN-178 completed locally with return code 0 in 416.51 scientific seconds after
+  local preview RUN-177. All 18 settings and 24 seeds (16 reused, 8 fresh), 2163 graph
+  rows, 2163 cube rows, 144 latent rows and 99 output checksums independently verified.
+  All 24 full normalized GNK fields match RUN-175 within 4.45e-15; all 38 numerical
+  empirical-graph columns match exactly at three resolutions. Source/input/environment/log/output
+  records collected manually for local DVC tracking; remote backup awaits Dutch. This
+  records execution fidelity, not new empirical adequacy or convergence claims.
+- 'ANA-070 completes the requested comparison of profile RUN-178 against archived
+  synthetic RUN-175: two executed notebooks, five PNG/PDF figures, all strengths/observation
+  assumptions and paired-seed tables. Profile results show mixed descriptor trade-offs,
+  not consistent superiority. All 36 selected objectives, 42 fit traces and 4,326
+  WHT summaries independently audited. Analysis bundle DVC-tracked and local cache
+  verified; remote backup awaits Dutch. No new RES, CLAIM or scientific acceptance
+  gate.'
+template: generic
+followup:
+  protocol: trpb_alignment_profile_prior_repeat_v1
+  config: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.yaml
+  protocol_path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.md
+  motivating_analysis: ANA-069
+  prior_run: RUN-175
+  endpoint_calibration_run: RUN-172
+  primary_assay: trpb_johnston2024_four_site_graphfla
+  question: How does substituting an alignment-profile additive prior affect the otherwise
+    matched TrpB calibration and unfitted diagnostics?
+  interpretation: Prior-only matched repeat. Reuse synthetic RUN-175 control; refit
+    inherited RUN-172 endpoints under the profile; retain all original observation
+    assumptions and diagnostics. No PLM evaluation or success gate.
+  status: completed
+  validation: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_validation.json
+  profile_input_manifest: data/processed/trpb-profile-additive-inputs/prior_manifest.json
+  inherited_declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - PROJECT_STATE.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/config.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - scripts/aggregate_thermodynamic_calibration.py
+  - src/project_adapt_env/dense_descriptive.py
+  - src/project_adapt_env/summary_statistics.py
+  - external/Adapt-Env/adaptenv/thermodynamic.py
+  - external/Adapt-Env/adaptenv/extensive_gnk.py
+  - external/Adapt-Env/adaptenv/ranked_categorical_gnk.py
+  - external/Adapt-Env/docs/THERMODYNAMIC_V2.md
+  - tests/test_aggregate_thermodynamic.py
+  - results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission/result.md
+  - results/RES-060_run-153-validates-global-core-calibration-and-edge-transfer-but-fails-gnk-texture-prevalence/result.md
+  - results/RES-061_run-157-binary-rank-8-representation-rescues-gnk-texture-prevalence-on-fixed-challenge-panel/result.md
+  - results/RES-062_run-162-formally-fails-observable-coverage-and-specificity-with-plateau-confounded-rugged-target/result.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/paired_readout.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/paired_readout.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/inputs/run164_trpb_nodes.json
+  - scripts/paired_readout_exp065.py
+  - tests/test_paired_readout_exp065.py
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/analysis.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/replicate_observation.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/replicate_observation.yaml
+  - scripts/replicate_observation_exp065.py
+  - scripts/fetch_trpb_replicates_exp065.py
+  - scripts/prepare_trpb_replicates_exp065.py
+  - tests/test_replicate_observation_exp065.py
+  - data/processed/trpb-replicate-observation-exp065.dvc
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/analysis.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/observation_calibration.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/observation_calibration.md
+  - scripts/observation_calibration_exp065.py
+  - tests/test_observation_calibration_exp065.py
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/analysis.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength_validation.json
+  - scripts/interaction_strength_exp065.py
+  - scripts/landscape_graph.py
+  - scripts/landscape_graph_kernel.cpp
+  - scripts/production_landscapes_exp066.py
+  - tests/test_interaction_strength_exp065.py
+  - data/processed/interaction-strength-exp065-inputs.dvc
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_alignment_prior.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_validation.json
+  - scripts/alignment_prior_exp065.py
+  - scripts/prepare_trpb_profile_exp065.py
+  - tests/test_alignment_prior_exp065.py
+  - data/processed/trpb-profile-additive-inputs.dvc
+  - external/Adapt-Env/adaptenv/alignment.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_control.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_model_audit.json
+  - tests/test_prepare_trpb_profile_exp065.py
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  dry_run: RUN-176
+  preparation_verification: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-176.preparation.json
+  queue_submission: not_submitted; authorized local RUN-178 executed instead
+  local_execution:
+    authorization: Scientist requested local MacBook execution on 2026-11-19 while
+      retaining scientific record. Slurm hold remains.
+    protocol_note: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_local.md
+    status: completed_verified
+    actual_environment: isolated Python3.11.15 with unchanged five recorded numerical
+      package versions; macOS arm64/Apple Clang platform qualification
+    remote_backup: deferred_Dutch_offline
+    dry_run: RUN-177
+    production_run: RUN-178
+    source_snapshot: .labproj/local-preparations/20261119T041752Z-3oggumte
+    validation: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_local_validation.json
+    scientific_elapsed_seconds: 416.50650954199955
+    collection: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178
+    verification: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-178.verification.json
+  analysis: ANA-070
+followup_history:
+- protocol: paired_readout_followup_v1
+  config: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/paired_readout.yaml
+  motivating_analysis: ANA-063
+  prior_run: RUN-164
+  primary_assay: trpb_johnston2024_four_site_graphfla
+  question: Does nonlinear transmission improve aggregate agreement after comparable
+    amplitude calibration, and how does the comparison depend on operating position
+    and sampled neighbourhoods at increasing length?
+  interpretation: Descriptive paired comparisons; no numerical scientific acceptance
+    gates.
+  production_run: RUN-166
+  dry_run: RUN-165
+- protocol: replicate_observation_followup_v1
+  config: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/replicate_observation.yaml
+  protocol_path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/replicate_observation.md
+  motivating_analysis: ANA-064
+  prior_run: RUN-166
+  question: How much aggregate discrepancy is reproducible variation versus compatible
+    with replicate/control measurement processes?
+  interpretation: Descriptive diagnostic reanalysis of exposed cubes; no model refit,
+    specific empirical interaction reconstruction or scientific success gates.
+  dry_run: RUN-167
+  production_run: RUN-168
+- protocol: observation_aware_calibration_v1
+  config: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/observation_calibration.yaml
+  protocol_path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/observation_calibration.md
+  motivating_analysis: ANA-065
+  prior_run: RUN-168
+  question: Can global observation-aware calibration predict withheld aggregate epistasis
+    and diminishing returns?
+  interpretation: Useful synthetic regimes for ML, with explicit residual differences
+    and no scientific success gates.
+  dry_run: RUN-169
+  production_run: RUN-170
+- protocol: paired_interaction_strength_walk_tradeoff_v1
+  config: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.yaml
+  protocol_path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.md
+  motivating_analysis: ANA-068
+  prior_run: RUN-172
+  question: Does interaction strength balance empirical global statistics and whole-library
+    adaptive-walk outcomes?
+  interpretation: Paired descriptive sweep across two empirical maps; no success gates
+    or specific-interaction reconstruction.
+  dry_run: RUN-174
+  production_run: RUN-175
+  analysis: ANA-069
+  status: completed
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,70 @@
+{
+  "best_calibrated_candidate_family": "uncoupled_module",
+  "best_calibrated_candidate_fit_method": "exact_descriptive_gated",
+  "best_calibrated_candidate_guardrail_violations": "magnitude_epistasis_mean;signed_pairwise_epistasis_mean",
+  "best_calibrated_candidate_test_distance": 1.1473576266788414,
+  "best_candidate_accessible_path_fraction": 0.0,
+  "best_candidate_calibrated_magnitude_epistasis_mean": 0.0156118202117402,
+  "best_candidate_edge_energy_top10_fraction": 0.3955486261996582,
+  "best_candidate_raw_magnitude_epistasis_mean": 29.102300387607283,
+  "best_epistasis_amplitude_calibrated_magnitude_delta": 0.11522855381725622,
+  "best_epistasis_amplitude_calibrated_magnitude_mean": 0.1773551209446373,
+  "best_epistasis_amplitude_family": "empirical_module",
+  "best_epistasis_amplitude_fit_method": "exact_descriptive_gated",
+  "best_epistasis_amplitude_raw_magnitude_mean": 131.91736375411077,
+  "best_epistasis_amplitude_test_distance": 12.004265898481796,
+  "best_original_abc_context_family": "empirical_readout_residual",
+  "best_original_abc_context_test_distance": 0.2114554115835448,
+  "best_recomputed_full_abc_family": "shuffled_module",
+  "best_recomputed_full_abc_test_distance": 91.21378560154528,
+  "copied_compact_bytes": 227247,
+  "empirical_test_accessible_path_fraction": 0.1974537037037036,
+  "empirical_test_edge_energy_top10_fraction": 0.4059995258405982,
+  "empirical_test_magnitude_epistasis_mean": 0.2925836747618935,
+  "experiment_id": "EXP-043",
+  "largest_omitted_files": [
+    {
+      "bytes": 30441383,
+      "copied_to_analysis": false,
+      "file": "gft_coefficients.csv",
+      "path": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/gft_coefficients.csv"
+    },
+    {
+      "bytes": 29948113,
+      "copied_to_analysis": false,
+      "file": "walsh_terms.csv",
+      "path": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/walsh_terms.csv"
+    },
+    {
+      "bytes": 1907788,
+      "copied_to_analysis": false,
+      "file": "graphlet_metrics.csv",
+      "path": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/graphlet_metrics.csv"
+    }
+  ],
+  "n_candidate_evaluations": 730,
+  "n_equivalence_rows": 40,
+  "n_graphlets": 24,
+  "n_operationally_equivalent_rows": 0,
+  "n_selected_candidates": 20,
+  "remote_output_dir": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs",
+  "run_id": "RUN-112",
+  "same_family_absolute_margin_passes_by_method": {
+    "deterministic_summary_loss": 4,
+    "exact_descriptive_gated": 5,
+    "local_abc_after_cheap_fit": 5,
+    "surrogate_assisted": 5
+  },
+  "same_family_component_guardrail_passes_by_method": {
+    "deterministic_summary_loss": 0,
+    "exact_descriptive_gated": 0,
+    "local_abc_after_cheap_fit": 0,
+    "surrogate_assisted": 0
+  },
+  "same_family_operational_equivalent_by_method": {
+    "deterministic_summary_loss": 0,
+    "exact_descriptive_gated": 0,
+    "local_abc_after_cheap_fit": 0,
+    "surrogate_assisted": 0
+  }
+}

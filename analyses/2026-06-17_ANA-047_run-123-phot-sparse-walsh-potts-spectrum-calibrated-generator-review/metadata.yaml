@@ -1,0 +1,31 @@
+id: ANA-047
+title: RUN-123 PHOT sparse Walsh Potts spectrum-calibrated generator review
+status: completed
+created: '2026-06-17T18:50:39+10:00'
+owner: matthew-spence
+experiments:
+- EXP-048
+runs:
+- RUN-123
+purpose: Review RUN-123 compact outputs to determine whether the spectrum-calibrated
+  sparse Walsh/Potts Generator A clears the H1 forward generative capability gate
+  and should be promoted to sequence-conditioned PHOT equivalence fitting.
+path: analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-123
+  produced_artifacts:
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/metrics.json
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_comparator_context.md
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_forward_probe_candidate_gate.md
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_forward_probe_metric_gate.md
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_graphlet_and_module_catalog_summary.md
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_output_collection_audit.md
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_sparse_walsh_spectrum_calibration.md
+  - analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_stage_gate_and_fit_decision.md
+compliance:
+  level: green
+  issues: []

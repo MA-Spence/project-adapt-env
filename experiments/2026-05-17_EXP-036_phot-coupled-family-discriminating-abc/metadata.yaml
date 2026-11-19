@@ -1,0 +1,114 @@
+id: EXP-036
+type: experiment
+title: PHOT coupled-family discriminating ABC
+slug: phot-coupled-family-discriminating-abc
+status: completed
+created: '2026-05-17T12:33:40+10:00'
+owner: Codex
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  - EXP-031
+  - EXP-035
+  motivating_results:
+  - RES-030
+  - RES-031
+  - RES-035
+question: For PHOT, does ABC fitting of the same RUN-079 coupled candidate families
+  produce a calibration-selected held-out graphlet improvement that is specific to
+  empirical local modules rather than no-module, random/shuffled-module, or uncoupled
+  controls?
+pre_experiment_prediction: Support for HYP-008 requires the ABC-selected empirical-module
+  family to beat fitted-current, smooth-core, no-module, random-module, shuffled-module,
+  and uncoupled-module controls on held-out graphlet distance while satisfying component
+  guardrails for WHT high-order fraction, local maxima, accessibility, lag-1 autocorrelation,
+  SE/RSE, and GFT bands. If the RUN-089 diagnosis is correct, the fitted no-module
+  or uncoupled controls will remain competitive and the empirical-module specificity
+  claim will fail.
+rationale: RUN-089 showed that the RUN-079 no-module PHOT graphlet-distance gain is
+  stable against current and smooth controls but fails specificity because the uncoupled-module
+  control is better. This experiment uses ABC, which previously improved calibration
+  performance over deterministic grids, to fit the same family/control set directly
+  under calibration graphlet objectives before evaluating held-out graphlets.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - scripts/phot_coupled_family_discriminating_abc.py
+  - scripts/phot_coupled_landscape_grid_search.py
+  - src/project_adapt_env/coupled_landscape.py
+  - src/project_adapt_env/smc_abc.py
+  datasets:
+  - RUN-077 PHOT system-specific current-model refit outputs
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 04:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - progress.json
+  - parameter_specs.csv
+  - posterior_particles.csv
+  - posterior_rounds.csv
+  - evaluated_parameter_sets.csv
+  - graphlet_catalog.csv
+  - module_catalog.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - graphlet_summary.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - selected_family_distances.csv
+  - selected_family_pairwise_deltas.csv
+  - component_guardrail_summary.csv
+  - module_energy_rows.csv
+  - module_energy_by_graphlet.csv
+  - module_energy_summary.csv
+  - base_correlation.csv
+  - empirical_readout_fit.json
+  artifacts:
+  - data/processed/phot-coupled-family-discriminating-abc/RUN-091.dvc
+  - analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/metrics.json
+  - results/RES-036_run-091-abc-improves-phot-graphlet-distance-fails-random-uncoupled-specificity/metrics.json
+downstream:
+  planned_analyses:
+  - ANA-036
+  planned_results:
+  - RES-036
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- Fits no-module, empirical-module, random-module, shuffled-module, and uncoupled-module
+  RUN-079-style families independently with SMC-ABC.
+- The ABC objective uses calibration graphlet aggregate distance plus local ruggedness
+  component guardrails; held-out graphlets remain reserved for evidence.
+template: generic
+compliance:
+  level: green
+  issues: []

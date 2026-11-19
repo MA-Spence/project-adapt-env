@@ -1,0 +1,30 @@
+id: ANA-022
+title: RUN-059 TEM-1 ruggedness emergence epistasis sweep review
+status: completed
+created: '2026-05-15T11:03:46+10:00'
+owner: matthew-spence
+experiments:
+- EXP-022
+runs:
+- RUN-059
+purpose: Assess whether RUN-059 shows emergence of ruggedness under stronger TEM-1
+  epistasis parameterizations, and determine how the result updates HYP-004 and HYP-005
+  relative to RUN-057.
+path: analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-059
+  produced_artifacts:
+  - analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_background_summary_by_start_stratum.md
+  - analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_key_metrics.md
+  - analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_parameter_grid_summary.md
+  - analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_ruggedness_regime_deltas.md
+  - analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_selected_regimes_by_start_stratum.md
+  - analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_validation_tests.md
+  - analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review/tables/run-059_walk_summary_by_mode_and_stratum.md
+compliance:
+  level: green
+  issues: []

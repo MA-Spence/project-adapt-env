@@ -1,0 +1,47 @@
+id: RES-036
+title: RUN-091 ABC improves PHOT graphlet distance but fails random and uncoupled
+  specificity
+status: completed
+created: '2026-05-17T13:20:38+10:00'
+owner: Codex
+analyses:
+- ANA-036
+experiments:
+- EXP-036
+runs:
+- RUN-091
+supports: []
+weakens:
+- HYP-008
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-091 shows that ABC fitting of the coupled-family controls improves PHOT
+  held-out graphlet distance for the empirical-module family relative to fitted current,
+  smooth core, no-module, and shuffled-module controls, but it fails specificity because
+  random-module is effectively tied and the uncoupled-module control is better; selected
+  empirical-module energy remains diffuse. This weakens the current local non-diffuse
+  HYP-008 mechanism while preserving only a narrow ABC capacity result.
+artifacts:
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/metrics.json
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_hyp008_decision_table.md
+- results/RES-036_run-091-abc-improves-phot-graphlet-distance-fails-random-uncoupled-specificity/metrics.json
+evidence_paths:
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/metrics.json
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_component_distance_summary.md
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_component_guardrails.md
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_hyp008_decision_table.md
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_module_energy_localization.md
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_pairwise_control_deltas.md
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_preflight_and_collection_audit.md
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_raw_test_metric_means.md
+- analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review/tables/run-091_selected_family_distances.md
+- data/processed/phot-coupled-family-discriminating-abc/RUN-091.dvc
+- data/processed/phot-coupled-family-discriminating-abc/RUN-091/summary.json
+- data/processed/phot-coupled-family-discriminating-abc/RUN-091/selected_family_distances.csv
+- data/processed/phot-coupled-family-discriminating-abc/RUN-091/selected_family_pairwise_deltas.csv
+- data/processed/phot-coupled-family-discriminating-abc/RUN-091/component_guardrail_summary.csv
+- data/processed/phot-coupled-family-discriminating-abc/RUN-091/module_energy_summary.csv
+compliance:
+  level: green
+  issues: []

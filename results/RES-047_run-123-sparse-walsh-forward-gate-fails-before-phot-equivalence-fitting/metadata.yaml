@@ -1,0 +1,45 @@
+id: RES-047
+title: RUN-123 sparse Walsh forward gate fails before PHOT equivalence fitting
+status: completed
+created: '2026-06-17T18:54:56+10:00'
+owner: matthew-spence
+analyses:
+- ANA-047
+experiments:
+- EXP-048
+runs:
+- RUN-123
+supports: []
+weakens:
+- HYP-004
+refutes: []
+motivates:
+- HYP-009
+supersedes: []
+summary: 'EXP-048/RUN-123 did not validate Generator A: the empirical spectrum calibration
+  put all normalized sparse-Walsh weight on order 3, and the H1 forward sparse-Walsh
+  probe produced 0/12 joint passes, failing accessibility, magnitude-epistasis ratio,
+  and Walsh high-order fraction before any sequence-conditioned PHOT equivalence fit
+  was allowed.'
+artifacts: []
+evidence_paths:
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/metrics.json
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_sparse_walsh_spectrum_calibration.md
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_forward_probe_metric_gate.md
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_forward_probe_candidate_gate.md
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_stage_gate_and_fit_decision.md
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_comparator_context.md
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_graphlet_and_module_catalog_summary.md
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/tables/run-123_output_collection_audit.md
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_summary.json
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_preflight.json
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_remote_output_manifest.tsv
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_sparse_walsh_spectrum_calibration.csv
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_sparse_walsh_forward_probe.csv
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_bounded_gate_equivalence.csv
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_abc_comparator_selected_family_distances.csv
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_graphlet_catalog.csv
+- analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review/source_tables/run-123_module_catalog.csv
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,27 @@
+id: ANA-020
+title: RUN-055 adaptive-walk peak-proximal epistasis biological-baseline review
+status: completed
+created: '2026-05-15T07:22:00+10:00'
+owner: matthew-spence
+experiments:
+- EXP-020
+runs:
+- RUN-055
+purpose: Assess whether RUN-055 supports HYP-004 by comparing adaptive-walk dynamics,
+  beneficial-mutation availability, and peak-proximal epistasis trends against the
+  preregistered literature-derived biological baselines.
+path: analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-055
+  produced_artifacts:
+  - analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/tables/run-055_background_summary_by_level.md
+  - analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/tables/run-055_greedy_walk_summary_by_level.md
+  - analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/tables/run-055_key_metrics.md
+  - analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/tables/run-055_validation_tests.md
+compliance:
+  level: green
+  issues: []

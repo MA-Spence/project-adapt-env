@@ -1,0 +1,32 @@
+id: ANA-050
+title: RUN-135 Stage 4A empirical ensemble descriptor envelope review
+status: completed
+created: '2026-06-19T07:12:30+10:00'
+owner: matthew-spence
+experiments:
+- EXP-052
+runs:
+- RUN-135
+purpose: Collect and interpret RUN-135 Stage 4A empirical descriptor and graphlet
+  tables, auditing which datasets can support order-1 versus higher-order/topographic
+  claims.
+path: analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-135
+  produced_artifacts:
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/metrics.json
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_empirical_key_bands.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_empirical_key_bands.md
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_graphlet_dataset_medians.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_graphlet_dataset_medians.md
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_output_collection_audit.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_output_collection_audit.md
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_scope_audit_summary.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_scope_audit_summary.md
+compliance:
+  level: green
+  issues: []

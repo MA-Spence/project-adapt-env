@@ -1,0 +1,33 @@
+id: RES-054
+title: RUN-139 held-out descriptor generalisation is not validated
+status: completed
+created: '2026-06-19T07:19:25+10:00'
+owner: matthew-spence
+analyses:
+- ANA-054
+experiments:
+- EXP-056
+runs:
+- RUN-139
+supports: []
+weakens:
+- HYP-004
+- HYP-009
+refutes: []
+motivates: []
+supersedes: []
+summary: 'RUN-139 does not validate held-out descriptor generalisation: median held-out
+  fraction in band was 0.5, only 2/10 held-out datasets exceeded a strict majority
+  and reached 0.6, and selected parameters collapsed to a narrow random setting.'
+artifacts: []
+evidence_paths:
+- analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/metrics.json
+- analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_heldout_predictions_ranked.csv
+- analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_heldout_predictions_ranked.md
+- analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_output_collection_audit.csv
+- analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_output_collection_audit.md
+- analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_selected_parameter_counts.csv
+- analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/tables/run-139_selected_parameter_counts.md
+compliance:
+  level: green
+  issues: []

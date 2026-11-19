@@ -1,0 +1,65 @@
+{
+  "notebooks": {
+    "analysis": {
+      "code_cells": 8,
+      "executed": true,
+      "errors": 0,
+      "embedded_pngs": 5,
+      "paired_source_matches": true,
+      "sha256": "9dbabff190d0464e763f57331d68fa36e7614b9354bef153cc2422a0eb5471a7"
+    },
+    "validation": {
+      "code_cells": 3,
+      "executed": true,
+      "errors": 0,
+      "embedded_pngs": 0,
+      "paired_source_matches": true,
+      "sha256": "a5c39bb5e6f50355e056b128d5d87276382205a91df8ff3be97dd08592255254"
+    }
+  },
+  "figures": {
+    "01_paired_inherited_regime": {
+      "pixels": [
+        2414,
+        1563
+      ],
+      "png_sha256": "bad9c0e22e11e2307ad17f688dc83f26787f73caf7db931fcde839e5f3b08b54",
+      "pdf_sha256": "3a9de8c72023ea4d113f58bbf75fd1c5a400e25c99c4095a1e97aa5441b23a5b"
+    },
+    "02_interaction_sweep": {
+      "pixels": [
+        2414,
+        2074
+      ],
+      "png_sha256": "29738c9da7ce1b316d618ad417eb68424a76f5aaa9b7a20de5dad0c25a2b1130",
+      "pdf_sha256": "ed10952546749f2bad28ebf5d9673e78b2131319c1cb7b6fe284e108639e0526"
+    },
+    "03_observation_models": {
+      "pixels": [
+        2448,
+        1988
+      ],
+      "png_sha256": "1fb002d6d8a564b18c59eecdb981788b2785c492fea10e173ca705f8b0162617",
+      "pdf_sha256": "74e672f42bc35510fbec0f72b822f10f5116b311b9fcca49acb44def9b1bd2be"
+    },
+    "04_sensitivity": {
+      "pixels": [
+        3094,
+        1428
+      ],
+      "png_sha256": "2f2b0549759db381b6359587237069a2618e1ff9e28ca5083d979c91bfe030e0",
+      "pdf_sha256": "5a613ac37da61100276d39e78ddc5928782d69e185212df343bf7b47d5271060"
+    },
+    "05_calibration_and_availability": {
+      "pixels": [
+        2448,
+        2431
+      ],
+      "png_sha256": "974e6797954d096ad41d254cc214c8c7d59477ace6c2551ce03fd3289213242b",
+      "pdf_sha256": "204b70e918225ad923379482b2471d80e754aa2e3c34b02e20b0948a2b944835"
+    }
+  },
+  "local_report_links_exist": true,
+  "visual_review": "All five PNG figures inspected for legibility, labels, target placement and clipping.",
+  "scientific_adequacy_gate": false
+}

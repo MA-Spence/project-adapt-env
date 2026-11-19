@@ -1,0 +1,81 @@
+{
+  "run": "RUN-166",
+  "remote_output_log_checksums": 20,
+  "source_hashes": 9,
+  "input_hashes": 2,
+  "unique_empirical_nodes": 768,
+  "excluded_prior_and_engineering_nodes": 896,
+  "all_empirical_values_verified_against_prepared_table": true,
+  "latent_cubes": 1248,
+  "replayed_observed_cubes": 3312,
+  "independent_statistic_rows": 9936,
+  "verified_oriented_edges": 105984,
+  "readout_replay_max_absolute_error": 1.1102230246251565e-16,
+  "metric_max_absolute_errors": {
+    "fitness_sd": 0.0,
+    "total_variance": 2.723515857283587e-16,
+    "spectral_resolved": 0.0,
+    "walsh_epistatic_fraction": 6.485049719451297e-09,
+    "walsh_high_order_fraction": 9.120674909768312e-10,
+    "beneficial_diminishing_returns_slope": 2.842170943040401e-14,
+    "beneficial_slope_n_mutations": 0.0,
+    "reference_beneficial_fraction": 0.0,
+    "neutral_edge_fraction": 0.0,
+    "sign_epistasis_fraction": 0.0,
+    "reciprocal_sign_epistasis_fraction": 0.0,
+    "local_maxima_density": 0.0,
+    "accessible_path_fraction": 0.0,
+    "walsh_energy_order_1": 2.740863092043355e-16,
+    "walsh_energy_order_2": 7.101524229780054e-18,
+    "walsh_energy_order_3": 3.665958595716612e-18,
+    "walsh_energy_order_4": 3.2526065174565133e-19,
+    "walsh_fraction_order_1": 6.485049719451297e-09,
+    "walsh_fraction_order_2": 5.5729822423522535e-09,
+    "walsh_fraction_order_3": 8.832042389106398e-10,
+    "walsh_fraction_order_4": 7.551212953538222e-11
+  },
+  "calibration_candidates_affine_and_loss_recomputed": 40,
+  "paired_strict_edges": [
+    {
+      "ratio": 0.0,
+      "edges": 2048,
+      "opposite_sign_edges": 0,
+      "sign_or_tie_differences": 0
+    },
+    {
+      "ratio": 0.25,
+      "edges": 2048,
+      "opposite_sign_edges": 0,
+      "sign_or_tie_differences": 0
+    },
+    {
+      "ratio": 1.0,
+      "edges": 2048,
+      "opposite_sign_edges": 0,
+      "sign_or_tie_differences": 0
+    },
+    {
+      "ratio": 4.0,
+      "edges": 2048,
+      "opposite_sign_edges": 0,
+      "sign_or_tie_differences": 0
+    }
+  ],
+  "replay_scope": "Saved latents and frozen readouts; no claim of regenerating GNK coefficients across platforms",
+  "analysis_packages": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.0",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.4.0"
+  },
+  "joint_distances_independently_recomputed": 24,
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 664001,
+    "units": "24 empirical cubes and 8 synthetic seed clusters of 8 cubes; common resampling weights across readouts and ratios; calibration frozen",
+    "limitations": "Percentile descriptive intervals; no refitting, measurement-error correction, or empirical allele/site-dependence model; embedded panel has only 3 seeds, no bootstrap interval"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "tracked_and_local_cache_verified",
+  "version": "0.5.0rc1",
+  "unpublished": true,
+  "pointer": "data/processed/model-release-candidates/0.5.0rc1.dvc",
+  "directory_md5": "8add0575dd3233075985fb86d5998967.dir",
+  "files": 50,
+  "bytes": 337506,
+  "unique_cache_objects_verified": 51,
+  "remote_backup": "pending_Dutch_unavailable",
+  "scope": "Current package source/docs/tests, packaged TrpB profile, candidate decision/hash lock, numerical replay, verification and clean wheel/test artifacts. Storage sidecar remains outside archive to avoid circular identity."
+}

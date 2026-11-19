@@ -1,0 +1,27 @@
+| fit_method                 | candidate_family   |   distance_to_empirical_primary |   n_guardrail_violations |   worst_guardrail_fractional_margin |
+|:---------------------------|:-------------------|--------------------------------:|-------------------------:|------------------------------------:|
+| deterministic_summary_loss | shuffled_module    |                        0.516987 |                        0 |                                   0 |
+| deterministic_summary_loss | random_module      |                        0.557199 |                        0 |                                   0 |
+| deterministic_summary_loss | empirical_module   |                        0.558637 |                        0 |                                   0 |
+| deterministic_summary_loss | no_module          |                        0.576812 |                        0 |                                   0 |
+| deterministic_summary_loss | uncoupled_module   |                        0.622363 |                        0 |                                   0 |
+| exact_descriptive_gated    | no_module          |                        0.501041 |                        0 |                                   0 |
+| exact_descriptive_gated    | random_module      |                        0.516567 |                        0 |                                   0 |
+| exact_descriptive_gated    | shuffled_module    |                        0.522553 |                        0 |                                   0 |
+| exact_descriptive_gated    | empirical_module   |                        0.592281 |                        0 |                                   0 |
+| exact_descriptive_gated    | uncoupled_module   |                        0.601654 |                        0 |                                   0 |
+| full_abc_comparator        | random_module      |                        0.485817 |                        0 |                                   0 |
+| full_abc_comparator        | empirical_module   |                        0.504908 |                        0 |                                   0 |
+| full_abc_comparator        | shuffled_module    |                        0.533962 |                        0 |                                   0 |
+| full_abc_comparator        | no_module          |                        0.539822 |                        0 |                                   0 |
+| full_abc_comparator        | uncoupled_module   |                        0.673322 |                        0 |                                   0 |
+| local_abc_after_cheap_fit  | no_module          |                        0.500039 |                        0 |                                   0 |
+| local_abc_after_cheap_fit  | shuffled_module    |                        0.526776 |                        0 |                                   0 |
+| local_abc_after_cheap_fit  | empirical_module   |                        0.550822 |                        0 |                                   0 |
+| local_abc_after_cheap_fit  | random_module      |                        0.612518 |                        0 |                                   0 |
+| local_abc_after_cheap_fit  | uncoupled_module   |                        0.627929 |                        0 |                                   0 |
+| surrogate_assisted         | random_module      |                        0.428849 |                        0 |                                   0 |
+| surrogate_assisted         | shuffled_module    |                        0.480332 |                        0 |                                   0 |
+| surrogate_assisted         | empirical_module   |                        0.548654 |                        0 |                                   0 |
+| surrogate_assisted         | no_module          |                        0.57874  |                        0 |                                   0 |
+| surrogate_assisted         | uncoupled_module   |                        0.614997 |                        0 |                                   0 |

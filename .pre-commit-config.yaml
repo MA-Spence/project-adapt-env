@@ -6,10 +6,16 @@ repos:
       - id: check-json
       - id: check-toml
       - id: end-of-file-fixer
-        exclude: '(^|.*/)artifacts/'
+        # Preserve generated evidence bytes and their recorded hashes.
+        exclude: '(^|.*/)artifacts/|^analyses/[^/]+/(figures|notebooks|source_tables|tables)/|^results/[^/]+/validation_logs/|(^|/)metrics\.json$|^experiments/[^/]+/[^/]*_compiler\.json$'
       - id: trailing-whitespace
-        exclude: '(^|.*/)artifacts/'
+        exclude: '(^|.*/)artifacts/|^analyses/[^/]+/(figures|notebooks|source_tables|tables)/|^results/[^/]+/validation_logs/|(^|/)metrics\.json$|^experiments/[^/]+/[^/]*_compiler\.json$'
       - id: check-added-large-files
+        exclude: '^analyses/[^/]+/(figures|notebooks|source_tables|tables)/'
+      - id: check-added-large-files
+        name: Check analysis artifacts remain below 10 MiB
+        files: '^analyses/[^/]+/(figures|notebooks|source_tables|tables)/'
+        args: [--maxkb=10240]
   - repo: local
     hooks:
       - id: labproj-refresh

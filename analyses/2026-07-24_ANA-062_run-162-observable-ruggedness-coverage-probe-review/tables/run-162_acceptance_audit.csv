@@ -1,0 +1,8 @@
+gate,registered_pass,independent_pass,match,independent_observed_fraction,registered_decision,independent_decision
+execution_and_pairing,True,True,True,,,
+empirical_band_reproduction,True,True,True,,,
+G1_range_coverage,False,False,True,0.3333333333333333,,
+G2_joint_rugged_end_reachability,False,False,True,0.6666666666666666,,
+G3_specificity,False,False,True,0.0,,
+G4_navigable_rugged_sanity,False,False,True,0.6666666666666666,,
+terminal_decision,True,True,True,,OBSERVABLE_CONSTRUCTION_LIMIT,OBSERVABLE_CONSTRUCTION_LIMIT

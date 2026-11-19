@@ -1,37 +1,25 @@
-"""Project-local calibration and experiment helpers for Adapt-Env."""
+"""Project access to the supported AdaptEnv model.
 
-from .adapt_env_bayes import (
-    SummaryTarget,
-    build_empirical_target,
-    build_parameter_specs,
-    posterior_mean_updates,
-    run_synthetic_truth_recovery,
-    validate_updates,
-)
-from .proteingym_panel import (
-    PreparedAssay,
-    PreparedPanel,
-    build_empirical_landscape,
-    calibration_options_from_config,
-    prepare_proteingym_panel,
-)
-from .smc_abc import ParameterSpec, SMCABCConfig, SMCABCResult, SimulationResult, run_smc_abc
+Scientific analysis helpers live in their explicit submodules. Historical
+calibration workflows require their recorded source revision and are no longer
+advertised as the project's model API.
+"""
+from importlib import import_module
+from ._compat import ensure_external_paths
 
 __all__ = [
-    "PreparedAssay",
-    "PreparedPanel",
-    "ParameterSpec",
-    "SMCABCConfig",
-    "SMCABCResult",
-    "SimulationResult",
-    "SummaryTarget",
-    "build_empirical_landscape",
-    "build_empirical_target",
-    "build_parameter_specs",
-    "calibration_options_from_config",
-    "posterior_mean_updates",
-    "prepare_proteingym_panel",
-    "run_smc_abc",
-    "run_synthetic_truth_recovery",
-    "validate_updates",
+    "ThermodynamicConfig", "ThermodynamicLandscape", "LandscapeConfig",
+    "FitnessLandscapeEnv", "FitnessLandscape", "PUBLIC_MODEL_SYSTEM",
+    "LandscapeService", "LandscapeServiceError", "available_presets",
+    "build_landscape_config_from_preset", "build_landscape_from_preset", "resolve_landscape_preset",
+    "load_project_config",
 ]
+
+
+def __getattr__(name):
+    if name not in __all__:
+        raise AttributeError(name)
+    ensure_external_paths()
+    value = getattr(import_module("adaptenv"), name)
+    globals()[name] = value
+    return value

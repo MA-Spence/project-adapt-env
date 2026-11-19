@@ -1,0 +1,90 @@
+id: ANA-070
+title: RUN-178 TrpB profile prior versus synthetic control
+status: completed
+created: '2026-11-19T15:30:06+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-178
+- RUN-175
+purpose: Compare the alignment-profile additive prior with the recorded synthetic-prior
+  control using paired seeds, figure-led results and executable notebooks; retain
+  all interaction strengths, observation assumptions and descriptor mismatches.
+path: analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control
+notebook_record:
+  primary_notebook_path: analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-178
+  - RUN-175
+  produced_artifacts:
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/01_paired_inherited_regime.pdf
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/01_paired_inherited_regime.png
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/02_interaction_sweep.pdf
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/02_interaction_sweep.png
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/03_observation_models.pdf
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/03_observation_models.png
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/04_sensitivity.pdf
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/04_sensitivity.png
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/05_calibration_and_availability.pdf
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/figures/05_calibration_and_availability.png
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/aggregate_estimates.csv
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/analysis_environment.json
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/artifact_validation.json
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/audit.json
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/fit_audit.csv
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/fit_trace_audit.csv
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/independent_review.json
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/inherited_regime_comparison.csv
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/latent_graph_results.csv
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/paired_field_audit.csv
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/paired_seed_comparisons.csv.gz
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/paired_summary.csv
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/per_seed_results.csv.gz
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/provenance_audit.csv
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/selected_parameters.csv
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/table_manifest.json
+  - analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/wht_audit.csv
+compliance:
+  level: green
+  issues: []
+verification:
+  notebooks_and_figures: tables/artifact_validation.json
+  numerical: tables/audit.json
+  independent_comparison_review: tables/independent_review.json
+  artifact_manifest: artifact_manifest.json
+  storage: storage_verification.json
+data:
+  pointer: data/processed/aggregate-thermodynamic-gnk-calibration/ANA-070.dvc
+  directory_md5: 44d5ac48ae6668be7fe7edaebcfb2d31.dir
+  files: 45
+  bytes: 10913127
+  unique_cache_objects_verified: 44
+  remote_backup: pending_Dutch_unavailable
+source_data:
+- run: RUN-178
+  pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc
+  directory_md5: 47ee9d6365692f4ea2a896befdc0a421.dir
+- run: RUN-175
+  pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  directory_md5: b33c8fdb785160b4df3f30d0a26c4711.dir
+summary: Profile conditioning changes the calibrated TrpB landscapes but does not
+  consistently improve measured-descriptor agreement over the recorded synthetic control.
+  Some median walk and pooled-power comparisons improve; several local epistasis measures
+  and many paired seeds worsen.
+limitations:
+- One previously examined four-site TrpB system; fresh generator seeds are not new
+  biological replication.
+- Whole-library graph diagnostics include calibration nodes; they are unfitted descriptors,
+  not a disjoint genotype test.
+- Profile from rounded original frequency table; sequence weights and effective sample
+  size unknown. Reference sequences remain computational anchors.
+- Observation models are assumptions; shared-stop error is not identified from replicate
+  disagreement.
+- All optimizer searches reached the fixed 60-iteration budget; no global-optimum
+  or convergence claim.
+- Local macOS/Clang versus original Linux/Zig; matched numerical versions and checked
+  fields do not assert bitwise platform identity.
+scientific_acceptance_gate: false

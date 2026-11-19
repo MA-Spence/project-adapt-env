@@ -1,0 +1,81 @@
+id: ANA-067
+title: RUN-172 production landscape aggregate realism across empirical systems
+status: completed
+created: '2026-10-08T14:07:05+11:00'
+owner: matthew-spence
+experiments:
+- EXP-066
+runs:
+- RUN-172
+purpose: Audit the complete production bundle and communicate empirical versus synthetic
+  fitness distributions, withheld WHT spectra, diminishing returns and topology through
+  executed notebook figures, with explicit coverage and observation assumptions and
+  no scientific success gates.
+path: analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism
+notebook_record:
+  primary_notebook_path: analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-172
+  produced_artifacts:
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/01_scope_and_calibration.pdf
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/01_scope_and_calibration.png
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/02_withheld_global_statistics.pdf
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/02_withheld_global_statistics.png
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/03_all_assay_residuals.pdf
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/03_all_assay_residuals.png
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/04_distribution_examples.pdf
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/04_distribution_examples.png
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/05_trpb_observation_sensitivity.pdf
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/05_trpb_observation_sensitivity.png
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/06_resolution_and_slope_diagnostics.pdf
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/figures/06_resolution_and_slope_diagnostics.png
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/aggregate_estimates.csv
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/artifact_manifest.json
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/audit.json
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/data_bundle_audit.json
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/fit_loss_audit.csv
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/low_power_roundoff_audit.csv
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/marginal_recovery.csv
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/portable_sigmoid_parameters.json
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/primary_comparisons.csv
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/selected_parameters.csv
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/suitability_complete.csv
+  - analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism/tables/verification.json
+data_bundle: data/processed/production_landscapes/RUN-172.dvc
+verification:
+  verified_at: '2026-10-08T14:40:22.767337+11:00'
+  notebook_executed: true
+  executed_code_cells: 10
+  cell_errors: 0
+  inline_figures: 6
+  exports_per_figure:
+  - png
+  - pdf
+  figure_exports: 12
+  figures_visually_inspected: 6
+  output_hashes: 1819
+  source_hashes: 12
+  independent_statistic_rows: 179310
+  empirical_nodes: 23016
+  replayed_intrinsic_nodes: 230400
+  public_API_replayed_nodes: 368
+  fits_recomputed: 195
+  raw_data_files_md5_verified_after_execution: 1842
+  data_backup:
+    verified_objects: 1840
+    all_md5_match: true
+    directory_md5: 521d0e1b381ead592b0f47504e0f13ba.dir
+    bytes: 227667682
+    files: 1842
+    remote_store: /tank/data/labproj/projects/project-adapt-env/data/files/md5
+  checks: Numerical, execution and provenance identities, not scientific gates.
+  full_repository_strict_check: 'unavailable: historical cloud-backed file timeouts'
+  record_status_update: labproj set-status wrote ANA-067 and EXP-066 as completed;
+    both commands then exceeded the bounded eight-second wait. Targeted YAML reads
+    verified the completed statuses.
+compliance:
+  level: yellow
+  issues:
+  - ANA-067 is completed but has no linked results.

@@ -1,0 +1,6 @@
+{
+  "copied_checkpoint_directories": [],
+  "n_checkpoint_directories": 300,
+  "n_tasks": 300,
+  "workers": 8
+}

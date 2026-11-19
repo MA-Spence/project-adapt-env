@@ -1,0 +1,461 @@
+{
+  "analysis_id": "ANA-036",
+  "collection": {
+    "dvc": {
+      "md5": "bd1334082ba0a381c3bec0afc8f5a1a1.dir",
+      "nfiles": 29,
+      "path": "data/processed/phot-coupled-family-discriminating-abc/RUN-091.dvc",
+      "present": true,
+      "size": 114905657
+    },
+    "output_dir": "data/processed/phot-coupled-family-discriminating-abc/RUN-091",
+    "output_files": [
+      "PHOT_CHLRE_Chen_2023.alignment.fasta",
+      "base_correlation.csv",
+      "checkpoints/smc_empirical_module.json",
+      "checkpoints/smc_no_module.json",
+      "checkpoints/smc_random_module.json",
+      "checkpoints/smc_shuffled_module.json",
+      "checkpoints/smc_uncoupled_module.json",
+      "component_guardrail_summary.csv",
+      "empirical_readout_fit.json",
+      "evaluated_parameter_sets.csv",
+      "gft_coefficients.csv",
+      "graphlet_catalog.csv",
+      "graphlet_metrics.csv",
+      "graphlet_summary.csv",
+      "model_distances.csv",
+      "module_catalog.csv",
+      "module_energy_by_graphlet.csv",
+      "module_energy_rows.csv",
+      "module_energy_summary.csv",
+      "parameter_specs.csv",
+      "posterior_particles.csv",
+      "posterior_rounds.csv",
+      "preflight.json",
+      "progress.json",
+      "selected_family_distances.csv",
+      "selected_family_pairwise_deltas.csv",
+      "summary.json",
+      "top_model_distances.csv",
+      "walsh_terms.csv"
+    ]
+  },
+  "component_distances_test": {
+    "empirical_module": {
+      "GFT high distance": 0.0049757044311483,
+      "GFT low distance": 0.2179937762932985,
+      "GFT mid distance": 0.2600456057768017,
+      "RSE distance": 0.0312296747945976,
+      "SE distance": 0.416049009266708,
+      "WHT high-order distance": 0.1710942413930959,
+      "accessibility distance": 0.8424063477129278,
+      "lag-1 autocorr distance": 0.1419194905769006,
+      "local maxima distance": 0.211856799303518
+    },
+    "empirical_readout_residual": {
+      "GFT high distance": 0.0479735461110511,
+      "GFT low distance": 0.4278794455781385,
+      "GFT mid distance": 0.558629181937728,
+      "RSE distance": 0.1014964430824428,
+      "SE distance": 0.2369550648803769,
+      "WHT high-order distance": 0.4168134545534617,
+      "accessibility distance": 0.2802579257572077,
+      "lag-1 autocorr distance": 0.3457055659373574,
+      "local maxima distance": 0.0211856799303517
+    },
+    "fitted_current": {
+      "GFT high distance": 0.1554579504844776,
+      "GFT low distance": 0.4387087688873193,
+      "GFT mid distance": 0.4018979220159277,
+      "RSE distance": 0.1925829945666866,
+      "SE distance": 0.3692090545810528,
+      "WHT high-order distance": 0.4387087688891428,
+      "accessibility distance": 0.7966943753564123,
+      "lag-1 autocorr distance": 0.3971639497385973,
+      "local maxima distance": 0.4237135986070358
+    },
+    "fitted_current_posterior_mean": {
+      "GFT high distance": 0.2423615531035737,
+      "GFT low distance": 0.5162789975645985,
+      "GFT mid distance": 0.4233495336106093,
+      "RSE distance": 0.0156148373972988,
+      "SE distance": 0.4077831349104163,
+      "WHT high-order distance": 0.5162784228454804,
+      "accessibility distance": 0.8391412068303196,
+      "lag-1 autocorr distance": 0.625223130495095,
+      "local maxima distance": 0.3813422387463323
+    },
+    "gnk_local_null": {
+      "GFT high distance": 0.5046598476888137,
+      "GFT low distance": 1.2212685706249782,
+      "GFT mid distance": 1.90149850374817,
+      "RSE distance": 0.6115811313942058,
+      "SE distance": 0.8789379732190724,
+      "WHT high-order distance": 0.7306725462804302,
+      "accessibility distance": 0.9175045880129176,
+      "lag-1 autocorr distance": 0.0684238200619549,
+      "local maxima distance": 0.5720133581194984
+    },
+    "no_module": {
+      "GFT high distance": 0.150151217507034,
+      "GFT low distance": 0.3556070931579181,
+      "GFT mid distance": 0.3056127591765387,
+      "RSE distance": 0.0390370934932474,
+      "SE distance": 0.3912513861978319,
+      "WHT high-order distance": 0.2820315160400776,
+      "accessibility distance": 0.845671488595536,
+      "lag-1 autocorr distance": 0.4322013000149811,
+      "local maxima distance": 0.3389708788856286
+    },
+    "random_module": {
+      "GFT high distance": 0.0898760398129981,
+      "GFT low distance": 0.0214856924986821,
+      "GFT mid distance": 0.1010822124411996,
+      "RSE distance": 0.3877684620329219,
+      "SE distance": 0.6364723254345006,
+      "WHT high-order distance": 0.0078343946985949,
+      "accessibility distance": 0.528952822982536,
+      "lag-1 autocorr distance": 0.0783244684146199,
+      "local maxima distance": 0.4448992785373877
+    },
+    "residual_only_diagnostic": {
+      "GFT high distance": 0.82591984569647,
+      "GFT low distance": 2.2774776013213884,
+      "GFT mid distance": 0.9934231029451774,
+      "RSE distance": 1.93623983726506,
+      "SE distance": 4.876865870212408,
+      "WHT high-order distance": 1.388681226002485,
+      "accessibility distance": 0.9283883909549452,
+      "local maxima distance": 8.177672453115791
+    },
+    "shuffled_module": {
+      "GFT high distance": 0.2229304907964642,
+      "GFT low distance": 0.3026849636300648,
+      "GFT mid distance": 0.1807058086191907,
+      "RSE distance": 0.2732596544527302,
+      "SE distance": 0.4711548383086569,
+      "WHT high-order distance": 0.2809338100031076,
+      "accessibility distance": 0.7139774729970034,
+      "lag-1 autocorr distance": 0.2905187589184921,
+      "local maxima distance": 0.4448992785373877
+    },
+    "smooth_core": {
+      "GFT high distance": 0.1554579504844776,
+      "GFT low distance": 0.4387087688873193,
+      "GFT mid distance": 0.4018979220159277,
+      "RSE distance": 0.1925829945666866,
+      "SE distance": 0.3692090545810528,
+      "WHT high-order distance": 0.4387087688891428,
+      "accessibility distance": 0.7966943753564123,
+      "lag-1 autocorr distance": 0.4901631682419498,
+      "local maxima distance": 0.4237135986070358
+    },
+    "uncoupled_module": {
+      "GFT high distance": 0.0502324134901766,
+      "GFT low distance": 0.051162745469268,
+      "GFT mid distance": 0.1039490491228894,
+      "RSE distance": 0.471047594818516,
+      "SE distance": 0.4711548383086569,
+      "WHT high-order distance": 0.0245752579815275,
+      "accessibility distance": 0.3080116232593778,
+      "lag-1 autocorr distance": 0.0033026723568989,
+      "local maxima distance": 0.5296419982587948
+    }
+  },
+  "decision": {
+    "abc_empirical_module_beats_fitted_current": true,
+    "abc_empirical_module_beats_no_module": true,
+    "abc_empirical_module_beats_random_module": false,
+    "abc_empirical_module_beats_shuffled_module": true,
+    "abc_empirical_module_beats_smooth_core": true,
+    "abc_empirical_module_beats_uncoupled_module": false,
+    "empirical_module_component_guardrails_pass": true,
+    "empirical_module_energy_localized": false,
+    "no_module_beats_fitted_current": true,
+    "no_module_beats_smooth_core": true,
+    "passes_specificity_controls": false,
+    "supports_hyp008": false,
+    "weakens_hyp008": true
+  },
+  "experiment_id": "EXP-036",
+  "module_energy_selected_test": {
+    "empirical module": {
+      "edge effective modules": 10.95725594447792,
+      "edge normalized entropy": 0.9813079258645904,
+      "edge top10 energy fraction": 0.25180406279097,
+      "plaquette effective modules": 9.11424682239412,
+      "plaquette normalized entropy": 0.9373831988048932,
+      "plaquette top10 energy fraction": 0.3305724921767591
+    },
+    "empirical readout residual": {
+      "edge effective modules": 11.54756961270452,
+      "edge normalized entropy": 0.992099868670205,
+      "edge top10 energy fraction": 0.2151099295922245,
+      "plaquette effective modules": 9.72126837730114,
+      "plaquette normalized entropy": 0.9520938312624844,
+      "plaquette top10 energy fraction": 0.2840712228606495
+    },
+    "random module": {
+      "edge effective modules": 8.823257324463407,
+      "edge normalized entropy": 0.9254111222279228,
+      "edge top10 energy fraction": 0.3324776826388727,
+      "plaquette effective modules": 2.9795176958869294,
+      "plaquette normalized entropy": 0.585799256981186,
+      "plaquette top10 energy fraction": 0.7064590233707195
+    },
+    "shuffled module": {
+      "edge effective modules": 8.520308279094367,
+      "edge normalized entropy": 0.9094769650244938,
+      "edge top10 energy fraction": 0.3485261710901359,
+      "plaquette effective modules": 4.05262579951635,
+      "plaquette normalized entropy": 0.6892782060770486,
+      "plaquette top10 energy fraction": 0.6800223475207098
+    },
+    "uncoupled module": {
+      "edge effective modules": 11.765606176642722,
+      "edge normalized entropy": 0.9960036350967983,
+      "edge top10 energy fraction": 0.2041744432449366,
+      "plaquette effective modules": 9.712211941482494,
+      "plaquette normalized entropy": 0.9535569386742084,
+      "plaquette top10 energy fraction": 0.3042772230236607
+    }
+  },
+  "preflight": {
+    "assay_id": "PHOT_CHLRE_Chen_2023",
+    "base_anchors": [
+      "fitted_current_best",
+      "fitted_smooth_core_only"
+    ],
+    "fit_families": [
+      "no_module",
+      "empirical_module",
+      "random_module",
+      "shuffled_module",
+      "uncoupled_module"
+    ],
+    "graphlet_dimensions": [
+      4,
+      5,
+      6
+    ],
+    "mode": "discriminating_abc_over_run079_coupled_family_controls",
+    "module_counts": {
+      "empirical_calibration_plaquette": 12,
+      "none": 0,
+      "random_module": 12,
+      "shuffled_module": 12,
+      "uncoupled_empirical_module": 12
+    },
+    "n_calibration_graphlets": 12,
+    "n_graphlets": 24,
+    "n_test_graphlets": 12,
+    "primary_score_column": "latent_phi",
+    "readout_base_anchor": "fitted_current_best",
+    "run077_phot_best_objective": 10.253823213086244,
+    "score_columns": [
+      "latent_phi"
+    ],
+    "source_output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-091/project/data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077",
+    "source_result": "RES-030",
+    "source_run_id": "RUN-077"
+  },
+  "primary_evidence": {
+    "all_distances": {
+      "empirical_module": 0.3172742198704142,
+      "empirical_readout_residual": 0.3627816223112989,
+      "fitted_current": 0.4908576675228883,
+      "fitted_current_posterior_mean": 0.552665450403762,
+      "gnk_local_null": 0.7706923170371047,
+      "no_module": 0.3409440621204784,
+      "random_module": 0.2752213740828983,
+      "residual_only_diagnostic": 2.6406677731580857,
+      "shuffled_module": 0.3744367122468166,
+      "smooth_core": 0.5025859467594308,
+      "uncoupled_module": 0.263679405357467
+    },
+    "calibration_distances": {
+      "empirical_module": 0.4451543105705086,
+      "empirical_readout_residual": 0.5428315712874023,
+      "fitted_current": 0.7318364284769245,
+      "fitted_current_posterior_mean": 0.783857184804536,
+      "gnk_local_null": 0.7759481070834795,
+      "no_module": 0.3886233255911335,
+      "random_module": 0.3791451107169045,
+      "residual_only_diagnostic": 2.709940149134871,
+      "shuffled_module": 0.4389299747921745,
+      "smooth_core": 0.7453777545039357,
+      "uncoupled_module": 0.3785068775006553
+    },
+    "empirical_module_delta_vs_fitted_current": -0.1462851926197395,
+    "empirical_module_delta_vs_no_module": -0.0936626759466441,
+    "empirical_module_delta_vs_random_module": 9.72169661728195e-05,
+    "empirical_module_delta_vs_shuffled_module": -0.0981660474126779,
+    "empirical_module_delta_vs_smooth_core": -0.156618439120112,
+    "empirical_module_delta_vs_uncoupled_module": 0.0316102729425433,
+    "no_module_delta_vs_fitted_current": -0.0526225166730953,
+    "no_module_delta_vs_smooth_core": -0.0629557631734679,
+    "test_distances": {
+      "empirical_module": 0.2552856277276663,
+      "empirical_readout_residual": 0.2707662564186795,
+      "fitted_current": 0.4015708203474057,
+      "fitted_current_posterior_mean": 0.4408192283893026,
+      "gnk_local_null": 0.822951148794449,
+      "no_module": 0.3489483036743104,
+      "random_module": 0.2551884107614934,
+      "residual_only_diagnostic": 2.6755835409392157,
+      "shuffled_module": 0.3534516751403442,
+      "smooth_core": 0.4119040668477783,
+      "uncoupled_module": 0.2236753547851229
+    },
+    "uncoupled_module_delta_vs_empirical_module": -0.0316102729425433
+  },
+  "raw_test_metric_means": {
+    "empirical_module": {
+      "GFT high": 0.1561381203747113,
+      "GFT low": 0.5617552108429295,
+      "GFT mid": 0.2821066687823601,
+      "RSE fraction": 0.2625,
+      "SE fraction": 0.5621527777777778,
+      "WHT high-order": 0.4254522351213642,
+      "accessibility": 0.018287037037037,
+      "active modules": 10.583333333333334,
+      "lag-1 autocorr": 0.1562977241704306,
+      "local maxima": 4.333333333333333
+    },
+    "empirical_readout_residual": {
+      "GFT high": 0.1461881375475811,
+      "GFT low": 0.5045057355282075,
+      "GFT mid": 0.3493061269242114,
+      "RSE fraction": 0.2447916666666666,
+      "SE fraction": 0.6444444444444445,
+      "WHT high-order": 0.4924758488636025,
+      "accessibility": 0.1378472222222222,
+      "active modules": null,
+      "lag-1 autocorr": 0.1071790508097734,
+      "local maxima": 5.25
+    },
+    "empirical_target": {
+      "GFT high": 0.1552031085825549,
+      "GFT low": 0.6212162943804115,
+      "GFT mid": 0.2235805970370335,
+      "RSE fraction": 0.2583333333333333,
+      "SE fraction": 0.6145833333333334,
+      "WHT high-order": 0.3787837056190819,
+      "accessibility": 0.1974537037037036,
+      "active modules": null,
+      "lag-1 autocorr": 0.1905046595011568,
+      "local maxima": 5.166666666666667
+    },
+    "fitted_current": {
+      "GFT high": 0.1844160610195046,
+      "GFT low": 0.5015518746020349,
+      "GFT mid": 0.31403206437846,
+      "RSE fraction": 0.2326388888888888,
+      "SE fraction": 0.5680555555555555,
+      "WHT high-order": 0.4984481253979647,
+      "accessibility": 0.0280092592592592,
+      "active modules": null,
+      "lag-1 autocorr": 0.0947760073676261,
+      "local maxima": 3.5
+    },
+    "fitted_current_posterior_mean": {
+      "GFT high": 0.200746591571332,
+      "GFT low": 0.4803934272104197,
+      "GFT mid": 0.31885998121825,
+      "RSE fraction": 0.25625,
+      "SE fraction": 0.5631944444444444,
+      "WHT high-order": 0.5196064160257944,
+      "accessibility": 0.0189814814814814,
+      "active modules": null,
+      "lag-1 autocorr": 0.039806773642194,
+      "local maxima": 3.6666666666666665
+    },
+    "gnk_local_null": {
+      "GFT high": 0.0603697206379245,
+      "GFT low": 0.2880969102658408,
+      "GFT mid": 0.6515333690962347,
+      "RSE fraction": 0.1767361111111111,
+      "SE fraction": 0.5038194444444445,
+      "WHT high-order": 0.1794817711708544,
+      "accessibility": 0.0023148148148148,
+      "active modules": null,
+      "lag-1 autocorr": 0.1740124273318743,
+      "local maxima": 2.9166666666666665
+    },
+    "no_module": {
+      "GFT high": 0.1834188438454551,
+      "GFT low": 0.5242191074316658,
+      "GFT mid": 0.2923620487228783,
+      "RSE fraction": 0.253125,
+      "SE fraction": 0.5652777777777778,
+      "WHT high-order": 0.4557120465130899,
+      "accessibility": 0.0175925925925925,
+      "active modules": 0.0,
+      "lag-1 autocorr": 0.0863309349523272,
+      "local maxima": 3.8333333333333335
+    },
+    "random_module": {
+      "GFT high": 0.1383140111250358,
+      "GFT low": 0.6153557483673643,
+      "GFT mid": 0.246330240507601,
+      "RSE fraction": 0.2065972222222222,
+      "SE fraction": 0.534375,
+      "WHT high-order": 0.3766467565485175,
+      "accessibility": 0.0849537037037037,
+      "active modules": 4.0,
+      "lag-1 autocorr": 0.1716260684423717,
+      "local maxima": 3.4166666666666665
+    },
+    "residual_only_diagnostic": {
+      "GFT high": 0.0,
+      "GFT low": 0.0,
+      "GFT mid": 0.0,
+      "RSE fraction": 0.0,
+      "SE fraction": 0.0,
+      "WHT high-order": 0.0,
+      "accessibility": 0.0,
+      "active modules": null,
+      "lag-1 autocorr": null,
+      "local maxima": 37.333333333333336
+    },
+    "shuffled_module": {
+      "GFT high": 0.1970951945394788,
+      "GFT low": 0.5386544147984379,
+      "GFT mid": 0.264250390662085,
+      "RSE fraction": 0.221875,
+      "SE fraction": 0.5552083333333333,
+      "WHT high-order": 0.4554126306697859,
+      "accessibility": 0.0456018518518518,
+      "active modules": 2.9166666666666665,
+      "lag-1 autocorr": 0.1204807582153583,
+      "local maxima": 3.4166666666666665
+    },
+    "smooth_core": {
+      "GFT high": 0.1844160610195046,
+      "GFT low": 0.5015518746020349,
+      "GFT mid": 0.31403206437846,
+      "RSE fraction": 0.2326388888888888,
+      "SE fraction": 0.5680555555555555,
+      "WHT high-order": 0.4984481253979647,
+      "accessibility": 0.0280092592592592,
+      "active modules": null,
+      "lag-1 autocorr": 0.0723603529693426,
+      "local maxima": 3.5
+    },
+    "uncoupled_module": {
+      "GFT high": 0.1457636614426143,
+      "GFT low": 0.6072608854963433,
+      "GFT mid": 0.2469754530610434,
+      "RSE fraction": 0.1954861111111111,
+      "SE fraction": 0.5552083333333333,
+      "WHT high-order": 0.3720804341191248,
+      "accessibility": 0.1319444444444444,
+      "active modules": 10.583333333333334,
+      "lag-1 autocorr": 0.1913007044930869,
+      "local maxima": 3.0833333333333335
+    }
+  },
+  "run_id": "RUN-091",
+  "summary": "ABC fitting improves the PHOT held-out graphlet distance for the empirical-module family relative to fitted-current, smooth-core, no-module, and shuffled-module controls, but it does not pass the random-module or uncoupled-module specificity controls; selected empirical module energy remains diffuse."
+}

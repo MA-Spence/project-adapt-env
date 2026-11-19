@@ -1,0 +1,21 @@
+{
+  "queue": "JOBID|NAME|STATE|TIME|NODELIST(REASON)\n",
+  "sha256": {
+    "scripts/observation_calibration_exp065.py": "ab7458b312ff73710fb8e25c51c9104edc7a073a1d1e50ba342891e3e81c8502",
+    "scripts/replicate_observation_exp065.py": "e184de7a29a505af115bc4e3abf88a021f2c323c46e7b2d8bceed4fe9653dc0e",
+    "external/Adapt-Env/adaptenv/thermodynamic.py": "a4709589f1c438abe4a3ae7770f7e2f7d72d6a6aec3279e6d36be290ff084e67",
+    "tests/test_observation_calibration_exp065.py": "4090923e5df0db79fc6135dd6cc545664226ddb7189b11dcb7db1d4215b2ad69",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/observation_calibration.yaml": "b54eceee62797c1c43e5a2b0ecffefc43b3774424f7f4f33b57da6631f2cd2b8",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/observation_calibration.md": "e67dfc3af8be53f54c6a396730c81d17437c5944ce6b59178844ef4f276c9466",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh": "fc995c8258e7e56d54a7b33a8fa725c43c0014df14daef828ad9c24158655967"
+  },
+  "logs": {
+    "labproj-exit-code.txt": "0\n",
+    "stdout.txt": "FIT independent_difference r4_linear {\"quantile\": 0.9981377023194257, \"mean_sd\": 0.0037095892144835482, \"floor_cdf\": 0.013876333832740784, \"total\": 1.01572362536665}\nFIT independent_difference r4_sigmoid {\"quantile\": 0.03238094827962745, \"mean_sd\": 0.014651173267255022, \"floor_cdf\": 0.0005044937133789062, \"total\": 0.04753661526026138}\nFIT independent_difference r0_sigmoid {\"quantile\": 0.06983401026018153, \"mean_sd\": 0.026709676291124085, \"floor_cdf\": 2.504885196685791e-05, \"total\": 0.09656873540327247}\nFIT shared_stop_sensitivity r4_linear {\"quantile\": 0.47605862817807865, \"mean_sd\": 0.005997049514313003, \"floor_cdf\": 0.005030050873756409, \"total\": 0.48708572856614807}\nFIT shared_stop_sensitivity r4_sigmoid {\"quantile\": 0.007647517070947056, \"mean_sd\": 0.0002953941625701452, \"floor_cdf\": 2.2664666175842285e-05, \"total\": 0.007965575899693043}\nFIT shared_stop_sensitivity r0_sigmoid {\"quantile\": 0.010522236954012786, \"mean_sd\": 0.005358585132328557, \"floor_cdf\": 7.301568984985352e-07, \"total\": 0.01588155224323984}\nCOMPLETE {\"protocol\": \"observation_aware_calibration_v1\", \"mode\": \"PRODUCTION\", \"elapsed_seconds\": 60.8633603323251, \"python\": \"3.11.15\", \"numpy\": \"2.4.4\", \"empirical_cubes\": 128, \"calibration_cubes\": 64, \"confirmation_cubes\": 64, \"excluded_genotypes\": 3712, \"fitted_settings\": 6, \"interpretation\": \"Aggregate resemblance on four-site TrpB cubes; no interaction recovery, unique thermodynamics, or all-length transfer claim.\"}\n",
+    "stderr.txt": ""
+  },
+  "source_hashes_match": true,
+  "numerical_tests": "12 passed",
+  "input_checksums_verified": 7,
+  "verified_at": "2026-10-08T10:04:19.276574+11:00"
+}

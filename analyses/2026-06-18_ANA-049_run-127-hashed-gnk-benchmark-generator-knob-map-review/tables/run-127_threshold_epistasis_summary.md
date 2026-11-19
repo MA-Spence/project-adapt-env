@@ -1,0 +1,17 @@
+| epi_weight | threshold_band | n_rows | mean_abs_pairwise_epistasis | mean_sign_epistasis_fraction | mean_reciprocal_sign_epistasis_fraction |
+| --- | --- | --- | --- | --- | --- |
+| 0 | deep_stable | 18 | 0.068974 | 0 | 0 |
+| 0 | deep_unstable | 27 | 0.0538931 | 0 | 0 |
+| 0 | fold_transition | 18 | 0.041451 | 0 | 0 |
+| 0.15 | deep_stable | 18 | 0.0688447 | 0 | 0 |
+| 0.15 | deep_unstable | 28 | 0.055517 | 0 | 0 |
+| 0.15 | fold_transition | 22 | 0.0636018 | 0 | 0 |
+| 0.3 | deep_stable | 26 | 0.0829463 | 0.0541266 | 0.00152349 |
+| 0.3 | deep_unstable | 36 | 0.067828 | 0.0665504 | 0.00251949 |
+| 0.3 | fold_transition | 36 | 0.0911503 | 0.0728646 | 0.00382193 |
+| 0.6 | deep_stable | 31 | 0.132753 | 0.30464 | 0.0705741 |
+| 0.6 | deep_unstable | 42 | 0.11866 | 0.322694 | 0.0631193 |
+| 0.6 | fold_transition | 38 | 0.163806 | 0.305756 | 0.0622794 |
+| 1.0000 | deep_stable | 41 | 0.216769 | 0.454132 | 0.159299 |
+| 1.0000 | deep_unstable | 48 | 0.178429 | 0.438437 | 0.111862 |
+| 1.0000 | fold_transition | 48 | 0.24625 | 0.424771 | 0.10257 |

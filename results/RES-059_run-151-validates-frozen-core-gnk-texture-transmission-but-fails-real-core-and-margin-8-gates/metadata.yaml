@@ -1,0 +1,42 @@
+id: RES-059
+title: RUN-151 validates frozen-core GNK texture transmission but fails real-core
+  and margin-8 gates
+status: completed
+created: '2026-07-23T08:29:58+10:00'
+owner: matthew-spence
+analyses:
+- ANA-059
+experiments:
+- EXP-061
+runs:
+- RUN-151
+supports: []
+weakens:
+- HYP-005
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-151 completed the full EXP-061 assay and passed all 12 technical checks
+  but only 13/16 required checks overall, issuing SIGMOID_TRANSFER_FAILED. Pointwise
+  scalar transfer and frozen-core candidate texture pass; common-threshold real-core
+  edge coverage, actual-core texture, and margin-8 deployment fail. The sigmoid can
+  carry normalized GNK texture, but real additive-core motion leaves almost all tested
+  mutations outside the dynamic window and actual-core square texture below practical
+  resolution. This weakens HYP-005 at the observable protein-scale boundary without
+  testing the current public generator end to end.
+artifacts: []
+evidence_paths:
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/metrics.json
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_acceptance_audit.csv
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_collection_audit.csv
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_deployment_margin_comparison_by_length.csv
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_pointwise_transfer_by_length.csv
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_protocol_output_audit.csv
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_reference_anchored_edge_by_length.csv
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_scale_law_summary.csv
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_source_hash_audit.csv
+- analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_texture_transmission_by_length.csv
+- data/processed/operator-normalized-gnk-sigmoid-transmission-paired-residual-validation/RUN-151.dvc
+compliance:
+  level: green
+  issues: []

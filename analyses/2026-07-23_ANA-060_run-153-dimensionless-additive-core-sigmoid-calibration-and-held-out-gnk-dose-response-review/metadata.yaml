@@ -1,0 +1,36 @@
+id: ANA-060
+title: RUN-153 dimensionless additive-core sigmoid calibration and held-out GNK dose-response
+  review
+status: completed
+created: '2026-07-23T13:48:06+10:00'
+owner: matthew-spence
+experiments:
+- EXP-062
+runs:
+- RUN-153
+purpose: Collect and independently audit completed RUN-153 against the preregistered
+  EXP-062 core-only calibration, held-out core, paired-residual transmission, dose-directionality,
+  length-stability, control, and provenance gates without post hoc retuning.
+path: analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review
+notebook_record:
+  primary_notebook_path: analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-153
+  produced_artifacts:
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/metrics.json
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_ablation_by_length.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_acceptance_audit.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_collection_audit.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_core_calibration_by_length.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_directionality_by_length.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_dose_curve.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_heldout_core_by_length.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_protocol_output_audit.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_scale_law_summary.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_source_hash_audit.csv
+  - analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review/tables/run-153_transmission_by_length.csv
+compliance:
+  level: green
+  issues: []

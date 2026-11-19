@@ -1,0 +1,6 @@
+outs:
+- md5: ad4e31a4a5704520d0a4be2cab9fa281.dir
+  size: 90025877
+  nfiles: 15
+  hash: md5
+  path: trpb-replicate-observation-exp065

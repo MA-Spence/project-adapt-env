@@ -1,0 +1,68 @@
+run: RUN-160
+target: lab-slurm
+experiment: EXP-064
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-07-24_EXP-064_observable-ruggedness-coverage-probe
+  run_script: experiments/2026-07-24_EXP-064_observable-ruggedness-coverage-probe/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - PROJECT_STATE.md
+  - scratch/RES-061_exp064_observable_ruggedness_coverage_probe_spec.md
+  - results/RES-050_run-135-empirical-ensemble-descriptor-envelope-reference-bands/result.md
+  - results/RES-051_run-136-protein-scale-gnk-reachability-weakens-directional-knob-claim/result.md
+  - results/RES-052_run-137-calibrated-overlap-tier1-contact-not-public-model-specific/result.md
+  - results/RES-054_run-139-heldout-descriptor-generalisation-not-validated/result.md
+  - results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission/result.md
+  - results/RES-059_run-151-validates-frozen-core-gnk-texture-transmission-but-fails-real-core-and-margin-8-gates/result.md
+  - results/RES-060_run-153-validates-global-core-calibration-and-edge-transfer-but-fails-gnk-texture-prevalence/result.md
+  - results/RES-061_run-157-binary-rank-8-representation-rescues-gnk-texture-prevalence-on-fixed-challenge-panel/result.md
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_empirical_key_bands.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_graphlet_dataset_medians.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/source_tables/run-135_graphlet_metrics.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/source_tables/run-135_descriptor_scope_audit.csv
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - scripts/observable_ruggedness_coverage_probe_exp064.py
+  - scripts/categorical_representation_rank_rescue_exp063.py
+  - scripts/design_matched_support_aware_probe_exp057.py
+  - scripts/ensemble_landscape_validation_stage4.py
+  - scripts/dimensionless_sigmoid_calibration_exp062.py
+  - src/project_adapt_env/ranked_categorical_gnk.py
+  - src/project_adapt_env/extensive_gnk.py
+  - src/project_adapt_env/dense_descriptive.py
+  - tests/test_observable_ruggedness_coverage_probe_exp064.py
+  - tests/test_ranked_categorical_gnk.py
+  - external/Adapt-Env/.config.yaml
+  - external/Adapt-Env/adaptenv/landscape.py
+  datasets: []
+outputs:
+  expected:
+  - preflight.json
+  - template_catalog.csv
+  - support_catalog.csv
+  - support_aware_graphlet_audit.csv
+  - empirical_bands_resolved.csv
+  - generated_descriptor_metrics.csv
+  - coverage_matrix.csv
+  - rugged_end_reachability.csv
+  - specificity_table.csv
+  - selected_operating_region.csv
+  - technical_checks.csv
+  - checkpoint_resume_summary.json
+  - decision_table.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-160/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-160
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-160/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-160/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-160
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-160/project/experiments/2026-07-24_EXP-064_observable-ruggedness-coverage-probe/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-160/project/experiments/2026-07-24_EXP-064_observable-ruggedness-coverage-probe/runs/RUN-160.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

@@ -1,0 +1,149 @@
+{
+  "analysis_id": "ANA-058",
+  "candidate_field_and_distance_scaling": {
+    "analytic_field_variance_slope": 0.9950763277055016,
+    "reference_shell_fixed_distance_slopes": {
+      "fixed_1": -0.001480565221747935,
+      "fixed_2": 0.0019644854564756,
+      "fixed_4": 0.0040630614760103,
+      "fixed_8": 0.0459727933312433
+    },
+    "reference_shell_fractional_rms_slopes": {
+      "fraction_0.1": 0.4819628512455381,
+      "fraction_0.5": 0.4303381144146845
+    },
+    "reference_shell_fractional_sd_slopes": {
+      "fraction_0.1": 0.4916182569015756,
+      "fraction_0.5": 0.495854470052352
+    },
+    "reference_shell_fractional_seed_slope_summary": {
+      "fraction_0.1": {
+        "fraction_in_registered_band": 1.0,
+        "in_registered_band": 30,
+        "maximum": 0.5581343680725086,
+        "median": 0.47392525376782946,
+        "minimum": 0.379567568627279,
+        "total": 30
+      },
+      "fraction_0.5": {
+        "fraction_in_registered_band": 0.8,
+        "in_registered_band": 24,
+        "maximum": 0.5947556209837522,
+        "median": 0.4706694096295512,
+        "minimum": 0.23993640302085398,
+        "total": 30
+      }
+    },
+    "uniform_background_fractional_ratio_slopes": {
+      "fraction_0.1": -0.0052553931290397,
+      "fraction_0.5": -0.0069161156044587
+    },
+    "variance_per_length_cv": 0.006415577658324364
+  },
+  "checks": {
+    "advisory": {
+      "passed": 2,
+      "total": 2
+    },
+    "required": {
+      "passed": 26,
+      "total": 26
+    }
+  },
+  "decision": "LATENT_GNK_EXTENSIVE_SCALE_LAW_VALIDATED",
+  "diagnostic_comparator": {
+    "legacy_L448_median_uncovered_sites_by_order": {
+      "2": 244.5,
+      "3": 138.5,
+      "4": 223.5
+    },
+    "legacy_support_local_normalized": {
+      "empirical_field_variance_slope": 0.9939667566414623,
+      "reference_shell_delta_fraction_0.1_slope": 0.47074388394280064,
+      "reference_shell_delta_fraction_0.5_slope": 0.47841082707329363,
+      "uniform_background_delta_fraction_0.1_slope": 0.4980901965156727,
+      "uniform_background_delta_fraction_0.5_slope": 0.49518180553767205
+    },
+    "tail_by_arm": {
+      "extensive_balanced_bounded": {
+        "maximum": 4.141705153897638,
+        "median": 3.085673147868932,
+        "p95": 3.5999781168032015
+      },
+      "legacy_public_global_fixed": {
+        "maximum": 80.11288590477429,
+        "median": 9.402093565871184,
+        "p95": 29.586201142224397
+      },
+      "legacy_support_local_normalized": {
+        "maximum": 80.11288590477425,
+        "median": 9.402093565871182,
+        "p95": 29.586201142224397
+      }
+    }
+  },
+  "execution": {
+    "checkpoints": 180,
+    "exit_code": 0,
+    "metric_rows": 32400,
+    "pair_designs": 2160,
+    "references": 6,
+    "seeds": 30,
+    "stderr_bytes": 0,
+    "tasks": 180
+  },
+  "experiment_id": "EXP-060",
+  "local_scale": {
+    "candidate_bootstrap_ci": [
+      -0.0124041823575019,
+      0.0064527005608902
+    ],
+    "candidate_length_median_ratios": {
+      "118": 1.00964849112516,
+      "220": 0.9911901234725076,
+      "238": 1.0120057737868482,
+      "448": 0.9948144364053159,
+      "48": 1.011505881709462,
+      "93": 1.0042086574842914
+    },
+    "candidate_seed_fraction_in_0.70_1.30": 1.0,
+    "candidate_slope": -0.006316026199129292,
+    "legacy_public_slope": -0.5103641362590605,
+    "legacy_support_local_normalized_slope": -0.013144973880000204
+  },
+  "run_id": "RUN-149",
+  "scientific_pass": true,
+  "scope_and_deviations": {
+    "component_necessity_ablated": false,
+    "deterministic_replay_is_same_platform": true,
+    "fixed_distance_h1_independent_slope": -0.001480565221747935,
+    "fixed_distance_h1_omitted_from_runner_gate": true,
+    "implementation_hash_excludes_adaptenv_dependency": true,
+    "latent_only": true,
+    "observable_fitness_tested": false,
+    "order_share_columns_are_mutation_energy_not_field_variance": true,
+    "protein_identity_confounded_with_length": true,
+    "public_model_changed": false,
+    "sigmoid_transmission_tested": false
+  },
+  "structure": {
+    "actual_uniform_background_field_variance_shares_by_order": {
+      "2": 0.4666666666666666,
+      "3": 0.39999999999999997,
+      "4": 0.13333333333333333
+    },
+    "contrast_max_abs": 1.0,
+    "contrast_substitution_energy_error": 8.881784197001252e-16,
+    "curvature_slopes_by_order": {
+      "2": -0.0006984436739037817,
+      "3": -0.047337837673716306,
+      "4": -0.03969680398023364
+    },
+    "maximum_order_mutation_energy_share_error": 0.009062376803419314,
+    "minimum_supported_pair_curvature_rms": 0.3401223642659777,
+    "support_duplicate_fraction": 0.0,
+    "support_max_degree_cv": 0.0183955872122316,
+    "support_max_degree_range": 1,
+    "support_uncovered_sites": 0
+  }
+}

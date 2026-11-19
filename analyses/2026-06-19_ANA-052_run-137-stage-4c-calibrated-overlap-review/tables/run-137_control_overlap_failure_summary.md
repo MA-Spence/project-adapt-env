@@ -1,0 +1,5 @@
+| model_family | n_control_overlap_failure_rows |
+| --- | --- |
+| additive_core_only_observable | 1890 |
+| bare_gnk_texture | 1890 |
+| effective_stability_margin | 1890 |

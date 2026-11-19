@@ -1,0 +1,39 @@
+id: RES-037
+title: RUN-093 PHOT localized ruggedness is real but not empirical-module specific
+status: completed
+created: '2026-05-17T14:40:41+10:00'
+owner: Codex
+analyses:
+- ANA-037
+experiments:
+- EXP-037
+runs:
+- RUN-093
+supports: []
+weakens:
+- HYP-008
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-093 finds that empirical PHOT graphlets and the empirical readout residual
+  show stronger local Dirichlet-energy concentration than fitted current/smooth-core
+  controls, but the RUN-091 empirical-module ABC candidate and empirical calibration
+  modules do not uniquely explain that localization. No-module, random-module, uncoupled,
+  residual, and GNK controls are competitive or better on key localization metrics,
+  so the result weakens the current empirical-module implementation of HYP-008 while
+  preserving a narrower residual-localization diagnosis.
+artifacts:
+- results/RES-037_run-093-phot-localized-ruggedness-not-empirical-module-specific/metrics.json
+- data/processed/phot-localized-ruggedness-energy-diagnostic/RUN-093.dvc
+evidence_paths:
+- analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/metrics.json
+- analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_hyp008_decision_table.md
+- analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_preflight_and_collection_audit.md
+- analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_test_innovation_localization_summary.md
+- analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_test_module_enrichment_summary.md
+- analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_test_total_localization_summary.md
+- results/RES-037_run-093-phot-localized-ruggedness-not-empirical-module-specific/metrics.json
+- data/processed/phot-localized-ruggedness-energy-diagnostic/RUN-093.dvc
+compliance:
+  level: green
+  issues: []

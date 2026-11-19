@@ -1,0 +1,33 @@
+id: ANA-052
+title: RUN-137 Stage 4C calibrated overlap review
+status: completed
+created: '2026-06-19T07:12:31+10:00'
+owner: matthew-spence
+experiments:
+- EXP-054
+runs:
+- RUN-137
+purpose: Collect and interpret RUN-137 empirical coverage, posterior knob-region,
+  and control-overlap tables.
+path: analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-137
+  produced_artifacts:
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/metrics.json
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_best_overlap_by_dataset.csv
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_best_overlap_by_dataset.md
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_control_overlap_failure_summary.csv
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_control_overlap_failure_summary.md
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_coverage_by_model_family.csv
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_coverage_by_model_family.md
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_output_collection_audit.csv
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_output_collection_audit.md
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_posterior_by_model_family.csv
+  - analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_posterior_by_model_family.md
+compliance:
+  level: green
+  issues: []

@@ -1,3 +1,7 @@
 [submodule "external/Adapt-Env"]
 	path = external/Adapt-Env
 	url = https://github.com/MA-Spence/Adapt-Env.git
+[submodule "external/landscapy"]
+	path = external/landscapy
+	url = https://github.com/RSCJacksonLab/landscapy
+	branch = dev

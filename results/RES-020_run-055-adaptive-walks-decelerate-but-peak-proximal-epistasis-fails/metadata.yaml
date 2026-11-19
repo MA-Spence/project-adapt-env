@@ -1,0 +1,43 @@
+id: RES-020
+title: RUN-055 adaptive walks decelerate but peak-proximal epistasis does not validate
+  HYP-004
+status: completed
+created: '2026-05-15T07:26:30+10:00'
+owner: matthew-spence
+analyses:
+- ANA-020
+experiments:
+- EXP-020
+runs:
+- RUN-055
+supports: []
+weakens:
+- HYP-004
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-055 supports two narrow HYP-004 expectations, adaptive-walk deceleration
+  and declining beneficial fraction near higher-fitness backgrounds, but only 2/7
+  preregistered validation tests passed. Mean beneficial effects did not decline near
+  the peak, sign epistasis was absent, negative epistasis decreased rather than increased,
+  and synthetic-alignment near-peak backgrounds exceeded the stored peak fitness.
+  The run therefore weakens HYP-004 as stated while preserving a narrower adaptive-walk
+  result.
+artifacts: []
+evidence_paths:
+- analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/tables/run-055_key_metrics.md
+- analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/tables/run-055_validation_tests.md
+- analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/tables/run-055_background_summary_by_level.md
+- analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review/tables/run-055_greedy_walk_summary_by_level.md
+- data/processed/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055/summary.json
+- data/processed/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055/literature_baselines.json
+- data/processed/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055/background_neighborhoods.csv
+- data/processed/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055/epistasis_pairs.csv
+- data/processed/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055/walk_summaries.json
+- data/processed/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055/walk_trajectories.csv
+- data/processed/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055.dvc
+- experiments/2026-05-14_EXP-020_adaptive-walk-peak-proximal-epistasis-biological-baselines/config.yaml
+- experiments/2026-05-14_EXP-020_adaptive-walk-peak-proximal-epistasis-biological-baselines/runs/RUN-055.yaml
+compliance:
+  level: green
+  issues: []

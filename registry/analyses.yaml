@@ -246,3 +246,676 @@ items:
   compliance:
     level: green
     issues: []
+- id: ANA-020
+  title: RUN-055 adaptive-walk peak-proximal epistasis biological-baseline review
+  status: completed
+  created: '2026-05-15T07:22:00+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-020
+  runs:
+  - RUN-055
+  path: analyses/2026-05-15_ANA-020_run-055-adaptive-walk-peak-proximal-epistasis-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-021
+  title: RUN-057 TEM-1 homologue walk parameter-grid diagnostic review
+  status: completed
+  created: '2026-05-15T09:27:08+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-021
+  runs:
+  - RUN-057
+  path: analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-022
+  title: RUN-059 TEM-1 ruggedness emergence epistasis sweep review
+  status: completed
+  created: '2026-05-15T11:03:46+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-022
+  runs:
+  - RUN-059
+  path: analyses/2026-05-15_ANA-022_run-059-tem1-ruggedness-emergence-epistasis-sweep-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-023
+  title: RUN-061 TEM-1 DCA-specific epistasis Hamming graph review
+  status: completed
+  created: '2026-05-15T13:27:31+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-023
+  runs:
+  - RUN-061
+  path: analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-024
+  title: RUN-063 TEM-1 DCA clique haplotype high-order epistasis review
+  status: completed
+  created: '2026-05-15T14:35:27+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-024
+  runs:
+  - RUN-063
+  path: analyses/2026-05-15_ANA-024_run-063-tem1-dca-clique-haplotype-high-order-epistasis-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-025
+  title: RUN-065 TEM-1 aggregate graphlet residual ruggedness review
+  status: completed
+  created: '2026-05-15T17:39:00+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-025
+  runs:
+  - RUN-065
+  path: analyses/2026-05-15_ANA-025_run-065-tem1-aggregate-graphlet-residual-ruggedness-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-026
+  title: RUN-067 TEM-1 relative-scale residual exposure graphlet review
+  status: completed
+  created: '2026-05-15T19:08:58+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-026
+  runs:
+  - RUN-067
+  path: analyses/2026-05-15_ANA-026_run-067-tem1-relative-scale-residual-exposure-graphlet-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-027
+  title: RUN-069 TEM-1 fixed-scale residual ratio sweep graphlet review
+  status: completed
+  created: '2026-05-15T20:11:09+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-027
+  runs:
+  - RUN-069
+  path: analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-028
+  title: RUN-071 empirical graphlet falsification review
+  status: completed
+  created: '2026-05-15T22:27:04+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-028
+  runs:
+  - RUN-071
+  path: analyses/2026-05-15_ANA-028_run-071-empirical-graphlet-falsification-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-029
+  title: RUN-073 current-model two-assay ABC refit review
+  status: completed
+  created: '2026-05-16T17:08:38+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-029
+  runs:
+  - RUN-073
+  path: analyses/2026-05-16_ANA-029_run-073-current-model-two-assay-abc-refit-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-030
+  title: RUN-077 system-specific current-model graphlet falsifier review
+  status: completed
+  created: '2026-05-16T20:36:56+10:00'
+  owner: Codex
+  experiments:
+  - EXP-030
+  runs:
+  - RUN-077
+  path: analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-031
+  title: RUN-079 PHOT frozen-base coupled-landscape grid review
+  status: completed
+  created: '2026-05-16T21:41:09+10:00'
+  owner: Codex
+  experiments:
+  - EXP-031
+  runs:
+  - RUN-079
+  path: analyses/2026-05-16_ANA-031_run-079-phot-frozen-base-coupled-landscape-grid-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-032
+  title: RUN-081 PHOT hard-min weakest-link grid review
+  status: completed
+  created: '2026-05-16T23:08:25+10:00'
+  owner: Codex
+  experiments:
+  - EXP-032
+  runs:
+  - RUN-081
+  path: analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-033
+  title: RUN-084 PHOT soft-min Boltzmann ABC review
+  status: completed
+  created: '2026-05-17T08:41:44+10:00'
+  owner: Codex
+  experiments:
+  - EXP-033
+  runs:
+  - RUN-084
+  path: analyses/2026-05-17_ANA-033_run-084-phot-softmin-boltzmann-abc-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-034
+  title: RUN-086 PHOT budgeted module-tied soft-min ABC review
+  status: completed
+  created: '2026-05-17T10:00:35+10:00'
+  owner: Codex
+  experiments:
+  - EXP-034
+  runs:
+  - RUN-086
+  path: analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-035
+  title: RUN-089 PHOT replicated split graphlet diagnostic review
+  status: completed
+  created: '2026-05-17T11:17:16+10:00'
+  owner: Codex
+  experiments:
+  - EXP-035
+  runs:
+  - RUN-089
+  path: analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-036
+  title: RUN-091 PHOT coupled family discriminating ABC review
+  status: completed
+  created: '2026-05-17T13:13:53+10:00'
+  owner: Codex
+  experiments:
+  - EXP-036
+  runs:
+  - RUN-091
+  path: analyses/2026-05-17_ANA-036_run-091-phot-coupled-family-discriminating-abc-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-037
+  title: RUN-093 PHOT localized ruggedness energy diagnostic review
+  status: completed
+  created: '2026-05-17T14:37:17+10:00'
+  owner: Codex
+  experiments:
+  - EXP-037
+  runs:
+  - RUN-093
+  path: analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-038
+  title: RUN-096 PHOT ABC local ruggedness objective review
+  status: completed
+  created: '2026-05-17T20:43:19+10:00'
+  owner: Codex
+  experiments:
+  - EXP-038
+  runs:
+  - RUN-096
+  path: analyses/2026-05-17_ANA-038_run-096-phot-abc-local-ruggedness-objective-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-039
+  title: RUN-098 PHOT nested soft-min ensemble capacity review
+  status: completed
+  created: '2026-05-18T11:04:40+10:00'
+  owner: Codex
+  experiments:
+  - EXP-039
+  runs:
+  - RUN-098
+  path: analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-040
+  title: RUN-108 PHOT exact descriptive failure gate review
+  status: completed
+  created: '2026-06-15T23:32:01+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-041
+  runs:
+  - RUN-108
+  path: analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-041
+  title: RUN-110 PHOT cheap fitting equivalence benchmark review
+  status: completed
+  created: '2026-06-16T11:59:20+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-042
+  runs:
+  - RUN-110
+  path: analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-042
+  title: RUN-112 PHOT epistasis-calibrated cheap fitting review
+  status: completed
+  created: '2026-06-16T15:01:50+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-043
+  runs:
+  - RUN-112
+  path: analyses/2026-06-16_ANA-042_run-112-phot-epistasis-calibrated-cheap-fitting-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-043
+  title: RUN-115 PHOT bounded trait-space fast-fit review
+  status: completed
+  created: '2026-06-16T19:16:43+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-044
+  runs:
+  - RUN-115
+  path: analyses/2026-06-16_ANA-043_run-115-phot-bounded-trait-space-fast-fit-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-044
+  title: RUN-117 PHOT cumulative epistasis calibration fix review
+  status: completed
+  created: '2026-06-17T05:50:51+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-045
+  runs:
+  - RUN-117
+  path: analyses/2026-06-17_ANA-044_run-117-phot-cumulative-epistasis-calibration-fix-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-045
+  title: RUN-119 PHOT raw-latent soft-min pathology fix review
+  status: completed
+  created: '2026-06-17T10:11:04+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-046
+  runs:
+  - RUN-119
+  path: analyses/2026-06-17_ANA-045_run-119-phot-raw-latent-softmin-pathology-fix-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-046
+  title: RUN-121 PHOT RES-045 calibration isolation review
+  status: completed
+  created: '2026-06-17T15:00:44+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-047
+  runs:
+  - RUN-121
+  path: analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-047
+  title: RUN-123 PHOT sparse Walsh Potts spectrum-calibrated generator review
+  status: completed
+  created: '2026-06-17T18:50:39+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-048
+  runs:
+  - RUN-123
+  path: analyses/2026-06-17_ANA-047_run-123-phot-sparse-walsh-potts-spectrum-calibrated-generator-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-048
+  title: RUN-125 PHOT P0 target-operator isolation review
+  status: completed
+  created: '2026-06-18T09:39:45+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-049
+  runs:
+  - RUN-125
+  path: analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-049
+  title: RUN-127 hashed GNK benchmark generator knob-map review
+  status: completed
+  created: '2026-06-18T12:41:02+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-051
+  runs:
+  - RUN-127
+  path: analyses/2026-06-18_ANA-049_run-127-hashed-gnk-benchmark-generator-knob-map-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-050
+  title: RUN-135 Stage 4A empirical ensemble descriptor envelope review
+  status: completed
+  created: '2026-06-19T07:12:30+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-052
+  runs:
+  - RUN-135
+  path: analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-051
+  title: RUN-136 Stage 4B protein-scale GNK reachability review
+  status: completed
+  created: '2026-06-19T07:12:31+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-053
+  runs:
+  - RUN-136
+  path: analyses/2026-06-19_ANA-051_run-136-stage-4b-generator-reachability-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-052
+  title: RUN-137 Stage 4C calibrated overlap review
+  status: completed
+  created: '2026-06-19T07:12:31+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-054
+  runs:
+  - RUN-137
+  path: analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-053
+  title: RUN-138 Stage 4D joint realism gate review
+  status: completed
+  created: '2026-06-19T07:12:31+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-055
+  runs:
+  - RUN-138
+  path: analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-054
+  title: RUN-139 Stage 4E held-out descriptor generalisation review
+  status: completed
+  created: '2026-06-19T07:12:32+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-056
+  runs:
+  - RUN-139
+  path: analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-055
+  title: RUN-141 design-matched support-aware GNK probe review
+  status: completed
+  created: '2026-06-21T09:46:22+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-057
+  runs:
+  - RUN-141
+  path: analyses/2026-06-21_ANA-055_run-141-design-matched-support-aware-gnk-probe-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-056
+  title: RUN-129 PHOT non-additive measurement-operator certification review
+  status: completed
+  created: '2026-06-22T14:20:05+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-050
+  runs:
+  - RUN-129
+  path: analyses/2026-06-22_ANA-056_run-129-phot-nonadditive-measurement-operator-certification-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-057
+  title: RUN-142 generator readout-coupling calibration review
+  status: completed
+  created: '2026-07-22T12:40:00+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-058
+  runs:
+  - RUN-142
+  path: analyses/2026-07-22_ANA-057_run-142-generator-readout-coupling-calibration-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-058
+  title: RUN-149 extensive operator-normalized GNK latent scale-law review
+  status: completed
+  created: '2026-07-23T02:26:29+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-060
+  runs:
+  - RUN-149
+  path: analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-059
+  title: RUN-151 operator-normalized GNK sigmoid-transmission paired-residual review
+  status: completed
+  created: '2026-07-23T08:16:27+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-061
+  runs:
+  - RUN-151
+  path: analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-060
+  title: RUN-153 dimensionless additive-core sigmoid calibration and held-out GNK
+    dose-response review
+  status: completed
+  created: '2026-07-23T13:48:06+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-062
+  runs:
+  - RUN-153
+  path: analyses/2026-07-23_ANA-060_run-153-dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-061
+  title: RUN-157 paired categorical-code and representation-rank GNK texture rescue
+    review
+  status: completed
+  created: '2026-07-24T07:10:19+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-063
+  runs:
+  - RUN-157
+  path: analyses/2026-07-24_ANA-061_run-157-paired-categorical-code-and-representation-rank-gnk-texture-rescue-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-062
+  title: RUN-162 observable-ruggedness coverage probe review
+  status: completed
+  created: '2026-07-24T13:00:06+10:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-064
+  runs:
+  - RUN-162
+  path: analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review
+  compliance:
+    level: green
+    issues: []
+- id: ANA-063
+  title: RUN-164 aggregate thermodynamic GNK confirmation analysis
+  status: completed
+  created: '2026-10-07T14:44:51+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-164
+  path: analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation
+  compliance:
+    level: yellow
+    issues:
+    - ANA-063 is completed but has no linked results.
+- id: ANA-064
+  title: RUN-166 paired readouts and embedded neighbourhoods
+  status: completed
+  created: '2026-10-07T19:36:05+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-166
+  path: analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods
+  compliance:
+    level: yellow
+    issues:
+    - ANA-064 is completed but has no linked results.
+- id: ANA-065
+  title: RUN-168 replicate-aware empirical statistics and frozen observation models
+  status: completed
+  created: '2026-10-07T20:58:32+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-168
+  path: analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models
+  compliance:
+    level: yellow
+    issues:
+    - ANA-065 is completed but has no linked results.
+- id: ANA-066
+  title: RUN-170 observation-aware global calibration and withheld predictions
+  status: completed
+  created: '2026-10-08T10:01:44+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-170
+  path: analyses/2026-10-08_ANA-066_run-170-observation-aware-global-calibration
+  compliance:
+    level: yellow
+    issues:
+    - ANA-066 is completed but has no linked results.
+- id: ANA-067
+  title: RUN-172 production landscape aggregate realism across empirical systems
+  status: completed
+  created: '2026-10-08T14:07:05+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-066
+  runs:
+  - RUN-172
+  path: analyses/2026-10-08_ANA-067_run-172-production-landscape-aggregate-realism
+  compliance:
+    level: yellow
+    issues:
+    - ANA-067 is completed but has no linked results.
+- id: ANA-068
+  title: GB1 and TrpB whole-library adaptive walks, accessibility and neutral connectivity
+  status: completed
+  created: '2026-10-08T17:16:52+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-066
+  runs:
+  - RUN-172
+  path: analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks
+  compliance:
+    level: yellow
+    issues:
+    - ANA-068 is completed but has no linked results.
+- id: ANA-069
+  title: RUN-175 interaction strength trades aggregate epistasis against adaptive
+    search
+  status: completed
+  created: '2026-10-08T20:44:31+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-175
+  path: analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks
+  compliance:
+    level: green
+    issues: []
+- id: ANA-070
+  title: RUN-178 TrpB profile prior versus synthetic control
+  status: completed
+  created: '2026-11-19T15:30:06+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-178
+  - RUN-175
+  path: analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control
+  compliance:
+    level: green
+    issues: []

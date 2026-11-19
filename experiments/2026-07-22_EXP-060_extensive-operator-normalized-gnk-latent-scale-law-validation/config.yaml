@@ -1,0 +1,234 @@
+experiment_id: EXP-060
+title: Extensive operator-normalized GNK latent scale-law validation
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  mode: extensive_operator_normalized_gnk_latent_scale_law
+  disable_scientific_decision: false
+  scientific_boundary:
+    aim: AIM-001
+    primary_hypothesis: HYP-005
+    previous_experiment: EXP-059
+    motivating_results: [RES-049, RES-055, RES-057]
+    estimand: latent_additive_and_gnk_components_only
+    forbidden_readouts:
+      - observed_fitness
+      - stability_gate
+      - sigmoid_transmission
+      - local_maxima
+      - accessibility
+      - optimizer_performance
+      - empirical_fitness_overlap
+    downstream_stop: do_not_test_sigmoid_transmission_until_all_required_latent_gates_pass
+
+data:
+  processed_root: data/processed/ensemble-landscape-validation-datasets
+
+references:
+  field_priority: [target_sequence, wildtype_sequence, sequence]
+  synthetic: []
+  inline:
+    - id: sr43c_48
+      dataset_id: proteingym_sr43c_arath_tsuboyama_2023_2n88
+      expected_length: 48
+      source: data/processed/ensemble-landscape-validation-datasets/datasets/proteingym_sr43c_arath_tsuboyama_2023_2n88/variants.csv
+      source_field: target_sequence
+      sequence_sha256: 81346251006cd7699ec780db8c419274f1044e32371600068db7abd2a89b0e53
+      sequence: AVAESVIGKRVGDDGKTIEYLVKWTDMSDATWEPQDNVDSTLVLLYQQ
+    - id: f7ybw8_93
+      dataset_id: proteingym_f7ybw8_mesow_aakre_2015
+      expected_length: 93
+      source: data/processed/ensemble-landscape-validation-datasets/datasets/proteingym_f7ybw8_mesow_aakre_2015/variants.csv
+      source_field: target_sequence
+      sequence_sha256: 4956f0edf104dead9777f85ecc4b3c5ed53f7b0d25edb79c6c4cceca251b9238
+      sequence: MANVEKMSVAVTPQQAAVMREAVEAGEYATASEIVREAVRDWLAKRELRHDDIRRLRQLWDEGKASGRPEPVDFDALRKEARQKLTEVPPNGR
+    - id: phot_118
+      dataset_id: proteingym_phot_chlre_chen_2023
+      expected_length: 118
+      source: data/processed/ensemble-landscape-validation-datasets/datasets/proteingym_phot_chlre_chen_2023/variants.csv
+      source_field: target_sequence
+      sequence_sha256: f32baf609eab4f10975523f58475bcbaaee7ec4f879c86a855ca2f41e6f1b3e7
+      sequence: AGLRHTFVVADATLPDCPLVYASEGFYAMTGYGPDEVLGHNARFLQGEGTDPKEVQKIRDAIKKGEACSVRLLNYRKDGTPFWNLLTVTPIKTPDGRVSKFVGVQVDVTSKTEGKALA
+    - id: his7_220
+      dataset_id: proteingym_his7_yeast_pokusaeva_2019
+      expected_length: 220
+      source: data/processed/ensemble-landscape-validation-datasets/datasets/proteingym_his7_yeast_pokusaeva_2019/variants.csv
+      source_field: target_sequence
+      sequence_sha256: d8a86cdeaf8e8dc92742780d24c9526abc19a05518c02a1e730d0ac8d1c7043f
+      sequence: MTEQKALVKRITNETKIQIAISLKGGPLAIEHSIFPEKEAEAVAEQATQSQVINVHTGIGFLDHMIHALAKHSGWSLIVECIGDLHIDDHHTTEDCGIALGQAFKEALGAVRGVKRFGSGFAPLDEALSRAVVDLSNRPYAVVELGLQREKVGDLSCEMIPHFLESFAEASRITLHVDCLRGKNDHHRSESAFKALAVAIREATSPNGTNDVPSTKGVLM
+    - id: gfp_238
+      dataset_id: proteingym_gfp_aeqvi_sarkisyan_2016
+      expected_length: 238
+      source: data/processed/ensemble-landscape-validation-datasets/datasets/proteingym_gfp_aeqvi_sarkisyan_2016/variants.csv
+      source_field: target_sequence
+      sequence_sha256: 9be57dbaa8e6d8b324cd1a84684901808c38b3b84f940c08e00a0323f4215e9f
+      sequence: MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK
+    - id: spg1_448
+      dataset_id: proteingym_spg1_strsg_olson_2014
+      expected_length: 448
+      source: data/processed/ensemble-landscape-validation-datasets/datasets/proteingym_spg1_strsg_olson_2014/variants.csv
+      source_field: target_sequence
+      sequence_sha256: 296c9ffb8add18b7266735007286ea2d58f4fa839c762d10a45b3ea72405d9f2
+      sequence: MEKEKKVKYFLRKSAFGLASVSAAFLVGSTVFAVDSPIEDTPIIRNGGELTNLLGNSETTLALRNEESATADLTAAAVADTVAAAAAENAGAAAWEAAAAADALAKAKADALKEFNKYGVSDYYKNLINNAKTVEGIKDLQAQVVESAKKARISEATDGLSDFLKSQTPAEDTVKSIELAEAKVLANRELDKYGVSDYHKNLINNAKTVEGVKELIDEILAALPKTDQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTEKPEVIDASELTPAVTTYKLVINGKTLKGETTTKAVDAETAEKAFKQYANDNGVDGVWTYDDATKTFTVTEMVTEVPGDAPTEPEKPEASIPLVPLTPATPIAKDDAKKDDTKKEDAKKPEAKKDDAKKAETLPTTGEGSNPFFTAAALAVMAGAGALAVASKRKED
+  datasets: []
+
+replication:
+  independent_unit: generator_seed
+  seeds:
+    - 2601
+    - 2602
+    - 2603
+    - 2604
+    - 2605
+    - 2606
+    - 2607
+    - 2608
+    - 2609
+    - 2610
+    - 2611
+    - 2612
+    - 2613
+    - 2614
+    - 2615
+    - 2616
+    - 2617
+    - 2618
+    - 2619
+    - 2620
+    - 2621
+    - 2622
+    - 2623
+    - 2624
+    - 2625
+    - 2626
+    - 2627
+    - 2628
+    - 2629
+    - 2630
+
+legacy_control:
+  terms: 384
+  min_order: 2
+  max_order: 4
+  order_weights: [0.35, 0.45, 0.20]
+  support_mode: structured
+  seed_offset: 10000
+
+candidate:
+  implementation: src/project_adapt_env/extensive_gnk.py
+  seed_offset: 30000
+  orders: [2, 3, 4]
+  order_weights: [0.35, 0.45, 0.20]
+  target_degrees: [6, 11, 7]
+  term_count_rule: ceil_L_times_target_degree_divided_by_order
+  support_rule: unique_nearly_regular_simple_hypergraph_per_order
+  contrast_rule: balanced_permuted_bounded_q20_rademacher
+  reference_centered: true
+  coefficient_rule: exact_uniform_background_mutation_operator_energy
+
+intervention:
+  weights: [0.0, 0.25, 0.5, 1.0, 2.0]
+  working_weight: 1.0
+  weight_semantics:
+    legacy_public_global_fixed: raw_public_multiplier
+    legacy_support_local_normalized: target_mutation_rms_ratio_to_additive
+    extensive_balanced_bounded: target_mutation_rms_ratio_to_additive
+  derive_all_weights_from_one_field_per_arm: true
+
+probe:
+  regimes: [reference_shell, uniform_background]
+  hamming_distances: [1, 2, 4, 8, "0.1L", "0.5L"]
+  pairs_per_distance: 512
+  eval_chunk_size: 2048
+  supported_pair_curvature_samples: 512
+  mutation_operator:
+    site_distribution: uniform_without_replacement
+    source_distribution_uniform_background: uniform_q20
+    replacement_distribution: uniform_over_19_nonself_states
+  pair_key_excludes: [arm, weight]
+
+acceptance:
+  bootstrap_replicates: 10000
+  bootstrap_seed: 60060
+  reference_center_atol: 1.0e-12
+  support_max_degree_range: 1
+  support_max_cv: 0.10
+  support_max_duplicate_fraction: 0.01
+  contrast_moment_atol: 1.0e-12
+  local_ratio_median_band: [0.85, 1.15]
+  local_ratio_seed_band: [0.70, 1.30]
+  local_ratio_min_seed_fraction: 0.90
+  local_slope_abs_max: 0.10
+  local_slope_ci_abs_max: 0.20
+  min_slope_improvement: 0.25
+  field_variance_slope_band: [0.80, 1.20]
+  field_variance_per_length_cv_max: 0.20
+  fractional_distance_slope_band: [0.35, 0.65]
+  distance_ratio_slope_abs_max: 0.15
+  fixed_distance_slope_abs_max: 0.15
+  weight_linearity_relative_error_max: 0.02
+  weight_linearity_r2_min: 0.9999
+  order_variance_fraction_atol: 0.10
+  curvature_slope_abs_max: 0.15
+  q20_median_pearson_kurtosis_max: 6.0
+  legacy_local_slope_expected_band: [-0.70, -0.30]
+  require_legacy_defect_reproduction: true
+
+decision_rule:
+  pass: LATENT_GNK_EXTENSIVE_SCALE_LAW_VALIDATED
+  local_normalization_pass_primary_fail: SUPPORT_OR_CONTRAST_REPAIR_INCOMPLETE
+  local_scale_fail: OPERATOR_NORMALIZATION_FAILED
+  support_fail: EXTENSIVE_SUPPORT_CONSTRUCTION_FAILED
+  contrast_fail: BOUNDED_Q20_CONTRAST_IMPLEMENTATION_FAILED
+  full_sequence_fail: LOCAL_SCALE_DOES_NOT_GENERALIZE_TO_FULL_SEQUENCE_DISTANCE
+  technical_fail: EXECUTION_OR_PAIRING_INVALID
+  other_fail: LATENT_GNK_SCALE_LAW_FAILED_OTHER_GATE
+  downstream_on_any_failure: keep_sigmoid_transmission_test_blocked
+
+outputs:
+  expected:
+    - preflight.json
+    - reference_catalog.csv
+    - pairing_audit.csv
+    - support_audit.csv
+    - contrast_audit.csv
+    - latent_scale_metrics.csv
+    - order_component_metrics.csv
+    - scale_law_fits.csv
+    - acceptance_checks.csv
+    - summary.json
+  checkpoint_unit: [reference_id, generator_seed, effective_config_hash, implementation_hash]
+  atomic_writes: true
+
+quick:
+  experiment:
+    disable_scientific_decision: true
+  references:
+    inline:
+      - id: sr43c_48
+        dataset_id: proteingym_sr43c_arath_tsuboyama_2023_2n88
+        expected_length: 48
+        source: data/processed/ensemble-landscape-validation-datasets/datasets/proteingym_sr43c_arath_tsuboyama_2023_2n88/variants.csv
+        source_field: target_sequence
+        sequence_sha256: 81346251006cd7699ec780db8c419274f1044e32371600068db7abd2a89b0e53
+        sequence: AVAESVIGKRVGDDGKTIEYLVKWTDMSDATWEPQDNVDSTLVLLYQQ
+      - id: phot_118
+        dataset_id: proteingym_phot_chlre_chen_2023
+        expected_length: 118
+        source: data/processed/ensemble-landscape-validation-datasets/datasets/proteingym_phot_chlre_chen_2023/variants.csv
+        source_field: target_sequence
+        sequence_sha256: f32baf609eab4f10975523f58475bcbaaee7ec4f879c86a855ca2f41e6f1b3e7
+        sequence: AGLRHTFVVADATLPDCPLVYASEGFYAMTGYGPDEVLGHNARFLQGEGTDPKEVQKIRDAIKKGEACSVRLLNYRKDGTPFWNLLTVTPIKTPDGRVSKFVGVQVDVTSKTEGKALA
+  replication:
+    seeds: [2601, 2602]
+  candidate:
+    target_degrees: [2, 2, 2]
+  intervention:
+    weights: [0.0, 1.0]
+  probe:
+    pairs_per_distance: 64
+    eval_chunk_size: 512
+    supported_pair_curvature_samples: 64
+  acceptance:
+    bootstrap_replicates: 200

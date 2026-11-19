@@ -1,0 +1,119 @@
+id: EXP-034
+type: experiment
+title: PHOT budgeted module-tied soft-min ABC
+slug: phot-budgeted-module-tied-softmin-abc
+status: completed
+created: '2026-05-17T09:18:15+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  - EXP-031
+  - EXP-032
+  - EXP-033
+  motivating_results:
+  - RES-030
+  - RES-031
+  - RES-032
+  - RES-033
+question: 'For PHOT, does fitting an explicit module-tied state-difference field d(x)=b(x)-a(x),
+  with finite-difference energy and state-boundary budgets, allow a frozen-base soft-min
+  operator to improve calibration-selected held-out graphlet topology, spectra, and
+  locality relative to fitted-current, smooth-core, residual, random/shuffled-module,
+  no-module, and GNK controls?
+
+  '
+pre_experiment_prediction: 'A supporting result requires calibration-selected posterior
+  candidates to beat fitted-current and smooth-core controls on held-out graphlet
+  distance while preserving base correlation and keeping innovation edge/plaquette
+  energy within the empirical residual budget. Assay-objective improvement alone remains
+  insufficient support for HYP-008.
+
+  '
+rationale: 'RES-033 showed that the previous soft-min/Boltzmann ABC family could improve
+  calibration graphlet distance but generated very large, non-empirical state-transition
+  innovation and failed held-out graphlets. EXP-034 tests the specific diagnosis that
+  b(x) should be parameterised through a module-tied d(x)=b(x)-a(x) field and constrained
+  by explicit smoothness/energy budgets, rather than by a globally correlated auxiliary
+  landscape alone.
+
+  '
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - scripts/phot_budgeted_softmin_coupled_landscape_abc.py
+  - src/project_adapt_env/coupled_landscape.py
+  datasets:
+  - RUN-077 PHOT system-specific current-model refit outputs
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 08:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - progress.json
+  - parameter_specs.csv
+  - module_catalog.csv
+  - posterior_particles.csv
+  - posterior_rounds.csv
+  - evaluated_parameter_sets.csv
+  - assay_fit_metrics.csv
+  - assay_dfe_metrics.csv
+  - assay_epistasis_metrics.csv
+  - assay_fit_rankings.csv
+  - graphlet_catalog.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - graphlet_summary.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - local_signal_by_graphlet.csv
+  - local_signal_energy_by_feature.csv
+  - local_signal_feature_energy_summary.csv
+  - local_signal_graphlet_energy_summary.csv
+  - locality_covariance_summary.csv
+  - empirical_readout_fit.json
+  artifacts: []
+downstream:
+  planned_analyses:
+  - ANA-034
+  planned_results:
+  - RES-034
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- Uses calibration graphlets to choose residual-energy modules and fit ABC; held-out
+  graphlets remain reserved for evidence.
+- Tests no-module, random-module, and shuffled-module controls for the selected posterior
+  summaries.
+template: generic
+compliance:
+  level: green
+  issues: []

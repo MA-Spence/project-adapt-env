@@ -126,12 +126,12 @@ scheduler_state: INFERRED_EXIT_CODE
 compliance:
   level: yellow
   issues:
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/mavenn_assay_metrics.csv'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/target_features.csv'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/selected_panel.csv'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/progress.json'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/progress.log'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/checkpoints/smc_empirical.json'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/prepared_assay.csv'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/mavenn_metrics.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/mavenn_assay_metrics.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/target_features.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/selected_panel.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/progress.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/progress.log'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/checkpoints/smc_empirical.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/prepared_assay.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-explicit-two-latent-trait-validation-smc-abc-phot-chlre/RUN-035/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/mavenn_metrics.json'
 scheduler_exit_code: '1'

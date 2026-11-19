@@ -1,0 +1,36 @@
+{
+  "best_available_run098_family": "empirical_readout_residual",
+  "best_available_run098_test_distance": 0.2114554115835448,
+  "best_nested_run098_family": "random_module",
+  "best_nested_run098_test_distance": 0.4826302319598656,
+  "copied_source_payload_bytes": 54267,
+  "experiment_id": "EXP-048",
+  "failed_metrics_all_candidates": [
+    "accessible_path_fraction",
+    "magnitude_epistasis_to_single_mutant_sd_ratio",
+    "walsh_high_order_fraction"
+  ],
+  "global_order_weights": {
+    "2": 0.0,
+    "3": 1.0,
+    "4": 0.0,
+    "5": 0.0
+  },
+  "n_candidate_evaluations": 0,
+  "n_equivalence_rows": 0,
+  "n_graphlets": 24,
+  "n_joint_pass_rows": 0,
+  "n_operationally_equivalent": 0,
+  "n_probe_candidates": 12,
+  "n_probe_metrics": 7,
+  "n_selected_candidates": 0,
+  "n_sparse_walsh_forward_probe_rows": 84,
+  "n_sparse_walsh_spectrum_rows": 4,
+  "passing_spectrum_orders": [
+    3
+  ],
+  "run_id": "RUN-123",
+  "scheduler_exit_code": "0",
+  "scheduler_job_id": "1930",
+  "sparse_walsh_forward_probe_passed": false
+}

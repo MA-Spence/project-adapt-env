@@ -1,0 +1,12 @@
+{
+  "output_hashes": 103,
+  "remote_hashes": 212,
+  "source_hashes": 7,
+  "empirical_genotypes": 2048,
+  "excluded_genotypes": 3712,
+  "independent_statistic_rows": 114432,
+  "replicate_pair_cubes": 38144,
+  "replayed_observations": 1179648,
+  "fits_recomputed": 6,
+  "checks": "Numerical/provenance identities, not scientific gates."
+}

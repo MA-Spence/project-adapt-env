@@ -1,0 +1,11 @@
+{
+  "directory_md5": "4784c138999f69f1b522198f43220458.dir",
+  "bytes": 173163035,
+  "files": 403,
+  "remote_store": "/tank/data/labproj/projects/project-adapt-env/data/files/md5",
+  "remote_backup_status": "pending: dutch unreachable from lab gateway (No route to host)",
+  "verified_objects": 0,
+  "all_md5_match": false,
+  "local_cache_objects_md5_verified": 397,
+  "local_cache_complete": true
+}

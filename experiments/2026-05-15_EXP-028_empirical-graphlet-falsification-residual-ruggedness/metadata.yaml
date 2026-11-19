@@ -1,0 +1,105 @@
+id: EXP-028
+type: experiment
+title: Empirical graphlet falsification suite for residual ruggedness model
+slug: empirical-graphlet-falsification-residual-ruggedness
+status: planned
+created: '2026-05-15T21:57:57+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  previous_experiments:
+  - EXP-025
+  - EXP-026
+  - EXP-027
+  motivating_results:
+  - RES-025
+  - RES-026
+  - RES-027
+question: Do the six explicit falsifiers for the smooth-core plus fixed-scale residual
+  ruggedness mechanism hold when empirical ProteinGym graphlets, nonlinear readout
+  controls, matched residual controls, and RUN-069-style synthetic graphlets are evaluated
+  in one paired diagnostic suite?
+pre_experiment_prediction: If the model structure is scientifically defensible, empirical
+  graphlets should show low-order-dominated spectra with a measurable high-order tail;
+  smooth-core-only and additive global-readout controls should not match empirical
+  SE/RSE/topology as well as residual models; increasing fixed residual scale should
+  remain directional across synthetic seeds; contact residuals should outperform random-position,
+  shuffled-contact, and GNK controls on joint empirical distance; and high-order signal
+  should not disappear after global-readout correction.
+rationale: 'RES-027 supports the fixed residual-scale knob procedurally but leaves
+  six explicit falsifiers unresolved: smooth-core-only empirical fit, no residual-scale
+  effect, wrong empirical spectral envelope, control equivalence, wrong evolutionary
+  dynamics, and scale confounding. This experiment tests those breakpoints directly
+  while keeping output columns comparable to RUN-067 and RUN-069.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/selected_panel.csv
+  - data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/prepared_assay.csv
+  - data/processed/proteingym-single-assay-biophysical-function-readout-smc-abc-phot-chlre/RUN-026/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/mavenn_metrics.json
+  - data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/selected_panel.csv
+  - data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/prepared_assay.csv
+  - data/processed/proteingym-single-assay-stability-readout-smc-abc-sptn1-chick/RUN-024/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/mavenn_metrics.json
+  - data/processed/proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic/RUN-028/selected_panel.csv
+  - data/processed/proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic/RUN-028/checkpoints/panel_preparation/RASK_HUMAN_Weng_2022_binding-DARPin_K55/prepared_assay.csv
+  - data/processed/proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic/RUN-028/checkpoints/panel_preparation/RASK_HUMAN_Weng_2022_binding-DARPin_K55/mavenn_metrics.json
+  - scripts/tem1_aggregate_graphlet_residual_ruggedness.py
+  - scripts/empirical_graphlet_falsification_suite.py
+  - scratch/model_signature_derivation.md
+  - scratch/model_literature_falsification_review.md
+  datasets:
+  - ProteinGym cached prepared graphlets from completed project runs RUN-024, RUN-026,
+    and RUN-028
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 08:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - falsification_tests.json
+  - synthetic_empirical_model_distances.csv
+  - synthetic_empirical_best_by_model.csv
+  - synthetic_graphlet_suite/module_parameter_sweep.csv
+  - synthetic_graphlet_suite/test_graphlet_metrics.csv
+  - synthetic_graphlet_suite/graphlet_walsh_terms.csv
+  - synthetic_graphlet_suite/graphlet_gft_coefficients.csv
+  - empirical_graphlet_suite/empirical_assay_audit.csv
+  - empirical_graphlet_suite/empirical_graphlet_metrics.csv
+  - empirical_graphlet_suite/empirical_graphlet_summary.csv
+  - empirical_graphlet_suite/empirical_global_readout_confounding.csv
+  - empirical_graphlet_suite/empirical_global_readout_summary.csv
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,20 @@
+| feature | observed value | bootstrap sd |
+| --- | --- | --- |
+| PHOT_CHLRE_Chen_2023__conservation_correlation | 0.5464 | 0.0594 |
+| PHOT_CHLRE_Chen_2023__epistasis_variance | 0.0361 | 0.0043 |
+| PHOT_CHLRE_Chen_2023__fraction_beneficial | 0.0094 | 0.0022 |
+| PHOT_CHLRE_Chen_2023__fraction_deleterious | 0.3266 | 0.0111 |
+| PHOT_CHLRE_Chen_2023__fraction_lethal | 0.0386 | 0.0040 |
+| PHOT_CHLRE_Chen_2023__fraction_neutral | 0.6640 | 0.0109 |
+| PHOT_CHLRE_Chen_2023__mean | -0.2463 | 0.0082 |
+| PHOT_CHLRE_Chen_2023__skewness | -1.3759 | 0.0489 |
+| PHOT_CHLRE_Chen_2023__variance | 0.1244 | 0.0047 |
+| SPTN1_CHICK_Tsuboyama_2023_1TUD__conservation_correlation | 0.6470 | 0.0761 |
+| SPTN1_CHICK_Tsuboyama_2023_1TUD__epistasis_variance | 0.6427 | 0.0241 |
+| SPTN1_CHICK_Tsuboyama_2023_1TUD__fraction_beneficial | 0.2303 | 0.0126 |
+| SPTN1_CHICK_Tsuboyama_2023_1TUD__fraction_deleterious | 0.6004 | 0.0147 |
+| SPTN1_CHICK_Tsuboyama_2023_1TUD__fraction_lethal | 0.4434 | 0.0149 |
+| SPTN1_CHICK_Tsuboyama_2023_1TUD__fraction_neutral | 0.1694 | 0.0120 |
+| SPTN1_CHICK_Tsuboyama_2023_1TUD__mean | -0.9381 | 0.0459 |
+| SPTN1_CHICK_Tsuboyama_2023_1TUD__skewness | -0.6896 | 0.0540 |
+| SPTN1_CHICK_Tsuboyama_2023_1TUD__variance | 1.8850 | 0.0765 |

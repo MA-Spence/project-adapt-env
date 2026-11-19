@@ -1,0 +1,3 @@
+| n_core_rows | beneficial_fraction_declines_rows | plateau_rows | transition_epistasis_enrichment_rows | mean_beneficial_fraction_spearman | mean_high_plateau_fraction | mean_low_plateau_fraction |
+| --- | --- | --- | --- | --- | --- | --- |
+| 9 | 9 | 9 | 0 | -1.0000 | 0.00390625 | 0.0351562 |

@@ -1,0 +1,164 @@
+running egg_info
+creating adaptenv.egg-info
+writing adaptenv.egg-info/PKG-INFO
+writing dependency_links to adaptenv.egg-info/dependency_links.txt
+writing requirements to adaptenv.egg-info/requires.txt
+writing top-level names to adaptenv.egg-info/top_level.txt
+writing manifest file 'adaptenv.egg-info/SOURCES.txt'
+reading manifest file 'adaptenv.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'adaptenv.egg-info/SOURCES.txt'
+running bdist_wheel
+running build
+running build_py
+creating build/lib/adaptenv
+copying adaptenv/extensive_gnk.py -> build/lib/adaptenv
+copying adaptenv/service.py -> build/lib/adaptenv
+copying adaptenv/mmseqs.py -> build/lib/adaptenv
+copying adaptenv/amino_acids.py -> build/lib/adaptenv
+copying adaptenv/alignment.py -> build/lib/adaptenv
+copying adaptenv/presets.py -> build/lib/adaptenv
+copying adaptenv/__init__.py -> build/lib/adaptenv
+copying adaptenv/api.py -> build/lib/adaptenv
+copying adaptenv/thermodynamic.py -> build/lib/adaptenv
+copying adaptenv/ranked_categorical_gnk.py -> build/lib/adaptenv
+copying adaptenv/landscape.py -> build/lib/adaptenv
+running egg_info
+writing adaptenv.egg-info/PKG-INFO
+writing dependency_links to adaptenv.egg-info/dependency_links.txt
+writing requirements to adaptenv.egg-info/requires.txt
+writing top-level names to adaptenv.egg-info/top_level.txt
+reading manifest file 'adaptenv.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'adaptenv.egg-info/SOURCES.txt'
+copying adaptenv/presets.yaml -> build/lib/adaptenv
+copying adaptenv/trpb_profile_run178.json -> build/lib/adaptenv
+installing to build/bdist.macosx-12.1-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-12.1-arm64/wheel
+creating build/bdist.macosx-12.1-arm64/wheel/adaptenv
+copying build/lib/adaptenv/extensive_gnk.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/service.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/mmseqs.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/amino_acids.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/alignment.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/presets.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/__init__.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/presets.yaml -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/api.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/thermodynamic.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/ranked_categorical_gnk.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/trpb_profile_run178.json -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+copying build/lib/adaptenv/landscape.py -> build/bdist.macosx-12.1-arm64/wheel/./adaptenv
+running install_egg_info
+Copying adaptenv.egg-info to build/bdist.macosx-12.1-arm64/wheel/./adaptenv-0.5.0rc1-py3.13.egg-info
+running install_scripts
+creating build/bdist.macosx-12.1-arm64/wheel/adaptenv-0.5.0rc1.dist-info/WHEEL
+creating '/var/folders/dm/sqfv0msd3g50txf84szl1c4m0000gn/T/codex-adaptenv-publish-audit-ic8eok6h/dist/.tmp-ho434bpd/adaptenv-0.5.0rc1-py3-none-any.whl' and adding 'build/bdist.macosx-12.1-arm64/wheel' to it
+adding 'adaptenv/__init__.py'
+adding 'adaptenv/alignment.py'
+adding 'adaptenv/amino_acids.py'
+adding 'adaptenv/api.py'
+adding 'adaptenv/extensive_gnk.py'
+adding 'adaptenv/landscape.py'
+adding 'adaptenv/mmseqs.py'
+adding 'adaptenv/presets.py'
+adding 'adaptenv/presets.yaml'
+adding 'adaptenv/ranked_categorical_gnk.py'
+adding 'adaptenv/service.py'
+adding 'adaptenv/thermodynamic.py'
+adding 'adaptenv/trpb_profile_run178.json'
+adding 'adaptenv-0.5.0rc1.dist-info/licenses/LICENSE'
+adding 'adaptenv-0.5.0rc1.dist-info/METADATA'
+adding 'adaptenv-0.5.0rc1.dist-info/WHEEL'
+adding 'adaptenv-0.5.0rc1.dist-info/top_level.txt'
+adding 'adaptenv-0.5.0rc1.dist-info/RECORD'
+removing build/bdist.macosx-12.1-arm64/wheel
+Successfully built adaptenv-0.5.0rc1-py3-none-any.whl
+* Getting build dependencies for wheel...
+/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  corresp(dist, value, root_dir)
+/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  dist._finalize_license_expression()
+/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  self._finalize_license_expression()
+* Building wheel...
+/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  corresp(dist, value, root_dir)
+/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  dist._finalize_license_expression()
+/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  self._finalize_license_expression()
+warning: build_py: byte-compiling is disabled, skipping.
+
+warning: install_lib: byte-compiling is disabled, skipping.
+

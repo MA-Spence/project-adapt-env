@@ -1,0 +1,48 @@
+{
+  "arms": [
+    "extensive_balanced_bounded",
+    "legacy_support_local_normalized",
+    "legacy_public_global_fixed",
+    "additive_surrogate"
+  ],
+  "candidate_is_experiment_local": true,
+  "candidate_replaces_public_generator_in_primary_arm": true,
+  "config_file_sha256": "1d097a77f619bd159fb2eddd65d07284321670129eff1f9adeee609ae19ed0ef",
+  "deployment_comparator": "constructor_default_margin10_direct_float64",
+  "deployment_primary": "public_base_margin8_direct_float64",
+  "effective_config_hash": "a7e50ccf63e7b95b67ec3f3d3fad493028a5b65b5d9f7aae038c361d028565dc",
+  "experiment_id": "EXP-061",
+  "generator_seed_count": 30,
+  "implementation_hash": "118dcd29e928fa97f6f18c8563012788138ed67736ff8ab519acbfab4a047062",
+  "implementation_hash_components": {
+    "external/Adapt-Env/.config.yaml": "3e50b3b8eeed48d86716b99addcade838be6c0a18bca863d849f33d6bbc4b7a3",
+    "external/Adapt-Env/adaptenv/landscape.py": "9a07d3e6c50787043edcb8ec742800995ef4825d6a18117128d09cb545e41ed9",
+    "external/Adapt-Env/adaptenv/presets.py": "eb7d12af9789b4a5b1583176a0277cb9df4e6f52c8e2f986e8f308b509548b2f",
+    "scripts/extensive_gnk_latent_scaling_exp060.py": "f52520201ba919bff19153c551d5648faa36b890c8d6a3781f360469ac60453a",
+    "scripts/extensive_gnk_sigmoid_transmission_exp061.py": "76e1b58f2e0ac32c3983c8f452dc1c7127dd2a0ef4805d01bb764cfcd571a276",
+    "src/project_adapt_env/extensive_gnk.py": "b06a749c59202a869403d44e53fb0823f140c12a14878b86589c0c18a0b14933"
+  },
+  "lengths": [
+    48,
+    93,
+    118,
+    220,
+    238,
+    448
+  ],
+  "observation_noise_enabled": false,
+  "pointwise_scope_is_one_landscape": false,
+  "public_model_changed": false,
+  "quick": false,
+  "readout_scopes": [
+    "pointwise_occupancy",
+    "reference_anchored",
+    "deployment"
+  ],
+  "reference_count": 6,
+  "reference_source_sha256": "68a59e1d9822547fd1c1b949c4cce5c2563be7007454851e0b69b6f88037fa2f",
+  "scientific_decision_enabled": true,
+  "stable_deployment_residual_can_satisfy_gate": false,
+  "stage_4c_4d_4e_hard_stop_retained": true,
+  "task_count": 180
+}

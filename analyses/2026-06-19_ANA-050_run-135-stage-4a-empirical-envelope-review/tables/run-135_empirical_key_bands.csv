@@ -1,0 +1,13 @@
+source_table,descriptor_block,descriptor_name,n_values,empirical_q05,empirical_median,empirical_q95
+descriptor_metrics,order1_or_marginal,beneficial_fraction,10,0.031878,0.38966,0.464739
+descriptor_metrics,order1_or_marginal,deleterious_fraction,10,0.031878,0.38966,0.464739
+descriptor_metrics,order1_or_marginal,neutral_fraction,10,0.070523,0.22068,0.936243
+graphlet_metrics,specific_epistasis_or_topography,walsh_high_order_fraction,960,0.0,0.016387,0.307588
+graphlet_metrics,specific_epistasis_or_topography,n_local_maxima,960,1.0,2.0,16.0
+graphlet_metrics,specific_epistasis_or_topography,random_walk_lag1_autocorrelation,795,-0.125096,0.308004,0.482852
+graphlet_metrics,specific_epistasis_or_topography,edge_energy_effective_fraction,795,0.179231,0.319323,0.571929
+graphlet_metrics,specific_epistasis_or_topography,site_energy_effective_fraction,795,0.286367,0.63533,0.968231
+graphlet_metrics,specific_epistasis_or_topography,magnitude_epistasis_to_single_mutant_sd_ratio,960,0.0,0.599848,1.248066
+graphlet_metrics,specific_epistasis_or_topography,sign_epistasis_fraction_local,960,0.0,0.333333,0.708333
+graphlet_metrics,specific_epistasis_or_topography,reciprocal_sign_epistasis_fraction_local,960,0.0,0.0,0.333333
+graphlet_metrics,specific_epistasis_or_topography,accessible_path_fraction_dp,960,0.0,0.0,0.583333

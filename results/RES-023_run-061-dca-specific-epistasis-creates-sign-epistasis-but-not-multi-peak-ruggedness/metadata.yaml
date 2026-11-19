@@ -1,0 +1,46 @@
+id: RES-023
+title: RUN-061 DCA-specific epistasis creates sign epistasis but not multi-peak ruggedness
+status: completed
+created: '2026-05-15T13:30:15+10:00'
+owner: matthew-spence
+analyses:
+- ANA-023
+experiments:
+- EXP-023
+runs:
+- RUN-061
+supports:
+- HYP-005
+weakens:
+- HYP-004
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-061 shows that disabling the old generic epistasis and adding DCA-prior
+  state-specific pair terms creates strong selected pair epistasis and systematic
+  one-sided sign epistasis in a dense TEM-1 local Hamming cube, with lower random-walk
+  autocorrelation than prior smooth TEM-1 random-walk diagnostics. It does not yet
+  produce reciprocal sign epistasis, multiple local maxima, accessible improving paths
+  from the selected anchor to the all-alternative genotype, or a second-order-dominated
+  rugged topology.
+artifacts:
+- results/RES-023_run-061-dca-specific-epistasis-creates-sign-epistasis-but-not-multi-peak-ruggedness/metrics.json
+evidence_paths:
+- analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/metrics.json
+- analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_key_metrics.md
+- analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_validation_tests.md
+- analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_selected_dca_pairs.md
+- analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_pair_epistasis_summary.md
+- analyses/2026-05-15_ANA-023_run-061-tem1-dca-specific-epistasis-hamming-graph-review/tables/run-061_walsh_summary.md
+- data/processed/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061/summary.json
+- data/processed/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061/hamming_graph_metrics.json
+- data/processed/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061/selected_dca_pairs.csv
+- data/processed/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061/hamming_pair_epistasis.csv
+- data/processed/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061/hamming_walsh_terms.csv
+- data/processed/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061/landscapy_hamming_landscape/manifest.json
+- data/processed/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061.dvc
+- experiments/2026-05-15_EXP-023_tem1-dca-specific-epistasis-hamming-graph-diagnostic/config.yaml
+- experiments/2026-05-15_EXP-023_tem1-dca-specific-epistasis-hamming-graph-diagnostic/runs/RUN-061.yaml
+compliance:
+  level: green
+  issues: []

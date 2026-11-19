@@ -1,0 +1,28 @@
+experiment_id: EXP-065
+protocol: replicate_observation_followup_v1
+protocol_path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/replicate_observation.md
+data:
+  root: data/processed/trpb-replicate-observation-exp065
+  shared_root: /tank/data/labproj/runtime/project-adapt-env/shared/trpb-replicate-observation-exp065
+  prior_run: RUN-166
+sampling:
+  donor_split_seed: 651001
+  training_fraction: 0.8
+  observation_seed: 651101
+  observation_draws: 128
+  bootstrap_seed: 651201
+  bootstrap_draws: 2000
+  quick_observation_seed: 659901
+  quick_observation_draws: 2
+  quick_bootstrap_draws: 40
+measurement:
+  resolution: 0.001
+  sensitivity_resolutions: [0.000000000001, 0.001, 0.01]
+  activity_cutoffs: [0.05396940664223584, 0.05369397352521348]
+  # Published assay detection criteria; not scientific success gates.
+observation:
+  count_quantiles: [0.25, 0.5, 0.75]
+  modes: [independent_difference, shared_stop_sensitivity]
+  # The only fitted quantities describe replicate/control errors. Generator is frozen.
+  minimum_donors_per_cell: 30
+  interpretation: Replicate differences identify differential error; stop controls provide an explicitly assumed proxy for shared error. Neither branch is a uniquely identified measurement model.

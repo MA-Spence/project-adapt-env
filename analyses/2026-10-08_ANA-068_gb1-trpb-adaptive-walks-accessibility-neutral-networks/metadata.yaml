@@ -1,0 +1,85 @@
+id: ANA-068
+title: GB1 and TrpB whole-library adaptive walks, accessibility and neutral connectivity
+status: completed
+created: '2026-10-08T17:16:52+11:00'
+owner: matthew-spence
+experiments:
+- EXP-066
+runs:
+- RUN-172
+purpose: Reuse frozen RUN-172 fits to compare empirical and synthetic GB1/TrpB single-substitution
+  graphs, adaptive walks, accessible high-fitness sets and resolution-dependent neutral
+  components, with executable notebook figures and no refitting or scientific success
+  gates.
+path: analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks
+notebook_record:
+  primary_notebook_path: analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-172
+  produced_artifacts:
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/01_adaptive_trajectories.pdf
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/01_adaptive_trajectories.png
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/02_walk_endpoints.pdf
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/02_walk_endpoints.png
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/03_accessibility.pdf
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/03_accessibility.png
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/04_neutral_connectivity.pdf
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/04_neutral_connectivity.png
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/05_observation_sensitivity.pdf
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/05_observation_sensitivity.png
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/06_graph_diagnostics.pdf
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/figures/06_graph_diagnostics.png
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/artifact_manifest.json
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/audit.json
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/coverage.csv
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/data_bundle_audit.json
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/endpoint_cdf.csv
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/graph_summary.csv
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/kernel_validation.json
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/mask_sensitivity.csv
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/neutral_component_sizes.csv
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/trajectories.csv
+  - analyses/2026-10-08_ANA-068_gb1-trpb-adaptive-walks-accessibility-neutral-networks/tables/verification.json
+data_bundle: data/processed/production_landscapes/ANA-068.dvc
+verification:
+  verified_at: '2026-10-08T17:48:24.441707+11:00'
+  executed_code_cells: 9
+  cell_errors: 0
+  inline_figures: 6
+  figure_exports: 12
+  figures_visually_inspected: 6
+  landscapes: 130
+  resolution_specific_graph_analyses: 390
+  sampled_walks: 532480
+  all_walks_terminated: true
+  small_graph_validation_cases: 20
+  replayed_latent_nodes: 4096
+  source_hashes: 12
+  output_sha256_hashes: 402
+  dvc_data_files_md5_verified: 403
+  elapsed_calculation_seconds: 138.70481479197042
+  data_backup:
+    directory_md5: 4784c138999f69f1b522198f43220458.dir
+    bytes: 173163035
+    files: 403
+    remote_store: /tank/data/labproj/projects/project-adapt-env/data/files/md5
+    remote_backup_status: 'pending: dutch unreachable from lab gateway (No route to
+      host)'
+    verified_objects: 0
+    all_md5_match: false
+    local_cache_objects_md5_verified: 397
+    local_cache_complete: true
+  checks: Implementation, provenance and execution checks, not scientific success
+    gates.
+  full_repository_strict_check: 'Unavailable: bounded labproj checks timed out on
+    historical cloud-backed files.'
+  record_status_update: labproj set-status wrote completed to both the record and
+    registry before exceeding the bounded eight-second wait.
+  figure_rendering: Full notebook executed; Figure 1 then selectively re-executed
+    from unchanged verified tables to adjust legend placement.
+compliance:
+  level: yellow
+  issues:
+  - ANA-068 is completed but has no linked results.

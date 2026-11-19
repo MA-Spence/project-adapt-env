@@ -1,0 +1,31 @@
+id: ANA-030
+title: RUN-077 system-specific current-model graphlet falsifier review
+status: completed
+created: '2026-05-16T20:36:56+10:00'
+owner: Codex
+experiments:
+- EXP-030
+runs:
+- RUN-077
+purpose: Assess whether system-specific current-model PHOT and SPTN1 refits overturn
+  the RES-028 graphlet falsifiers after correcting the RUN-073 pooling and stale empirical-comparison
+  problem.
+path: analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-077
+  produced_artifacts:
+  - analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/tables/run-077_branch_validation.md
+  - analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/tables/run-077_empirical_primary_graphlet_metrics.md
+  - analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/tables/run-077_falsifier_summary.md
+  - analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/tables/run-077_fit_summary.md
+  - analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/tables/run-077_graphlet_catalog_summary.md
+  - analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/tables/run-077_model_distances.md
+  - analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/tables/run-077_preflight_and_output_audit.md
+  - analyses/2026-05-16_ANA-030_run-077-system-specific-current-model-graphlet-falsifier-review/tables/run-077_test_model_graphlet_metrics.md
+compliance:
+  level: green
+  issues: []

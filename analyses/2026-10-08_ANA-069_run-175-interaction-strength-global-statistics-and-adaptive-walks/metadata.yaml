@@ -1,0 +1,53 @@
+id: ANA-069
+title: RUN-175 interaction strength trades aggregate epistasis against adaptive search
+status: completed
+created: '2026-10-08T20:44:31+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-175
+purpose: Compare paired interaction-strength regimes on GB1 and TrpB through executed
+  notebook figures, retaining fresh-seed variability, observation and resolution sensitivities,
+  and unfitted global statistics without scientific success gates.
+path: analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks
+notebook_record:
+  primary_notebook_path: analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-175
+  produced_artifacts:
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/01_joint_search_tradeoffs.pdf
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/01_joint_search_tradeoffs.png
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/02_global_statistics.pdf
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/02_global_statistics.png
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/03_trpb_observation.pdf
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/03_trpb_observation.png
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/04_resolution_and_neutrality.pdf
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/04_resolution_and_neutrality.png
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/05_fit_and_availability.pdf
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/figures/05_fit_and_availability.png
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/aggregate_estimates.csv
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/anchor_replay.csv
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/artifact_manifest.json
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/artifact_validation.json
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/audit.json
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/data_backup.json
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/fit_audit.csv
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/key_comparisons.csv
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/per_seed_results.csv
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/selected_parameters.csv
+  - analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/tables/wht_audit.csv
+verification:
+  notebook: tables/artifact_validation.json
+  numerical: tables/audit.json
+  data_backup: tables/data_backup.json
+data:
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  directory_md5: b33c8fdb785160b4df3f30d0a26c4711.dir
+  files: 186
+  bytes: 151681986
+compliance:
+  level: green
+  issues: []

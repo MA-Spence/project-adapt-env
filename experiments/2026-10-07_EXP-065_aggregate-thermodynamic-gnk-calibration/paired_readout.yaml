@@ -1,0 +1,35 @@
+experiment_id: EXP-065
+protocol: paired_readout_followup_v1
+protocol_path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/paired_readout.md
+data:
+  root: data/processed/ensemble-landscape-validation-datasets
+  dataset: trpb_johnston2024_four_site_graphfla
+  prior_nodes: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/inputs/run164_trpb_nodes.json
+sampling:
+  seed: 650501
+  calibration_cubes: 24
+  confirmation_cubes: 24
+  synthetic_cubes_per_seed: 8
+measurement:
+  resolution: 0.001
+  sensitivity_resolutions: [0.000000000001, 0.001, 0.01]
+  interpretation: descriptive resolution in training-normalized fitness units; not an inferred noise level
+model:
+  representation_rank: 8
+  reference_rank: 0.5
+  order_weights: [0.35, 0.45, 0.20]
+fit:
+  calibration_seeds: [650601, 650602, 650603, 650604]
+  confirmation_seeds: [650701, 650702, 650703, 650704, 650705, 650706, 650707, 650708]
+  interaction_ratios: [0.0, 0.25, 1.0, 4.0]
+  steepness: [0.125, 0.5, 2.0]
+  reference_occupancy: [0.2, 0.5, 0.8]
+conditional:
+  operating_occupancies: [0.1, 0.5, 0.9]
+embedding:
+  lengths: [32, 128, 512]
+  seeds: [650801, 650802, 650803]
+  reference_ranks: [0.5, 1.0]
+  libraries_per_seed: 2
+  cubes_per_library: 4
+  distances: [0, 4, 16]

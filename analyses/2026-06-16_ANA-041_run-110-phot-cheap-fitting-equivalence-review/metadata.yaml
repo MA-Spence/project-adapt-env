@@ -1,0 +1,35 @@
+id: ANA-041
+title: RUN-110 PHOT cheap fitting equivalence benchmark review
+status: completed
+created: '2026-06-16T11:59:20+10:00'
+owner: matthew-spence
+experiments:
+- EXP-042
+runs:
+- RUN-110
+purpose: Review RUN-110 compact outputs, compare cheaper PHOT nested-min fitting protocols
+  against the RUN-098 full ABC comparator, and decide whether any protocol is operationally
+  equivalent enough to justify larger landscape scale-up.
+path: analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-110
+  produced_artifacts:
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/metrics.json
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_abc_comparator_test_distances.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_best_any_equivalence.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_equivalence_by_method_family.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_equivalence_by_method_reference.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_local_abc_rounds.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_module_locality_test.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_output_collection_audit.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_protocol_decision_table.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_same_family_equivalence.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_secondary_epistasis_test_summary.md
+  - analyses/2026-06-16_ANA-041_run-110-phot-cheap-fitting-equivalence-review/tables/run-110_test_distances.md
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,6 @@
+outs:
+- md5: 2faf8cb35174d25dd364b27971d7350d.dir
+  size: 8354
+  nfiles: 3
+  hash: md5
+  path: logs

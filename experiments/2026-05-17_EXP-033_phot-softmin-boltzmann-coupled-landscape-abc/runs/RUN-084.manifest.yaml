@@ -1,0 +1,53 @@
+run: RUN-084
+target: lab-slurm
+experiment: EXP-033
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-05-17_EXP-033_phot-softmin-boltzmann-coupled-landscape-abc
+  run_script: experiments/2026-05-17_EXP-033_phot-softmin-boltzmann-coupled-landscape-abc/run.sh
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - scripts/phot_softmin_coupled_landscape_abc.py
+  - src/project_adapt_env/coupled_landscape.py
+  datasets:
+  - RUN-077 PHOT system-specific current-model refit outputs
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - progress.json
+  - parameter_specs.csv
+  - posterior_particles.csv
+  - posterior_rounds.csv
+  - evaluated_parameter_sets.csv
+  - assay_fit_metrics.csv
+  - assay_dfe_metrics.csv
+  - assay_epistasis_metrics.csv
+  - assay_fit_rankings.csv
+  - graphlet_catalog.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - graphlet_summary.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - local_signal_by_graphlet.csv
+  - local_signal_energy_by_feature.csv
+  - local_signal_feature_energy_summary.csv
+  - local_signal_graphlet_energy_summary.csv
+  - locality_covariance_summary.csv
+  - empirical_readout_fit.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-084/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-084
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-084/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-084/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-084
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-084/project/experiments/2026-05-17_EXP-033_phot-softmin-boltzmann-coupled-landscape-abc/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-084/project/experiments/2026-05-17_EXP-033_phot-softmin-boltzmann-coupled-landscape-abc/runs/RUN-084.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

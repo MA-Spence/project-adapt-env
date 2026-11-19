@@ -1,0 +1,40 @@
+experiment_id: EXP-065
+title: Aggregate thermodynamic GNK calibration and confirmation
+stack: STACK-000
+target: lab-slurm
+data:
+  root: data/processed/ensemble-landscape-validation-datasets
+  missing_fitness: exclude
+  datasets:
+    - gb1_wu2016_four_site_graphfla
+    - trpb_johnston2024_four_site_graphfla
+    - cr9114_h1_phillips2021_graphfla
+sampling:
+  dimension: 4
+  seed: 65001
+  calibration_cubes: 24
+  confirmation_cubes: 24
+  synthetic_cubes_per_seed: 8
+measurement:
+  # Fraction of calibration-panel fitness range; an engineering resolution,
+  # not an inferred assay noise level. No clipping after affine scaling.
+  resolution: 0.001
+  sensitivity_resolutions: [0.000000000001, 0.001, 0.01]
+model:
+  representation_rank: 8
+  reference_rank: 0.5
+  order_mixtures:
+    - [0.98, 0.01, 0.01]
+    - [0.35, 0.45, 0.20]
+fit:
+  calibration_seeds: [65101, 65102, 65103, 65104]
+  confirmation_seeds: [65401, 65402, 65403, 65404, 65405, 65406, 65407, 65408]
+  steepness: [0.5, 1.0, 2.0, 4.0]
+  reference_occupancy: [0.2, 0.5, 0.8, 0.99]
+  interaction_ratio: [0.25, 0.5, 1.0, 2.0, 4.0]
+  bare_scales: [0.05, 0.1, 0.25, 0.5]
+  bare_offsets: [0.0, 0.25, 0.5]
+scaling:
+  lengths: [32, 128, 512]
+  seeds: [65301, 65302, 65303]
+  mutations: 512

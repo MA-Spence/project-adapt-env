@@ -1,0 +1,181 @@
+experiment_id: EXP-050
+title: PHOT non-additive measurement operator certification
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-050
+  status: planned
+  runner_status: ready_for_submission
+  mode: phot_nonadditive_measurement_operator_certification
+  planned_runner: scripts/phot_nonadditive_operator_certification.py
+  scientific_boundary:
+    primary_hypotheses:
+      - HYP-004
+      - HYP-006
+      - HYP-009
+    motivating_results:
+      - RES-048
+    previous_experiments:
+      - EXP-049
+    advisory_source: scratch/RES-048_forward_plan_tunable_benchmark_generator.md
+    workstream: WS-A
+    comparison_rule: certify a single non-additive measurement operator before empirical model comparisons
+    fallback_rule: if no GP-map is identity-like, characterize the transfer function and apply it symmetrically
+
+source_run:
+  run_id: RUN-077
+  result_id: RES-030
+  output_dir: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  dvc_pointer: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  assay_id: PHOT_CHLRE_Chen_2023
+  use_policy: frozen_current_phot_prepared_assay_only_for_dense_roundtrip_graphlets
+
+mavenn:
+  alphabet: protein
+  regression_type: GE
+  gpmap_type: pairwise
+  ge_nonlinearity_type: nonlinear
+  ge_nonlinearity_monotonic: true
+  ge_noise_model_type: SkewedT
+  ge_heteroskedasticity_order: 2
+  theta_regularization: 0.001
+  eta_regularization: 0.001
+  max_mutation_count: 3
+  max_variants_per_assay: 12000
+  sample_seed: 20260618
+  test_holdout_modulo: 10
+  test_holdout_remainder: 0
+  report_information_metrics: false
+  validation_fraction: 0.1
+  epochs: 60
+  learning_rate: 0.005
+  early_stopping_patience: 8
+  batch_size: 256
+
+phot_graphlets:
+  dimensions:
+    - 4
+    - 5
+    - 6
+  max_graphlets_per_dimension: 8
+  top_feature_pool: 42
+  max_combinations_per_dimension: null
+
+certification:
+  ratio_min: 0.7
+  ratio_max: 1.4
+  near_zero_absolute_tolerance: 1.0e-6
+  metrics:
+    - walsh_high_order_fraction
+    - sign_epistasis_fraction_local
+    - n_local_maxima
+    - accessible_path_fraction
+
+operator_preflight:
+  enabled: true
+  max_pairwise_sequence_length: 80
+  max_pairwise_parameter_bytes: 1000000000
+  infeasible_profile_policy: record_fit_skipped_preflight_and_continue
+
+operator_profiles:
+  - name: pairwise_low_regularization
+    description: MAVE-NN pairwise GP-map profile from WS-A; preflight-skipped if PHOT length makes the pairwise tensor infeasible.
+    mavenn_seed: 20260618
+    mavenn_overrides:
+      gpmap_type: pairwise
+      ge_nonlinearity_type: nonlinear
+      theta_regularization: 0.001
+      eta_regularization: 0.001
+      epochs: 60
+      batch_size: 128
+      max_variants_per_assay: 8000
+  - name: blackbox_ge_neural
+    description: MAVE-NN black-box/GE profile; failures are recorded as transfer-function evidence.
+    mavenn_seed: 20260619
+    mavenn_overrides:
+      gpmap_type: blackbox
+      ge_nonlinearity_type: nonlinear
+      theta_regularization: 0.0001
+      eta_regularization: 0.001
+      epochs: 80
+      batch_size: 256
+      max_variants_per_assay: 6000
+
+known_spectrum_profiles:
+  - name: pure_order3
+    seed: 3103
+    additive_weight: 0.10
+    n_terms: 64
+    order_weights:
+      3: 1.0
+  - name: order2_order3_mixture
+    seed: 3203
+    additive_weight: 0.20
+    n_terms: 64
+    order_weights:
+      2: 0.35
+      3: 0.65
+  - name: low_order_control
+    seed: 3202
+    additive_weight: 0.40
+    n_terms: 48
+    order_weights:
+      2: 1.0
+
+outputs:
+  output_dir_name: phot-nonadditive-measurement-operator-certification
+  expected:
+    - preflight.json
+    - graphlet_catalog.csv
+    - operator_profile_catalog.csv
+    - injected_terms.csv
+    - roundtrip_graphlet_metrics.csv
+    - roundtrip_transfer.csv
+    - mavenn_metrics.csv
+    - operator_certification_summary.csv
+    - summary.json
+
+quick:
+  mavenn:
+    epochs: 2
+    batch_size: 128
+    max_variants_per_assay: 512
+    force_quick_surrogate: true
+  phot_graphlets:
+    dimensions:
+      - 4
+    max_graphlets_per_dimension: 1
+    top_feature_pool: 12
+  operator_profiles:
+    - name: pairwise_low_regularization
+      description: quick surrogate pairwise profile
+      mavenn_seed: 20260618
+      mavenn_overrides:
+        gpmap_type: pairwise
+        ge_nonlinearity_type: nonlinear
+        theta_regularization: 0.001
+        eta_regularization: 0.001
+        epochs: 2
+        batch_size: 128
+        max_variants_per_assay: 512
+        force_quick_surrogate: true
+    - name: blackbox_ge_neural
+      description: quick surrogate black-box/GE profile
+      mavenn_seed: 20260619
+      mavenn_overrides:
+        gpmap_type: blackbox
+        ge_nonlinearity_type: nonlinear
+        theta_regularization: 0.0001
+        eta_regularization: 0.001
+        epochs: 2
+        batch_size: 128
+        max_variants_per_assay: 512
+        force_quick_surrogate: true
+  known_spectrum_profiles:
+    - name: pure_order3
+      seed: 3103
+      additive_weight: 0.10
+      n_terms: 8
+      order_weights:
+        3: 1.0

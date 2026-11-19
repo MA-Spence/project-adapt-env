@@ -1,0 +1,33 @@
+id: RES-032
+title: RUN-081 hard-min improves PHOT assay fit but not held-out graphlet controls
+status: completed
+created: '2026-05-16T23:08:28+10:00'
+owner: Codex
+analyses:
+- ANA-032
+experiments:
+- EXP-032
+runs:
+- RUN-081
+supports: []
+weakens:
+- HYP-008
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-081 shows hard-min candidates can improve the PHOT assay objective,
+  but they do not beat fitted-current held-out graphlet controls or validate
+  empirical-like local non-diffuse ruggedness.
+artifacts:
+- analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/metrics.json
+- analyses/2026-05-16_ANA-032_run-081-phot-hard-min-weakest-link-grid-review/tables/run-081_hyp008_decision_table.md
+- results/RES-032_run-081-hard-min-improves-phot-assay-fit-not-heldout-graphlets/metrics.json
+evidence_paths:
+- data/processed/phot-hard-min-coupled-weakest-link-grid/RUN-081.dvc
+- data/processed/phot-hard-min-coupled-weakest-link-grid/RUN-081/summary.json
+- data/processed/phot-hard-min-coupled-weakest-link-grid/RUN-081/assay_fit_metrics.csv
+- data/processed/phot-hard-min-coupled-weakest-link-grid/RUN-081/model_distances.csv
+- data/processed/phot-hard-min-coupled-weakest-link-grid/RUN-081/graphlet_metrics.csv
+compliance:
+  level: green
+  issues: []

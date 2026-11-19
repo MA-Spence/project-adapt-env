@@ -1,0 +1,102 @@
+id: EXP-063
+type: experiment
+title: Paired categorical-code and representation-rank GNK texture rescue
+slug: paired-categorical-code-and-representation-rank-gnk-texture-rescue
+status: completed
+created: '2026-07-23T16:51:19+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-062
+  motivating_results:
+  - RES-060
+question: At fixed support topology, mutation-operator energy, additive core, and
+  sigmoid readout, do dense q20 allele coding and/or rank-8 categorical tensor components
+  rescue the practical prevalence of transmitted GNK texture?
+pre_experiment_prediction: Dense q20 rank-1 will improve texture prevalence if binary
+  allele ties are sufficient to explain the failure; rank-8 arms will pass the frozen
+  EXP-062 observable gates if tensor rank is additionally limiting, while incumbent
+  binary rank-1 will reproduce the prevalence failure.
+rationale: RES-060 established global core calibration, complete-h1 edge transfer,
+  aligned GNK texture, dose directionality, and length stability, but only 24/360
+  cells passed the practical texture-prevalence floor. The paired intervention changes
+  only categorical coding and representation rank while preserving topology and mutation
+  energy, directly testing the identified low-rank binary bottleneck.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - PROJECT_STATE.md
+  - results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission/result.md
+  - results/RES-059_run-151-validates-frozen-core-gnk-texture-transmission-but-fails-real-core-and-margin-8-gates/result.md
+  - results/RES-060_run-153-validates-global-core-calibration-and-edge-transfer-but-fails-gnk-texture-prevalence/result.md
+  - experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/reference_catalog.yaml
+  - experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/config.yaml
+  - scripts/categorical_representation_rank_rescue_exp063.py
+  - scripts/dimensionless_sigmoid_calibration_exp062.py
+  - scripts/extensive_gnk_sigmoid_transmission_exp061.py
+  - scripts/extensive_gnk_latent_scaling_exp060.py
+  - src/project_adapt_env/ranked_categorical_gnk.py
+  - src/project_adapt_env/extensive_gnk.py
+  - tests/test_categorical_representation_rank_rescue_exp063.py
+  - tests/test_ranked_categorical_gnk.py
+  - external/Adapt-Env/.config.yaml
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/Adapt-Env/adaptenv/presets.py
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 64
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - reference_catalog.csv
+  - core_guardrail_metrics.csv
+  - representation_catalog.csv
+  - representation_audit.csv
+  - latent_geometry_metrics.csv
+  - validation_edge_metrics.csv
+  - validation_texture_metrics.csv
+  - paired_arm_effects.csv
+  - factorial_effects.csv
+  - dose_response_metrics.csv
+  - scale_law_fits.csv
+  - acceptance_checks.csv
+  - decision_table.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

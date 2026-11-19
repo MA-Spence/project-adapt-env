@@ -1,0 +1,33 @@
+{
+  "abc_comparator": {
+    "output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-112/project/data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098",
+    "run_id": "RUN-098"
+  },
+  "experiment_id": "EXP-043",
+  "n_candidate_evaluations": 730,
+  "n_equivalence_rows": 40,
+  "n_graphlets": 24,
+  "n_operationally_equivalent": 0,
+  "n_selected_candidates": 20,
+  "output_files": {
+    "abc_comparator_selected_family_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/abc_comparator_selected_family_distances.csv",
+    "fit_protocol_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/fit_protocol_candidates.csv",
+    "fit_protocol_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/fit_protocol_distances.csv",
+    "fit_protocol_equivalence": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/fit_protocol_equivalence.csv",
+    "full_abc_comparator_selected_particles": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/full_abc_comparator_selected_particles.csv",
+    "gft_coefficients": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/gft_coefficients.csv",
+    "graphlet_metrics": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/graphlet_metrics.csv",
+    "graphlet_summary": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/graphlet_summary.csv",
+    "module_energy_summary": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/module_energy_summary.csv",
+    "preflight": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/preflight.json",
+    "selected_fit_protocol_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/selected_fit_protocol_candidates.csv",
+    "walsh_terms": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-112/outputs/walsh_terms.csv"
+  },
+  "protocols": [
+    "deterministic_summary_loss",
+    "exact_descriptive_gated",
+    "local_abc_after_cheap_fit",
+    "surrogate_assisted"
+  ],
+  "run_mode": "phot_epistasis_calibrated_cheap_fit_protocol"
+}

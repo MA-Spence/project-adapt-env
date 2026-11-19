@@ -1,0 +1,45 @@
+{
+  "run": "RUN-176",
+  "experiment": "EXP-065",
+  "status": "prepared_nonexecuting_preview",
+  "queue_submission": "held_by_scientist_until_Dutch_restored",
+  "scheduler_job_id": null,
+  "scientific_run_executed": false,
+  "source_files_verified": 42,
+  "source_manifest_sha256": "e0dc11803aefc3d92811b0177fe124c5ccf05031ab2719cdab00a1299d051b41",
+  "config_sha256": "1481bc611cc533a998b22e14538ead694de21cf4a6dcf479bcb66a18432dae19",
+  "profile_matrix_sha256": "d5ac4d8724fc753709887afbe5a82a172c47c5a5bf18cc8a13dd1977875f7be3",
+  "profile_manifest_sha256": "408ffe4a5052fe0d2525ed5c52113381753ba6cfb9fce3d775885648a804abd9",
+  "staging": {
+    "checked_with": "labproj.submit._should_stage_path using saved submission filter",
+    "required_files_verified": 85,
+    "current_declared_files": 49,
+    "input_bundles": {
+      "interaction-strength-exp065-inputs": 25,
+      "trpb-profile-additive-inputs": 11
+    },
+    "all_required_files_included": true,
+    "source_archive_not_uploaded": true,
+    "filter_sha256": "6ed5651aa8c99d16fb9f45e4e9cdf80d4cf3574d3ec91504c20ab9af29aca718"
+  },
+  "dvc": {
+    "pointer": "data/processed/trpb-profile-additive-inputs.dvc",
+    "directory_md5": "053fccec0e26a88870a5b1541dd2cfa9.dir",
+    "cache_objects_verified": 12,
+    "remote_backup": "deferred_Dutch_offline"
+  },
+  "resources": {
+    "cpus": 4,
+    "memory_gb": 8,
+    "gpus": 0,
+    "gpu_memory_expected_gb": null,
+    "walltime": "01:00:00",
+    "jobfs_gb": 0
+  },
+  "pending_remote_checks": [
+    "Dutch reachability and shared storage",
+    "recorded Python and numerical package versions",
+    "project-local graph compiler availability"
+  ],
+  "execute_note": "labproj creates a new live RUN ID for submit --execute; RUN-176 remains the nonexecuting preview. Do not use failed-run resubmit for this planned record."
+}

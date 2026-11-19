@@ -1,0 +1,10 @@
+support_mode,order,n_terms,n_unique_supports
+random,2,510,26
+random,3,645,41
+random,4,285,32
+shuffled_block,2,510,28
+shuffled_block,3,645,43
+shuffled_block,4,285,34
+structured_block,2,510,27
+structured_block,3,645,39
+structured_block,4,285,39

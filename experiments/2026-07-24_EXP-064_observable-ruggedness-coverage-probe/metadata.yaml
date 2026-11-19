@@ -1,0 +1,119 @@
+id: EXP-064
+type: experiment
+title: Observable-ruggedness coverage probe
+slug: observable-ruggedness-coverage-probe
+status: completed
+created: '2026-07-24T12:01:52+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-063
+  motivating_results:
+  - RES-050
+  - RES-051
+  - RES-052
+  - RES-054
+  - RES-058
+  - RES-059
+  - RES-060
+  - RES-061
+question: Can the additive-core plus binary-rank-8 extensive-GNK stability-gate observable,
+  with beta and reference occupancy swept, specifically cover the rugged upper quantiles
+  of the frozen Tier-1 empirical descriptor envelope?
+pre_experiment_prediction: At least one beta, p0, and GNK-amplitude region will place
+  the structured binary-rank-8 observable within at least five of eight descriptor
+  bands for at least 80% of rugged-end Tier-1 templates while retaining accessibility
+  and exceeding additive, shuffled, and random controls.
+rationale: RES-061 repairs observable texture prevalence on the fixed challenge panel,
+  but RES-051/052 leave forward empirical-envelope coverage and specificity unresolved
+  and used the prior representation or frozen deployment operating point. This probe
+  tests that expressivity prerequisite without fitting.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - PROJECT_STATE.md
+  - scratch/RES-061_exp064_observable_ruggedness_coverage_probe_spec.md
+  - results/RES-050_run-135-empirical-ensemble-descriptor-envelope-reference-bands/result.md
+  - results/RES-051_run-136-protein-scale-gnk-reachability-weakens-directional-knob-claim/result.md
+  - results/RES-052_run-137-calibrated-overlap-tier1-contact-not-public-model-specific/result.md
+  - results/RES-054_run-139-heldout-descriptor-generalisation-not-validated/result.md
+  - results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission/result.md
+  - results/RES-059_run-151-validates-frozen-core-gnk-texture-transmission-but-fails-real-core-and-margin-8-gates/result.md
+  - results/RES-060_run-153-validates-global-core-calibration-and-edge-transfer-but-fails-gnk-texture-prevalence/result.md
+  - results/RES-061_run-157-binary-rank-8-representation-rescues-gnk-texture-prevalence-on-fixed-challenge-panel/result.md
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_empirical_key_bands.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/tables/run-135_graphlet_dataset_medians.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/source_tables/run-135_graphlet_metrics.csv
+  - analyses/2026-06-19_ANA-050_run-135-stage-4a-empirical-envelope-review/source_tables/run-135_descriptor_scope_audit.csv
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - scripts/observable_ruggedness_coverage_probe_exp064.py
+  - scripts/categorical_representation_rank_rescue_exp063.py
+  - scripts/design_matched_support_aware_probe_exp057.py
+  - scripts/ensemble_landscape_validation_stage4.py
+  - scripts/dimensionless_sigmoid_calibration_exp062.py
+  - src/project_adapt_env/ranked_categorical_gnk.py
+  - src/project_adapt_env/extensive_gnk.py
+  - src/project_adapt_env/dense_descriptive.py
+  - tests/test_observable_ruggedness_coverage_probe_exp064.py
+  - tests/test_ranked_categorical_gnk.py
+  - external/Adapt-Env/.config.yaml
+  - external/Adapt-Env/adaptenv/landscape.py
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 64
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - template_catalog.csv
+  - support_catalog.csv
+  - support_aware_graphlet_audit.csv
+  - empirical_bands_resolved.csv
+  - generated_descriptor_metrics.csv
+  - coverage_matrix.csv
+  - rugged_end_reachability.csv
+  - specificity_table.csv
+  - selected_operating_region.csv
+  - technical_checks.csv
+  - checkpoint_resume_summary.json
+  - decision_table.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

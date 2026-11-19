@@ -1,0 +1,35 @@
+id: ANA-062
+title: RUN-162 observable-ruggedness coverage probe review
+status: completed
+created: '2026-07-24T13:00:06+10:00'
+owner: matthew-spence
+experiments:
+- EXP-064
+runs:
+- RUN-162
+purpose: Collect and independently audit completed RUN-162 against the preregistered
+  EXP-064 technical, empirical-band reproduction, range-coverage, joint rugged-end,
+  specificity, navigability, decision, and provenance gates without post hoc retuning.
+path: analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review
+notebook_record:
+  primary_notebook_path: analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-162
+  produced_artifacts:
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/metrics.json
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_acceptance_audit.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_collection_audit.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_coverage_by_descriptor.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_coverage_by_template.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_operating_region_audit.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_protocol_output_audit.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_rugged_end_audit.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_rugged_target_diagnostic.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_source_hash_audit.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_specificity_audit.csv
+  - analyses/2026-07-24_ANA-062_run-162-observable-ruggedness-coverage-probe-review/tables/run-162_specificity_by_descriptor.csv
+compliance:
+  level: green
+  issues: []

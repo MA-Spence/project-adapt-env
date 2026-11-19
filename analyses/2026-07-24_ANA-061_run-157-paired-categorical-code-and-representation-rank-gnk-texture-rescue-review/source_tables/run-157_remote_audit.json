@@ -1,0 +1,12 @@
+{
+  "all_sha256_and_size_match": true,
+  "dvc_remote_dir_object_present": false,
+  "dvc_remote_missing_content_bytes": 316931982,
+  "dvc_remote_missing_content_objects": 223,
+  "dvc_remote_present_content_bytes": 139584712,
+  "dvc_remote_present_content_objects": 155,
+  "file_count": 378,
+  "manifest_sha256": "05db5b157e5d5b60c0901bfd37f96e7ab5725822007f3ead9a17c1782c325b9f",
+  "runtime_path": "/Volumes/DutchZFS/labproj/runtime/project-adapt-env/runs/RUN-157",
+  "size_bytes": 456516694
+}

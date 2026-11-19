@@ -1,0 +1,78 @@
+id: EXP-054
+type: experiment
+title: Stage 4C empirical coverage and calibrated overlap
+slug: stage-4c-empirical-coverage-calibrated-overlap
+status: planned
+created: '2026-06-18T22:48:58+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-052
+  - EXP-053
+  motivating_results:
+  - RES-049
+question: Does the generator reachable manifold cover the empirical descriptor envelope,
+  and what posterior-like knob regions overlap each empirical assay band without point-fitting?
+pre_experiment_prediction: At least one region of full public-model knob space will
+  overlap each core Tier-1 empirical band on the registered descriptor set, while
+  additive-core-only and bare-GNK controls will miss complementary blocks.
+rationale: 'This is Step 4C: coverage plus calibrated overlap as bands/posterior regions,
+  not one-assay inverse fitting.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/science_plan_part1_ensemble_landscape_validation.md
+  - scripts/ensemble_landscape_validation_stage4.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/landscapy/README.md
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - coverage_metrics.csv
+  - posterior_knob_regions.csv
+  - control_overlap_failures.csv
+  - empirical_bands.csv
+  - descriptor_scope_audit.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

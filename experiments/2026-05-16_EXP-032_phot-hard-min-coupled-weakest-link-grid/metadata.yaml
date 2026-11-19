@@ -1,0 +1,102 @@
+id: EXP-032
+type: experiment
+title: PHOT hard-min coupled weakest-link landscape grid search
+slug: phot-hard-min-coupled-weakest-link-grid
+status: completed
+created: '2026-05-16T22:28:14+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-031
+  motivating_results:
+  - RES-030
+  - RES-031
+question: With PHOT as the only empirical test system, does a frozen fitted smooth/additive
+  PHOT landscape combined with a correlated offset auxiliary landscape by f(x)=min(a(x),b(x))
+  improve assay fit and held-out graphlet local ruggedness relative to the single-landscape
+  base and fitted-current controls?
+pre_experiment_prediction: If weakest-link coupling is the missing local nonlinear
+  operator, some correlated hard-min grid points should improve PHOT assay fit statistics
+  and held-out graphlet WHT/GFT/topology while producing empirical-like localized
+  edge/plaquette innovation energy around switching boundaries. If improvements are
+  only diffuse, only graphlet-specific, or worsen assay fit, this implementation does
+  not support HYP-008.
+rationale: 'RES-031 showed that additive/gated no-module coupling could move PHOT
+  graphlet distance but did not create validated localized ruggedness. The user-proposed
+  hard-min operator is biologically different: two related essential functions are
+  constrained by the weaker trait, so local topology may arise at trait-switch boundaries
+  rather than from additive innovation modules. This experiment freezes the RES-030
+  PHOT fit and performs a deterministic grid search before any new ABC.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - scripts/phot_hard_min_coupled_landscape_grid_search.py
+  - src/project_adapt_env/coupled_landscape.py
+  datasets:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 04:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - parameter_grid.csv
+  - assay_fit_metrics.csv
+  - assay_dfe_metrics.csv
+  - assay_epistasis_metrics.csv
+  - assay_fit_rankings.csv
+  - graphlet_catalog.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - graphlet_summary.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - local_signal_by_graphlet.csv
+  - local_signal_energy_by_feature.csv
+  - local_signal_feature_energy_summary.csv
+  - local_signal_graphlet_energy_summary.csv
+  - locality_covariance_summary.csv
+  - empirical_readout_fit.json
+  artifacts: []
+downstream:
+  planned_analyses:
+  - ANA-032
+  planned_results:
+  - RES-032
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- RUN-081 completed successfully and outputs are DVC-tracked at data/processed/phot-hard-min-coupled-weakest-link-grid/RUN-081.dvc.
+- ANA-032 and RES-032 record that hard-min improves the PHOT assay objective but does
+  not pass held-out graphlet or locality controls for HYP-008.
+template: generic
+compliance:
+  level: green
+  issues: []

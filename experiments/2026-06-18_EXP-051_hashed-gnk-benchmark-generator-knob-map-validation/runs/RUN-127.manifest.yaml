@@ -1,0 +1,37 @@
+run: RUN-127
+target: lab-slurm
+experiment: EXP-051
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-18_EXP-051_hashed-gnk-benchmark-generator-knob-map-validation
+  run_script: experiments/2026-06-18_EXP-051_hashed-gnk-benchmark-generator-knob-map-validation/run.sh
+inputs:
+  declared_files:
+  - scratch/RES-048_forward_plan_tunable_benchmark_generator.md
+  - scripts/hashed_gnk_benchmark_knob_validation.py
+  datasets: []
+outputs:
+  expected:
+  - preflight.json
+  - parameter_grid.csv
+  - graphlet_metrics.csv
+  - knob_summary.csv
+  - monotonicity_checks.csv
+  - support_catalog.csv
+  - hamming_layer_metrics.csv
+  - threshold_epistasis_metrics.csv
+  - core_readout_guardrail_checks.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-127/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-127
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-127/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-127/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-127
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-127/project/experiments/2026-06-18_EXP-051_hashed-gnk-benchmark-generator-knob-map-validation/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-127/project/experiments/2026-06-18_EXP-051_hashed-gnk-benchmark-generator-knob-map-validation/runs/RUN-127.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

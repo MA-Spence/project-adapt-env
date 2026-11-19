@@ -1,0 +1,71 @@
+experiment_id: EXP-065
+protocol: paired_interaction_strength_walk_tradeoff_v1
+input_bundle: data/processed/interaction-strength-exp065-inputs
+source_run: RUN-172
+motivating_analysis: ANA-068
+interaction_ratios:
+- 0
+- 0.5
+- 1
+- 2
+- 4
+- 8
+proteins:
+- GB1
+- TrpB
+seed_design:
+  reused_seeds: All 16 original RUN-172 confirmation seeds per assay
+  fresh_seed_offsets:
+  - 681201
+  - 681202
+  - 681203
+  - 681204
+  - 681205
+  - 681206
+  - 681207
+  - 681208
+  noise_seed_offset: 683001
+  paired_all_ratios: true
+model:
+  representation_rank: 8
+  reference_rank: 0.5
+  order_weights:
+  - 0.35
+  - 0.45
+  - 0.2
+fit:
+  seed: 660501
+  maxiter: 60
+  popsize: 8
+  quantiles: 101
+  offset_bounds:
+  - -2.0
+  - 2.0
+  scale_bounds:
+  - 0.001
+  - 10.0
+  position_bounds:
+  - -14.0
+  - 8.0
+  steepness_bounds:
+  - 0.05
+  - 8.0
+sampling:
+  synthetic_cubes_per_seed: 8
+measurement:
+  relative_resolutions:
+  - 0
+  - 0.001
+  - 0.01
+  top_fraction: 0.01
+observation_modes:
+  GB1:
+  - none
+  TrpB:
+  - none
+  - independent_difference
+  - shared_stop_sensitivity
+interpretation: Descriptive paired sweep; aggregate summaries and search dynamics
+  remain unfitted readouts. Fresh seeds check generator repeatability, not independent
+  empirical validation. No scientific acceptance gates or empirical interaction identities.
+  Frozen observation models are sensitivities, not identified intrinsic biology.

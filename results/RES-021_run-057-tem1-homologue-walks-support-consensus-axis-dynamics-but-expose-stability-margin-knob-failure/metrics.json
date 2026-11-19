@@ -1,0 +1,82 @@
+{
+  "run_id": "RUN-057",
+  "experiment_id": "EXP-021",
+  "hypothesis_ids": ["HYP-004", "HYP-005"],
+  "sample_sizes": {
+    "parameter_sets": 9,
+    "alignment_sequences": 768,
+    "selected_homologue_starts": 9,
+    "backgrounds": 162,
+    "walk_summaries": 486,
+    "walk_trajectory_rows": 16355,
+    "sampled_epistasis_pairs": 15552
+  },
+  "validation": {
+    "pass_count": 7,
+    "test_count": 9,
+    "all_pass": false,
+    "tests": {
+      "fitness_declines_with_consensus_distance": {
+        "pass": true,
+        "spearman": -0.9609129773128426,
+        "low_mean": 6983.217955547372,
+        "high_mean": 2595.01170475926
+      },
+      "beneficial_fraction_increases_with_consensus_distance": {
+        "pass": true,
+        "spearman": 0.9531183972902232,
+        "low_mean": 0.0009167246009351272,
+        "high_mean": 0.0395997764418817
+      },
+      "adaptive_total_gain_increases_with_consensus_distance": {
+        "pass": true,
+        "spearman": 0.8609448799372148,
+        "low_mean": 576.8939172749335,
+        "high_mean": 3137.0787359174974
+      },
+      "adaptive_walks_decelerate": {
+        "pass": true,
+        "median_greedy_deceleration_ratio": 0.6848663389693896,
+        "expected_max": 0.75
+      },
+      "random_walk_autocorrelation_declines_with_consensus_distance": {
+        "pass": true,
+        "spearman": -0.2014748924707316,
+        "low_mean": 0.9988683973901664,
+        "high_mean": 0.998709364788453
+      },
+      "stability_margin_increases_neutral_fraction": {
+        "pass": false,
+        "spearman": 0.19266865889711313,
+        "low_mean": 0.3616086642402432,
+        "high_mean": 0.3616427432216906
+      },
+      "stability_margin_decreases_deleterious_fraction": {
+        "pass": false,
+        "spearman": -0.13762047064079508,
+        "low_mean": 0.6240747556537031,
+        "high_mean": 0.6240543082648347
+      },
+      "epistasis_strength_increases_abs_epistasis": {
+        "pass": true,
+        "spearman": 0.9486832980505138,
+        "low_mean": 2.481636295636202e-12,
+        "high_mean": 0.0043048347540756505
+      },
+      "epistasis_strength_increases_random_step_variance": {
+        "pass": true,
+        "spearman": 0.4216370213557839,
+        "low_mean": 224.14100104686193,
+        "high_mean": 227.23364452280214
+      }
+    }
+  },
+  "interpretation": {
+    "supports_hypotheses": ["HYP-004"],
+    "weakens_hypotheses": ["HYP-005"],
+    "consensus_axis_walk_component_supported": true,
+    "epistasis_strength_knob_directional": true,
+    "stability_margin_knob_directional": false,
+    "stability_margin_failure_confounded_by_realized_margin_invariance": true
+  }
+}

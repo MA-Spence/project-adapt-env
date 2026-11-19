@@ -1,0 +1,32 @@
+id: ANA-053
+title: RUN-138 Stage 4D joint realism gate review
+status: completed
+created: '2026-06-19T07:12:31+10:00'
+owner: matthew-spence
+experiments:
+- EXP-055
+runs:
+- RUN-138
+purpose: Collect and interpret RUN-138 joint multi-descriptor realism gate outputs.
+path: analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-138
+  produced_artifacts:
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/metrics.json
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_coverage_by_dataset.csv
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_coverage_by_dataset.md
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_coverage_by_metric.csv
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_coverage_by_metric.md
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_hit_dataset_counts.csv
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_hit_dataset_counts.md
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_joint_candidate_summary.csv
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_joint_candidate_summary.md
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_output_collection_audit.csv
+  - analyses/2026-06-19_ANA-053_run-138-stage-4d-joint-realism-review/tables/run-138_output_collection_audit.md
+compliance:
+  level: green
+  issues: []

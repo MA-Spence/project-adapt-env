@@ -1,0 +1,37 @@
+id: ANA-046
+title: RUN-121 PHOT RES-045 calibration isolation review
+status: completed
+created: '2026-06-17T15:00:44+10:00'
+owner: matthew-spence
+experiments:
+- EXP-047
+runs:
+- RUN-121
+purpose: Review RUN-121 compact outputs to determine whether the cumulative RES-045
+  isolation stages repair PHOT raw scale, accessibility, local maxima, spectral texture,
+  sequence-map, and search failures.
+path: analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-121
+  produced_artifacts:
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/metrics.json
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_abc_comparator_test_distances.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_best_candidate_parameters.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_bounded_gate_test_distances.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_graphlet_and_module_catalog_summary.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_observable_vs_raw_epistasis_and_landscape.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_output_collection_audit.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_prior_run_comparison.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_raw_latent_pathology_diagnostics.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_softmin_capability_probe_summary.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_stage_best_test_distances.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_stage_equivalence_decision.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_stage_failure_modes.md
+  - analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_top_component_distances.md
+compliance:
+  level: green
+  issues: []

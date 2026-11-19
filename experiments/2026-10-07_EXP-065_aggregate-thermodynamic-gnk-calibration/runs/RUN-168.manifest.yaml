@@ -1,0 +1,83 @@
+run: RUN-168
+target: lab-slurm
+experiment: EXP-065
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration
+  run_script: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - PROJECT_STATE.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/config.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - scripts/aggregate_thermodynamic_calibration.py
+  - src/project_adapt_env/dense_descriptive.py
+  - src/project_adapt_env/summary_statistics.py
+  - external/Adapt-Env/adaptenv/thermodynamic.py
+  - external/Adapt-Env/adaptenv/extensive_gnk.py
+  - external/Adapt-Env/adaptenv/ranked_categorical_gnk.py
+  - external/Adapt-Env/docs/THERMODYNAMIC_V2.md
+  - tests/test_aggregate_thermodynamic.py
+  - results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission/result.md
+  - results/RES-060_run-153-validates-global-core-calibration-and-edge-transfer-but-fails-gnk-texture-prevalence/result.md
+  - results/RES-061_run-157-binary-rank-8-representation-rescues-gnk-texture-prevalence-on-fixed-challenge-panel/result.md
+  - results/RES-062_run-162-formally-fails-observable-coverage-and-specificity-with-plateau-confounded-rugged-target/result.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/paired_readout.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/paired_readout.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/inputs/run164_trpb_nodes.json
+  - scripts/paired_readout_exp065.py
+  - tests/test_paired_readout_exp065.py
+  - analyses/2026-10-07_ANA-063_run-164-aggregate-thermodynamic-gnk-confirmation/analysis.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/replicate_observation.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/replicate_observation.yaml
+  - scripts/replicate_observation_exp065.py
+  - scripts/fetch_trpb_replicates_exp065.py
+  - scripts/prepare_trpb_replicates_exp065.py
+  - tests/test_replicate_observation_exp065.py
+  - data/processed/trpb-replicate-observation-exp065.dvc
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/analysis.md
+  datasets: []
+outputs:
+  expected:
+  - manifest.json
+  - config.yaml
+  - input_manifest.json
+  - source_manifest.json
+  - excluded_donor_genotypes.json
+  - frozen_parameters.json
+  - donor_assignments.csv.gz
+  - control_diagnostics.csv
+  - noise_calibration.csv
+  - noise_model.json
+  - empirical_nodes.csv
+  - empirical_statistics.csv
+  - empirical_mutations.csv
+  - empirical_components.npz
+  - empirical_summary.csv
+  - empirical_bootstrap.csv
+  - synthetic_statistics.csv.gz
+  - synthetic_summary.csv
+  - seed_summary.csv
+  - array_manifest.json
+  - figures/01_control_covariance.png
+  - figures/01_control_covariance.pdf
+  - figures/02_empirical_replicate_statistics.png
+  - figures/02_empirical_replicate_statistics.pdf
+  - figures/03_frozen_observation_comparison.png
+  - figures/03_frozen_observation_comparison.pdf
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-168/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-168
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-168/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-168/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-168
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-168/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-168/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-168.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

@@ -1,0 +1,24 @@
+{
+  "higher_order_dataset_ids": [
+    "gb1_wu2016_four_site_graphfla",
+    "trpb_johnston2024_four_site_graphfla",
+    "dhfr_papkou2023_full_wagner_tsv",
+    "cr9114_h1_phillips2021_graphfla",
+    "cr9114_h3_phillips2021_graphfla",
+    "cr9114_flub_phillips2021_graphfla",
+    "cr6261_h1_phillips2021_graphfla",
+    "cr6261_h9_phillips2021_graphfla",
+    "pard2_lite2020_graphfla",
+    "pard3_lite2020_graphfla"
+  ],
+  "n_datasets": 17,
+  "n_descriptor_rows": 340,
+  "n_graphlet_rows": 960,
+  "n_scope_audit_rows": 17,
+  "stage": "4A",
+  "n_higher_order_allowed": 10,
+  "n_sparse_higher_order_blocked": 7,
+  "median_graphlet_local_maxima": 2.0,
+  "median_graphlet_accessible_path_fraction_dp": 0.0,
+  "median_graphlet_walsh_high_order_fraction": 0.0163865247641365
+}

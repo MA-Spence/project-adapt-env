@@ -1,0 +1,31 @@
+id: ANA-058
+title: RUN-149 extensive operator-normalized GNK latent scale-law review
+status: completed
+created: '2026-07-23T02:26:29+10:00'
+owner: matthew-spence
+experiments:
+- EXP-060
+runs:
+- RUN-149
+purpose: Collect and independently audit the completed RUN-149 latent GNK outputs
+  against every preregistered EXP-060 scale, support, contrast, pairing, and curvature
+  gate without retuning or introducing post hoc success criteria.
+path: analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review
+notebook_record:
+  primary_notebook_path: analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-149
+  produced_artifacts:
+  - analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/metrics.json
+  - analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_acceptance_audit.csv
+  - analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_candidate_support_by_length_order.csv
+  - analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_collection_audit.csv
+  - analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_local_ratio_by_length.csv
+  - analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_order_allocation_and_curvature.csv
+  - analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_scale_law_summary.csv
+  - analyses/2026-07-23_ANA-058_run-149-extensive-operator-normalized-gnk-latent-scale-law-review/tables/run-149_structural_audit.csv
+compliance:
+  level: green
+  issues: []

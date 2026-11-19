@@ -1,0 +1,233 @@
+{
+  "status": "engineering_checks_passed_not_scientific_evidence",
+  "tests": {
+    "package_maintained": {
+      "passed": 49,
+      "reported_by": "package implementation agent",
+      "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest tests (external/Adapt-Env)"
+    },
+    "matched_runner": {
+      "passed": 5,
+      "reported_by": "independent protocol agent"
+    },
+    "profile_inputs": {
+      "passed": 3,
+      "reported_by": "data provenance agent"
+    }
+  },
+  "independent_actual_prior_audit": {
+    "ordered_sites": [
+      183,
+      184,
+      227,
+      228
+    ],
+    "parent": "VFVS",
+    "canonical_alphabet": "ACDEFGHIKLMNPQRSTVWY",
+    "matrix_formula_max_abs_difference": 4.440892098500626e-16,
+    "all_input_hashes_match": true
+  },
+  "computational_method_audit": {
+    "purpose": "Independent engineering verification of the prior-only adapter; not empirical adequacy evidence",
+    "frozen_source": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/source/external/Adapt-Env/adaptenv/thermodynamic.py",
+    "frozen_source_sha256": "9ec75c87855feedcab49fffdeab83c64f62d06121ae9be667d29114f4327942b",
+    "current_source": "external/Adapt-Env/adaptenv/thermodynamic.py",
+    "current_source_sha256": "4901186fa5d4c6ce3b86ee357913dca7e1457f4e65b0ef568f888d68f234cfbe",
+    "ast_comparison": "Python ast.dump(include_attributes=False), ThermodynamicLandscape method definitions",
+    "exactly_unchanged_computational_methods": [
+      "__init__",
+      "_sequences",
+      "latent_components",
+      "readout",
+      "evaluate_batch_components",
+      "evaluate_batch",
+      "evaluate",
+      "random_sequence",
+      "str_to_seq",
+      "seq_to_str",
+      "hamming_distance",
+      "mutation_effects"
+    ],
+    "changed_existing_methods": [
+      "summary"
+    ],
+    "added_methods": [
+      "from_alignment_profile",
+      "from_frequency_profile"
+    ],
+    "normalized_g_audit": {
+      "input_npz": "data/processed/interaction-strength-exp065-inputs/TrpB/latent_calibration.npz",
+      "input_sha256": "98a4eec06f296e7277d31cecc3525997c315fad31f6940442ccc01dc780596d8",
+      "calibration_rows": 16,
+      "cube_vertices": 256,
+      "prior": "engineering-only Dirichlet(ones(20)), NumPy default_rng seed71; natural log(20*p)",
+      "maximum_absolute_difference": 2.220446049250313e-15,
+      "per_seed": [
+        {
+          "seed": 57117694,
+          "cubes": 8,
+          "reference": [
+            3,
+            13,
+            9,
+            18
+          ],
+          "maximum_normalized_g_difference": 1.7763568394002505e-15,
+          "fingerprint": "36a8519405f9adc259c6a1a482c2ed62ac1540c19259a319dac9a4099ba5f227",
+          "sigma_a": 1.8278240265080263
+        },
+        {
+          "seed": 57117695,
+          "cubes": 8,
+          "reference": [
+            9,
+            7,
+            13,
+            16
+          ],
+          "maximum_normalized_g_difference": 2.220446049250313e-15,
+          "fingerprint": "079f6deb69f97a1f80c2cbc3c3e0b619372a67855023d7481ad3470095f92759",
+          "sigma_a": 1.8278240265080263
+        }
+      ],
+      "interpretation": "Checks unchanged interaction field after additive-prior replacement and global normalization; no synthetic control calibration was rerun."
+    },
+    "profile_conversion_source": "external/Adapt-Env/adaptenv/alignment.py",
+    "profile_conversion_source_sha256": "77faa24306a570a39061b1a03704605b95ec52e463771fea10ecf2d7baf205d7"
+  },
+  "smoke": {
+    "mode": "SMOKE_ONLY",
+    "settings": 18,
+    "seeds": 2,
+    "graph_rows": 183,
+    "latent_graph_rows": 12,
+    "cube_summary_rows": 183,
+    "kernel_validation": {
+      "small_graph_cases": 20,
+      "independent_checks": [
+        "recursive walk moments",
+        "exhaustive reachability",
+        "SciPy components",
+        "degrees"
+      ],
+      "kernel_sha256": "152e75c7add7876e09ca9e82d24e2b7f2b176e099910fd8ff3593ccc8df0bf75"
+    },
+    "worker_environment": {
+      "python": "3.13.11",
+      "packages": {
+        "numpy": "2.4.4",
+        "pandas": "2.3.0",
+        "scipy": "1.17.1",
+        "pyarrow": "20.0.0",
+        "PyYAML": "6.0.3"
+      }
+    },
+    "exit_code": 0,
+    "elapsed_seconds": 40.811252790968865,
+    "all_output_hashes_match": true,
+    "local_scratch_path": "/private/tmp/trpb-profile-smoke.aHYQug",
+    "manifest": {
+      "protocol": "trpb_alignment_profile_prior_repeat_v1",
+      "mode": "SMOKE_ONLY",
+      "public_model": "thermodynamic_gnk_v2",
+      "elapsed_seconds": 40.811252790968865,
+      "source_run": "RUN-175",
+      "precursor_endpoint_run": "RUN-172",
+      "input_manifest_sha256": "c6376f26db500d65a121a0e204bc2a6b219d1722b6188ca369ccada989c1a709",
+      "config_sha256": "1481bc611cc533a998b22e14538ead694de21cf4a6dcf479bcb66a18432dae19",
+      "source_manifest_sha256": "e0dc11803aefc3d92811b0177fe124c5ccf05031ab2719cdab00a1299d051b41",
+      "additive_prior": {
+        "bundle": "data/processed/trpb-profile-additive-inputs",
+        "matrix_file": "additive_matrix.npy",
+        "metadata_file": "prior_manifest.json",
+        "matrix_sha256": "d5ac4d8724fc753709887afbe5a82a172c47c5a5bf18cc8a13dd1977875f7be3",
+        "metadata_sha256": "408ffe4a5052fe0d2525ed5c52113381753ba6cfb9fce3d775885648a804abd9",
+        "source": "Original Johnston et al. TARGET_b0.3 published alignment frequency table; rounded to 0.001; raw alignment unusable",
+        "uniform_probability_mixture": 0.01,
+        "assay_positions_1based": [
+          183,
+          184,
+          227,
+          228
+        ]
+      },
+      "reference_policy": "Preserve each seed's original automatically generated reference. It is a computational centering anchor, not the biological wild type or consensus.",
+      "settings": 18,
+      "graph_rows": 183,
+      "latent_graph_rows": 12,
+      "cube_summary_rows": 183,
+      "seed_audits": 2,
+      "files": {
+        "TrpB_empirical.npz": "5eb0efdb3ca65589b561bbb8a68a7e990d6fd66263f94e249b26cce01cb7e5ac",
+        "TrpB_empirical_cubes.npz": "6b35f955cb943909492c92dae9978ca73cd4e5a15331bc1b768cac1835b29c36",
+        "additive_matrix.npy": "d5ac4d8724fc753709887afbe5a82a172c47c5a5bf18cc8a13dd1977875f7be3",
+        "calibration_prior_audit.json": "e57886a10ebc3fae4a2c35c06991b9ce0cb3b3cf5b1eb19d632e7f5ad9bd565a",
+        "config.yaml": "1481bc611cc533a998b22e14538ead694de21cf4a6dcf479bcb66a18432dae19",
+        "coverage.csv": "3ab4c6f3271dd92fe2e9b80984f56cef60cb31ed6fe830ef3eb91df8335bcc14",
+        "cube_summary.csv": "65e87ede92e883bedb67a18eeba107ecc2be3329992c1a2612ba99b2ef01970a",
+        "cube_values/TrpB_57117794.npz": "094614ff88db4eb4cc25fd6cf3d1873fa83e6618f68a596c77b864bc17ddd457",
+        "cube_values/TrpB_57138794.npz": "24ca768644e32bb709784f1edc75002f032f5f9e476443dd10182b7f35629238",
+        "fits/TrpB_independent_difference_r0.5.csv.gz": "21963114b30538a714eba4ed94d66a808a4bb8de23d8965ce926cc65a2bacd96",
+        "fits/TrpB_independent_difference_r0.csv.gz": "fec69f3d3bc950a82fba03b67a2b99952b317a8c92ad044efa7a508377862c1e",
+        "fits/TrpB_independent_difference_r1.csv.gz": "730117ee37f6487f3b5dd15b8d8d6d0c3346433b602d2e9cd9ff99326c1f3774",
+        "fits/TrpB_independent_difference_r2.csv.gz": "55935360515d29c265e72f104e5029af83ca6206995598b5ef9b2b22fef8206c",
+        "fits/TrpB_independent_difference_r4.csv.gz": "cd1e827dfc8d46ed379bf3f5b752ca1c6a0f20c4e26793fbceb3790c8f98421f",
+        "fits/TrpB_independent_difference_r8.csv.gz": "004135a7ddbdcd33d0154784802e51a6b3343d38e8ec8822e7e53624e0df1a69",
+        "fits/TrpB_none_r0.5.csv.gz": "1f65e05a2c099979fb624d6850442647a812f188782eb8cbdc31f7677346f027",
+        "fits/TrpB_none_r0.csv.gz": "aa51e633e9bc6aac451a4732a16f8f240673c878215c6bc9fcf845c2740518e1",
+        "fits/TrpB_none_r1.csv.gz": "21eac09d3d0c644574b972ed7261d2e9d3fac7eb1105a4f39337413d93eea7fc",
+        "fits/TrpB_none_r2.csv.gz": "80e485d9281d22906a30e46a54afd61b3847a99ab128c28ebfb9b30443b195ae",
+        "fits/TrpB_none_r4.csv.gz": "dd1bd545143a44aa9c630401216751988ece15df50400410d7c301c005ca62ae",
+        "fits/TrpB_none_r8.csv.gz": "edfad653d4360e1e9d3288573398bcb99bf9a2b9068529e613d3705237b96255",
+        "fits/TrpB_shared_stop_sensitivity_r0.5.csv.gz": "75ce39a1427ad1d50c2c5efde16ccc8cf5645762eb29920104e2c095901ccc37",
+        "fits/TrpB_shared_stop_sensitivity_r0.csv.gz": "504d8d1a1053cca0ece7d86b6501b4e83d2e4b7b0314ae3d0a595b950ba00318",
+        "fits/TrpB_shared_stop_sensitivity_r1.csv.gz": "581003f529f86eb69e2a3a8c123411eec5978b4036d6e0a5cb49d8b0e968d462",
+        "fits/TrpB_shared_stop_sensitivity_r2.csv.gz": "c1ed595faa58211634ef10e67a3c4d6c6098d82839437d07bc816f2412b8fc89",
+        "fits/TrpB_shared_stop_sensitivity_r4.csv.gz": "33377227036cb2cff5e4a5ba25aa75fe92e7c1b5d32679270f08c8ad8f950a84",
+        "fits/TrpB_shared_stop_sensitivity_r8.csv.gz": "19fd536b8dc1d19d97c59eb98a8e75267e8740089e46a85f9420f4e44d879015",
+        "fits/endpoint_independent_difference_r0.csv.gz": "bd127d44b504b9f982b36f363037c29f53b79b7a256457bdc31dc67e42b76308",
+        "fits/endpoint_independent_difference_r4.csv.gz": "b467d59375ac1edcdca2295dd8fe7211a2fae1231406f104ac9a724fdb9a2194",
+        "fits/endpoint_none_r0.csv.gz": "bd3805dc2d91712fe7a3d373d2b6718d112847b7102a52218503e151f231674b",
+        "fits/endpoint_none_r4.csv.gz": "28aa8aac7a3c512a1f85da992b23f2fd79becd51cdafb23010048e376d5545aa",
+        "fits/endpoint_parameters_independent_difference.json": "623f63790777447ea878314554fc2a32c9c95b8ceb498871446cd9baf5ee137d",
+        "fits/endpoint_parameters_none.json": "8b19856a64323ff31242e5894f0fa713a39336230ef652fb16562fbe938abb9f",
+        "fits/endpoint_parameters_shared_stop_sensitivity.json": "484613a9900c8efea39e6c99af5c9959ca31f3932387dec961b299be1819bb7a",
+        "fits/endpoint_shared_stop_sensitivity_r0.csv.gz": "829adb3a7b605e4da35fe61d3576cb4d3450470d972a11bc44ce55f7ea366f7d",
+        "fits/endpoint_shared_stop_sensitivity_r4.csv.gz": "69c8952c8f0ea475461480a13602518d965c75a16e2e17b5d158b525db2b8035",
+        "graph_summary.csv": "3acfcf2d13365a4851412ea228a7e0e4fa3bd9db9b69672f68d3b44371adbabd",
+        "historical_source_manifest.json": "76e42b954c842549974cbed3c4f3413334918944f8d7446ba313944995dcf3b9",
+        "input_manifest.json": "c6376f26db500d65a121a0e204bc2a6b219d1722b6188ca369ccada989c1a709",
+        "intervention.json": "180f22709a082bad8fdd01478e2d961036e1aaf02f72cf400203125b9416e462",
+        "kernel_validation.json": "376b81766f7bd26942bb17621ae5bb5fb44c5ec71133a39848ff105d45d642e4",
+        "latent_calibration.npz": "90117172ca504e41f33c4462695cab26a32a4d0ac5c44b6521d1657e0f2181e9",
+        "latent_calibration_index.csv": "6c61f55de703fa766123770fee1dd03c3e0b365095ddbb6f3d074787e9d4d97f",
+        "latent_fields/TrpB_57117794.npz": "adb71ddf40107cef7b5ab9890f2da7270f8114c6ab481666767a92ec6ea24039",
+        "latent_fields/TrpB_57138794.npz": "3fff5bdcdce1bc2a16c91d58540d67c910b2cf23f6c3e10b2634d24ceaa36a0f",
+        "latent_graph_summary.csv": "0e6796b0e20565e850044e293cb323c0ffa7242077ea95a16c38bb82ac9add54",
+        "noise/control_diagnostics.csv": "dd82f80b8e388a782a47356c43d927a1ed9a494fc0b9fb593784d683cec5e485",
+        "noise/donor_assignments.csv.gz": "2c5e39f0abadf69620669767634f637d58b593577818defcf0abd89669d9b280",
+        "noise/noise_calibration.csv": "2360a5b8373fe14f5aeb7f84b6ce09fb8d8b86a5335d92f6f9d1a0e286959774",
+        "noise/noise_model.json": "c4fed23c46a178ffb572c4f4fac498964150c79f4ac6fb390c412a9f648ece4e",
+        "prior_manifest.json": "408ffe4a5052fe0d2525ed5c52113381753ba6cfb9fce3d775885648a804abd9",
+        "seed_audit.csv": "5da7e9b6c76e92fb30f2871e82ef18118ebb6d46ee9461965797316692a5fc43",
+        "selected_parameters.json": "8b247d3641e9e76a290b5bf218e4f78a7dd796d02e4320237f3c724b3cc537e5",
+        "source_manifest.json": "e0dc11803aefc3d92811b0177fe124c5ccf05031ab2719cdab00a1299d051b41",
+        "worker_environment.json": "0e6e9deb54f27fa1c7c4b4b94f0e8f645d63f6d9afc3644212d729dd8435fb40"
+      },
+      "interpretation": "Matched TrpB-only repeat of RUN-175 with an original-study alignment-profile additive prior. RUN-172 endpoint calibration is repeated under the new prior before the identical intermediate-ratio procedure. Existing synthetic-control results are reused, not rerun. All masks, geometries, seeds, observation assumptions and unfitted diagnostics are retained. No PLM evaluation, empirical interaction inference or scientific acceptance gate."
+    },
+    "note": "Short optimizer budget and two seeds only; local Python3.13.11, not a scientific substitute for queued full-budget Python3.11.15 run. Initial local launcher lacked NumPy under python3; successful smoke explicitly used installed project-compatible Python executable."
+  },
+  "source_files_verified": 42,
+  "source_manifest_sha256": "e0dc11803aefc3d92811b0177fe124c5ccf05031ab2719cdab00a1299d051b41",
+  "queue_submission": "not_attempted_scientist_hold_Dutch_down",
+  "submission_preparation": {
+    "dry_run": "RUN-176",
+    "scheduler_job_id": null,
+    "verification": "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-176.preparation.json",
+    "frozen_source_files_verified": 42,
+    "required_staging_files_verified": 85,
+    "local_dvc_objects_verified": 12,
+    "queue_submission": "held_by_scientist_until_Dutch_restored"
+  }
+}

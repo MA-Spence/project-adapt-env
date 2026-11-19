@@ -1,0 +1,77 @@
+id: EXP-056
+type: experiment
+title: Stage 4E held-out descriptor generalisation
+slug: stage-4e-heldout-descriptor-generalisation
+status: planned
+created: '2026-06-18T22:48:59+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  - EXP-055
+  motivating_results:
+  - RES-049
+question: Do knob regions calibrated on a subset of Tier-1 landscapes predict held-out
+  landscape descriptors within empirical bands?
+pre_experiment_prediction: The full additive-core plus GNK model will generalise better
+  than core-only or bare-GNK controls, but failures should identify missing mechanisms
+  rather than be forced into a universal-realism claim.
+rationale: This is Step 4E and turns coverage into out-of-sample descriptor prediction
+  across held-out empirical landscapes.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/science_plan_part1_ensemble_landscape_validation.md
+  - scripts/ensemble_landscape_validation_stage4.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/landscapy/README.md
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '18:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - heldout_predictions.csv
+  - descriptor_scope_audit.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

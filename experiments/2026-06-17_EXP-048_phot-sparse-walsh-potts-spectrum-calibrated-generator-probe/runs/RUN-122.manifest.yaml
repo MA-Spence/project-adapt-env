@@ -1,0 +1,42 @@
+run: RUN-122
+target: lab-slurm
+experiment: EXP-048
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-17_EXP-048_phot-sparse-walsh-potts-spectrum-calibrated-generator-probe
+  run_script: experiments/2026-06-17_EXP-048_phot-sparse-walsh-potts-spectrum-calibrated-generator-probe/run.sh
+inputs:
+  declared_files:
+  - scratch/RES-046_scalable_multipeak_generator_design.md
+  - scripts/phot_trait_space_bounded_gate_fast_fit.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  datasets:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+outputs:
+  expected:
+  - sparse_walsh_spectrum_calibration.csv
+  - sparse_walsh_forward_probe.csv
+  - preflight.json
+  - bounded_gate_candidates.csv
+  - selected_bounded_gate_candidates.csv
+  - bounded_gate_distances.csv
+  - bounded_gate_equivalence.csv
+  - graphlet_metrics.csv
+  - graphlet_summary.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-122/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-122
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-122/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-122/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-122
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-122/project/experiments/2026-06-17_EXP-048_phot-sparse-walsh-potts-spectrum-calibrated-generator-probe/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-122/project/experiments/2026-06-17_EXP-048_phot-sparse-walsh-potts-spectrum-calibrated-generator-probe/runs/RUN-122.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

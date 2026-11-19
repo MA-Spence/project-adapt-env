@@ -1,0 +1,93 @@
+id: EXP-031
+type: experiment
+title: PHOT frozen-base coupled-landscape deterministic grid search
+slug: phot-frozen-base-coupled-landscape-deterministic-grid
+status: planned
+created: '2026-05-16T21:13:08+10:00'
+owner: Codex
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-030
+  motivating_results:
+  - RES-030
+question: With PHOT as the only empirical test system, can a frozen RES-030 current-model
+  base plus a constrained correlated local auxiliary landscape improve held-out dense
+  graphlet topology, spectra, and localized plaquette-energy structure without rerunning
+  ABC?
+pre_experiment_prediction: If HYP-008 is plausible, local-module coupled candidates
+  should improve PHOT held-out graphlet distance relative to the frozen current base,
+  smooth core, diffuse residual, uncoupled auxiliary, shuffled/random modules, and
+  GNK controls while preserving base correlation and concentrating innovation plaquette
+  energy in few modules. If improvements are matched by shuffled/random/uncoupled
+  controls, or require diffuse innovation or base-correlation loss, the coupled-landscape
+  mechanism is not supported.
+rationale: RES-030 showed that PHOT system-specific current refitting partially rescues
+  graphlet dynamics but leaves a high-order spectral-envelope mismatch and weak smooth-core
+  separation. This experiment avoids another expensive ABC run by freezing the RES-030
+  PHOT base and deterministically enumerating the coupled-landscape parameter space
+  needed for a first HYP-008 machinery test.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077/summary.json
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077/systems/PHOT_CHLRE_Chen_2023/fit/summary.json
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077/systems/PHOT_CHLRE_Chen_2023/fit/checkpoints/panel_preparation/PHOT_CHLRE_Chen_2023/prepared_assay.csv
+  datasets:
+  - RUN-077 PHOT current-model fit and prepared assay outputs
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 04:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - graphlet_catalog.csv
+  - module_catalog.csv
+  - parameter_grid.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - graphlet_summary.csv
+  - module_energy_rows.csv
+  - module_energy_by_graphlet.csv
+  - module_energy_summary.csv
+  - base_correlation.csv
+  - empirical_readout_fit.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

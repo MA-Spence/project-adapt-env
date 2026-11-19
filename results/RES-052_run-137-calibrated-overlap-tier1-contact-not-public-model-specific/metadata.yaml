@@ -1,0 +1,38 @@
+id: RES-052
+title: RUN-137 calibrated overlap finds Tier-1 contact but not public-model-specific
+  coverage
+status: completed
+created: '2026-06-19T07:19:24+10:00'
+owner: matthew-spence
+analyses:
+- ANA-052
+experiments:
+- EXP-054
+runs:
+- RUN-137
+supports: []
+weakens:
+- HYP-004
+- HYP-009
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-137 finds descriptor-space contact for Tier-1 empirical bands, but overlap
+  is not specific to the public additive-core plus GNK composite because bare GNK
+  and additive-core controls have comparable coverage rates.
+artifacts: []
+evidence_paths:
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/metrics.json
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_best_overlap_by_dataset.csv
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_best_overlap_by_dataset.md
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_control_overlap_failure_summary.csv
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_control_overlap_failure_summary.md
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_coverage_by_model_family.csv
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_coverage_by_model_family.md
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_output_collection_audit.csv
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_output_collection_audit.md
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_posterior_by_model_family.csv
+- analyses/2026-06-19_ANA-052_run-137-stage-4c-calibrated-overlap-review/tables/run-137_posterior_by_model_family.md
+compliance:
+  level: green
+  issues: []

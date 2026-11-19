@@ -1,0 +1,37 @@
+{
+  "accessibility_or_optimizer_metrics": false,
+  "additive_core_gnk_terms_during_construction": 0,
+  "arms": [
+    "legacy_public_global_fixed",
+    "legacy_support_local_normalized",
+    "extensive_balanced_bounded"
+  ],
+  "config_runtime_hash": "52e4aa2fdfdb72d8d5ac50d1ee64f33091a1c256d439719db88f22f96b0b1628",
+  "config_sha256": "68a59e1d9822547fd1c1b949c4cce5c2563be7007454851e0b69b6f88037fa2f",
+  "current_gnk_retrofitted_after_core_construction": true,
+  "decision": "LATENT_GNK_EXTENSIVE_SCALE_LAW_VALIDATED",
+  "experiment_id": "EXP-060",
+  "gnk_transmitted_through_sigmoid": false,
+  "implementation_sha256": "f85e2f7063df1c767cbc9d621c802ae7df4a158f6c6dfa2f7816a4e84872c5a0",
+  "lengths": [
+    48,
+    93,
+    118,
+    220,
+    238,
+    448
+  ],
+  "metric_row_count": 32400,
+  "next_stage_blocked_until_latent_pass": false,
+  "observable_fitness_metrics": false,
+  "public_model_changed": false,
+  "quick": false,
+  "reference_count": 6,
+  "required_check_count": 26,
+  "required_checks_passed": 26,
+  "scientific_decision_enabled": true,
+  "scientific_pass": true,
+  "seed_count": 30,
+  "sigmoid_transmission_tested": false,
+  "task_count": 180
+}

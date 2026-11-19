@@ -1,0 +1,65 @@
+{
+  "abc_comparator": {
+    "output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-123/project/data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098",
+    "run_id": "RUN-098"
+  },
+  "best_objective_distance": NaN,
+  "experiment_id": "EXP-048",
+  "fix_stage_summaries": [
+    {
+      "best_objective_distance": NaN,
+      "fast_fit_enabled": false,
+      "fix_stage": "G",
+      "fix_stage_index": 1,
+      "fixes_applied": "G",
+      "n_candidate_evaluations": 0,
+      "n_selected_candidates": 0,
+      "sparse_walsh_forward_probe_passed": false
+    },
+    {
+      "best_objective_distance": NaN,
+      "fast_fit_enabled": false,
+      "fix_stage": "G+H1",
+      "fix_stage_index": 2,
+      "fixes_applied": "G+H1",
+      "n_candidate_evaluations": 0,
+      "n_selected_candidates": 0,
+      "sparse_walsh_forward_probe_passed": false
+    },
+    {
+      "best_objective_distance": NaN,
+      "fast_fit_enabled": false,
+      "fix_stage": "G+H1+FIT",
+      "fix_stage_index": 3,
+      "fixes_applied": "G+H1+FIT",
+      "n_candidate_evaluations": 0,
+      "n_selected_candidates": 0,
+      "sparse_walsh_forward_probe_passed": false
+    }
+  ],
+  "n_candidate_evaluations": 0,
+  "n_equivalence_rows": 0,
+  "n_graphlets": 24,
+  "n_operationally_equivalent": 0,
+  "n_selected_candidates": 0,
+  "n_softmin_capability_probe_rows": 0,
+  "n_sparse_walsh_forward_probe_rows": 84,
+  "n_sparse_walsh_spectrum_rows": 4,
+  "output_files": {
+    "abc_comparator_selected_family_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/abc_comparator_selected_family_distances.csv",
+    "bounded_gate_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/bounded_gate_candidates.csv",
+    "bounded_gate_distances": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/bounded_gate_distances.csv",
+    "bounded_gate_equivalence": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/bounded_gate_equivalence.csv",
+    "gft_coefficients": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/gft_coefficients.csv",
+    "graphlet_metrics": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/graphlet_metrics.csv",
+    "graphlet_summary": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/graphlet_summary.csv",
+    "preflight": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/preflight.json",
+    "selected_bounded_gate_candidates": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/selected_bounded_gate_candidates.csv",
+    "softmin_capability_probe": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/softmin_capability_probe.csv",
+    "sparse_walsh_forward_probe": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/sparse_walsh_forward_probe.csv",
+    "sparse_walsh_spectrum_calibration": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/sparse_walsh_spectrum_calibration.csv",
+    "walsh_terms": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-123/outputs/walsh_terms.csv"
+  },
+  "run_mode": "phot_sparse_walsh_potts_spectrum_calibrated_generator_probe",
+  "sparse_walsh_forward_probe_passed": false
+}

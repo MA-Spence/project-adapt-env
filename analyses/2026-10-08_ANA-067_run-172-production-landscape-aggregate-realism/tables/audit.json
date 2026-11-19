@@ -1,0 +1,26 @@
+{
+  "output_hashes": 1819,
+  "source_hashes": 12,
+  "restored_inventory_rows": [
+    "flip_aav_full_data",
+    "flip_gb1_four_mutations_full_data",
+    "flip_meltome_stability_summary"
+  ],
+  "evaluated_assays": 63,
+  "fitted_settings": 195,
+  "statistic_rows": 179310,
+  "empirical_nodes": 23016,
+  "replayed_intrinsic_nodes": 230400,
+  "public_API_replayed_nodes": 368,
+  "losses_recomputed": 195,
+  "roundoff_sensitive_fraction_rows": 65,
+  "inference": "Numerical/provenance checks, not scientific acceptance criteria.",
+  "runtime_versions": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.0",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
+  }
+}

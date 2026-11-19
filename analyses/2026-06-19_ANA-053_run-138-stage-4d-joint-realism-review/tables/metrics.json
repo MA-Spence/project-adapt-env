@@ -1,0 +1,12 @@
+{
+  "min_assays_hit": 2,
+  "min_fraction_metrics_in_band": 0.6,
+  "n_joint_candidate_rows": 103,
+  "n_joint_pass": 0,
+  "stage": "4D",
+  "max_assays_hit": 1,
+  "top_hit_dataset": "cr9114_h3_phillips2021_graphfla",
+  "top_hit_dataset_candidate_count": 103,
+  "best_dataset_coverage_rate": 0.6520833333333333,
+  "worst_metric_coverage_rate": 0.13055555555555556
+}

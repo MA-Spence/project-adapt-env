@@ -1,0 +1,115 @@
+id: EXP-039
+type: experiment
+title: PHOT nested soft-min ensemble capacity diagnostic
+slug: phot-nested-softmin-ensemble-capacity-diagnostic
+status: completed
+created: '2026-05-18T08:03:50+10:00'
+owner: Codex
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-008
+  previous_experiments:
+  - EXP-033
+  - EXP-036
+  - EXP-038
+  motivating_results:
+  - RES-033
+  - RES-036
+  - RES-038
+question: Does adding a locked third latent residual landscape through nested independently
+  parameterised Boltzmann/soft-min coupling improve PHOT held-out graphlet and local-ruggedness
+  performance beyond the locked first-stage coupled model and matched negative controls?
+pre_experiment_prediction: If prior improvements mostly reflect latent residual capacity,
+  a nested third landscape should improve held-out graphlet distance and local ruggedness
+  statistics over the locked first-stage model, but matched random/shuffled/uncoupled
+  controls may remain close; a mechanistic interpretation requires empirical-module
+  specificity beyond these controls.
+rationale: RUN-091 and RUN-096 show that secondary residual capacity improves PHOT
+  held-out graphlet and local-ruggedness metrics, but does not identify residue-specific
+  empirical modules. This experiment tests whether increasing ensemble capacity with
+  a second independently parameterised coupling layer gives stable predictive improvement,
+  and whether any gain is specific to empirical module structure or simply generic
+  latent capacity.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  datasets:
+  - id: RUN-077
+    path: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+    role: frozen_current_phot_base_and_empirical_graphlets
+  - id: RUN-084
+    path: data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084/posterior_particles.csv
+    role: frozen_first_stage_softmin_parameters
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 4
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 06:00:00
+    jobfs_gb: 0
+  partition: cpu
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - progress.json
+  - locked_first_stage_transform.json
+  - parameter_specs.csv
+  - posterior_particles.csv
+  - posterior_rounds.csv
+  - evaluated_parameter_sets.csv
+  - graphlet_catalog.csv
+  - module_catalog.csv
+  - graphlet_metrics.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - graphlet_summary.csv
+  - model_distances.csv
+  - top_model_distances.csv
+  - selected_family_distances.csv
+  - selected_family_pairwise_deltas.csv
+  - component_guardrail_summary.csv
+  - module_energy_rows.csv
+  - module_energy_by_graphlet.csv
+  - module_energy_summary.csv
+  - base_correlation.csv
+  - empirical_readout_fit.json
+  artifacts: []
+downstream:
+  planned_analyses:
+  - ANA-039
+  planned_results:
+  - RES-039
+  completed_analyses:
+  - ANA-039
+  completed_results:
+  - RES-039
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- RUN-098 completed with inferred Slurm exit code 0 and collected outputs were DVC-tracked
+  under data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc.
+- ANA-039/RES-039 record that the calibration-selected nested empirical-module family
+  fails held-out full-objective and specificity controls.
+template: generic
+compliance:
+  level: green
+  issues: []

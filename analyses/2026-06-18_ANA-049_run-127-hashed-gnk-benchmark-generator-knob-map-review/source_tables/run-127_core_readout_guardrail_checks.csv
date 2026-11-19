@@ -1,0 +1,10 @@
+phase,parameter_set_id,support_mode,seed,epi_weight,n_local_maxima,accessible_path_fraction,beneficial_fraction_vs_fraction_of_peak_spearman,beneficial_fraction_declines_toward_peak,high_plateau_fraction,low_plateau_fraction,has_low_and_high_readout_plateaus,fold_transition_mean_abs_pairwise_epistasis,deep_regime_mean_abs_pairwise_epistasis,transition_epistasis_enriched_over_deep_regimes
+WS-B,random__ew0.000__seed501,random,501,0.0,1.0,1.0,-1.0,True,0.00390625,0.03515625,True,0.041450984706198235,0.059925443863188974,False
+WS-B,random__ew0.000__seed502,random,502,0.0,1.0,1.0,-1.0,True,0.00390625,0.03515625,True,0.041450984706198235,0.059925443863188974,False
+WS-B,random__ew0.000__seed503,random,503,0.0,1.0,1.0,-1.0,True,0.00390625,0.03515625,True,0.041450984706198235,0.059925443863188974,False
+WS-B,shuffled_block__ew0.000__seed501,shuffled_block,501,0.0,1.0,1.0,-1.0,True,0.00390625,0.03515625,True,0.041450984706198235,0.059925443863188974,False
+WS-B,shuffled_block__ew0.000__seed502,shuffled_block,502,0.0,1.0,1.0,-1.0,True,0.00390625,0.03515625,True,0.041450984706198235,0.059925443863188974,False
+WS-B,shuffled_block__ew0.000__seed503,shuffled_block,503,0.0,1.0,1.0,-1.0,True,0.00390625,0.03515625,True,0.041450984706198235,0.059925443863188974,False
+WS-B,structured_block__ew0.000__seed501,structured_block,501,0.0,1.0,1.0,-1.0,True,0.00390625,0.03515625,True,0.041450984706198235,0.059925443863188974,False
+WS-B,structured_block__ew0.000__seed502,structured_block,502,0.0,1.0,1.0,-1.0,True,0.00390625,0.03515625,True,0.041450984706198235,0.059925443863188974,False
+WS-B,structured_block__ew0.000__seed503,structured_block,503,0.0,1.0,1.0,-1.0,True,0.00390625,0.03515625,True,0.041450984706198235,0.059925443863188974,False

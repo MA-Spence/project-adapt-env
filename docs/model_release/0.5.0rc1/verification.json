@@ -1,0 +1,50 @@
+{
+  "version": "0.5.0rc1",
+  "status": "unpublished_release_candidate",
+  "source_package_tests": {
+    "passed": 82
+  },
+  "installed_wheel_tests": {
+    "tests": 82,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "documentation_examples": {
+    "README_and_API_passed": 8,
+    "migration_passed": 3
+  },
+  "project_api_delegation_passed": true,
+  "wheel": {
+    "filename": "adaptenv-0.5.0rc1-py3-none-any.whl",
+    "sha256": "0094710a48d611f024bbf762c17021017614398c9de2b8dae5cb4a9b5bf034ab",
+    "bytes": 45322,
+    "current_source_matches": true,
+    "bundled_profile_present": true,
+    "retired_modules_absent": true,
+    "build_method": "Clean staging of current package sources; existing build caches excluded."
+  },
+  "numeric_replay": "replay.json",
+  "test_environment": {
+    "python": "3.13.11",
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "PyYAML": "6.0.3",
+      "biopython": "1.87",
+      "pytest": "9.0.3",
+      "fastapi": "0.135.3",
+      "httpx": "0.28.1",
+      "setuptools": "80.9.0",
+      "wheel": "0.45.1",
+      "build": "1.5.0"
+    }
+  },
+  "scope": "Implementation and packaging checks, not new empirical calibration or evidence of biological superiority.",
+  "release_actions": {
+    "published": false,
+    "deployed": false,
+    "git_tag_created": false
+  }
+}

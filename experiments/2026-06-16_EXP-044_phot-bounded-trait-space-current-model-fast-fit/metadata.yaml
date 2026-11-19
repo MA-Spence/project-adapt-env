@@ -1,0 +1,85 @@
+id: EXP-044
+type: experiment
+title: PHOT bounded trait-space current-model fast fit
+slug: phot-bounded-trait-space-current-model-fast-fit
+status: completed
+created: '2026-06-16T18:32:34+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-009
+  previous_experiments: []
+  motivating_results:
+  - RES-040
+  - RES-042
+question: Does a minimal bounded trait-space epistasis route in the current AdaptEnv
+  model, fitted by a numerical fast fitter, produce PHOT graphlet accessibility, epistasis,
+  spectral, and local-energy summaries comparable to empirical PHOT and the previously
+  computed full-ABC PHOT comparator?
+pre_experiment_prediction: Bounding epistatic perturbations before they enter stability
+  should reduce the gross epistasis-amplitude pathology seen in residual min-coupled
+  fits; success still requires held-out accessibility, sign/reciprocal/magnitude epistasis,
+  diminishing returns, graphlet spectra, and local-energy concentration to fall near
+  empirical PHOT and not materially worse than the full-ABC comparator.
+rationale: 'EXP-042/EXP-043 showed that cheaper fitting of the nested residual-min
+  family did not rescue PHOT component failures, suggesting the failure is in the
+  model route rather than only in optimizer cost. This experiment tests the smallest
+  model-level correction: keep current AdaptEnv structure, but bound epistatic signals
+  in trait space before the readout, then fit by deterministic/random numerical search
+  rather than broad ABC.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files: []
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - bounded_gate_candidates.csv
+  - selected_bounded_gate_candidates.csv
+  - bounded_gate_distances.csv
+  - bounded_gate_equivalence.csv
+  - graphlet_metrics.csv
+  - graphlet_summary.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - abc_comparator_selected_family_distances.csv
+  artifacts: []
+downstream:
+  planned_analyses:
+  - ANA-043
+  planned_results:
+  - RES-043
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

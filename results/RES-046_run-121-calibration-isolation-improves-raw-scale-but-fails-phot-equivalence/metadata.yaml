@@ -1,0 +1,41 @@
+id: RES-046
+title: RUN-121 calibration isolation improves raw scale but fails PHOT equivalence
+status: completed
+created: '2026-06-17T15:08:28+10:00'
+owner: matthew-spence
+analyses:
+- ANA-046
+experiments:
+- EXP-047
+runs:
+- RUN-121
+supports: []
+weakens:
+- HYP-004
+refutes: []
+motivates:
+- HYP-009
+supersedes: []
+summary: EXP-047/RUN-121 improved over the RUN-119 raw-latent soft-min failure but
+  still produced 0/32 operationally equivalent rows; the best held-out stage was A+F+B+C+D
+  at distance 0.9155, while observable variation collapsed and all selected component-equivalence
+  decisions failed.
+artifacts: []
+evidence_paths:
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/metrics.json
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_abc_comparator_test_distances.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_best_candidate_parameters.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_bounded_gate_test_distances.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_graphlet_and_module_catalog_summary.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_observable_vs_raw_epistasis_and_landscape.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_output_collection_audit.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_prior_run_comparison.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_raw_latent_pathology_diagnostics.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_softmin_capability_probe_summary.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_stage_best_test_distances.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_stage_equivalence_decision.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_stage_failure_modes.md
+- analyses/2026-06-17_ANA-046_run-121-phot-res045-calibration-isolation-review/tables/run-121_top_component_distances.md
+compliance:
+  level: green
+  issues: []

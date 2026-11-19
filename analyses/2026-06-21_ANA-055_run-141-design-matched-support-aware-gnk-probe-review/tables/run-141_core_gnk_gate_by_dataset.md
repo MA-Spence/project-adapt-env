@@ -1,0 +1,12 @@
+| dataset_id                           | n   | pass_n | pass_fraction | mean_abs_delta_high_order | max_abs_delta_high_order |
+| ------------------------------------ | --- | ------ | ------------- | ------------------------- | ------------------------ |
+| pard2_lite2020_graphfla              | 108 | 12     | 0.111111      | 0.0146657                 | 0.0659567                |
+| pard3_lite2020_graphfla              | 108 | 12     | 0.111111      | 0.0146657                 | 0.0659567                |
+| gb1_wu2016_four_site_graphfla        | 108 | 4      | 0.037037      | 0.00637187                | 0.126077                 |
+| trpb_johnston2024_four_site_graphfla | 108 | 4      | 0.037037      | 0.00637187                | 0.126077                 |
+| cr6261_h1_phillips2021_graphfla      | 108 | 1      | 0.00925926    | 0.00360172                | 0.0404192                |
+| cr6261_h9_phillips2021_graphfla      | 108 | 1      | 0.00925926    | 0.00360172                | 0.0404192                |
+| cr9114_flub_phillips2021_graphfla    | 108 | 0      | 0             | 0.000595386               | 0.00560163               |
+| cr9114_h1_phillips2021_graphfla      | 108 | 0      | 0             | 0.000595386               | 0.00560163               |
+| cr9114_h3_phillips2021_graphfla      | 108 | 0      | 0             | 0.000595386               | 0.00560163               |
+| dhfr_papkou2023_full_wagner_tsv      | 108 | 0      | 0             | 0.000968556               | 0.0152508                |

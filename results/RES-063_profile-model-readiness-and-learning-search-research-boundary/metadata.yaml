@@ -1,0 +1,51 @@
+id: RES-063
+title: Profile-conditioned model supports controlled benchmark studies while efficiency
+  and learning-search advantages remain untested
+status: completed
+created: '2026-11-19T20:10:25+11:00'
+owner: matthew-spence
+analyses:
+- ANA-069
+- ANA-070
+experiments:
+- EXP-065
+runs:
+- RUN-175
+- RUN-178
+supports: []
+weakens: []
+refutes: []
+motivates:
+- HYP-005
+- HYP-010
+- HYP-011
+- HYP-012
+supersedes: []
+summary: 'Evidence synthesis of the locked profile-conditioned release candidate:
+  precise latent interaction controls and reproducible TrpB regimes support a working
+  research environment. Profile comparisons show mixed trade-offs. Comparative efficiency,
+  independent learnability-searchability quadrants and biological explanation or transfer
+  are prospective hypotheses, not demonstrated outcomes.'
+artifacts:
+- metrics.json
+- package_audit.json
+evidence_paths:
+- analyses/2026-10-08_ANA-069_run-175-interaction-strength-global-statistics-and-adaptive-walks/analysis.md
+- analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/analysis.md
+- analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/aggregate_estimates.csv
+- analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/inherited_regime_comparison.csv
+- analyses/2026-11-19_ANA-070_run-178-trpb-profile-prior-versus-synthetic-control/tables/audit.json
+- docs/model_release/0.5.0rc1/manifest.json
+- docs/model_release/0.5.0rc1/verification.json
+- docs/model_release/0.5.0rc1/replay.json
+- external/Adapt-Env/docs/THERMODYNAMIC_V2.md
+- external/Adapt-Env/docs/CONFIGURATION_AND_PRESETS.md
+- results/RES-063_profile-model-readiness-and-learning-search-research-boundary/metrics.json
+- results/RES-063_profile-model-readiness-and-learning-search-research-boundary/package_audit.json
+aims:
+- AIM-001
+evidence_type: synthesis of existing analyses and implementation invariants; no new
+  empirical run
+compliance:
+  level: green
+  issues: []

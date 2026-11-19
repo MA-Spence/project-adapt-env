@@ -1,0 +1,51 @@
+run: RUN-152
+target: lab-slurm
+experiment: EXP-062
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation
+  run_script: experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission/result.md
+  - results/RES-059_run-151-validates-frozen-core-gnk-texture-transmission-but-fails-real-core-and-margin-8-gates/result.md
+  - claims/CLAIM-003_structured-high-order-residual-capacity-improves-phot-benchmarks.md
+  - experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/reference_catalog.yaml
+  - scripts/dimensionless_sigmoid_calibration_exp062.py
+  - scripts/extensive_gnk_sigmoid_transmission_exp061.py
+  - scripts/extensive_gnk_latent_scaling_exp060.py
+  - tests/test_dimensionless_sigmoid_calibration_exp062.py
+  - src/project_adapt_env/extensive_gnk.py
+  - external/Adapt-Env/.config.yaml
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/Adapt-Env/adaptenv/presets.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+outputs:
+  expected:
+  - preflight.json
+  - reference_catalog.csv
+  - core_calibration_metrics.csv
+  - calibration_selection.csv
+  - validation_edge_metrics.csv
+  - validation_texture_metrics.csv
+  - dose_response_metrics.csv
+  - scale_law_fits.csv
+  - acceptance_checks.csv
+  - summary.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-152/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-152
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-152/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-152/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-152
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-152/project/experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-152/project/experiments/2026-07-23_EXP-062_dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/runs/RUN-152.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

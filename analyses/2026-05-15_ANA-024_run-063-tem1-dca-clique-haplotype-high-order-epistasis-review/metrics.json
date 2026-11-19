@@ -1,0 +1,115 @@
+{
+  "alignment": {
+    "length": 286,
+    "n_effective_sequences": 604.11158008658,
+    "n_sequences": 768
+  },
+  "analysis_id": "ANA-024",
+  "dca_haplotype_terms": {
+    "max_haplotype_frequency": 0.0033438576790479286,
+    "max_log2_enrichment": 13.652677645760278,
+    "mean_log2_enrichment": 5.963563581803018,
+    "min_haplotype_frequency": 0.0016553233425134516,
+    "min_log2_enrichment": 0.6011921705873183
+  },
+  "dvc_pointer": "data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063.dvc",
+  "dvc_pointer_exists": true,
+  "experiment_id": "EXP-024",
+  "max_target_coefficient_formula_error": 2.8421709430404007e-13,
+  "max_zero_strength_order_variance_fraction": 1.6603942041806074e-29,
+  "max_zero_strength_target_order_abs_walsh_coefficient": 2.8421709430404007e-13,
+  "n_maps": 240,
+  "n_node_rows": 7200,
+  "n_terms": 48,
+  "old_epistasis_disabled": {
+    "epistasis_covariation_bias": 0.0,
+    "epistasis_strength": 0.0,
+    "n_epistatic_terms": 0,
+    "n_higher_order_epistatic_terms": 0
+  },
+  "orders": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "run_id": "RUN-063",
+  "run_status": "completed",
+  "scheduler_exit_code": "0",
+  "scheduler_job_id": "223",
+  "strengths": [
+    0.0,
+    250.0,
+    750.0,
+    1500.0,
+    3000.0
+  ],
+  "target_coefficient_monotonic_by_order": {
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "target_order_variance_fraction_non_decreasing_by_order": {
+    "2": false,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "term_counts_by_order": {
+    "2": 12,
+    "3": 12,
+    "4": 12,
+    "5": 12
+  },
+  "upper_by_order": {
+    "2": {
+      "maps_with_multiple_local_maxima": 1,
+      "max_local_maxima": 2,
+      "mean_local_maxima": 1.0833333333333333,
+      "mean_order_variance_fraction": 0.3331578701859037,
+      "mean_reciprocal_sign_epistasis_fraction": 0.027777777777777776,
+      "mean_sign_epistasis_fraction": 0.27777777777777773,
+      "mean_target_order_abs_walsh_coefficient": 750.0,
+      "n_maps": 12
+    },
+    "3": {
+      "maps_with_multiple_local_maxima": 2,
+      "max_local_maxima": 2,
+      "mean_local_maxima": 1.1666666666666667,
+      "mean_order_variance_fraction": 0.08483348477511748,
+      "mean_reciprocal_sign_epistasis_fraction": 0.013888888888888888,
+      "mean_sign_epistasis_fraction": 0.20833333333333334,
+      "mean_target_order_abs_walsh_coefficient": 375.0,
+      "n_maps": 12
+    },
+    "4": {
+      "maps_with_multiple_local_maxima": 3,
+      "max_local_maxima": 2,
+      "mean_local_maxima": 1.25,
+      "mean_order_variance_fraction": 0.03633935679791593,
+      "mean_reciprocal_sign_epistasis_fraction": 0.012499999999999999,
+      "mean_sign_epistasis_fraction": 0.14375,
+      "mean_target_order_abs_walsh_coefficient": 187.50000000000003,
+      "n_maps": 12
+    },
+    "5": {
+      "maps_with_multiple_local_maxima": 6,
+      "max_local_maxima": 2,
+      "mean_local_maxima": 1.5,
+      "mean_order_variance_fraction": 0.02944714108693111,
+      "mean_reciprocal_sign_epistasis_fraction": 0.019444444444444445,
+      "mean_sign_epistasis_fraction": 0.06111111111111111,
+      "mean_target_order_abs_walsh_coefficient": 93.75000000000007,
+      "n_maps": 12
+    }
+  },
+  "upper_order5_walsh_variance_by_order": {
+    "1": 0.23437433173979247,
+    "2": 0.29447141086931067,
+    "3": 0.29447141086931045,
+    "4": 0.14723570543465533,
+    "5": 0.02944714108693111,
+    "6": 2.756859486523906e-31
+  }
+}

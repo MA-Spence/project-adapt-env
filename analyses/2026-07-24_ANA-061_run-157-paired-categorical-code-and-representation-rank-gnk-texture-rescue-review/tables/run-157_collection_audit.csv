@@ -1,0 +1,9 @@
+check,expected,observed,passed,note
+dvc_pointer_nfiles,378,378,True,
+dvc_pointer_size_bytes,456516694,456516694,True,
+dvc_local_md5,True,True,True,
+dvc_cache_md5,True,True,True,
+strict_json,0,0,True,non-standard token count=0
+remote_runtime_sha256,True,True,True,remote files=378; canonical manifest=05db5b157e5d5b60c0901bfd37f96e7ab5725822007f3ead9a17c1782c325b9f
+configured_dvc_remote_content_objects,378,155,False,missing=223; directory object present=False
+configured_dvc_backup,True,False,False,labproj collection and local DVC tracking succeeded; redundant push to /Volumes/DutchZFS failed with permission denied

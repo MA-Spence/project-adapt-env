@@ -1,0 +1,34 @@
+id: ANA-027
+title: RUN-069 TEM-1 fixed-scale residual ratio sweep graphlet review
+status: completed
+created: '2026-05-15T20:11:09+10:00'
+owner: matthew-spence
+experiments:
+- EXP-027
+runs:
+- RUN-069
+purpose: Review the EXP-027 fixed residual/additive scale-grid repeat, including output
+  budget, graphlet sampling, scale-wise SE/RSE and Walsh/GFT spectra, walk-stage unmasking,
+  calibration/test transfer, and controls relative to RUN-067.
+path: analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-069
+  produced_artifacts:
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_contact_calibration_test_transfer.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_diminishing_returns_by_walk_stage.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_fixed_scale_by_walk_stage.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_fixed_scale_monotonicity.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_fixed_scale_test_summary.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_graphlet_sampling_audit.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_key_metrics.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_primary_by_start_class.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_relative_scale_correlations.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_run067_comparison.md
+  - analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_validation_tests.md
+compliance:
+  level: green
+  issues: []

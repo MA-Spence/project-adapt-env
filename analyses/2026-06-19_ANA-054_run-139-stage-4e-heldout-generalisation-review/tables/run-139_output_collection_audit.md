@@ -1,0 +1,7 @@
+| file | source | bytes | sha256 |
+| --- | --- | --- | --- |
+| analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/source_tables/run-139_descriptor_scope_audit.csv | data/processed/stage-4e-heldout-descriptor-generalisation/RUN-139/descriptor_scope_audit.csv | 1352 | 641d11e1795ec46b7729dd50a009c660c8af2bd2eddb3adc1ee1ad8cb544665c |
+| analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/source_tables/run-139_heldout_predictions.csv | data/processed/stage-4e-heldout-descriptor-generalisation/RUN-139/heldout_predictions.csv | 1519 | 4179fe07fa4535f3398d06128986e5332e780a3600fe3247e44526ef0d8e1023 |
+| analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/source_tables/run-139_preflight.json | data/processed/stage-4e-heldout-descriptor-generalisation/RUN-139/preflight.json | 250 | 5e9f3ff3c5f66db944bf956ec0d7fb4b64a49c6c3a1f93d8ffb3088e2e347064 |
+| analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/source_tables/run-139_summary.json | data/processed/stage-4e-heldout-descriptor-generalisation/RUN-139/summary.json | 125 | d97a910958713c9645444955d498d4595a5634cd09541d20e0f382037dd34600 |
+| analyses/2026-06-19_ANA-054_run-139-stage-4e-heldout-generalisation-review/source_tables/run-139_labproj-exit-code.txt | data/processed/stage-4e-heldout-descriptor-generalisation/RUN-139/logs/labproj-exit-code.txt | 2 | 9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa |

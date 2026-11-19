@@ -1,0 +1,28 @@
+id: ANA-039
+title: RUN-098 PHOT nested soft-min ensemble capacity review
+status: completed
+created: '2026-05-18T11:04:40+10:00'
+owner: Codex
+experiments:
+- EXP-039
+runs:
+- RUN-098
+purpose: Review RUN-098 nested soft-min ensemble ABC outputs, held-out graphlet/local-ruggedness
+  performance, and empirical-module specificity controls.
+path: analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-098
+  produced_artifacts:
+  - analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_hyp008_decision_table.md
+  - analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_localization_components_test.md
+  - analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_module_locality_test.md
+  - analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_preflight_and_collection_audit.md
+  - analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_selected_test_distances.md
+  - analyses/2026-05-18_ANA-039_run-098-phot-nested-softmin-ensemble-capacity-review/tables/run-098_test_oracle_capacity_diagnostic.md
+compliance:
+  level: green
+  issues: []

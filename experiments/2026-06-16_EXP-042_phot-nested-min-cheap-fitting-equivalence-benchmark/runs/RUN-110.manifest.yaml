@@ -1,0 +1,57 @@
+run: RUN-110
+target: lab-slurm
+experiment: EXP-042
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-06-16_EXP-042_phot-nested-min-cheap-fitting-equivalence-benchmark
+  run_script: experiments/2026-06-16_EXP-042_phot-nested-min-cheap-fitting-equivalence-benchmark/run.sh
+inputs:
+  declared_files:
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  - scripts/phot_nested_fit_protocol_benchmark.py
+  - scripts/phot_nested_softmin_ensemble_abc.py
+  - scripts/phot_coupled_family_discriminating_abc.py
+  - src/project_adapt_env/smc_abc.py
+  datasets:
+  - id: RUN-077
+    role: frozen PHOT prepared-assay, current-model base fit, and empirical graphlet
+      source
+    path: data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077
+  - id: RUN-098
+    role: full nested-min sequential residual ABC comparator
+    path: data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098
+outputs:
+  expected:
+  - summary.json
+  - preflight.json
+  - progress.json
+  - locked_first_stage_transform.json
+  - graphlet_catalog.csv
+  - module_catalog.csv
+  - fit_protocol_candidates.csv
+  - selected_fit_protocol_candidates.csv
+  - local_abc_rounds.csv
+  - local_abc_parameter_specs.csv
+  - fit_protocol_distances.csv
+  - fit_protocol_equivalence.csv
+  - graphlet_metrics.csv
+  - graphlet_summary.csv
+  - walsh_terms.csv
+  - gft_coefficients.csv
+  - module_energy_summary.csv
+  - abc_comparator_selected_family_distances.csv
+  - full_abc_comparator_selected_particles.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-110/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-110
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-110/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-110
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-110/project/experiments/2026-06-16_EXP-042_phot-nested-min-cheap-fitting-equivalence-benchmark/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-110/project/experiments/2026-06-16_EXP-042_phot-nested-min-cheap-fitting-equivalence-benchmark/runs/RUN-110.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

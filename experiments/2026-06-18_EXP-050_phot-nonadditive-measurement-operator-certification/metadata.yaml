@@ -1,0 +1,82 @@
+id: EXP-050
+type: experiment
+title: PHOT non-additive measurement operator certification
+slug: phot-nonadditive-measurement-operator-certification
+status: completed
+created: '2026-06-18T11:00:40+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-006
+  - HYP-009
+  previous_experiments:
+  - EXP-049
+  motivating_results:
+  - RES-048
+question: Can non-additive MAVE-NN GP-map operators recover injected high-order and
+  local-ruggedness spectra under the same dense complete-graphlet measurement path
+  used for PHOT?
+pre_experiment_prediction: Pairwise and black-box/GE GP-map profiles will recover
+  injected high-order fraction, sign epistasis, local maxima, and accessibility substantially
+  better than the additive operator, but residual smoothing may remain.
+rationale: RES-048 showed strong additive-map smoothing and exposed that the prior
+  PHOT target was not measured under a single certified operator. This WS-A experiment
+  re-runs the round-trip certification with non-additive GP-map profiles before any
+  empirical overlap or benchmark-region claim is attempted.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/RES-048_forward_plan_tunable_benchmark_generator.md
+  - scripts/phot_nonadditive_operator_certification.py
+  - scripts/phot_miscalibration_p0_isolation.py
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  datasets:
+  - RUN-077
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '12:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - graphlet_catalog.csv
+  - operator_profile_catalog.csv
+  - injected_terms.csv
+  - roundtrip_graphlet_metrics.csv
+  - roundtrip_transfer.csv
+  - mavenn_metrics.csv
+  - operator_certification_summary.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

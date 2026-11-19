@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-08T14:40:22.767337+11:00",
+  "notebook_executed": true,
+  "executed_code_cells": 10,
+  "cell_errors": 0,
+  "inline_figures": 6,
+  "exports_per_figure": [
+    "png",
+    "pdf"
+  ],
+  "figure_exports": 12,
+  "figures_visually_inspected": 6,
+  "output_hashes": 1819,
+  "source_hashes": 12,
+  "independent_statistic_rows": 179310,
+  "empirical_nodes": 23016,
+  "replayed_intrinsic_nodes": 230400,
+  "public_API_replayed_nodes": 368,
+  "fits_recomputed": 195,
+  "raw_data_files_md5_verified_after_execution": 1842,
+  "data_backup": {
+    "verified_objects": 1840,
+    "all_md5_match": true,
+    "directory_md5": "521d0e1b381ead592b0f47504e0f13ba.dir",
+    "bytes": 227667682,
+    "files": 1842,
+    "remote_store": "/tank/data/labproj/projects/project-adapt-env/data/files/md5"
+  },
+  "checks": "Numerical, execution and provenance identities, not scientific gates.",
+  "full_repository_strict_check": "unavailable: historical cloud-backed file timeouts",
+  "record_status_update": "labproj set-status wrote ANA-067 and EXP-066 as completed; both commands then exceeded the bounded eight-second wait. Targeted YAML reads verified the completed statuses."
+}

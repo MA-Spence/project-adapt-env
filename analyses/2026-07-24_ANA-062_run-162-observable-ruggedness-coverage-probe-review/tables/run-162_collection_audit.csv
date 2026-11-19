@@ -1,0 +1,6 @@
+check,expected,observed,pass
+dvc_pointer_file_count,1517,1517,True
+dvc_pointer_byte_count,204553256,204553256,True
+strict_json_parse,303,303,True
+scheduler_exit_code,0,0,True
+stderr_empty,0,0,True

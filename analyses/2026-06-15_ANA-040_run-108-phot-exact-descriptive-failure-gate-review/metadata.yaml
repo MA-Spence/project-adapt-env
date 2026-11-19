@@ -1,0 +1,29 @@
+id: ANA-040
+title: RUN-108 PHOT exact descriptive failure gate review
+status: completed
+created: '2026-06-15T23:32:01+10:00'
+owner: matthew-spence
+experiments:
+- EXP-041
+runs:
+- RUN-108
+purpose: Review RUN-108 exact complete-graphlet PHOT descriptive failure tables without
+  full output collection, identify which RUN-039 full-ABC summaries fail, and decide
+  whether the descriptive gate justifies later ABC target construction.
+path: analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-108
+  produced_artifacts:
+  - analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review/tables/metrics.json
+  - analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review/tables/run-108_abc_descriptive_gate.md
+  - analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review/tables/run-108_component_failure_summary.md
+  - analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review/tables/run-108_exact_model_distances.md
+  - analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review/tables/run-108_graphlet_catalog_summary.md
+  - analyses/2026-06-15_ANA-040_run-108-phot-exact-descriptive-failure-gate-review/tables/run-108_top_component_failures.md
+compliance:
+  level: green
+  issues: []

@@ -1,0 +1,302 @@
+experiment_id: EXP-025
+title: TEM-1 aggregate graphlet residual ruggedness generalization diagnostic
+stack: STACK-000
+target: lab-slurm
+
+reference:
+  protein: TEM-1 beta-lactamase
+  uniprot_id: P62593
+  source: UniProt reviewed BLAT_ECOLX sequence
+  sequence: MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYIELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRVDAGQEQLGRRIHYSQNDLVEYSPVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRWEPELNEAIPNDERDTTMPAAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSALPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGASLIKHW
+
+alignment:
+  source: MMSeqs ColabFold MSA API
+  max_sequences: 768
+  mmseqs_cache_dir: .labproj/cache/mmseqs
+  poll_interval_seconds: 5
+  timeout_seconds: 20
+  max_retries: 6
+
+seeds:
+  landscape:
+    - 9601
+    - 9602
+  residual_parameter:
+    - 19601
+    - 19602
+
+adapt_env:
+  base_config:
+    observed_fitness_combine_mode: stability_margin
+    stability_scale: 1.0
+    stability_margin: 8.0
+    stability_conservation_power: 1.0
+    threshold_steepness: 20.0
+    fitness_output_scale: 10.0
+    generic_epistasis_target: stability
+    empirical_pairwise_strength: 0.0
+    n_epistatic_terms: 0
+    epistasis_strength: 0.0
+    epistasis_covariation_bias: 0.0
+    pairwise_epistasis_rank: 2
+    n_higher_order_epistatic_terms: 0
+    epistasis_order_max: 5
+    epistasis_order_decay: 1.5
+    noise_amplitude: 0.0
+    noise_heterogeneity: 0.0
+    peak_search_steps: 40
+    peak_search_top_single_starts: 2
+    peak_search_random_starts: 2
+    peak_search_random_radius: 1
+    peak_distance_from_consensus: 0
+    use_blosum_kernel: true
+    blosum_blend: 0.5
+
+start_selection:
+  start_classes:
+    - reference_or_consensus_like
+    - high_fitness_close_homologue
+    - marginal_stability_homologue
+    - distant_low_fitness_homologue
+    - viable_off_consensus
+  starts_per_class: 2
+  max_reported_candidates: 5000
+  selection_variables:
+    - consensus_identity
+    - consensus_bitscore
+    - realized_background_fitness
+    - effective_stability_margin_used
+    - local_neutral_fraction
+    - local_deleterious_fraction
+    - local_beneficial_fraction
+
+adaptive_walks:
+  modes:
+    - greedy_best_step
+    - stochastic_beneficial_step
+  replicates_per_start: 1
+  max_steps: 24
+  stop_when_no_beneficial: true
+  graphlet_step_classes:
+    early:
+      step_indices:
+        - 0
+        - 1
+        - 2
+    middle:
+      fractional_walk_positions:
+        - 0.33
+        - 0.66
+    late:
+      include_final: true
+      include_stalled: true
+
+graphlets:
+  dimensions:
+    - 5
+    - 6
+    - 7
+    - 8
+  max_nodes: 256
+  graphlets_per_background_per_dimension: 1
+  contact_sources:
+    - dca_contact_neighborhood
+    - dca_clique_neighborhood
+    - matched_random_positions
+    - shuffled_contact_neighborhood
+  state_selection:
+    require_observed_alignment_state: true
+    min_state_frequency: 0.0005
+    prefer_mild_single_effects: true
+    target_single_delta: -20.0
+    single_delta_tolerance: 120.0
+  calibration_test_split:
+    calibration_fraction: 0.5
+    split_by:
+      - landscape_seed
+      - walk_id
+      - contact_neighborhood_id
+    heldout_start_classes:
+      - marginal_stability_homologue
+      - distant_low_fitness_homologue
+    leakage_rule: no residual parameter may be selected using a graphlet from the same walk_id or contact_neighborhood_id as a held-out test graphlet
+
+candidate_models:
+  - id: smooth_core_only
+    role: negative_control
+    description: Thermodynamic core with all residual and legacy epistasis layers disabled.
+  - id: res024_exact_match_haplotype
+    role: high_order_coefficient_control
+    description: DCA clique exact-match haplotype overlay matching the RES-024 mechanism.
+  - id: dca_pair_override
+    role: pairwise_sign_epistasis_control
+    description: DCA state-specific pair terms matching the RES-023 mechanism.
+  - id: contact_residual_ensemble
+    role: primary_candidate
+    description: Sparse contact-conditioned residual field calibrated by aggregate graphlet distributions only.
+  - id: shuffled_contact_residual
+    role: placement_control
+    description: Same residual generator with DCA/contact neighborhoods permuted across positions.
+  - id: random_position_residual
+    role: strength_density_control
+    description: Same coefficient distribution placed on random positions matched for graphlet dimension and local DFE.
+  - id: gnk_local_null
+    role: non_procedural_statistical_null
+    description: Local GNK-style graphlet comparator matched for graphlet dimension, coefficient variance, and interaction order envelope.
+  - id: hard_certified_graphlet_positive_control
+    role: overfit_positive_control
+    description: Per-graphlet rejection sampler that satisfies topology targets; not a scalable model candidate.
+  - id: residual_only_diagnostic
+    role: embedding_diagnostic
+    description: Residual tensors evaluated without the smooth thermodynamic core.
+
+residual_parameter_sweep:
+  contact_residual_ensemble:
+    residual_scale_relative_to_local_dfe_sd:
+      - 0.1
+      - 0.25
+      - 0.5
+      - 1.0
+    pairwise_density:
+      - 0.05
+      - 0.10
+      - 0.20
+    higher_order_density:
+      - 0.00
+      - 0.02
+      - 0.05
+    max_interaction_order:
+      - 2
+      - 3
+      - 4
+    coefficient_distribution:
+      - laplace
+      - student_t
+    sign_balance:
+      - symmetric
+      - dca_enrichment_biased
+  exact_match_strength_grid:
+    - 0.0
+    - 250.0
+    - 750.0
+    - 1500.0
+    - 3000.0
+  dca_pair_strength_grid:
+    - 0.0
+    - 0.1
+    - 0.3
+    - 0.6
+
+execution_limits:
+  max_graphlets_total: 240
+  max_residual_parameter_sets_per_candidate: 3
+  max_exact_match_strengths: 3
+  max_pair_strengths: 3
+  max_hard_certified_attempts: 32
+
+calibration_targets:
+  aggregate_only: true
+  reject_individual_graphlet_tuning: true
+  metrics:
+    sign_epistasis_fraction:
+      direction: increase_over_smooth_core
+    reciprocal_sign_epistasis_fraction:
+      direction: increase_over_smooth_core
+    local_maxima_count:
+      direction: increase_over_smooth_core
+    basin_entropy:
+      direction: increase_over_smooth_core
+    accessible_improving_shortest_path_fraction:
+      direction: decrease_over_smooth_core
+    random_walk_lag1_autocorrelation:
+      direction: decrease_over_smooth_core
+    random_walk_lag5_autocorrelation:
+      direction: decrease_over_smooth_core
+    walsh_order_variance_fraction:
+      target: low_order_dominant_with_nonzero_high_order_tail
+    gft_energy_by_eigenvalue_band:
+      target: low_frequency_dominant_with_nonzero_mid_high_frequency_tail
+    local_dfe_shape:
+      target: remain_within_smooth_core_biological_envelope
+
+analysis:
+  random_walk:
+    n_walks_per_graphlet: 40
+    steps: 64
+    lag_max: 8
+  walsh:
+    max_order: 8
+    record_all_terms: true
+  gft:
+    record_all_coefficients: true
+    eigenvalue_bands:
+      low:
+        max_quantile: 0.33
+      mid:
+        min_quantile: 0.33
+        max_quantile: 0.67
+      high:
+        min_quantile: 0.67
+  topology:
+    record_local_extrema: true
+    record_basins: true
+    record_accessible_paths: true
+  stratification:
+    - candidate_model
+    - calibration_or_test
+    - landscape_seed
+    - residual_parameter_seed
+    - start_class
+    - walk_mode
+    - walk_step_class
+    - graphlet_dimension
+    - contact_source
+    - background_fitness_quantile
+    - local_neutral_fraction_quantile
+    - local_dfe_variance_quantile
+
+quick:
+  seeds:
+    landscape:
+      - 29601
+    residual_parameter:
+      - 39601
+  alignment:
+    max_sequences: 96
+    synthetic_smoke_sequences: true
+    synthetic_smoke_seed: 1905
+  start_selection:
+    starts_per_class: 1
+  adaptive_walks:
+    replicates_per_start: 1
+    max_steps: 8
+  graphlets:
+    dimensions:
+      - 4
+      - 5
+    graphlets_per_background_per_dimension: 1
+  candidate_models:
+    include:
+      - smooth_core_only
+      - res024_exact_match_haplotype
+      - contact_residual_ensemble
+      - shuffled_contact_residual
+  residual_parameter_sweep:
+    contact_residual_ensemble:
+      residual_scale_relative_to_local_dfe_sd:
+        - 0.25
+      pairwise_density:
+        - 0.10
+      higher_order_density:
+        - 0.02
+      max_interaction_order:
+        - 3
+      coefficient_distribution:
+        - laplace
+      sign_balance:
+        - symmetric
+  analysis:
+    random_walk:
+      n_walks_per_graphlet: 20
+      steps: 32
+      lag_max: 5

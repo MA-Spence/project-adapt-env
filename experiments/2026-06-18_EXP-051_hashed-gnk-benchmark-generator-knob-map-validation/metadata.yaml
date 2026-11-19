@@ -1,0 +1,83 @@
+id: EXP-051
+type: experiment
+title: Hashed GNK benchmark generator knob-map validation
+slug: hashed-gnk-benchmark-generator-knob-map-validation
+status: completed
+created: '2026-06-18T11:00:50+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-048
+  - EXP-049
+  motivating_results:
+  - RES-047
+  - RES-048
+question: Do hashed GNK/RMF-style epistatic-texture knobs, added inside the retained
+  stability-threshold core and readout, set local maxima, accessibility, Walsh spectrum,
+  and sign/reciprocal epistasis in the predicted directions?
+pre_experiment_prediction: The core-only condition will retain neutrality and diminishing-returns
+  structure, while increasing hashed GNK epistasis weight will increase local maxima
+  and high-order/sign epistasis and reduce accessibility; structured and shuffled
+  routing should be matched for global statistics but differ in support localization.
+rationale: RES-047 and RES-048 argue against another PHOT inverse-fit loop. This WS-B
+  experiment replaces the failing residual epistasis module with a lazy hashed GNK
+  texture layer and validates knob-to-statistic maps directly on enumerable model
+  coordinates.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/RES-048_forward_plan_tunable_benchmark_generator.md
+  - scripts/hashed_gnk_benchmark_knob_validation.py
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 16
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 04:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - parameter_grid.csv
+  - graphlet_metrics.csv
+  - knob_summary.csv
+  - monotonicity_checks.csv
+  - support_catalog.csv
+  - hamming_layer_metrics.csv
+  - threshold_epistasis_metrics.csv
+  - core_readout_guardrail_checks.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

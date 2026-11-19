@@ -1,0 +1,13 @@
+metric,value
+candidate_support_max_degree_range,1.0
+candidate_support_max_degree_cv,0.0183955872122316
+candidate_support_max_duplicate_fraction,0.0
+candidate_support_uncovered_sites,0.0
+candidate_contrast_max_abs_mean,0.0
+candidate_contrast_second_moment_error,0.0
+candidate_contrast_max_abs_value,1.0
+candidate_contrast_substitution_energy_error,8.881784197001252e-16
+maximum_order_mutation_energy_share_error,0.009062376803419314
+minimum_supported_pair_curvature_rms,0.3401223642659777
+candidate_local_effect_pearson_kurtosis_median,3.085673147868932
+maximum_weight_linearity_relative_error,3.3774728546450827e-15

@@ -1,0 +1,177 @@
+experiment_id: EXP-058
+title: Generator readout-coupling calibration
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-058
+  mode: generator_readout_coupling_calibration
+  advisory_source: scratch/RES-056_assessment_readout_coupling_and_next_steps.md
+  scientific_boundary:
+    route: operator_free_component1_generator
+    not_part_of_critical_path:
+      - EXP-050
+      - MAVE-NN_transfer_function_estimation
+      - PHOT_measurement_operator_repair
+    stop_rule: do_not_rerun_stage_4c_4d_or_4e_until_gnk_separation_gate_passes
+    controls:
+      - additive_core_only_observable
+      - full_generator_observable
+      - mixed_score_stability_routing
+      - two_channel_product_observable
+
+data:
+  processed_root: data/processed/ensemble-landscape-validation-datasets
+  dataset_ids:
+    - gb1_wu2016_four_site_graphfla
+    - trpb_johnston2024_four_site_graphfla
+    - dhfr_papkou2023_full_wagner_tsv
+    - cr9114_h1_phillips2021_graphfla
+    - cr9114_h3_phillips2021_graphfla
+    - cr9114_flub_phillips2021_graphfla
+    - cr6261_h1_phillips2021_graphfla
+    - cr6261_h9_phillips2021_graphfla
+    - pard2_lite2020_graphfla
+    - pard3_lite2020_graphfla
+
+generator:
+  sequence_length: 48
+  support_modes: [structured, shuffled, random]
+  seeds: [701, 702, 703]
+  gnk_terms: 384
+  gnk_min_order: 2
+  gnk_max_order: 4
+  gnk_order_weights: [0.35, 0.45, 0.20]
+  stability_scale: 1.0
+  fitness_output_scale: 10.0
+  noise_scale: 0.0
+
+fix_a_non_saturated_single_gate:
+  threshold_steepness_grid: [1.0, 2.0, 4.0]
+  stability_margin_grid: [-2.0, -1.0, 0.0, 1.0, 2.0, 3.0]
+  gnk_epistasis_weight_grid: [0.0, 0.3, 0.6, 1.0, 1.5, 2.0]
+  observed_fitness_combine_mode: stability_gate
+  lambda_score_grid: [0.0]
+
+fix_b_mixed_score_stability_routing:
+  threshold_steepness_grid: [1.0, 2.0, 4.0]
+  stability_margin_grid: [-2.0, -1.0, 0.0, 1.0, 2.0, 3.0]
+  gnk_epistasis_weight_grid: [0.3, 0.6, 1.0, 1.5, 2.0]
+  observed_fitness_combine_mode: stability_gate
+  lambda_score_grid: [0.25, 0.5, 0.75, 1.0]
+
+fix_c_two_channel_product:
+  threshold_steepness_grid: [1.0, 2.0, 4.0]
+  stability_margin_grid: [-2.0, -1.0, 0.0, 1.0, 2.0, 3.0]
+  gnk_epistasis_weight_grid: [0.3, 0.6, 1.0, 1.5, 2.0]
+  observed_fitness_combine_mode: product
+  gnk_target: function
+  lambda_score_grid: [0.0]
+
+probe:
+  support_graphlets_per_template: 3
+  potts_graphlets_per_template: 1
+  anchor_candidate_samples: 4096
+  eval_chunk_size: 32768
+  site_seed_offset: 51000
+  anchor_seed_offset: 41000
+  anchor_regimes:
+    - name: low_plateau
+      target_margin: -2.0
+    - name: fold_transition
+      target_margin: 0.0
+    - name: high_plateau
+      target_margin: 2.0
+
+descriptors:
+  neutrality:
+    abs_tolerance: 1.0e-6
+    sd_fraction: 0.02
+  single_step_effect_samples: 20000
+  pairwise_epistasis_samples: 8000
+  reachability_starts: 256
+  random_walk_steps: 2048
+
+gates:
+  core_guardrail:
+    require_low_plateau: true
+    require_high_plateau: true
+    low_plateau_fitness_max: 1.0
+    high_plateau_fitness_min: 9.0
+    beneficial_fraction_peak_decline_rho_max: -0.8
+  gnk_separation:
+    matched_core_guardrail_required: true
+    metrics:
+      - high_order_fraction
+      - sign_epistasis_fraction
+      - local_maxima_density
+    min_abs_delta:
+      high_order_fraction: 0.03
+      sign_epistasis_fraction: 0.03
+      local_maxima_density: 0.005
+  knob_monotonicity:
+    majority_required: true
+    abs_rho_floor: 0.5
+    reject_wrong_direction_medians: true
+    expected_directions:
+      high_order_fraction: increase
+      sign_epistasis_fraction: increase
+      reciprocal_sign_epistasis_fraction: increase
+      local_maxima_density: increase
+      peak_targeted_reachability_fraction: decrease
+      random_walk_lag1_autocorrelation: decrease
+
+decision_rule:
+  fix_a_alone_pass: single_latent_composite_salvageable
+  fix_a_needs_b: adopt_mixed_routing_and_record_lambda_score
+  fix_a_plus_b_fail: adopt_two_channel_product_as_pivot_result
+  fix_c_fail: operator_free_combinatorial_realness_claim_fails_for_this_model_family
+  hard_stop: do_not_rerun_stage_4c_4d_or_4e_until_gnk_separation_gate_passes
+
+outputs:
+  expected:
+    - preflight.json
+    - generator_calibration_grid.csv
+    - support_catalog.csv
+    - support_aware_graphlet_audit.csv
+    - anchor_regime_audit.csv
+    - generator_descriptor_metrics.csv
+    - core_guardrail_checks.csv
+    - gnk_separation_checks.csv
+    - knob_monotonicity_checks.csv
+    - calibration_decision_table.csv
+    - summary.json
+
+quick:
+  data:
+    dataset_ids:
+      - gb1_wu2016_four_site_graphfla
+      - cr9114_h3_phillips2021_graphfla
+  generator:
+    sequence_length: 16
+    support_modes: [structured, random]
+    seeds: [701]
+    gnk_terms: 64
+  fix_a_non_saturated_single_gate:
+    threshold_steepness_grid: [2.0]
+    stability_margin_grid: [0.0]
+    gnk_epistasis_weight_grid: [0.0, 1.0]
+  fix_b_mixed_score_stability_routing:
+    threshold_steepness_grid: [2.0]
+    stability_margin_grid: [0.0]
+    gnk_epistasis_weight_grid: [1.0]
+    lambda_score_grid: [0.5]
+  fix_c_two_channel_product:
+    threshold_steepness_grid: [2.0]
+    stability_margin_grid: [0.0]
+    gnk_epistasis_weight_grid: [1.0]
+  probe:
+    support_graphlets_per_template: 1
+    potts_graphlets_per_template: 1
+    anchor_candidate_samples: 256
+    eval_chunk_size: 16384
+  descriptors:
+    single_step_effect_samples: 2000
+    pairwise_epistasis_samples: 1000
+    reachability_starts: 64
+    random_walk_steps: 512

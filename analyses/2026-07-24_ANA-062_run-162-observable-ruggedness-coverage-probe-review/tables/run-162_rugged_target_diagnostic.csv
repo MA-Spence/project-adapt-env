@@ -1,0 +1,4 @@
+template,n_graphlets,flat_graphlet_fraction,median_local_maxima_density,maximum_local_maxima_density,finite_random_walk_fraction,finite_dirichlet_localisation_fraction
+cr9114_flub_phillips2021_graphfla,96,1.0,1.0,1.0,0.0,0.0
+cr9114_h1_phillips2021_graphfla,96,0.0,0.125,0.375,1.0,1.0
+cr9114_h3_phillips2021_graphfla,96,0.71875,1.0,1.0,0.28125,0.28125

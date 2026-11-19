@@ -1,0 +1,25 @@
+{
+  "decision": "OBSERVABLE_CONSTRUCTION_LIMIT",
+  "experiment_id": "EXP-064",
+  "gate_summary": {
+    "empirical_band_reproduction_pass": true,
+    "execution_and_pairing_pass": true,
+    "g1_range_coverage_pass": false,
+    "g2_joint_rugged_end_pass": false,
+    "g3_specificity_pass": false,
+    "g4_navigability_pass": false,
+    "rugged_end_joint_fraction": 0.6666666666666666,
+    "rugged_end_navigable_fraction": 0.6666666666666666,
+    "specificity_descriptor_pass_fraction": 0.0,
+    "technical_pass": true
+  },
+  "n_coverage_rows": 80,
+  "n_generated_rows": 259200,
+  "n_rugged_end_templates": 3,
+  "n_specificity_rows": 18,
+  "n_templates": 10,
+  "public_model_changed": false,
+  "quick": false,
+  "stage_4c_4d_4e_hard_stop": "retained",
+  "uses_exp050_transfer_function": false
+}

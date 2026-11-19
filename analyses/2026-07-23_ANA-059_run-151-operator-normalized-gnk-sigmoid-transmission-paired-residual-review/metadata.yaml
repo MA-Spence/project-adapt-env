@@ -1,0 +1,33 @@
+id: ANA-059
+title: RUN-151 operator-normalized GNK sigmoid-transmission paired-residual review
+status: completed
+created: '2026-07-23T08:16:27+10:00'
+owner: matthew-spence
+experiments:
+- EXP-061
+runs:
+- RUN-151
+purpose: Collect and independently audit completed RUN-151 against every preregistered
+  EXP-061 technical, controlled-edge, texture-transmission, and deployment gate, preserving
+  the frozen-core versus actual-core mechanistic boundary without post hoc retuning.
+path: analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review
+notebook_record:
+  primary_notebook_path: analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-151
+  produced_artifacts:
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/metrics.json
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_acceptance_audit.csv
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_collection_audit.csv
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_deployment_margin_comparison_by_length.csv
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_pointwise_transfer_by_length.csv
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_protocol_output_audit.csv
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_reference_anchored_edge_by_length.csv
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_scale_law_summary.csv
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_source_hash_audit.csv
+  - analyses/2026-07-23_ANA-059_run-151-operator-normalized-gnk-sigmoid-transmission-paired-residual-review/tables/run-151_texture_transmission_by_length.csv
+compliance:
+  level: green
+  issues: []

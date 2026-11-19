@@ -1,0 +1,209 @@
+id: RUN-141
+experiment: EXP-057
+target: lab-slurm
+target_profile:
+  display_name: HomeLab
+  cluster_name: homelab
+scheduler: slurm
+status: completed
+dry_run: false
+created: '2026-06-19T15:23:27+10:00'
+last_submitted: '2026-06-20T03:52:53+10:00'
+submitted_by: matthewspence
+attempt: 3
+attempts:
+- attempt: 1
+  submitted_at: '2026-06-19T15:23:27+10:00'
+  status: failed
+  dry_run: false
+  scheduler_job_id: '1948'
+  resumed: false
+  resume_from_attempt: null
+  checkpoint_path: null
+  checkpoint_dir: null
+  scheduler_state: INFERRED_STDERR
+  scheduler_exit_code: null
+- attempt: 2
+  submitted_at: '2026-06-20T03:51:21+10:00'
+  status: planned
+  dry_run: true
+  scheduler_job_id: null
+  resumed: true
+  resume_from_attempt: 1
+  checkpoint_path: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/outputs
+  checkpoint_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/outputs/checkpoints
+- attempt: 3
+  submitted_at: '2026-06-20T03:52:53+10:00'
+  status: completed
+  dry_run: false
+  scheduler_job_id: '1955'
+  resumed: true
+  resume_from_attempt: 2
+  checkpoint_path: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/outputs
+  checkpoint_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/outputs/checkpoints
+  scheduler_state: INFERRED_EXIT_CODE
+  scheduler_exit_code: '0'
+resume:
+  enabled: true
+  checkpoint_path: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/outputs
+  checkpoint_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/outputs/checkpoints
+  source: explicit
+  previous_attempt: 2
+  previous_scheduler_job_id: null
+  previous_status: failed
+git:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+dvc:
+  available: true
+  pointer_files:
+  - data/processed/.legacy/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055.dvc
+  - data/processed/.legacy/empirical-graphlet-falsification-residual-ruggedness/RUN-071.dvc
+  - data/processed/.legacy/phot-abc-local-ruggedness-objective/RUN-096.dvc
+  - data/processed/.legacy/phot-budgeted-module-tied-softmin-abc/RUN-086.dvc
+  - data/processed/.legacy/phot-coupled-family-discriminating-abc/RUN-091.dvc
+  - data/processed/.legacy/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079.dvc
+  - data/processed/.legacy/phot-hard-min-coupled-weakest-link-grid/RUN-081.dvc
+  - data/processed/.legacy/phot-localized-ruggedness-energy-diagnostic/RUN-093.dvc
+  - data/processed/.legacy/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  - data/processed/.legacy/phot-replicated-heldout-split-graphlet-diagnostic/RUN-089.dvc
+  - data/processed/.legacy/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084.dvc
+  - data/processed/.legacy/proteingym-current-model-abc-refit-residual-ruggedness/RUN-073.dvc
+  - data/processed/.legacy/proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/RUN-053.dvc
+  - data/processed/.legacy/proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/RUN-051.dvc
+  - data/processed/.legacy/proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic/RUN-028.dvc
+  - data/processed/.legacy/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040.dvc
+  - data/processed/.legacy/proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/RUN-041.dvc
+  - data/processed/.legacy/proteingym-phot-oracle-global-epistasis-baseline/RUN-043.dvc
+  - data/processed/.legacy/proteingym-phot-photophysical-trait-sparse-residual-diagnostic/RUN-042.dvc
+  - data/processed/.legacy/proteingym-phot-stability-readout-validation-objective-control/RUN-039.dvc
+  - data/processed/.legacy/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012.dvc
+  - data/processed/.legacy/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010.dvc
+  - data/processed/.legacy/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/.legacy/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065.dvc
+  - data/processed/.legacy/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063.dvc
+  - data/processed/.legacy/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061.dvc
+  - data/processed/.legacy/tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic/RUN-069.dvc
+  - data/processed/.legacy/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057.dvc
+  - data/processed/.legacy/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059.dvc
+  - data/processed/.legacy/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067.dvc
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - data/processed/stage-4a-empirical-ensemble-descriptor-envelope/RUN-135/logs.dvc
+  - data/processed/stage-4a-empirical-ensemble-descriptor-envelope/RUN-135.dvc
+  - data/processed/stage-4b-additive-core-gnk-generator-reachability/RUN-136/logs.dvc
+  - data/processed/stage-4b-additive-core-gnk-generator-reachability/RUN-136.dvc
+  - data/processed/stage-4c-empirical-coverage-calibrated-overlap/RUN-137/logs.dvc
+  - data/processed/stage-4c-empirical-coverage-calibrated-overlap/RUN-137.dvc
+  - data/processed/stage-4d-joint-multidescriptor-realism-gate/RUN-138/logs.dvc
+  - data/processed/stage-4d-joint-multidescriptor-realism-gate/RUN-138.dvc
+  - data/processed/stage-4e-heldout-descriptor-generalisation/RUN-139/logs.dvc
+  - data/processed/stage-4e-heldout-descriptor-generalisation/RUN-139.dvc
+environment:
+  base_stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+    lock_sha256: 886f01f501ad1ea877d60b3b127bf40db1580faaffa776496823bfc44ef050eb
+  external_packages_lock:
+    path: environment/external-packages.lock.yaml
+    sha256: 260a3678830c523fc7b2a512ed95e9cf4b6e4e4aaf91612fab8a9a44c488dd06
+  external_packages:
+  - name: Adapt-Env
+    path: external/Adapt-Env
+    editable: true
+    exists: true
+    git_repo: true
+    branch: feat/multi-trait-latent-blocks
+    commit: a150cdcb5bb557bf8f9f9b7829b2fc36a8629b4e
+    dirty: true
+    detached_head: false
+    remote: https://github.com/MA-Spence/Adapt-Env.git
+    submodule: true
+    tracking_branch: null
+  - name: landscapy
+    path: external/landscapy
+    editable: true
+    exists: true
+    git_repo: true
+    branch: dev
+    commit: 8270fc609551b72584eb0705d0c1c1c91a0fcc40
+    dirty: false
+    detached_head: false
+    remote: https://github.com/RSCJacksonLab/landscapy
+    submodule: true
+    tracking_branch: dev
+software_stack:
+  id: STACK-000
+  name: homelab-default
+  version: '2026.05'
+resources_requested:
+  cpus: 8
+  memory_gb: 48
+  gpus: 0
+  gpu_memory_expected_gb: null
+  walltime: 2-00:00:00
+  jobfs_gb: 0
+resources_observed: {}
+paths:
+  experiment_dir: experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe
+  run_metadata: experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/runs/RUN-141.yaml
+  local_run_record_dir: experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/runs
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-141
+  remote_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-141/project
+staging:
+  manifest: experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/runs/RUN-141.manifest.yaml
+  mode: source-staged
+container:
+  runtime: native
+scheduler_script: experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/runs/RUN-141.slurm
+remote_scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-141/project/experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/runs/RUN-141.slurm
+scheduler_job_id: '1955'
+logs:
+  stdout: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/logs/stdout.txt
+  stderr: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/logs/stderr.txt
+outputs:
+  expected:
+  - preflight.json
+  - empirical_design_templates.csv
+  - empirical_template_descriptor_metrics.csv
+  - generator_parameter_grid.csv
+  - support_catalog.csv
+  - support_aware_graphlet_audit.csv
+  - anchor_regime_audit.csv
+  - generator_descriptor_metrics.csv
+  - generator_knob_monotonicity.csv
+  - core_texture_ablation_controls.csv
+  - core_gnk_separation_gates.csv
+  - checkpoint_resume_summary.json
+  - summary.json
+  artifacts: []
+remote_cleanup:
+  eligible: true
+  status: not-requested
+remote_staging:
+  destination: matthew-spence@raspi-1
+  command: rm -rf /tank/data/labproj/staging/project-adapt-env/RUN-141/project &&
+    mkdir -p /tank/data/labproj/staging/project-adapt-env/RUN-141/project && tar -xzf
+    - -C /tank/data/labproj/staging/project-adapt-env/RUN-141/project
+execution_result:
+  returncode: 0
+  stdout: '1955'
+  stderr: ''
+remote_submission:
+  destination: matthew-spence@raspi-1
+  command: mkdir -p /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141 /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/logs
+    /tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/outputs && cd /tank/data/labproj/staging/project-adapt-env/RUN-141/project
+    && sbatch --parsable /tank/data/labproj/staging/project-adapt-env/RUN-141/project/experiments/2026-06-19_EXP-057_stage-4b-design-matched-support-aware-gnk-probe/runs/RUN-141.slurm
+  staged_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-141/project
+scheduler_state: INFERRED_EXIT_CODE
+compliance:
+  level: green
+  issues: []
+scheduler_exit_code: '0'

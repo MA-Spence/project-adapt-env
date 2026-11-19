@@ -1,0 +1,55 @@
+{
+  "scope": "TrpB RUN-178 profile versus archived RUN-175 synthetic control",
+  "provenance": [
+    {
+      "run": "RUN-175",
+      "output_hashes": 139,
+      "source_hashes": 16,
+      "input_hashes": 24
+    },
+    {
+      "run": "RUN-178",
+      "output_hashes": 99,
+      "source_hashes": 42,
+      "input_hashes": 24
+    }
+  ],
+  "frozen_control_hashes_verified": 6,
+  "profile_input_hashes_verified": 10,
+  "measured_genotypes": 159129,
+  "paired_seeds": 24,
+  "paired_full_field_nodes": 3840000,
+  "maximum_normalized_g_difference": 4.440892098500626e-15,
+  "unchanged_computational_methods": [
+    "__init__",
+    "_sequences",
+    "latent_components",
+    "readout",
+    "evaluate_batch_components",
+    "evaluate_batch",
+    "evaluate",
+    "random_sequence",
+    "str_to_seq",
+    "seq_to_str",
+    "hamming_distance",
+    "mutation_effects"
+  ],
+  "empirical_graph_and_cube_rows_exact": true,
+  "paired_cube_geometries_exact": true,
+  "selected_objectives_recomputed": 36,
+  "traces_audited": 42,
+  "intermediate_initial_populations_exact": 12,
+  "independent_wht_summary_rows": 4326,
+  "maximum_wht_difference": 1.4165335571192372e-12,
+  "maximum_objective_difference": 0.0,
+  "finite_budget_evaluations": 1952,
+  "scientific_gates": false,
+  "limitations": [
+    "Numerical consistency is not empirical adequacy or global optimizer convergence.",
+    "Objective formulas are independent; observation draws reuse the verified archived noise kernel.",
+    "Trace minima, components, parameters and budgets are checked; the optimizer is not rerun.",
+    "All three WHT resolutions and all saved TrpB conditions are audited; whole-graph dynamic programming is not rerun.",
+    "Shared inputs and fresh generator seeds do not create an independent biological test.",
+    "RUN-178 uses macOS/Clang and RUN-175 used Linux/Zig; exact numerical package versions do not imply identical platforms."
+  ]
+}

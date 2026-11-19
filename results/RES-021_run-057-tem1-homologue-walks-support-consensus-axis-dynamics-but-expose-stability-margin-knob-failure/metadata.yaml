@@ -1,0 +1,50 @@
+id: RES-021
+title: RUN-057 TEM-1 homologue walks support consensus-axis adaptive dynamics but
+  expose stability-margin knob failure
+status: completed
+created: '2026-05-15T09:27:36+10:00'
+owner: matthew-spence
+analyses:
+- ANA-021
+experiments:
+- EXP-021
+runs:
+- RUN-057
+supports:
+- HYP-004
+weakens:
+- HYP-005
+refutes: []
+motivates: []
+supersedes: []
+summary: 'RUN-057 passes 7/9 validation checks: TEM-1 homologue starts farther from
+  the MMSeqs consensus have lower fitness, higher beneficial availability, larger
+  adaptive-walk gains, decelerating greedy walks, and slightly lower random-walk autocorrelation;
+  epistasis strength also increases absolute epistasis and random-step variance. The
+  two failures are both stability-margin knob checks, and identical-start diagnostics
+  show that nominal stability_margin values from 4 to 12 did not change realized background
+  fitness or stability_margin_used, so the result supports the HYP-004 consensus-axis
+  walk behaviour while weakening HYP-005 for the current stability-margin parameterization.'
+artifacts:
+- results/RES-021_run-057-tem1-homologue-walks-support-consensus-axis-dynamics-but-expose-stability-margin-knob-failure/metrics.json
+evidence_paths:
+- analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_key_metrics.md
+- analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_validation_tests.md
+- analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_background_summary_by_start_stratum.md
+- analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_walk_summary_by_mode_and_stratum.md
+- analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_parameter_grid_summary.md
+- analyses/2026-05-15_ANA-021_run-057-tem1-homologue-walk-parameter-grid-diagnostic-review/tables/run-057_stability_margin_propagation_check.md
+- data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057/summary.json
+- data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057/literature_baselines.json
+- data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057/alignment_profile_summary.json
+- data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057/homologue_starts.csv
+- data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057/background_neighborhoods.csv
+- data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057/walk_summaries.csv
+- data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057/walk_trajectories.csv
+- data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057/epistasis_pairs.csv
+- data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057/parameter_grid_summary.csv
+- experiments/2026-05-15_EXP-021_tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/config.yaml
+- experiments/2026-05-15_EXP-021_tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/runs/RUN-057.yaml
+compliance:
+  level: green
+  issues: []

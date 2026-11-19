@@ -1,0 +1,62 @@
+id: ANA-065
+title: RUN-168 replicate-aware empirical statistics and frozen observation models
+status: completed
+created: '2026-10-07T20:58:32+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-168
+purpose: Audit and visualize replicate-aware empirical WHT and diminishing returns,
+  activity strata, and frozen-model observation comparisons without identifying specific
+  interactions or imposing scientific success gates.
+path: analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models
+notebook_record:
+  primary_notebook_path: analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-168
+  produced_artifacts:
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/01_measurement_and_controls.pdf
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/01_measurement_and_controls.png
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/02_wht_weighting_and_resolution.pdf
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/02_wht_weighting_and_resolution.png
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/03_slopes_and_availability.pdf
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/03_slopes_and_availability.png
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/04_frozen_models_with_observation.pdf
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/04_frozen_models_with_observation.png
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/05_activity_strata.pdf
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/figures/05_activity_strata.png
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/audit.json
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/control_diagnostics.csv
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/data_bundle_audit.json
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/donor_holdout_diagnostics.csv
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/empirical_bootstrap.csv
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/empirical_summary.csv
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/frozen_model_summary.csv
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/metrics.json
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/observation_contrasts.csv
+  - analyses/2026-10-07_ANA-065_run-168-replicate-aware-statistics-and-observation-models/tables/seed_summaries.csv
+data_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-168.dvc
+data_dependencies:
+- data/processed/trpb-replicate-observation-exp065.dvc
+verification:
+  notebook_executed: true
+  executed_code_cells: 8
+  cell_errors: 0
+  figures: 5
+  exports_per_figure:
+  - png
+  - pdf
+  independent_synthetic_statistic_rows: 394752
+  empirical_statistic_rows: 144
+  replayed_replicate_values: 4210688
+  synthetic_pair_cubes: 131584
+  remote_file_hashes_verified: 162
+  data_backup_hash_verified: true
+  full_repository_strict_check: 'unavailable: historical cloud-backed file timeouts'
+compliance:
+  level: yellow
+  issues:
+  - ANA-065 is completed but has no linked results.

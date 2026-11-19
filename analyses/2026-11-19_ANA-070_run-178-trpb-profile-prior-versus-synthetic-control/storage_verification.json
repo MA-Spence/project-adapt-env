@@ -1,0 +1,12 @@
+{
+  "analysis": "ANA-070",
+  "status": "tracked_and_local_cache_verified",
+  "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/ANA-070.dvc",
+  "directory_md5": "44d5ac48ae6668be7fe7edaebcfb2d31.dir",
+  "files": 45,
+  "bytes": 10913127,
+  "unique_cache_objects_verified": 44,
+  "live_analysis_matches_archive": true,
+  "remote_backup": "pending_Dutch_unavailable",
+  "scope": "Archive includes report, README, notebooks, helpers, environment, figures, tables and artifact manifest. Metadata and this storage sidecar remain outside the archive to avoid circular hashes."
+}

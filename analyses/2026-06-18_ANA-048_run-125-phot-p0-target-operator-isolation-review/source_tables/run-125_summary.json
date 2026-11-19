@@ -1,0 +1,38 @@
+{
+  "assay_id": "PHOT_CHLRE_Chen_2023",
+  "experiment_id": "EXP-049",
+  "graphlet_dimensions": [
+    4,
+    5,
+    6
+  ],
+  "n_assay_rows": 167529,
+  "n_graphlets": 24,
+  "n_p0_1_bootstrap_rows": 77,
+  "n_p0_1_graphlet_metric_rows": 264,
+  "n_p0_1_mavenn_refits": 10,
+  "n_p0_2_graphlet_metric_rows": 144,
+  "n_p0_2_injected_terms": 176,
+  "n_p0_2_transfer_rows": 36,
+  "n_p0_3_support_terms": 2048,
+  "output_files": {
+    "graphlet_catalog": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-125/outputs/graphlet_catalog.csv",
+    "p0_1_mavenn_refit_metrics": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-125/outputs/p0_1_mavenn_refit_metrics.csv",
+    "p0_1_target_bootstrap": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-125/outputs/p0_1_target_bootstrap.csv",
+    "p0_2_roundtrip_transfer": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-125/outputs/p0_2_roundtrip_transfer.csv",
+    "p0_3_support_containment_summary": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-125/outputs/p0_3_support_containment_summary.csv",
+    "preflight": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-125/outputs/preflight.json"
+  },
+  "p0_1_refit_count": 10,
+  "p0_2_known_spectrum_profiles": [
+    "pure_order3",
+    "order2_order3_mixture",
+    "low_order_control"
+  ],
+  "p0_3_sparse_walsh_terms": 2048,
+  "quick": false,
+  "run_mode": "phot_miscalibration_p0_target_operator_isolation",
+  "scratch_source": "scratch/RES-047_miscalibration_root_cause_and_isolation_plan.md",
+  "source_output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-125/project/data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077",
+  "source_run_id": "RUN-077"
+}

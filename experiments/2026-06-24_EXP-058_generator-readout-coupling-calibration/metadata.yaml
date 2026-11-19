@@ -1,0 +1,104 @@
+id: EXP-058
+type: experiment
+title: Generator readout-coupling calibration
+slug: generator-readout-coupling-calibration
+status: completed
+created: '2026-06-24T10:52:47+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-051
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  - EXP-055
+  - EXP-056
+  - EXP-057
+  motivating_results:
+  - RES-049
+  - RES-050
+  - RES-051
+  - RES-052
+  - RES-053
+  - RES-054
+  - RES-055
+  - RES-056
+question: Can the public additive thermodynamic core plus GNK generator be calibrated
+  so the observable simultaneously preserves core neutral-network/diminishing-return
+  guardrails and transmits GNK-specific epistasis through the readout?
+pre_experiment_prediction: A desaturated and re-centred single-gate readout may expose
+  a feasible region; if it cannot satisfy core guardrails and GNK separation together,
+  mixed post-readout score routing or a two-channel product observable will be required.
+rationale: This is the single preregistered generator calibration experiment specified
+  by scratch/RES-056_assessment_readout_coupling_and_next_steps.md. It tests fixes
+  A, B, and C for the readout-coupling defect isolated by RES-055, while keeping the
+  unrelated EXP-050 measurement-operator tooling failure from RES-056 off the Component
+  1 critical path.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/RES-056_assessment_readout_coupling_and_next_steps.md
+  - results/RES-055_run-141-fixed-support-aware-probe-fails-core-gnk-validation-gates/result.md
+  - results/RES-056_run-129-nonadditive-phot-operators-fail-certification/result.md
+  - scripts/generator_readout_coupling_calibration_exp058.py
+  - scripts/design_matched_support_aware_probe_exp057.py
+  - scripts/ensemble_landscape_validation_stage4.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '168:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - generator_calibration_grid.csv
+  - support_catalog.csv
+  - support_aware_graphlet_audit.csv
+  - anchor_regime_audit.csv
+  - generator_descriptor_metrics.csv
+  - core_guardrail_checks.csv
+  - gnk_separation_checks.csv
+  - knob_monotonicity_checks.csv
+  - calibration_decision_table.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- This record intentionally defines the operator-free generator calibration only.
+  It does not reopen EXP-050 or estimate a PHOT MAVE-NN transfer function.
+template: generic
+compliance:
+  level: green
+  issues: []

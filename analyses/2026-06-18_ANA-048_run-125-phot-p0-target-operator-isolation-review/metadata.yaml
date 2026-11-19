@@ -1,0 +1,40 @@
+id: ANA-048
+title: RUN-125 PHOT P0 target-operator isolation review
+status: completed
+created: '2026-06-18T09:39:45+10:00'
+owner: matthew-spence
+experiments:
+- EXP-049
+runs:
+- RUN-125
+purpose: Collect and interpret RUN-125 P0.1 target uncertainty, P0.2 known-spectrum
+  round-trip measurement calibration, and P0.3 sparse-Walsh support-to-graphlet containment
+  outputs before creating the result record.
+path: analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review
+notebook_record:
+  primary_notebook_path: analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-125
+  produced_artifacts:
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/metrics.json
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_graphlet_catalog_summary.csv
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_graphlet_catalog_summary.md
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_output_collection_audit.csv
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_output_collection_audit.md
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_1_mavenn_refit_fit_quality.csv
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_1_mavenn_refit_fit_quality.md
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_1_target_stability.csv
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_1_target_stability.md
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_2_profile_summary.csv
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_2_profile_summary.md
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_2_roundtrip_transfer_key_metrics.csv
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_2_roundtrip_transfer_key_metrics.md
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_3_support_alignment.csv
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_p0_3_support_alignment.md
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_phase_decisions.csv
+  - analyses/2026-06-18_ANA-048_run-125-phot-p0-target-operator-isolation-review/tables/run-125_phase_decisions.md
+compliance:
+  level: green
+  issues: []

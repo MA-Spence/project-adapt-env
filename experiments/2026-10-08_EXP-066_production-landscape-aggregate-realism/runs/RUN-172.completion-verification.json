@@ -1,0 +1,20 @@
+{
+  "run": "RUN-172",
+  "scheduler_job_id": "2317",
+  "checked_at_utc": "2026-10-08T02:53:25.436331+00:00",
+  "exit_code": 0,
+  "stderr_bytes": 0,
+  "elapsed_seconds": 4416.301234973595,
+  "evaluated": 63,
+  "fitted_settings": 195,
+  "execution_errors": [],
+  "files": 1819,
+  "published_manifest_matches": true,
+  "finished_at_utc": "2026-10-08T01:58:08.469105+00:00",
+  "suitability_missing_inventory_ids": [
+    "flip_gb1_four_mutations_full_data",
+    "flip_aav_full_data",
+    "flip_meltome_stability_summary"
+  ],
+  "bookkeeping_note": "Runner writes suitability after evaluated candidates but does not flush the three final excluded FLIP entries. This omission affects the inventory CSV, not fitted assays. Preserve frozen outputs; account for these rows in analysis."
+}

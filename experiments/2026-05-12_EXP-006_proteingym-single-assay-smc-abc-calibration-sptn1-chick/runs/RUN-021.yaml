@@ -104,13 +104,13 @@ scheduler_state: INFERRED_EXIT_CODE
 compliance:
   level: yellow
   issues:
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/mavenn_assay_metrics.csv'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/target_features.csv'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/selected_panel.csv'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/progress.json'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/progress.log'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/smc_empirical.json'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/empirical_target.json'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/prepared_assay.csv'
-  - 'File under default durable data root is not tracked by DVC: data/processed/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/mavenn_metrics.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/mavenn_assay_metrics.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/target_features.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/selected_panel.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/progress.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/progress.log'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/smc_empirical.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/empirical_target.json'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/prepared_assay.csv'
+  - 'File under default durable data root is not tracked by DVC: data/processed/.legacy/proteingym-single-assay-smc-abc-calibration-sptn1-chick/RUN-021/checkpoints/panel_preparation/SPTN1_CHICK_Tsuboyama_2023_1TUD/mavenn_metrics.json'
 scheduler_exit_code: '1'

@@ -1,0 +1,5 @@
+| support_mode | n_checks | n_pass |
+| --- | --- | --- |
+| random | 18 | 5 |
+| shuffled | 18 | 7 |
+| structured | 18 | 8 |

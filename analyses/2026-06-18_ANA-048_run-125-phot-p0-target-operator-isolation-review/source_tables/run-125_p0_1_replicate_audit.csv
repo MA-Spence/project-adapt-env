@@ -1,0 +1,2 @@
+phase,assay_id,has_assay_replicate_columns,replicate_columns,n_replicate_columns,action,note
+P0.1,PHOT_CHLRE_Chen_2023,False,,0,propagate_if_present,No replicate-valued columns were present in the prepared PHOT assay.

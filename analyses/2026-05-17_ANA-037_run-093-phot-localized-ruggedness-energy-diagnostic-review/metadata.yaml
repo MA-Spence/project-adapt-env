@@ -1,0 +1,28 @@
+id: ANA-037
+title: RUN-093 PHOT localized ruggedness energy diagnostic review
+status: completed
+created: '2026-05-17T14:37:17+10:00'
+owner: Codex
+experiments:
+- EXP-037
+runs:
+- RUN-093
+purpose: Review RUN-093 localized Dirichlet-energy diagnostics for PHOT empirical,
+  fitted current a(x), smooth-core controls, RUN-091 ABC fitted families, and random/shuffled/uncoupled
+  controls, focusing on whether ruggedness is localized or diffuse.
+path: analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-093
+  produced_artifacts:
+  - analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_hyp008_decision_table.md
+  - analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_preflight_and_collection_audit.md
+  - analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_test_innovation_localization_summary.md
+  - analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_test_module_enrichment_summary.md
+  - analyses/2026-05-17_ANA-037_run-093-phot-localized-ruggedness-energy-diagnostic-review/tables/run-093_test_total_localization_summary.md
+compliance:
+  level: green
+  issues: []

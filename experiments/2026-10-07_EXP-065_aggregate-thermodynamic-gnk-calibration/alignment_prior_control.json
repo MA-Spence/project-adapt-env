@@ -1,0 +1,25 @@
+{
+  "control_run": "RUN-175",
+  "experiment": "EXP-065",
+  "scope": "Reuse recorded TrpB rows across all six ratios, three observation modes, and both cohorts; no control recalibration or control landscape campaign.",
+  "dvc_pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc",
+  "dvc_directory_md5": "b33c8fdb785160b4df3f30d0a26c4711.dir",
+  "control_output_hashes": {
+    "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/outputs/manifest.json": "f6d3a74826bd70cfef5578346f5f8edd5d64de811f8730403227f89b7ce74455",
+    "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/outputs/config.yaml": "64fe64c7a752b026df8587d188635792aac1e202988f3b4caef0e63a633a8a85",
+    "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/outputs/selected_parameters.json": "dc5eff40aab23fba816ba3aea6f6bdfa100921dd5d04481364a645210681d8f7",
+    "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/outputs/graph_summary.csv": "15de2a01909bbe286239e580e15d162f8e561741ebbb8bcb2b72b7966a5fd2ba",
+    "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/outputs/cube_summary.csv": "a23e6b25092051d4a84368b713484664075fa4d6e4893146a8db866095ebaa84",
+    "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/outputs/worker_environment.json": "b2e5d1c48b0e7594b0d7041497b6c5e9fa2ed46cd681fa45a27531cae63f0681"
+  },
+  "control_environment": {
+    "python": "3.11.15",
+    "packages": {
+      "numpy": "2.4.4",
+      "pandas": "2.3.0",
+      "scipy": "1.17.1",
+      "pyarrow": "20.0.0",
+      "PyYAML": "6.0.3"
+    }
+  }
+}

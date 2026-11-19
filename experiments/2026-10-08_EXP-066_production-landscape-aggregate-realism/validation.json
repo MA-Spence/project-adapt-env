@@ -1,0 +1,38 @@
+{
+  "public_release": "dd0bb7a52d7d92af48bbfba115331742b9a0c2eb",
+  "package_suite": {
+    "passed": 87,
+    "skipped": 1
+  },
+  "mathematical_suite_passed": 41,
+  "public_and_observation_suite_passed": 14,
+  "production_tests_passed": 5,
+  "worker_smoke": {
+    "mode": "SMOKE_ONLY",
+    "datasets": 5,
+    "execution_errors": 0,
+    "seconds": 37.98936894349754
+  },
+  "input_inventory": {
+    "sha256": "80b97da2d9155c1738168f41cc580408be2cd4615b25213330cfe69ef865bc0f",
+    "verified_parquets": 86
+  },
+  "coverage_preflight": {
+    "candidates": 79,
+    "usable": 64,
+    "dimension_4": 10,
+    "dimension_3": 2,
+    "dimension_2": 52,
+    "insufficient_within_budget": 15
+  },
+  "limitations": [
+    "Historical broad labproj status/refresh/check timed out; targeted checks used.",
+    "Smoke outputs are not production results."
+  ],
+  "production_trpb_precision_check": {
+    "cubes": 64,
+    "max_absolute_difference": 3.161598854973266e-08,
+    "float32_tolerance": 1.1920928955078125e-07
+  },
+  "launcher": "Source-only launch; skip editable overlay and verify worker_environment.json before computation"
+}

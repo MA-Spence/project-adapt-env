@@ -1,0 +1,61 @@
+id: ANA-064
+title: RUN-166 paired readouts and embedded neighbourhoods
+status: completed
+created: '2026-10-07T19:36:05+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-166
+purpose: Describe what paired linear and sigmoid readouts, fitness-conditioned statistics,
+  and embedded four-site libraries show about aggregate empirical resemblance in TrpB.
+path: analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods
+notebook_record:
+  primary_notebook_path: analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-166
+  produced_artifacts:
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/01_paired_readouts.pdf
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/01_paired_readouts.png
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/02_conditional_statistics.pdf
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/02_conditional_statistics.png
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/03_aggregate_fingerprint.pdf
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/03_aggregate_fingerprint.png
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/04_embedded_neighbourhoods.pdf
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/04_embedded_neighbourhoods.png
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/05_saturation_and_availability.pdf
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/figures/05_saturation_and_availability.png
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/audit.json
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/contrasts.csv
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/data_bundle_audit.json
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/descriptors.csv
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/distances.csv
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/embedded_availability.csv
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/embedded_means.csv
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/embedded_seed_means.csv
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/metrics.json
+  - analyses/2026-10-07_ANA-064_run-166-paired-readouts-and-embedded-neighbourhoods/tables/operating_summary.csv
+verification:
+  notebook_executed: true
+  executed_code_cells: 8
+  cell_errors: 0
+  figures: 5
+  exports_per_figure:
+  - png
+  - pdf
+  independent_statistic_rows: 9936
+  verified_oriented_edges: 105984
+  replayed_observed_cubes: 3312
+  calibration_losses_recomputed: 40
+  heldout_distances_recomputed: 24
+  full_repository_strict_check: 'unavailable: historical cloud-backed file timeouts'
+  data_backup_hash_verified: true
+data_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-166.dvc
+data_dependencies:
+- data/processed/ensemble-landscape-validation-datasets.dvc
+compliance:
+  level: yellow
+  issues:
+  - ANA-064 is completed but has no linked results.

@@ -1,0 +1,121 @@
+id: EXP-061
+type: experiment
+title: Operator-normalized GNK sigmoid-transmission paired-residual validation
+slug: operator-normalized-gnk-sigmoid-transmission-paired-residual-validation
+status: completed
+created: '2026-07-23T03:27:15+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-005
+  previous_experiments:
+  - EXP-060
+  motivating_results:
+  - RES-055
+  - RES-057
+  - RES-058
+question: Does the EXP-060 mutation-normalized GNK field transmit length-stable local
+  mutational texture through the public sigmoid, and is any loss attributable to operating-point
+  saturation rather than renewed latent scale failure?
+pre_experiment_prediction: At central occupancies and small signal, paired observable
+  mutation effects will track latent GNK effects without a renewed length trend, whereas
+  the public margin-8 operating point will strongly attenuate transmission except
+  at threshold crossings.
+rationale: RES-058 validates latent scale laws but leaves nonlinear transmission untested;
+  paired full-minus-core residuals isolate sigmoid transmission while matched controls
+  distinguish operating-point attenuation and sigmoid-curvature epistasis from GNK
+  texture.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - AIM.md
+  - docs/hypotheses.md
+  - results/RES-055_run-141-fixed-support-aware-probe-fails-core-gnk-validation-gates/result.md
+  - results/RES-057_run-142-readout-coupling-calibration-no-joint-core-gnk-region/result.md
+  - results/RES-058_run-149-validates-mutation-normalized-gnk-latent-scaling-before-sigmoid-transmission/result.md
+  - claims/CLAIM-003_structured-high-order-residual-capacity-improves-phot-benchmarks.md
+  - experiments/2026-07-22_EXP-060_extensive-operator-normalized-gnk-latent-scale-law-validation/config.yaml
+  - src/project_adapt_env/extensive_gnk.py
+  - scripts/extensive_gnk_latent_scaling_exp060.py
+  - scripts/extensive_gnk_sigmoid_transmission_exp061.py
+  - tests/test_extensive_gnk.py
+  - tests/test_extensive_gnk_latent_scaling_exp060.py
+  - tests/test_extensive_gnk_sigmoid_transmission_exp061.py
+  - external/Adapt-Env/.config.yaml
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/Adapt-Env/adaptenv/presets.py
+  datasets: []
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 32
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - design_catalog.csv
+  - occupancy_calibration.csv
+  - paired_residual_metrics.csv
+  - mutation_transmission_metrics.csv
+  - epistasis_transmission_metrics.csv
+  - topology_audit.csv
+  - scale_law_fits.csv
+  - acceptance_checks.csv
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes:
+- The documented `.config.yaml` base defaults and natural-single-domain template use
+  stability margin 8, while a bare LandscapeConfig constructor defaults to margin
+  10 and named API presets vary. There is no universal service/API margin; the margin-8
+  base-template formula is the primary decision point and margin 10 is the separately
+  labelled constructor comparator.
+- Pointwise occupancy calibration changes theta per genotype and is therefore a transfer-function
+  assay only. Edge, plaquette, and topology estimands use one frozen theta per reference/seed/readout
+  arm.
+- The order-1 mutation-RMS-matched surrogate is a required control for epistasis introduced
+  by sigmoid curvature rather than latent GNK interactions.
+- A candidate-additivized plaquette counterfactual holds the three lower-corner GNK
+  values fixed and removes only latent double-mutant curvature; tau_texture is the
+  primary transmitted-texture estimand.
+- Direct float64 and stable analytic residuals are both retained because the public
+  margin can make nonzero mathematical residuals exact numerical ties.
+- A pass would support HYP-005 only for transmission at the declared operating point.
+  The primary arm substitutes the candidate for the public generator and disables
+  service noise, so it would not validate the current generator/service end to end,
+  empirical realism, or optimizer performance.
+- Texture projection, practical resolution, permutation evidence, and the controlled
+  texture length slope are gated per protein length so pooled short proteins cannot
+  conceal an L>=100 failure. The 0.10 resolution floor is a heuristic for this noiseless
+  assay, not a service detection threshold.
+- EXP-060 used 384 raw legacy terms for its scale-defect control. EXP-061 intentionally
+  uses the current base public value of 256 terms and labels it as a new current-public
+  comparator rather than the identical prior control.
+template: generic
+compliance:
+  level: green
+  issues: []

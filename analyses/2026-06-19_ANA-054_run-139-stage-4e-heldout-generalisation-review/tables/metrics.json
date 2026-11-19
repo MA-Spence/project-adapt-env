@@ -1,0 +1,13 @@
+{
+  "median_heldout_fraction_metrics_in_band": 0.5,
+  "n_heldout_datasets": 10,
+  "n_prediction_rows": 10,
+  "stage": "4E",
+  "n_heldout_ge_0_5": 6,
+  "n_heldout_gt_0_5": 2,
+  "n_heldout_ge_0_6": 2,
+  "max_heldout_fraction_metrics_in_band": 0.625,
+  "min_heldout_fraction_metrics_in_band": 0.375,
+  "dominant_selected_parameter_set_id": "random__sm6.000__ew1.000__seed703",
+  "dominant_selected_count": 9
+}

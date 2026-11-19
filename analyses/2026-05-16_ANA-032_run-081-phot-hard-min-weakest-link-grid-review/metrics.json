@@ -1,0 +1,485 @@
+{
+  "analysis_id": "ANA-032",
+  "assay_candidate_counts": {
+    "fitted_current_best": 1,
+    "fitted_current_posterior_mean": 1,
+    "fitted_smooth_core_only": 1,
+    "hard_min_correlated_auxiliary": 180
+  },
+  "assay_controls": {
+    "fitted_current_best": {
+      "assay_fit_objective_distance": 0.48556235966942257,
+      "double_holdout_spearman": 0.6394957983193277,
+      "double_spearman": 0.7313295179396875,
+      "epistasis_prediction_spearman": -0.2041902529084128,
+      "functional_ks": 0.05613953405082103,
+      "holdout_spearman": 0.7573830994217569,
+      "parameter_set_id": "PHOT_CHLRE_Chen_2023__current_best",
+      "single_spearman": 0.47823890272619873
+    },
+    "fitted_current_posterior_mean": {
+      "assay_fit_objective_distance": 0.46310686111398375,
+      "double_holdout_spearman": 0.5980392156862746,
+      "double_spearman": 0.7162293638564826,
+      "epistasis_prediction_spearman": -0.051070759032480165,
+      "functional_ks": 0.0560261208507184,
+      "holdout_spearman": 0.7532030316067769,
+      "parameter_set_id": "PHOT_CHLRE_Chen_2023__posterior_mean",
+      "single_spearman": 0.4820152940768465
+    },
+    "fitted_smooth_core_only": {
+      "assay_fit_objective_distance": 0.4813562733761828,
+      "double_holdout_spearman": 0.6394957983193277,
+      "double_spearman": 0.7313295179396875,
+      "epistasis_prediction_spearman": -0.17453212872822518,
+      "functional_ks": 0.0561753487455903,
+      "holdout_spearman": 0.7572960488136301,
+      "parameter_set_id": "PHOT_CHLRE_Chen_2023__smooth_core_A",
+      "single_spearman": 0.47823890272619873
+    }
+  },
+  "best_all_hard_min_parameter_set_id": "hard_min__smooth_core_A__grid0137",
+  "best_calibration_hard_min_parameter_set_id": "hard_min__smooth_core_A__grid0100",
+  "best_test_hard_min_parameter_set_id": "hard_min__smooth_core_A__grid0120",
+  "experiment_id": "EXP-032",
+  "graphlet_distances": {
+    "all": {
+      "best_hard_min": {
+        "distance": 0.49424903640279283,
+        "parameter_set_id": "hard_min__smooth_core_A__grid0137"
+      },
+      "empirical_global_readout_residual": {
+        "distance": 0.3627816223112989,
+        "parameter_set_id": "latent_phi__minus_poly_smooth_core_A"
+      },
+      "fitted_current_best": {
+        "distance": 0.49085766752288834,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__fitted_current_best"
+      },
+      "fitted_current_posterior_mean": {
+        "distance": 0.552665450403762,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__fitted_current_posterior_mean"
+      },
+      "fitted_smooth_core_only": {
+        "distance": 0.5025859467594308,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__fitted_smooth_core_only"
+      },
+      "gnk_local_null": {
+        "distance": 0.803200408288785,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__gnk_k2"
+      }
+    },
+    "calibration": {
+      "best_hard_min": {
+        "distance": 0.6836402069576911,
+        "parameter_set_id": "hard_min__smooth_core_A__grid0100"
+      },
+      "empirical_global_readout_residual": {
+        "distance": 0.5428315712874023,
+        "parameter_set_id": "latent_phi__minus_poly_smooth_core_A"
+      },
+      "fitted_current_best": {
+        "distance": 0.7318364284769245,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__fitted_current_best"
+      },
+      "fitted_current_posterior_mean": {
+        "distance": 0.783857184804536,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__fitted_current_posterior_mean"
+      },
+      "fitted_smooth_core_only": {
+        "distance": 0.7453777545039357,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__fitted_smooth_core_only"
+      },
+      "gnk_local_null": {
+        "distance": 0.8231154296996142,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__gnk_k2"
+      }
+    },
+    "test": {
+      "best_hard_min": {
+        "distance": 0.412427406419001,
+        "parameter_set_id": "hard_min__smooth_core_A__grid0120"
+      },
+      "empirical_global_readout_residual": {
+        "distance": 0.2707662564186795,
+        "parameter_set_id": "latent_phi__minus_poly_smooth_core_A"
+      },
+      "fitted_current_best": {
+        "distance": 0.40157082034740577,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__fitted_current_best"
+      },
+      "fitted_current_posterior_mean": {
+        "distance": 0.44081922838930265,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__fitted_current_posterior_mean"
+      },
+      "fitted_smooth_core_only": {
+        "distance": 0.41190406684777836,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__fitted_smooth_core_only"
+      },
+      "gnk_local_null": {
+        "distance": 0.8330054365739259,
+        "parameter_set_id": "PHOT_CHLRE_Chen_2023__gnk_k2"
+      }
+    }
+  },
+  "hypothesis_decision": {
+    "assay_fit_improves_over_controls": true,
+    "heldout_graphlet_distance_beats_fitted_current": false,
+    "heldout_graphlet_distance_beats_smooth_core": false,
+    "locality_empirical_like": false,
+    "main_interpretation": "hard-min candidates improve PHOT assay objective but do not improve held-out graphlet package over the fitted current model and do not validate empirical-like local non-diffuse ruggedness",
+    "supports_hyp008": false,
+    "weakens_hyp008": true
+  },
+  "locality": {
+    "best_assay_hard_min_covariance_test": {
+      "candidate_model": "hard_min_correlated_auxiliary",
+      "graphlet_split": "test",
+      "n_graphlets": 12.0,
+      "parameter_set_id": "hard_min__smooth_core_A__grid0100",
+      "shared_feature_count_vs_edge_innovation_total_energy_similarity_spearman": 0.04324897132516664,
+      "shared_feature_count_vs_plaquette_innovation_total_energy_similarity_spearman": -0.06700045557751225,
+      "shared_feature_count_vs_switch_edge_fraction_similarity_spearman": 0.142118517473794,
+      "shared_feature_count_vs_switch_plaquette_fraction_similarity_spearman": 0.13167758733743215
+    },
+    "best_assay_hard_min_test_feature_plaquette": {
+      "candidate_model": "hard_min_correlated_auxiliary",
+      "energy_kind": "plaquette",
+      "feature_energy_effective_module_count": 14.665542198992709,
+      "feature_energy_hhi": 0.06818704596333876,
+      "feature_energy_normalized_entropy": 0.7393359162906175,
+      "feature_energy_top10_fraction": 0.4718520838692729,
+      "feature_energy_top25_fraction": 0.8240762408688675,
+      "feature_energy_total_energy": 32593.489224094687,
+      "graphlet_split": "test",
+      "n_energy_rows": 124.0,
+      "n_features_or_pairs": 46.0,
+      "parameter_set_id": "hard_min__smooth_core_A__grid0100"
+    },
+    "best_assay_hard_min_test_graphlet": {
+      "candidate_model": "hard_min_correlated_auxiliary",
+      "graphlet_edge_energy_effective_module_count": 2.877901539881491,
+      "graphlet_edge_energy_hhi": 0.3474754039157222,
+      "graphlet_edge_energy_normalized_entropy": 0.4635757466896582,
+      "graphlet_edge_energy_top10_fraction": 0.7363033089834419,
+      "graphlet_edge_energy_top25_fraction": 0.9700531946577189,
+      "graphlet_edge_energy_total_energy": 7782.511962922046,
+      "graphlet_plaquette_energy_effective_module_count": 2.767925012367688,
+      "graphlet_plaquette_energy_hhi": 0.3612814637433397,
+      "graphlet_plaquette_energy_normalized_entropy": 0.453574104513441,
+      "graphlet_plaquette_energy_top10_fraction": 0.780851266373495,
+      "graphlet_plaquette_energy_top25_fraction": 0.9713956452760139,
+      "graphlet_plaquette_energy_total_energy": 32593.48922409469,
+      "graphlet_split": "test",
+      "n_graphlets": 12.0,
+      "parameter_set_id": "hard_min__smooth_core_A__grid0100"
+    },
+    "best_test_hard_min_covariance_test": {
+      "candidate_model": "hard_min_correlated_auxiliary",
+      "graphlet_split": "test",
+      "n_graphlets": 12.0,
+      "parameter_set_id": "hard_min__smooth_core_A__grid0120",
+      "shared_feature_count_vs_edge_innovation_total_energy_similarity_spearman": -0.04147169781793024,
+      "shared_feature_count_vs_plaquette_innovation_total_energy_similarity_spearman": -0.04147169781793024,
+      "shared_feature_count_vs_switch_edge_fraction_similarity_spearman": -0.04147169781793024,
+      "shared_feature_count_vs_switch_plaquette_fraction_similarity_spearman": -0.04147169781793024
+    },
+    "best_test_hard_min_test_feature_plaquette": {
+      "candidate_model": "hard_min_correlated_auxiliary",
+      "energy_kind": "plaquette",
+      "feature_energy_effective_module_count": 9.97668970289103,
+      "feature_energy_hhi": 0.10023364761061193,
+      "feature_energy_normalized_entropy": 0.601117580362439,
+      "feature_energy_top10_fraction": 0.5080561848327155,
+      "feature_energy_top25_fraction": 1.0,
+      "feature_energy_total_energy": 3752.1300839726514,
+      "graphlet_split": "test",
+      "n_energy_rows": 124.0,
+      "n_features_or_pairs": 46.0,
+      "parameter_set_id": "hard_min__smooth_core_A__grid0120"
+    },
+    "best_test_hard_min_test_graphlet": {
+      "candidate_model": "hard_min_correlated_auxiliary",
+      "graphlet_edge_energy_effective_module_count": 1.0,
+      "graphlet_edge_energy_hhi": 1.0,
+      "graphlet_edge_energy_normalized_entropy": -0.0,
+      "graphlet_edge_energy_top10_fraction": 1.0,
+      "graphlet_edge_energy_top25_fraction": 1.0,
+      "graphlet_edge_energy_total_energy": 922.9185942567246,
+      "graphlet_plaquette_energy_effective_module_count": 1.0,
+      "graphlet_plaquette_energy_hhi": 1.0,
+      "graphlet_plaquette_energy_normalized_entropy": -0.0,
+      "graphlet_plaquette_energy_top10_fraction": 1.0,
+      "graphlet_plaquette_energy_top25_fraction": 1.0,
+      "graphlet_plaquette_energy_total_energy": 3752.1300839726505,
+      "graphlet_split": "test",
+      "n_graphlets": 12.0,
+      "parameter_set_id": "hard_min__smooth_core_A__grid0120"
+    },
+    "empirical_readout_residual_test_feature_plaquette": {
+      "candidate_model": "empirical_global_readout_residual",
+      "energy_kind": "plaquette",
+      "feature_energy_effective_module_count": 18.47940727127838,
+      "feature_energy_hhi": 0.05411428977780311,
+      "feature_energy_normalized_entropy": 0.8474681058328407,
+      "feature_energy_top10_fraction": 0.4159034604108185,
+      "feature_energy_top25_fraction": 0.7273427298916946,
+      "feature_energy_total_energy": 15.398014662253624,
+      "graphlet_split": "test",
+      "n_energy_rows": 124.0,
+      "n_features_or_pairs": 46.0,
+      "parameter_set_id": "latent_phi__minus_poly_smooth_core_A"
+    },
+    "empirical_readout_residual_test_graphlet": {
+      "candidate_model": "empirical_global_readout_residual",
+      "graphlet_edge_energy_effective_module_count": 9.0416514948696,
+      "graphlet_edge_energy_hhi": 0.11059926392511572,
+      "graphlet_edge_energy_normalized_entropy": 0.9375144847171185,
+      "graphlet_edge_energy_top10_fraction": 0.3373288911404243,
+      "graphlet_edge_energy_top25_fraction": 0.4573511622290718,
+      "graphlet_edge_energy_total_energy": 4.01754160632896,
+      "graphlet_plaquette_energy_effective_module_count": 6.720688590733816,
+      "graphlet_plaquette_energy_hhi": 0.14879427702970127,
+      "graphlet_plaquette_energy_normalized_entropy": 0.8405384821419342,
+      "graphlet_plaquette_energy_top10_fraction": 0.4302930899342057,
+      "graphlet_plaquette_energy_top25_fraction": 0.575183255768606,
+      "graphlet_plaquette_energy_total_energy": 15.398014662253622,
+      "graphlet_split": "test",
+      "n_graphlets": 12.0,
+      "parameter_set_id": "latent_phi__minus_poly_smooth_core_A"
+    }
+  },
+  "preflight": {
+    "a_landscape": "fitted_smooth_core_only from RUN-077/RES-030 PHOT best branch",
+    "assay_id": "PHOT_CHLRE_Chen_2023",
+    "graphlet_dimensions": [
+      4,
+      5,
+      6
+    ],
+    "mode": "deterministic_frozen_smooth_core_A_hard_min_grid_no_abc",
+    "n_assay_variants_evaluated": 167529,
+    "n_graphlets": 24,
+    "n_parameter_sets": 180,
+    "operator": "f(x)=min(a(x),b(x))",
+    "primary_score_column": "latent_phi",
+    "run077_phot_best_objective": 10.253823213086244,
+    "score_columns": [
+      "latent_phi"
+    ],
+    "source_output_dir": "/tank/data/labproj/staging/project-adapt-env/RUN-081/project/data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077",
+    "source_results": [
+      "RES-030",
+      "RES-031"
+    ],
+    "source_run_id": "RUN-077"
+  },
+  "result_id": "RES-032",
+  "run_id": "RUN-081",
+  "selected_graphlet_summaries": {
+    "calibration": {
+      "best_assay_hard_min": {
+        "accessible_path_fraction": 0.01712962962962963,
+        "gft_high_energy_fraction": 0.2343217900621896,
+        "gft_low_energy_fraction": 0.44121851960705555,
+        "gft_mid_energy_fraction": 0.3244596903307549,
+        "n_graphlets": 12,
+        "n_local_maxima": 4.666666666666667,
+        "random_walk_lag1_autocorrelation": 0.03513200718482225,
+        "reciprocal_sign_epistasis_fraction": 0.27777777777777785,
+        "sign_epistasis_fraction": 0.5631944444444444,
+        "switch_boundary_plaquette_energy_fraction": 1.0,
+        "switch_edge_fraction": 0.057291666666666664,
+        "switch_plaquette_fraction": 0.11284722222222222,
+        "walsh_high_order_fraction": 0.5419132722607957
+      },
+      "best_test_hard_min": {
+        "accessible_path_fraction": 0.01712962962962963,
+        "gft_high_energy_fraction": 0.251928120494167,
+        "gft_low_energy_fraction": 0.43876200903413437,
+        "gft_mid_energy_fraction": 0.30930987047170005,
+        "n_graphlets": 12,
+        "n_local_maxima": 4.666666666666667,
+        "random_walk_lag1_autocorrelation": 0.027208502806882588,
+        "reciprocal_sign_epistasis_fraction": 0.278125,
+        "sign_epistasis_fraction": 0.5434027777777778,
+        "switch_boundary_plaquette_energy_fraction": 1.0,
+        "switch_edge_fraction": 0.03125,
+        "switch_plaquette_fraction": 0.06180555555555556,
+        "walsh_high_order_fraction": 0.560324764755003
+      },
+      "empirical_observed": {
+        "accessible_path_fraction": 0.23194444444444443,
+        "gft_high_energy_fraction": 0.11423637730718776,
+        "gft_low_energy_fraction": 0.656683805815116,
+        "gft_mid_energy_fraction": 0.2290798168776963,
+        "n_graphlets": 12,
+        "n_local_maxima": 5.166666666666667,
+        "random_walk_lag1_autocorrelation": 0.21213224183431456,
+        "reciprocal_sign_epistasis_fraction": 0.24027777777777778,
+        "sign_epistasis_fraction": 0.5972222222222223,
+        "switch_boundary_plaquette_energy_fraction": NaN,
+        "switch_edge_fraction": NaN,
+        "switch_plaquette_fraction": NaN,
+        "walsh_high_order_fraction": 0.3433161941843443
+      },
+      "empirical_readout_residual": {
+        "accessible_path_fraction": 0.11319444444444443,
+        "gft_high_energy_fraction": 0.1680299859113429,
+        "gft_low_energy_fraction": 0.4814115797455394,
+        "gft_mid_energy_fraction": 0.3505584343431176,
+        "n_graphlets": 12,
+        "n_local_maxima": 5.333333333333333,
+        "random_walk_lag1_autocorrelation": 0.09216867675406899,
+        "reciprocal_sign_epistasis_fraction": 0.27395833333333336,
+        "sign_epistasis_fraction": 0.6986111111111111,
+        "switch_boundary_plaquette_energy_fraction": NaN,
+        "switch_edge_fraction": NaN,
+        "switch_plaquette_fraction": NaN,
+        "walsh_high_order_fraction": 0.5171034611465696
+      },
+      "fitted_current_best": {
+        "accessible_path_fraction": 0.018287037037037036,
+        "gft_high_energy_fraction": 0.24824072791955312,
+        "gft_low_energy_fraction": 0.44297473512359303,
+        "gft_mid_energy_fraction": 0.30878453695685526,
+        "n_graphlets": 12,
+        "n_local_maxima": 4.666666666666667,
+        "random_walk_lag1_autocorrelation": 0.018113958206535653,
+        "reciprocal_sign_epistasis_fraction": 0.2763888888888889,
+        "sign_epistasis_fraction": 0.5430555555555556,
+        "switch_boundary_plaquette_energy_fraction": NaN,
+        "switch_edge_fraction": NaN,
+        "switch_plaquette_fraction": NaN,
+        "walsh_high_order_fraction": 0.5570252648764084
+      },
+      "fitted_smooth_core_only": {
+        "accessible_path_fraction": 0.018287037037037036,
+        "gft_high_energy_fraction": 0.24824072791955312,
+        "gft_low_energy_fraction": 0.44297473512359303,
+        "gft_mid_energy_fraction": 0.30878453695685526,
+        "n_graphlets": 12,
+        "n_local_maxima": 4.666666666666667,
+        "random_walk_lag1_autocorrelation": -0.006349699726074507,
+        "reciprocal_sign_epistasis_fraction": 0.2763888888888889,
+        "sign_epistasis_fraction": 0.5430555555555556,
+        "switch_boundary_plaquette_energy_fraction": NaN,
+        "switch_edge_fraction": NaN,
+        "switch_plaquette_fraction": NaN,
+        "walsh_high_order_fraction": 0.5570252648764084
+      }
+    },
+    "test": {
+      "best_assay_hard_min": {
+        "accessible_path_fraction": 0.024537037037037034,
+        "gft_high_energy_fraction": 0.1954865539880047,
+        "gft_low_energy_fraction": 0.4668808828640816,
+        "gft_mid_energy_fraction": 0.33763256314791446,
+        "n_graphlets": 12,
+        "n_local_maxima": 3.4166666666666665,
+        "random_walk_lag1_autocorrelation": 0.04640737940228698,
+        "reciprocal_sign_epistasis_fraction": 0.23749999999999996,
+        "sign_epistasis_fraction": 0.5645833333333333,
+        "switch_boundary_plaquette_energy_fraction": 1.0,
+        "switch_edge_fraction": 0.049479166666666664,
+        "switch_plaquette_fraction": 0.09722222222222222,
+        "walsh_high_order_fraction": 0.5076977469784617
+      },
+      "best_test_hard_min": {
+        "accessible_path_fraction": 0.028009259259259258,
+        "gft_high_energy_fraction": 0.18425709239865337,
+        "gft_low_energy_fraction": 0.5022721052129498,
+        "gft_mid_energy_fraction": 0.3134708023883964,
+        "n_graphlets": 12,
+        "n_local_maxima": 3.5,
+        "random_walk_lag1_autocorrelation": 0.06905150972891856,
+        "reciprocal_sign_epistasis_fraction": 0.23263888888888884,
+        "sign_epistasis_fraction": 0.5680555555555556,
+        "switch_boundary_plaquette_energy_fraction": 1.0,
+        "switch_edge_fraction": 0.010416666666666666,
+        "switch_plaquette_fraction": 0.019791666666666666,
+        "walsh_high_order_fraction": 0.4976195795084457
+      },
+      "empirical_observed": {
+        "accessible_path_fraction": 0.19745370370370366,
+        "gft_high_energy_fraction": 0.1552031085825549,
+        "gft_low_energy_fraction": 0.6212162943804115,
+        "gft_mid_energy_fraction": 0.22358059703703356,
+        "n_graphlets": 12,
+        "n_local_maxima": 5.166666666666667,
+        "random_walk_lag1_autocorrelation": 0.1905046595011569,
+        "reciprocal_sign_epistasis_fraction": 0.2583333333333333,
+        "sign_epistasis_fraction": 0.6145833333333334,
+        "switch_boundary_plaquette_energy_fraction": NaN,
+        "switch_edge_fraction": NaN,
+        "switch_plaquette_fraction": NaN,
+        "walsh_high_order_fraction": 0.378783705619082
+      },
+      "empirical_readout_residual": {
+        "accessible_path_fraction": 0.13784722222222223,
+        "gft_high_energy_fraction": 0.14618813754758117,
+        "gft_low_energy_fraction": 0.5045057355282075,
+        "gft_mid_energy_fraction": 0.3493061269242114,
+        "n_graphlets": 12,
+        "n_local_maxima": 5.25,
+        "random_walk_lag1_autocorrelation": 0.10717905080977343,
+        "reciprocal_sign_epistasis_fraction": 0.24479166666666666,
+        "sign_epistasis_fraction": 0.6444444444444445,
+        "switch_boundary_plaquette_energy_fraction": NaN,
+        "switch_edge_fraction": NaN,
+        "switch_plaquette_fraction": NaN,
+        "walsh_high_order_fraction": 0.4924758488636025
+      },
+      "fitted_current_best": {
+        "accessible_path_fraction": 0.028009259259259258,
+        "gft_high_energy_fraction": 0.1844160610195046,
+        "gft_low_energy_fraction": 0.5015518746020349,
+        "gft_mid_energy_fraction": 0.31403206437846004,
+        "n_graphlets": 12,
+        "n_local_maxima": 3.5,
+        "random_walk_lag1_autocorrelation": 0.09477600736762619,
+        "reciprocal_sign_epistasis_fraction": 0.23263888888888884,
+        "sign_epistasis_fraction": 0.5680555555555556,
+        "switch_boundary_plaquette_energy_fraction": NaN,
+        "switch_edge_fraction": NaN,
+        "switch_plaquette_fraction": NaN,
+        "walsh_high_order_fraction": 0.4984481253979647
+      },
+      "fitted_smooth_core_only": {
+        "accessible_path_fraction": 0.028009259259259258,
+        "gft_high_energy_fraction": 0.1844160610195046,
+        "gft_low_energy_fraction": 0.5015518746020349,
+        "gft_mid_energy_fraction": 0.31403206437846004,
+        "n_graphlets": 12,
+        "n_local_maxima": 3.5,
+        "random_walk_lag1_autocorrelation": 0.07236035296934269,
+        "reciprocal_sign_epistasis_fraction": 0.23263888888888884,
+        "sign_epistasis_fraction": 0.5680555555555556,
+        "switch_boundary_plaquette_energy_fraction": NaN,
+        "switch_edge_fraction": NaN,
+        "switch_plaquette_fraction": NaN,
+        "walsh_high_order_fraction": 0.4984481253979647
+      }
+    }
+  },
+  "source_results": [
+    "RES-030",
+    "RES-031"
+  ],
+  "top_assay_hard_min": {
+    "assay_fit_objective_distance": 0.42230447388118,
+    "auxiliary_correlation": 0.8,
+    "auxiliary_limited_fraction": 0.05757809095738648,
+    "auxiliary_offset_sd": 1.0,
+    "auxiliary_pairwise_density": 0.04,
+    "auxiliary_pairwise_scale": 0.2,
+    "auxiliary_scale": 1.0,
+    "double_holdout_spearman": 0.6599439775910365,
+    "double_spearman": 0.7389324235086947,
+    "epistasis_prediction_spearman": 0.010563800008279686,
+    "functional_ks": 0.05667078535656514,
+    "holdout_spearman": 0.7569216375822995,
+    "parameter_set_id": "hard_min__smooth_core_A__grid0100",
+    "single_spearman": 0.4721818365538904
+  }
+}

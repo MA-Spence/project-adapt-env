@@ -1,0 +1,31 @@
+id: ANA-035
+title: RUN-089 PHOT replicated split graphlet diagnostic review
+status: completed
+created: '2026-05-17T11:17:16+10:00'
+owner: Codex
+experiments:
+- EXP-035
+runs:
+- RUN-089
+purpose: Analyze whether RUN-079 no-module held-out PHOT graphlet improvement is stable
+  across replicated calibration/test graphlet splits and whether it survives fitted-current,
+  smooth-core, empirical-module, random-module, shuffled-module, and uncoupled-module
+  controls.
+path: analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review
+notebook_record:
+  primary_notebook_path: analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-089
+  produced_artifacts:
+  - analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_component_summary.md
+  - analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_family_summary.md
+  - analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_hyp008_decision_table.md
+  - analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_original_split_reference.md
+  - analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_pairwise_control_deltas.md
+  - analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_preflight_and_output_audit.md
+  - analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_top_selection_counts.md
+compliance:
+  level: green
+  issues: []

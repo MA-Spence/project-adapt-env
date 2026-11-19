@@ -1,0 +1,42 @@
+id: RES-027
+title: RUN-069 fixed residual scale sweep validates the scale knob but not peak-stage
+  unmasking
+status: completed
+created: '2026-05-15T20:30:37+10:00'
+owner: matthew-spence
+analyses:
+- ANA-027
+experiments:
+- EXP-027
+runs:
+- RUN-069
+supports:
+- HYP-005
+weakens:
+- HYP-004
+refutes: []
+motivates: []
+supersedes: []
+summary: 'RUN-069 corrects the RUN-067 calibration setting by scanning only fixed
+  walk-initial residual/additive scale values. The fixed contact residual scale grid
+  is directional: higher scale monotonically increases held-out SE, RSE, local maxima,
+  WHT/GFT high-order fraction, residual high-order exposure, and lowers random-walk
+  lag-1 autocorrelation. However, the result still does not validate a clean peak-proximal
+  or late-walk unmasking mechanism, because stage-wise SE/RSE and high-order spectra
+  are not consistently late-dominated even though smooth beneficial-effect proxies
+  decline along the walk. The run supports HYP-005 for the fixed residual-scale knob
+  and weakens the stronger HYP-004 biological ruggedness claim.'
+artifacts:
+- results/RES-027_run-069-fixed-residual-scale-sweep-validates-scale-knob-but-not-peak-stage-unmasking/metrics.json
+evidence_paths:
+- analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/metrics.json
+- analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_key_metrics.md
+- analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_fixed_scale_test_summary.md
+- analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_fixed_scale_by_walk_stage.md
+- analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_run067_comparison.md
+- analyses/2026-05-15_ANA-027_run-069-tem1-fixed-scale-residual-ratio-sweep-graphlet-review/tables/run-069_validation_tests.md
+- data/processed/tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic/RUN-069.dvc
+- experiments/2026-05-15_EXP-027_tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic/runs/RUN-069.yaml
+compliance:
+  level: green
+  issues: []

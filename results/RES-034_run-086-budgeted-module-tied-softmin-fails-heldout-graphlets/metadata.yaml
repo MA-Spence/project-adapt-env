@@ -1,0 +1,40 @@
+id: RES-034
+title: RUN-086 budgeted module-tied soft-min fails held-out graphlet and locality
+  support
+status: completed
+created: '2026-05-17T10:00:35+10:00'
+owner: Codex
+analyses:
+- ANA-034
+experiments:
+- EXP-034
+runs:
+- RUN-086
+supports: []
+weakens:
+- HYP-008
+refutes: []
+motivates: []
+supersedes: []
+summary: RUN-086 tests a budgeted module-tied soft-min state-difference field for
+  PHOT. It slightly improves calibration graphlet distance but does not beat fitted-current
+  held-out graphlets, does not validate empirical module locality, and provides no
+  assay-guardrail rescue, weakening this implementation of HYP-008.
+artifacts:
+- analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/metrics.json
+- analyses/2026-05-17_ANA-034_run-086-phot-budgeted-module-tied-softmin-abc-review/tables/run-086_hyp008_decision_table.md
+- results/RES-034_run-086-budgeted-module-tied-softmin-fails-heldout-graphlets/metrics.json
+evidence_paths:
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086.dvc
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086/summary.json
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086/posterior_particles.csv
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086/posterior_rounds.csv
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086/model_distances.csv
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086/graphlet_summary.csv
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086/assay_fit_rankings.csv
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086/local_signal_graphlet_energy_summary.csv
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086/local_signal_feature_energy_summary.csv
+- data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086/locality_covariance_summary.csv
+compliance:
+  level: green
+  issues: []

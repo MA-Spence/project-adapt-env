@@ -1,0 +1,8 @@
+{
+  "experiment_id": "EXP-054",
+  "mode": "stage_4c_coverage_and_calibrated_overlap",
+  "project_root": "/tank/data/labproj/staging/project-adapt-env/RUN-137/project",
+  "public_model_system": "additive_thermodynamic_gnk",
+  "quick": false,
+  "stage": "4C"
+}

@@ -1,0 +1,29 @@
+check_id,criterion,passed,required,value
+deterministic_replay,all 180 candidate fields reproduce their fingerprint,True,True,180
+pairing_keys_exclude_treatment,all sequence-pair designs are generated once without arm or weight in the key,True,True,2160
+finite_latent_outputs,all additive and GNK differences are finite,True,True,32400
+weight_zero_exact,maximum weight-zero GNK RMS equals 0 exactly,True,True,0.0
+reference_centering,max |G(reference)| <= 1e-12,True,True,0.0
+support_complete,zero uncovered sites at every active order,True,True,0
+support_nearly_regular,degree range <= 1 and CV <= 0.1,True,True,"{""max_degree_range"": 1, ""max_cv"": 0.01839558721223166}"
+support_unique,duplicate support fraction <= 0.01,True,True,0.0
+bounded_q20_contrasts,uniform q20 contrast moments exact within 1e-12 and max |contrast| <= 1,True,True,"{""mean_error"": 0.0, ""second_error"": 0.0, ""max_abs"": 1.0, ""substitution_energy_error"": 8.881784197001252e-16}"
+local_ratio_length_medians,"every length median RMS(DeltaG)/RMS(DeltaA) lies in [0.85, 1.15]",True,True,"{""48"": 1.011505881709462, ""93"": 1.0042086574842912, ""118"": 1.00964849112516, ""220"": 0.9911901234725077, ""238"": 1.0120057737868482, ""448"": 0.9948144364053159}"
+local_ratio_seed_replication,"at least 0.9 of seed rows lie in [0.7, 1.3]",True,True,1.0
+local_normalized_control_scale,fixed-support local-normalization control meets the candidate median band and local slope limit,True,False,"{""slope"": -0.013144973880000289, ""length_medians"": {""48"": 0.9960761610381913, ""93"": 1.0071466134715452, ""118"": 0.9945037850542355, ""220"": 0.9847540726631072, ""238"": 0.9957714458172304, ""448"": 0.9563822217347298}}"
+local_scale_slope,|log-log single-substitution slope| <= 0.1,True,True,-0.006316026199129316
+local_scale_slope_ci,"bootstrap slope CI lies within [-0.2, 0.2]",True,True,"{""low"": -0.012404182357501998, ""high"": 0.006452700560890266}"
+slope_repair_over_legacy,candidate slope is at least 0.25 closer to zero than legacy,True,True,0.5040481100599312
+extensive_field_variance,"Var(G) slope in [0.8, 1.2] and CV[Var(G)/L] <= 0.2",True,True,"{""slope"": 0.9950763277055015, ""variance_per_length_cv"": 0.006415577658324374}"
+full_sequence_delta_scaling_fraction_0.1,"reference-shell fractional-distance GNK RMS slope lies in [0.35, 0.65]",True,True,0.4819628512455381
+background_operator_ratio_scaling_fraction_0.1,uniform-background fractional-distance GNK/additive ratio slope has absolute value <= 0.15,True,True,-0.005255393129039754
+full_sequence_delta_scaling_fraction_0.5,"reference-shell fractional-distance GNK RMS slope lies in [0.35, 0.65]",True,True,0.43033811441468456
+background_operator_ratio_scaling_fraction_0.5,uniform-background fractional-distance GNK/additive ratio slope has absolute value <= 0.15,True,True,-0.006916115604458776
+fixed_distance_scaling_fixed_2,reference-shell fixed-distance GNK RMS slope has absolute value <= 0.15,True,True,0.0019644854564756756
+fixed_distance_scaling_fixed_4,reference-shell fixed-distance GNK RMS slope has absolute value <= 0.15,True,True,0.004063061476010351
+fixed_distance_scaling_fixed_8,reference-shell fixed-distance GNK RMS slope has absolute value <= 0.15,True,True,0.04597279333124333
+weight_linearity,relative error <= 0.02 and R2 >= 0.9999,True,True,"{""max_relative_error"": 5.3974166333193465e-16, ""min_r2"": 1.0, ""weights"": [0.25, 0.5, 1.0, 2.0]}"
+order_variance_allocation,maximum median order-share error <= 0.1,True,True,0.00906237680341937
+supported_pair_curvature,order-stratified co-supported mixed differences are positive and every length slope <= 0.15 in absolute value,True,True,"{""slope_by_order"": {""2"": -0.0006984436739037987, ""3"": -0.04733783767371628, ""4"": -0.03969680398023355}, ""minimum_rms"": 0.34012236426597775}"
+q20_local_tail,median q20 local-effect Pearson kurtosis <= 6.0,True,False,3.085673147868932
+legacy_scaling_defect_reproduced,"legacy local-effect slope lies in [-0.7, -0.3]",True,True,-0.5103641362590605

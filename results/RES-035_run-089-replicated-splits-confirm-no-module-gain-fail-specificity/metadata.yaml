@@ -1,0 +1,45 @@
+id: RES-035
+title: RUN-089 replicated splits confirm no-module graphlet gain but fail specificity
+  controls
+status: completed
+created: '2026-05-17T11:23:53+10:00'
+owner: Codex
+analyses:
+- ANA-035
+experiments:
+- EXP-035
+runs:
+- RUN-089
+supports: []
+weakens:
+- HYP-008
+refutes: []
+motivates: []
+supersedes: []
+summary: 'RUN-089 shows that the RUN-079 no-module PHOT graphlet-distance improvement
+  is stable across replicated held-out graphlet splits against fitted-current and
+  smooth-core controls, but the result fails specificity controls: the uncoupled-module
+  control is better overall and random/shuffled/empirical module families also improve
+  against current. This weakens the current local non-diffuse HYP-008 mechanism while
+  preserving a narrow capacity result.'
+artifacts:
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/metrics.json
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_hyp008_decision_table.md
+- results/RES-035_run-089-replicated-splits-confirm-no-module-gain-fail-specificity/metrics.json
+evidence_paths:
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/metrics.json
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_component_summary.md
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_family_summary.md
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_hyp008_decision_table.md
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_original_split_reference.md
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_pairwise_control_deltas.md
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_preflight_and_output_audit.md
+- analyses/2026-05-17_ANA-035_run-089-phot-replicated-split-graphlet-diagnostic-review/tables/run-089_top_selection_counts.md
+- data/processed/phot-replicated-heldout-split-graphlet-diagnostic/RUN-089.dvc
+- data/processed/phot-replicated-heldout-split-graphlet-diagnostic/RUN-089/summary.json
+- data/processed/phot-replicated-heldout-split-graphlet-diagnostic/RUN-089/split_family_summary.csv
+- data/processed/phot-replicated-heldout-split-graphlet-diagnostic/RUN-089/split_family_pairwise_deltas.csv
+- data/processed/phot-replicated-heldout-split-graphlet-diagnostic/RUN-089/component_summary.csv
+compliance:
+  level: green
+  issues: []

@@ -29,6 +29,8 @@ items:
   - EXP-008
   - EXP-010
   - EXP-011
+  - EXP-029
+  - EXP-030
   supported_by: []
   weakened_by:
   - RES-001
@@ -36,6 +38,7 @@ items:
   - RES-004
   - RES-005
   - RES-006
+  - RES-029
   refuted_by: []
   superseded_by:
   - CLAIM-001
@@ -99,33 +102,90 @@ items:
     issues:
     - 'Active hypothesis has no linked experiment: HYP-003'
 - id: HYP-004
-  title: Benchmark-Regimes-Separate-Search-Strategies-Reproducibly
+  title: Adaptive-Walk-Dynamics-And-Peak-Proximal-Epistasis-Are-Biological
   status: active
   created: '2026-05-07T16:18:34+10:00'
   owner: matthew-spence
   aim: AIM-001
   aims:
   - AIM-001
-  statement: A scientifically useful synthetic benchmark should produce reproducible
-    performance separation between qualitatively different optimization strategies
-    across budgets, start states, and noise levels.
+  statement: A biologically useful synthetic landscape should reproduce evolutionary
+    search behaviour seen in real rugged landscapes, including plausible random and
+    adaptive walks, diminishing returns near high-fitness genotypes, and systematic
+    changes in epistasis as sequences approach a peak.
   predictions:
-  - Across seeds and budgets
-  - strategy rankings should be stable enough that random search
-  - local mutagenesis
-  - recombination
-  - and uncertainty-aware active learning do not collapse into one indistinguishable
-    performance class.
-  tested_by: []
-  supported_by: []
-  weakened_by: []
+  - Random walks and one-step adaptive walks should show early accessible gains, decelerating
+    improvement near high-fitness regions, and nonzero probability of stalling on
+    local optima.
+  - The beneficial fraction and mean available beneficial effect size should decline
+    as sequences get closer to the relevant local peak.
+  - Epistasis should become more constraining near peaks, with increased negative
+    or diminishing-returns epistasis and changed sign-epistasis prevalence relative
+    to distant low-fitness regions.
+  - These patterns should be reproducible across seeds and family-like backgrounds
+    without evaluating machine-learning models or benchmark strategy rankings.
+  tested_by:
+  - EXP-020
+  - EXP-021
+  - EXP-022
+  - EXP-023
+  - EXP-024
+  - EXP-025
+  - EXP-028
+  - EXP-030
+  - EXP-040
+  - EXP-041
+  - EXP-042
+  - EXP-043
+  - EXP-044
+  - EXP-045
+  - EXP-046
+  - EXP-047
+  - EXP-048
+  - EXP-049
+  - EXP-050
+  - EXP-051
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  - EXP-055
+  - EXP-056
+  - EXP-057
+  - EXP-058
+  - EXP-064
+  - EXP-065
+  - EXP-066
+  supported_by:
+  - RES-021
+  weakened_by:
+  - RES-020
+  - RES-022
+  - RES-023
+  - RES-024
+  - RES-025
+  - RES-026
+  - RES-027
+  - RES-028
+  - RES-030
+  - RES-040
+  - RES-042
+  - RES-043
+  - RES-044
+  - RES-045
+  - RES-046
+  - RES-047
+  - RES-048
+  - RES-052
+  - RES-053
+  - RES-054
+  - RES-055
+  - RES-056
   refuted_by: []
   superseded_by: []
   path: docs/hypotheses.md
   compliance:
-    level: yellow
-    issues:
-    - 'Active hypothesis has no linked experiment: HYP-004'
+    level: green
+    issues: []
 - id: HYP-005
   title: Mechanistic-Knobs-Produce-Monotonic-Directional-Effects
   status: active
@@ -143,16 +203,56 @@ items:
   - covariation bias
   - and noise settings should each induce directional changes in their target validation
     metrics with effect sizes that are larger than seed-to-seed variation.
-  tested_by: []
-  supported_by: []
-  weakened_by: []
+  tested_by:
+  - EXP-021
+  - EXP-022
+  - EXP-023
+  - EXP-024
+  - EXP-025
+  - EXP-026
+  - EXP-027
+  - EXP-028
+  - EXP-030
+  - EXP-051
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  - EXP-055
+  - EXP-056
+  - EXP-057
+  - EXP-058
+  - EXP-059
+  - EXP-060
+  - EXP-061
+  - EXP-062
+  - EXP-063
+  - EXP-064
+  - EXP-065
+  - EXP-066
+  supported_by:
+  - RES-022
+  - RES-023
+  - RES-024
+  - RES-025
+  - RES-026
+  - RES-027
+  - RES-028
+  - RES-049
+  - RES-058
+  - RES-061
+  weakened_by:
+  - RES-021
+  - RES-051
+  - RES-055
+  - RES-059
+  - RES-060
+  - RES-062
   refuted_by: []
   superseded_by: []
   path: docs/hypotheses.md
   compliance:
-    level: yellow
-    issues:
-    - 'Active hypothesis has no linked experiment: HYP-005'
+    level: green
+    issues: []
 - id: HYP-006
   title: Observation-Noise-Is-Realistic-And-Does-Not-Destabilize-Conclusions
   status: active
@@ -168,16 +268,17 @@ items:
   - Empirically grounded noise models should change local rankings and search difficulty
   - but strategy ordering and top-k recovery should remain statistically stable over
     practical noise ranges.
-  tested_by: []
+  tested_by:
+  - EXP-050
   supported_by: []
-  weakened_by: []
+  weakened_by:
+  - RES-056
   refuted_by: []
   superseded_by: []
   path: docs/hypotheses.md
   compliance:
-    level: yellow
-    issues:
-    - 'Active hypothesis has no linked experiment: HYP-006'
+    level: green
+    issues: []
 - id: HYP-007
   title: Multiple-Latent-Molecular-Phenotypes-Improve-Empirical-Recovery
   status: superseded
@@ -230,3 +331,219 @@ items:
   compliance:
     level: green
     issues: []
+- id: HYP-008
+  title: Local-Non-Diffuse-Ruggedness-Requires-Nonlinear-Trait-Operators
+  status: superseded
+  created: '2026-05-16T11:04:25+10:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: Real protein fitness landscapes contain local, non-diffuse ruggedness
+    generated by nonlinear interactions among molecular traits, and the current smooth-core
+    plus diffuse residual model will not capture that behaviour as a biologically
+    grounded procedural benchmark.
+  predictions:
+  - Empirical graphlets will show ruggedness concentrated in specific local sequence,
+    structural, or trait regions rather than uniformly across sampled backgrounds.
+  - Nonlinear operators combining multiple latent molecular traits should match empirical
+    SE/RSE, local maxima, accessibility, random-walk autocorrelation, and WHT/GFT
+    spectra better than the current smooth-core-only or diffuse residual models.
+  - The improvement must persist after controlling for parameter count, global readout
+    nonlinearity, residual-only overfitting, and stale empirical preprocessing.
+  - If the current model family is sufficient, matched single-trait stability-margin
+    models or diffuse residual controls should equal or outperform local nonlinear-operator
+    variants on held-out graphlets.
+  tested_by:
+  - EXP-031
+  - EXP-032
+  - EXP-035
+  - EXP-036
+  - EXP-037
+  - EXP-038
+  - EXP-039
+  supported_by: []
+  weakened_by:
+  - RES-031
+  - RES-034
+  - RES-035
+  - RES-036
+  - RES-037
+  - RES-038
+  - RES-039
+  refuted_by: []
+  superseded_by:
+  - CLAIM-003
+  - HYP-009
+  path: docs/hypotheses.md
+  compliance:
+    level: green
+    issues: []
+- id: HYP-009
+  title: Benchmark-Legible-Ruggedness-Routing-Affects-Optimizer-Performance
+  status: active
+  created: '2026-05-18T12:41:28+10:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: For ML benchmark use, alignment- or covariation-routed coupled ruggedness
+    does not need to improve empirical landscape fit over random, shuffled, no-module,
+    or uncoupled capacity controls. Its role is to provide biologically legible sequence
+    structure that pretrained protein language models and evolution-aware active-learning
+    agents may exploit, while the global and local ruggedness statistics are matched
+    by construction.
+  predictions:
+  - When coupled regimes are matched for global and local ruggedness statistics, PLM-
+    or evolution-aware agents should perform differently on biologically routed landscapes
+    than on random-routed, shuffled-routed, no-module, uncoupled, or diffuse-residual
+    regimes.
+  - Non-biological optimizers should be less sensitive to routing identity once global
+    ruggedness, local ruggedness, observation noise, and evaluation budget are matched.
+  - Any biologically routed advantage must survive replicated seeds, matched budget/noise
+    conditions, and ablations where comparable ruggedness statistics are routed through
+    random or shuffled modules.
+  - If routing identity changes all optimizers similarly, or if apparent gains are
+    explained by easier landscape statistics rather than biological legibility, the
+    benchmark interpretation is weakened.
+  tested_by:
+  - EXP-040
+  - EXP-041
+  - EXP-042
+  - EXP-043
+  - EXP-044
+  - EXP-045
+  - EXP-046
+  - EXP-047
+  - EXP-048
+  - EXP-049
+  - EXP-050
+  - EXP-051
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  - EXP-055
+  - EXP-056
+  - EXP-057
+  - EXP-058
+  - EXP-064
+  supported_by: []
+  weakened_by:
+  - RES-052
+  - RES-053
+  - RES-054
+  - RES-055
+  - RES-056
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  compliance:
+    level: green
+    issues: []
+- id: HYP-010
+  title: Procedural-Landscapes-Provide-Competitive-Computation-And-Efficiency
+  status: active
+  created: '2026-11-19T20:10:02+11:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: At a declared range of lengths, query workloads and interaction complexities
+    relevant to online landscape use, the current sparse low-rank implementation provides
+    a reproducible memory and/or time advantage over suitable established implementations
+    while retaining the specified landscape capabilities. The claim concerns practical
+    costs and a stated trade-off, not novelty of the interaction-expansion/sigmoid
+    family or universal dominance.
+  predictions:
+  - For fixed alphabet, interaction order, degree and rank, storage and full-sequence
+    scoring scale approximately linearly with length.
+  - Report construction/normalization cost, resident memory, single-query latency,
+    batch throughput and mutation-neighborhood evaluation separately.
+  - The comparative advantage must survive initialization and sufficiently long workloads
+    to reveal amortization, rather than appear only in a favorable cached operation.
+  tested_by: []
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  motivated_by:
+  - RES-063
+  evidence_status: prospective; not yet tested
+  compliance:
+    level: yellow
+    issues:
+    - 'Active hypothesis has no linked experiment: HYP-010'
+- id: HYP-011
+  title: Learnability-And-Searchability-Form-Separable-Landscape-Regimes
+  status: active
+  created: '2026-11-19T20:10:16+11:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: Under declared recovery and search tasks, the current landscape family
+    contains reproducible regimes spanning easy/easy, easy/hard, hard/easy and hard/hard
+    recovery/search behavior. Landscape structure can explain differences between
+    the tasks beyond a single ruggedness statistic or interaction-strength parameter.
+    This predicts coverage of the quadrants, not arbitrary independent control of
+    both axes or universal labels across algorithms and budgets.
+  predictions:
+  - Recovery learning curves and fitness-target attainment curves need not rank regimes
+    identically.
+  - Interaction support, order, amplitude and rank may affect representation complexity
+    and navigation differently.
+  - Measure recovery on a fixed external test distribution and search on its declared
+    target; retain seed/start variation and algorithm dependence.
+  - Distinguish sample complexity from training/inference compute and from optimization
+    compute.
+  tested_by: []
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  motivated_by:
+  - RES-063
+  evidence_status: prospective; not yet tested
+  compliance:
+    level: yellow
+    issues:
+    - 'Active hypothesis has no linked experiment: HYP-011'
+- id: HYP-012
+  title: Biological-Information-Explains-Conditional-Learning-And-Search-Transitions
+  status: active
+  created: '2026-11-19T20:10:16+11:00'
+  owner: matthew-spence
+  aim: AIM-001
+  aims:
+  - AIM-001
+  statement: The alignment of available biological information with the target fitness
+    landscape helps explain when function recovery and search are jointly easy, jointly
+    hard, or discordant. In the current model, correctly associated family-profile
+    information will produce reproducible, task-dependent benefits for information-using
+    methods over information-destroyed controls beyond effects explained by generic
+    landscape scale and navigation descriptors. A stronger claim that this explains
+    biological phenomena requires corresponding predictive evidence on held-out empirical
+    systems.
+  predictions:
+  - Benefits depend on whether the information predicts broadly sampled fitness, accessible
+    beneficial changes, or rare target variants; improvement in one need not imply
+    improvement in the others.
+  - Compare the effect of the information intervention on both recovery and search,
+    including interaction with method class and query distribution.
+  - Claims concern marginal preferences in the present implementation, not empirical
+    interaction identities, contact structure or coevolutionary couplings.
+  tested_by: []
+  supported_by: []
+  weakened_by: []
+  refuted_by: []
+  superseded_by: []
+  path: docs/hypotheses.md
+  motivated_by:
+  - RES-063
+  evidence_status: prospective; not yet tested
+  compliance:
+    level: yellow
+    issues:
+    - 'Active hypothesis has no linked experiment: HYP-012'

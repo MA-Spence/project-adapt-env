@@ -1,0 +1,90 @@
+experiment_id: EXP-051
+title: Hashed GNK benchmark generator knob-map validation
+stack: STACK-000
+target: lab-slurm
+
+experiment:
+  id: EXP-051
+  status: planned
+  runner_status: ready_for_submission
+  mode: hashed_gnk_benchmark_generator_knob_map_validation
+  planned_runner: scripts/hashed_gnk_benchmark_knob_validation.py
+  scientific_boundary:
+    primary_hypotheses:
+      - HYP-004
+      - HYP-005
+      - HYP-009
+    motivating_results:
+      - RES-047
+      - RES-048
+    previous_experiments:
+      - EXP-048
+      - EXP-049
+    advisory_source: scratch/RES-048_forward_plan_tunable_benchmark_generator.md
+    workstream: WS-B
+    core_guardrail: retain the additive stability/conservation core and saturating readout; hashed GNK replaces only the failing residual epistatic-texture layer
+    validation_rule: validate knob-to-statistic maps by direct enumeration on small binary coordinates before any empirical inverse fit
+
+generator:
+  seed: 20260618
+  sequence_length: 8
+  support_modes:
+    - structured_block
+    - shuffled_block
+    - random
+  seeds:
+    - 501
+    - 502
+    - 503
+  epi_weight_grid:
+    - 0.0
+    - 0.15
+    - 0.3
+    - 0.6
+    - 1.0
+  n_terms: 96
+  order_weights:
+    2: 0.35
+    3: 0.45
+    4: 0.20
+  core_slope: 0.7
+  stability_offset: 2.4
+  readout_scale: 0.75
+  transition_half_width: 0.75
+  low_plateau_threshold: 0.05
+  high_plateau_threshold: 0.95
+
+expectations:
+  n_local_maxima: increase
+  walsh_high_order_fraction: increase
+  sign_epistasis_fraction: increase
+  reciprocal_sign_epistasis_fraction: increase
+  accessible_path_fraction: decrease
+  random_walk_lag1_autocorrelation: decrease
+
+outputs:
+  output_dir_name: hashed-gnk-benchmark-generator-knob-map-validation
+  expected:
+    - preflight.json
+    - parameter_grid.csv
+    - graphlet_metrics.csv
+    - knob_summary.csv
+    - monotonicity_checks.csv
+    - support_catalog.csv
+    - hamming_layer_metrics.csv
+    - threshold_epistasis_metrics.csv
+    - core_readout_guardrail_checks.csv
+    - summary.json
+
+quick:
+  generator:
+    sequence_length: 6
+    support_modes:
+      - structured_block
+      - random
+    seeds:
+      - 501
+    epi_weight_grid:
+      - 0.0
+      - 0.5
+    n_terms: 24

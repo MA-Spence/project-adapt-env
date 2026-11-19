@@ -1,0 +1,21 @@
+{
+  "checkpoint_root": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-141/outputs/checkpoints/generator_parameters",
+  "core_gnk_gate_pass_fraction": 0.03148148148148148,
+  "experiment_id": "EXP-057",
+  "mode": "design_matched_support_aware_probe",
+  "monotonicity_pass_fraction": 0.1962962962962963,
+  "n_computed_parameter_sets": 135,
+  "n_empirical_template_descriptor_rows": 10,
+  "n_empirical_template_descriptors_computed": 0,
+  "n_generator_metric_rows": 35640,
+  "n_monotonicity_checks": 1620,
+  "n_monotonicity_direction_pass": 318,
+  "n_parameter_sets": 135,
+  "n_positive_core_gnk_gate_pass": 34,
+  "n_positive_core_gnk_gate_rows": 1080,
+  "n_resumed_parameter_sets": 0,
+  "n_templates": 10,
+  "public_model_system": "additive_thermodynamic_gnk",
+  "stage": "4B-fixed-probe",
+  "stop_rule": "do_not_run_overlap_until_monotone_knobs_and_core_gnk_separation_pass"
+}

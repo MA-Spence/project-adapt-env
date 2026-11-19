@@ -1,0 +1,97 @@
+id: EXP-057
+type: experiment
+title: Stage 4B design-matched support-aware GNK probe
+slug: stage-4b-design-matched-support-aware-gnk-probe
+status: completed
+created: '2026-06-19T14:55:51+10:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-009
+  previous_experiments:
+  - EXP-052
+  - EXP-053
+  - EXP-054
+  - EXP-055
+  - EXP-056
+  motivating_results:
+  - RES-050
+  - RES-051
+  - RES-052
+  - RES-053
+  - RES-054
+question: Does the public additive thermodynamic core plus GNK texture show protein-scale
+  monotone knob control when measured by design-matched, support-aware graphlets on
+  the instantiated GNK supports?
+pre_experiment_prediction: Support-aware, design-matched graphlets will restore observable
+  full-public versus additive-core separation as epi_weight increases, with monotone
+  increases in high-order/specific epistasis and robust local maxima density and monotone
+  decreases in peak-targeted reachability/autocorrelation.
+rationale: 'This is the single Section 3 fix from scratch/RES-054_assessment_and_path_to_finishing_component1.md:
+  rerun Stage 4B with support-aware sites, matched empirical dimension/alphabet, regime-stratified
+  anchors, plateau-robust topography, and a hard core-vs-GNK separation gate before
+  any overlap claim.'
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: true
+    type: pip
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+inputs:
+  declared_files:
+  - scratch/RES-054_assessment_and_path_to_finishing_component1.md
+  - scripts/design_matched_support_aware_probe_exp057.py
+  - scripts/ensemble_landscape_validation_stage4.py
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/landscapy/README.md
+  datasets:
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+execution:
+  default_target: lab-slurm
+  intended_targets:
+  - lab-slurm
+  resources:
+    cpus: 8
+    memory_gb: 48
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 2-00:00:00
+    jobfs_gb: 0
+  partition: all
+  queue: normal
+outputs:
+  expected:
+  - preflight.json
+  - empirical_design_templates.csv
+  - empirical_template_descriptor_metrics.csv
+  - generator_parameter_grid.csv
+  - support_catalog.csv
+  - support_aware_graphlet_audit.csv
+  - anchor_regime_audit.csv
+  - generator_descriptor_metrics.csv
+  - generator_knob_monotonicity.csv
+  - core_texture_ablation_controls.csv
+  - core_gnk_separation_gates.csv
+  - checkpoint_resume_summary.json
+  - summary.json
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: 2f0a91d7245a51bfab0ca793f69442fb06c422be
+  dirty: true
+notes: []
+template: generic
+compliance:
+  level: green
+  issues: []

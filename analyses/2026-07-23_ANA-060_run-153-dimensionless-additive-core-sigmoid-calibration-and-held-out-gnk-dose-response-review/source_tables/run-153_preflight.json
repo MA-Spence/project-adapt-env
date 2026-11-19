@@ -1,0 +1,40 @@
+{
+  "calibration_core_seed_count": 5,
+  "calibration_reference_count": 12,
+  "candidate_is_experiment_local": true,
+  "config_file_sha256": "5472c5caff538916576ed873db1c82f975b7b6a914b74447d99daa68700e76a5",
+  "confirmation_core_seed_count": 5,
+  "confirmation_design": "crossed additive-core and GNK seeds nested within held-out protein",
+  "confirmation_gnk_seed_count": 6,
+  "confirmation_reference_count": 12,
+  "effective_config_hash": "a0436cad634e7b8bd0b584a8607f8eff8cce3307240ede457c5bffe943ed9f31",
+  "empirical_fitness_realism_tested": false,
+  "experiment_id": "EXP-062",
+  "gnk_outcomes_available_during_selection": false,
+  "implementation_hash": "990bd1b03752f6ce2e09682f6215cd4429ee4a4fe2de21d8d26943d047ee3874",
+  "implementation_hash_components": {
+    "external/Adapt-Env/.config.yaml": "3e50b3b8eeed48d86716b99addcade838be6c0a18bca863d849f33d6bbc4b7a3",
+    "external/Adapt-Env/adaptenv/landscape.py": "9a07d3e6c50787043edcb8ec742800995ef4825d6a18117128d09cb545e41ed9",
+    "external/Adapt-Env/adaptenv/presets.py": "eb7d12af9789b4a5b1583176a0277cb9df4e6f52c8e2f986e8f308b509548b2f",
+    "scripts/dimensionless_sigmoid_calibration_exp062.py": "cb9e23185c0f4e50616b6030f234fb359f6504269fdbdf6f21e6fcbd7b1164b5",
+    "scripts/extensive_gnk_latent_scaling_exp060.py": "f52520201ba919bff19153c551d5648faa36b890c8d6a3781f360469ac60453a",
+    "scripts/extensive_gnk_sigmoid_transmission_exp061.py": "76e1b58f2e0ac32c3983c8f452dc1c7127dd2a0ef4805d01bb764cfcd571a276",
+    "src/project_adapt_env/extensive_gnk.py": "b06a749c59202a869403d44e53fb0823f140c12a14878b86589c0c18a0b14933"
+  },
+  "length_bins": [
+    "L093",
+    "L118",
+    "L220",
+    "L238",
+    "L448",
+    "short_47_52"
+  ],
+  "observation_noise_enabled": false,
+  "optimizer_or_accessibility_tested": false,
+  "public_model_changed": false,
+  "quick": false,
+  "reference_catalog_sha256": "1770f791b76dadaebb4ea604839c22c0ef547ec899f7145ad2303a56fdde8048",
+  "reference_count": 24,
+  "scientific_decision_enabled": true,
+  "stage_4c_4d_4e_hard_stop_retained": true
+}
