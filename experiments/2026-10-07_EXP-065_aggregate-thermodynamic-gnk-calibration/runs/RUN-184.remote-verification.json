@@ -1,0 +1,27 @@
+{
+  "run": "RUN-184",
+  "job_id": "2325",
+  "checked_utc": "2026-11-21T01:52:44.306496+00:00",
+  "remote_project_root": "/tank/data/labproj/staging/project-adapt-env/RUN-184/project",
+  "frozen_payloads_verified": 152,
+  "prelaunch_manifest_sha256": "4e00fd05143ff27e905ca99050400283cd5c1acec94d55858eee29beb0a02004",
+  "dispatcher_sha256": "ee901733adc17503d2ae4d64ed8d9fadfa4c2d906f53957c98d583628a5f12a2",
+  "transport_files_verified": {
+    "submit_architecture_slurm.py": "400af5cd71421e6ccb66683527c2eaf35b029d05c75e75d70ea2e742b429fddc",
+    "architecture_slurm_worker.sh": "d4fdd6e3aaa5ce0f65bc5978cf748b8a23ead4f5768f662c3858e969305b8c4f"
+  },
+  "environment_evidence_files_verified": 12,
+  "python": "3.11.15",
+  "queue": {
+    "squeue": {
+      "returncode": 0,
+      "stdout": "2325|PENDING|(Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)|0:00|1-00:00:00\n",
+      "stderr": ""
+    },
+    "scontrol": {
+      "returncode": 0,
+      "stdout": "JobId=2325 JobName=EXP-065RUN-184 UserId=matthew-spence(1000) GroupId=matthew-spence(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=(null) JobState=PENDING Reason=Nodes_required_for_job_are_DOWN,_DRAINED_or_reserved_for_jobs_in_higher_priority_partitions Dependency=(null) Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-00:00:00 TimeMin=N/A SubmitTime=2026-11-21T12:52:12 EligibleTime=2026-11-21T12:52:12 AccrueTime=2026-11-21T12:52:12 StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-21T12:52:42 Scheduler=Backfill:* Partition=cpu AllocNode:Sid=10.20.20.2:2333196 ReqNodeList=(null) ExcNodeList=(null) NodeList= NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=8G,node=1,billing=1 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=8G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/tank/data/labproj/staging/project-adapt-env/RUN-184/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-184.slurm WorkDir=/tank/data/labproj/staging/project-adapt-env/RUN-184/project StdErr=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-184/logs/stderr.txt StdIn=/dev/null StdOut=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-184/logs/stdout.txt Power= TresPerTask=cpu:1 \n",
+      "stderr": ""
+    }
+  }
+}

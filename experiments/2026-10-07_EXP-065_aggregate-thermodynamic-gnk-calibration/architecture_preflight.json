@@ -1,0 +1,31 @@
+{
+  "status": "prepared_for_registered_local_execution",
+  "system": "TrpB",
+  "source_candidate": "0.7.0rc1",
+  "candidate_manifest_sha256": "4511cebf5f756d58b9c0e1e81e2ce65040bbcf1846e5fccf5e1b0a552c6ac479",
+  "input_manifest_sha256": "3762eec819d6777e37d995957ec2e34182f12c1ae69fa3bb7953ba76f358a1b4",
+  "preparation_summary_sha256": "6aaa801e6c10e4db34ed18102e3434acae5f480abc7cbf646c8118c9aa33ab22",
+  "config_sha256": "daf36e196061c0f59f7ce13145c7d52d263000ecd8c5f75d0668920a9ad8e731",
+  "validation": {
+    "tests": 29,
+    "passed": 29,
+    "failed": 0,
+    "skipped": 0,
+    "test_files": [
+      "tests/test_prepare_trpb_architecture_inputs.py",
+      "tests/test_submit_architecture_local.py",
+      "tests/test_calibrate_architecture.py"
+    ],
+    "candidate_files_verified": 67,
+    "strict_pilots_passed": [
+      "empirical_extended_strict",
+      "bootstrap_first_extended_strict",
+      "synthetic_fixed_extended_strict"
+    ]
+  },
+  "limitations": [
+    "Timing forecast is approximate, not a benchmark.",
+    "Successful preparation is not successful empirical calibration.",
+    "Historical controls are not a matched comparison for the new objective."
+  ]
+}

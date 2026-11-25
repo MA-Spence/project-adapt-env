@@ -1,0 +1,11 @@
+status: planned_not_a_resolved_environment
+base_stack_id: STACK-000
+base_stack_version: '2026.05'
+overlay_enabled: false
+external_packages_lock: environment/external-packages.lock.yaml
+package_commit: 745c00b3a369da33e7d7c7b9850ccbc212fac714
+required_before_run:
+- isolated interpreter/dependency lock
+- counter backend and transform
+- host/thread/resource monitor snapshot
+historical_project_overlay_is_validated: false

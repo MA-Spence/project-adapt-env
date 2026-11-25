@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-11-25T01:05:41.659298+00:00",
+  "historical_control": "RUN-186",
+  "target": "lab-slurm",
+  "ssh_transport": "dutch",
+  "protocol": "interaction-ablation-slurm",
+  "dedicated_python": "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/bin/python",
+  "runtime_bundle": "data/processed/trpb-interaction-ablation-slurm-runtime",
+  "prelaunch_manifest_sha256": "b2f9eccfa6b19446259c9915c23a822e28a37d86b430cce336cb85f3c10b66c1",
+  "verified_payload_count": 460,
+  "scientific_change": "Refitted r0 versus full r on [0,8]; frozen RUN-186 shared-stop law and RUN-180 loss; Gaussian interactions",
+  "execution_mode": "fresh calibration, not SQLite resume",
+  "original_run_sh_sha256": "66b2104d94ca36a654bbcaae08758c58429283b2955c9a49de1aa905fb7693bd",
+  "staged_run_sh_sha256": "abf566125347fa8d5da885ebafb15af7726f5dce1c58884012d2f7a374ad2cfd",
+  "transport_files_sha256": {
+    "submit_interaction_ablation_slurm.py": "e2b76b7a8f2193eb08919d00bb599c5d946c32569c78959d615919b361965307",
+    "interaction_ablation_slurm_worker.sh": "ddac8d077bde0c213aada4f8e254ca4a021c2b77a2feb2e50588b8e92c881670",
+    "interaction_ablation_runtime.json": "69d22d88346c9f64e9774d4da50d93f0f01ccbb332d4e565e5a4ec6ea521f07c"
+  }
+}

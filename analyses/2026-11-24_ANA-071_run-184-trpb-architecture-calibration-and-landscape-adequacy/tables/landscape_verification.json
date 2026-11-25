@@ -1,0 +1,328 @@
+{
+  "passed": true,
+  "checks": 40,
+  "maximum_absolute_error": 4.440892098500626e-16,
+  "description": "Independent vectorized graph construction and exact dynamic programming versus archived zero-threshold unfitted diagnostics; no model fit is rerun.",
+  "rows": [
+    {
+      "series": "measured_mean",
+      "metric": "nodes",
+      "recorded": 8192,
+      "recomputed": 8192.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "measured_mean",
+      "metric": "edges",
+      "recorded": 15940,
+      "recomputed": 15940.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "measured_mean",
+      "metric": "complete_faces",
+      "recorded": 566,
+      "recomputed": 566.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "measured_mean",
+      "metric": "sign_epistasis_fraction",
+      "recorded": 0.6590106007067138,
+      "recomputed": 0.6590106007067138,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "measured_mean",
+      "metric": "reciprocal_sign_epistasis_fraction",
+      "recorded": 0.27208480565371024,
+      "recomputed": 0.27208480565371024,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "measured_mean",
+      "metric": "fixed_orientation_diminishing_returns_slope",
+      "recorded": -0.619054362370492,
+      "recomputed": -0.619054362370492,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "measured_mean",
+      "metric": "uniform_uphill_steps",
+      "recorded": 1.6107108681756621,
+      "recomputed": 1.6107108681756621,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "measured_mean",
+      "metric": "panel_local_peak_fraction",
+      "recorded": 0.2315673828125,
+      "recomputed": 0.2315673828125,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1001",
+      "metric": "nodes",
+      "recorded": 8192,
+      "recomputed": 8192.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1001",
+      "metric": "edges",
+      "recorded": 15940,
+      "recomputed": 15940.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1001",
+      "metric": "complete_faces",
+      "recorded": 566,
+      "recomputed": 566.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1001",
+      "metric": "sign_epistasis_fraction",
+      "recorded": 0.1784452296819788,
+      "recomputed": 0.1784452296819788,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1001",
+      "metric": "reciprocal_sign_epistasis_fraction",
+      "recorded": 0.0176678445229682,
+      "recomputed": 0.0176678445229682,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1001",
+      "metric": "fixed_orientation_diminishing_returns_slope",
+      "recorded": -0.2994774703560264,
+      "recomputed": -0.29947747035602623,
+      "absolute_error": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "series": "seed_1001",
+      "metric": "uniform_uphill_steps",
+      "recorded": 2.681109907910753,
+      "recomputed": 2.681109907910753,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1001",
+      "metric": "panel_local_peak_fraction",
+      "recorded": 0.1624755859375,
+      "recomputed": 0.1624755859375,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1002",
+      "metric": "nodes",
+      "recorded": 8192,
+      "recomputed": 8192.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1002",
+      "metric": "edges",
+      "recorded": 15940,
+      "recomputed": 15940.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1002",
+      "metric": "complete_faces",
+      "recorded": 566,
+      "recomputed": 566.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1002",
+      "metric": "sign_epistasis_fraction",
+      "recorded": 0.19434628975265017,
+      "recomputed": 0.19434628975265017,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1002",
+      "metric": "reciprocal_sign_epistasis_fraction",
+      "recorded": 0.01060070671378092,
+      "recomputed": 0.01060070671378092,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1002",
+      "metric": "fixed_orientation_diminishing_returns_slope",
+      "recorded": -0.2997008949221276,
+      "recomputed": -0.2997008949221274,
+      "absolute_error": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "series": "seed_1002",
+      "metric": "uniform_uphill_steps",
+      "recorded": 2.6940684912076067,
+      "recomputed": 2.694068491207607,
+      "absolute_error": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "series": "seed_1002",
+      "metric": "panel_local_peak_fraction",
+      "recorded": 0.1583251953125,
+      "recomputed": 0.1583251953125,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1003",
+      "metric": "nodes",
+      "recorded": 8192,
+      "recomputed": 8192.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1003",
+      "metric": "edges",
+      "recorded": 15940,
+      "recomputed": 15940.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1003",
+      "metric": "complete_faces",
+      "recorded": 566,
+      "recomputed": 566.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1003",
+      "metric": "sign_epistasis_fraction",
+      "recorded": 0.1696113074204947,
+      "recomputed": 0.1696113074204947,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1003",
+      "metric": "reciprocal_sign_epistasis_fraction",
+      "recorded": 0.01060070671378092,
+      "recomputed": 0.01060070671378092,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1003",
+      "metric": "fixed_orientation_diminishing_returns_slope",
+      "recorded": -0.30164227135193344,
+      "recomputed": -0.3016422713519334,
+      "absolute_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "series": "seed_1003",
+      "metric": "uniform_uphill_steps",
+      "recorded": 2.6287787888616827,
+      "recomputed": 2.6287787888616827,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1003",
+      "metric": "panel_local_peak_fraction",
+      "recorded": 0.1611328125,
+      "recomputed": 0.1611328125,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1004",
+      "metric": "nodes",
+      "recorded": 8192,
+      "recomputed": 8192.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1004",
+      "metric": "edges",
+      "recorded": 15940,
+      "recomputed": 15940.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1004",
+      "metric": "complete_faces",
+      "recorded": 566,
+      "recomputed": 566.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1004",
+      "metric": "sign_epistasis_fraction",
+      "recorded": 0.15371024734982333,
+      "recomputed": 0.15371024734982333,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1004",
+      "metric": "reciprocal_sign_epistasis_fraction",
+      "recorded": 0.007067137809187279,
+      "recomputed": 0.007067137809187279,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1004",
+      "metric": "fixed_orientation_diminishing_returns_slope",
+      "recorded": -0.29915872482752137,
+      "recomputed": -0.2991587248275215,
+      "absolute_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "series": "seed_1004",
+      "metric": "uniform_uphill_steps",
+      "recorded": 2.68998356422314,
+      "recomputed": 2.68998356422314,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "series": "seed_1004",
+      "metric": "panel_local_peak_fraction",
+      "recorded": 0.1602783203125,
+      "recomputed": 0.1602783203125,
+      "absolute_error": 0.0,
+      "passed": true
+    }
+  ]
+}

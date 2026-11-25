@@ -1,0 +1,3 @@
+Verified 339 frozen payloads and 36 pinned packages
+PASS: all 18 historical warm-start objectives replayed; joint r is continuous [0,8]
+Native graph kernel checks passed

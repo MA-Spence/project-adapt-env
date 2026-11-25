@@ -1,0 +1,29 @@
+{
+  "reason": "Measured macOS arm64 to Linux x86_64 roundoff in regenerated Gaussian pair fields; no biological/model/optimizer change.",
+  "initial_runtime_pin": {
+    "runtime_bundle": "data/processed/trpb-joint-readout-slurm-runtime",
+    "manifest_sha256": "a7733733bac028e960f41a4008d3f80ed9e80c7fe65416eee4da26a64d21fd1e",
+    "payload_count": 339,
+    "source_manifest_sha256": "71de986354e6b8b880543750b9090fcf978559e1e856c31e7ec423b67909c263"
+  },
+  "initial_dvc_pointer": {
+    "outs": [
+      {
+        "md5": "509953f754898dfb266dbb31cc2d8ca6.dir",
+        "size": 119269934,
+        "nfiles": 340,
+        "hash": "md5",
+        "path": "trpb-joint-readout-slurm-runtime"
+      }
+    ]
+  },
+  "observed_calibration_max_abs_g_difference": 1.33226763e-15,
+  "observed_calibration_mismatched_entries": 91,
+  "calibration_entries": 1024,
+  "permitted_joint_field_replay_rtol": 1e-13,
+  "permitted_joint_field_replay_atol": 1e-14,
+  "historical_fixed_r_default_replay": "unchanged exact equality",
+  "objective_replay_rtol": 1e-12,
+  "objective_replay_atol": 1e-14,
+  "assertion": "Only cross-platform replay assertions change; generated values are not rounded or replaced."
+}

@@ -1,0 +1,6 @@
+outs:
+- md5: 65848b2a2f70059836843f2cc6a46cff.dir
+  size: 93609502
+  nfiles: 153
+  hash: md5
+  path: trpb-architecture-slurm-runtime

@@ -1,0 +1,309 @@
+id: RUN-188
+experiment: EXP-065
+target: lab-slurm
+target_profile:
+  display_name: HomeLab
+  cluster_name: homelab
+scheduler: slurm
+status: completed
+dry_run: false
+created: '2026-11-25T12:05:42+11:00'
+last_submitted: '2026-11-25T12:05:42+11:00'
+submitted_by: matthewspence
+attempt: 1
+attempts:
+- attempt: 1
+  submitted_at: '2026-11-25T12:05:42+11:00'
+  status: completed
+  dry_run: false
+  scheduler_job_id: '2356'
+  resumed: false
+  resume_from_attempt: null
+  checkpoint_path: null
+  checkpoint_dir: null
+  scheduler_state: INFERRED_EXIT_CODE
+  scheduler_exit_code: '0'
+resume:
+  enabled: false
+  checkpoint_path: null
+  checkpoint_dir: null
+  source: null
+  previous_attempt: null
+  previous_scheduler_job_id: null
+  previous_status: null
+git:
+  branch: main
+  commit: e6985ae0c421b6294f6cff1ac2db6ff6dd67db90
+  dirty: true
+dvc:
+  available: true
+  pointer_files:
+  - .labproj/local-preparations/20261119T041752Z-3oggumte/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - .labproj/local-preparations/20261119T041752Z-3oggumte/source/data/processed/interaction-strength-exp065-inputs.dvc
+  - .labproj/local-preparations/20261119T041752Z-3oggumte/source/data/processed/trpb-profile-additive-inputs.dvc
+  - .labproj/local-preparations/20261119T215834Z-xyt5h5tl/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - .labproj/local-preparations/20261119T215834Z-xyt5h5tl/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc
+  - .labproj/local-preparations/20261119T215834Z-xyt5h5tl/source/data/processed/interaction-strength-exp065-inputs.dvc
+  - .labproj/local-preparations/20261119T215834Z-xyt5h5tl/source/data/processed/model-release-candidates/0.6.0rc1.dvc
+  - .labproj/local-preparations/20261119T215834Z-xyt5h5tl/source/data/processed/trpb-profile-additive-inputs.dvc
+  - .labproj/local-preparations/20261119T215911Z-157a5n9y/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - .labproj/local-preparations/20261119T215911Z-157a5n9y/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc
+  - .labproj/local-preparations/20261119T215911Z-157a5n9y/source/data/processed/interaction-strength-exp065-inputs.dvc
+  - .labproj/local-preparations/20261119T215911Z-157a5n9y/source/data/processed/model-release-candidates/0.6.0rc1.dvc
+  - .labproj/local-preparations/20261119T215911Z-157a5n9y/source/data/processed/trpb-profile-additive-inputs.dvc
+  - .labproj/local-preparations/architecture-20261121T013822Z-401sskuj/source/data/processed/model-release-candidates/0.7.0rc1.dvc
+  - .labproj/local-preparations/architecture-20261121T013822Z-401sskuj/source/data/processed/trpb-architecture-calibration-inputs.dvc
+  - .labproj/local-preparations/architecture-20261121T013822Z-401sskuj/source/data/processed/trpb-architecture-calibration-preparation.dvc
+  - .labproj/local-preparations/architecture-20261121T013859Z-fxagfbej/source/data/processed/model-release-candidates/0.7.0rc1.dvc
+  - .labproj/local-preparations/architecture-20261121T013859Z-fxagfbej/source/data/processed/trpb-architecture-calibration-inputs.dvc
+  - .labproj/local-preparations/architecture-20261121T013859Z-fxagfbej/source/data/processed/trpb-architecture-calibration-preparation.dvc
+  - data/processed/.legacy/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055.dvc
+  - data/processed/.legacy/empirical-graphlet-falsification-residual-ruggedness/RUN-071.dvc
+  - data/processed/.legacy/phot-abc-local-ruggedness-objective/RUN-096.dvc
+  - data/processed/.legacy/phot-budgeted-module-tied-softmin-abc/RUN-086.dvc
+  - data/processed/.legacy/phot-coupled-family-discriminating-abc/RUN-091.dvc
+  - data/processed/.legacy/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079.dvc
+  - data/processed/.legacy/phot-hard-min-coupled-weakest-link-grid/RUN-081.dvc
+  - data/processed/.legacy/phot-localized-ruggedness-energy-diagnostic/RUN-093.dvc
+  - data/processed/.legacy/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  - data/processed/.legacy/phot-replicated-heldout-split-graphlet-diagnostic/RUN-089.dvc
+  - data/processed/.legacy/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084.dvc
+  - data/processed/.legacy/proteingym-current-model-abc-refit-residual-ruggedness/RUN-073.dvc
+  - data/processed/.legacy/proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/RUN-053.dvc
+  - data/processed/.legacy/proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/RUN-051.dvc
+  - data/processed/.legacy/proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic/RUN-028.dvc
+  - data/processed/.legacy/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040.dvc
+  - data/processed/.legacy/proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/RUN-041.dvc
+  - data/processed/.legacy/proteingym-phot-oracle-global-epistasis-baseline/RUN-043.dvc
+  - data/processed/.legacy/proteingym-phot-photophysical-trait-sparse-residual-diagnostic/RUN-042.dvc
+  - data/processed/.legacy/proteingym-phot-stability-readout-validation-objective-control/RUN-039.dvc
+  - data/processed/.legacy/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012.dvc
+  - data/processed/.legacy/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010.dvc
+  - data/processed/.legacy/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/.legacy/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065.dvc
+  - data/processed/.legacy/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063.dvc
+  - data/processed/.legacy/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061.dvc
+  - data/processed/.legacy/tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic/RUN-069.dvc
+  - data/processed/.legacy/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057.dvc
+  - data/processed/.legacy/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059.dvc
+  - data/processed/.legacy/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067.dvc
+  - data/processed/adaptive-walk-peak-proximal-epistasis-biological-baselines/RUN-055.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/ANA-070.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/ANA-071.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/ANA-072.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-164/source/data/processed/ensemble-landscape-validation-datasets.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-164.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-166/source/data/processed/ensemble-landscape-validation-datasets.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-166.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-168/source/data/processed/ensemble-landscape-validation-datasets.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-168/source/data/processed/trpb-replicate-observation-exp065.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-168.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-170/source/data/processed/ensemble-landscape-validation-datasets.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-170/source/data/processed/trpb-replicate-observation-exp065.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-170.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/source/data/processed/interaction-strength-exp065-inputs.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/source/data/processed/trpb-profile-additive-inputs.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/source/data/processed/interaction-strength-exp065-inputs.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/source/data/processed/model-release-candidates/0.6.0rc1.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/source/data/processed/trpb-profile-additive-inputs.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-182/source/data/processed/model-release-candidates/0.7.0rc1.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-182/source/data/processed/trpb-architecture-calibration-inputs.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-182/source/data/processed/trpb-architecture-calibration-preparation.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-182.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184/frozen_runtime/source/data/processed/model-release-candidates/0.7.0rc1.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184/frozen_runtime/source/data/processed/trpb-architecture-calibration-inputs.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184/frozen_runtime/source/data/processed/trpb-architecture-calibration-preparation.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186/frozen_runtime/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186/frozen_runtime/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186/frozen_runtime/source/data/processed/model-release-candidates/0.6.0rc1.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186.dvc
+  - data/processed/dimensionless-additive-core-sigmoid-calibration-and-held-out-gnk-dose-response-validation/RUN-153.dvc
+  - data/processed/empirical-graphlet-falsification-residual-ruggedness/RUN-071.dvc
+  - data/processed/ensemble-landscape-validation-datasets.dvc
+  - data/processed/extensive-operator-normalized-gnk-latent-scale-law-validation/RUN-149.dvc
+  - data/processed/generator-readout-coupling-calibration/RUN-142/logs.dvc
+  - data/processed/generator-readout-coupling-calibration/RUN-142/outputs.dvc
+  - data/processed/interaction-strength-exp065-inputs.dvc
+  - data/processed/model-release-candidates/0.5.0rc1.dvc
+  - data/processed/model-release-candidates/0.6.0rc1.dvc
+  - data/processed/model-release-candidates/0.7.0rc1.dvc
+  - data/processed/observable-ruggedness-coverage-probe/RUN-162.dvc
+  - data/processed/operator-normalized-gnk-sigmoid-transmission-paired-residual-validation/RUN-151.dvc
+  - data/processed/paired-categorical-code-and-representation-rank-gnk-texture-rescue/RUN-157.dvc
+  - data/processed/phot-abc-local-ruggedness-objective/RUN-096.dvc
+  - data/processed/phot-budgeted-module-tied-softmin-abc/RUN-086.dvc
+  - data/processed/phot-coupled-family-discriminating-abc/RUN-091.dvc
+  - data/processed/phot-frozen-base-coupled-landscape-deterministic-grid/RUN-079.dvc
+  - data/processed/phot-hard-min-coupled-weakest-link-grid/RUN-081.dvc
+  - data/processed/phot-localized-ruggedness-energy-diagnostic/RUN-093.dvc
+  - data/processed/phot-nested-softmin-ensemble-capacity-diagnostic/RUN-098.dvc
+  - data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/logs.dvc
+  - data/processed/phot-nonadditive-measurement-operator-certification/RUN-129/outputs.dvc
+  - data/processed/phot-replicated-heldout-split-graphlet-diagnostic/RUN-089.dvc
+  - data/processed/phot-softmin-boltzmann-coupled-landscape-abc/RUN-084.dvc
+  - data/processed/production_landscapes/ANA-068.dvc
+  - data/processed/production_landscapes/RUN-172.dvc
+  - data/processed/proteingym-current-model-abc-refit-residual-ruggedness/RUN-073.dvc
+  - data/processed/proteingym-kcnj2-surface-function-paired-latent-trait-diagnostic/RUN-053.dvc
+  - data/processed/proteingym-oxda-expression-activity-paired-latent-trait-diagnostic/RUN-051.dvc
+  - data/processed/proteingym-paired-kras-abundance-binding-thermodynamic-diagnostic/RUN-028.dvc
+  - data/processed/proteingym-phot-explicit-two-trait-validation-objective-replicate/RUN-040.dvc
+  - data/processed/proteingym-phot-flexible-monotone-two-latent-readout-diagnostic/RUN-041.dvc
+  - data/processed/proteingym-phot-oracle-global-epistasis-baseline/RUN-043.dvc
+  - data/processed/proteingym-phot-photophysical-trait-sparse-residual-diagnostic/RUN-042.dvc
+  - data/processed/proteingym-phot-stability-readout-validation-objective-control/RUN-039.dvc
+  - data/processed/proteingym-predictive-joint-calibration-pairwise-capacity-panel/RUN-012.dvc
+  - data/processed/proteingym-raw-scale-latent-observation-calibration-panel/RUN-010.dvc
+  - data/processed/saturated-gate-gnk-mechanism-calibration-confirmation/RUN-145.dvc
+  - data/processed/stage-4a-empirical-ensemble-descriptor-envelope/RUN-135/logs.dvc
+  - data/processed/stage-4a-empirical-ensemble-descriptor-envelope/RUN-135.dvc
+  - data/processed/stage-4b-additive-core-gnk-generator-reachability/RUN-136/logs.dvc
+  - data/processed/stage-4b-additive-core-gnk-generator-reachability/RUN-136.dvc
+  - data/processed/stage-4b-design-matched-support-aware-gnk-probe/RUN-141/logs.dvc
+  - data/processed/stage-4b-design-matched-support-aware-gnk-probe/RUN-141/outputs.dvc
+  - data/processed/stage-4c-empirical-coverage-calibrated-overlap/RUN-137/logs.dvc
+  - data/processed/stage-4c-empirical-coverage-calibrated-overlap/RUN-137.dvc
+  - data/processed/stage-4d-joint-multidescriptor-realism-gate/RUN-138/logs.dvc
+  - data/processed/stage-4d-joint-multidescriptor-realism-gate/RUN-138.dvc
+  - data/processed/stage-4e-heldout-descriptor-generalisation/RUN-139/logs.dvc
+  - data/processed/stage-4e-heldout-descriptor-generalisation/RUN-139.dvc
+  - data/processed/system-specific-current-model-refit-graphlet-falsifier-repeat/RUN-077.dvc
+  - data/processed/tem1-aggregate-graphlet-residual-ruggedness-generalization/RUN-065.dvc
+  - data/processed/tem1-dca-clique-haplotype-high-order-epistasis-diagnostic/RUN-063.dvc
+  - data/processed/tem1-dca-specific-epistasis-hamming-graph-diagnostic/RUN-061.dvc
+  - data/processed/tem1-fixed-scale-residual-ratio-sweep-graphlet-diagnostic/RUN-069.dvc
+  - data/processed/tem1-homologue-adaptive-random-walk-parameter-grid-diagnostic/RUN-057.dvc
+  - data/processed/tem1-homologue-ruggedness-emergence-epistasis-parameter-sweep/RUN-059.dvc
+  - data/processed/tem1-relative-scale-residual-exposure-graphlet-diagnostic/RUN-067.dvc
+  - data/processed/trpb-architecture-calibration-inputs.dvc
+  - data/processed/trpb-architecture-calibration-preparation.dvc
+  - data/processed/trpb-architecture-slurm-runtime/source/data/processed/model-release-candidates/0.7.0rc1.dvc
+  - data/processed/trpb-architecture-slurm-runtime/source/data/processed/trpb-architecture-calibration-inputs.dvc
+  - data/processed/trpb-architecture-slurm-runtime/source/data/processed/trpb-architecture-calibration-preparation.dvc
+  - data/processed/trpb-architecture-slurm-runtime.dvc
+  - data/processed/trpb-interaction-ablation-slurm-runtime/baseline/RUN-186/frozen_runtime/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - data/processed/trpb-interaction-ablation-slurm-runtime/baseline/RUN-186/frozen_runtime/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc
+  - data/processed/trpb-interaction-ablation-slurm-runtime/baseline/RUN-186/frozen_runtime/source/data/processed/model-release-candidates/0.6.0rc1.dvc
+  - data/processed/trpb-interaction-ablation-slurm-runtime.dvc
+  - data/processed/trpb-joint-readout-slurm-runtime/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - data/processed/trpb-joint-readout-slurm-runtime/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc
+  - data/processed/trpb-joint-readout-slurm-runtime/source/data/processed/model-release-candidates/0.6.0rc1.dvc
+  - data/processed/trpb-joint-readout-slurm-runtime.dvc
+  - data/processed/trpb-profile-additive-inputs.dvc
+  - data/processed/trpb-replicate-observation-exp065.dvc
+environment:
+  base_stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: false
+    spec: environment/requirements.in
+    lock: environment/requirements.lock.txt
+    lock_sha256: 6154dd7979f358a8c95ec175a0b9e194f4872b5f65c9769337423105e6201d20
+  external_packages_lock:
+    path: environment/external-packages.lock.yaml
+    sha256: fac72b10ffdb912cfccd5415775170f18a0d6d33cd52c258737754cb7507a07c
+  external_packages:
+  - name: Adapt-Env
+    path: external/Adapt-Env
+    editable: true
+    exists: true
+    git_repo: true
+    branch: dev
+    commit: 745c00b3a369da33e7d7c7b9850ccbc212fac714
+    dirty: true
+    detached_head: false
+    remote: https://github.com/MA-Spence/Adapt-Env.git
+    submodule: true
+    tracking_branch: null
+  - name: landscapy
+    path: external/landscapy
+    editable: true
+    exists: true
+    git_repo: true
+    branch: dev
+    commit: 8270fc609551b72584eb0705d0c1c1c91a0fcc40
+    dirty: false
+    detached_head: false
+    remote: https://github.com/RSCJacksonLab/landscapy
+    submodule: true
+    tracking_branch: dev
+software_stack:
+  id: STACK-000
+  name: homelab-default
+  version: '2026.05'
+resources_requested:
+  cpus: 1
+  memory_gb: 8
+  gpus: 0
+  gpu_memory_expected_gb: null
+  walltime: '24:00:00'
+  jobfs_gb: 0
+resources_observed: {}
+paths:
+  experiment_dir: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration
+  run_metadata: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.yaml
+  local_run_record_dir: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-188
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-188/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-188/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-188
+  remote_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-188/project
+staging:
+  manifest: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.manifest.yaml
+  mode: source-staged
+container:
+  runtime: native
+scheduler_script: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.slurm
+remote_scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-188/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.slurm
+scheduler_job_id: '2356'
+logs:
+  stdout: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-188/logs/stdout.txt
+  stderr: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-188/logs/stderr.txt
+outputs:
+  expected:
+  - manifest.json
+  - config.yaml
+  - input_audit.json
+  - environment.json
+  - selected_parameters.json
+  - fits
+  - empirical_replicates.npz
+  - confirmation
+  - cube_powers.csv.gz
+  - face_reproducibility.csv.gz
+  - replicate_summary.csv
+  - static_graph_summary.csv
+  - seed_audit.csv
+  - run186_confirmation_replay.json
+  artifacts: []
+remote_cleanup:
+  eligible: true
+  status: not-requested
+remote_staging:
+  destination: matthew-spence@dutch
+  command: rm -rf /tank/data/labproj/staging/project-adapt-env/RUN-188/project &&
+    mkdir -p /tank/data/labproj/staging/project-adapt-env/RUN-188/project && tar -xzf
+    - -C /tank/data/labproj/staging/project-adapt-env/RUN-188/project
+execution_result:
+  returncode: 0
+  stdout: '2356'
+  stderr: ''
+remote_submission:
+  destination: matthew-spence@dutch
+  command: mkdir -p /tank/data/labproj/runtime/project-adapt-env/runs/RUN-188 /tank/data/labproj/runtime/project-adapt-env/runs/RUN-188/logs
+    /tank/data/labproj/runtime/project-adapt-env/runs/RUN-188/outputs && cd /tank/data/labproj/staging/project-adapt-env/RUN-188/project
+    && sbatch --parsable /tank/data/labproj/staging/project-adapt-env/RUN-188/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.slurm
+  staged_project_root: /tank/data/labproj/staging/project-adapt-env/RUN-188/project
+compliance:
+  level: green
+  issues: []
+scheduler_state: INFERRED_EXIT_CODE
+scheduler_exit_code: '0'

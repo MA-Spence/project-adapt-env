@@ -1,0 +1,106 @@
+{
+  "version": "0.6.0rc1",
+  "status": "unpublished_release_candidate",
+  "calibration_status": "uncalibrated",
+  "source_package_tests": {
+    "tests": 148,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "installed_wheel_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 148
+  },
+  "documentation_examples_passed": 11,
+  "project_api_delegation_exports_verified": 13,
+  "historical_replay": {
+    "presets": 6,
+    "seeds_per_preset": 4,
+    "seeds": [
+      0,
+      1,
+      7,
+      42
+    ],
+    "sequences_per_case": 8,
+    "mutation_queries_per_case": 10,
+    "exact_components_mutation_effects_references_and_fingerprints": true,
+    "source_commit": "745c00b3a369da33e7d7c7b9850ccbc212fac714",
+    "fixture": "external/Adapt-Env/tests/fixtures/historical_ranked_presets.json",
+    "fixture_sha256": "8dc33d1ec10adc1db5183692ec64e7c30ad3f3c59659506cfe1dbb77b5391b44"
+  },
+  "full_pairwise_checks": [
+    "exhaustive_q20_L2_L3_mutation_energy_including_overlapping_pairs",
+    "zero_marginals_and_rank19_without_truncation",
+    "direct_sum_plus_sigmoid",
+    "incident_mutations_match_full_scores",
+    "seed_query_order_and_chunk_reproducibility",
+    "profile_default_and_HTTP_service_consistency",
+    "immutable_pair_arrays"
+  ],
+  "tractability": "tractability.json",
+  "tractability_script": "tractability.py",
+  "wheel": {
+    "filename": "adaptenv-0.6.0rc1-py3-none-any.whl",
+    "sha256": "fb2afa7a91a750c5737410f5ae2fc9ad233dfdf5e4ca78778758dabd18916f80",
+    "bytes": 49718,
+    "build_method": "Clean staging, excluded historical build caches",
+    "verification_method": "python -S; explicit installed target and dependency paths; no editable hooks",
+    "bundled_profile_present": true,
+    "full_pairwise_present": true,
+    "retired_modules_absent": true,
+    "source_unchanged_after_build": true
+  },
+  "test_environment": {
+    "python": "3.13.11",
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "PyYAML": "6.0.3",
+      "adaptenv": "0.6.0rc1",
+      "anyio": "4.13.0",
+      "biopython": "1.87",
+      "build": "1.5.0",
+      "certifi": "2025.11.12",
+      "fastapi": "0.135.3",
+      "h11": "0.16.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "idna": "3.11",
+      "iniconfig": "2.3.0",
+      "numpy": "2.4.4",
+      "packaging": "25.0",
+      "pluggy": "1.5.0",
+      "pydantic": "2.12.4",
+      "pydantic_core": "2.41.5",
+      "pytest": "9.0.3",
+      "scipy": "1.17.1",
+      "setuptools": "80.9.0",
+      "starlette": "1.0.0",
+      "uvicorn": "0.44.0",
+      "wheel": "0.45.1"
+    }
+  },
+  "validation_artifact_hashes": {
+    "build.log": "b7414de8b0f81b244f190786d0105303bb2791f2120e0d1555e3dd8e29ea4c9a",
+    "dist/adaptenv-0.6.0rc1-py3-none-any.whl": "fb2afa7a91a750c5737410f5ae2fc9ad233dfdf5e4ca78778758dabd18916f80",
+    "install.log": "397d92aba87267dead242e5626617c3cdff9ce9e8f40da8de28d63e6691cf054",
+    "installed_verification.json": "c64e43c87b91cf411d953f278689bfd702b60a8118b35b0fe84ea54c1e873237",
+    "pytest.log": "ce5055d8dc8a40d9a46c69db5ce7992091b4a6ee31e8c952f1201f3afd050a87",
+    "pytest.xml": "d8daa80390ab420f2bd829b9c482bfe67a54f846a4c5a88b1f6d214224c53719",
+    "run_installed_verification.py": "5bbffba0c41c78516630ea5f922c8a6bdd8042d03ea41d5165fb79ae8510cc16",
+    "source_manifest.json": "ca7e3f48fa21c39c83d9e5011cc585295245878f85ecfd0be436155f496ffa36"
+  },
+  "source_test_artifacts": {
+    "source-pytest.log": "f925d165787736201e16c2c8e212be87ea3ac4ae9cf6877026c402cfff5784cc",
+    "source-pytest.xml": "861716308d0cb2677648a50523ff3bf0a82c13de1a03b6e9b7215ccd5da09055"
+  },
+  "scope": "Engineering and archival replay only. New full-pairwise default has no empirical calibration; no HYP-010 performance claim.",
+  "release_actions": {
+    "published": false,
+    "deployed": false,
+    "git_tag_created": false
+  }
+}

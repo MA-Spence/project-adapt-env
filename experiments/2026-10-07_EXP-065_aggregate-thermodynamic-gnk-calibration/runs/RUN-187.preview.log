@@ -1,0 +1,12 @@
+Frozen interaction-ablation runtime; Dutch transport; nonexecuting preview
+{
+  "run_id": "RUN-187",
+  "target": "lab-slurm",
+  "dry_run": true,
+  "script": 
+"experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN
+-187.slurm",
+  "attempt": 1
+}
+Dry-run submit completed without remote execution.
+Restored dispatcher, overlay, SSH transport and staging filter.

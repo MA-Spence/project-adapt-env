@@ -1,0 +1,20 @@
+{
+  "run": "RUN-184",
+  "verified_utc": "2026-11-24T07:25:08.573560+00:00",
+  "status": "passed",
+  "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184.dvc",
+  "directory_md5": "420d8aa4f4f3c6cff1f4d3da2a77df3e.dir",
+  "tracked_files": 225,
+  "unique_cache_objects": 178,
+  "verification": {
+    "local": {
+      "cache": "/Users/matthewspence/Documents/Documents/project-adapt-env/.dvc/cache/files/md5",
+      "verified_unique_objects": 178
+    },
+    "backup": {
+      "cache": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data/files/md5",
+      "verified_unique_objects": 178
+    }
+  },
+  "method": "Recompute MD5 for directory object and every unique payload object in local and configured remote backup cache"
+}

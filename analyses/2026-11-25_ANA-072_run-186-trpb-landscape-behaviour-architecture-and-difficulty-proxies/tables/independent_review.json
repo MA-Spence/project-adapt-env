@@ -1,0 +1,30 @@
+{
+  "reviewer": "independent analysis agent",
+  "mode": "read-only",
+  "status": "passed",
+  "blockers": 0,
+  "checks": [
+    "Objective reconstruction and observation-bank indexing preserve original loss",
+    "Direct SQLite confirms 11712 COMPLETE and no FAILED trials per study",
+    "Edge-moment identities and common graph mask correct",
+    "Above-floor denominator correctly distinguished",
+    "Numerical table conclusions agree",
+    "Frozen observation maps and previously inspected validation data explicitly disclosed",
+    "No task-performance claims from static proxies"
+  ],
+  "visual_review": {
+    "reviewer": "primary agent",
+    "figures_checked": 7,
+    "status": "passed",
+    "revisions": [
+      "Nonlinear navigation axes preserve small values and outliers",
+      "Neutral-edge panels display full 0-100 percent range",
+      "Long plot labels wrapped without clipping"
+    ]
+  },
+  "report_review": {
+    "reviewer": "independent average-behaviour agent",
+    "status": "passed",
+    "findings": "Average-behaviour values and scope match numerical tables; clarified that separate descriptor medians need not describe a single realization."
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "refresh_strict_exit": 0,
+  "check_strict_exit": 0,
+  "compliance_summary": "green=384, yellow=26, red=0",
+  "note": "Existing warnings retained; ANA-074 has no linked result because only an analysis was requested."
+}

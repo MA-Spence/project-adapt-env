@@ -1,0 +1,79 @@
+id: ANA-071
+title: RUN-184 TrpB architecture calibration and landscape adequacy
+status: completed
+created: '2026-11-24T18:44:07+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-184
+purpose: Assess recovery of TrpB fitness distributions, inferred genetic architecture
+  and unfitted landscape metrics using reproducible notebooks and figures; distinguish
+  technical completion from readiness as a biologically representative online environment.
+path: analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy
+notebook_record:
+  primary_notebook_path: analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-184
+  produced_artifacts:
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/01_fitness_distribution.pdf
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/01_fitness_distribution.png
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/02_unfitted_landscape.pdf
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/02_unfitted_landscape.png
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/03_architecture.pdf
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/03_architecture.png
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/04_inference_and_weighting.pdf
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/04_inference_and_weighting.png
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/05_search_and_parameters.pdf
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/figures/05_search_and_parameters.png
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/analysis_environment.json
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/architecture_bootstrap.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/architecture_cv_folds.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/architecture_empirical_model_heldout_prediction.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/architecture_findings.json
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/architecture_inference_fits.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/architecture_search_trials.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/architecture_selected_parameters.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/architecture_summary_aggregate.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/architecture_summary_by_seed.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/artifact_validation.json
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/independent_review.json
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/landscape_comparison.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/landscape_dfe.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/landscape_fitness.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/landscape_graph.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/landscape_mutations.csv
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/landscape_summary.json
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/landscape_verification.json
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/notebook_execution.log
+  - analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/tables/validation_checks.json
+compliance:
+  level: yellow
+  issues:
+  - ANA-071 is completed but has no linked results.
+inputs:
+  run_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184.dvc
+  run_directory_md5: 420d8aa4f4f3c6cff1f4d3da2a77df3e.dir
+  frozen_source: RUN-184/outputs/source_snapshot
+  no_optimization_or_refitting: true
+assessment:
+  graduation: not_ready_as_TrpB_calibrated_environment
+  scope: Achieved RUN-184 setting; not a rejection of the model family
+  formal_preregistered_adequacy_gate: false
+  execution_reproducible: true
+  model_defaults_changed: false
+  new_result_or_claim_created: false
+  limitations:
+  - same previously studied four-site assay
+  - four synthetic confirmation seeds
+  - noiseless synthetic observations versus actual measured replicates
+  - sparse-panel graph not whole-library searchability
+  - 63/100 attempts fail inference
+  - bootstrap architecture unstable despite numerical convergence
+archive:
+  bundle: data/processed/aggregate-thermodynamic-gnk-calibration/ANA-071
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/ANA-071.dvc
+  storage_verification: storage_verification.json

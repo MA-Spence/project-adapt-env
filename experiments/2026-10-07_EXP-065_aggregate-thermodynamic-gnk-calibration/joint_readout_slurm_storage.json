@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-11-24T08:55:52.384955+00:00",
+  "pointer": "data/processed/trpb-joint-readout-slurm-runtime.dvc",
+  "directory_md5": "3df26d5e72e745ba2f6dbe1eb18d0661.dir",
+  "storage": {
+    "local": {
+      "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/.dvc/cache/files/md5",
+      "objects_verified": 323,
+      "payload_files": 340,
+      "all_md5_verified": true
+    },
+    "remote": {
+      "root": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data/files/md5",
+      "objects_verified": 323,
+      "payload_files": 340,
+      "all_md5_verified": true
+    }
+  }
+}

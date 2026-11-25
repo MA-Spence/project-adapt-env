@@ -1,0 +1,89 @@
+id: EXP-067
+type: experiment
+title: Computational cost of matched fitness oracles and bounded-neighbourhood GNK
+  baselines
+slug: matched-oracle-computability-and-efficiency
+status: planned
+created: '2026-11-19T20:58:15+11:00'
+owner: matthew-spence
+scientific_context:
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-010
+  previous_experiments:
+  - EXP-065
+  motivating_results:
+  - RES-063
+question: At fixed landscape capabilities and declared query workloads, does the maintained
+  factorized oracle offer a reproducible time or memory advantage over exact local
+  tables and conventional bounded-neighbourhood GNK representations?
+pre_experiment_prediction: Factorization will reduce resident memory relative to exact
+  local tables; warm lookup may be faster, and a stateless conventional GNK oracle
+  may remove the storage advantage. No universal speed or asymptotic advantage is
+  predicted at fixed local complexity.
+rationale: Separate representation effects on an identical fitness map from practical
+  comparisons between different GNK ensembles. Express complexity in total potential
+  sequences n=q^L and distinguish the Q sequences actually queried.
+environment:
+  stack:
+    id: STACK-000
+    version: '2026.05'
+  overlay:
+    enabled: false
+    type: pip
+    spec: null
+    lock: null
+inputs:
+  declared_files:
+  - config.yaml
+  - complexity_notes.md
+  - external/Adapt-Env/adaptenv/trpb_profile_run178.json
+  - docs/model_release/0.5.0rc1/manifest.json
+  datasets: []
+execution:
+  default_target: local
+  intended_targets:
+  - local
+  resources:
+    cpus: 1
+    memory_gb: 8
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 20
+  partition: debug
+  queue: normal
+outputs:
+  expected:
+  - manifest.json
+  - worker_environment.json
+  - correctness.json
+  - raw_timings.csv
+  - resource_usage.csv
+  - paired_comparisons.csv
+  - resource_failures.csv
+  - scaling_summary.json
+  - figures/
+  - notebooks/reproduce_figures.ipynb
+  artifacts: []
+downstream:
+  planned_analyses: []
+  planned_results: []
+github:
+  branch: main
+  commit: e6985ae0c421b6294f6cff1ac2db6ff6dd67db90
+  dirty: true
+notes:
+- Planned design only; benchmark adapters and isolated execution environment remain
+  to be implemented and frozen.
+- n=q^L is total potential sequence space; Q denotes queries actually made.
+- Four arms A/B and C/D form two exact-map pairs. Cross-pair comparisons differ in
+  ensemble and normalization.
+- Inherited STACK-000 is bookkeeping only; historical overlay disabled, not a validated
+  benchmark environment.
+- No RUN creation, execution or submission in this protocol-registration task.
+template: generic
+compliance:
+  level: green
+  issues: []

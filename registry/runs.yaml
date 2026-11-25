@@ -3743,3 +3743,123 @@ items:
   compliance:
     level: green
     issues: []
+- id: RUN-179
+  experiment: EXP-065
+  target: local
+  status: planned
+  dry_run: true
+  created: '2026-11-20T08:58:36+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-179.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-180
+  experiment: EXP-065
+  target: local
+  status: completed
+  dry_run: false
+  created: '2026-11-20T08:59:13+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-180.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-181
+  experiment: EXP-065
+  target: local
+  status: planned
+  dry_run: true
+  created: '2026-11-21T12:38:24+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-181.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-182
+  experiment: EXP-065
+  target: local
+  status: cancelled
+  dry_run: false
+  created: '2026-11-21T12:39:01+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-182.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-183
+  experiment: EXP-065
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-11-21T12:51:11+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-183.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-184
+  experiment: EXP-065
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-11-21T12:51:36+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-184.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-185
+  experiment: EXP-065
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-11-24T19:56:57+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-185.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-186
+  experiment: EXP-065
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-11-24T19:57:32+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-186.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-187
+  experiment: EXP-065
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-11-25T12:04:56+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-187.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-188
+  experiment: EXP-065
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-11-25T12:05:42+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-189
+  experiment: EXP-065
+  target: lab-slurm
+  status: planned
+  dry_run: true
+  created: '2026-11-25T16:32:50+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-189.yaml
+  compliance:
+    level: green
+    issues: []
+- id: RUN-190
+  experiment: EXP-065
+  target: lab-slurm
+  status: completed
+  dry_run: false
+  created: '2026-11-25T16:33:13+11:00'
+  path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-190.yaml
+  compliance:
+    level: green
+    issues: []

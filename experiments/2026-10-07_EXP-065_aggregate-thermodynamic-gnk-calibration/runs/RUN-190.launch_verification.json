@@ -1,0 +1,173 @@
+{
+  "checked_utc": "2026-11-25T05:34:41.231627+00:00",
+  "run": "RUN-190",
+  "scheduler_job_id": "2357",
+  "node": "dutch",
+  "state": "RUNNING",
+  "queue_and_startup": "             JOBID    PARTITION                     NAME    STATE       TIME NODELIST(REASON)\n              2357          cpu           EXP-065RUN-190  RUNNING       0:11 dutch\nVerified 536 frozen payloads and 36 pinned packages\nStarting TrpB Gamma concentration calibration with fixed shared-stop noise; RUN=RUN-190; job=2357\n",
+  "input_audit": {
+    "control_authentication": {
+      "outputs": {
+        "files": 41,
+        "sha256": "c40c6d47a7814bd149d07735254a2ce69cd1d70c6ae33058988a0470e9d8c306"
+      },
+      "frozen_runtime": {
+        "files": 460,
+        "sha256": "b2f9eccfa6b19446259c9915c23a822e28a37d86b430cce336cb85f3c10b66c1"
+      }
+    },
+    "baseline_authentication": {
+      "manifest.json": {
+        "files": 86,
+        "sha256": "f02b8331489060b28c658ef3aa919a95fca734f81c7b73c5f3a420610b5d2e4c"
+      },
+      "prelaunch_manifest.json": {
+        "files": 339,
+        "sha256": "39960cb6a6cc1ff99302ae1e6ba5ca1b7b38fe14a59b8b617fdeb72545c022d3"
+      }
+    },
+    "historical_objective_replays": [
+      {
+        "r": 0.0,
+        "objective": {
+          "quantile": 0.04124057695393592,
+          "mean_sd": 0.0008135235408087792,
+          "floor_cdf": 2.039968967437744e-05,
+          "total": 0.04207450018441907
+        }
+      },
+      {
+        "r": 0.5,
+        "objective": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        }
+      },
+      {
+        "r": 1.0,
+        "objective": {
+          "quantile": 0.029800560164746564,
+          "mean_sd": 0.001425851278828095,
+          "floor_cdf": 7.212162017822266e-06,
+          "total": 0.03123362360559248
+        }
+      },
+      {
+        "r": 2.0,
+        "objective": {
+          "quantile": 0.03779516347932995,
+          "mean_sd": 6.900384448757186e-05,
+          "floor_cdf": 1.9311904907226562e-05,
+          "total": 0.03788347922872475
+        }
+      },
+      {
+        "r": 4.0,
+        "objective": {
+          "quantile": 0.050593262981615185,
+          "mean_sd": 0.0013276654456344137,
+          "floor_cdf": 6.295740604400635e-05,
+          "total": 0.05198388583329361
+        }
+      },
+      {
+        "r": 8.0,
+        "objective": {
+          "quantile": 0.0609329466326516,
+          "mean_sd": 0.0022100140499743547,
+          "floor_cdf": 5.187094211578369e-05,
+          "total": 0.06319483162474174
+        }
+      }
+    ],
+    "gaussian_calibration_fields_reproduced": true,
+    "controls_objectives_reproduced": true,
+    "normalized_gamma_endpoints_verified": [
+      0.05,
+      1.0,
+      100.0
+    ],
+    "benchmark_alpha1_loss": {
+      "quantile": 0.0399145990898366,
+      "mean_sd": 3.336293490469111e-05,
+      "floor_cdf": 9.299814701080322e-05,
+      "total": 0.04004096017175209
+    },
+    "benchmark_seconds": 0.014168641995638609,
+    "calibration_cubes": 32,
+    "synthetic_calibration_cubes": 64,
+    "confirmation_seeds": 24,
+    "calibration_confirmation_disjoint": true,
+    "noise_refitted": false
+  },
+  "environment": {
+    "created_utc": "2026-11-25T05:34:06.561129+00:00",
+    "python": "3.11.15",
+    "executable": "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/bin/python",
+    "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "python_build": [
+      "main",
+      "Mar  5 2026 16:45:40"
+    ],
+    "packages": {
+      "pydantic_core": "2.50.5",
+      "python-dateutil": "4.0.0",
+      "packaging": "26.3",
+      "tzdata": "2026.6",
+      "MarkupSafe": "3.0.4",
+      "pyarrow": "20.0.0",
+      "tqdm": "4.70.1",
+      "Pygments": "2.21.0",
+      "httpcore": "1.0.9",
+      "certifi": "2026.10.23",
+      "PyYAML": "6.0.3",
+      "typing-inspection": "0.4.5",
+      "SQLAlchemy": "2.1.9",
+      "opentelemetry-api": "1.45.2",
+      "alembic": "1.20.1",
+      "pydantic": "2.14.4",
+      "annotated-types": "0.8.0",
+      "anyio": "4.16.0",
+      "pytest": "8.4.2",
+      "typing_extensions": "4.16.0",
+      "starlette": "1.10.0",
+      "pluggy": "1.7.0",
+      "numpy": "2.4.4",
+      "pandas": "2.3.0",
+      "setuptools": "79.0.1",
+      "optuna": "4.9.0",
+      "h11": "0.16.0",
+      "pip": "24.0",
+      "scipy": "1.17.1",
+      "pytz": "2026.6",
+      "colorlog": "6.12.0",
+      "annotated-doc": "0.0.7",
+      "idna": "3.20",
+      "Mako": "1.4.3",
+      "iniconfig": "2.3.1",
+      "fastapi": "0.165.0",
+      "httpx": "0.28.1",
+      "biopython": "1.88"
+    },
+    "environment_lock_sha256": "164dab4dbdb0dbdee52f17e46d2a2afb7e283a015984279aaa87b12bdd38324e",
+    "package_mismatches": {},
+    "prelaunch_manifest_sha256": "9537c18a56d5d8cf42b6516de6a84840210d4687861e4d6042b0792b457cab68",
+    "verified_payload_count": 536,
+    "protocol": "gamma-concentration-slurm",
+    "historical_control": "RUN-188",
+    "execution_mode": "joint Gamma alpha/r/readout Optuna TPE fit; controls reused",
+    "platform_change": "RUN-186 frozen Linux inputs; local macOS smoke; no cross-platform bitwise identity claimed",
+    "runtime_controls": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "LABPROJ_RUN_ID": "RUN-190",
+      "SLURM_JOB_ID": "2357",
+      "LABPROJ_OUTPUT_DIR": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-190/outputs"
+    }
+  },
+  "interpretation": "Startup verified; no production scientific result yet"
+}

@@ -1,0 +1,6 @@
+outs:
+- md5: 2e912bca6bf272ae81124dae5d8ced26.dir
+  size: 203837503
+  nfiles: 461
+  hash: md5
+  path: trpb-interaction-ablation-slurm-runtime

@@ -1,0 +1,4 @@
+  File "<stdin>", line 16
+    lock_sha256=lock_hash, created_utc=datetime.datetime.now(datetime.timezone.utc).isoformat()),indent=2)+'
+                                                                                                           ^
+SyntaxError: unterminated string literal (detected at line 16)

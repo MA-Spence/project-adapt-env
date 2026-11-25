@@ -1619,7 +1619,7 @@ items:
     issues: []
 - id: EXP-065
   title: Aggregate thermodynamic GNK calibration and confirmation
-  status: completed
+  status: running
   created: '2026-10-07T13:40:05+11:00'
   owner: matthew-spence
   aims:
@@ -1665,6 +1665,29 @@ items:
   template: generic
   path: experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism
   metadata_path: experiments/2026-10-08_EXP-066_production-landscape-aggregate-realism/metadata.yaml
+  compliance:
+    level: green
+    issues: []
+- id: EXP-067
+  title: Computational cost of matched fitness oracles and bounded-neighbourhood GNK
+    baselines
+  status: planned
+  created: '2026-11-19T20:58:15+11:00'
+  owner: matthew-spence
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-010
+  previous_experiments:
+  - EXP-065
+  motivating_results:
+  - RES-063
+  stack: STACK-000
+  intended_targets:
+  - local
+  template: generic
+  path: experiments/2026-11-19_EXP-067_matched-oracle-computability-and-efficiency
+  metadata_path: experiments/2026-11-19_EXP-067_matched-oracle-computability-and-efficiency/metadata.yaml
   compliance:
     level: green
     issues: []

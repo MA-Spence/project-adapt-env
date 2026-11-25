@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-11-25T05:31:19.720485+00:00",
+  "pointer": "data/processed/trpb-gamma-concentration-slurm-runtime.dvc",
+  "directory_md5": "705126f8fe5da52a44a94e6459a918d3.dir",
+  "storage": {
+    "local": {
+      "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/.dvc/cache/files/md5",
+      "objects_verified": 470,
+      "payload_files": 537,
+      "all_md5_verified": true
+    },
+    "remote": {
+      "root": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data/files/md5",
+      "objects_verified": 470,
+      "payload_files": 537,
+      "all_md5_verified": true
+    }
+  }
+}

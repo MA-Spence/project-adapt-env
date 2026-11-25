@@ -1,0 +1,28 @@
+WARNING Remote staged source root is not visible from the submit host: 
+/tank/data/labproj/staging/project-adapt-env/RUN-EXAMPLE/project
+INFO Target profile: HomeLab (homelab)
+INFO Execute mode is enabled for this Slurm target.
+INFO ssh is available for remote submission.
+INFO Submission transport: ssh to matthew-spence@raspi-1
+INFO Remote sbatch, squeue, and sacct look available on the submit host.
+INFO Remote project root is visible from the submit host: 
+/tank/data/labproj/projects/project-adapt-env
+INFO Remote scratch root is visible from the submit host: 
+/tank/data/labproj/runtime/project-adapt-env
+INFO Remote durable data root is visible from the submit host: 
+/tank/data/labproj/data/project-adapt-env
+INFO Remote environment root is visible from the submit host: 
+/tank/data/labproj/envs/matthew-spence/project-adapt-env
+INFO Source staging is enabled for this target, so the project may live anywhere
+locally.
+INFO Configured partitions: gpu, cpu, all
+INFO Expected client project root: 
+/Volumes/DutchZFS/labproj/projects/project-adapt-env
+INFO Expected client data storage root: /Volumes/DutchZFS/labproj
+INFO Expected project root: /tank/data/labproj/projects/project-adapt-env
+INFO Expected scratch root: /tank/data/labproj/runtime/project-adapt-env
+INFO Expected durable data root: /tank/data/labproj/data/project-adapt-env
+INFO Expected environment root: 
+/tank/data/labproj/envs/matthew-spence/project-adapt-env
+INFO Expected staged source root: 
+/tank/data/labproj/staging/project-adapt-env/RUN-EXAMPLE/project

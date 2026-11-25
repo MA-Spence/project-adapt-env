@@ -1,0 +1,233 @@
+[
+  {
+    "ratio": 4.0,
+    "observation": "none",
+    "parameters": [
+      0.09182108924393662,
+      2.2943367744500445,
+      -4.372107659913723,
+      -1.7569860915529938
+    ],
+    "offset": -0.01741298682663208,
+    "scale": 1.9237542701030006,
+    "position": -4.372107659913723,
+    "steepness": 0.17256417347416095,
+    "objective": {
+      "quantile": 0.0882316698861848,
+      "mean_sd": 0.04815335902710372,
+      "floor_cdf": 0.0011682510375976562,
+      "total": 0.13755327995088618
+    },
+    "evaluations": 8,
+    "optimizer_converged": false,
+    "optimizer_completed": true,
+    "optimizer_message": "Fixed Optuna trial budget completed; convergence or global optimality not established.",
+    "selected_source": "RUN180_r4_warm_start",
+    "bounds": [
+      [
+        -2.0,
+        2.0
+      ],
+      [
+        -6.907755278982137,
+        2.302585092994046
+      ],
+      [
+        -14.0,
+        8.0
+      ],
+      [
+        -2.995732273553991,
+        2.0794415416798357
+      ]
+    ],
+    "ratio_bounds": [
+      0.0,
+      8.0
+    ],
+    "relative_boundary_distance": [
+      0.47704472768901585,
+      0.0008955498071600215,
+      0.43763147000392166,
+      0.2440795580799088
+    ],
+    "ratio_relative_boundary_distance": 0.5,
+    "calibration_origin": -0.03522340992,
+    "calibration_scale": 0.1939687629499998,
+    "near_floor_raw": 0.05383169008372466,
+    "optimizer": "optuna_tpe",
+    "optimizer_seed": 57119094,
+    "selected_trial": 4,
+    "optimized_coordinates": [
+      "r",
+      "p0",
+      "p1",
+      "p2",
+      "p3"
+    ],
+    "interaction_concentration": null,
+    "warm_start_source_run": "RUN-180",
+    "warm_start_candidates": 6,
+    "warm_start_objective": 0.13755327995088618,
+    "sqlite_history": "TrpB_none_joint_r.sqlite3",
+    "trial_history": "TrpB_none_joint_r.csv.gz",
+    "protein": "TrpB",
+    "dataset_id": "trpb_johnston2024_four_site_graphfla",
+    "additive_prior": "empirical_msa_log_profile",
+    "calibration_lineage": "RUN180_direct_objective_joint_continuous_r_Optuna_TPE_warm_start"
+  },
+  {
+    "ratio": 2.0,
+    "observation": "independent_difference",
+    "parameters": [
+      0.15765447782879383,
+      2.2744933218429124,
+      -5.2866027231526775,
+      -0.8570225385300014
+    ],
+    "offset": -0.004643365882020689,
+    "scale": 1.8859566018037968,
+    "position": -5.2866027231526775,
+    "steepness": 0.42442390870092994,
+    "objective": {
+      "quantile": 0.03240254081737589,
+      "mean_sd": 0.028246703047087082,
+      "floor_cdf": 0.00010019540786743164,
+      "total": 0.060749439272330404
+    },
+    "evaluations": 8,
+    "optimizer_converged": false,
+    "optimizer_completed": true,
+    "optimizer_message": "Fixed Optuna trial budget completed; convergence or global optimality not established.",
+    "selected_source": "RUN180_r2_warm_start",
+    "bounds": [
+      [
+        -2.0,
+        2.0
+      ],
+      [
+        -6.907755278982137,
+        2.302585092994046
+      ],
+      [
+        -14.0,
+        8.0
+      ],
+      [
+        -2.995732273553991,
+        2.0794415416798357
+      ]
+    ],
+    "ratio_bounds": [
+      0.0,
+      8.0
+    ],
+    "relative_boundary_distance": [
+      0.46058638054280154,
+      0.0030500252994565577,
+      0.3960635125839692,
+      0.421406204572612
+    ],
+    "ratio_relative_boundary_distance": 0.25,
+    "calibration_origin": -0.03522340992,
+    "calibration_scale": 0.1939687629499998,
+    "near_floor_raw": 0.05383169008372466,
+    "optimizer": "optuna_tpe",
+    "optimizer_seed": 57119194,
+    "selected_trial": 3,
+    "optimized_coordinates": [
+      "r",
+      "p0",
+      "p1",
+      "p2",
+      "p3"
+    ],
+    "interaction_concentration": null,
+    "warm_start_source_run": "RUN-180",
+    "warm_start_candidates": 6,
+    "warm_start_objective": 0.060749439272330404,
+    "sqlite_history": "TrpB_independent_difference_joint_r.sqlite3",
+    "trial_history": "TrpB_independent_difference_joint_r.csv.gz",
+    "protein": "TrpB",
+    "dataset_id": "trpb_johnston2024_four_site_graphfla",
+    "additive_prior": "empirical_msa_log_profile",
+    "calibration_lineage": "RUN180_direct_objective_joint_continuous_r_Optuna_TPE_warm_start"
+  },
+  {
+    "ratio": 0.5,
+    "observation": "shared_stop_sensitivity",
+    "parameters": [
+      0.21805868351610824,
+      2.2759427989712218,
+      -7.440616618583173,
+      0.14518989577139818
+    ],
+    "offset": 0.00707316317212503,
+    "scale": 1.8886922349029394,
+    "position": -7.440616618583173,
+    "steepness": 1.1562591181389308,
+    "objective": {
+      "quantile": 0.029890048284698507,
+      "mean_sd": 0.0011008130117627216,
+      "floor_cdf": 4.306435585021973e-06,
+      "total": 0.03099516773204625
+    },
+    "evaluations": 8,
+    "optimizer_converged": false,
+    "optimizer_completed": true,
+    "optimizer_message": "Fixed Optuna trial budget completed; convergence or global optimality not established.",
+    "selected_source": "RUN180_r0.5_warm_start",
+    "bounds": [
+      [
+        -2.0,
+        2.0
+      ],
+      [
+        -6.907755278982137,
+        2.302585092994046
+      ],
+      [
+        -14.0,
+        8.0
+      ],
+      [
+        -2.995732273553991,
+        2.0794415416798357
+      ]
+    ],
+    "ratio_bounds": [
+      0.0,
+      8.0
+    ],
+    "relative_boundary_distance": [
+      0.44548532912097294,
+      0.0028926503198391284,
+      0.29815379006440124,
+      0.3811202761376403
+    ],
+    "ratio_relative_boundary_distance": 0.0625,
+    "calibration_origin": -0.03522340992,
+    "calibration_scale": 0.1939687629499998,
+    "near_floor_raw": 0.05383169008372466,
+    "optimizer": "optuna_tpe",
+    "optimizer_seed": 57119294,
+    "selected_trial": 1,
+    "optimized_coordinates": [
+      "r",
+      "p0",
+      "p1",
+      "p2",
+      "p3"
+    ],
+    "interaction_concentration": null,
+    "warm_start_source_run": "RUN-180",
+    "warm_start_candidates": 6,
+    "warm_start_objective": 0.03099516773204625,
+    "sqlite_history": "TrpB_shared_stop_sensitivity_joint_r.sqlite3",
+    "trial_history": "TrpB_shared_stop_sensitivity_joint_r.csv.gz",
+    "protein": "TrpB",
+    "dataset_id": "trpb_johnston2024_four_site_graphfla",
+    "additive_prior": "empirical_msa_log_profile",
+    "calibration_lineage": "RUN180_direct_objective_joint_continuous_r_Optuna_TPE_warm_start"
+  }
+]

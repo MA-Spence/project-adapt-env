@@ -1,0 +1,16 @@
+{
+  "gaussian_loss": 0.03099516773204625,
+  "gamma_loss": 0.031032134854951786,
+  "relative_loss_change": 0.0011926737491829709,
+  "selected_alpha": 100.0,
+  "selected_r": 0.5,
+  "selected_trial": 7,
+  "total_trials": 11712,
+  "primary_seeds": 8,
+  "all_seeds": 24,
+  "coefficient_correlation_median": 0.9987532123942399,
+  "gaussian_top1pct_energy": 0.08403534220669714,
+  "gamma_top1pct_energy": 0.08534210754480934,
+  "original_fresh_seeds_previously_inspected": true,
+  "new_independent_empirical_validation": false
+}

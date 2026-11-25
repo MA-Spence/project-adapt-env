@@ -1,0 +1,2 @@
+model,genotypes,individual_replicate_r2,genotype_mean_r2,genotype_mean_rmse,fitting_scope
+empirical calibration coefficient model; not synthetic generator,8192,0.7200639811562151,0.7353885138485423,0.030050898332787696,Empirical calibration coefficients; no refitting or confirmation selection

@@ -1,7 +1,7 @@
 # labproj: external-package-lock begin
 # manifest: environment/external-packages.lock.yaml
-# manifest_sha256: a0aa009caf8ce179046d581823d1d8f87a0ddf2b8eb7bbe26ad7121c9f74cceb
-# package: {"branch": "dev", "commit": "745c00b3a369da33e7d7c7b9850ccbc212fac714", "detached_head": false, "dirty": null, "editable": true, "exists": true, "git_repo": true, "name": "Adapt-Env", "path": "external/Adapt-Env", "remote": "https://github.com/MA-Spence/Adapt-Env.git", "submodule": true, "tracking_branch": null}
+# manifest_sha256: 2a2fc4d1d2c7e001ce5a340e33294863c29b9bdcbca5392f1cb07bf85cedf003
+# package: {"branch": "dev", "commit": "a6b5bfc5a86efa4f1a948d1b4ca968757b3fb343", "detached_head": false, "dirty": null, "editable": true, "exists": true, "git_repo": true, "name": "Adapt-Env", "path": "external/Adapt-Env", "remote": "https://github.com/MA-Spence/Adapt-Env.git", "submodule": true, "tracking_branch": null}
 # package: {"branch": "dev", "commit": "8270fc609551b72584eb0705d0c1c1c91a0fcc40", "detached_head": false, "dirty": null, "editable": true, "exists": true, "git_repo": true, "name": "landscapy", "path": "external/landscapy", "remote": "https://github.com/RSCJacksonLab/landscapy", "submodule": true, "tracking_branch": "dev"}
 # labproj: external-package-lock end
 # Historical overlay snapshot: not a complete lock of current requirements.in.

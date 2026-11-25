@@ -1,0 +1,52 @@
+{
+  "status": "prepared_for_dry_run",
+  "scientific_execution_performed": false,
+  "expected_model": "thermodynamic_pairwise_v3",
+  "candidate": "0.6.0rc1",
+  "direct_control": "RUN-178",
+  "synthetic_control_reused": "RUN-175",
+  "config_difference_keys": [
+    "interpretation",
+    "model",
+    "profile_control_bundle",
+    "profile_control_manifest_sha256",
+    "profile_control_run",
+    "protocol"
+  ],
+  "scientific_change": "interaction construction only; full pair tables and pairwise latent terms",
+  "input_files_verified": {
+    "data/processed/interaction-strength-exp065-inputs": 24,
+    "data/processed/trpb-profile-additive-inputs": 10,
+    "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/outputs": 99
+  },
+  "pinned_preflight_tests": {
+    "tests": 43,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "environment_required": {
+    "python": "3.11.15",
+    "packages": {
+      "numpy": "2.4.4",
+      "pandas": "2.3.0",
+      "scipy": "1.17.1",
+      "pyarrow": "20.0.0",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "source_lock_verification": "all51candidatefilesunchanged",
+  "launcher_shell_syntax": "passed",
+  "independent_validator_tests": {
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "notes": [
+    "No full or shortened calibration was run during preparation.",
+    "Native compiler and numerical environment match RUN-178; actual environment captured again by local helper."
+  ],
+  "source_manifest_sha256": "2fb455b7fc5427d6a1a9603e26157b1cb10c201b2b80f8578e55d1ec5a8f048f",
+  "frozen_source_files": 84
+}

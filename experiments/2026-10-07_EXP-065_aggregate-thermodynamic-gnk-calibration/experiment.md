@@ -1,5 +1,98 @@
 # EXP-065: Aggregate thermodynamic GNK calibration and confirmation
 
+## 2026-11-24 joint Optuna submission
+
+RUN-186 is running on Dutch as Slurm job **2355**, after preview RUN-185.
+The frozen joint protocol optimizes continuous r in [0,8] with four readout
+coordinates, using the restored RUN-180 loss and matched TrpB sampling design.
+Gamma concentration is disabled. Startup verification confirms five-coordinate
+trials with off-grid r values, matching source and inputs, and all 18 historical
+objective replays. See [launch evidence](runs/RUN-186.launch_verification.json)
+and [engineering validation](joint_readout_validation.json). Results are pending.
+
+## Current protocol: joint continuous-r Optuna fitting, authorized 2026-11-24
+
+The scientist requested a new TrpB RUN with r optimized continuously on [0,8]
+alongside all four readout parameters, retaining RUN-180's direct fitness loss.
+[The joint protocol](joint_readout.md) replaces the r grid with three five-parameter
+Optuna studies, one per existing observation assumption. Gamma concentration is
+disabled. The old model, inputs, masks, seeds, noise draws and confirmation design
+are retained. All six old fits per mode are re-evaluated as starting candidates;
+11,712 trials per mode preserve the overall 35,136-trial budget. A dedicated
+Linux runtime and frozen source/input bundle support the authorized Slurm submission.
+
+## Initial fixed-r rollback, superseded by the joint fit below
+
+The scientist requested a rollback to the most recent useful calibration while
+retaining Optuna. [The amended protocol](optuna_readout.md) restores RUN-180's
+fitness-distribution/local-SD/floor objective, Gaussian profile full-pairwise
+generator, reference-anchored sigmoid, original bounds, fixed r grid and all
+three observation assumptions. TPE optimizes the four readout parameters, with
+previous RUN-180 settings re-evaluated as candidates. The launcher now defaults
+to `optuna-readout`; architecture fitting remains an explicit experimental option.
+No new scientific RUN is registered or launched by this implementation. Earlier
+RUN source snapshots and scientific conclusions remain unchanged.
+
+## RUN-184 analysed in ANA-071
+
+[ANA-071](../../analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/analysis.md) provides five reproducible figures and three executed notebooks. The selected setting does not adequately reproduce TrpB fitness spread, local sign epistasis or sparse-panel navigation; bootstrap architecture is unstable despite convergence. It is not ready to graduate as a TrpB-calibrated environment. This concerns the achieved fit, not a rejection of the model family, and does not change defaults or historical claims.
+
+## Optuna architecture calibration authorized 2026-11-21
+
+RUN-181 passed local preview; RUN-182 was stopped at the scientist's request,
+with its partial artifacts preserved. RUN-183 passed Slurm preview. RUN-184
+(job **2325**, 1 CPU, 8 GB, 24-hour limit) completed on Dutch on 2026-11-24 at
+16:00:32 AEDT after about 6 h 17 min, with both exit codes zero. All 100 Optuna
+attempts were processed: **37 COMPLETE, 63 FAIL** from auxiliary inference
+nonconvergence. The selected trial (index 63) has calibration loss **24.0341**
+and confirmation loss **27.3463** on disjoint genotypes and fresh seeds.
+Selected fits pass the required convergence checks. The high numerical failure
+rate limits usable search; these numbers alone do not establish model adequacy.
+
+All 152 frozen payloads remain intact, all expected outputs are present, and
+33/33 independent completion/reproducibility checks pass. See
+[completion verification](runs/RUN-184.completion-verification.json),
+[RUN record](runs/RUN-184.yaml), and
+[execution amendment](architecture_slurm.md). The collected bundle preserves
+outputs, logs, frozen runtime, exact remote transport and failure diagnostics.
+Source, inputs, settings and seeds were unchanged from the cancelled local run;
+no Optuna resume or preset promotion was performed.
+
+The scientist authorized a new TrpB-only calibration RUN and local MacBook
+execution using unpublished candidate 0.7.0rc1. The registered amendment is
+[architecture_calibration.md](architecture_calibration.md), with the exact fitting
+configuration in [architecture_calibration.json](architecture_calibration.json).
+The same reference-free sigmoid-plus-pairwise inference procedure is applied to
+measured and simulated data; Optuna matches architecture summaries. This changes
+the fitting objective, coefficient distribution and sampling protocol relative to
+RUN-180. Previous controls remain historical context, not a matched optimizer
+comparison. The source, input partition and runtime environment are frozen before
+submission. No new adequacy or biological-mechanism claim is made by this RUN.
+
+## Full-pairwise TrpB follow-up authorized 2026-11-20
+
+The scientist requested a matched repeat of profile-conditioned RUN-178 using
+the refined 0.6.0rc1 full-pairwise model, with local MacBook execution. The
+prospective protocol is [full_pairwise.md](full_pairwise.md) and its complete
+configuration is [full_pairwise.yaml](full_pairwise.yaml). All non-model scientific
+settings and inputs are retained. RUN-178 and the original synthetic RUN-175
+remain archived controls and are not rerun. This follow-up does not overwrite
+their evidence or create a new empirical adequacy claim.
+
+At that stage the launcher defaulted to `full-pairwise`; historical protocols require their
+recorded sources and explicit protocol selector. The local submission helper
+registers a separate dry-run preview and live RUN under this EXP.
+
+RUN-179 was the nonexecuting local preview. RUN-180 completed locally in
+330.75 seconds with all 18 settings and 24 confirmation seeds. Independent
+[engineering verification](runs/RUN-180.verification.json) passes: unchanged
+empirical inputs, profile/additive values, references and r=0 results. The
+[verifier amendment](runs/RUN-180.verification_amendment.json) documents gzip
+timestamp metadata; both compressed files authenticate correctly and their
+decompressed contents are identical. Original sources and outputs are unchanged.
+The 346-file bundle is DVC-tracked with local cache verification; remote backup
+was not attempted. This records execution, not an adequacy conclusion.
+
 ## Follow-up after RUN-164 / ANA-063
 
 On 2026-10-07 the scientist authorized one additional production RUN under this
@@ -139,3 +232,34 @@ cubes, recover original TrpB replicates, and compare differential-noise and
 stop-control shared-error assumptions without refitting the generator or imposing
 scientific success gates. The default run entry point now selects this protocol.
 Earlier RUN source snapshots preserve the previous entry point.
+
+
+## 2026-11-25 Matched interaction ablation
+
+The scientist authorized a new TrpB RUN contrasting independently refitted r=0
+and full r in [0,8], with the RUN-186 shared-stop observation law fixed. See
+[protocol](interaction_ablation.md) and [configuration](interaction_ablation.yaml).
+Both arms receive 11,712 Optuna trials under the restored direct fitness loss.
+Repeatable interaction powers and sign reversals are unfitted diagnostics.
+This tests dependence on latent interactions; it cannot identify common assay
+bias separately from biology. No package preset or historical claim changes.
+
+RUN-188 is the production comparison (Slurm 2356, running on Dutch); RUN-187 is
+the nonexecuting preview. Local/Linux smoke and 24 tests pass. Frozen runtime
+and backup objects are verified; launch evidence is in
+[runs/RUN-188.launch_verification.json](runs/RUN-188.launch_verification.json).
+No production conclusion is drawn at launch.
+
+ANA-073 completes the requested RUN-188 noise-versus-structure analysis with six
+figures and an executed notebook. The r=0 observed control reproduces much of the
+sign-epistatic geometry. At primary resolution, 90.4% of full-model observed
+sign-epistatic faces were absent intrinsically; this does not mean 90.4% of
+spectral power or biological epistasis is noise. Shared error can be repeatable;
+latent pairwise terms do not uniformly improve the unfitted diagnostics.
+See [ANA-073](../../analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/analysis.md). No package/default or historical claim change.
+
+## Gamma concentration follow-up (25 November 2026)
+
+Scientist-authorized joint alpha/r/readout calibration with unchanged shared-stop observations and direct loss; reuse RUN-188 Gaussian and r0 controls. See [protocol](gamma_concentration.md), [configuration](gamma_concentration.yaml) and [validation](gamma_concentration_validation.json). This is matched diagnostic confirmation on previously inspected TrpB panels, not new independent empirical validation.
+
+RUN-189 is the nonexecuting preview. RUN-190 attempt 1 submitted as Slurm job **2357**, verified running on Dutch. Local tests and Linux smoke passed; source/input payloads and pinned environment verified at production startup. [Launch evidence](runs/RUN-190.launch_verification.json). No production result yet.

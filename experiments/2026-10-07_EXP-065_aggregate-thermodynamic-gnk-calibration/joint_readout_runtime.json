@@ -1,0 +1,6 @@
+{
+  "runtime_bundle": "data/processed/trpb-joint-readout-slurm-runtime",
+  "manifest_sha256": "39960cb6a6cc1ff99302ae1e6ba5ca1b7b38fe14a59b8b617fdeb72545c022d3",
+  "payload_count": 339,
+  "source_manifest_sha256": "56bf7dbd253bd94ef15b36d939a5a89f7c0234cd4f65b72950d360bdff822df5"
+}

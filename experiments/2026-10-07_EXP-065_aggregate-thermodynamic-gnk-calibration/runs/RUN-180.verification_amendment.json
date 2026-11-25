@@ -1,0 +1,32 @@
+{
+  "run": "RUN-180",
+  "scope": "Post-execution engineering verifier correction only; no scientific source, config, inputs or outputs changed",
+  "initial_report": "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-180.verification.initial.json",
+  "initial_error": "Noise model changed: noise_model.json",
+  "cause": "membership_sha256 authenticates a gzip file whose mtime header differs between executions; compressed bytes after the first ten header bytes and all decompressed bytes are identical.",
+  "checks": [
+    "Authenticate each membership_sha256 against its own compressed donor file",
+    "Require exact decompressed byte equality",
+    "Require every other noise-model JSON field to match",
+    "Retain all frozen-v1 source, manifest, coverage, configuration and numerical checks"
+  ],
+  "decompressed_sha256": "cdf82031bb29d58f922db19d26005ce2d620c7c8b90e56caecd497af5061f3e1",
+  "frozen_validator": {
+    "path": "scripts/verify_pairwise_calibration_exp065.py",
+    "sha256": "cc4779d56639f34935543213a7305f5bfe1e352c1ba6e40bcf3b946b52f09ecd"
+  },
+  "corrected_validator": {
+    "path": "scripts/verify_pairwise_calibration_exp065_v2.py",
+    "sha256": "e8c12c8483d9f61a96e783f1c09b0d948719bcd995e94a11a33952644f7fe477"
+  },
+  "new_tests": {
+    "path": "tests/test_verify_pairwise_calibration_exp065_v2.py",
+    "sha256": "75fa17415ce40bd122e123b011bae476e09e466fb2ce0daa9a74dabc45a10f17",
+    "passed": 6
+  },
+  "retained_v1_tests_passed": 7,
+  "final_report": "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-180.verification.json",
+  "final_report_sha256": "95ff3da2af7e2d64597dc186ee58c7bf216c9d18448246fd308360d4489a0469",
+  "final_passed": true,
+  "archive_timing": "Collected DVC bundle preserves original prelaunch sources and raw outputs. Post-execution verification scripts, reports and this amendment are recorded alongside the RUN in Git."
+}

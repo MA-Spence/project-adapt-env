@@ -1,0 +1,112 @@
+experiment_id: EXP-065
+protocol: trpb_run180_readout_optuna_v1
+input_bundle: data/processed/interaction-strength-exp065-inputs
+source_run: RUN-172
+motivating_analysis: ANA-069
+interaction_ratios:
+- 0
+- 0.5
+- 1
+- 2
+- 4
+- 8
+proteins:
+- TrpB
+seed_design:
+  reused_seeds: All 16 original RUN-172 confirmation seeds per assay
+  fresh_seed_offsets:
+  - 681201
+  - 681202
+  - 681203
+  - 681204
+  - 681205
+  - 681206
+  - 681207
+  - 681208
+  noise_seed_offset: 683001
+  paired_all_ratios: true
+model:
+  interaction_backend: full_pairwise
+  additive_prior: profile
+  representation_rank: null
+  orders:
+  - 2
+  order_weights:
+  - 1.0
+  target_degrees:
+  - 6.0
+  reference_rank: 0.5
+fit:
+  seed: 660501
+  maxiter: 60
+  popsize: 8
+  quantiles: 101
+  offset_bounds:
+  - -2.0
+  - 2.0
+  scale_bounds:
+  - 0.001
+  - 10.0
+  position_bounds:
+  - -14.0
+  - 8.0
+  steepness_bounds:
+  - 0.05
+  - 8.0
+sampling:
+  synthetic_cubes_per_seed: 8
+measurement:
+  relative_resolutions:
+  - 0
+  - 0.001
+  - 0.01
+  top_fraction: 0.01
+observation_modes:
+  TrpB:
+  - none
+  - independent_difference
+  - shared_stop_sensitivity
+interpretation: Restore RUN-180 calibration targets, data, Gaussian profile full-pairwise
+  model, reference policy, parameter bounds, observation modes and post-fit diagnostics.
+  Replace differential evolution with serial Optuna TPE for the four readout parameters
+  at each fixed interaction ratio. Re-evaluate all matching RUN-180 fits as warm starts.
+  This is a protocol rollback, not independent biological validation or an optimizer-efficiency
+  benchmark. No architecture inference or concentration fitting.
+control_run: RUN-175
+endpoint_calibration_run: RUN-172
+additive_prior:
+  bundle: data/processed/trpb-profile-additive-inputs
+  matrix_file: additive_matrix.npy
+  metadata_file: prior_manifest.json
+  matrix_sha256: d5ac4d8724fc753709887afbe5a82a172c47c5a5bf18cc8a13dd1977875f7be3
+  metadata_sha256: 408ffe4a5052fe0d2525ed5c52113381753ba6cfb9fce3d775885648a804abd9
+  source: Original Johnston et al. TARGET_b0.3 published alignment frequency table;
+    rounded to 0.001; raw alignment unusable
+  uniform_probability_mixture: 0.01
+  assay_positions_1based:
+  - 183
+  - 184
+  - 227
+  - 228
+required_worker_environment:
+  python: 3.11.15
+  packages:
+    numpy: 2.4.4
+    pandas: 2.3.0
+    scipy: 1.17.1
+    pyarrow: 20.0.0
+    PyYAML: 6.0.3
+profile_control_run: RUN-178
+profile_control_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/outputs
+profile_control_manifest_sha256: 65a3216c2773cea1b2c7789554df58415a931d15bde317cbd8c807421219c129
+optimizer:
+  sampler: tpe
+  trials: 1952
+  n_startup_trials: 20
+  quick_trials: 8
+warm_start:
+  run: RUN-180
+  bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/outputs
+  manifest_sha256: 4e6829c07c68749557044fd9cd8b8ebd4efa4d09b35bd6356a10c1ed18d7252a
+  policy: Re-evaluate the same-r setting and r0/r4 endpoint settings per observation
+    mode; all consume the trial budget.

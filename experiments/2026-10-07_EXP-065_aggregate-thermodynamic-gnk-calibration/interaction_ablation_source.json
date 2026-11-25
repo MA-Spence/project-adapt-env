@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-11-25T01:02:02.763353+00:00",
+  "files": {
+    "scripts/interaction_ablation_exp065.py": "8916e1e86fdc7c5b3ce686feab863bc2c2d198a102d5510d733376f3fb0086cc",
+    "scripts/interaction_ablation_metrics_exp065.py": "051489f404593ffad20fa87353c7287fbf98ac039b2f8dcf6f2487742f67a42d",
+    "tests/test_interaction_ablation_exp065.py": "9db22acb061d3cabcc1d331a5f8eec4eca8c00dba09a20613d6b61a90e6cbe63",
+    "tests/test_submit_interaction_ablation_slurm.py": "4e86bbad0f1d5c33050eb254028195d9c7ce8d779b8308e65e6040b7b8d8184c",
+    "environment/readout-py311.lock.txt": "164dab4dbdb0dbdee52f17e46d2a2afb7e283a015984279aaa87b12bdd38324e",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation.yaml": "095e1949f4402b507bf01482d3406a2f701dec64fa86319762a7a53953eee939",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation.md": "2a5d1e0f5cdd416e73e243b902a30f54a53993a36ac878091639106349875eed",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_interaction_ablation_slurm.py": "e2b76b7a8f2193eb08919d00bb599c5d946c32569c78959d615919b361965307",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation_slurm_worker.sh": "ddac8d077bde0c213aada4f8e254ca4a021c2b77a2feb2e50588b8e92c881670",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation_validation.json": "410b34debd60cc7889068ed4bbf734855717b4e2768f5587bb3545f2097b83d3"
+  },
+  "baseline": "RUN-186",
+  "baseline_dvc_directory_md5": "172955844a459e413b582b35328a2085.dir",
+  "baseline_outputs_manifest_sha256": "f02b8331489060b28c658ef3aa919a95fca734f81c7b73c5f3a420610b5d2e4c",
+  "baseline_runtime_manifest_sha256": "39960cb6a6cc1ff99302ae1e6ba5ca1b7b38fe14a59b8b617fdeb72545c022d3"
+}

@@ -1,0 +1,458 @@
+{
+  "created_utc": "2026-11-24T08:59:03.599659+00:00",
+  "run": "RUN-186",
+  "job_id": "2355",
+  "queue": "2355 EXP-065RUN-186 RUNNING 0:55 dutch",
+  "worker_environment": {
+    "created_utc": "2026-11-24T08:58:10.171638+00:00",
+    "python": "3.11.15",
+    "executable": "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/bin/python",
+    "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "python_build": [
+      "main",
+      "Mar  5 2026 16:45:40"
+    ],
+    "packages": {
+      "pydantic_core": "2.50.5",
+      "python-dateutil": "4.0.0",
+      "packaging": "26.3",
+      "tzdata": "2026.6",
+      "MarkupSafe": "3.0.4",
+      "pyarrow": "20.0.0",
+      "tqdm": "4.70.1",
+      "Pygments": "2.21.0",
+      "httpcore": "1.0.9",
+      "certifi": "2026.10.23",
+      "PyYAML": "6.0.3",
+      "typing-inspection": "0.4.5",
+      "SQLAlchemy": "2.1.9",
+      "opentelemetry-api": "1.45.2",
+      "alembic": "1.20.1",
+      "pydantic": "2.14.4",
+      "annotated-types": "0.8.0",
+      "anyio": "4.16.0",
+      "pytest": "8.4.2",
+      "typing_extensions": "4.16.0",
+      "starlette": "1.10.0",
+      "pluggy": "1.7.0",
+      "numpy": "2.4.4",
+      "pandas": "2.3.0",
+      "setuptools": "79.0.1",
+      "optuna": "4.9.0",
+      "h11": "0.16.0",
+      "pip": "24.0",
+      "scipy": "1.17.1",
+      "pytz": "2026.6",
+      "colorlog": "6.12.0",
+      "annotated-doc": "0.0.7",
+      "idna": "3.20",
+      "Mako": "1.4.3",
+      "iniconfig": "2.3.1",
+      "fastapi": "0.165.0",
+      "httpx": "0.28.1",
+      "biopython": "1.88"
+    },
+    "environment_lock_sha256": "164dab4dbdb0dbdee52f17e46d2a2afb7e283a015984279aaa87b12bdd38324e",
+    "package_mismatches": {},
+    "prelaunch_manifest_sha256": "39960cb6a6cc1ff99302ae1e6ba5ca1b7b38fe14a59b8b617fdeb72545c022d3",
+    "verified_payload_count": 339,
+    "protocol": "joint-readout-slurm",
+    "historical_control": "RUN-180",
+    "execution_mode": "fresh joint Optuna TPE calibration; no resumed study",
+    "platform_change": "macOS arm64 to Linux x86_64; no bitwise numerical identity claimed",
+    "graph_compiler": {
+      "path": "/tank/data/labproj/runtime/project-adapt-env/tools/graph-compiler/ziglang/zig",
+      "driver": "zig c++",
+      "version": "clang version 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)",
+      "sha256": "7f9e3a661e909d5188d1b8b14f082b98a19c323a30d43bfdd1b2893ed37273e0"
+    },
+    "runtime_controls": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "LABPROJ_RUN_ID": "RUN-186",
+      "SLURM_JOB_ID": "2355",
+      "LABPROJ_OUTPUT_DIR": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-186/outputs"
+    }
+  },
+  "stderr": "",
+  "stdout_tail": "Verified 339 frozen payloads and 36 pinned packages\nStarting joint TrpB Optuna readout calibration; RUN=RUN-186; job=2355\n",
+  "staged_transport_sha256": {
+    "run.sh": "d4861f95f51fee84874fa3f42ab001fcc7cb3530dfa87009719a64f062a3e8dd",
+    "joint_readout_slurm_worker.sh": "ec8f934e1cce6200b2227db6c61ce2d8f8b1ec8849b524cfb6b3a218cd5fee0e",
+    "submit_joint_readout_slurm.py": "ef998fea1993f20eff906e4ec27eaf720c8aa301fda1b42a391453c6f660057f",
+    "joint_readout_runtime.json": "97104cb0e45024b15b84859f2a16b1607edb413983be26394f5861024ece2f0a"
+  },
+  "output_files": [
+    "TrpB_empirical.npz",
+    "TrpB_empirical_cubes.npz",
+    "additive_matrix.npy",
+    "calibration_prior_audit.json",
+    "config.yaml",
+    "fits/TrpB_none_joint_r.sqlite3",
+    "fits/TrpB_none_joint_r.sqlite3-journal",
+    "fits/TrpB_none_joint_r_warm_starts.json",
+    "historical_source_manifest.json",
+    "input_manifest.json",
+    "intervention.json",
+    "kernel_validation.json",
+    "latent_calibration.npz",
+    "latent_calibration_index.csv",
+    "noise/control_diagnostics.csv",
+    "noise/donor_assignments.csv.gz",
+    "noise/noise_calibration.csv",
+    "noise/noise_model.json",
+    "optimizer_environment.json",
+    "prior_manifest.json",
+    "profile_control_manifest.json",
+    "run180_replay.json",
+    "source_manifest.json",
+    "warm_start_manifest.json",
+    "warm_start_parameters.json",
+    "worker_environment.json"
+  ],
+  "studies": [
+    {
+      "file": "fits/TrpB_none_joint_r.sqlite3",
+      "states": {
+        "COMPLETE": 89,
+        "RUNNING": 1
+      },
+      "parameter_names": [
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "r"
+      ],
+      "off_grid_r_count": 83,
+      "first_off_grid_r_values": [
+        0.00699287599486742,
+        0.05662865697726338,
+        0.05689710814195725,
+        0.11157498333864485,
+        0.24365647091342774,
+        0.36061029507607834,
+        0.3621904411757886,
+        0.4120715824285899
+      ]
+    }
+  ],
+  "historical_replay": {
+    "protocol": "trpb_run180_joint_r_readout_optuna_v1",
+    "baseline_run": "RUN-180",
+    "settings": 18,
+    "calibration_latents": "allclose",
+    "latent_tolerance": {
+      "rtol": 1e-13,
+      "atol": 1e-14
+    },
+    "maximum_absolute_latent_difference": {
+      "a": 0.0,
+      "g": 1.3322676295501878e-15
+    },
+    "objective_replays": [
+      {
+        "ratio": 0.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.17145518690746184,
+          "mean_sd": 0.15666755393417525,
+          "floor_cdf": 0.001102447509765625,
+          "total": 0.3292251883514027
+        },
+        "replayed": {
+          "quantile": 0.17145518690746184,
+          "mean_sd": 0.15666755393417525,
+          "floor_cdf": 0.001102447509765625,
+          "total": 0.3292251883514027
+        }
+      },
+      {
+        "ratio": 0.5,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.15143478196470184,
+          "mean_sd": 0.1208490484700521,
+          "floor_cdf": 0.0010385513305664062,
+          "total": 0.2733223817653203
+        },
+        "replayed": {
+          "quantile": 0.15143478196470184,
+          "mean_sd": 0.1208490484700521,
+          "floor_cdf": 0.0010385513305664062,
+          "total": 0.2733223817653203
+        }
+      },
+      {
+        "ratio": 1.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.1186314425709252,
+          "mean_sd": 0.0897620225684456,
+          "floor_cdf": 0.0016031265258789062,
+          "total": 0.2099965916652497
+        },
+        "replayed": {
+          "quantile": 0.1186314425709252,
+          "mean_sd": 0.0897620225684456,
+          "floor_cdf": 0.0016031265258789062,
+          "total": 0.2099965916652497
+        }
+      },
+      {
+        "ratio": 2.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.0995411914121068,
+          "mean_sd": 0.05198675758572017,
+          "floor_cdf": 0.0008020401000976562,
+          "total": 0.1523299890979246
+        },
+        "replayed": {
+          "quantile": 0.0995411914121068,
+          "mean_sd": 0.05198675758572017,
+          "floor_cdf": 0.0008020401000976562,
+          "total": 0.1523299890979246
+        }
+      },
+      {
+        "ratio": 4.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.0882316698861848,
+          "mean_sd": 0.04815335902710372,
+          "floor_cdf": 0.0011682510375976562,
+          "total": 0.13755327995088618
+        },
+        "replayed": {
+          "quantile": 0.0882316698861848,
+          "mean_sd": 0.04815335902710372,
+          "floor_cdf": 0.0011682510375976562,
+          "total": 0.13755327995088618
+        }
+      },
+      {
+        "ratio": 8.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.09095318913404074,
+          "mean_sd": 0.05012581942189241,
+          "floor_cdf": 0.0024805068969726562,
+          "total": 0.1435595154529058
+        },
+        "replayed": {
+          "quantile": 0.09095318913404074,
+          "mean_sd": 0.05012581942189241,
+          "floor_cdf": 0.0024805068969726562,
+          "total": 0.1435595154529058
+        }
+      },
+      {
+        "ratio": 0.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.06537023288888719,
+          "mean_sd": 0.053902816555233976,
+          "floor_cdf": 8.381903171539307e-05,
+          "total": 0.11935686847583656
+        },
+        "replayed": {
+          "quantile": 0.06537023288888719,
+          "mean_sd": 0.053902816555233976,
+          "floor_cdf": 8.381903171539307e-05,
+          "total": 0.11935686847583656
+        }
+      },
+      {
+        "ratio": 0.5,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.05546173795163827,
+          "mean_sd": 0.05143600772313364,
+          "floor_cdf": 1.6227364540100098e-05,
+          "total": 0.10691397303931202
+        },
+        "replayed": {
+          "quantile": 0.05546173795163827,
+          "mean_sd": 0.05143600772313364,
+          "floor_cdf": 1.6227364540100098e-05,
+          "total": 0.10691397303931202
+        }
+      },
+      {
+        "ratio": 1.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.04607214388271967,
+          "mean_sd": 0.04054720523307092,
+          "floor_cdf": 0.000177040696144104,
+          "total": 0.08679638981193469
+        },
+        "replayed": {
+          "quantile": 0.04607214388271967,
+          "mean_sd": 0.04054720523307092,
+          "floor_cdf": 0.000177040696144104,
+          "total": 0.08679638981193469
+        }
+      },
+      {
+        "ratio": 2.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.03240254081737589,
+          "mean_sd": 0.028246703047087082,
+          "floor_cdf": 0.00010019540786743164,
+          "total": 0.060749439272330404
+        },
+        "replayed": {
+          "quantile": 0.03240254081737589,
+          "mean_sd": 0.028246703047087082,
+          "floor_cdf": 0.00010019540786743164,
+          "total": 0.060749439272330404
+        }
+      },
+      {
+        "ratio": 4.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.029442913914694918,
+          "mean_sd": 0.03326485739202522,
+          "floor_cdf": 0.0003672987222671509,
+          "total": 0.0630750700289873
+        },
+        "replayed": {
+          "quantile": 0.029442913914694918,
+          "mean_sd": 0.03326485739202522,
+          "floor_cdf": 0.0003672987222671509,
+          "total": 0.0630750700289873
+        }
+      },
+      {
+        "ratio": 8.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.035215077762462625,
+          "mean_sd": 0.03313283784424634,
+          "floor_cdf": 0.0006140619516372681,
+          "total": 0.06896197755834624
+        },
+        "replayed": {
+          "quantile": 0.035215077762462625,
+          "mean_sd": 0.03313283784424634,
+          "floor_cdf": 0.0006140619516372681,
+          "total": 0.06896197755834624
+        }
+      },
+      {
+        "ratio": 0.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.04124057695393592,
+          "mean_sd": 0.0008135235408087792,
+          "floor_cdf": 2.039968967437744e-05,
+          "total": 0.04207450018441907
+        },
+        "replayed": {
+          "quantile": 0.04124057695393592,
+          "mean_sd": 0.0008135235408087792,
+          "floor_cdf": 2.039968967437744e-05,
+          "total": 0.04207450018441907
+        }
+      },
+      {
+        "ratio": 0.5,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        },
+        "replayed": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        }
+      },
+      {
+        "ratio": 1.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.029800560164746553,
+          "mean_sd": 0.001425851278828095,
+          "floor_cdf": 7.212162017822266e-06,
+          "total": 0.03123362360559247
+        },
+        "replayed": {
+          "quantile": 0.029800560164746553,
+          "mean_sd": 0.001425851278828095,
+          "floor_cdf": 7.212162017822266e-06,
+          "total": 0.03123362360559247
+        }
+      },
+      {
+        "ratio": 2.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.03779516347932997,
+          "mean_sd": 6.900384448756818e-05,
+          "floor_cdf": 1.9311904907226562e-05,
+          "total": 0.037883479228724766
+        },
+        "replayed": {
+          "quantile": 0.03779516347932997,
+          "mean_sd": 6.900384448756818e-05,
+          "floor_cdf": 1.9311904907226562e-05,
+          "total": 0.037883479228724766
+        }
+      },
+      {
+        "ratio": 4.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.05059326298161521,
+          "mean_sd": 0.0013276654456344137,
+          "floor_cdf": 6.295740604400635e-05,
+          "total": 0.051983885833293636
+        },
+        "replayed": {
+          "quantile": 0.05059326298161521,
+          "mean_sd": 0.0013276654456344137,
+          "floor_cdf": 6.295740604400635e-05,
+          "total": 0.051983885833293636
+        }
+      },
+      {
+        "ratio": 8.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.0609329466326516,
+          "mean_sd": 0.002210014049974334,
+          "floor_cdf": 5.187094211578369e-05,
+          "total": 0.06319483162474172
+        },
+        "replayed": {
+          "quantile": 0.060932946632651606,
+          "mean_sd": 0.002210014049974334,
+          "floor_cdf": 5.187094211578369e-05,
+          "total": 0.06319483162474172
+        }
+      }
+    ],
+    "evidence_scope": "Engineering replay; not a new calibration or adequacy result",
+    "ratio_bounds": [
+      0.0,
+      8.0
+    ],
+    "historical_ratios_role": "Warm starts only; no fitting grid"
+  },
+  "local_comparison": {
+    "staged_transport_matches_record": true,
+    "runtime_manifest_matches_record": true,
+    "all_18_historical_objectives_replayed": true,
+    "joint_continuous_r_sampling_observed": true
+  }
+}

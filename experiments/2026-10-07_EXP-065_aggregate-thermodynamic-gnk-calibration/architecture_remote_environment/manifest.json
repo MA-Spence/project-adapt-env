@@ -1,0 +1,19 @@
+{
+  "files": {
+    "calibration-py311.lock.txt": "a62cb4bdff9f216306e5266741c41675a8b518a3e23458dec78fc946ed7200cc",
+    "capture.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "environment.json": "0ffcd45e45ade59cbf416306de90151789dc4c22ce9d7d8c71dabd2739785235",
+    "formatting_correction.json": "702b5bb2e73d333e2bf7573ffbb26e11b726720fd74b3178097e89602a5fa1de",
+    "installation.log": "59c0ea248f8fb3ff0e43ad8a5387f336861d64b897424c25a1befc87c9fae752",
+    "preflight_sources.json": "34e91d3208f547732b1d7b95c1d50e2ee6909ce277d74a190a1643bb95c358af",
+    "provision.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "provision.stdout.txt": "55248c6209c04eca22af755ca7c51303f1d8a50adcc280cd2cee40d8b4506cd9",
+    "provision_environment.py": "fa3fc9e7d406e01278510b015c6e985008d8913a2943c5ddcd3ec31c58ce0955",
+    "provision_formatting_retry.stderr.txt": "c513e333017d8de6e929143fb501e3a5cac39993098bcf051971ebcbd2dcefbe",
+    "staging.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "staging.stdout.txt": "38e26db0f8052845e2abad7ab0ae525b7a9ad6b210667e7b3196a71ef31bc075"
+  },
+  "remote_environment": "/tank/data/labproj/runtime/project-adapt-env/envs/architecture-0.7.0rc1-py311",
+  "source_run": "RUN-182",
+  "source_snapshot": ".labproj/local-preparations/architecture-20261121T013859Z-fxagfbej"
+}

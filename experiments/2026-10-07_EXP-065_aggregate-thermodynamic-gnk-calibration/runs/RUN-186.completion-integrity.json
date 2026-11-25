@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-11-24T23:04:52.557703+00:00",
+  "run": "RUN-186",
+  "manifest_sha256": "f02b8331489060b28c658ef3aa919a95fca734f81c7b73c5f3a420610b5d2e4c",
+  "output_files_checked": 86,
+  "all_manifest_files_match": true,
+  "failed_files": [],
+  "manifest_modified_utc": "2026-11-24T16:42:18.407346+00:00",
+  "exit_code_modified_utc": "2026-11-24T16:42:18.723344+00:00",
+  "scientific_elapsed_seconds": 27846.891845153004,
+  "scope": "Execution completion and manifest-integrity check, not independent scientific adequacy analysis."
+}

@@ -1,0 +1,64 @@
+experiment_id: EXP-065
+protocol: trpb_shared_stop_gamma_concentration_v1
+baseline_run: RUN-188
+baseline_manifest_sha256: c40c6d47a7814bd149d07735254a2ce69cd1d70c6ae33058988a0470e9d8c306
+motivating_analysis: ANA-073
+arms:
+- r0
+- full
+- gamma
+observation: shared_stop_sensitivity
+ratio_bounds:
+- 0.0
+- 8.0
+interaction_concentration: fitted
+fit:
+  seed: 660501
+  maxiter: 60
+  popsize: 8
+  quantiles: 101
+  offset_bounds:
+  - -2.0
+  - 2.0
+  scale_bounds:
+  - 0.001
+  - 10.0
+  position_bounds:
+  - -14.0
+  - 8.0
+  steepness_bounds:
+  - 0.05
+  - 8.0
+model:
+  interaction_backend: full_pairwise
+  additive_prior: profile
+  representation_rank: null
+  orders:
+  - 2
+  order_weights:
+  - 1.0
+  target_degrees:
+  - 6.0
+  reference_rank: 0.5
+measurement:
+  relative_resolutions:
+  - 0
+  - 0.001
+  - 0.01
+  top_fraction: 0.01
+optimizer:
+  sampler: tpe
+  trials: 11712
+  n_startup_trials: 20
+  quick_trials: 24
+  seed: 58459495
+interpretation: Joint Gamma concentration, continuous r and four readout coordinates
+  using unchanged RUN-180 direct fitness loss, frozen RUN-186 shared-stop observation
+  law and RUN-188 confirmation diagnostics. Gaussian/full and r0 controls reused without
+  refitting. Same panels and seeds; previously inspected confirmation data are not
+  new empirical validation. User accepts observation noise as an experimental modeling
+  assumption; this does not identify shared covariance as measurement error. Finite
+  alpha is not exactly Gaussian. No model default promotion or ML/search tasks.
+concentration_bounds:
+- 0.05
+- 100.0

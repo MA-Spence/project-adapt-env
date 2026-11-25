@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-11-24T08:56:33.936864+00:00",
+  "status": "pre_submission_checks_passed",
+  "scope": "Engineering validation only; production calibration has not run yet.",
+  "runtime": {
+    "runtime_bundle": "data/processed/trpb-joint-readout-slurm-runtime",
+    "manifest_sha256": "39960cb6a6cc1ff99302ae1e6ba5ca1b7b38fe14a59b8b617fdeb72545c022d3",
+    "payload_count": 339,
+    "source_manifest_sha256": "56bf7dbd253bd94ef15b36d939a5a89f7c0234cd4f65b72950d360bdff822df5"
+  },
+  "tests": {
+    "passed": 114,
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=\"$PWD/.labproj/envs/trpb-py31115/lib/python3.11/site-packages\" .labproj/envs/indirect-py311/bin/python -m pytest -q tests/test_optuna_joint_readout_exp065.py tests/test_optuna_readout_exp065.py tests/test_optuna_pairwise_calibration_exp065.py tests/test_optuna_joint_pairwise_calibration_exp065.py tests/test_pairwise_calibration_exp065.py tests/test_submit_joint_readout_slurm.py",
+    "scope": "Final source after roundoff-audit amendment; continuous sampling, objective equivalence, protected warm starts, unchanged model, validation and submission restoration."
+  },
+  "local_smoke": {
+    "status": "complete",
+    "selected_settings": 3,
+    "confirmation_seeds": 2,
+    "trials_per_mode": 8,
+    "evidence": "joint_readout_remote_environment/local_smoke",
+    "source_scope": "Pre-roundoff-amendment snapshot; final amendment changes replay acceptance tolerance only, covered by final tests and full Linux preflight. This is not production performance evidence."
+  },
+  "remote_preflight": {
+    "host": "dutch",
+    "frozen_payloads_verified": 339,
+    "package_pins_verified": 36,
+    "historical_objectives_replayed": 18,
+    "maximum_objective_component_difference": 6.938893903907228e-18,
+    "maximum_calibration_latent_difference": {
+      "a": 0.0,
+      "g": 1.3322676295501878e-15
+    },
+    "latent_tolerance": {
+      "rtol": 1e-13,
+      "atol": 1e-14
+    },
+    "objective_tolerance": {
+      "rtol": 1e-12,
+      "atol": 1e-14
+    },
+    "kernel_validation": "joint_readout_remote_environment/graph_preflight/kernel_validation.json",
+    "evidence": "joint_readout_remote_environment/final_preflight.log"
+  },
+  "storage_verification": "joint_readout_slurm_storage.json",
+  "limitations": [
+    "Fixed trial budget is not proof of optimization convergence.",
+    "Previously inspected confirmation panels are reused; this is not independent biological validation.",
+    "Warm starts protect calibration loss per observation mode, not confirmation metrics.",
+    "Linux and macOS differ by measured floating-point roundoff; no model values are replaced or rounded.",
+    "Gamma concentration remains disabled and alpha is not optimized."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "run": "RUN-182",
+  "preview": "RUN-181",
+  "target": "local",
+  "status": "running",
+  "prelaunch_snapshot": ".labproj/local-preparations/architecture-20261121T013859Z-fxagfbej",
+  "supervisor_state": ".labproj/local-preparations/architecture-20261121T013859Z-fxagfbej/supervisor_state.json",
+  "checks": {
+    "output_config_matches_frozen": true,
+    "method_source_files_verified": 18,
+    "initial_input_hashes_verified": 2,
+    "project_overlay_restored": true
+  },
+  "calibration": {
+    "system": "TrpB",
+    "genotypes": 8192,
+    "replicates": 2,
+    "trials": 100,
+    "calibration_seeds": 4,
+    "confirmation_genotypes": 8192,
+    "confirmation_seeds": 4
+  },
+  "preparation_bundle": "data/processed/trpb-architecture-calibration-preparation",
+  "durability": "Input/preparation bundles tracked and backed up; outputs collected after termination, then DVC tracking remains pending.",
+  "completion_claim": false,
+  "startup_artifacts_written_utc": "2026-11-21T01:39:04.778798+00:00",
+  "record_checks": {
+    "strict_refresh_exit_code": 0,
+    "strict_check_exit_code": 0,
+    "compliance": {
+      "green": 376,
+      "yellow": 22,
+      "red": 0
+    },
+    "whitespace_check_passed": true
+  }
+}

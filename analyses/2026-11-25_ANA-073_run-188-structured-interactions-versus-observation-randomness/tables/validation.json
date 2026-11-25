@@ -1,0 +1,17 @@
+{
+  "outputs_verified": 41,
+  "frozen_payloads_verified": 460,
+  "trials_verified": 23424,
+  "seeds_verified": 24,
+  "observation_arm_replays": 48,
+  "maximum_observation_replay_difference": 0.0,
+  "independent_cube_power_replay": true,
+  "independent_observed_face_classification_replay": true,
+  "exact_power_budget_identity": true,
+  "known_answer_controls_pass": true,
+  "full_setting_equal_RUN186": true,
+  "primary_seeds": 8,
+  "empirical_cubes": 32,
+  "refitting": false,
+  "new_random_draws": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "tracked_and_local_cache_verified",
+  "version": "0.6.0rc1",
+  "unpublished": true,
+  "pointer": "data/processed/model-release-candidates/0.6.0rc1.dvc",
+  "directory_md5": "8455025ac2eed234d5d4cc63938e8a09.dir",
+  "files": 64,
+  "bytes": 488394,
+  "unique_cache_objects_verified": 64,
+  "remote_backup": "not_attempted_this_turn; local_archive_only",
+  "scope": "Locked source/docs/tests, historical replay fixture, engineering smoke check, clean wheel and verification artifacts. Storage sidecar is outside archive to avoid circular identity.",
+  "cache_note": "DVC site-state cache redirected to .dvc/tmp/pairwise-candidate-site-cache after default database was unavailable."
+}

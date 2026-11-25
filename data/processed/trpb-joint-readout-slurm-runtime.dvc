@@ -1,0 +1,6 @@
+outs:
+- md5: 3df26d5e72e745ba2f6dbe1eb18d0661.dir
+  size: 119273775
+  nfiles: 340
+  hash: md5
+  path: trpb-joint-readout-slurm-runtime

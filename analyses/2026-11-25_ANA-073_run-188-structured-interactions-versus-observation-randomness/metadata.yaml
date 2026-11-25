@@ -1,0 +1,105 @@
+id: ANA-073
+title: RUN-188 structured interactions versus observation randomness
+status: completed
+created: '2026-11-25T15:49:15+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-188
+purpose: Quantify how apparent epistasis changes between refitted r=0 and nonzero-r
+  TrpB models, separating intrinsic sigmoid-transformed structure from frozen shared-stop
+  observation randomness, using reproducible figures and an executed notebook.
+path: analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness
+notebook_record:
+  primary_notebook_path: analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-188
+  produced_artifacts:
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/01_calibration_and_sign_epistasis.pdf
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/01_calibration_and_sign_epistasis.png
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/02_independent_and_shared_noise.pdf
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/02_independent_and_shared_noise.png
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/03_exact_power_accounting.pdf
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/03_exact_power_accounting.png
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/04_repeatable_interaction_power.pdf
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/04_repeatable_interaction_power.png
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/05_activity_strata.pdf
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/05_activity_strata.png
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/06_resolution_sensitivity.pdf
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/06_resolution_sensitivity.png
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/activity_coverage.csv
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/analysis_environment.json
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/artifact_validation.json
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/calibration.csv
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/cohort_summary.csv
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/cube_powers_recomputed.csv.gz
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/face_signs_recomputed.csv.gz
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/key_numbers.json
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/noise_created_signs.csv
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/notebook_execution.log
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/paired_error_summary.csv
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/paired_model_contrasts.csv
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/power_budget_fresh_pooled.csv
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/power_decomposition.csv.gz
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/project_record_checks.json
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/seed_layer_stratum_summary.csv
+  - analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/validation.json
+compliance:
+  level: green
+  issues: []
+inputs:
+  run_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-188
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-188.dvc
+  run_directory_md5: 1353108408df113b65306098fe4671c5.dir
+  run_manifest_sha256: c40c6d47a7814bd149d07735254a2ce69cd1d70c6ae33058988a0470e9d8c306
+  comparison: RUN-188 refitted r0 versus selected full r=0.5; full setting equals
+    RUN-186 shared-stop
+  run_storage_verification: run_storage_verification.json
+  mutable_package_code_used: false
+assessment:
+  scope: Previously exposed four-site TrpB panels; achieved fits under fixed shared-stop
+    sensitivity
+  sign_epistasis: Noise supplies most observed sign-epistatic faces; r0 reaches 62.5%,
+    full 64.1%, empirical 65.1% at primary resolution
+  full_observed_sign_faces_absent_intrinsically:
+    primary_median: 0.9044444444444444
+    zero_threshold_median: 0.7230298607992816
+    coarser_threshold_median: 0.9825581395348837
+  power: Intrinsic after-sigmoid component supplies most pooled order2 power; shared
+    noise dominates order4 pure-error power
+  repeatability: Shared error can create reproducible reversals; repeatability is
+    not uniquely biological
+  calibration_loss_reduction: 0.2633265375419883
+  unfitted_full_model_advantage: 'Mixed: paired order3 improvement, no uniform sign/power
+    superiority'
+  biological_noise_fraction_identified: false
+  new_independent_empirical_validation: false
+  model_defaults_changed: false
+  new_result_or_claim_created: false
+  graduation: No promotion; observed ruggedness is not established as principally
+    r-controlled
+reproducibility:
+  notebook: notebooks/analysis.ipynb
+  paired_source: notebooks/analysis.py
+  runner: notebooks/execute.py
+  requirements: notebooks/requirements.txt
+  environment_lock: notebooks/environment.lock.txt
+  python: 3.11.15
+  figures: 6
+  executed_code_cells: 11
+  validation: tables/validation.json
+  artifact_validation: tables/artifact_validation.json
+  no_refitting: true
+  new_noise_draws: false
+  intermediate_layers: Algebraic removal of saved noise components with observed activity
+    membership held fixed within arm
+  primary_seeds: 8
+  all_seeds: 24
+archive:
+  bundle: data/processed/aggregate-thermodynamic-gnk-calibration/ANA-073
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/ANA-073.dvc
+  storage_verification: storage_verification.json
+  sidecar_excluded_from_archive: true

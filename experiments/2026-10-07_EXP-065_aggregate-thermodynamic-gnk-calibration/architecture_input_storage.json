@@ -1,0 +1,16 @@
+{
+  "pointer": "data/processed/trpb-architecture-calibration-inputs.dvc",
+  "directory_md5": "a0e1a701a8f07de40cb157c35252cd39.dir",
+  "storage": {
+    "local": {
+      "objects_verified": 20,
+      "payload_files": 19,
+      "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/.dvc/cache/files/md5"
+    },
+    "remote": {
+      "objects_verified": 20,
+      "payload_files": 19,
+      "root": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data/files/md5"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "checked_utc": "2026-11-25T10:25:36.120641+00:00",
+  "executed_code_cells": 10,
+  "errors": 0,
+  "figures_visually_reviewed": [
+    "01_calibration.png",
+    "02_fitness_and_diminishing_returns.png",
+    "03_epistasis.png",
+    "04_repeatable_architecture.png",
+    "05_static_difficulty.png",
+    "06_latent_concentration.png",
+    "07_paired_comparison.png"
+  ],
+  "pdf_count": 7,
+  "legibility": "All seven figures inspected; optimizer annotation and paired-contrast tick spacing refined and rerun",
+  "files": {
+    "figures/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "figures/01_calibration.pdf": "c0b048ebd9079dc89fa493a53606aea07ffb0dfe2216ac536be97b43e0f67c7f",
+    "figures/01_calibration.png": "2315037ded4e6bf356dba7c7c60e840798ccd94728884d0e903dbbaf56aa44ed",
+    "figures/02_fitness_and_diminishing_returns.pdf": "7852c39a240f351823c2e8d6b5aa390a2b1a63fb7d3f4cfe8a827420af9e15ea",
+    "figures/02_fitness_and_diminishing_returns.png": "f8645f9c49aea2c204b588f2a2eab57aeb1657d5ac4d8a4e793aea034dcd315e",
+    "figures/03_epistasis.pdf": "a6cf4632beec03b7e422e9f188fa158c248e94287dfc9893f4d8d574e81460ea",
+    "figures/03_epistasis.png": "77520ee7baaea861559f89bc7954787d0ac5014cf3bc79a10e67165f33fbe87e",
+    "figures/04_repeatable_architecture.pdf": "30838452bbedcf3d55d5e13b567746bcb3b78b13ce86e55b93251665afc9d3eb",
+    "figures/04_repeatable_architecture.png": "bde7f7e856edaca136169c9caad3b862736e4717fd3fa522f2c096194a8d6848",
+    "figures/05_static_difficulty.pdf": "b03def6a75ef16dc64fd8bfd05a0a26d7fd3e1eb9375ca58274295418933dd8a",
+    "figures/05_static_difficulty.png": "b7442311296b3ae77d89a09af9ec16debf2521c80a659a1e8cd8ff78de73e836",
+    "figures/06_latent_concentration.pdf": "adabef1b4ee16ce0ff428e9fce8fd5b3c2edd0c55837cbc1d77cc779890e1cc8",
+    "figures/06_latent_concentration.png": "60fb3efac9606579e3096b66b47ad1bcaa0f7155cb2f2b6f410c96918121ace1",
+    "figures/07_paired_comparison.pdf": "6f9940db07741ac39deddc89b464f5b93fc1ff38b8ad47162186263ed4e7f075",
+    "figures/07_paired_comparison.png": "0f1558ac8e37165d00776fe613cb6a8be10b6bf4c942f7d1fdd866352d169fc8"
+  }
+}

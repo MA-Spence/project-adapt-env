@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-25T05:05:28.896280+00:00",
+  "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/ANA-073.dvc",
+  "directory_md5": "db9ebad521727aeadb990c53f820214c.dir",
+  "archive_manifest_sha256": "00baa750da3c9eeba72df73df852cee50965e62b1bf176c824a39e07c3e8b46e",
+  "storage": {
+    "local": {
+      "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/.dvc/cache/files/md5",
+      "objects_verified": 41,
+      "payload_files": 42,
+      "all_md5_verified": true
+    },
+    "remote": {
+      "root": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data/files/md5",
+      "objects_verified": 41,
+      "payload_files": 42,
+      "all_md5_verified": true
+    }
+  },
+  "canonical_analysis_matches_archived_payloads": true,
+  "sidecar_excluded_from_archive": true
+}

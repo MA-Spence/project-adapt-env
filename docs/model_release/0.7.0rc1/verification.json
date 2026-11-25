@@ -1,0 +1,28 @@
+{
+  "version": "0.7.0rc1",
+  "status": "unpublished_implementation_candidate",
+  "empirical_calibration_executed": false,
+  "source_and_cli": {
+    "tests": 239,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "installed_wheel": {
+    "tests": 228,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "wheel_sha256": "79e0329d2a9f94dd1e062c8b2cbd2c85cb143c09056ac3152c1e6f8d778ab5d5",
+  "wheel_bytes": 68532,
+  "same_interpreter_historical_replay_cases": 28,
+  "py311_full_suite_initial_result": {
+    "passed": 229,
+    "failed": 7,
+    "failure_reason": "Historical Python3.13 ranked fingerprint fixtures differ under Python3.11 float-sum semantics; same frozen source does too. Original fixtures unmodified and all pass in3.13."
+  },
+  "protocol": "docs/calibration/README.md",
+  "new_objective": "fixed-weight inferred-versus-inferred architecture minimum distance",
+  "inference_anchor": "https://github.com/JoeThorntonLab/RFA/blob/7a1a8725315a027d9563f6d9b12749174cffefc0/Scripts/RFA-functions.R"
+}

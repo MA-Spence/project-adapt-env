@@ -1,0 +1,28 @@
+{
+  "run": "RUN-184",
+  "scheduler_job_id": "2325",
+  "checked_utc": "2026-11-23T23:37:36.136592+00:00",
+  "scheduler_state": "RUNNING",
+  "node": "dutch",
+  "started_local": "2026-11-24T09:43:36+11:00",
+  "elapsed_at_queue_check": "00:53:10",
+  "queue_checked_utc": "2026-11-23T23:36:46.243453+00:00",
+  "worker_pid": 3090650,
+  "worker_state": "R",
+  "cpu_percent_over_two_seconds": 98.98815022729481,
+  "rss_kib": 112600,
+  "threads": 1,
+  "cpu_seconds_accumulated": 3236.2,
+  "startup_verification": "152 frozen payloads and 31 pinned dependencies verified by worker",
+  "stderr_bytes": 0,
+  "output_files": [
+    "config.json",
+    "confirmation_inputs.npz",
+    "inputs.npz",
+    "provenance.json"
+  ],
+  "stage_interpretation": "Empirical fit or one of 20 bootstrap auxiliary fits; exact substage is not observable. No empirical_architecture.json or study.sqlite3 yet, so Optuna search has not started.",
+  "progress_limit": "Frozen implementation emits no intermediate empirical/bootstrap progress; CPU use demonstrates active computation but does not establish convergence or completion percentage.",
+  "scheduler_usage_limit": "sstat returned an invalid-looking CPU duration and blank RSS; direct worker process counters used instead.",
+  "scientific_result": "not_yet_available"
+}

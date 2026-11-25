@@ -1,0 +1,14 @@
+{
+  "python": "3.11.15",
+  "packages": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.0",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.9",
+    "nbformat": "5.10.4",
+    "nbclient": "0.10.2",
+    "ipykernel": "6.29.5",
+    "PyYAML": "6.0.3"
+  },
+  "inputs_manifest_sha256": "778234f248075facda9b291d1a0fa453278f22d41e5ebb0ec4e8aa98486d1a88"
+}

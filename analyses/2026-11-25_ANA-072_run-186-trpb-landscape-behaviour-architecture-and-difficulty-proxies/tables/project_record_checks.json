@@ -1,0 +1,21 @@
+{
+  "analysis": "ANA-072",
+  "commands": [
+    {
+      "command": "labproj check --strict",
+      "exit_code": 0,
+      "log_during_execution": "/tmp/ana072-prearchive-check.log"
+    },
+    {
+      "command": "labproj analysis complete ANA-072",
+      "exit_code": 0,
+      "log_during_execution": "/tmp/ana072-complete.log"
+    },
+    {
+      "command": "labproj refresh --write --strict",
+      "exit_code": 0,
+      "log_during_execution": "/tmp/ana072-final-refresh.log"
+    }
+  ],
+  "scope": "Project record checks pass. Pre-existing durable-data/hypothesis warnings and expected completed-ANA-without-result warning are not evidence failures; no new result authorized. Execution logs are transient; notebook and numeric audit logs are archived separately."
+}

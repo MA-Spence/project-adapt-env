@@ -1,0 +1,9 @@
+{
+  "run": "RUN-182",
+  "reason": "Scientist requested stopping the local job and moving the unchanged calibration to the remote Slurm queue.",
+  "requested_at_utc": "2026-11-21T01:43:33.314957+00:00",
+  "pid": 59267,
+  "verified_command": "/Users/matthewspence/Documents/Documents/project-adapt-env/.labproj/envs/indirect-py311/bin/python /Users/matthewspence/Documents/Documents/project-adapt-env/.labproj/local-preparations/architecture-20261121T013859Z-fxagfbej/source/scripts/calibrate_architecture.py --input /Users/matthewspence/Documents/Documents/project-adapt-env/.labproj/local-preparations/architecture-20261121T013859Z-fxagfbej/inputs/trpb-architecture-calibration-inputs/calibration.npz --confirmation /Users/matthewspence/Documents/Documents/project-adapt-env/.labproj/local-preparations/architecture-20261121T013859Z-fxagfbej/inputs/trpb-architecture-calibration-inputs/confirmation.npz --config /Users/matthewspence/Documents/Documents/project-adapt-env/.labproj/local-preparations/architecture-20261121T013859Z-fxagfbej/source/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_calibration.json --output /Users/matthewspence/Documents/Documents/project-adapt-env/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/outputs/RUN-182",
+  "signal": "SIGTERM",
+  "restart_policy": "Fresh remote RUN with identical scientific source/configuration/inputs; no unsupported study resume."
+}

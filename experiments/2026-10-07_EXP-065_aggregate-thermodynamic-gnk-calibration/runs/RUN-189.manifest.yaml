@@ -1,0 +1,59 @@
+run: RUN-189
+target: lab-slurm
+experiment: EXP-065
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration
+  run_script: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - PROJECT_STATE.md
+  - docs/hypotheses.md
+  - environment/readout-py311.lock.txt
+  - data/processed/trpb-gamma-concentration-slurm-runtime.dvc
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/metadata.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_runtime.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_validation.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_slurm_storage.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_gamma_concentration_slurm.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_slurm_worker.sh
+  datasets:
+  - data/processed/trpb-gamma-concentration-slurm-runtime
+outputs:
+  expected:
+  - manifest.json
+  - config.yaml
+  - input_audit.json
+  - environment.json
+  - selected_parameters.json
+  - fits
+  - empirical_replicates.npz
+  - confirmation
+  - cube_powers.csv.gz
+  - face_reproducibility.csv.gz
+  - replicate_summary.csv
+  - static_graph_summary.csv
+  - seed_audit.csv
+  - run186_confirmation_replay.json
+  - latent_calibration.npz
+  - latent_fields
+  - cube_summary.csv.gz
+  - fitness_distribution.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-189/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-189
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-189/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-189/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-189
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-189/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-189/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-189.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

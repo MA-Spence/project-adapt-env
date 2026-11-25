@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-25T05:30:09.496400+00:00",
+  "files": {
+    "scripts/gamma_concentration_exp065.py": "be70d96c759cd737fe19e6837f99ddf02cede1ce93464780e41d349c953e817a",
+    "scripts/interaction_ablation_exp065.py": "8916e1e86fdc7c5b3ce686feab863bc2c2d198a102d5510d733376f3fb0086cc",
+    "scripts/interaction_ablation_metrics_exp065.py": "051489f404593ffad20fa87353c7287fbf98ac039b2f8dcf6f2487742f67a42d",
+    "tests/test_gamma_concentration_exp065.py": "014cd92f8f162fa5bd23b139b55479333b0efc269066f0c3594477265c67d62b",
+    "tests/test_submit_gamma_concentration_slurm.py": "0b2501be3a47d0d55dd3451bcd156e18eb9340d2c3dee0c0274865c4b87bf850",
+    "tests/test_interaction_ablation_exp065.py": "9db22acb061d3cabcc1d331a5f8eec4eca8c00dba09a20613d6b61a90e6cbe63",
+    "environment/readout-py311.lock.txt": "164dab4dbdb0dbdee52f17e46d2a2afb7e283a015984279aaa87b12bdd38324e",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration.yaml": "f802c1f35eb108cd83d5184fb323089bb099e03846de98033f5baacdbb539a83",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration.md": "9cd819e5c2f205be860f9f1b53d09b755df277125bb353065e97a92d411fba6c",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_validation.json": "a83742addc44d792b78845d730b282cdae900e045f9051823034bc4a62e3a6a0",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_gamma_concentration_slurm.py": "1bb33c271cfc8ff6470d834b291ec6e54ae8a24392d20f0ff69856010f566658",
+    "experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_slurm_worker.sh": "d8383fe1d8bb3d8e9d00092fd51d74b5a3fa85e53b425b9bec7a6f849064844f"
+  },
+  "baseline": "RUN-188",
+  "baseline_dvc_directory_md5": "1353108408df113b65306098fe4671c5.dir",
+  "baseline_outputs_manifest_sha256": "c40c6d47a7814bd149d07735254a2ce69cd1d70c6ae33058988a0470e9d8c306",
+  "baseline_runtime_manifest_sha256": "b2f9eccfa6b19446259c9915c23a822e28a37d86b430cce336cb85f3c10b66c1"
+}

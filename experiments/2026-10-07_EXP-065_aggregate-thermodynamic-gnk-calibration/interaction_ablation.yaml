@@ -1,0 +1,61 @@
+experiment_id: EXP-065
+protocol: trpb_shared_stop_pairwise_ablation_v1
+baseline_run: RUN-186
+baseline_manifest_sha256: f02b8331489060b28c658ef3aa919a95fca734f81c7b73c5f3a420610b5d2e4c
+motivating_analysis: ANA-072
+arms:
+- r0
+- full
+observation: shared_stop_sensitivity
+ratio_bounds:
+- 0.0
+- 8.0
+interaction_concentration: null
+fit:
+  seed: 660501
+  maxiter: 60
+  popsize: 8
+  quantiles: 101
+  offset_bounds:
+  - -2.0
+  - 2.0
+  scale_bounds:
+  - 0.001
+  - 10.0
+  position_bounds:
+  - -14.0
+  - 8.0
+  steepness_bounds:
+  - 0.05
+  - 8.0
+model:
+  interaction_backend: full_pairwise
+  additive_prior: profile
+  representation_rank: null
+  orders:
+  - 2
+  order_weights:
+  - 1.0
+  target_degrees:
+  - 6.0
+  reference_rank: 0.5
+measurement:
+  relative_resolutions:
+  - 0
+  - 0.001
+  - 0.01
+  top_fraction: 0.01
+optimizer:
+  sampler: tpe
+  trials: 11712
+  n_startup_trials: 20
+  quick_trials: 8
+  seed: 58459495
+interpretation: Matched profile-additive sigmoid r0 control versus fitted full-pairwise
+  r on [0,8], under exactly the frozen shared-stop noise law. Independently refit
+  readouts using unchanged RUN-180 loss. Equal new trial budgets; null winner included
+  as a full-model candidate. Primary unfitted diagnostics are absolute cross-replicate
+  interaction powers and replicate-consistent sign reversals; activity strata and
+  intrinsic/observed layers retained. Previously inspected TrpB panels and seeds are
+  reused; shared covariance is not identified as biological or measurement variation.
+  No ML/search tasks, Gamma fitting, package promotion or new empirical validation.

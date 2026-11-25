@@ -1,0 +1,6 @@
+outs:
+- md5: a0e1a701a8f07de40cb157c35252cd39.dir
+  size: 90100271
+  nfiles: 19
+  hash: md5
+  path: trpb-architecture-calibration-inputs

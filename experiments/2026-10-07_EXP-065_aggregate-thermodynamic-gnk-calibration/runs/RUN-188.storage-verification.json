@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-11-25T05:01:07.316811+00:00",
+  "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-188.dvc",
+  "directory_md5": "1353108408df113b65306098fe4671c5.dir",
+  "storage": {
+    "local": {
+      "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/.dvc/cache/files/md5",
+      "objects_verified": 460,
+      "payload_files": 523,
+      "all_md5_verified": true
+    },
+    "remote": {
+      "root": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data/files/md5",
+      "objects_verified": 460,
+      "payload_files": 523,
+      "all_md5_verified": true
+    }
+  }
+}

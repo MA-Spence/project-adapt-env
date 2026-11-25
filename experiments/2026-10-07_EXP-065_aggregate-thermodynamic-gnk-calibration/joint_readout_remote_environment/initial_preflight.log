@@ -1,0 +1,37 @@
+Verified 339 frozen payloads and 36 pinned packages
+Traceback (most recent call last):
+  File "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/preparation/runtime/source/scripts/optuna_joint_pairwise_calibration_exp065.py", line 129, in <module>
+    main()
+  File "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/preparation/runtime/source/scripts/optuna_joint_pairwise_calibration_exp065.py", line 112, in main
+    report = preflight(yaml.safe_load(args.config.read_text()), args.data_root,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/preparation/runtime/source/scripts/optuna_joint_pairwise_calibration_exp065.py", line 44, in preflight
+    report = rollback.preflight(historical_projection(config), data, baseline_root,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/preparation/runtime/source/scripts/optuna_pairwise_calibration_exp065.py", line 129, in preflight
+    return audit_calibration(ca, cg, target, banks, origin, scale, floor, config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/preparation/runtime/source/scripts/optuna_pairwise_calibration_exp065.py", line 70, in audit_calibration
+    np.testing.assert_array_equal(cg, old["g"])
+  File "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 1121, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 91 / 1024 (8.89%)
+First 5 mismatches are at indices:
+ [16, 0]: -1.851050520934412 (ACTUAL), -1.8510505209344115 (DESIRED)
+ [16, 1]: -1.119363196872139 (ACTUAL), -1.1193631968721387 (DESIRED)
+ [16, 2]: -3.105947882442749 (ACTUAL), -3.1059478824427487 (DESIRED)
+ [16, 3]: -2.58399403852172 (ACTUAL), -2.5839940385217197 (DESIRED)
+ [16, 4]: -1.4288506527202613 (ACTUAL), -1.4288506527202611 (DESIRED)
+Max absolute difference among violations: 1.33226763e-15
+Max relative difference among violations: 6.93361432e-15
+ ACTUAL: array([[ 0.410631, -0.226136,  0.020185, ..., -2.597048, -0.820392,
+        -2.727124],
+       [-1.430194, -0.969168, -0.717562, ..., -1.074833, -1.043928,...
+ DESIRED: array([[ 0.410631, -0.226136,  0.020185, ..., -2.597048, -0.820392,
+        -2.727124],
+       [-1.430194, -0.969168, -0.717562, ..., -1.074833, -1.043928,...

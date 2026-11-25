@@ -1,0 +1,228 @@
+experiment_id: EXP-067
+protocol_version: 1
+status: planned
+execution_ready: false
+readiness:
+  benchmark_implemented: false
+  counter_contract_frozen: false
+  isolated_environment_locked: false
+  correctness_gates_passed: false
+  host_and_resource_monitor_frozen: false
+notation:
+  n: 'q**L: all possible complete sequences'
+  Q: number of sequences actually queried
+  B: number of input rows per public call
+  length_relation: L=log_q(n)
+  scaling_axis: L; annotate log10(n)=L*log10(q)
+source:
+  package: Adapt-Env
+  version: 0.5.0rc1
+  unpublished: true
+  commit: 745c00b3a369da33e7d7c7b9850ccbc212fac714
+  release_manifest: docs/model_release/0.5.0rc1/manifest.json
+  release_manifest_sha256: d2613f5d93a4ef065ba426467f129a4d44188934b13a094b6a16dd0a3dfb064b
+  profile_file: external/Adapt-Env/adaptenv/trpb_profile_run178.json
+  profile_file_sha256: 88a81792b4d481785d8f6b1301a09a1f8d01da91be2bed7f2fda4154a3ee3634
+model:
+  alphabet_size: 20
+  dtype: float64
+  input_dtype: int64
+  lengths:
+  - 32
+  - 128
+  - 512
+  - 1024
+  orders:
+  - 2
+  - 3
+  - 4
+  order_weights:
+  - 0.35
+  - 0.45
+  - 0.2
+  target_degrees:
+  - 6.0
+  - 11.0
+  - 7.0
+  representation_rank: 8
+  interaction_ratio: 0.5
+  steepness: 0.5
+  reference_occupancy: 0.5
+  reference_rank: 0.5
+  fitness_min: 0.0
+  fitness_max: 1.0
+  batch_size: 4096
+  additive_prior: profile
+  runtime_noise: false
+  profile_fixture:
+    rule: 'new frequency array: source_rows[site_index % 4]; converter rows=None'
+    uniform_mixture: 0.01
+    source_alphabet: -ACDEFGHIKLMNPQRSTVWY
+    biological_scope: tiled four-site TrpB profile; computational fixture only
+  reference_policy: unchanged seeded computational anchor; shared across arms
+arms:
+  A:
+    name: factorized
+    implementation: frozen public Adapt-Env API
+    normalization: exact realized mutation RMS
+  B:
+    name: exact_expanded_tables
+    same_map_as: A
+    expansion: per-support tensor outer products
+    setup_charges:
+    - A common construction
+    - expansion
+    release_unneeded_factor_buffers: true
+  C:
+    name: conventional_gnk_tables
+    same_map_as: D
+    local_entry_distribution: counter-based pseudonormal
+    normalization: ensemble-expected
+    table_fill: batched counters, bounded scratch
+  D:
+    name: counter_gnk
+    same_map_as: C
+    local_entry_cache: false
+    normalization: ensemble-expected
+    current_sequence_index_value_cache_allowed: true
+counter_contract:
+  status: must be frozen and independently tested before any production timing
+  permitted_families:
+  - Random123 Philox
+  - Random123 Threefry
+  algorithm_rounds_backend: null
+  counter_packing: null
+  gaussian_transform: null
+  coefficient_per_order: sqrt(L*w_k/(2*k*M_k))
+  interaction_units: multiply unit-expected-RMS field by sigma_A before shared readout
+  claim: finite pseudorandom prescription, not unrestricted iid Gaussian ensemble
+replication:
+  field_seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  fresh_process_repetitions: 3
+  timed_workers: 480
+  execution: sequential
+  compute_threads: 1
+  arm_order: rotate [A,B,C,D] left by (seed+repetition)%4; repetitions zero-based
+  length_order_rng: PCG64
+  length_order_seed: 67001
+  statistical_unit: landscape seed; process repeats summarized within seed
+queries:
+  rng: PCG64
+  trace_seed: 670000 + 100*L + field_seed
+  primary_Q: 9600
+  primary_B: 96
+  primary_batches: 100
+  batch_mix:
+    uniform_global: 48
+    uniform_nonself_mutant_of_reference: 48
+    ordering: alternate global then mutant
+  stream_separate_calls: true
+  retain_outputs: checksums only
+  trace_generation_timed: separate from oracle cost
+  input_io_timed: separate; also report inclusive total
+  warmup_traces: 1
+  warm_batch_sizes:
+  - 96
+  - 1024
+  warm_repetitions: 5
+  neighborhood_parents: 20
+  neighborhood_parent_seed: 1670000 + 100*L + field_seed
+  neighborhood_parent_distribution: uniform
+  neighborhood_mutations_per_parent: 19*L
+  baseline_charged_per_mutation_call: true
+  scalar_latency_Q: 64
+  scalar_subset: first 64 sequences of the same frozen trace
+  scalar_batch_size: 1
+  checkpoint_primary_before_secondary: true
+correctness:
+  anchor_preset: trpb_run178_r05_profile_shared_stop_intrinsic
+  anchor_L: 4
+  anchor_all_states: 160000
+  anchor_in_timing: false
+  large_cell_query_count: 1024
+  large_cell_mutation_count: 128
+  selected_supports_per_order:
+  - first
+  - median
+  - last
+  selected_pairs: all local states
+  selected_higher_orders: boundary states plus 256 seeded states
+  diagnostic_mutation_rms_sample: 4096
+  diagnostic_normalization_refit: false
+  query_seed: 2670000 + 100*L + field_seed
+  absolute_tolerance: 1.0e-10
+  relative_tolerance: 1.0e-10
+  counter_local_values: bit-identical; published known-answer tests also required
+  compare:
+  - additive
+  - interaction
+  - logit
+  - fitness
+  - mutation_delta
+  input_variants:
+  - duplicates
+  - reordered
+  - chunked
+  - reversed mutations
+  process_isolation: separate correctness/diagnostic processes, never timed workers
+resources:
+  worker_rss_limit_bytes: 4294967296
+  worker_walltime_seconds: 1800
+  parent_request_memory_gb: 8
+  parent_request_walltime: '24:00:00'
+  gpus: 0
+  host: null
+  monitor_contract: null
+  external_interference_rule: null
+  invalidation_action: retain raw records and rerun entire four-arm seed/repetition block
+  failure_action: retain phase-specific censored status and primary checkpoint; do not invent ratio or
+    silently shrink cell
+analysis:
+  within_process: median of five warm repetitions
+  within_seed: median of three fresh processes
+  confirmatory_lengths:
+  - 512
+  - 1024
+  comparisons:
+  - B/A
+  - C/A
+  - D/A
+  primary_metrics:
+  - cold_setup_plus_9600_scoring_seconds
+  - setup_plus_primary_trace_peak_rss_bytes
+  confirmatory_contrast_count: 12
+  ratio: comparator/A, seed-level log scale
+  confidence: two-sided Student-t on seed log ratios, Bonferroni family alpha 0.05
+  individual_interval_coverage: 0.9958333333333333
+  assumption: independent seed-level approximately normal log ratios
+  descriptive_bootstrap:
+    replicates: 10000
+    seed: 67002
+    coverage: 0.95
+  incomplete_pairs: no confirmatory interval for incomplete primary metric; secondary failure does not
+    discard completed primary metric
+  decision: positive lower simultaneous log-ratio bound supports named resource advantage; disclose magnitude,
+    other resource, capability mismatch and envelope
+  global_dominance_claim: false
+  whole_worker_peak_rss: descriptive, includes secondary allocations
+outputs:
+- manifest.json
+- worker_environment.json
+- correctness.json
+- raw_timings.csv
+- resource_usage.csv
+- paired_comparisons.csv
+- resource_failures.csv
+- scaling_summary.json
+- figures/
+- notebooks/reproduce_figures.ipynb

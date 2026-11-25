@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-11-25T05:33:12.950019+00:00",
+  "historical_control": "RUN-188",
+  "target": "lab-slurm",
+  "ssh_transport": "dutch",
+  "protocol": "gamma-concentration-slurm",
+  "dedicated_python": "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/bin/python",
+  "runtime_bundle": "data/processed/trpb-gamma-concentration-slurm-runtime",
+  "prelaunch_manifest_sha256": "9537c18a56d5d8cf42b6516de6a84840210d4687861e4d6042b0792b457cab68",
+  "verified_payload_count": 536,
+  "scientific_change": "Joint Gamma alpha on [0.05,100] log-scale, r on [0,8] and readout; frozen shared-stop law and RUN-180 loss",
+  "execution_mode": "fresh calibration, not SQLite resume",
+  "original_run_sh_sha256": "c0aca0dc01ae65b6d4941893ae26450e68620e05e705985cb6fa13c33d933838",
+  "staged_run_sh_sha256": "8be09cb69089567b2b59565fbb17911d62881aa1f4607575446eb039dd3d537c",
+  "transport_files_sha256": {
+    "submit_gamma_concentration_slurm.py": "1bb33c271cfc8ff6470d834b291ec6e54ae8a24392d20f0ff69856010f566658",
+    "gamma_concentration_slurm_worker.sh": "d8383fe1d8bb3d8e9d00092fd51d74b5a3fa85e53b425b9bec7a6f849064844f",
+    "gamma_concentration_runtime.json": "7a303634fa87e2db20a2d3fa1c719e7aa77da649dfc77b31dad3dbae3d976443"
+  }
+}

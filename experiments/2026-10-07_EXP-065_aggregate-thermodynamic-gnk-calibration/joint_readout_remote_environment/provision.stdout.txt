@@ -1,0 +1,1 @@
+{"target": "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311", "lock_sha256": "164dab4dbdb0dbdee52f17e46d2a2afb7e283a015984279aaa87b12bdd38324e", "installation_returncode": 0}

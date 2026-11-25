@@ -1,0 +1,34 @@
+{
+  "aggregate-thermodynamic-gnk-calibration/RUN-182": {
+    "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-182.dvc",
+    "directory_md5": "f13e3d155e69ca7943edf3f314779780.dir",
+    "storage": {
+      "local": {
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/.dvc/cache/files/md5",
+        "objects_verified": 149,
+        "payload_files": 190
+      },
+      "remote": {
+        "root": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data/files/md5",
+        "objects_verified": 149,
+        "payload_files": 190
+      }
+    }
+  },
+  "trpb-architecture-slurm-runtime": {
+    "pointer": "data/processed/trpb-architecture-slurm-runtime.dvc",
+    "directory_md5": "65848b2a2f70059836843f2cc6a46cff.dir",
+    "storage": {
+      "local": {
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/.dvc/cache/files/md5",
+        "objects_verified": 131,
+        "payload_files": 153
+      },
+      "remote": {
+        "root": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data/files/md5",
+        "objects_verified": 131,
+        "payload_files": 153
+      }
+    }
+  }
+}

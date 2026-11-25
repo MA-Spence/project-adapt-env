@@ -1,0 +1,219 @@
+{
+  "run": "RUN-184",
+  "checked_utc": "2026-11-24T07:17:05.406944+00:00",
+  "queue": {
+    "code": 1,
+    "stdout": "",
+    "stderr": "slurm_load_jobs error: Invalid job id specified\n"
+  },
+  "job": {
+    "code": 1,
+    "stdout": "",
+    "stderr": "slurm_load_jobs error: Invalid job id specified\n"
+  },
+  "files": {
+    "outputs": [
+      {
+        "name": "cli_inputs.json",
+        "bytes": 1949,
+        "modified_utc": "2026-11-24T05:00:32.649106+00:00"
+      },
+      {
+        "name": "config.json",
+        "bytes": 940,
+        "modified_utc": "2026-11-23T22:43:37.882922+00:00"
+      },
+      {
+        "name": "confirmation_inputs.npz",
+        "bytes": 162066,
+        "modified_utc": "2026-11-23T22:43:37.905923+00:00"
+      },
+      {
+        "name": "confirmation_predictions.npz",
+        "bytes": 303375,
+        "modified_utc": "2026-11-24T05:00:32.638106+00:00"
+      },
+      {
+        "name": "empirical_architecture.json",
+        "bytes": 944324,
+        "modified_utc": "2026-11-23T23:40:33.822843+00:00"
+      },
+      {
+        "name": "empirical_coefficients.npz",
+        "bytes": 10321,
+        "modified_utc": "2026-11-23T23:40:33.823843+00:00"
+      },
+      {
+        "name": "inputs.npz",
+        "bytes": 162500,
+        "modified_utc": "2026-11-23T22:43:37.894923+00:00"
+      },
+      {
+        "name": "provenance.json",
+        "bytes": 2100,
+        "modified_utc": "2026-11-23T22:43:37.939924+00:00"
+      },
+      {
+        "name": "result.json",
+        "bytes": 1243503,
+        "modified_utc": "2026-11-24T05:00:32.071122+00:00"
+      },
+      {
+        "name": "study.sqlite3",
+        "bytes": 7139328,
+        "modified_utc": "2026-11-24T04:54:56.980442+00:00"
+      },
+      {
+        "name": "trials.json",
+        "bytes": 10760698,
+        "modified_utc": "2026-11-24T05:00:32.616107+00:00"
+      }
+    ],
+    "logs": [
+      {
+        "name": "architecture-scientific-exit-code.txt",
+        "bytes": 2,
+        "modified_utc": "2026-11-24T05:00:32.787102+00:00"
+      },
+      {
+        "name": "architecture_linux_environment.json",
+        "bytes": 1930,
+        "modified_utc": "2026-11-23T22:43:37.345911+00:00"
+      },
+      {
+        "name": "architecture_linux_numpy_config.txt",
+        "bytes": 1598,
+        "modified_utc": "2026-11-23T22:43:37.384912+00:00"
+      },
+      {
+        "name": "labproj-exit-code.txt",
+        "bytes": 2,
+        "modified_utc": "2026-11-24T05:00:32.787102+00:00"
+      },
+      {
+        "name": "stderr.txt",
+        "bytes": 125901,
+        "modified_utc": "2026-11-24T04:54:57.004442+00:00"
+      },
+      {
+        "name": "stdout.txt",
+        "bytes": 223,
+        "modified_utc": "2026-11-24T05:00:32.649106+00:00"
+      }
+    ]
+  },
+  "log_tails": {
+    "stdout.txt": "Verified 152 RUN-182 payloads and 31 pinned packages\nStarting unchanged RUN-182 calibration on Linux; RUN=RUN-184; job=2325\nCalibration complete. Artifacts: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-184/outputs\n",
+    "stderr.txt": "tion.py\", line 311, in _simulate\n    fitted = panel.infer(observed, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 212, in infer\n    raise InferenceFailure(\"Auxiliary inference did not converge; increase its budget or inspect diagnostics\",\nadaptenv.calibration.InferenceFailure: Auxiliary inference did not converge; increase its budget or inspect diagnostics\n[W 2026-11-24 15:47:50,400] Trial 96 failed with value None.\n[W 2026-11-24 15:50:07,160] Trial 97 failed with parameters: {'r': 1.1085896695728423, 'concentration': 12.215463296820358, 'steepness': 7.473945456546009, 'position': 0.16516756403332847, 'lower': 0.7034634532424895, 'span': 0.6549402825690194} because of the following error: InferenceFailure('Auxiliary inference did not converge; increase its budget or inspect diagnostics').\nTraceback (most recent call last):\n  File \"/tank/data/labproj/runtime/project-adapt-env/envs/architecture-0.7.0rc1-py311/lib/python3.11/site-packages/optuna/study/_optimize.py\", line 206, in _run_trial\n    value_or_values = func(trial)\n                      ^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 482, in objective\n    summaries, fits, _ = _simulate(p, config.calibration_seeds, panel, matrix, config, residual_pool)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 311, in _simulate\n    fitted = panel.infer(observed, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 212, in infer\n    raise InferenceFailure(\"Auxiliary inference did not converge; increase its budget or inspect diagnostics\",\nadaptenv.calibration.InferenceFailure: Auxiliary inference did not converge; increase its budget or inspect diagnostics\n[W 2026-11-24 15:50:07,160] Trial 97 failed with value None.\n[W 2026-11-24 15:52:12,310] Trial 98 failed with parameters: {'r': 1.9957291948271605, 'concentration': 44.74097654849626, 'steepness': 3.3105990458054086, 'position': 1.3530713321125765, 'lower': 0.2975974337303916, 'span': 0.1360322347539689} because of the following error: InferenceFailure('Auxiliary inference did not converge; increase its budget or inspect diagnostics').\nTraceback (most recent call last):\n  File \"/tank/data/labproj/runtime/project-adapt-env/envs/architecture-0.7.0rc1-py311/lib/python3.11/site-packages/optuna/study/_optimize.py\", line 206, in _run_trial\n    value_or_values = func(trial)\n                      ^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 482, in objective\n    summaries, fits, _ = _simulate(p, config.calibration_seeds, panel, matrix, config, residual_pool)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 311, in _simulate\n    fitted = panel.infer(observed, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 212, in infer\n    raise InferenceFailure(\"Auxiliary inference did not converge; increase its budget or inspect diagnostics\",\nadaptenv.calibration.InferenceFailure: Auxiliary inference did not converge; increase its budget or inspect diagnostics\n[W 2026-11-24 15:52:12,310] Trial 98 failed with value None.\n[W 2026-11-24 15:54:57,003] Trial 99 failed with parameters: {'r': 1.8696638249352735, 'concentration': 39.337325167326924, 'steepness': 2.567059162309221, 'position': -1.8432361862619344, 'lower': 0.2755025509490809, 'span': 1.0171939645042538} because of the following error: InferenceFailure('Auxiliary inference did not converge; increase its budget or inspect diagnostics').\nTraceback (most recent call last):\n  File \"/tank/data/labproj/runtime/project-adapt-env/envs/architecture-0.7.0rc1-py311/lib/python3.11/site-packages/optuna/study/_optimize.py\", line 206, in _run_trial\n    value_or_values = func(trial)\n                      ^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 482, in objective\n    summaries, fits, _ = _simulate(p, config.calibration_seeds, panel, matrix, config, residual_pool)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 311, in _simulate\n    fitted = panel.infer(observed, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 212, in infer\n    raise InferenceFailure(\"Auxiliary inference did not converge; increase its budget or inspect diagnostics\",\nadaptenv.calibration.InferenceFailure: Auxiliary inference did not converge; increase its budget or inspect diagnostics\n[W 2026-11-24 15:54:57,005] Trial 99 failed with value None.\n",
+    "labproj-exit-code.txt": "0\n",
+    "architecture-scientific-exit-code.txt": "0\n"
+  },
+  "trial_states": {
+    "COMPLETE": 37,
+    "FAIL": 63
+  },
+  "recent_trials": [
+    [
+      99,
+      "FAIL",
+      "2026-11-24 15:52:12.314400",
+      "2026-11-24 15:54:56.831341"
+    ],
+    [
+      98,
+      "FAIL",
+      "2026-11-24 15:50:07.164286",
+      "2026-11-24 15:52:12.218222"
+    ],
+    [
+      97,
+      "FAIL",
+      "2026-11-24 15:47:50.404242",
+      "2026-11-24 15:50:07.129129"
+    ],
+    [
+      96,
+      "FAIL",
+      "2026-11-24 15:45:41.030642",
+      "2026-11-24 15:47:50.350029"
+    ],
+    [
+      95,
+      "FAIL",
+      "2026-11-24 15:40:33.864716",
+      "2026-11-24 15:45:40.977711"
+    ]
+  ],
+  "best_trial": [
+    63,
+    24.034136531319845
+  ],
+  "trial_times": [
+    "2026-11-24 10:40:36.631227",
+    "2026-11-24 15:54:56.831341"
+  ],
+  "failure_messages": {
+    "Auxiliary inference did not converge; increase its budget or inspect diagnostics": 63
+  },
+  "result_keys": [
+    "method",
+    "status",
+    "best_parameters",
+    "best_parameters_standardized",
+    "target_degree",
+    "calibration_loss",
+    "confirmation_loss",
+    "best_trial",
+    "trials",
+    "completed_trials",
+    "inference_convergence_required",
+    "selected_inference_converged",
+    "best_relative_boundary_distance",
+    "searched_ranges",
+    "near_best_region",
+    "calibration_seeds",
+    "confirmation_seeds",
+    "confirmation_scope",
+    "confirmation_architecture",
+    "unfitted_diagnostics",
+    "phenotype_origin",
+    "phenotype_scale",
+    "elapsed_seconds",
+    "empirical_architecture"
+  ],
+  "result_summary": {
+    "method": "thornton_auxiliary_optuna_indirect_inference_v1",
+    "calibration_loss": 24.034136531319845,
+    "confirmation_loss": 27.34629870164042,
+    "best_trial": 63,
+    "trials": 100,
+    "completed_trials": 37,
+    "selected_inference_converged": true,
+    "best_parameters": {
+      "r": 0.13186675833272976,
+      "concentration": 96.0722750010407,
+      "steepness": 1.4357395462035047,
+      "position": -0.4720078881684011,
+      "lower": -0.0012343249149762148,
+      "span": 0.006987282595308122
+    },
+    "parameters": null,
+    "confirmation_scope": "disjoint_genotypes_and_fresh_seeds"
+  },
+  "empirical_convergence": {
+    "converged": true,
+    "bootstrap_count": 20,
+    "bootstrap_converged": 20
+  },
+  "cli_inputs_present": true,
+  "calibration_processes": [],
+  "interpretation": {
+    "execution": "Completed based on two worker exit-code files equal0 and complete CLI outputs",
+    "scheduler_record": "Job no longer retained by controller; scheduler accounting was previously disabled",
+    "attempts": 100,
+    "valid_trials": 37,
+    "failed_trials": 63,
+    "confirmation": "Completed with disjoint genotypes and fresh seeds; selected_inference_converged=true",
+    "scientific_adequacy": "Not assessed by this completion status check"
+  }
+}

@@ -1,0 +1,56 @@
+run: RUN-186
+target: lab-slurm
+experiment: EXP-065
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration
+  run_script: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - PROJECT_STATE.md
+  - docs/hypotheses.md
+  - environment/readout-py311.lock.txt
+  - data/processed/trpb-joint-readout-slurm-runtime.dvc
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/metadata.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout_runtime.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_joint_readout_slurm.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout_slurm_worker.sh
+  datasets:
+  - data/processed/trpb-joint-readout-slurm-runtime
+outputs:
+  expected:
+  - manifest.json
+  - config.yaml
+  - input_manifest.json
+  - source_manifest.json
+  - worker_environment.json
+  - optimizer_environment.json
+  - run180_replay.json
+  - warm_start_parameters.json
+  - warm_start_manifest.json
+  - kernel_validation.json
+  - selected_parameters.json
+  - fits
+  - graph_summary.csv
+  - cube_summary.csv
+  - latent_graph_summary.csv
+  - seed_audit.csv
+  - coverage.csv
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-186/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-186
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-186/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-186/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-186
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-186/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-186/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-186.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

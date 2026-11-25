@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-25T05:04:17.734044+00:00",
+  "labproj_refresh_strict_exit_code": 0,
+  "labproj_check_strict_exit_code": 0,
+  "refresh_summary": "green=382, yellow=25, red=0",
+  "limitations": "Historical warnings and completed ANA without a linked result; no new result was requested.",
+  "refresh_log_sha256": "41704b9a774a1a44cb3b6d33786012a9a32a836eb8ecf4a2b1b6c4bd38e39429",
+  "check_log_sha256": "a366955e79f4a0f49ceb076fe658179a2434e0e8e7bfbb5f2713dbe6480b2eb2"
+}

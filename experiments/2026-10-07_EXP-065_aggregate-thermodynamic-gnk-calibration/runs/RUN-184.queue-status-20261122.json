@@ -1,0 +1,44 @@
+{
+  "run": "RUN-184",
+  "scheduler_job_id": "2325",
+  "checked_utc": "2026-11-22T03:04:19.401964+00:00",
+  "source": "Read-only SSH queries to raspi-1 (squeue and scontrol show nodes), with independent worker SSH/service and controller hostname-resolution checks.",
+  "queue": {
+    "jobs_total": 1,
+    "running": 0,
+    "pending": 1,
+    "job_state": "PENDING",
+    "elapsed": "0:00",
+    "reason": "Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions"
+  },
+  "nodes": {
+    "dutch": {
+      "state": "DOWN+NOT_RESPONDING",
+      "reason": "NO NETWORK ADDRESS FOUND : Not responding",
+      "partitions": [
+        "cpu",
+        "all"
+      ],
+      "ssh_reachable": true,
+      "slurmd": "active"
+    },
+    "ripley": {
+      "state": "DOWN+NOT_RESPONDING",
+      "reason": "NO NETWORK ADDRESS FOUND : Not responding",
+      "partitions": [
+        "gpu",
+        "all"
+      ],
+      "ssh_reachable": true,
+      "slurmd": "active"
+    },
+    "raspi-1": {
+      "role": "controller",
+      "slurmctld": "active",
+      "controller_ping": "UP"
+    }
+  },
+  "resolver_observation": "Controller getent ahostsv4 calls returned no addresses for dutch or ripley.",
+  "interpretation": "Worker host reachability does not mean Slurm availability; evidence indicates controller-side worker-name resolution failure.",
+  "actions": "Read-only checks; no service, configuration, node-state or job changes."
+}

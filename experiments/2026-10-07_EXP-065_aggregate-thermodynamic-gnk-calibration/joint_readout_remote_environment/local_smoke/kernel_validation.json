@@ -1,0 +1,10 @@
+{
+  "small_graph_cases": 20,
+  "independent_checks": [
+    "recursive walk moments",
+    "exhaustive reachability",
+    "SciPy components",
+    "degrees"
+  ],
+  "kernel_sha256": "152e75c7add7876e09ca9e82d24e2b7f2b176e099910fd8ff3593ccc8df0bf75"
+}

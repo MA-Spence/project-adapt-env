@@ -1,0 +1,138 @@
+{
+  "created_utc": "2026-11-25T01:02:02.762091+00:00",
+  "tests": {
+    "command": "python -m pytest -q tests/test_interaction_ablation_exp065.py tests/test_submit_interaction_ablation_slurm.py",
+    "result": "24 passed in 2.14s"
+  },
+  "smoke": {
+    "protocol": "trpb_shared_stop_pairwise_ablation_v1",
+    "mode": "SMOKE_ONLY",
+    "elapsed_seconds": 2.8328072922304273,
+    "baseline_run": "RUN-186",
+    "baseline_manifest_sha256": "f02b8331489060b28c658ef3aa919a95fca734f81c7b73c5f3a420610b5d2e4c",
+    "source_sha256": {
+      "interaction_ablation_exp065.py": "8916e1e86fdc7c5b3ce686feab863bc2c2d198a102d5510d733376f3fb0086cc",
+      "interaction_ablation_metrics_exp065.py": "051489f404593ffad20fa87353c7287fbf98ac039b2f8dcf6f2487742f67a42d"
+    },
+    "fitted_arms": 2,
+    "trials_per_arm": 8,
+    "noise_strength_fitted": false,
+    "interaction_concentration": null,
+    "counts": {
+      "seeds": 2,
+      "cube_rows": 96,
+      "face_rows": 6912,
+      "summary_rows": 108,
+      "graph_rows": 27
+    },
+    "files": {
+      "config.yaml": "095e1949f4402b507bf01482d3406a2f701dec64fa86319762a7a53953eee939",
+      "confirmation/TrpB_57117794.npz": "d309ddbba87caa74d9ef00c2269aea3d2c43328082dd860467cbfd59f3cd8f49",
+      "confirmation/TrpB_57138794.npz": "035856b076cb7007969d7d06613ebceaade4281624f9096e92e57cbab3a0f96f",
+      "cube_powers.csv.gz": "2e1851f7641f55e68066dac3f1a0e8151756b9c76e32533715294547b04cbb74",
+      "empirical_replicates.npz": "9ee3968b6021d64ab1356dbafdbb6b34c4ee7a081ccebc9eb17c94f0cdd52d6e",
+      "environment.json": "64eb9e90376162afdca960a12fcc6f36e69689e9f4d8fcf7505acac3f160e866",
+      "face_reproducibility.csv.gz": "7768d27c8b2eb525f46f00909757085d03a4f0747358ecab90e977fbccafc672",
+      "fits/full.sqlite3": "b4ef25c95cd976f796134c7eff2b9b406703b11ee8ee1459ae5800a898d64f18",
+      "fits/full_selected.json": "da1b2a9b9c9e33c6fec2a3ab822d5a203620462ce9814665d001aa9dfaef3947",
+      "fits/full_trials.csv.gz": "00d9971dafd914e6262b4dc06804dfe6fee49b4f4bd1adf589136e80a5eb606e",
+      "fits/r0.sqlite3": "54405dce8c167b8b7f1774d15cafebce4a60d4eed8db2aa049c58a2476c29c83",
+      "fits/r0_selected.json": "87495246ccd1a1e998c03867d9aa3c2e2b2f2b59c3da42b4cdb431df302c3ea8",
+      "fits/r0_trials.csv.gz": "c45161d345859bbc25683cce601c2a6f0e6370491f05b870041a6ae1a37298be",
+      "input_audit.json": "d203be633aba87a058688a466471bde4db6f1707152c8c8f4d97f75120a2c142",
+      "replicate_summary.csv": "56c176d8f1c160c19108d9ac22abc7cdee82531cf4781dc9482020dd143e1146",
+      "run186_confirmation_replay.json": "45747b71ffd92cafb649f37b0e01a55f576c262e5954f8cf007022e3464aaae5",
+      "seed_audit.csv": "0a950bd189203d6776872a9b61af6a3dfe1b5ac079db1c712f525f93e775e811",
+      "selected_parameters.json": "50d5f1958dba0b0d579b6f98d4976356547b3658f291d9e12731f56c151c38a1",
+      "static_graph_summary.csv": "95145e311837428137515fd9dd372736c3a70582fb6414b5621b5e07cc2c7438"
+    },
+    "interpretation": "Matched profile-additive sigmoid r0 control versus fitted full-pairwise r on [0,8], under exactly the frozen shared-stop noise law. Independently refit readouts using unchanged RUN-180 loss. Equal new trial budgets; null winner included as a full-model candidate. Primary unfitted diagnostics are absolute cross-replicate interaction powers and replicate-consistent sign reversals; activity strata and intrinsic/observed layers retained. Previously inspected TrpB panels and seeds are reused; shared covariance is not identified as biological or measurement variation. No ML/search tasks, Gamma fitting, package promotion or new empirical validation."
+  },
+  "preflight": {
+    "authentication": {
+      "manifest.json": {
+        "files": 86,
+        "sha256": "f02b8331489060b28c658ef3aa919a95fca734f81c7b73c5f3a420610b5d2e4c"
+      },
+      "prelaunch_manifest.json": {
+        "files": 339,
+        "sha256": "39960cb6a6cc1ff99302ae1e6ba5ca1b7b38fe14a59b8b617fdeb72545c022d3"
+      }
+    },
+    "historical_objective_replays": [
+      {
+        "r": 0.0,
+        "objective": {
+          "quantile": 0.04124057695393592,
+          "mean_sd": 0.0008135235408087792,
+          "floor_cdf": 2.039968967437744e-05,
+          "total": 0.04207450018441907
+        }
+      },
+      {
+        "r": 0.5,
+        "objective": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        }
+      },
+      {
+        "r": 1.0,
+        "objective": {
+          "quantile": 0.029800560164746564,
+          "mean_sd": 0.001425851278828095,
+          "floor_cdf": 7.212162017822266e-06,
+          "total": 0.03123362360559248
+        }
+      },
+      {
+        "r": 2.0,
+        "objective": {
+          "quantile": 0.03779516347932995,
+          "mean_sd": 6.900384448757186e-05,
+          "floor_cdf": 1.9311904907226562e-05,
+          "total": 0.03788347922872475
+        }
+      },
+      {
+        "r": 4.0,
+        "objective": {
+          "quantile": 0.050593262981615185,
+          "mean_sd": 0.0013276654456344137,
+          "floor_cdf": 6.295740604400635e-05,
+          "total": 0.05198388583329361
+        }
+      },
+      {
+        "r": 8.0,
+        "objective": {
+          "quantile": 0.0609329466326516,
+          "mean_sd": 0.0022100140499743547,
+          "floor_cdf": 5.187094211578369e-05,
+          "total": 0.06319483162474174
+        }
+      }
+    ],
+    "calibration_cubes": 32,
+    "synthetic_calibration_cubes": 64,
+    "confirmation_cubes": 32,
+    "confirmation_seeds": 24,
+    "noise_refitted": false,
+    "calibration_confirmation_disjoint": true
+  },
+  "scope": "Local smoke only, not production or adequacy evidence",
+  "local_environment": {
+    "python": "3.11.15",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.4.4",
+      "pandas": "2.3.0",
+      "scipy": "1.17.1",
+      "optuna": "4.9.0",
+      "SQLAlchemy": "2.1.9",
+      "PyYAML": "6.0.3"
+    }
+  }
+}

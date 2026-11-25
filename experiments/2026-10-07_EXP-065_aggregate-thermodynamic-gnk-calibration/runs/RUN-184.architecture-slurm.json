@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-11-21T01:51:36.303208+00:00",
+  "source_run": "RUN-182",
+  "target": "lab-slurm",
+  "ssh_transport": "dutch",
+  "protocol": "architecture-slurm",
+  "dedicated_python": "/tank/data/labproj/runtime/project-adapt-env/envs/architecture-0.7.0rc1-py311/bin/python",
+  "runtime_bundle": "data/processed/trpb-architecture-slurm-runtime",
+  "prelaunch_manifest_sha256": "4e00fd05143ff27e905ca99050400283cd5c1acec94d55858eee29beb0a02004",
+  "verified_payload_count": 152,
+  "scientific_bytes": "Unchanged original RUN-182 prelaunch snapshot",
+  "execution_mode": "fresh identical-budget restart; not SQLite resume",
+  "original_run_sh_sha256": "fce5f023842346a0c574b48ad7fd6239336e85a54038f779c0a29c81ccb0c979",
+  "staged_run_sh_sha256": "ee901733adc17503d2ae4d64ed8d9fadfa4c2d906f53957c98d583628a5f12a2",
+  "transport_files_sha256": {
+    "submit_architecture_slurm.py": "400af5cd71421e6ccb66683527c2eaf35b029d05c75e75d70ea2e742b429fddc",
+    "architecture_slurm_worker.sh": "d4fdd6e3aaa5ce0f65bc5978cf748b8a23ead4f5768f662c3858e969305b8c4f"
+  }
+}

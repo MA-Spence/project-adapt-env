@@ -1,0 +1,11 @@
+Frozen interaction-ablation runtime; Dutch transport; queue submission
+{
+  "run_id": "RUN-188",
+  "target": "lab-slurm",
+  "dry_run": false,
+  "script": 
+"experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN
+-188.slurm",
+  "attempt": 1
+}
+Restored dispatcher, overlay, SSH transport and staging filter.

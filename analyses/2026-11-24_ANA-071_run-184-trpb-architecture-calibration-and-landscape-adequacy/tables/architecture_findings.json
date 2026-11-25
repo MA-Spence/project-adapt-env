@@ -1,0 +1,592 @@
+{
+  "source": "Frozen RUN-184; no auxiliary or generator refitting",
+  "losses_recomputed": {
+    "calibration": 24.034136531319838,
+    "confirmation": 27.346298701640418
+  },
+  "loss_interpretation": "Mean squared fixed-scale summary distance; not R2, likelihood, or a calibrated goodness-of-fit statistic",
+  "attempts": 100,
+  "successful": 37,
+  "failed": 63,
+  "failure_optimizer_messages": {
+    "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT": 47,
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH": 16
+  },
+  "best_trial": 63,
+  "near_best_trials": [
+    63
+  ],
+  "selected_parameters": [
+    {
+      "parameter": "r",
+      "selected_standardized": 0.13186675833272976,
+      "selected_native": 0.13186675833272976,
+      "lower_search_bound": 0.0,
+      "upper_search_bound": 8.0,
+      "search_is_log": false,
+      "position_in_search_coordinate": 0.01648334479159122,
+      "nearest_boundary_fraction_linear": 0.01648334479159122,
+      "near_best_trial_count": 1,
+      "attempted_min": 0.09740665548886973,
+      "attempted_max": 7.958171953481684,
+      "completed_min": 0.09740665548886973,
+      "completed_max": 7.8811476165723455
+    },
+    {
+      "parameter": "concentration",
+      "selected_standardized": 96.0722750010407,
+      "selected_native": 96.0722750010407,
+      "lower_search_bound": 0.05,
+      "upper_search_bound": 100.0,
+      "search_is_log": true,
+      "position_in_search_coordinate": 0.9947283347734367,
+      "nearest_boundary_fraction_linear": 0.03929689843881246,
+      "near_best_trial_count": 1,
+      "attempted_min": 0.05730959393020675,
+      "attempted_max": 96.48561850202238,
+      "completed_min": 0.07218054332373082,
+      "completed_max": 96.0722750010407
+    },
+    {
+      "parameter": "steepness",
+      "selected_standardized": 1.4357395462035047,
+      "selected_native": 1.4357395462035047,
+      "lower_search_bound": 0.05,
+      "upper_search_bound": 8.0,
+      "search_is_log": true,
+      "position_in_search_coordinate": 0.6615364272139512,
+      "nearest_boundary_fraction_linear": 0.17430686115767355,
+      "near_best_trial_count": 1,
+      "attempted_min": 0.05528284276069833,
+      "attempted_max": 7.488633481590538,
+      "completed_min": 0.05528284276069833,
+      "completed_max": 3.605600180028244
+    },
+    {
+      "parameter": "position",
+      "selected_standardized": -0.4720078881684011,
+      "selected_native": -0.4720078881684011,
+      "lower_search_bound": -6.0,
+      "upper_search_bound": 6.0,
+      "search_is_log": false,
+      "position_in_search_coordinate": 0.46066600931929996,
+      "nearest_boundary_fraction_linear": 0.46066600931929996,
+      "near_best_trial_count": 1,
+      "attempted_min": -5.831871771838759,
+      "attempted_max": 5.831284157624058,
+      "completed_min": -5.831871771838759,
+      "completed_max": 5.831284157624058
+    },
+    {
+      "parameter": "lower",
+      "selected_standardized": -0.3674280465236951,
+      "selected_native": -0.0012343249149762148,
+      "lower_search_bound": -4.0,
+      "upper_search_bound": 1.0,
+      "search_is_log": false,
+      "position_in_search_coordinate": 0.726514390695261,
+      "nearest_boundary_fraction_linear": 0.273485609304739,
+      "near_best_trial_count": 1,
+      "attempted_min": -3.9767932914188546,
+      "attempted_max": 0.9540622479284803,
+      "completed_min": -3.9767932914188546,
+      "completed_max": 0.7837195556456544
+    },
+    {
+      "parameter": "span",
+      "selected_standardized": 0.11813884474348414,
+      "selected_native": 0.006987282595308122,
+      "lower_search_bound": 0.1,
+      "upper_search_bound": 10.0,
+      "search_is_log": true,
+      "position_in_search_coordinate": 0.03619635983112327,
+      "nearest_boundary_fraction_linear": 0.0018322065397458724,
+      "near_best_trial_count": 1,
+      "attempted_min": 0.10122419337174546,
+      "attempted_max": 8.670015412377104,
+      "completed_min": 0.1135896280162805,
+      "completed_max": 8.670015412377104
+    }
+  ],
+  "empirical_model_heldout_prediction": {
+    "model": "empirical calibration coefficient model; not synthetic generator",
+    "genotypes": 8192,
+    "individual_replicate_r2": 0.7200639811562151,
+    "genotype_mean_r2": 0.7353885138485423,
+    "genotype_mean_rmse": 0.030050898332787696,
+    "fitting_scope": "Empirical calibration coefficients; no refitting or confirmation selection"
+  },
+  "selected_inference_fits": [
+    {
+      "panel": "calibration",
+      "kind": "empirical",
+      "seed": -1,
+      "selected_penalty": 10.0,
+      "selected_cv_mean_r2": 0.6820519627405188,
+      "converged": true,
+      "iterations": 770,
+      "lower": -0.2368413116394015,
+      "upper": 21.64051311609843
+    },
+    {
+      "panel": "confirmation",
+      "kind": "empirical",
+      "seed": -1,
+      "selected_penalty": 10.0,
+      "selected_cv_mean_r2": 0.7046291068631912,
+      "converged": true,
+      "iterations": 614,
+      "lower": -0.23381322474568958,
+      "upper": 21.941516497567054
+    },
+    {
+      "panel": "calibration",
+      "kind": "synthetic",
+      "seed": 101,
+      "selected_penalty": 0.0,
+      "selected_cv_mean_r2": 0.9999982732631783,
+      "converged": true,
+      "iterations": 2647,
+      "lower": -0.3673914048561319,
+      "upper": -0.24924840775656684
+    },
+    {
+      "panel": "calibration",
+      "kind": "synthetic",
+      "seed": 102,
+      "selected_penalty": 0.0,
+      "selected_cv_mean_r2": 0.9999984122708586,
+      "converged": true,
+      "iterations": 2255,
+      "lower": -0.36736065838400583,
+      "upper": -0.24920999643008807
+    },
+    {
+      "panel": "calibration",
+      "kind": "synthetic",
+      "seed": 103,
+      "selected_penalty": 0.0,
+      "selected_cv_mean_r2": 0.9999980100968051,
+      "converged": true,
+      "iterations": 2026,
+      "lower": -0.3673644609077827,
+      "upper": -0.24921141831163304
+    },
+    {
+      "panel": "calibration",
+      "kind": "synthetic",
+      "seed": 104,
+      "selected_penalty": 0.0,
+      "selected_cv_mean_r2": 0.9999987492288032,
+      "converged": true,
+      "iterations": 2204,
+      "lower": -0.367419348351835,
+      "upper": -0.24926171856421364
+    },
+    {
+      "panel": "confirmation",
+      "kind": "synthetic",
+      "seed": 1001,
+      "selected_penalty": 0.0,
+      "selected_cv_mean_r2": 0.9999989040602892,
+      "converged": true,
+      "iterations": 1977,
+      "lower": -0.36740888120290544,
+      "upper": -0.24924429833341982
+    },
+    {
+      "panel": "confirmation",
+      "kind": "synthetic",
+      "seed": 1002,
+      "selected_penalty": 0.0,
+      "selected_cv_mean_r2": 0.9999989775409037,
+      "converged": true,
+      "iterations": 2265,
+      "lower": -0.3674203436350638,
+      "upper": -0.24927375393200943
+    },
+    {
+      "panel": "confirmation",
+      "kind": "synthetic",
+      "seed": 1003,
+      "selected_penalty": 0.0,
+      "selected_cv_mean_r2": 0.999998945553207,
+      "converged": true,
+      "iterations": 2112,
+      "lower": -0.36741824440729015,
+      "upper": -0.2492578966640428
+    },
+    {
+      "panel": "confirmation",
+      "kind": "synthetic",
+      "seed": 1004,
+      "selected_penalty": 0.0,
+      "selected_cv_mean_r2": 0.9999987462181725,
+      "converged": true,
+      "iterations": 1703,
+      "lower": -0.36746282782235024,
+      "upper": -0.24930726847568774
+    }
+  ],
+  "bootstrap": {
+    "count": 20,
+    "all_converged": true,
+    "penalty_counts": {
+      "10.0": 17,
+      "1.0": 3
+    },
+    "additive_log1p_variance_target": 1.7143815390075117,
+    "additive_log1p_variance_min_median_max": [
+      0.034034159238248825,
+      0.04622422105272148,
+      0.1306987926871559
+    ],
+    "pair_share_target": 0.015924318431188775,
+    "pair_share_min_median_max": [
+      0.624275743196725,
+      0.6431814985563381,
+      0.7580775568433211
+    ],
+    "largest_mean_offset_in_fixed_scales": 29.119299779932508,
+    "interpretation": "Bootstrap architectures shift substantially from the original fit despite convergence. Causes are not identified; spread around shifted fits is not assurance of target uncertainty coverage."
+  },
+  "gamma": {
+    "alpha": 96.0722750010407,
+    "raw_variance_mixture_cv": 0.10202367483541283,
+    "raw_coefficient_excess_kurtosis": 0.03122649068076615,
+    "latent_generator_pair_fraction": 0.008619479592415677,
+    "interpretation": "Near-Gaussian raw coefficient distribution. Formulas precede centering and realized RMS normalization. This run does not establish a benefit of finite-alpha concentration."
+  },
+  "architecture_by_panel": {
+    "calibration": {
+      "empirical": [
+        1.7143815390075117,
+        0.07109251804243803,
+        0.015924318431188775,
+        0.6502991237604461,
+        1.5137817217429097,
+        2.42963661099322,
+        0.1752124517008303,
+        0.9038588980525312,
+        4.647857893598426,
+        0.4086281281418436,
+        0.9261119623277327,
+        -0.5715040370701312,
+        -0.13540599453867283,
+        0.4042330863223359,
+        -0.2368413116394015,
+        21.64051311609843,
+        0.9547119140625,
+        0.0
+      ],
+      "synthetic_mean": [
+        1.5901584510459261,
+        0.03356989409244911,
+        0.008667844396351598,
+        0.8778489573646198,
+        1.4605230415696007,
+        2.610180429036822,
+        0.6703022831056045,
+        1.6463553397785802,
+        2.5742439903722163,
+        0.487284403526168,
+        0.4400968285047736,
+        -0.3617946664646296,
+        -0.3258979412466388,
+        -0.26128869761540324,
+        -0.3673839681249389,
+        -0.2492328852656254,
+        0.1085205078125,
+        0.051727294921875
+      ],
+      "standardized_mean_residual": [
+        -2.1811251211004867,
+        -0.3978297311477078,
+        -0.11735287984992337,
+        3.234749003099587,
+        -0.5991467073020041,
+        0.7518691713104979,
+        6.087826634611018,
+        6.811221031212209,
+        -5.962350413646728,
+        1.4720630474787362,
+        -6.33635066655535,
+        4.151404006630203,
+        -3.8055035493263514,
+        -12.85270572600663,
+        -0.4112431073185614,
+        -6.183503331475268,
+        -4.312047309233256,
+        1.0345458984375
+      ],
+      "count_mean_residual_magnitude_above_one_fixed_scale": 13,
+      "contribution_ranking": [
+        {
+          "summary": "fitness_q90",
+          "contribution": 9.177335804406866,
+          "fraction_of_loss": 0.3818458712859318
+        },
+        {
+          "summary": "pairwise_abs_q90_over_rms",
+          "contribution": 2.5773739964459725,
+          "fraction_of_loss": 0.1072380525544279
+        },
+        {
+          "summary": "pairwise_top10_energy_fraction",
+          "contribution": 2.2305188760864683,
+          "fraction_of_loss": 0.09280628297920296
+        },
+        {
+          "summary": "fitted_upper",
+          "contribution": 2.1242063027980964,
+          "fraction_of_loss": 0.08838288407116099
+        },
+        {
+          "summary": "pairwise_abs_q50_over_rms",
+          "contribution": 2.0589796185044063,
+          "fraction_of_loss": 0.08566896571554664
+        },
+        {
+          "summary": "pairwise_abs_q99_over_rms",
+          "contribution": 1.9749790252840727,
+          "fraction_of_loss": 0.08217391220651506
+        },
+        {
+          "summary": "low_occupancy_fraction",
+          "contribution": 1.0329862220592088,
+          "fraction_of_loss": 0.04297995980480029
+        },
+        {
+          "summary": "fitness_q10",
+          "contribution": 0.9574530681258503,
+          "fraction_of_loss": 0.03983721515762196
+        },
+        {
+          "summary": "fitness_q50",
+          "contribution": 0.8045476257741921,
+          "fraction_of_loss": 0.033475204100873526
+        },
+        {
+          "summary": "additive_abs_q50_over_rms",
+          "contribution": 0.5813111729474318,
+          "fraction_of_loss": 0.024186896508218723
+        },
+        {
+          "summary": "log1p_additive_variance",
+          "contribution": 0.2642948218830896,
+          "fraction_of_loss": 0.010996643109631858
+        },
+        {
+          "summary": "additive_top10_energy_fraction",
+          "contribution": 0.12038720087513242,
+          "fraction_of_loss": 0.005009008778753132
+        },
+        {
+          "summary": "high_occupancy_fraction",
+          "contribution": 0.059460289776325226,
+          "fraction_of_loss": 0.0024739931762824165
+        },
+        {
+          "summary": "additive_abs_q99_over_rms",
+          "contribution": 0.031405958375951934,
+          "fraction_of_loss": 0.0013067229744253795
+        },
+        {
+          "summary": "additive_abs_q90_over_rms",
+          "contribution": 0.019943154270601855,
+          "fraction_of_loss": 0.0008297845127330927
+        },
+        {
+          "summary": "fitted_lower",
+          "contribution": 0.009395605184279211,
+          "fraction_of_loss": 0.0003909275114600196
+        },
+        {
+          "summary": "log1p_pairwise_variance",
+          "contribution": 0.008792694165836527,
+          "fraction_of_loss": 0.00036584189968208
+        },
+        {
+          "summary": "pairwise_variance_fraction",
+          "contribution": 0.0007650943560594751,
+          "fraction_of_loss": 3.183365273233138e-05
+        }
+      ]
+    },
+    "confirmation": {
+      "empirical": [
+        1.708038440947282,
+        0.06385497893491515,
+        0.01438413524154206,
+        0.658318422290014,
+        1.514947527699626,
+        2.435280522785163,
+        0.14791777714132448,
+        0.7612731784331014,
+        5.253260929183323,
+        0.4087341564304195,
+        0.9402131343602773,
+        -0.5646278247834257,
+        -0.1321226528150009,
+        0.42118630497945575,
+        -0.23381322474568958,
+        21.941516497567054,
+        0.9537353515625,
+        0.0
+      ],
+      "synthetic_mean": [
+        1.5912736792651407,
+        0.03338859158714683,
+        0.00860869140330823,
+        0.8770388225378821,
+        1.4590353891040118,
+        2.6170070252446402,
+        0.669237408770823,
+        1.6549880999791997,
+        2.5624891404030423,
+        0.488573836114077,
+        0.43900712934953656,
+        -0.36135032316516524,
+        -0.32447514197975086,
+        -0.260701168051721,
+        -0.3674275742669024,
+        -0.24927080435128993,
+        0.095916748046875,
+        0.055419921875
+      ],
+      "standardized_mean_residual": [
+        -2.050170859083666,
+        -0.3230167139632616,
+        -0.09340141831616748,
+        3.1092336366637405,
+        -0.6289974447125692,
+        0.7567944241456385,
+        6.410358963694647,
+        8.198409483811261,
+        -7.736890779379049,
+        1.4942106222369356,
+        -6.534399410468166,
+        4.024078810781023,
+        -3.8426720545850985,
+        -13.16876357865379,
+        -0.4209197342750529,
+        -6.268542686649745,
+        -4.37129752651607,
+        1.1083984375
+      ],
+      "count_mean_residual_magnitude_above_one_fixed_scale": 13,
+      "contribution_ranking": [
+        {
+          "summary": "fitness_q90",
+          "contribution": 9.634240788359921,
+          "fraction_of_loss": 0.3523051105918767
+        },
+        {
+          "summary": "pairwise_abs_q90_over_rms",
+          "contribution": 3.7341065591248017,
+          "fraction_of_loss": 0.1365488836301201
+        },
+        {
+          "summary": "pairwise_abs_q99_over_rms",
+          "contribution": 3.3255266073355862,
+          "fraction_of_loss": 0.12160792374933352
+        },
+        {
+          "summary": "pairwise_top10_energy_fraction",
+          "contribution": 2.372131980862595,
+          "fraction_of_loss": 0.08674416990553455
+        },
+        {
+          "summary": "pairwise_abs_q50_over_rms",
+          "contribution": 2.2829278913011284,
+          "fraction_of_loss": 0.08348215296734775
+        },
+        {
+          "summary": "fitted_upper",
+          "contribution": 2.183034856352778,
+          "fraction_of_loss": 0.07982926245963315
+        },
+        {
+          "summary": "low_occupancy_fraction",
+          "contribution": 1.0615690036291952,
+          "fraction_of_loss": 0.03881947663964904
+        },
+        {
+          "summary": "fitness_q10",
+          "contribution": 0.8996227930764896,
+          "fraction_of_loss": 0.03289742436048664
+        },
+        {
+          "summary": "fitness_q50",
+          "contribution": 0.8203404732827368,
+          "fraction_of_loss": 0.029998226898381945
+        },
+        {
+          "summary": "additive_abs_q50_over_rms",
+          "contribution": 0.5370741004089572,
+          "fraction_of_loss": 0.019639736487510093
+        },
+        {
+          "summary": "log1p_additive_variance",
+          "contribution": 0.2335111417464365,
+          "fraction_of_loss": 0.00853904011998629
+        },
+        {
+          "summary": "additive_top10_energy_fraction",
+          "contribution": 0.12403696575587168,
+          "fraction_of_loss": 0.004535786254263035
+        },
+        {
+          "summary": "high_occupancy_fraction",
+          "contribution": 0.06825261645846897,
+          "fraction_of_loss": 0.002495863049077816
+        },
+        {
+          "summary": "additive_abs_q99_over_rms",
+          "contribution": 0.03181876668988492,
+          "fraction_of_loss": 0.0011635492991955146
+        },
+        {
+          "summary": "additive_abs_q90_over_rms",
+          "contribution": 0.021979876969718978,
+          "fraction_of_loss": 0.0008037605823562687
+        },
+        {
+          "summary": "fitted_lower",
+          "contribution": 0.009842967927898953,
+          "fraction_of_loss": 0.0003599378488215118
+        },
+        {
+          "summary": "log1p_pairwise_variance",
+          "contribution": 0.005796655416645754,
+          "fraction_of_loss": 0.00021197221166526756
+        },
+        {
+          "summary": "pairwise_variance_fraction",
+          "contribution": 0.00048465694130398374,
+          "fraction_of_loss": 1.7722944760890465e-05
+        }
+      ]
+    }
+  },
+  "summary_names": [
+    "log1p_additive_variance",
+    "log1p_pairwise_variance",
+    "pairwise_variance_fraction",
+    "additive_abs_q50_over_rms",
+    "additive_abs_q90_over_rms",
+    "additive_abs_q99_over_rms",
+    "pairwise_abs_q50_over_rms",
+    "pairwise_abs_q90_over_rms",
+    "pairwise_abs_q99_over_rms",
+    "additive_top10_energy_fraction",
+    "pairwise_top10_energy_fraction",
+    "fitness_q10",
+    "fitness_q50",
+    "fitness_q90",
+    "fitted_lower",
+    "fitted_upper",
+    "low_occupancy_fraction",
+    "high_occupancy_fraction"
+  ]
+}

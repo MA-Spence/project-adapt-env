@@ -1,0 +1,123 @@
+id: ANA-072
+title: RUN-186 TrpB landscape behaviour architecture and difficulty proxies
+status: completed
+created: '2026-11-25T10:35:30+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-186
+purpose: Assess how the fitted model approximates TrpB average behaviour, observable
+  genetic architecture, and structural proxies for learning and optimisation difficulty
+  through reproducible notebooks and figures, without running learning or optimisation
+  benchmarks.
+path: analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies
+notebook_record:
+  primary_notebook_path: analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-186
+  produced_artifacts:
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/01_average_fitness_distribution.pdf
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/01_average_fitness_distribution.png
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/02_average_local_behaviour.pdf
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/02_average_local_behaviour.png
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/03_local_genetic_architecture.pdf
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/03_local_genetic_architecture.png
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/04_latent_readout_observation.pdf
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/04_latent_readout_observation.png
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/05_static_learning_and_navigation_proxies.pdf
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/05_static_learning_and_navigation_proxies.png
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/06_resolution_and_neutral_connectivity.pdf
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/06_resolution_and_neutral_connectivity.png
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/07_joint_search.pdf
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/07_joint_search.png
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/analysis_environment.json
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_cohort_summary.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_cube_metrics.csv.gz
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_seed_metrics.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_validation.json
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/artifact_validation.json
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_distribution_summary.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_empirical_distribution.json
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_empirical_full_library_quantiles.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_empirical_local.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_empirical_mutation_effect_quantiles.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_fresh_mutation_effect_summary.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_fresh_quantile_summary.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_full_library_by_seed.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_full_library_quantiles.csv.gz
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_local_by_seed.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_local_summary.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_mutation_effect_quantiles.csv.gz
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_reconstruction.json
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_reconstruction_checks.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_edge_seed_metrics.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_edge_summary.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_graph_seed_metrics.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_graph_summary.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_verification.json
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/independent_review.json
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/notebook_execution.log
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/project_record_checks.json
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_checks.json
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_latent_replay.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_objective_replay.csv
+  - analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_search_summary.csv
+inputs:
+  run_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186.dvc
+  run_directory_md5: 172955844a459e413b582b35328a2085.dir
+  frozen_source: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186/frozen_runtime/source
+  comparison_run: RUN-180
+  comparison_input: RUN-186/frozen_runtime/source/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180
+  run_storage_verification: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-186.storage-verification.json
+  no_refitting_or_learning_optimisation_tasks: true
+assessment:
+  scope: Achieved RUN-186 fits on the measured four-site TrpB assay; conditional synthetic
+    analogue.
+  average_behaviour: Partial recovery; shared-stop observed mean and SD close, but
+    tail and local variation mismatches remain.
+  genetic_architecture: Some equal-cube and sign summaries close; pooled epistatic
+    variance differs; no empirical coefficient inference.
+  difficulty: Some observed-map structural proxies close; intrinsic maps usually less
+    locally trapping; no ML/search performance measured.
+  graduation: Broad biological or ML-task equivalence not established; no preset promotion.
+  formal_preregistered_adequacy_gate: false
+  execution_reproducible: true
+  selected_settings_equal_RUN180: true
+  model_defaults_changed: false
+  new_result_or_claim_created: false
+  limitations:
+  - one previously studied four-site assay
+  - confirmation seeds and empirical panels previously inspected
+  - whole-library descriptors include calibration genotypes
+  - local variation includes generator seed and assigned cube panel
+  - shared-stop is a sensitivity assumption
+  - observation noise frozen by genotype, not resampled each query
+  - local binary spectra are not full-library coefficient inference
+  - structural proxies do not measure task performance
+reproducibility:
+  notebooks:
+  - notebooks/validation.ipynb
+  - notebooks/analysis.ipynb
+  - notebooks/architecture.ipynb
+  - notebooks/difficulty.ipynb
+  python: 3.11.15
+  requirements: notebooks/requirements.txt
+  full_environment_lock: notebooks/environment.lock.txt
+  runner: notebooks/execute.py
+  artifact_checks: tables/artifact_validation.json
+  independent_review: tables/independent_review.json
+  figures: 7
+  fresh_seeds: 8
+  reused_seeds: 16
+archive:
+  bundle: data/processed/aggregate-thermodynamic-gnk-calibration/ANA-072
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/ANA-072.dvc
+  storage_verification: storage_verification.json
+  sidecar_excluded_from_archive: true
+compliance:
+  level: green
+  issues: []

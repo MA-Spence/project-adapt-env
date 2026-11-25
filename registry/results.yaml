@@ -1399,3 +1399,33 @@ items:
   compliance:
     level: green
     issues: []
+- id: RES-064
+  title: Fixed observation noise adds epistasis and limits TrpB architectural identifiability
+  status: completed
+  created: '2026-11-26T05:18:49+11:00'
+  owner: matthew-spence
+  analyses:
+  - ANA-072
+  - ANA-073
+  - ANA-074
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-186
+  - RUN-188
+  - RUN-190
+  supports: []
+  weakens: []
+  refutes: []
+  motivates:
+  - HYP-005
+  - HYP-011
+  - HYP-012
+  supersedes: []
+  path: results/RES-064_fixed-observation-noise-epistasis-and-trpb-identifiability
+  compliance:
+    level: green
+    issues: []
+  artifacts:
+  - public_api_parity.json
+  - package_verification.json

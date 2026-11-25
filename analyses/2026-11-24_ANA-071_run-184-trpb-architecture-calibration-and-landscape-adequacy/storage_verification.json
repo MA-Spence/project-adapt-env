@@ -1,0 +1,15 @@
+{
+  "analysis": "ANA-071",
+  "verified_utc": "2026-11-24T07:59:13.831130+00:00",
+  "status": "passed",
+  "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/ANA-071.dvc",
+  "directory_md5": "889a2caf2121917853947f6502e7f632.dir",
+  "tracked_files": 51,
+  "unique_objects_verified_in_each_cache": 50,
+  "caches": {
+    "local": "/Users/matthewspence/Documents/Documents/project-adapt-env/.dvc/cache/files/md5",
+    "backup": "/Volumes/DutchZFS/labproj/projects/project-adapt-env/data/files/md5"
+  },
+  "analysis_matches_archive": true,
+  "note": "Sidecar outside immutable analysis copy to avoid circular identities."
+}

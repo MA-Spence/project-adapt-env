@@ -1,0 +1,6 @@
+outs:
+- md5: cc565b58e6a063b3700e88bd55672fcd.dir
+  size: 2836600
+  nfiles: 45
+  hash: md5
+  path: trpb-architecture-calibration-preparation

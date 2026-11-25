@@ -1,0 +1,1 @@
+{"staged": "/tank/data/labproj/runtime/project-adapt-env/envs/architecture-0.7.0rc1-py311/architecture_environment_evidence/preflight_snapshot"}

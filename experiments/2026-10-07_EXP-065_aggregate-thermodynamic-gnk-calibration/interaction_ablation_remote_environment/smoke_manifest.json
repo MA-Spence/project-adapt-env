@@ -1,0 +1,44 @@
+{
+  "protocol": "trpb_shared_stop_pairwise_ablation_v1",
+  "mode": "SMOKE_ONLY",
+  "elapsed_seconds": 12.145595105015673,
+  "baseline_run": "RUN-186",
+  "baseline_manifest_sha256": "f02b8331489060b28c658ef3aa919a95fca734f81c7b73c5f3a420610b5d2e4c",
+  "source_sha256": {
+    "interaction_ablation_exp065.py": "8916e1e86fdc7c5b3ce686feab863bc2c2d198a102d5510d733376f3fb0086cc",
+    "interaction_ablation_metrics_exp065.py": "051489f404593ffad20fa87353c7287fbf98ac039b2f8dcf6f2487742f67a42d"
+  },
+  "fitted_arms": 2,
+  "trials_per_arm": 8,
+  "noise_strength_fitted": false,
+  "interaction_concentration": null,
+  "counts": {
+    "seeds": 2,
+    "cube_rows": 96,
+    "face_rows": 6912,
+    "summary_rows": 108,
+    "graph_rows": 27
+  },
+  "files": {
+    "config.yaml": "095e1949f4402b507bf01482d3406a2f701dec64fa86319762a7a53953eee939",
+    "confirmation/TrpB_57117794.npz": "d309ddbba87caa74d9ef00c2269aea3d2c43328082dd860467cbfd59f3cd8f49",
+    "confirmation/TrpB_57138794.npz": "035856b076cb7007969d7d06613ebceaade4281624f9096e92e57cbab3a0f96f",
+    "cube_powers.csv.gz": "b803ab0c232af6dc2a4f29421a5508eb03058f53a50d5fa80df869d67210bbb4",
+    "empirical_replicates.npz": "9ee3968b6021d64ab1356dbafdbb6b34c4ee7a081ccebc9eb17c94f0cdd52d6e",
+    "environment.json": "b67f4a816bcf11cba51bcfb3bd8d6888173c99d183b619de78f033b65d051752",
+    "face_reproducibility.csv.gz": "7e4d58ed99a3482b5184aab8b0389008460ed1713162d7209c9c439b6652949e",
+    "fits/full.sqlite3": "a93b1294f05d382f9ea1a3577dabb8ebc3fe3b800e56016460caedb2a648c16a",
+    "fits/full_selected.json": "da1b2a9b9c9e33c6fec2a3ab822d5a203620462ce9814665d001aa9dfaef3947",
+    "fits/full_trials.csv.gz": "babbef06d1663bc33f41152a00925813f5c4a7fbd2b0eed8b946af8339a644ea",
+    "fits/r0.sqlite3": "72e916523c448ea8d3bc8df0173b7a1edc6b7f490ba89653c51908b0b2ca7f1f",
+    "fits/r0_selected.json": "87495246ccd1a1e998c03867d9aa3c2e2b2f2b59c3da42b4cdb431df302c3ea8",
+    "fits/r0_trials.csv.gz": "53360f63eebcc889f9412363fbeb02e3726b3ac2faedd28653edb13c6a14274d",
+    "input_audit.json": "d203be633aba87a058688a466471bde4db6f1707152c8c8f4d97f75120a2c142",
+    "replicate_summary.csv": "56c176d8f1c160c19108d9ac22abc7cdee82531cf4781dc9482020dd143e1146",
+    "run186_confirmation_replay.json": "45747b71ffd92cafb649f37b0e01a55f576c262e5954f8cf007022e3464aaae5",
+    "seed_audit.csv": "0a950bd189203d6776872a9b61af6a3dfe1b5ac079db1c712f525f93e775e811",
+    "selected_parameters.json": "50d5f1958dba0b0d579b6f98d4976356547b3658f291d9e12731f56c151c38a1",
+    "static_graph_summary.csv": "95145e311837428137515fd9dd372736c3a70582fb6414b5621b5e07cc2c7438"
+  },
+  "interpretation": "Matched profile-additive sigmoid r0 control versus fitted full-pairwise r on [0,8], under exactly the frozen shared-stop noise law. Independently refit readouts using unchanged RUN-180 loss. Equal new trial budgets; null winner included as a full-model candidate. Primary unfitted diagnostics are absolute cross-replicate interaction powers and replicate-consistent sign reversals; activity strata and intrinsic/observed layers retained. Previously inspected TrpB panels and seeds are reused; shared covariance is not identified as biological or measurement variation. No ML/search tasks, Gamma fitting, package promotion or new empirical validation."
+}

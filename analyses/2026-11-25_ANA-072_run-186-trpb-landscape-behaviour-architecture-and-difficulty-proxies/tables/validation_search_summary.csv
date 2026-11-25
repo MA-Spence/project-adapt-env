@@ -1,0 +1,4 @@
+observation,complete,failed,off_grid_trials,selected_trial,selected_r,loss,best_new_candidate_loss,selected_source,loss_improvement_over_warm_start
+none,11712,0,11706,4,4.0,0.13755327995088618,0.1418925372525386,RUN180_r4_warm_start,0.0
+independent_difference,11712,0,11706,3,2.0,0.060749439272330404,0.064029813904497,RUN180_r2_warm_start,0.0
+shared_stop_sensitivity,11712,0,11706,1,0.5,0.03099516773204625,0.0339678006306938,RUN180_r0.5_warm_start,0.0

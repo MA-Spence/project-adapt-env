@@ -1,0 +1,29 @@
+{
+  "r_bounds": [0.0, 8.0],
+  "concentration_bounds": [0.05, 100.0],
+  "steepness_bounds": [0.05, 8.0],
+  "position_bounds": [-6.0, 6.0],
+  "lower_bounds": [-4.0, 1.0],
+  "span_bounds": [0.1, 10.0],
+  "target_degree": 6.0,
+  "calibration_seeds": [101, 102, 103, 104],
+  "confirmation_seeds": [1001, 1002, 1003, 1004],
+  "trials": 100,
+  "startup_trials": 20,
+  "optimizer_seed": 20261120,
+  "bootstrap_replicates": 20,
+  "bootstrap_seed": 20261121,
+  "scale_floor": 0.05,
+  "noise_mode": "none",
+  "require_inference_convergence": true,
+  "inference": {
+    "penalty_grid": [0.0, 0.01, 0.1, 1.0],
+    "n_folds": 10,
+    "seed": 20261122,
+    "max_iter": 1000,
+    "tolerance": 1e-8,
+    "gradient_tolerance": 1e-5,
+    "max_line_search": 40,
+    "max_restarts": 3
+  }
+}

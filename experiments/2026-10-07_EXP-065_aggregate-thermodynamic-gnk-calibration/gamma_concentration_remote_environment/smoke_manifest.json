@@ -1,0 +1,46 @@
+{
+  "protocol": "trpb_shared_stop_gamma_concentration_v1",
+  "mode": "SMOKE_ONLY",
+  "elapsed_seconds": 18.460284122964367,
+  "baseline_run": "RUN-188",
+  "baseline_manifest_sha256": "c40c6d47a7814bd149d07735254a2ce69cd1d70c6ae33058988a0470e9d8c306",
+  "fitted_arms": 1,
+  "reused_controls": [
+    "r0",
+    "full"
+  ],
+  "trials": 24,
+  "noise_strength_fitted": false,
+  "interaction_concentration": 100.0,
+  "counts": {
+    "seeds": 2,
+    "cube_rows": 128,
+    "face_rows": 9216,
+    "summary_rows": 156,
+    "graph_rows": 39
+  },
+  "files": {
+    "config.yaml": "f802c1f35eb108cd83d5184fb323089bb099e03846de98033f5baacdbb539a83",
+    "confirmation/TrpB_57117794.npz": "d18b44b2ffd297f07b07b85846d74fb5a5428719d0b895f21f888df559dfcae1",
+    "confirmation/TrpB_57138794.npz": "261f5a9245c6cf646f5c9a9e0b3006115cf58433562d3fa2f22b7d7604deb1eb",
+    "cube_powers.csv.gz": "917e40734fbe7277e5d93e1c0b8277acce889da8903d994eb7c3c310250a9115",
+    "cube_summary.csv.gz": "483883f9a50fcc053404640c340558af4c782796228a4a02c664ba1b682fd061",
+    "empirical_replicates.npz": "9ee3968b6021d64ab1356dbafdbb6b34c4ee7a081ccebc9eb17c94f0cdd52d6e",
+    "environment.json": "b67f4a816bcf11cba51bcfb3bd8d6888173c99d183b619de78f033b65d051752",
+    "face_reproducibility.csv.gz": "404e4009b1d71611ad033abb505beee2876e63d0c4a1f084fa07a74d1d88b05a",
+    "fitness_distribution.csv": "165bd58fa5adfab52050707fe2946276ce0f97289257ed73c6c829dfd2b53b4e",
+    "fits/gamma.sqlite3": "75b457ab2f6421d52ac73b229f210a690d433abe2f95543cc965f84775be6e41",
+    "fits/gamma_selected.json": "b10b9cacb5d5d9c863716307c02d9c18c03566e08890cdc4be0f5ebe05e5185d",
+    "fits/gamma_trials.csv.gz": "cda77c76b0305fe9b32cc4f802d01c6a24beb0387303c66d552be1c8e9f7cb02",
+    "input_audit.json": "d9a0487b458082f8ab3b52b9d51c19d66cee5b31075df491803a4e1069bd1aba",
+    "latent_calibration.npz": "0be5eac3b35f4dc0cd163a328ca851ee0bc32cc9da1c3b0ad7af4f1521187b4b",
+    "latent_fields/TrpB_57117794.npz": "961b97cb634aec667b29635ff9c7d6f5e57d44d39730dba1e1bfac528822a7eb",
+    "latent_fields/TrpB_57138794.npz": "938d0768982fd3803cbac3c2cb1a24f97f425808f98634ae6d33aa80179febb3",
+    "replicate_summary.csv": "e83b0300e6830f98f67d9264326429fe55f7aa9932799a1af309d7437da78ccc",
+    "run186_confirmation_replay.json": "45747b71ffd92cafb649f37b0e01a55f576c262e5954f8cf007022e3464aaae5",
+    "seed_audit.csv": "0a950bd189203d6776872a9b61af6a3dfe1b5ac079db1c712f525f93e775e811",
+    "selected_parameters.json": "551703bdb7ecf55061985103c430edce5dfa1be102caf6aefdb261c358bb7db7",
+    "static_graph_summary.csv": "e23bc45c7f6765e161a97563644c4959712ad6f5f7e995b995be9bcb817b746a"
+  },
+  "interpretation": "Joint Gamma concentration, continuous r and four readout coordinates using unchanged RUN-180 direct fitness loss, frozen RUN-186 shared-stop observation law and RUN-188 confirmation diagnostics. Gaussian/full and r0 controls reused without refitting. Same panels and seeds; previously inspected confirmation data are not new empirical validation. User accepts observation noise as an experimental modeling assumption; this does not identify shared covariance as measurement error. Finite alpha is not exactly Gaussian. No model default promotion or ML/search tasks."
+}

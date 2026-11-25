@@ -1,0 +1,212 @@
+{
+  "run": "RUN-184",
+  "scheduler_job_id": "2325",
+  "verified_utc": "2026-11-24T07:20:30.542086+00:00",
+  "audit_scope": "Independent engineering completion, frozen inputs/source integrity, trial persistence and deterministic prediction replay; not scientific adequacy analysis. Read-only remote inspection.",
+  "status": "passed",
+  "checks": {
+    "prelaunch_manifest_anchor": true,
+    "all_152_frozen_payloads_intact": true,
+    "configuration_matches_frozen_fields": true,
+    "method_matches": true,
+    "all_11_expected_outputs_present": true,
+    "both_exit_codes_zero": true,
+    "completion_message_present": true,
+    "no_failure_json": true,
+    "cli_input_config_hashes_match": true,
+    "cli_script_hash_matches": true,
+    "all_18_source_snapshot_hashes_match": true,
+    "output_input_hashes_match_provenance": true,
+    "calibration_arrays_match_frozen_inputs": true,
+    "confirmation_arrays_match_frozen_inputs": true,
+    "panels_8192_unique_q20_four_site": true,
+    "confirmation_genotypes_disjoint": true,
+    "four_fixed_calibration_seeds": true,
+    "four_fresh_confirmation_seeds": true,
+    "confirmation_scope_correct": true,
+    "100_unique_trial_attempts": true,
+    "trial_states_match_result": true,
+    "best_trial_and_value_match": true,
+    "sqlite_integrity_ok": true,
+    "sqlite_matches_final_trials": true,
+    "empirical_fit_and_20_bootstraps_strictly_converged": true,
+    "all_37_complete_trials_four_strictly_converged_fits": true,
+    "confirmation_empirical_and_four_synthetic_fits_strictly_converged": true,
+    "selected_inference_convergence_flags_true": true,
+    "all_failed_trials_retain_diagnostics": true,
+    "recorded_losses_recompute": true,
+    "confirmation_predictions_shape_finite_seeds_genotypes": true,
+    "noiseless_prediction_replicates_identical": true,
+    "confirmation_native_oracle_predictions_replay": true
+  },
+  "failed_checks": [],
+  "frozen_payload_count": 152,
+  "frozen_manifest_errors": [],
+  "trial_states": {
+    "FAIL": 63,
+    "COMPLETE": 37
+  },
+  "best_trial": 63,
+  "calibration_loss": 24.034136531319845,
+  "confirmation_loss": 27.34629870164042,
+  "recorded_elapsed_seconds": 22614.156789514003,
+  "exit_codes": {
+    "architecture-scientific-exit-code.txt": "0",
+    "labproj-exit-code.txt": "0"
+  },
+  "confirmation_replay_max_abs_error_by_seed": [
+    5.204170427930421e-18,
+    5.204170427930421e-18,
+    5.204170427930421e-18,
+    5.204170427930421e-18
+  ],
+  "remote_root": "/tank/data/labproj/runtime/project-adapt-env/runs/RUN-184",
+  "remote_project_root": "/tank/data/labproj/staging/project-adapt-env/RUN-184/project",
+  "remote_files": {
+    "outputs/cli_inputs.json": {
+      "sha256": "e3571208c6b590d08e259d5fa30b403e0dbc82a4000077d3bd68014a99bedc84",
+      "bytes": 1949
+    },
+    "outputs/config.json": {
+      "sha256": "e4e7afb77fb6203311e2e32aee43679a0166288eaa6c14e64cad4c6bbbc72a7d",
+      "bytes": 940
+    },
+    "outputs/confirmation_inputs.npz": {
+      "sha256": "58cad92f07cf7a38d098335331730d474671856bfd958342b198a039e05616ed",
+      "bytes": 162066
+    },
+    "outputs/confirmation_predictions.npz": {
+      "sha256": "cdbb051bda5a5bcd05a7880038857e1dab786a4fa000278379252e399dcc911f",
+      "bytes": 303375
+    },
+    "outputs/empirical_architecture.json": {
+      "sha256": "f5970423166fc8dc9c07df6873b84ef79b4e74a8d85acfb403a3e191af628474",
+      "bytes": 944324
+    },
+    "outputs/empirical_coefficients.npz": {
+      "sha256": "efad6b64c631286bdbff6a5b6fc7fca332592049b2a2c92964f1eeea0b26680d",
+      "bytes": 10321
+    },
+    "outputs/inputs.npz": {
+      "sha256": "eba5e57a7e63439492446ba0171c43ede37eb51e7edea592551dd38814a6a6f1",
+      "bytes": 162500
+    },
+    "outputs/provenance.json": {
+      "sha256": "115f53fccf58595bbee3d55560f314ffda1bafddff2e9937e31e7a3fa225968d",
+      "bytes": 2100
+    },
+    "outputs/result.json": {
+      "sha256": "6055475761b4d8caf40171d1913988c49f7accceeaad2750e60b2565bdc54dbe",
+      "bytes": 1243503
+    },
+    "outputs/source_snapshot/LICENSE": {
+      "sha256": "368d5efcb6a3d42c444d813bd6e00fa5fb6464cea120a345f862deb41c3c2648",
+      "bytes": 1066
+    },
+    "outputs/source_snapshot/adaptenv/__init__.py": {
+      "sha256": "421f23528f3b02af3cc396840601243d0e7f86b43157f3e2abea96094f9c5725",
+      "bytes": 974
+    },
+    "outputs/source_snapshot/adaptenv/alignment.py": {
+      "sha256": "77faa24306a570a39061b1a03704605b95ec52e463771fea10ecf2d7baf205d7",
+      "bytes": 24214
+    },
+    "outputs/source_snapshot/adaptenv/amino_acids.py": {
+      "sha256": "0a0714f05e35fc3e665e33f0f5d50de054d6813e29c12dba6ad20ca33aefc7b9",
+      "bytes": 4407
+    },
+    "outputs/source_snapshot/adaptenv/api.py": {
+      "sha256": "5ee47c01935ebd7a56a36d661ae6429cb8f1295cf05ce32111bf3968a913ba08",
+      "bytes": 2802
+    },
+    "outputs/source_snapshot/adaptenv/calibration.py": {
+      "sha256": "6a06b058c6e9cd2886e368736f54a45b58576c76bc64842618947b93935deb58",
+      "bytes": 31310
+    },
+    "outputs/source_snapshot/adaptenv/extensive_gnk.py": {
+      "sha256": "56f65392b9e2134171b5fd7758a4276c4195c3b4bd77f625f2552047449ccf8c",
+      "bytes": 26681
+    },
+    "outputs/source_snapshot/adaptenv/full_pairwise.py": {
+      "sha256": "244d4cfbe5ea874887773fdbee5b14e6a95010ed3f9d8bbb10e6d49a24ebd027",
+      "bytes": 13150
+    },
+    "outputs/source_snapshot/adaptenv/inference.py": {
+      "sha256": "461fa2365b4186b2b1d04757596941429ba9645def86e8540e9523498dd28347",
+      "bytes": 22683
+    },
+    "outputs/source_snapshot/adaptenv/landscape.py": {
+      "sha256": "cdd178aa032740c6598e105ff9be0a0fb96afab8bc6942eb870f41f8d077fe29",
+      "bytes": 510
+    },
+    "outputs/source_snapshot/adaptenv/mmseqs.py": {
+      "sha256": "6d392fa836bc5614498f5a50e737fc9bac750f847fe4ffdd99eff1c66701d76a",
+      "bytes": 8515
+    },
+    "outputs/source_snapshot/adaptenv/presets.py": {
+      "sha256": "d1e28a3a0eab313bd54772e149acf9ceee8630a7b485833ac0c62c23ae6ce323",
+      "bytes": 4734
+    },
+    "outputs/source_snapshot/adaptenv/presets.yaml": {
+      "sha256": "2a20aee223dde7f5737ef1ce606f1700856bef7936c87a7ccfddc454384f02a2",
+      "bytes": 6216
+    },
+    "outputs/source_snapshot/adaptenv/ranked_categorical_gnk.py": {
+      "sha256": "d7eb55231ae87e130dd8c8e015b4b7fc3b872e25668b0b529d65718a3136021f",
+      "bytes": 32197
+    },
+    "outputs/source_snapshot/adaptenv/service.py": {
+      "sha256": "3cf1468d49efcb89bdfac0fe0d7c73b64034b608b35eb010ae83f336d662f225",
+      "bytes": 6503
+    },
+    "outputs/source_snapshot/adaptenv/thermodynamic.py": {
+      "sha256": "f92e45c96cd95e789b4713e40ef19da18b3d9cecf9e98c053151ae58304eb459",
+      "bytes": 24648
+    },
+    "outputs/source_snapshot/adaptenv/trpb_profile_run178.json": {
+      "sha256": "88a81792b4d481785d8f6b1301a09a1f8d01da91be2bed7f2fda4154a3ee3634",
+      "bytes": 2644
+    },
+    "outputs/source_snapshot/pyproject.toml": {
+      "sha256": "f1b6eb363c4fca67d2d2ba2f4356de55bf40a1aed0da91e23fafff5829cd683e",
+      "bytes": 1203
+    },
+    "outputs/study.sqlite3": {
+      "sha256": "0b8fe6970f1edda533733e714a4a0a9a9a04a729d4a2c7e286a62ab406f7a2dc",
+      "bytes": 7139328
+    },
+    "outputs/trials.json": {
+      "sha256": "f051761dd3a2a44b810d3c751943701be70938c5ed836bd338704a3db2a6d0ee",
+      "bytes": 10760698
+    },
+    "logs/architecture-scientific-exit-code.txt": {
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    "logs/architecture_linux_environment.json": {
+      "sha256": "fafbccdd6938a069a466ac6f003e410c978e06a3aba1738a6476276ee6d1826c",
+      "bytes": 1930
+    },
+    "logs/architecture_linux_numpy_config.txt": {
+      "sha256": "994b17d4b2a0312344379e9ff841529283f81486e0437acd72ec18ce8a1170a9",
+      "bytes": 1598
+    },
+    "logs/labproj-exit-code.txt": {
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    "logs/stderr.txt": {
+      "sha256": "8ae4b9652bcdcf80dc4527eb86963d27ef1078879617f3e8ffaee2bd334a5fe9",
+      "bytes": 125901
+    },
+    "logs/stdout.txt": {
+      "sha256": "5041cdea93b37bc0054825621cfd1d7f71906615e2338335c926e052ad113f63",
+      "bytes": 223
+    }
+  },
+  "file_manifest_note": "SHA256 and byte size of every regular file in completed remote outputs/ and logs/ at audit time; source bundle verified separately against original prelaunch manifest.",
+  "limitations": [
+    "63 of100 parameter attempts failed auxiliary inference and are retained. Success here means completed prescribed workflow, not a validated model or superior fit.",
+    "Scheduler job absence/purged history is not used as completion evidence; exit files, output artifacts and completion log are checked."
+  ]
+}

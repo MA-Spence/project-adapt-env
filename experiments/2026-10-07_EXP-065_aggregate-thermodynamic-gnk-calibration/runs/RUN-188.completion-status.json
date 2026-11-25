@@ -1,0 +1,354 @@
+{
+  "checked_utc": "2026-11-25T04:46:10.541689+00:00",
+  "run": "RUN-188",
+  "job": "2356",
+  "queue": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "slurm_load_jobs error: Invalid job id specified"
+  },
+  "scheduler": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "slurm_load_jobs error: Invalid job id specified"
+  },
+  "stdout.txt": "est_r=0.5\nFIT_PROGRESS full 4400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 4600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 4800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 5000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 5200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 5400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 5600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 5800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 6000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 6200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 6400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 6600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 6800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 7000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 7200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 7400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 7600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 7800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 8000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 8200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 8400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 8600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 8800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 9000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 9200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 9400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 9600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 9800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 10000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 10200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 10400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 10600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 10800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 11000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 11200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 11400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 11600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS full 11712/11712 best_loss=0.03099516773 best_r=0.5\nFIT_COMPLETE full 0.5 0.03099516773204625\nCONFIRMATION reused 57117794 complete\nCONFIRMATION reused 57117795 complete\nCONFIRMATION reused 57117796 complete\nCONFIRMATION reused 57117797 complete\nCONFIRMATION reused 57117798 complete\nCONFIRMATION reused 57117799 complete\nCONFIRMATION reused 57117800 complete\nCONFIRMATION reused 57117801 complete\nCONFIRMATION reused 57117802 complete\nCONFIRMATION reused 57117803 complete\nCONFIRMATION reused 57117804 complete\nCONFIRMATION reused 57117805 complete\nCONFIRMATION reused 57117806 complete\nCONFIRMATION reused 57117807 complete\nCONFIRMATION reused 57117808 complete\nCONFIRMATION reused 57117809 complete\nCONFIRMATION fresh 57138794 complete\nCONFIRMATION fresh 57138795 complete\nCONFIRMATION fresh 57138796 complete\nCONFIRMATION fresh 57138797 complete\nCONFIRMATION fresh 57138798 complete\nCONFIRMATION fresh 57138799 complete\nCONFIRMATION fresh 57138800 complete\nCONFIRMATION fresh 57138801 complete\nCOMPLETE {'seeds': 24, 'cube_rows': 800, 'face_rows': 57600, 'summary_rows': 1164, 'graph_rows': 291}\n",
+  "stderr.txt": "",
+  "labproj-exit-code.txt": "0\n",
+  "interaction-ablation-scientific-exit-code.txt": "0\n",
+  "studies": {
+    "r0": {
+      "states": {
+        "COMPLETE": 11712
+      },
+      "best_trial": [
+        1,
+        0,
+        0.04207450018441907
+      ],
+      "best_parameters": {
+        "p0": 0.21759150165031782,
+        "p1": 2.2973420879919852,
+        "p2": -7.867549377554278,
+        "p3": 0.3292809702406704
+      }
+    },
+    "full": {
+      "states": {
+        "COMPLETE": 11712
+      },
+      "best_trial": [
+        2,
+        1,
+        0.03099516773204625
+      ],
+      "best_parameters": {
+        "p0": 0.21805868351610824,
+        "p1": 2.2759427989712218,
+        "p2": -7.440616618583173,
+        "p3": 0.14518989577139818,
+        "r": 0.5
+      }
+    }
+  },
+  "selected_parameters.json": [
+    {
+      "arm": "r0",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.0,
+      "parameters": [
+        0.21759150165031782,
+        2.2973420879919852,
+        -7.867549377554278,
+        0.3292809702406704
+      ],
+      "objective": {
+        "quantile": 0.04124057695393592,
+        "mean_sd": 0.0008135235408087792,
+        "floor_cdf": 2.039968967437744e-05,
+        "total": 0.04207450018441907
+      },
+      "selected_trial": 0,
+      "selected_source": "RUN180_readout_r0",
+      "trials": 11712,
+      "optimizer_seed": 58459495,
+      "bounds": [
+        [
+          -2.0,
+          2.0
+        ],
+        [
+          -6.907755278982137,
+          2.302585092994046
+        ],
+        [
+          -14.0,
+          8.0
+        ],
+        [
+          -2.995732273553991,
+          2.0794415416798357
+        ]
+      ],
+      "calibration_origin": -0.03522340992,
+      "calibration_scale": 0.1939687629499998,
+      "near_floor_raw": 0.05383169008372466,
+      "interaction_concentration": null,
+      "noise_strength_fitted": false,
+      "optimizer_completed": true,
+      "optimizer_converged": false,
+      "fit_scope": "Fixed-budget calibration; no claim of global optimality",
+      "warm_starts": [
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21759150165031782,
+            2.2973420879919852,
+            -7.867549377554278,
+            0.3292809702406704
+          ],
+          "source": "RUN180_readout_r0"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21805868351610824,
+            2.2759427989712218,
+            -7.440616618583173,
+            0.14518989577139818
+          ],
+          "source": "RUN180_readout_r0.5"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21840719858853186,
+            1.408195126169486,
+            -6.177110025043908,
+            -0.09055121211281042
+          ],
+          "source": "RUN180_readout_r1"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.20661530781233495,
+            1.9263836257824063,
+            -5.984595158105576,
+            -0.6307714297032816
+          ],
+          "source": "RUN180_readout_r2"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.198290882321551,
+            1.0219646032529934,
+            -4.722139676677287,
+            -1.2538386669261727
+          ],
+          "source": "RUN180_readout_r4"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.207314671199041,
+            0.7804456099753945,
+            -4.934306284236644,
+            -1.7743880600192012
+          ],
+          "source": "RUN180_readout_r8"
+        }
+      ]
+    },
+    {
+      "arm": "full",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "parameters": [
+        0.21805868351610824,
+        2.2759427989712218,
+        -7.440616618583173,
+        0.14518989577139818
+      ],
+      "objective": {
+        "quantile": 0.029890048284698507,
+        "mean_sd": 0.0011008130117627216,
+        "floor_cdf": 4.306435585021973e-06,
+        "total": 0.03099516773204625
+      },
+      "selected_trial": 1,
+      "selected_source": "RUN180_readout_r0.5",
+      "trials": 11712,
+      "optimizer_seed": 58459495,
+      "bounds": [
+        [
+          -2.0,
+          2.0
+        ],
+        [
+          -6.907755278982137,
+          2.302585092994046
+        ],
+        [
+          -14.0,
+          8.0
+        ],
+        [
+          -2.995732273553991,
+          2.0794415416798357
+        ]
+      ],
+      "calibration_origin": -0.03522340992,
+      "calibration_scale": 0.1939687629499998,
+      "near_floor_raw": 0.05383169008372466,
+      "interaction_concentration": null,
+      "noise_strength_fitted": false,
+      "optimizer_completed": true,
+      "optimizer_converged": false,
+      "fit_scope": "Fixed-budget calibration; no claim of global optimality",
+      "warm_starts": [
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21759150165031782,
+            2.2973420879919852,
+            -7.867549377554278,
+            0.3292809702406704
+          ],
+          "source": "RUN180_readout_r0"
+        },
+        {
+          "r": 0.5,
+          "parameters": [
+            0.21805868351610824,
+            2.2759427989712218,
+            -7.440616618583173,
+            0.14518989577139818
+          ],
+          "source": "RUN180_readout_r0.5"
+        },
+        {
+          "r": 1.0,
+          "parameters": [
+            0.21840719858853186,
+            1.408195126169486,
+            -6.177110025043908,
+            -0.09055121211281042
+          ],
+          "source": "RUN180_readout_r1"
+        },
+        {
+          "r": 2.0,
+          "parameters": [
+            0.20661530781233495,
+            1.9263836257824063,
+            -5.984595158105576,
+            -0.6307714297032816
+          ],
+          "source": "RUN180_readout_r2"
+        },
+        {
+          "r": 4.0,
+          "parameters": [
+            0.198290882321551,
+            1.0219646032529934,
+            -4.722139676677287,
+            -1.2538386669261727
+          ],
+          "source": "RUN180_readout_r4"
+        },
+        {
+          "r": 8.0,
+          "parameters": [
+            0.207314671199041,
+            0.7804456099753945,
+            -4.934306284236644,
+            -1.7743880600192012
+          ],
+          "source": "RUN180_readout_r8"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21759150165031782,
+            2.2973420879919852,
+            -7.867549377554278,
+            0.3292809702406704
+          ],
+          "source": "paired_refitted_r0"
+        }
+      ]
+    }
+  ],
+  "manifest.json": {
+    "protocol": "trpb_shared_stop_pairwise_ablation_v1",
+    "mode": "MATCHED_INTERACTION_ABLATION",
+    "elapsed_seconds": 12758.311536588997,
+    "baseline_run": "RUN-186",
+    "baseline_manifest_sha256": "f02b8331489060b28c658ef3aa919a95fca734f81c7b73c5f3a420610b5d2e4c",
+    "source_sha256": {
+      "interaction_ablation_exp065.py": "8916e1e86fdc7c5b3ce686feab863bc2c2d198a102d5510d733376f3fb0086cc",
+      "interaction_ablation_metrics_exp065.py": "051489f404593ffad20fa87353c7287fbf98ac039b2f8dcf6f2487742f67a42d"
+    },
+    "fitted_arms": 2,
+    "trials_per_arm": 11712,
+    "noise_strength_fitted": false,
+    "interaction_concentration": null,
+    "counts": {
+      "seeds": 24,
+      "cube_rows": 800,
+      "face_rows": 57600,
+      "summary_rows": 1164,
+      "graph_rows": 291
+    },
+    "files": {
+      "config.yaml": "095e1949f4402b507bf01482d3406a2f701dec64fa86319762a7a53953eee939",
+      "confirmation/TrpB_57117794.npz": "d309ddbba87caa74d9ef00c2269aea3d2c43328082dd860467cbfd59f3cd8f49",
+      "confirmation/TrpB_57117795.npz": "86b573da3a5ecd9544b8c684221a01523c0de8303d5d8a17555e5c88c9ac635f",
+      "confirmation/TrpB_57117796.npz": "de3621a59323482fa8c1bb293dcaa30bc1b4aa12ccecc50da9b4fd5b0d8126fa",
+      "confirmation/TrpB_57117797.npz": "e29deab61ac6883d7f7da3dd4a7a1f90ce3dd8b54ded62313eac407ab5428e88",
+      "confirmation/TrpB_57117798.npz": "90082faad4226356a1eeac13bdc34fd0396992c4f64b4fcc38501b1422f96420",
+      "confirmation/TrpB_57117799.npz": "ca1b0f8dd3161221da8f797c367f62917896fb9b2a70938e3092122769d79e4a",
+      "confirmation/TrpB_57117800.npz": "a5f36ea8c5f933240cc917b69e88e81d62f7ed2ee38419c34be572d472743c76",
+      "confirmation/TrpB_57117801.npz": "374ac70435cfed418935c567ed5fe13260f0882053c0d3b3a8e46db786b84cc6",
+      "confirmation/TrpB_57117802.npz": "8120cae7ce3c6dd87df87161482b936ea49116f01a9ed189893d5aadfb4d32a1",
+      "confirmation/TrpB_57117803.npz": "253cdafa85b0c1c724fde2e8191daef57380b625d46bfb6cd4926d6fe11197e1",
+      "confirmation/TrpB_57117804.npz": "444e3e224a343b70ac07ba7c87c35c321b7a38001e1d0819d8010a024da0cf70",
+      "confirmation/TrpB_57117805.npz": "05df34fa8f6769a1059d6f3f0b46dc8cefed89d653a7920e687ee432a3823283",
+      "confirmation/TrpB_57117806.npz": "5666d92d7befe90fa397332ec8126ff8369abb987565d3ebb381009f5ed95088",
+      "confirmation/TrpB_57117807.npz": "4c688ae7cb5d3a3422fb48ab28ca3a6b28b0b85ebfe6964aaf725fadd0c9769a",
+      "confirmation/TrpB_57117808.npz": "09b80cfdd83073c0e4607978ad21ac0029a46a7a675cfd627336c3dba063089c",
+      "confirmation/TrpB_57117809.npz": "105e839582a5e0fbe07e83fec858b837ba7dfc235a9246abde71960809becbe8",
+      "confirmation/TrpB_57138794.npz": "035856b076cb7007969d7d06613ebceaade4281624f9096e92e57cbab3a0f96f",
+      "confirmation/TrpB_57138795.npz": "148f94cac4728d2ed32a3c0acb59cb3f6cb80bf92a306c982e6ce59537ac0c3b",
+      "confirmation/TrpB_57138796.npz": "0d4e6beff3f82702cdf122571594d483c71ff31b6152b1a974762266f788e6b5",
+      "confirmation/TrpB_57138797.npz": "863cc5aca0caddb51de707ffcfc39edc3a2660d9948ab703d366c6c04f953b31",
+      "confirmation/TrpB_57138798.npz": "e3d7eac3e17cc8fcbff425e1d3174e50927f02044d995b8c6d7905309c4d9a5a",
+      "confirmation/TrpB_57138799.npz": "830cd5c8aaa4df4817a169c584aba2876944a14103ca77faf3215ec884a2b292",
+      "confirmation/TrpB_57138800.npz": "26cc56210a5616c711b71d54ec15e34e9df654e2fa2b85a9d0282088c8d91967",
+      "confirmation/TrpB_57138801.npz": "ee523ad54f54922b704b7e8d8d599c3517d46f7e53075e237e7abc358d76d076",
+      "cube_powers.csv.gz": "8e95ed55f9c0a1c41fb0e910944de1e59342322c584b133e308f3ab4671c18e9",
+      "empirical_replicates.npz": "9ee3968b6021d64ab1356dbafdbb6b34c4ee7a081ccebc9eb17c94f0cdd52d6e",
+      "environment.json": "b67f4a816bcf11cba51bcfb3bd8d6888173c99d183b619de78f033b65d051752",
+      "face_reproducibility.csv.gz": "93d838c12c0a9bbcfd40b7b08a684ac1d6a388457594fa16456b61c3c1f688ad",
+      "fits/full.sqlite3": "d8e0934d7e980cbabf7f5dd46103c755b8c9ff17b171226440dbb810a7c67dc6",
+      "fits/full_selected.json": "1e1cd9d98a687385fc1a8eabb41e67e0b48b064e250ebf44167edd663dd3b195",
+      "fits/full_trials.csv.gz": "b5d3d92b7c72b0264e0c0b5c1f6af685948a428b822d48cda1b345f17b422e5a",
+      "fits/r0.sqlite3": "1b878c32bd8b4497466d692e3ad2a4414a5dbdd2cd33c20823b0b65b2f7f370b",
+      "fits/r0_selected.json": "78a4ffa5e21da8e6df44047c51eb33a38791dd953836cec297ba7d9f47e85464",
+      "fits/r0_trials.csv.gz": "a2c8b95e896d19f8a6853fad83f6c8104db2297b9371d7f01cf7736300504103",
+      "input_audit.json": "d203be633aba87a058688a466471bde4db6f1707152c8c8f4d97f75120a2c142",
+      "replicate_summary.csv": "c97c957d42265275961140acf9e327ce9181af298fe8ceea6147bf23334bf1f4",
+      "run186_confirmation_replay.json": "89559655d5515dbaf88acf12628a7b15f2c8d24df9bf1598d122af2c3342daff",
+      "seed_audit.csv": "d205758827c296ba9065824846cb3689bc64ca6a5e965668c81f0b598ef3f980",
+      "selected_parameters.json": "c91aad806a0e27aa4c3fd4e649e55273db842c651aeadc1059188f08e6f4a66d",
+      "static_graph_summary.csv": "628c88e6a65876e9b8b1734cbdb0fd520c38c5d6a61c8c878ceab3bb155e354b"
+    },
+    "interpretation": "Matched profile-additive sigmoid r0 control versus fitted full-pairwise r on [0,8], under exactly the frozen shared-stop noise law. Independently refit readouts using unchanged RUN-180 loss. Equal new trial budgets; null winner included as a full-model candidate. Primary unfitted diagnostics are absolute cross-replicate interaction powers and replicate-consistent sign reversals; activity strata and intrinsic/observed layers retained. Previously inspected TrpB panels and seeds are reused; shared covariance is not identified as biological or measurement variation. No ML/search tasks, Gamma fitting, package promotion or new empirical validation."
+  },
+  "output_integrity": {
+    "files_checked": 41,
+    "mismatches": []
+  }
+}

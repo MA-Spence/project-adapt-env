@@ -1,0 +1,149 @@
+{
+  "created_utc": "2026-11-25T05:30:09.495285+00:00",
+  "tests": "27 passed; Gamma optimizer/config/field checks and unchanged ablation scientific/transport controls",
+  "test_log": "...........................                                              [100%]\n27 passed in 4.13s\n",
+  "preflight": {
+    "control_authentication": {
+      "outputs": {
+        "files": 41,
+        "sha256": "c40c6d47a7814bd149d07735254a2ce69cd1d70c6ae33058988a0470e9d8c306"
+      },
+      "frozen_runtime": {
+        "files": 460,
+        "sha256": "b2f9eccfa6b19446259c9915c23a822e28a37d86b430cce336cb85f3c10b66c1"
+      }
+    },
+    "baseline_authentication": {
+      "manifest.json": {
+        "files": 86,
+        "sha256": "f02b8331489060b28c658ef3aa919a95fca734f81c7b73c5f3a420610b5d2e4c"
+      },
+      "prelaunch_manifest.json": {
+        "files": 339,
+        "sha256": "39960cb6a6cc1ff99302ae1e6ba5ca1b7b38fe14a59b8b617fdeb72545c022d3"
+      }
+    },
+    "historical_objective_replays": [
+      {
+        "r": 0.0,
+        "objective": {
+          "quantile": 0.04124057695393592,
+          "mean_sd": 0.0008135235408087792,
+          "floor_cdf": 2.039968967437744e-05,
+          "total": 0.04207450018441907
+        }
+      },
+      {
+        "r": 0.5,
+        "objective": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        }
+      },
+      {
+        "r": 1.0,
+        "objective": {
+          "quantile": 0.029800560164746564,
+          "mean_sd": 0.001425851278828095,
+          "floor_cdf": 7.212162017822266e-06,
+          "total": 0.03123362360559248
+        }
+      },
+      {
+        "r": 2.0,
+        "objective": {
+          "quantile": 0.03779516347932995,
+          "mean_sd": 6.900384448757186e-05,
+          "floor_cdf": 1.9311904907226562e-05,
+          "total": 0.03788347922872475
+        }
+      },
+      {
+        "r": 4.0,
+        "objective": {
+          "quantile": 0.050593262981615185,
+          "mean_sd": 0.0013276654456344137,
+          "floor_cdf": 6.295740604400635e-05,
+          "total": 0.05198388583329361
+        }
+      },
+      {
+        "r": 8.0,
+        "objective": {
+          "quantile": 0.0609329466326516,
+          "mean_sd": 0.0022100140499743547,
+          "floor_cdf": 5.187094211578369e-05,
+          "total": 0.06319483162474174
+        }
+      }
+    ],
+    "gaussian_calibration_fields_reproduced": true,
+    "controls_objectives_reproduced": true,
+    "normalized_gamma_endpoints_verified": [
+      0.05,
+      1.0,
+      100.0
+    ],
+    "benchmark_alpha1_loss": {
+      "quantile": 0.0399145990898366,
+      "mean_sd": 3.336293490469111e-05,
+      "floor_cdf": 9.299814701080322e-05,
+      "total": 0.04004096017175209
+    },
+    "benchmark_seconds": 0.018736999947577715,
+    "calibration_cubes": 32,
+    "synthetic_calibration_cubes": 64,
+    "confirmation_seeds": 24,
+    "calibration_confirmation_disjoint": true,
+    "noise_refitted": false
+  },
+  "smoke": {
+    "protocol": "trpb_shared_stop_gamma_concentration_v1",
+    "mode": "SMOKE_ONLY",
+    "elapsed_seconds": 5.251520417165011,
+    "baseline_run": "RUN-188",
+    "baseline_manifest_sha256": "c40c6d47a7814bd149d07735254a2ce69cd1d70c6ae33058988a0470e9d8c306",
+    "fitted_arms": 1,
+    "reused_controls": [
+      "r0",
+      "full"
+    ],
+    "trials": 24,
+    "noise_strength_fitted": false,
+    "interaction_concentration": 100.0,
+    "counts": {
+      "seeds": 2,
+      "cube_rows": 128,
+      "face_rows": 9216,
+      "summary_rows": 156,
+      "graph_rows": 39
+    },
+    "files": {
+      "config.yaml": "f802c1f35eb108cd83d5184fb323089bb099e03846de98033f5baacdbb539a83",
+      "confirmation/TrpB_57117794.npz": "0418ef0ce3e0f58855c3987125ad0500f12e13b2e28a238e87934b6b3f4da517",
+      "confirmation/TrpB_57138794.npz": "261f5a9245c6cf646f5c9a9e0b3006115cf58433562d3fa2f22b7d7604deb1eb",
+      "cube_powers.csv.gz": "f42e50bedcb4aeab5585fafd2cb08049714d1c40b5c3e55b2f9e61c84ec6c9e6",
+      "cube_summary.csv.gz": "312d1dd2af595fb979b4a640219e812aa624f899740ec999d59884d200f4e58d",
+      "empirical_replicates.npz": "9ee3968b6021d64ab1356dbafdbb6b34c4ee7a081ccebc9eb17c94f0cdd52d6e",
+      "environment.json": "64eb9e90376162afdca960a12fcc6f36e69689e9f4d8fcf7505acac3f160e866",
+      "face_reproducibility.csv.gz": "53080f763ad1a00fc58d600b90f6db093c1b9ed782ca150042e95a67cf1e2ef5",
+      "fitness_distribution.csv": "b651f7c4d0c2901b0ee105ea0c9d3a0958885bcf854d0253e227d62f10b773bd",
+      "fits/gamma.sqlite3": "8eb97dc205759dcf66b3775e53117279bc2b2649ee85e72e74c1f80346f6ddaf",
+      "fits/gamma_selected.json": "b10b9cacb5d5d9c863716307c02d9c18c03566e08890cdc4be0f5ebe05e5185d",
+      "fits/gamma_trials.csv.gz": "4d465cb509b06c16592b260d8f5a67eae5f551eccb5a78005b07460004033da3",
+      "input_audit.json": "4e4051acdbe8e2235ccc0eb73d6d46081f92c5b25200ffaec80cfc66c60c6562",
+      "latent_calibration.npz": "62c85feba5c75cf5924e6d333eb148da3906c2aa8c56d8eac19e7597bb534f93",
+      "latent_fields/TrpB_57117794.npz": "b3c3f9ffc2d0f43298ceef65d2c4f66537675ad4d10097b68317c3b578ec47a8",
+      "latent_fields/TrpB_57138794.npz": "ae659fa964bc5d3b3ae74b3957f09309cb550bfbf57d5a191fbbdcf47a71a04a",
+      "replicate_summary.csv": "cf5c6dfda4a3c6151975f6bf6be9f3b1be790a822a8d6f4eb3f55f5de644696b",
+      "run186_confirmation_replay.json": "45747b71ffd92cafb649f37b0e01a55f576c262e5954f8cf007022e3464aaae5",
+      "seed_audit.csv": "0a950bd189203d6776872a9b61af6a3dfe1b5ac079db1c712f525f93e775e811",
+      "selected_parameters.json": "551703bdb7ecf55061985103c430edce5dfa1be102caf6aefdb261c358bb7db7",
+      "static_graph_summary.csv": "cd1bc543c12fec6e2d93c8fa217ac55029340b144188c76184d43e7316fdfcfa"
+    },
+    "interpretation": "Joint Gamma concentration, continuous r and four readout coordinates using unchanged RUN-180 direct fitness loss, frozen RUN-186 shared-stop observation law and RUN-188 confirmation diagnostics. Gaussian/full and r0 controls reused without refitting. Same panels and seeds; previously inspected confirmation data are not new empirical validation. User accepts observation noise as an experimental modeling assumption; this does not identify shared covariance as measurement error. Finite alpha is not exactly Gaussian. No model default promotion or ML/search tasks."
+  },
+  "scope": "Engineering validation only; smoke is not production inference"
+}

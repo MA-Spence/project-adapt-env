@@ -1,0 +1,70 @@
+{
+  "checked_utc": "2026-11-24T09:08:30.394717+00:00",
+  "run": "RUN-186",
+  "job_id": "2355",
+  "queue": {
+    "returncode": 0,
+    "stdout": "2355|RUNNING|10:21|dutch|dutch\n",
+    "stderr": ""
+  },
+  "job": {
+    "returncode": 0,
+    "stdout": "JobId=2355 JobName=EXP-065RUN-186\n   UserId=matthew-spence(1000) GroupId=matthew-spence(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=(null)\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:10:21 TimeLimit=1-00:00:00 TimeMin=N/A\n   SubmitTime=2026-11-24T19:58:09 EligibleTime=2026-11-24T19:58:09\n   AccrueTime=2026-11-24T19:58:09\n   StartTime=2026-11-24T19:58:09 EndTime=2026-11-25T19:58:09 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-24T19:58:09 Scheduler=Backfill\n   Partition=cpu AllocNode:Sid=dutch:3970455\n   ReqNodeList=(null) ExcNodeList=(null)\n   NodeList=dutch\n   BatchHost=dutch\n   NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=4,mem=8G,node=1,billing=4\n   AllocTRES=cpu=4,mem=8G,node=1,billing=4\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=4 MinMemoryNode=8G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/tank/data/labproj/staging/project-adapt-env/RUN-186/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-186.slurm\n   WorkDir=/tank/data/labproj/staging/project-adapt-env/RUN-186/project\n   StdErr=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-186/logs/stderr.txt\n   StdIn=/dev/null\n   StdOut=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-186/logs/stdout.txt\n   Power=\n   TresPerTask=cpu:4\n   \n\n",
+    "stderr": ""
+  },
+  "accounting": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Slurm accounting storage is disabled\n"
+  },
+  "stdout_tail": "Verified 339 frozen payloads and 36 pinned packages\nStarting joint TrpB Optuna readout calibration; RUN=RUN-186; job=2355\nFIT_PROGRESS none 200/11712 best_loss=0.13755328 best_r=4\nFIT_PROGRESS none 400/11712 best_loss=0.13755328 best_r=4\nFIT_PROGRESS none 600/11712 best_loss=0.13755328 best_r=4\nFIT_PROGRESS none 800/11712 best_loss=0.13755328 best_r=4\n",
+  "stderr": "",
+  "studies": [
+    {
+      "file": "fits/TrpB_none_joint_r.sqlite3",
+      "states": {
+        "COMPLETE": 867
+      },
+      "best_trial": 4,
+      "best_loss": 0.13755327995088618,
+      "best_parameters": {
+        "p0": 0.09182108924393662,
+        "p1": 2.2943367744500445,
+        "p2": -4.372107659913723,
+        "p3": -1.7569860915529938,
+        "r": 4.0
+      },
+      "first_start": "2026-11-24 19:58:18.833141",
+      "last_complete": "2026-11-24 20:08:30.413110"
+    }
+  ],
+  "exit_codes": {},
+  "output_files": [
+    "TrpB_empirical.npz",
+    "TrpB_empirical_cubes.npz",
+    "additive_matrix.npy",
+    "calibration_prior_audit.json",
+    "config.yaml",
+    "fits/TrpB_none_joint_r.sqlite3",
+    "fits/TrpB_none_joint_r.sqlite3-journal",
+    "fits/TrpB_none_joint_r_warm_starts.json",
+    "historical_source_manifest.json",
+    "input_manifest.json",
+    "intervention.json",
+    "kernel_validation.json",
+    "latent_calibration.npz",
+    "latent_calibration_index.csv",
+    "noise/control_diagnostics.csv",
+    "noise/donor_assignments.csv.gz",
+    "noise/noise_calibration.csv",
+    "noise/noise_model.json",
+    "optimizer_environment.json",
+    "prior_manifest.json",
+    "profile_control_manifest.json",
+    "run180_replay.json",
+    "source_manifest.json",
+    "warm_start_manifest.json",
+    "warm_start_parameters.json",
+    "worker_environment.json"
+  ]
+}

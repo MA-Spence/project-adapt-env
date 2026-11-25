@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "checks": [
+    "frozen independent/shared replicate draws exact",
+    "frozen observation bank exact",
+    "Gaussian additive and interaction fields",
+    "all four loss components for six warm starts and selected Gaussian/r0/Gamma settings"
+  ],
+  "comparisons": [
+    {
+      "source": "RUN180_warm",
+      "ratio": 0.0,
+      "alpha": null,
+      "loss": {
+        "quantile": 0.04124057695393592,
+        "mean_sd": 0.0008135235408087792,
+        "floor_cdf": 2.039968967437744e-05,
+        "total": 0.04207450018441907
+      },
+      "max_absolute_difference": 0.0
+    },
+    {
+      "source": "RUN180_warm",
+      "ratio": 0.5,
+      "alpha": null,
+      "loss": {
+        "quantile": 0.029890048284698507,
+        "mean_sd": 0.0011008130117627216,
+        "floor_cdf": 4.306435585021973e-06,
+        "total": 0.03099516773204625
+      },
+      "max_absolute_difference": 0.0
+    },
+    {
+      "source": "RUN180_warm",
+      "ratio": 1.0,
+      "alpha": null,
+      "loss": {
+        "quantile": 0.029800560164746564,
+        "mean_sd": 0.001425851278828095,
+        "floor_cdf": 7.212162017822266e-06,
+        "total": 0.03123362360559248
+      },
+      "max_absolute_difference": 1.0408340855860843e-17
+    },
+    {
+      "source": "RUN180_warm",
+      "ratio": 2.0,
+      "alpha": null,
+      "loss": {
+        "quantile": 0.03779516347932995,
+        "mean_sd": 6.900384448757186e-05,
+        "floor_cdf": 1.9311904907226562e-05,
+        "total": 0.03788347922872475
+      },
+      "max_absolute_difference": 2.0816681711721685e-17
+    },
+    {
+      "source": "RUN180_warm",
+      "ratio": 4.0,
+      "alpha": null,
+      "loss": {
+        "quantile": 0.050593262981615185,
+        "mean_sd": 0.0013276654456344137,
+        "floor_cdf": 6.295740604400635e-05,
+        "total": 0.05198388583329361
+      },
+      "max_absolute_difference": 2.7755575615628914e-17
+    },
+    {
+      "source": "RUN180_warm",
+      "ratio": 8.0,
+      "alpha": null,
+      "loss": {
+        "quantile": 0.0609329466326516,
+        "mean_sd": 0.0022100140499743547,
+        "floor_cdf": 5.187094211578369e-05,
+        "total": 0.06319483162474174
+      },
+      "max_absolute_difference": 2.0816681711721685e-17
+    },
+    {
+      "source": "RUN186",
+      "ratio": 0.5,
+      "alpha": null,
+      "loss": {
+        "quantile": 0.029890048284698507,
+        "mean_sd": 0.0011008130117627216,
+        "floor_cdf": 4.306435585021973e-06,
+        "total": 0.03099516773204625
+      },
+      "max_absolute_difference": 0.0
+    },
+    {
+      "source": "RUN188",
+      "ratio": 0.0,
+      "alpha": null,
+      "loss": {
+        "quantile": 0.04124057695393592,
+        "mean_sd": 0.0008135235408087792,
+        "floor_cdf": 2.039968967437744e-05,
+        "total": 0.04207450018441907
+      },
+      "max_absolute_difference": 0.0
+    },
+    {
+      "source": "RUN188",
+      "ratio": 0.5,
+      "alpha": null,
+      "loss": {
+        "quantile": 0.029890048284698507,
+        "mean_sd": 0.0011008130117627216,
+        "floor_cdf": 4.306435585021973e-06,
+        "total": 0.03099516773204625
+      },
+      "max_absolute_difference": 0.0
+    },
+    {
+      "source": "RUN190",
+      "ratio": 0.5,
+      "alpha": 100.0,
+      "loss": {
+        "quantile": 0.030182920526992466,
+        "mean_sd": 0.0008426429158728321,
+        "floor_cdf": 6.571412086486816e-06,
+        "total": 0.031032134854951786
+      },
+      "max_absolute_difference": 0.0
+    }
+  ],
+  "public_module": "/Users/matthewspence/Documents/Documents/project-adapt-env/external/Adapt-Env/adaptenv/aggregate_calibration.py",
+  "public_module_sha256": "ed3f94c16291ec0ab0eab17daccd06e1e95600959b96784cb0bef35d45702403",
+  "source_archive": "RUN-186; RUN-188; RUN-190",
+  "no_new_fit": true
+}

@@ -919,3 +919,56 @@ items:
   compliance:
     level: green
     issues: []
+- id: ANA-071
+  title: RUN-184 TrpB architecture calibration and landscape adequacy
+  status: completed
+  created: '2026-11-24T18:44:07+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-184
+  path: analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy
+  compliance:
+    level: yellow
+    issues:
+    - ANA-071 is completed but has no linked results.
+- id: ANA-072
+  title: RUN-186 TrpB landscape behaviour architecture and difficulty proxies
+  status: completed
+  created: '2026-11-25T10:35:30+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-186
+  path: analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies
+  compliance:
+    level: green
+    issues: []
+- id: ANA-073
+  title: RUN-188 structured interactions versus observation randomness
+  status: completed
+  created: '2026-11-25T15:49:15+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-188
+  path: analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness
+  compliance:
+    level: green
+    issues: []
+- id: ANA-074
+  title: RUN-190 Gamma concentration versus Gaussian TrpB calibration
+  status: completed
+  created: '2026-11-25T21:16:33+11:00'
+  owner: matthew-spence
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-190
+  path: analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration
+  compliance:
+    level: green
+    issues: []

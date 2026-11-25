@@ -1,0 +1,23 @@
+{
+  "analysis": "ANA-071",
+  "review": "independent assistant scientific and code review",
+  "status": "passed",
+  "scope": [
+    "native fitness and graph calculations",
+    "architecture residuals, losses and held-out empirical coefficient predictions",
+    "report numbers and interpretation",
+    "executed notebook status"
+  ],
+  "findings_resolved": [
+    "auxiliary cv_records lookup fixed before execution",
+    "strict stationarity and optimizer evidence now checked independently for all 174 full fits and 1740 selected folds",
+    "wording distinguishes generator calibration from fitting coefficient identities",
+    "replicate edge-sign disagreement made explicit"
+  ],
+  "limits": [
+    "does not rerun numerical optimization",
+    "no formal preregistered adequacy gate",
+    "not biological validation beyond this four-site assay"
+  ],
+  "root_visual_review": "All five final figures inspected; legends, labels, references, all seeds and interpretation footnotes readable."
+}

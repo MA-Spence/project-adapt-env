@@ -1,0 +1,535 @@
+{
+  "checked_utc": "2026-11-24T23:03:59.938447+00:00",
+  "run": "RUN-186",
+  "job_id": "2355",
+  "queue": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "slurm_load_jobs error: Invalid job id specified\n"
+  },
+  "job": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "slurm_load_jobs error: Invalid job id specified\n"
+  },
+  "stdout_tail": "OGRESS independent_difference 4000/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 4200/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 4400/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 4600/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 4800/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 5000/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 5200/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 5400/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 5600/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 5800/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 6000/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 6200/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 6400/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 6600/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 6800/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 7000/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 7200/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 7400/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 7600/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 7800/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 8000/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 8200/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 8400/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 8600/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 8800/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 9000/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 9200/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 9400/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 9600/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 9800/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 10000/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 10200/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 10400/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 10600/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 10800/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 11000/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 11200/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 11400/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 11600/11712 best_loss=0.06074943927 best_r=2\nFIT_PROGRESS independent_difference 11712/11712 best_loss=0.06074943927 best_r=2\nFIT independent_difference 2.0 0.060749439272330404\nFIT_PROGRESS shared_stop_sensitivity 200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 1000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 1200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 1400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 1600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 1800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 2000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 2200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 2400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 2600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 2800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 3000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 3200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 3400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 3600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 3800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 4000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 4200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 4400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 4600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 4800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 5000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 5200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 5400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 5600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 5800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 6000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 6200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 6400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 6600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 6800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 7000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 7200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 7400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 7600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 7800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 8000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 8200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 8400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 8600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 8800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 9000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 9200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 9400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 9600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 9800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 10000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 10200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 10400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 10600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 10800/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 11000/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 11200/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 11400/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 11600/11712 best_loss=0.03099516773 best_r=0.5\nFIT_PROGRESS shared_stop_sensitivity 11712/11712 best_loss=0.03099516773 best_r=0.5\nFIT shared_stop_sensitivity 0.5 0.03099516773204625\nGRAPHS reused 57117794 complete\nGRAPHS reused 57117795 complete\nGRAPHS reused 57117796 complete\nGRAPHS reused 57117797 complete\nGRAPHS reused 57117798 complete\nGRAPHS reused 57117799 complete\nGRAPHS reused 57117800 complete\nGRAPHS reused 57117801 complete\nGRAPHS reused 57117802 complete\nGRAPHS reused 57117803 complete\nGRAPHS reused 57117804 complete\nGRAPHS reused 57117805 complete\nGRAPHS reused 57117806 complete\nGRAPHS reused 57117807 complete\nGRAPHS reused 57117808 complete\nGRAPHS reused 57117809 complete\nGRAPHS fresh 57138794 complete\nGRAPHS fresh 57138795 complete\nGRAPHS fresh 57138796 complete\nGRAPHS fresh 57138797 complete\nGRAPHS fresh 57138798 complete\nGRAPHS fresh 57138799 complete\nGRAPHS fresh 57138800 complete\nGRAPHS fresh 57138801 complete\nCOMPLETE 3 settings 24 seeds\n",
+  "stderr": "",
+  "studies": [
+    {
+      "file": "fits/TrpB_independent_difference_joint_r.sqlite3",
+      "states": {
+        "COMPLETE": 11712
+      },
+      "best_trial": 3,
+      "best_loss": 0.060749439272330404,
+      "best_parameters": {
+        "p0": 0.15765447782879383,
+        "p1": 2.2744933218429124,
+        "p2": -5.2866027231526775,
+        "p3": -0.8570225385300014,
+        "r": 2.0
+      },
+      "first_start": "2026-11-24 22:40:08.713981",
+      "last_complete": "2026-11-25 00:59:43.105202"
+    },
+    {
+      "file": "fits/TrpB_none_joint_r.sqlite3",
+      "states": {
+        "COMPLETE": 11712
+      },
+      "best_trial": 4,
+      "best_loss": 0.13755327995088618,
+      "best_parameters": {
+        "p0": 0.09182108924393662,
+        "p1": 2.2943367744500445,
+        "p2": -4.372107659913723,
+        "p3": -1.7569860915529938,
+        "r": 4.0
+      },
+      "first_start": "2026-11-24 19:58:18.833141",
+      "last_complete": "2026-11-24 22:40:04.728105"
+    },
+    {
+      "file": "fits/TrpB_shared_stop_sensitivity_joint_r.sqlite3",
+      "states": {
+        "COMPLETE": 11712
+      },
+      "best_trial": 1,
+      "best_loss": 0.03099516773204625,
+      "best_parameters": {
+        "p0": 0.21805868351610824,
+        "p1": 2.2759427989712218,
+        "p2": -7.440616618583173,
+        "p3": 0.14518989577139818,
+        "r": 0.5
+      },
+      "first_start": "2026-11-25 00:59:46.753180",
+      "last_complete": "2026-11-25 03:41:02.532196"
+    }
+  ],
+  "exit_codes": {
+    "labproj-exit-code.txt": "0",
+    "joint-readout-scientific-exit-code.txt": "0"
+  },
+  "output_files": [
+    "TrpB_empirical.npz",
+    "TrpB_empirical_cubes.npz",
+    "additive_matrix.npy",
+    "calibration_prior_audit.json",
+    "config.yaml",
+    "coverage.csv",
+    "cube_summary.csv",
+    "cube_values/TrpB_57117794.npz",
+    "cube_values/TrpB_57117795.npz",
+    "cube_values/TrpB_57117796.npz",
+    "cube_values/TrpB_57117797.npz",
+    "cube_values/TrpB_57117798.npz",
+    "cube_values/TrpB_57117799.npz",
+    "cube_values/TrpB_57117800.npz",
+    "cube_values/TrpB_57117801.npz",
+    "cube_values/TrpB_57117802.npz",
+    "cube_values/TrpB_57117803.npz",
+    "cube_values/TrpB_57117804.npz",
+    "cube_values/TrpB_57117805.npz",
+    "cube_values/TrpB_57117806.npz",
+    "cube_values/TrpB_57117807.npz",
+    "cube_values/TrpB_57117808.npz",
+    "cube_values/TrpB_57117809.npz",
+    "cube_values/TrpB_57138794.npz",
+    "cube_values/TrpB_57138795.npz",
+    "cube_values/TrpB_57138796.npz",
+    "cube_values/TrpB_57138797.npz",
+    "cube_values/TrpB_57138798.npz",
+    "cube_values/TrpB_57138799.npz",
+    "cube_values/TrpB_57138800.npz",
+    "cube_values/TrpB_57138801.npz",
+    "fits/TrpB_independent_difference_joint_r.csv.gz",
+    "fits/TrpB_independent_difference_joint_r.sqlite3",
+    "fits/TrpB_independent_difference_joint_r_warm_starts.json",
+    "fits/TrpB_none_joint_r.csv.gz",
+    "fits/TrpB_none_joint_r.sqlite3",
+    "fits/TrpB_none_joint_r_warm_starts.json",
+    "fits/TrpB_shared_stop_sensitivity_joint_r.csv.gz",
+    "fits/TrpB_shared_stop_sensitivity_joint_r.sqlite3",
+    "fits/TrpB_shared_stop_sensitivity_joint_r_warm_starts.json",
+    "graph_summary.csv",
+    "historical_source_manifest.json",
+    "input_manifest.json",
+    "intervention.json",
+    "kernel_validation.json",
+    "latent_calibration.npz",
+    "latent_calibration_index.csv",
+    "latent_fields/TrpB_57117794.npz",
+    "latent_fields/TrpB_57117795.npz",
+    "latent_fields/TrpB_57117796.npz",
+    "latent_fields/TrpB_57117797.npz",
+    "latent_fields/TrpB_57117798.npz",
+    "latent_fields/TrpB_57117799.npz",
+    "latent_fields/TrpB_57117800.npz",
+    "latent_fields/TrpB_57117801.npz",
+    "latent_fields/TrpB_57117802.npz",
+    "latent_fields/TrpB_57117803.npz",
+    "latent_fields/TrpB_57117804.npz",
+    "latent_fields/TrpB_57117805.npz",
+    "latent_fields/TrpB_57117806.npz",
+    "latent_fields/TrpB_57117807.npz",
+    "latent_fields/TrpB_57117808.npz",
+    "latent_fields/TrpB_57117809.npz",
+    "latent_fields/TrpB_57138794.npz",
+    "latent_fields/TrpB_57138795.npz",
+    "latent_fields/TrpB_57138796.npz",
+    "latent_fields/TrpB_57138797.npz",
+    "latent_fields/TrpB_57138798.npz",
+    "latent_fields/TrpB_57138799.npz",
+    "latent_fields/TrpB_57138800.npz",
+    "latent_fields/TrpB_57138801.npz",
+    "latent_graph_summary.csv",
+    "manifest.json",
+    "noise/control_diagnostics.csv",
+    "noise/donor_assignments.csv.gz",
+    "noise/noise_calibration.csv",
+    "noise/noise_model.json",
+    "optimizer_environment.json",
+    "prior_manifest.json",
+    "profile_control_manifest.json",
+    "run180_replay.json",
+    "seed_audit.csv",
+    "selected_parameters.json",
+    "source_manifest.json",
+    "warm_start_manifest.json",
+    "warm_start_parameters.json",
+    "worker_environment.json"
+  ],
+  "manifest.json": {
+    "protocol": "trpb_run180_joint_r_readout_optuna_v1",
+    "mode": "RUN180_JOINT_R_OPTUNA",
+    "public_model": "thermodynamic_pairwise_v3",
+    "elapsed_seconds": 27846.891845153004,
+    "source_run": "RUN-180",
+    "synthetic_control_run": "RUN-175",
+    "precursor_endpoint_run": "RUN-172",
+    "profile_control_manifest_sha256": "65a3216c2773cea1b2c7789554df58415a931d15bde317cbd8c807421219c129",
+    "interaction_backend": "full_pairwise",
+    "model": {
+      "interaction_backend": "full_pairwise",
+      "additive_prior": "profile",
+      "representation_rank": null,
+      "orders": [
+        2
+      ],
+      "order_weights": [
+        1.0
+      ],
+      "target_degrees": [
+        6.0
+      ],
+      "reference_rank": 0.5
+    },
+    "input_manifest_sha256": "c6376f26db500d65a121a0e204bc2a6b219d1722b6188ca369ccada989c1a709",
+    "config_sha256": "7b1ec941a30111001f623882f08ba507d08a6d7468723dda6a46c0624f3e340e",
+    "source_manifest_sha256": "56bf7dbd253bd94ef15b36d939a5a89f7c0234cd4f65b72950d360bdff822df5",
+    "additive_prior": {
+      "bundle": "data/processed/trpb-profile-additive-inputs",
+      "matrix_file": "additive_matrix.npy",
+      "metadata_file": "prior_manifest.json",
+      "matrix_sha256": "d5ac4d8724fc753709887afbe5a82a172c47c5a5bf18cc8a13dd1977875f7be3",
+      "metadata_sha256": "408ffe4a5052fe0d2525ed5c52113381753ba6cfb9fce3d775885648a804abd9",
+      "source": "Original Johnston et al. TARGET_b0.3 published alignment frequency table; rounded to 0.001; raw alignment unusable",
+      "uniform_probability_mixture": 0.01,
+      "assay_positions_1based": [
+        183,
+        184,
+        227,
+        228
+      ]
+    },
+    "reference_policy": "Preserve each seed's original automatically generated reference. It is a computational centering anchor, not the biological wild type or consensus.",
+    "settings": 3,
+    "graph_rows": 363,
+    "latent_graph_rows": 72,
+    "cube_summary_rows": 363,
+    "seed_audits": 24,
+    "files": {
+      "TrpB_empirical.npz": "5eb0efdb3ca65589b561bbb8a68a7e990d6fd66263f94e249b26cce01cb7e5ac",
+      "TrpB_empirical_cubes.npz": "6b35f955cb943909492c92dae9978ca73cd4e5a15331bc1b768cac1835b29c36",
+      "additive_matrix.npy": "d5ac4d8724fc753709887afbe5a82a172c47c5a5bf18cc8a13dd1977875f7be3",
+      "calibration_prior_audit.json": "639425a9e712455b7e78e6ce1070e3788d704313aa224c01451266a184e74080",
+      "config.yaml": "7b1ec941a30111001f623882f08ba507d08a6d7468723dda6a46c0624f3e340e",
+      "coverage.csv": "3ab4c6f3271dd92fe2e9b80984f56cef60cb31ed6fe830ef3eb91df8335bcc14",
+      "cube_summary.csv": "62c52ea5e405e3b340c5668ff951efb966c1c81f3d93df842eef7b9febd57889",
+      "cube_values/TrpB_57117794.npz": "a2a9273397b91f3e7829a0ebb03646dc34096dc523febc39b7932f7c44eb1b25",
+      "cube_values/TrpB_57117795.npz": "3ee4e1188a63df8cc3e8c55875043719b5d3327ff6da614ff73336075f6c4f32",
+      "cube_values/TrpB_57117796.npz": "28fa088f8ae11d4fe0305a7627c9cc05dbbdb11bd32c5fdc7e1b33160f6ac6f0",
+      "cube_values/TrpB_57117797.npz": "364b20d05207252bc737891814ce5508b37fb98aed5959a0c3899bb019373733",
+      "cube_values/TrpB_57117798.npz": "eee585b6d1e0561c845bcff978786cb65d7b32910a8e1c82fcb397ad9e4b9544",
+      "cube_values/TrpB_57117799.npz": "503bccd9646bbdb21b2feed1860c476ec7ba9fdb6110bf596a5f0e1ca3edd05a",
+      "cube_values/TrpB_57117800.npz": "046d58f95143d889227015545a09a0dcf3a19624adb487b57bbe42a97f5a4b5e",
+      "cube_values/TrpB_57117801.npz": "77b889e3f1e7a38f422e0a2ad7b2a8aa133b059a324e61822d218d398fde9f0a",
+      "cube_values/TrpB_57117802.npz": "5fff3030a1d89bb97e2d0724a3bc68e474f84e83b787ce882418325d2656347f",
+      "cube_values/TrpB_57117803.npz": "b117bbb5215c8b3432665ae5b530f1b9b455b9d599a0e887ab05d3df49ef99df",
+      "cube_values/TrpB_57117804.npz": "41b9c13a65f646d5c15874fb33adb2357f16f8563b9d273619373db3f86bb1c5",
+      "cube_values/TrpB_57117805.npz": "9b47eff9aca7e4692564244d15ae5c7a1b382ee029782d669813f99b4dcc5bf2",
+      "cube_values/TrpB_57117806.npz": "f2ab42dae3472e19b73b161ede59628f732b1e31636721f2958cdf4f269dbf8a",
+      "cube_values/TrpB_57117807.npz": "3343588178411bf259653223b335a93304bccaf66b1bf38a3a1dffe3f2fb237a",
+      "cube_values/TrpB_57117808.npz": "5dcb9713e222da90f1093dbbbe29bcef7481adaa8c6a01e7a1a4888c3520c01b",
+      "cube_values/TrpB_57117809.npz": "c890363a247e9b65b86683b349b089e71845def286477e4b8132013cb1a197f1",
+      "cube_values/TrpB_57138794.npz": "23077cd119896a2d5567ac8d3fdd744ee0baad03e3c39fae0e67c92e8a222c18",
+      "cube_values/TrpB_57138795.npz": "fddf1d83b5a73b28aef5810cdcce6001fe14fe66eb62fb83414cf6a34ae3b893",
+      "cube_values/TrpB_57138796.npz": "6ead96196ddc08f1a8ffda7b50af40f3d04d65b48491a92945d46f789d9455bb",
+      "cube_values/TrpB_57138797.npz": "213334808849e85806153b47c5d6b47566dcf2122d04f9f1d8f2d7e348e9b58a",
+      "cube_values/TrpB_57138798.npz": "666eebf3b80ac0a18c16dee42d0d513c1d8f7c7c57489f704470b5f23b4abb3d",
+      "cube_values/TrpB_57138799.npz": "87f519623ae5ec4a8fd57bbf5a615d2616ab2e82ef13fcca9a6c0c16f5509150",
+      "cube_values/TrpB_57138800.npz": "119f013b60ad947eba978fcf419b3deb68cf4db1a3ac00ed1de5b922b9956ad1",
+      "cube_values/TrpB_57138801.npz": "9d9298b5dfec5782036a63da6158db5e4d7402c792d7f236f4bb038ec95a8336",
+      "fits/TrpB_independent_difference_joint_r.csv.gz": "1fa744874e24510644c371765b09e5535d25ef7aa85479b0317aef10af833b5c",
+      "fits/TrpB_independent_difference_joint_r.sqlite3": "0f74ed4550b6e7108d94e33d7e68c03651ad7ab83c5b10ff5b4adc0faed7bb56",
+      "fits/TrpB_independent_difference_joint_r_warm_starts.json": "896f65b085872930b27845db79460ec46dfa90d476e4bcfa740cd37cc915ea06",
+      "fits/TrpB_none_joint_r.csv.gz": "00f694ef46d07d192090341b392dfbf79acf17005a965e173f2d5e0d3c38fea7",
+      "fits/TrpB_none_joint_r.sqlite3": "e2d908579c2315d48d144e467e149339b08dde97e0a2cbf6c72b3b0af20f51e8",
+      "fits/TrpB_none_joint_r_warm_starts.json": "6a19cab6093182ba12561b4595fd16dd8bce2dba2d539d63f7023a52abde69f6",
+      "fits/TrpB_shared_stop_sensitivity_joint_r.csv.gz": "ee9339add5f0de9c93f529b78de8bf891c192356838bf0d9d06f6c1bd15fe63b",
+      "fits/TrpB_shared_stop_sensitivity_joint_r.sqlite3": "7408cbfba3fb8121a9c19ddc7b277e1c785eed53ef0772d077123dde9b198890",
+      "fits/TrpB_shared_stop_sensitivity_joint_r_warm_starts.json": "b7a8ff7a94b1dd63e93318297eacad97c5544b46f4e5cdec8361b501ed9eaf2e",
+      "graph_summary.csv": "30302760750f542e11cbee809541fa205afd43fef49e90914612845e89e39d9c",
+      "historical_source_manifest.json": "76e42b954c842549974cbed3c4f3413334918944f8d7446ba313944995dcf3b9",
+      "input_manifest.json": "c6376f26db500d65a121a0e204bc2a6b219d1722b6188ca369ccada989c1a709",
+      "intervention.json": "f669dcc3e4da5d710bc6435a6de5a7e18726f70b1e7c905cdced5c4c91b56e04",
+      "kernel_validation.json": "376b81766f7bd26942bb17621ae5bb5fb44c5ec71133a39848ff105d45d642e4",
+      "latent_calibration.npz": "01373afb34771b05440d64f1d395320d6433f2926eebabb6735026ff44ab883e",
+      "latent_calibration_index.csv": "b1f58d81418701688f422b8d06d4074392d6fd3e0fed1221196f3bc992c6fddc",
+      "latent_fields/TrpB_57117794.npz": "aea0fd13349b3b270fc9e422bc901441840a8d4385a61b56664572f5d2ac931e",
+      "latent_fields/TrpB_57117795.npz": "3bb80895669c148de5029338b6bcbe60a7be443300ee244e396d456495cb75cb",
+      "latent_fields/TrpB_57117796.npz": "32a9b171002ecbcf0940fa1302c6e707c91b42e7061e59baf3fe105658796984",
+      "latent_fields/TrpB_57117797.npz": "662ee1adfc0881c696a5cab142f4ed52e5281454979481ba2a66cbeb2bfb1640",
+      "latent_fields/TrpB_57117798.npz": "15076093d6ea7a837a463a8decafe16d8034ba9aa514a92d536928c25b010703",
+      "latent_fields/TrpB_57117799.npz": "361a75f8da7f601a74f90b9a12118590e505601918efcbb6dc288e0109fc4b27",
+      "latent_fields/TrpB_57117800.npz": "9a9a4db0fe740535483a91c961ab935715698d14402946c3c6cef02f6877da8e",
+      "latent_fields/TrpB_57117801.npz": "1f968ddc787b2205dddc2f57b5ff4b0dcfa1acf9de9669f27995cb05f5d8a2ce",
+      "latent_fields/TrpB_57117802.npz": "5a4dca44aa8208f6a13d0775efdef8d299dd0f42a923dbcf5c6e727a8e5f212e",
+      "latent_fields/TrpB_57117803.npz": "772f0df60a6256f0681fc041cfc6bdbc8e7ba1c447762e290b1319510f022e2c",
+      "latent_fields/TrpB_57117804.npz": "133d64bf406f989c4b25a1e4436e462e47970d72d82975a70fcbda793b23c514",
+      "latent_fields/TrpB_57117805.npz": "efba9171043b9b4a41d9e230971c7daef232a402a2b3a3136abc2c2b01eaa17f",
+      "latent_fields/TrpB_57117806.npz": "863d85919e44048e648d38478f0744daf0fea8c885163a10fcf936ec0d32ebe2",
+      "latent_fields/TrpB_57117807.npz": "f00fdcb1f9ada25b1178188ece2374edfe30a576dee029b180a4b17551c49bc0",
+      "latent_fields/TrpB_57117808.npz": "4ea850e618627298823ae076d477e07082538ae9b092ee4b9b32c862ef6280e4",
+      "latent_fields/TrpB_57117809.npz": "2f5c22d24e57e6941f864c7849e04b0dbf8b5af4a8e081ddcb5f5ddf5da5de7b",
+      "latent_fields/TrpB_57138794.npz": "5765cf01d741dd0dbafd7f7b9c954d60377a5e8dffac04ec37c7bd00facbd0bc",
+      "latent_fields/TrpB_57138795.npz": "a27645c2b402c244b9ce4cef53e8f06df8aab752a7e0edb99a8c23f0e665a69d",
+      "latent_fields/TrpB_57138796.npz": "48c555916f31c4f09056d469f2179613a101e1c1f6cff9a1ba26cc5dce35d7fb",
+      "latent_fields/TrpB_57138797.npz": "dc3bd4e1039ceb796f2f4bcc56a81ec5ca27369e857f14fd7c1bfe6409544161",
+      "latent_fields/TrpB_57138798.npz": "cc7b8bf036816c597c403d60732d60e06c00b23e85c5e7989288372b9d68bc81",
+      "latent_fields/TrpB_57138799.npz": "48590cbfd33f64ef24e50d8f78169272b02df37ceca8cfddf0c35cc2f0e994fc",
+      "latent_fields/TrpB_57138800.npz": "425457364a04cb44e8320514d2beb500c017651f759d5bf6d01d1f329b86ef66",
+      "latent_fields/TrpB_57138801.npz": "0d9b1ab26b8298c38838e04edd63044591eee6aceaa1e9dc562f92a85d706130",
+      "latent_graph_summary.csv": "beab63cf534e57a34ee3e77530510b84fc906b03a43c336a2fe1da3640d6f743",
+      "noise/control_diagnostics.csv": "dd82f80b8e388a782a47356c43d927a1ed9a494fc0b9fb593784d683cec5e485",
+      "noise/donor_assignments.csv.gz": "d2996c0858b03035086c64b5a90b7b7443fa7449e709ae13f0e4c3a377666343",
+      "noise/noise_calibration.csv": "2360a5b8373fe14f5aeb7f84b6ce09fb8d8b86a5335d92f6f9d1a0e286959774",
+      "noise/noise_model.json": "c0fda0eda176313a5d8600fe731e6a469253fa10925d1ff41f9f4635e317e99a",
+      "optimizer_environment.json": "b0cff7309570477d98227f53fe0fe9e23464be4e2aa3052276095ed087586e7d",
+      "prior_manifest.json": "408ffe4a5052fe0d2525ed5c52113381753ba6cfb9fce3d775885648a804abd9",
+      "profile_control_manifest.json": "65a3216c2773cea1b2c7789554df58415a931d15bde317cbd8c807421219c129",
+      "run180_replay.json": "d442537ad770af65ce897b6ddbb58a26c31c3acf60a8af7c27857592abb6a8dd",
+      "seed_audit.csv": "cfafff36d9378891c293ff56062c4f7928b70ff338dfdb6d1d37d62f0cf4773c",
+      "selected_parameters.json": "4f6d215ca8d572abd39e4ec64f84cd80b36b28594f906cafed5ccc4d6e2034e9",
+      "source_manifest.json": "56bf7dbd253bd94ef15b36d939a5a89f7c0234cd4f65b72950d360bdff822df5",
+      "warm_start_manifest.json": "4e6829c07c68749557044fd9cd8b8ebd4efa4d09b35bd6356a10c1ed18d7252a",
+      "warm_start_parameters.json": "b3df65dbf618c0b393fc4370f4b31b3bb83b1e003db53bd919a1aed0fd4715e7",
+      "worker_environment.json": "b2e5d1c48b0e7594b0d7041497b6c5e9fa2ed46cd681fa45a27531cae63f0681"
+    },
+    "interpretation": "TrpB-only joint continuous-r Optuna fit using RUN-180 direct fitness-quantile, local-cube-SD and floor-mass loss. Preserve Gaussian profile full-pairwise generator, reference anchoring, data, affine units, readout bounds, observation modes, masks, seeds and post-fit diagnostics. Optimize r continuously on [0,8] with all four readout coordinates, separately by observation assumption. Gamma concentration is disabled. Historical controls are reused. This is not independent new biological validation or an optimizer-efficiency benchmark."
+  },
+  "selected_parameters.json": [
+    {
+      "ratio": 4.0,
+      "observation": "none",
+      "parameters": [
+        0.09182108924393662,
+        2.2943367744500445,
+        -4.372107659913723,
+        -1.7569860915529938
+      ],
+      "offset": -0.01741298682663208,
+      "scale": 1.9237542701030006,
+      "position": -4.372107659913723,
+      "steepness": 0.17256417347416095,
+      "objective": {
+        "quantile": 0.0882316698861848,
+        "mean_sd": 0.04815335902710372,
+        "floor_cdf": 0.0011682510375976562,
+        "total": 0.13755327995088618
+      },
+      "evaluations": 11712,
+      "optimizer_converged": false,
+      "optimizer_completed": true,
+      "optimizer_message": "Fixed Optuna trial budget completed; convergence or global optimality not established.",
+      "selected_source": "RUN180_r4_warm_start",
+      "bounds": [
+        [
+          -2.0,
+          2.0
+        ],
+        [
+          -6.907755278982137,
+          2.302585092994046
+        ],
+        [
+          -14.0,
+          8.0
+        ],
+        [
+          -2.995732273553991,
+          2.0794415416798357
+        ]
+      ],
+      "ratio_bounds": [
+        0.0,
+        8.0
+      ],
+      "relative_boundary_distance": [
+        0.47704472768901585,
+        0.0008955498071600215,
+        0.43763147000392166,
+        0.2440795580799088
+      ],
+      "ratio_relative_boundary_distance": 0.5,
+      "calibration_origin": -0.03522340992,
+      "calibration_scale": 0.1939687629499998,
+      "near_floor_raw": 0.05383169008372466,
+      "optimizer": "optuna_tpe",
+      "optimizer_seed": 57119094,
+      "selected_trial": 4,
+      "optimized_coordinates": [
+        "r",
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "interaction_concentration": null,
+      "warm_start_source_run": "RUN-180",
+      "warm_start_candidates": 6,
+      "warm_start_objective": 0.13755327995088618,
+      "sqlite_history": "TrpB_none_joint_r.sqlite3",
+      "trial_history": "TrpB_none_joint_r.csv.gz",
+      "protein": "TrpB",
+      "dataset_id": "trpb_johnston2024_four_site_graphfla",
+      "additive_prior": "empirical_msa_log_profile",
+      "calibration_lineage": "RUN180_direct_objective_joint_continuous_r_Optuna_TPE_warm_start"
+    },
+    {
+      "ratio": 2.0,
+      "observation": "independent_difference",
+      "parameters": [
+        0.15765447782879383,
+        2.2744933218429124,
+        -5.2866027231526775,
+        -0.8570225385300014
+      ],
+      "offset": -0.004643365882020689,
+      "scale": 1.8859566018037968,
+      "position": -5.2866027231526775,
+      "steepness": 0.42442390870092994,
+      "objective": {
+        "quantile": 0.03240254081737589,
+        "mean_sd": 0.028246703047087082,
+        "floor_cdf": 0.00010019540786743164,
+        "total": 0.060749439272330404
+      },
+      "evaluations": 11712,
+      "optimizer_converged": false,
+      "optimizer_completed": true,
+      "optimizer_message": "Fixed Optuna trial budget completed; convergence or global optimality not established.",
+      "selected_source": "RUN180_r2_warm_start",
+      "bounds": [
+        [
+          -2.0,
+          2.0
+        ],
+        [
+          -6.907755278982137,
+          2.302585092994046
+        ],
+        [
+          -14.0,
+          8.0
+        ],
+        [
+          -2.995732273553991,
+          2.0794415416798357
+        ]
+      ],
+      "ratio_bounds": [
+        0.0,
+        8.0
+      ],
+      "relative_boundary_distance": [
+        0.46058638054280154,
+        0.0030500252994565577,
+        0.3960635125839692,
+        0.421406204572612
+      ],
+      "ratio_relative_boundary_distance": 0.25,
+      "calibration_origin": -0.03522340992,
+      "calibration_scale": 0.1939687629499998,
+      "near_floor_raw": 0.05383169008372466,
+      "optimizer": "optuna_tpe",
+      "optimizer_seed": 57119194,
+      "selected_trial": 3,
+      "optimized_coordinates": [
+        "r",
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "interaction_concentration": null,
+      "warm_start_source_run": "RUN-180",
+      "warm_start_candidates": 6,
+      "warm_start_objective": 0.060749439272330404,
+      "sqlite_history": "TrpB_independent_difference_joint_r.sqlite3",
+      "trial_history": "TrpB_independent_difference_joint_r.csv.gz",
+      "protein": "TrpB",
+      "dataset_id": "trpb_johnston2024_four_site_graphfla",
+      "additive_prior": "empirical_msa_log_profile",
+      "calibration_lineage": "RUN180_direct_objective_joint_continuous_r_Optuna_TPE_warm_start"
+    },
+    {
+      "ratio": 0.5,
+      "observation": "shared_stop_sensitivity",
+      "parameters": [
+        0.21805868351610824,
+        2.2759427989712218,
+        -7.440616618583173,
+        0.14518989577139818
+      ],
+      "offset": 0.00707316317212503,
+      "scale": 1.8886922349029394,
+      "position": -7.440616618583173,
+      "steepness": 1.1562591181389308,
+      "objective": {
+        "quantile": 0.029890048284698507,
+        "mean_sd": 0.0011008130117627216,
+        "floor_cdf": 4.306435585021973e-06,
+        "total": 0.03099516773204625
+      },
+      "evaluations": 11712,
+      "optimizer_converged": false,
+      "optimizer_completed": true,
+      "optimizer_message": "Fixed Optuna trial budget completed; convergence or global optimality not established.",
+      "selected_source": "RUN180_r0.5_warm_start",
+      "bounds": [
+        [
+          -2.0,
+          2.0
+        ],
+        [
+          -6.907755278982137,
+          2.302585092994046
+        ],
+        [
+          -14.0,
+          8.0
+        ],
+        [
+          -2.995732273553991,
+          2.0794415416798357
+        ]
+      ],
+      "ratio_bounds": [
+        0.0,
+        8.0
+      ],
+      "relative_boundary_distance": [
+        0.44548532912097294,
+        0.0028926503198391284,
+        0.29815379006440124,
+        0.3811202761376403
+      ],
+      "ratio_relative_boundary_distance": 0.0625,
+      "calibration_origin": -0.03522340992,
+      "calibration_scale": 0.1939687629499998,
+      "near_floor_raw": 0.05383169008372466,
+      "optimizer": "optuna_tpe",
+      "optimizer_seed": 57119294,
+      "selected_trial": 1,
+      "optimized_coordinates": [
+        "r",
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "interaction_concentration": null,
+      "warm_start_source_run": "RUN-180",
+      "warm_start_candidates": 6,
+      "warm_start_objective": 0.03099516773204625,
+      "sqlite_history": "TrpB_shared_stop_sensitivity_joint_r.sqlite3",
+      "trial_history": "TrpB_shared_stop_sensitivity_joint_r.csv.gz",
+      "protein": "TrpB",
+      "dataset_id": "trpb_johnston2024_four_site_graphfla",
+      "additive_prior": "empirical_msa_log_profile",
+      "calibration_lineage": "RUN180_direct_objective_joint_continuous_r_Optuna_TPE_warm_start"
+    }
+  ]
+}

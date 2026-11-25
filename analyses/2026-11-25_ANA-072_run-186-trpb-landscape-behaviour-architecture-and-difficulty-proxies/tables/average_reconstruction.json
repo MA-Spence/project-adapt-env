@@ -1,0 +1,11 @@
+{
+  "seed_count": 24,
+  "reconstructed_maps": 120,
+  "measured_nodes": 159129,
+  "cube_values_checked": 15360,
+  "maximum_absolute_difference": 2.220446049250313e-16,
+  "comparison_rtol": 1e-11,
+  "comparison_atol": 1e-12,
+  "observation_source_sha256": "e184de7a29a505af115bc4e3abf88a021f2c323c46e7b2d8bceed4fe9653dc0e",
+  "scope": "Read-only reconstruction; native units; archived reference centering and fixed noise seeds."
+}

@@ -1,0 +1,390 @@
+{
+  "analysis": "ANA-072",
+  "checked_at": "2026-11-24T23:51:19.547222+00:00",
+  "passed": true,
+  "scope": "Artifact/provenance checks, not biological adequacy or task performance.",
+  "checks": {
+    "notebooks": [
+      {
+        "notebook": "notebooks/validation.ipynb",
+        "cells": 12,
+        "code_cells": 6,
+        "embedded_pngs": 1,
+        "source_parity": true,
+        "sequential_execution": true,
+        "error_outputs": 0
+      },
+      {
+        "notebook": "notebooks/analysis.ipynb",
+        "cells": 12,
+        "code_cells": 7,
+        "embedded_pngs": 2,
+        "source_parity": true,
+        "sequential_execution": true,
+        "error_outputs": 0
+      },
+      {
+        "notebook": "notebooks/architecture.ipynb",
+        "cells": 10,
+        "code_cells": 4,
+        "embedded_pngs": 2,
+        "source_parity": true,
+        "sequential_execution": true,
+        "error_outputs": 0
+      },
+      {
+        "notebook": "notebooks/difficulty.ipynb",
+        "cells": 9,
+        "code_cells": 4,
+        "embedded_pngs": 2,
+        "source_parity": true,
+        "sequential_execution": true,
+        "error_outputs": 0
+      }
+    ],
+    "figures": [
+      {
+        "stem": "01_average_fitness_distribution",
+        "png_bytes": 387631,
+        "pdf_bytes": 119711
+      },
+      {
+        "stem": "02_average_local_behaviour",
+        "png_bytes": 343818,
+        "pdf_bytes": 36845
+      },
+      {
+        "stem": "03_local_genetic_architecture",
+        "png_bytes": 184485,
+        "pdf_bytes": 19159
+      },
+      {
+        "stem": "04_latent_readout_observation",
+        "png_bytes": 169264,
+        "pdf_bytes": 27540
+      },
+      {
+        "stem": "05_static_learning_and_navigation_proxies",
+        "png_bytes": 190223,
+        "pdf_bytes": 35842
+      },
+      {
+        "stem": "06_resolution_and_neutral_connectivity",
+        "png_bytes": 377263,
+        "pdf_bytes": 31429
+      },
+      {
+        "stem": "07_joint_search",
+        "png_bytes": 733676,
+        "pdf_bytes": 343647
+      }
+    ],
+    "table_coverage": {
+      "search": {
+        "studies": 3,
+        "completed_trials": 35136,
+        "failed_trials": 0
+      },
+      "average": {
+        "rows": 120,
+        "cohorts": {
+          "fresh": 8,
+          "reused": 16
+        }
+      },
+      "architecture": {
+        "rows": 435,
+        "archived_layer_rows": 363,
+        "cohorts": {
+          "fresh": 8,
+          "reused": 16
+        }
+      },
+      "edges": {
+        "rows": 121,
+        "cohorts": {
+          "fresh": 8,
+          "reused": 16
+        },
+        "nodes": 159129,
+        "undirected_edges": 6016433
+      },
+      "graphs": {
+        "rows": 363,
+        "cohorts": {
+          "fresh": 8,
+          "reused": 16
+        }
+      }
+    },
+    "scientific_records": {
+      "records": [
+        "validation_checks.json",
+        "average_reconstruction.json",
+        "architecture_validation.json",
+        "difficulty_verification.json",
+        "analysis_environment.json"
+      ],
+      "exact_recorded_python": "3.11.15",
+      "recorded_checks_present": true
+    },
+    "report_links": [
+      {
+        "document": "analysis.md",
+        "local_links_checked": 22,
+        "links": [
+          "README.md",
+          "notebooks/analysis.ipynb",
+          "notebooks/architecture.ipynb",
+          "notebooks/difficulty.ipynb",
+          "notebooks/validation.ipynb",
+          "figures/01_average_fitness_distribution.png",
+          "figures/02_average_local_behaviour.png",
+          "tables/average_distribution_summary.csv",
+          "tables/average_local_summary.csv",
+          "figures/03_local_genetic_architecture.png",
+          "figures/04_latent_readout_observation.png",
+          "notebooks/architecture.ipynb",
+          "tables/architecture_cohort_summary.csv",
+          "figures/05_static_learning_and_navigation_proxies.png",
+          "figures/06_resolution_and_neutral_connectivity.png",
+          "tables/difficulty_graph_summary.csv",
+          "tables/difficulty_edge_summary.csv",
+          "figures/07_joint_search.png",
+          "README.md",
+          "tables/validation_checks.json",
+          "tables/artifact_validation.json",
+          "storage_verification.json"
+        ],
+        "all_targets_exist": true
+      },
+      {
+        "document": "README.md",
+        "local_links_checked": 17,
+        "links": [
+          "analysis.md",
+          "notebooks/validation.ipynb",
+          "notebooks/analysis.ipynb",
+          "notebooks/architecture.ipynb",
+          "notebooks/difficulty.ipynb",
+          "tables/",
+          "figures/",
+          "notebooks/environment.lock.txt",
+          "notebooks/requirements.txt",
+          "tables/analysis_environment.json",
+          "../../data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186.dvc",
+          "../../experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-186.yaml",
+          "../../experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout.md",
+          "tables/validation_checks.json",
+          "tables/average_reconstruction.json",
+          "tables/architecture_validation.json",
+          "tables/difficulty_verification.json"
+        ],
+        "all_targets_exist": true
+      }
+    ]
+  },
+  "checked_files": {
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/validation.py": {
+      "bytes": 15149,
+      "sha256": "b5249456acbe904bba1cc87520bcc46136a2f476cfa06d32e5ae90424a220a59"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/validation.ipynb": {
+      "bytes": 417030,
+      "sha256": "879b132302db692f6c679d887672f1808fa02953ce97a8cedd22cff90d8ade65"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/analysis.py": {
+      "bytes": 16802,
+      "sha256": "c2e5df2fa524d292aff23783f205b659edc28c0e72c15ca1e07ede7ff5fa70e7"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/analysis.ipynb": {
+      "bytes": 569745,
+      "sha256": "799ae96edd780b8dd00e6e7d818401f77cbcd31bc077101fe0ca4f0c675061df"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/architecture.py": {
+      "bytes": 9233,
+      "sha256": "e89bc0ee6e88a08e470d1d9e845f2290955026d8997910e34138d31f428b30c4"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/architecture.ipynb": {
+      "bytes": 499270,
+      "sha256": "f61d99e4c7e503dacc3b8b0e6229a1ea393a1eef07b0d4029908ea38bec00e50"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/difficulty.py": {
+      "bytes": 10093,
+      "sha256": "67a8aae6c630644c1bfaee9c1dae80931c80fdd053e41d8e66180769f7b71288"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/difficulty.ipynb": {
+      "bytes": 393174,
+      "sha256": "afc90e6d00b06c2ed10cfde66ba5e2b4e13f40b8c85eeaab479ca154738de2a2"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/01_average_fitness_distribution.png": {
+      "bytes": 387631,
+      "sha256": "adfeaf4b83bdd307f63ab22aa48dac584542aa1d0c09340749993f4e91304776"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/01_average_fitness_distribution.pdf": {
+      "bytes": 119711,
+      "sha256": "e76dbf635c6d8e33dee00957013689b1ddd0a066e2f75600598b0651dcfd21ca"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/02_average_local_behaviour.png": {
+      "bytes": 343818,
+      "sha256": "4ec4404fb722ff9d126899640c4b49f5a8d7870a14694043211d02188e7d4b4a"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/02_average_local_behaviour.pdf": {
+      "bytes": 36845,
+      "sha256": "ccec9ca396ab20585fdf37674ccf4b29998964497faf90d63654b814a18f01df"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/03_local_genetic_architecture.png": {
+      "bytes": 184485,
+      "sha256": "c08ec24abc289ea1de230b2f3f884e7bff328bf4dec87a60ed90af436a84c5cd"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/03_local_genetic_architecture.pdf": {
+      "bytes": 19159,
+      "sha256": "61c13081e7d0b0031b33334e1d01ae01fcc2143fc19dac40698d5d1c68661a86"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/04_latent_readout_observation.png": {
+      "bytes": 169264,
+      "sha256": "6482bd36d8e8c1b03727a1ca70fe904e6d01afc5573d13d27a74eb4d560cc301"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/04_latent_readout_observation.pdf": {
+      "bytes": 27540,
+      "sha256": "0a26423af88454655eead6030e1514529c9d52baeb4e48d543a6060679ace4da"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/05_static_learning_and_navigation_proxies.png": {
+      "bytes": 190223,
+      "sha256": "99eae6c80d0148b2de6615583dd2910a85f4f1c5d13b483a547dfd81b5b8b883"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/05_static_learning_and_navigation_proxies.pdf": {
+      "bytes": 35842,
+      "sha256": "80d5db4b7dec28b22a4793e49b98b7369e70eb288f408874665d71f4335ed155"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/06_resolution_and_neutral_connectivity.png": {
+      "bytes": 377263,
+      "sha256": "a7a5a33a0223a71d181e8d51b7cca3a68a61115e65794aa1f2815c82d8d03ba7"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/06_resolution_and_neutral_connectivity.pdf": {
+      "bytes": 31429,
+      "sha256": "d2c4396e027e48b34b88980933aeb65dde696774a7588c11f55ab0d1505b3358"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/07_joint_search.png": {
+      "bytes": 733676,
+      "sha256": "0d384b8f9ea82b757f5eac9959f68c2c753d78ac5f9c86294329fcfd91b7f7d1"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/07_joint_search.pdf": {
+      "bytes": 343647,
+      "sha256": "7d9fb0faa32c58ee9a44b2be649b94511a6505082205940bfc18297decbacfb9"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_search_summary.csv": {
+      "bytes": 454,
+      "sha256": "d9533fedd064e98a609c3405114a7d7f4a431eab277db2300fbc7fbfbf8957da"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_latent_replay.csv": {
+      "bytes": 511,
+      "sha256": "4eb8627f314a9824b6b2e78e4268ec974f459a6def58de59f8467481cb151907"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_full_library_by_seed.csv": {
+      "bytes": 25348,
+      "sha256": "6c542c1ed2cc1356554dd95e53621218722ffb0966387fa8c3146505695e2b4f"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_reconstruction_checks.csv": {
+      "bytes": 8745,
+      "sha256": "90df336c9ec128ed187b73d67f1ac1a62e7b6fdad6fc49ae2d59abbed340bbad"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_distribution_summary.csv": {
+      "bytes": 13432,
+      "sha256": "2fca2138e9cafe631c3f442effd9d76c6c99dd8651c4fab7ba71dc6be8d8b1ad"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_local_summary.csv": {
+      "bytes": 4825,
+      "sha256": "b17ef2c0fcb92023cec78e379471159974c58191a2c548c1aa42a8057e2263ce"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_seed_metrics.csv": {
+      "bytes": 149292,
+      "sha256": "f62c4e14cdc2aa2aeb3a584cc9c50cefc42d23f0349fe784d8c15ebf5366fdb3"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_edge_seed_metrics.csv": {
+      "bytes": 20261,
+      "sha256": "f79068b04008625197aa73f95841b7bf295e95e1928fcbb5952fcaeb96aedcbe"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_graph_seed_metrics.csv": {
+      "bytes": 218251,
+      "sha256": "a9524bb60e2b55b6f5938f50c080b035527f9ec221c7cd02a9e4530794ac19ef"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_cohort_summary.csv": {
+      "bytes": 63893,
+      "sha256": "df2871f00c9f2131de6e27b5e2560300c2a539f7b02c149cbb005fbc53d11e54"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_edge_summary.csv": {
+      "bytes": 3441,
+      "sha256": "b5f399479148d04a53dfa62beba7300cdcb48783c87180fc682bd48e8e5e04dd"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_graph_summary.csv": {
+      "bytes": 37601,
+      "sha256": "f81ebc1c1e07f18282dd85033e80d9c03fdc3da31f6ab8f02ae4b2147ebc2856"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_checks.json": {
+      "bytes": 4616,
+      "sha256": "e8778ca2c14e651e692cf85180bd40a285c37929b48588e9211bb4718ce93cfd"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_reconstruction.json": {
+      "bytes": 429,
+      "sha256": "cf44815c5f84c6f9605486ff3dfc2f281b789d71319e1e251e3a47ba721b537c"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_validation.json": {
+      "bytes": 6889,
+      "sha256": "899f2f891cc076637a6aaf2486e85fd45081710f5f021e6c79cfd12292095cfb"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_verification.json": {
+      "bytes": 68322,
+      "sha256": "7a3f4c70ec38f88356820a8262e88d4ad3671eccd726964e13ec909904ad92c3"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/analysis_environment.json": {
+      "bytes": 1620,
+      "sha256": "0c70ffabca7ad1aa4564db6643175ae88ca855a4061a769797c5476bde66f0a6"
+    },
+    "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186.dvc": {
+      "bytes": 110,
+      "sha256": "8ec9ba5ceb6ad4914ccfe2f15d23b24d8be6211fd78e8b95ae0fe56160ff261d"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/requirements.txt": {
+      "bytes": 214,
+      "sha256": "ef1ccc799c3f80e650e20b6a0af29f248f8ddb372f3b03963a1101cb4794a878"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/environment.lock.txt": {
+      "bytes": 908,
+      "sha256": "d09a053ae3d9b327c2c4eb367f6ee6ed72ba3936fcc6ef459114148a25aa463e"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/build_notebooks.py": {
+      "bytes": 1473,
+      "sha256": "223e9f0db61d95b49938affbbe3ca1fc203e28a28750bab961e1cc55dd4d1a10"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/execute.py": {
+      "bytes": 1322,
+      "sha256": "fba34dd5cd401ccc94a2f7cd9b2d3d6b0bb53e9794058c63cc228f403c134d60"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/check_artifacts.py": {
+      "bytes": 12189,
+      "sha256": "ed054b7b984303347db82b64063420bda4f7772e9bb94e426ecec16717557d0c"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/average_tools.py": {
+      "bytes": 7315,
+      "sha256": "ce7f6c37a4176d5792a951d287f1f310d1ce1aa53bb6450458f7c732a9b5f271"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/architecture_tools.py": {
+      "bytes": 17233,
+      "sha256": "076d96c3b56a5254041874771c14a96fd81969f03246a44565ca413531cc3dd8"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/notebooks/difficulty_tools.py": {
+      "bytes": 14309,
+      "sha256": "01048da4a68dc0d4d1914ba96362002731776dcba458a3549e6e5db2ac073d87"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/analysis.md": {
+      "bytes": 16182,
+      "sha256": "3e93d1c38289a261d6ea2a01234853e7366c4d15dab681ca2d22bf95670cbb06"
+    },
+    "analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/README.md": {
+      "bytes": 6735,
+      "sha256": "a6e848c45c35491691dcca1fecd66b77f96b125eaee067ec9d2e60de16fb1b92"
+    }
+  },
+  "errors": []
+}

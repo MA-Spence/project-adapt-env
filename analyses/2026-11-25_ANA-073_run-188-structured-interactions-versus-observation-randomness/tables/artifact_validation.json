@@ -1,0 +1,46 @@
+{
+  "executed_code_cells": 11,
+  "embedded_figures": 6,
+  "error_outputs": 0,
+  "paired_source_matches_notebook": true,
+  "figures": [
+    {
+      "png": "figures/01_calibration_and_sign_epistasis.png",
+      "pdf": "figures/01_calibration_and_sign_epistasis.pdf",
+      "png_sha256": "a64056f7d82bedacaf2d1b8ce42f1609c0d65b4900efdb497f79d584fa8a5969",
+      "pdf_sha256": "0142587aa31eb79b21dc3200d0cfac9764402fc577f3daa2f11da81108d3f3f5"
+    },
+    {
+      "png": "figures/02_independent_and_shared_noise.png",
+      "pdf": "figures/02_independent_and_shared_noise.pdf",
+      "png_sha256": "00e1839a05dd1cb64689466a6cc50e2265dce48a1ae169da96a610317e053c27",
+      "pdf_sha256": "8c0d3e99410fffeab4720ee9ee79156e824951f8351825e023fa574260f9eb78"
+    },
+    {
+      "png": "figures/03_exact_power_accounting.png",
+      "pdf": "figures/03_exact_power_accounting.pdf",
+      "png_sha256": "a0f167df9816d04ad221af0caf57b45db539183d1475aef43120be95147f779f",
+      "pdf_sha256": "d4000f92442de56172c22b0cad7e6d4eb6b524717364b2aa8b35adbe672a5c13"
+    },
+    {
+      "png": "figures/04_repeatable_interaction_power.png",
+      "pdf": "figures/04_repeatable_interaction_power.pdf",
+      "png_sha256": "2fb51426c0630e270654f96b79919dbd63eb8cc1a4942e970cf7eecfa7ae3499",
+      "pdf_sha256": "521f88498f46bf81ca01cfaeecb099d591f8118eb5849ebf12e3bb54e84aa46c"
+    },
+    {
+      "png": "figures/05_activity_strata.png",
+      "pdf": "figures/05_activity_strata.pdf",
+      "png_sha256": "474c2f97cf06ec90d86e3ea7b7ba4c7ec8d674cf83559c1e40845728306ba52b",
+      "pdf_sha256": "7caffbcfb3a112306eeaf7867f289f5689cb5d5b2ea01d7e9005c5852df1a26f"
+    },
+    {
+      "png": "figures/06_resolution_sensitivity.png",
+      "pdf": "figures/06_resolution_sensitivity.pdf",
+      "png_sha256": "357cc88ca0c53c3c7b4f230ea18f9490058900bb322a212e4945deac51f45c78",
+      "pdf_sha256": "0cfead5a6186521bd980c63ab2b6fac5ba7b66c1cab82ec4949996ffc405184d"
+    }
+  ],
+  "visual_review": "All six exported PNGs inspected; labels, legends and data visible. Sensitivity label/legend corrected.",
+  "notebook_sha256": "2c21849c50bf4879e3c9d38531e27691ffcfef379f472af609dad4424f03cc22"
+}

@@ -1,0 +1,162 @@
+{
+  "run": "RUN-184",
+  "checked_utc": "2026-11-24T01:51:22.338370+00:00",
+  "queue": {
+    "code": 0,
+    "stdout": "2325|RUNNING|3:07:46|1-00:00:00|dutch\n",
+    "stderr": ""
+  },
+  "job": {
+    "code": 0,
+    "stdout": "JobId=2325 JobName=EXP-065RUN-184 UserId=matthew-spence(1000) GroupId=matthew-spence(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=(null) JobState=RUNNING Reason=None Dependency=(null) Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=03:07:46 TimeLimit=1-00:00:00 TimeMin=N/A SubmitTime=2026-11-21T12:52:12 EligibleTime=2026-11-21T12:52:12 AccrueTime=2026-11-21T12:52:12 StartTime=2026-11-24T09:43:36 EndTime=2026-11-25T09:43:36 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-24T09:43:36 Scheduler=Main Partition=cpu AllocNode:Sid=10.20.20.2:2333196 ReqNodeList=(null) ExcNodeList=(null) NodeList=dutch BatchHost=dutch NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=8G,node=1,billing=1 AllocTRES=cpu=1,mem=8G,node=1,billing=1 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=8G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/tank/data/labproj/staging/project-adapt-env/RUN-184/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-184.slurm WorkDir=/tank/data/labproj/staging/project-adapt-env/RUN-184/project StdErr=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-184/logs/stderr.txt StdIn=/dev/null StdOut=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-184/logs/stdout.txt Power= TresPerTask=cpu:1 \n",
+    "stderr": ""
+  },
+  "files": {
+    "outputs": [
+      {
+        "name": "config.json",
+        "bytes": 940,
+        "modified_utc": "2026-11-23T22:43:37.882922+00:00"
+      },
+      {
+        "name": "confirmation_inputs.npz",
+        "bytes": 162066,
+        "modified_utc": "2026-11-23T22:43:37.905923+00:00"
+      },
+      {
+        "name": "empirical_architecture.json",
+        "bytes": 944324,
+        "modified_utc": "2026-11-23T23:40:33.822843+00:00"
+      },
+      {
+        "name": "empirical_coefficients.npz",
+        "bytes": 10321,
+        "modified_utc": "2026-11-23T23:40:33.823843+00:00"
+      },
+      {
+        "name": "inputs.npz",
+        "bytes": 162500,
+        "modified_utc": "2026-11-23T22:43:37.894923+00:00"
+      },
+      {
+        "name": "provenance.json",
+        "bytes": 2100,
+        "modified_utc": "2026-11-23T22:43:37.939924+00:00"
+      },
+      {
+        "name": "study.sqlite3",
+        "bytes": 3002368,
+        "modified_utc": "2026-11-24T01:48:26.783542+00:00"
+      }
+    ],
+    "logs": [
+      {
+        "name": "architecture_linux_environment.json",
+        "bytes": 1930,
+        "modified_utc": "2026-11-23T22:43:37.345911+00:00"
+      },
+      {
+        "name": "architecture_linux_numpy_config.txt",
+        "bytes": 1598,
+        "modified_utc": "2026-11-23T22:43:37.384912+00:00"
+      },
+      {
+        "name": "stderr.txt",
+        "bytes": 46980,
+        "modified_utc": "2026-11-24T01:48:26.498545+00:00"
+      },
+      {
+        "name": "stdout.txt",
+        "bytes": 124,
+        "modified_utc": "2026-11-23T22:43:37.396912+00:00"
+      }
+    ]
+  },
+  "log_tails": {
+    "stdout.txt": "Verified 152 RUN-182 payloads and 31 pinned packages\nStarting unchanged RUN-182 calibration on Linux; RUN=RUN-184; job=2325\n",
+    "stderr.txt": "65701022889542, 'span': 8.300189018245703}. Best is trial 16 with value: 76.68087807847009.\n[I 2026-11-24 12:28:09,079] Trial 33 finished with value: 287.1851190979421 and parameters: {'r': 0.13049533982117456, 'concentration': 3.951008135130747, 'steepness': 0.1308727893379138, 'position': 5.831284157624058, 'lower': 0.19708468920230526, 'span': 1.5829361826620358}. Best is trial 16 with value: 76.68087807847009.\n[I 2026-11-24 12:33:42,565] Trial 34 finished with value: 92.31224950672419 and parameters: {'r': 1.7973768596955884, 'concentration': 2.2946829291035966, 'steepness': 0.25439210091777475, 'position': 0.3072175348425574, 'lower': 0.30836133021590495, 'span': 0.34311566233864255}. Best is trial 16 with value: 76.68087807847009.\n[I 2026-11-24 12:34:34,180] Trial 35 finished with value: 564.1998794702209 and parameters: {'r': 0.6982133623906757, 'concentration': 0.16073513776324289, 'steepness': 0.09996850213426707, 'position': 4.972478665118896, 'lower': 0.3733068655769989, 'span': 2.299428669243787}. Best is trial 16 with value: 76.68087807847009.\n[W 2026-11-24 12:37:38,250] Trial 36 failed with parameters: {'r': 6.7166731752473074, 'concentration': 6.0113406612885765, 'steepness': 1.1180033344572138, 'position': -5.021134495465586, 'lower': -2.8108900390017455, 'span': 6.008806677487623} because of the following error: InferenceFailure('Auxiliary inference did not converge; increase its budget or inspect diagnostics').\nTraceback (most recent call last):\n  File \"/tank/data/labproj/runtime/project-adapt-env/envs/architecture-0.7.0rc1-py311/lib/python3.11/site-packages/optuna/study/_optimize.py\", line 206, in _run_trial\n    value_or_values = func(trial)\n                      ^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 482, in objective\n    summaries, fits, _ = _simulate(p, config.calibration_seeds, panel, matrix, config, residual_pool)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 311, in _simulate\n    fitted = panel.infer(observed, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 212, in infer\n    raise InferenceFailure(\"Auxiliary inference did not converge; increase its budget or inspect diagnostics\",\nadaptenv.calibration.InferenceFailure: Auxiliary inference did not converge; increase its budget or inspect diagnostics\n[W 2026-11-24 12:37:38,252] Trial 36 failed with value None.\n[W 2026-11-24 12:40:36,773] Trial 37 failed with parameters: {'r': 3.0160217018762863, 'concentration': 4.805023088162698, 'steepness': 4.397219325916321, 'position': -1.302040453403257, 'lower': -2.1554175797177915, 'span': 1.2362046040150523} because of the following error: InferenceFailure('Auxiliary inference did not converge; increase its budget or inspect diagnostics').\nTraceback (most recent call last):\n  File \"/tank/data/labproj/runtime/project-adapt-env/envs/architecture-0.7.0rc1-py311/lib/python3.11/site-packages/optuna/study/_optimize.py\", line 206, in _run_trial\n    value_or_values = func(trial)\n                      ^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 482, in objective\n    summaries, fits, _ = _simulate(p, config.calibration_seeds, panel, matrix, config, residual_pool)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 311, in _simulate\n    fitted = panel.infer(observed, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tank/data/labproj/staging/project-adapt-env/RUN-184/project/data/processed/trpb-architecture-slurm-runtime/source/external/Adapt-Env/adaptenv/calibration.py\", line 212, in infer\n    raise InferenceFailure(\"Auxiliary inference did not converge; increase its budget or inspect diagnostics\",\nadaptenv.calibration.InferenceFailure: Auxiliary inference did not converge; increase its budget or inspect diagnostics\n[W 2026-11-24 12:40:36,774] Trial 37 failed with value None.\n[I 2026-11-24 12:48:26,499] Trial 38 finished with value: 180.92411338413427 and parameters: {'r': 5.736692524720463, 'concentration': 12.49254039615164, 'steepness': 0.11284388859779854, 'position': -2.676442967789814, 'lower': -1.8596418836285902, 'span': 6.234658034114371}. Best is trial 16 with value: 76.68087807847009.\n"
+  },
+  "trial_states": {
+    "COMPLETE": 16,
+    "FAIL": 23,
+    "RUNNING": 1
+  },
+  "recent_trials": [
+    [
+      39,
+      "RUNNING",
+      "2026-11-24 12:48:26.519496",
+      null
+    ],
+    [
+      38,
+      "COMPLETE",
+      "2026-11-24 12:40:36.792576",
+      "2026-11-24 12:48:26.458548"
+    ],
+    [
+      37,
+      "FAIL",
+      "2026-11-24 12:37:38.270071",
+      "2026-11-24 12:40:36.744709"
+    ],
+    [
+      36,
+      "FAIL",
+      "2026-11-24 12:34:34.185019",
+      "2026-11-24 12:37:38.215066"
+    ],
+    [
+      35,
+      "COMPLETE",
+      "2026-11-24 12:33:42.587333",
+      "2026-11-24 12:34:34.144047"
+    ],
+    [
+      34,
+      "COMPLETE",
+      "2026-11-24 12:28:09.100068",
+      "2026-11-24 12:33:42.521128"
+    ]
+  ],
+  "best_trial": [
+    16,
+    76.68087807847009
+  ],
+  "trial_times": [
+    "2026-11-24 10:40:36.631227",
+    "2026-11-24 12:48:26.458548"
+  ],
+  "failure_messages": {
+    "Auxiliary inference did not converge; increase its budget or inspect diagnostics": 23
+  },
+  "failed_fullfit_termination_messages": {
+    "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT": 15,
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH": 8
+  },
+  "empirical_convergence": {
+    "converged": true,
+    "bootstrap_count": 20,
+    "bootstrap_converged": 20
+  },
+  "calibration_processes": [
+    {
+      "pid": 3090650,
+      "state": "R",
+      "rss": "146912 kB",
+      "threads": "1",
+      "cpu_seconds": 11226.72,
+      "cpu_percent": 99.98858180193083
+    }
+  ],
+  "interpretation": {
+    "finished_attempts": 39,
+    "valid_trials": 16,
+    "failed_trials": 23,
+    "current_trial_one_based": 40,
+    "total_attempt_budget": 100,
+    "stage": "Optuna random startup; adaptive TPE requires 20 complete trials",
+    "best_objective_change": "Unchanged since previous snapshot",
+    "scientific_result": "Confirmation not yet reached; no final result"
+  }
+}

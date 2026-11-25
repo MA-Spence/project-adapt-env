@@ -1,0 +1,388 @@
+{
+  "checked_utc": "2026-11-25T10:04:27.303054+00:00",
+  "run": "RUN-190",
+  "job": "2357",
+  "exit_code": "0",
+  "scientific_exit_code": "0",
+  "stderr": "",
+  "manifest_sha256": "778234f248075facda9b291d1a0fa453278f22d41e5ebb0ec4e8aa98486d1a88",
+  "verified_output_files": 65,
+  "bad_files": [],
+  "trial_states": {
+    "COMPLETE": 11712
+  },
+  "elapsed_seconds": 8809.307598571002,
+  "counts": {
+    "seeds": 24,
+    "cube_rows": 1184,
+    "face_rows": 85248,
+    "summary_rows": 1740,
+    "graph_rows": 435
+  },
+  "settings": [
+    {
+      "arm": "r0",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.0,
+      "parameters": [
+        0.21759150165031782,
+        2.2973420879919852,
+        -7.867549377554278,
+        0.3292809702406704
+      ],
+      "objective": {
+        "quantile": 0.04124057695393592,
+        "mean_sd": 0.0008135235408087792,
+        "floor_cdf": 2.039968967437744e-05,
+        "total": 0.04207450018441907
+      },
+      "selected_trial": 0,
+      "selected_source": "RUN180_readout_r0",
+      "trials": 11712,
+      "optimizer_seed": 58459495,
+      "bounds": [
+        [
+          -2.0,
+          2.0
+        ],
+        [
+          -6.907755278982137,
+          2.302585092994046
+        ],
+        [
+          -14.0,
+          8.0
+        ],
+        [
+          -2.995732273553991,
+          2.0794415416798357
+        ]
+      ],
+      "calibration_origin": -0.03522340992,
+      "calibration_scale": 0.1939687629499998,
+      "near_floor_raw": 0.05383169008372466,
+      "interaction_concentration": null,
+      "noise_strength_fitted": false,
+      "optimizer_completed": true,
+      "optimizer_converged": false,
+      "fit_scope": "Fixed-budget calibration; no claim of global optimality",
+      "warm_starts": [
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21759150165031782,
+            2.2973420879919852,
+            -7.867549377554278,
+            0.3292809702406704
+          ],
+          "source": "RUN180_readout_r0"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21805868351610824,
+            2.2759427989712218,
+            -7.440616618583173,
+            0.14518989577139818
+          ],
+          "source": "RUN180_readout_r0.5"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21840719858853186,
+            1.408195126169486,
+            -6.177110025043908,
+            -0.09055121211281042
+          ],
+          "source": "RUN180_readout_r1"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.20661530781233495,
+            1.9263836257824063,
+            -5.984595158105576,
+            -0.6307714297032816
+          ],
+          "source": "RUN180_readout_r2"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.198290882321551,
+            1.0219646032529934,
+            -4.722139676677287,
+            -1.2538386669261727
+          ],
+          "source": "RUN180_readout_r4"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.207314671199041,
+            0.7804456099753945,
+            -4.934306284236644,
+            -1.7743880600192012
+          ],
+          "source": "RUN180_readout_r8"
+        }
+      ],
+      "reused_from": "RUN-188",
+      "refitted": false
+    },
+    {
+      "arm": "full",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "parameters": [
+        0.21805868351610824,
+        2.2759427989712218,
+        -7.440616618583173,
+        0.14518989577139818
+      ],
+      "objective": {
+        "quantile": 0.029890048284698507,
+        "mean_sd": 0.0011008130117627216,
+        "floor_cdf": 4.306435585021973e-06,
+        "total": 0.03099516773204625
+      },
+      "selected_trial": 1,
+      "selected_source": "RUN180_readout_r0.5",
+      "trials": 11712,
+      "optimizer_seed": 58459495,
+      "bounds": [
+        [
+          -2.0,
+          2.0
+        ],
+        [
+          -6.907755278982137,
+          2.302585092994046
+        ],
+        [
+          -14.0,
+          8.0
+        ],
+        [
+          -2.995732273553991,
+          2.0794415416798357
+        ]
+      ],
+      "calibration_origin": -0.03522340992,
+      "calibration_scale": 0.1939687629499998,
+      "near_floor_raw": 0.05383169008372466,
+      "interaction_concentration": null,
+      "noise_strength_fitted": false,
+      "optimizer_completed": true,
+      "optimizer_converged": false,
+      "fit_scope": "Fixed-budget calibration; no claim of global optimality",
+      "warm_starts": [
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21759150165031782,
+            2.2973420879919852,
+            -7.867549377554278,
+            0.3292809702406704
+          ],
+          "source": "RUN180_readout_r0"
+        },
+        {
+          "r": 0.5,
+          "parameters": [
+            0.21805868351610824,
+            2.2759427989712218,
+            -7.440616618583173,
+            0.14518989577139818
+          ],
+          "source": "RUN180_readout_r0.5"
+        },
+        {
+          "r": 1.0,
+          "parameters": [
+            0.21840719858853186,
+            1.408195126169486,
+            -6.177110025043908,
+            -0.09055121211281042
+          ],
+          "source": "RUN180_readout_r1"
+        },
+        {
+          "r": 2.0,
+          "parameters": [
+            0.20661530781233495,
+            1.9263836257824063,
+            -5.984595158105576,
+            -0.6307714297032816
+          ],
+          "source": "RUN180_readout_r2"
+        },
+        {
+          "r": 4.0,
+          "parameters": [
+            0.198290882321551,
+            1.0219646032529934,
+            -4.722139676677287,
+            -1.2538386669261727
+          ],
+          "source": "RUN180_readout_r4"
+        },
+        {
+          "r": 8.0,
+          "parameters": [
+            0.207314671199041,
+            0.7804456099753945,
+            -4.934306284236644,
+            -1.7743880600192012
+          ],
+          "source": "RUN180_readout_r8"
+        },
+        {
+          "r": 0.0,
+          "parameters": [
+            0.21759150165031782,
+            2.2973420879919852,
+            -7.867549377554278,
+            0.3292809702406704
+          ],
+          "source": "paired_refitted_r0"
+        }
+      ],
+      "reused_from": "RUN-188",
+      "refitted": false
+    },
+    {
+      "arm": "gamma",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "parameters": [
+        0.21805868351610824,
+        2.2759427989712218,
+        -7.440616618583173,
+        0.14518989577139818
+      ],
+      "interaction_concentration": 100.0,
+      "gamma_shape": 100.0,
+      "gamma_rate": 100.0,
+      "objective": {
+        "quantile": 0.030182920526992466,
+        "mean_sd": 0.0008426429158728321,
+        "floor_cdf": 6.571412086486816e-06,
+        "total": 0.031032134854951786
+      },
+      "selected_trial": 7,
+      "selected_source": "gaussian_winner_alpha100",
+      "trials": 11712,
+      "calibration_origin": -0.03522340992,
+      "calibration_scale": 0.1939687629499998,
+      "near_floor_raw": 0.05383169008372466,
+      "optimizer_seed": 58459495,
+      "noise_strength_fitted": false,
+      "optimizer_completed": true,
+      "optimizer_converged": false,
+      "warm_starts": [
+        {
+          "r": 0.0,
+          "alpha": 1.0,
+          "parameters": [
+            0.21759150165031782,
+            2.2973420879919852,
+            -7.867549377554278,
+            0.3292809702406704
+          ],
+          "source": "historical_r0_alpha1"
+        },
+        {
+          "r": 0.5,
+          "alpha": 1.0,
+          "parameters": [
+            0.21805868351610824,
+            2.2759427989712218,
+            -7.440616618583173,
+            0.14518989577139818
+          ],
+          "source": "historical_r0.5_alpha1"
+        },
+        {
+          "r": 1.0,
+          "alpha": 1.0,
+          "parameters": [
+            0.21840719858853186,
+            1.408195126169486,
+            -6.177110025043908,
+            -0.09055121211281042
+          ],
+          "source": "historical_r1_alpha1"
+        },
+        {
+          "r": 2.0,
+          "alpha": 1.0,
+          "parameters": [
+            0.20661530781233495,
+            1.9263836257824063,
+            -5.984595158105576,
+            -0.6307714297032816
+          ],
+          "source": "historical_r2_alpha1"
+        },
+        {
+          "r": 4.0,
+          "alpha": 1.0,
+          "parameters": [
+            0.198290882321551,
+            1.0219646032529934,
+            -4.722139676677287,
+            -1.2538386669261727
+          ],
+          "source": "historical_r4_alpha1"
+        },
+        {
+          "r": 8.0,
+          "alpha": 1.0,
+          "parameters": [
+            0.207314671199041,
+            0.7804456099753945,
+            -4.934306284236644,
+            -1.7743880600192012
+          ],
+          "source": "historical_r8_alpha1"
+        },
+        {
+          "r": 0.5,
+          "alpha": 0.05,
+          "parameters": [
+            0.21805868351610824,
+            2.2759427989712218,
+            -7.440616618583173,
+            0.14518989577139818
+          ],
+          "source": "gaussian_winner_alpha0.05"
+        },
+        {
+          "r": 0.5,
+          "alpha": 100.0,
+          "parameters": [
+            0.21805868351610824,
+            2.2759427989712218,
+            -7.440616618583173,
+            0.14518989577139818
+          ],
+          "source": "gaussian_winner_alpha100"
+        },
+        {
+          "r": 0.0,
+          "alpha": 1.0,
+          "parameters": [
+            0.21759150165031782,
+            2.2973420879919852,
+            -7.867549377554278,
+            0.3292809702406704
+          ],
+          "source": "RUN188_refitted_r0"
+        }
+      ],
+      "fit_scope": "Fixed budget; no global optimality claim"
+    }
+  ]
+}

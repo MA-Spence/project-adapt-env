@@ -1,0 +1,48 @@
+run: RUN-183
+target: lab-slurm
+experiment: EXP-065
+mode: source-staged
+code:
+  project_root: .
+  experiment_dir: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration
+  run_script: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+inputs:
+  declared_files:
+  - AIM.md
+  - PROJECT_STATE.md
+  - docs/hypotheses.md
+  - environment/calibration-py311.lock.txt
+  - data/processed/trpb-architecture-slurm-runtime.dvc
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/metadata.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_architecture_slurm.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_slurm_worker.sh
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_slurm.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_slurm_storage.json
+  datasets:
+  - data/processed/trpb-architecture-slurm-runtime
+outputs:
+  expected:
+  - config.json
+  - inputs.npz
+  - confirmation_inputs.npz
+  - provenance.json
+  - empirical_architecture.json
+  - empirical_coefficients.npz
+  - study.sqlite3
+  - result.json
+  - trials.json
+  - confirmation_predictions.npz
+  - cli_inputs.json
+  artifacts: []
+remote_paths:
+  project_root: /tank/data/labproj/staging/project-adapt-env/RUN-183/project
+  run_root: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-183
+  output_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-183/outputs
+  log_dir: /tank/data/labproj/runtime/project-adapt-env/runs/RUN-183/logs
+  workdir: /tmp/labproj/project-adapt-env/RUN-183
+  run_script: /tank/data/labproj/staging/project-adapt-env/RUN-183/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  scheduler_script: /tank/data/labproj/staging/project-adapt-env/RUN-183/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-183.slurm
+cleanup_policy:
+  explicit: true
+  notes: No automatic remote deletion occurs in this prototype.

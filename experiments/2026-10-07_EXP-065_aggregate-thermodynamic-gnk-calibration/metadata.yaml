@@ -2,7 +2,7 @@ id: EXP-065
 type: experiment
 title: Aggregate thermodynamic GNK calibration and confirmation
 slug: aggregate-thermodynamic-gnk-calibration
-status: completed
+status: running
 created: '2026-10-07T13:40:05+11:00'
 owner: matthew-spence
 scientific_context:
@@ -41,90 +41,55 @@ inputs:
   declared_files:
   - AIM.md
   - PROJECT_STATE.md
-  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
-  - data/processed/interaction-strength-exp065-inputs.dvc
-  - data/processed/trpb-profile-additive-inputs.dvc
   - docs/hypotheses.md
-  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.md
-  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.yaml
-  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_control.json
-  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_model_audit.json
-  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_source.json
-  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_validation.json
-  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.yaml
-  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength_source.json
+  - environment/readout-py311.lock.txt
+  - data/processed/trpb-gamma-concentration-slurm-runtime.dvc
   - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
-  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_alignment_prior.py
-  - external/Adapt-Env/README.md
-  - external/Adapt-Env/adaptenv/README.md
-  - external/Adapt-Env/adaptenv/__init__.py
-  - external/Adapt-Env/adaptenv/alignment.py
-  - external/Adapt-Env/adaptenv/amino_acids.py
-  - external/Adapt-Env/adaptenv/api.py
-  - external/Adapt-Env/adaptenv/extensive_gnk.py
-  - external/Adapt-Env/adaptenv/landscape.py
-  - external/Adapt-Env/adaptenv/mmseqs.py
-  - external/Adapt-Env/adaptenv/presets.py
-  - external/Adapt-Env/adaptenv/ranked_categorical_gnk.py
-  - external/Adapt-Env/adaptenv/service.py
-  - external/Adapt-Env/adaptenv/thermodynamic.py
-  - external/Adapt-Env/docs/API_AND_SERVICE.md
-  - external/Adapt-Env/docs/THERMODYNAMIC_V2.md
-  - external/Adapt-Env/pyproject.toml
-  - external/Adapt-Env/tests/test_alignment_profile.py
-  - external/Adapt-Env/tests/test_amino_acids.py
-  - external/Adapt-Env/tests/test_mmseqs_client.py
-  - external/Adapt-Env/tests/test_profile_additive_prior.py
-  - external/Adapt-Env/tests/test_public_thermodynamic.py
-  - scripts/alignment_prior_exp065.py
-  - scripts/fetch_trpb_replicates_exp065.py
-  - scripts/interaction_strength_exp065.py
-  - scripts/landscape_graph.py
-  - scripts/landscape_graph_kernel.cpp
-  - scripts/observation_calibration_exp065.py
-  - scripts/prepare_trpb_profile_exp065.py
-  - scripts/production_landscapes_exp066.py
-  - scripts/replicate_observation_exp065.py
-  - tests/test_alignment_prior_exp065.py
-  - tests/test_interaction_strength_exp065.py
-  - tests/test_prepare_trpb_profile_exp065.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/metadata.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_runtime.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_validation.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_slurm_storage.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_gamma_concentration_slurm.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/gamma_concentration_slurm_worker.sh
   datasets:
-  - data/processed/interaction-strength-exp065-inputs
-  - data/processed/trpb-profile-additive-inputs
+  - data/processed/trpb-gamma-concentration-slurm-runtime
 execution:
   default_target: lab-slurm
   intended_targets:
   - lab-slurm
   - local
   resources:
-    cpus: 4
+    cpus: 1
     memory_gb: 8
     gpus: 0
     gpu_memory_expected_gb: null
-    walltime: 01:00:00
+    walltime: '24:00:00'
     jobfs_gb: 0
   partition: cpu
   queue: normal
 outputs:
-  expected:
+  expected: &id001
   - manifest.json
   - config.yaml
-  - input_manifest.json
-  - source_manifest.json
-  - worker_environment.json
-  - kernel_validation.json
+  - input_audit.json
+  - environment.json
   - selected_parameters.json
-  - graph_summary.csv
-  - latent_graph_summary.csv
-  - cube_summary.csv
+  - fits
+  - empirical_replicates.npz
+  - confirmation
+  - cube_powers.csv.gz
+  - face_reproducibility.csv.gz
+  - replicate_summary.csv
+  - static_graph_summary.csv
   - seed_audit.csv
-  - coverage.csv
-  - additive_matrix.npy
-  - prior_manifest.json
-  - intervention.json
-  - calibration_prior_audit.json
+  - run186_confirmation_replay.json
   - latent_calibration.npz
-  - latent_calibration_index.csv
+  - latent_fields
+  - cube_summary.csv.gz
+  - fitness_distribution.csv
   artifacts: []
 downstream:
   planned_analyses:
@@ -134,6 +99,9 @@ downstream:
   - ANA-066
   - ANA-069
   - ANA-070
+  - ANA-071
+  - ANA-072
+  - ANA-073
   planned_results: []
 github:
   branch: main
@@ -253,6 +221,63 @@ notes:
   WHT summaries independently audited. Analysis bundle DVC-tracked and local cache
   verified; remote backup awaits Dutch. No new RES, CLAIM or scientific acceptance
   gate.'
+- '2026-11-20: Scientist authorized one TrpB-only matched full-pairwise calibration
+  follow-up to RUN-178 and local MacBook execution. Separate protocol/config/source
+  lock preserves prior evidence; RUN-175 and RUN-178 controls are reused. No ANA/RES/CLAIM
+  requested.'
+- '2026-11-21: Scientist authorized one TrpB-only Optuna architecture-calibration
+  RUN locally under this EXP; see architecture_calibration.md. Previous runs and objectives
+  remain unchanged.'
+- RUN-181 is the successful nonexecuting architecture preview; RUN-182 started locally
+  on 2026-11-21 using frozen scientific source/inputs and strict converged pilot settings.
+  Execution is ongoing; no result claim.
+- '2026-11-21 execution amendment: scientist requested stopping RUN-182 locally and
+  queuing the identical calibration on Slurm. SIGTERM interrupted the worker; partial
+  output/source/input/environment collection is preserved. Fresh remote RUN pending
+  preparation; no Optuna resume or scientific setting changes.'
+- RUN-182 was cancelled at scientist request; its immutable partial collection and
+  frozen Slurm runtime are DVC-tracked with verified local and remote cache objects.
+  RUN-183 passed the nonexecuting Slurm preview. RUN-184 accepted as job 2325 on cpu
+  (1 CPU, 8 GB, 24 hours), verified PENDING because the required node is down/unavailable.
+  All 152 remote staged scientific payloads and transport/environment evidence match.
+  No execution result or calibration adequacy is claimed.
+- '2026-11-24: Scientist requested RUN-180 protocol rollback retaining Optuna; default
+  workflow now optuna-readout. New fitter uses exact old objective, fixed r grid,
+  all observation modes and historical warm starts. No new scientific RUN submitted
+  or public preset changed.'
+- '2026-11-24: Scientist requested continuous joint Optuna fitting of r in [0,8] plus
+  four readout parameters, same restored RUN-180 loss, and a new TrpB RUN submitted
+  to Slurm. Gamma concentration remains disabled; six old fits per observation mode
+  are warm starts, not a grid.'
+- '2026-11-24: RUN-185 is the nonexecuting joint-r preview. RUN-186 accepted as Slurm
+  job 2355 and verified RUNNING on Dutch (4 CPUs, 8 GB, 24 h limit). All 339 frozen
+  payloads, 36 dependency pins and 18 historical objectives pass startup replay. The
+  first study has 89 completed trials including 83 off-grid r values, with all five
+  coordinates present and empty stderr. Three studies preserve the total 35,136-trial
+  budget. Gamma concentration remains disabled; no calibration result or adequacy
+  claim yet.'
+- '2026-11-25: Scientist authorized matched r0/full ablation under fixed RUN-186 shared-stop
+  noise, 11712 trials each. Twenty-four targeted tests and local smoke pass; no biological
+  conclusion from smoke. Runtime frozen; Slurm submission pending backup/preview.
+  Previous active inputs/resources retained in interaction_ablation_followup.'
+- RUN-188 submitted as Slurm 2356 and verified RUNNING on dutch. Worker verified 460
+  frozen payloads and 36 package pins; six historical objectives replayed, r0 trials
+  started, stderr empty. RUN-187 is the nonexecuting preview. All 404 local and backup
+  DVC objects verified.
+- ANA-073 independently audits RUN-188 and reports six reproducible figures. Observation
+  noise supplies most sign-epistatic faces, including r0; full-model pooled lower-order
+  power remains predominantly intrinsic. Unfitted full-versus-null advantages are
+  mixed, and shared biological versus measurement variation remains unidentified.
+  No result/claim or package change.
+- '2026-11-25: Scientist accepts the observation layer as an experimental modeling
+  assumption and authorizes one TrpB Gamma concentration RUN with unchanged direct
+  loss/noise and queue submission. Fit alpha jointly with r and four readout coordinates;
+  reuse RUN-188 controls. No package promotion or inference that shared covariance
+  is identified measurement error.'
+- RUN-189 is the nonexecuting Gamma submission preview. RUN-190 attempt 1 accepted
+  as Slurm job 2357 and verified RUNNING on Dutch; all 536 frozen payloads and 36
+  environment pins verified. Gaussian/r0 controls replay before fitting; no production
+  result yet.
 template: generic
 followup:
   protocol: trpb_alignment_profile_prior_repeat_v1
@@ -402,3 +427,470 @@ followup_history:
 compliance:
   level: green
   issues: []
+full_pairwise_followup:
+  protocol: trpb_full_pairwise_profile_calibration_v1
+  status: completed_verified
+  authorization: Scientist requested a matched TrpB recalibration and local MacBook
+    execution on 2026-11-20.
+  config: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/full_pairwise.yaml
+  protocol_path: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/full_pairwise.md
+  model_candidate: 0.6.0rc1
+  model: thermodynamic_pairwise_v3
+  direct_control: RUN-178
+  synthetic_control: RUN-175
+  endpoint_procedure: RUN-172
+  intervention: Full centered q20 pair tables and pairwise-only latent terms; fixed
+    profile additive prior and unchanged calibration procedure.
+  target: local
+  source_manifest: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/full_pairwise_source.json
+  matched_design: All non-model scientific settings and input hashes match RUN-178;
+    controls are reused, not rerun.
+  interpretation: Technical execution is not an empirical adequacy conclusion. Comparison
+    changes the interaction construction jointly; it does not isolate rank from order.
+  local_preview_run: RUN-179
+  local_run: RUN-180
+  runner_returncode: 0
+  elapsed_seconds: 330.7544650416821
+  verification: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-180.verification.json
+  verification_amendment: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-180.verification_amendment.json
+  storage_verification: experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-180.storage_verification.json
+  collected_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180.dvc
+  remote_backup: not_attempted_local_execution
+  scientific_interpretation: Technical completion and matched-protocol verification;
+    no new adequacy conclusion or calibrated package preset.
+architecture_followup:
+  authorized_date: '2026-11-21'
+  system: TrpB
+  protocol: architecture_calibration.md
+  configuration: architecture_calibration.json
+  method: thornton_auxiliary_optuna_indirect_inference_v1
+  candidate: 0.7.0rc1
+  target: lab-slurm
+  scope: First bounded-panel architecture calibration; no matched-repeat or adequacy
+    claim
+  status: completed_verified
+  expected_outputs:
+  - config.json
+  - inputs.npz
+  - confirmation_inputs.npz
+  - provenance.json
+  - empirical_architecture.json
+  - empirical_coefficients.npz
+  - study.sqlite3
+  - result.json
+  - trials.json
+  - confirmation_predictions.npz
+  - cli_inputs.json
+  previous_default_resources:
+    cpus: 4
+    memory_gb: 8
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: 01:00:00
+    jobfs_gb: 0
+  resources:
+    cpus: 1
+    memory_gb: 8
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  resource_note: Serial fitting with one numerical-library thread; Slurm enforces
+    the unchanged 24-hour walltime request.
+  preparation_bundle: data/processed/trpb-architecture-calibration-preparation
+  input_bundle: data/processed/trpb-architecture-calibration-inputs
+  preparation_summary_sha256: 6aaa801e6c10e4db34ed18102e3434acae5f480abc7cbf646c8118c9aa33ab22
+  launch_verification: runs/RUN-184.remote-verification.json
+  local_preview: RUN-181
+  cancelled_local_run: RUN-182
+  runtime_bundle: data/processed/trpb-architecture-slurm-runtime
+  transport_protocol: architecture_slurm.md
+  previous_expected_outputs:
+  - manifest.json
+  - config.yaml
+  - input_manifest.json
+  - source_manifest.json
+  - worker_environment.json
+  - kernel_validation.json
+  - selected_parameters.json
+  - graph_summary.csv
+  - latent_graph_summary.csv
+  - cube_summary.csv
+  - seed_audit.csv
+  - coverage.csv
+  - additive_matrix.npy
+  - prior_manifest.json
+  - intervention.json
+  - calibration_prior_audit.json
+  - latent_calibration.npz
+  - latent_calibration_index.csv
+  - profile_control_manifest.json
+  previous_declared_inputs:
+  - AIM.md
+  - PROJECT_STATE.md
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175.dvc
+  - data/processed/interaction-strength-exp065-inputs.dvc
+  - data/processed/trpb-profile-additive-inputs.dvc
+  - docs/hypotheses.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_control.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_model_audit.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/alignment_prior_validation.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_strength_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_alignment_prior.py
+  - external/Adapt-Env/README.md
+  - external/Adapt-Env/adaptenv/README.md
+  - external/Adapt-Env/adaptenv/__init__.py
+  - external/Adapt-Env/adaptenv/alignment.py
+  - external/Adapt-Env/adaptenv/amino_acids.py
+  - external/Adapt-Env/adaptenv/api.py
+  - external/Adapt-Env/adaptenv/extensive_gnk.py
+  - external/Adapt-Env/adaptenv/landscape.py
+  - external/Adapt-Env/adaptenv/mmseqs.py
+  - external/Adapt-Env/adaptenv/presets.py
+  - external/Adapt-Env/adaptenv/ranked_categorical_gnk.py
+  - external/Adapt-Env/adaptenv/service.py
+  - external/Adapt-Env/adaptenv/thermodynamic.py
+  - external/Adapt-Env/docs/API_AND_SERVICE.md
+  - external/Adapt-Env/docs/THERMODYNAMIC_V2.md
+  - external/Adapt-Env/pyproject.toml
+  - external/Adapt-Env/tests/test_alignment_profile.py
+  - external/Adapt-Env/tests/test_amino_acids.py
+  - external/Adapt-Env/tests/test_mmseqs_client.py
+  - external/Adapt-Env/tests/test_profile_additive_prior.py
+  - external/Adapt-Env/tests/test_public_thermodynamic.py
+  - scripts/alignment_prior_exp065.py
+  - scripts/fetch_trpb_replicates_exp065.py
+  - scripts/interaction_strength_exp065.py
+  - scripts/landscape_graph.py
+  - scripts/landscape_graph_kernel.cpp
+  - scripts/observation_calibration_exp065.py
+  - scripts/prepare_trpb_profile_exp065.py
+  - scripts/production_landscapes_exp066.py
+  - scripts/replicate_observation_exp065.py
+  - tests/test_alignment_prior_exp065.py
+  - tests/test_interaction_strength_exp065.py
+  - tests/test_prepare_trpb_profile_exp065.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/full_pairwise.yaml
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/full_pairwise.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/full_pairwise_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/full_pairwise_local_validation.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_full_pairwise_local.py
+  - scripts/pairwise_calibration_exp065.py
+  - scripts/verify_pairwise_calibration_exp065.py
+  - tests/test_pairwise_calibration_exp065.py
+  - tests/test_verify_pairwise_calibration_exp065.py
+  - tests/test_submit_full_pairwise_local.py
+  - external/Adapt-Env/adaptenv/full_pairwise.py
+  - docs/model_release/0.6.0rc1/manifest.json
+  - data/processed/model-release-candidates/0.6.0rc1.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178.dvc
+  - scripts/verify_pairwise_calibration_exp065_v2.py
+  - tests/test_verify_pairwise_calibration_exp065_v2.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_calibration.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_calibration.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_source.json
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_architecture_local.py
+  - scripts/calibrate_architecture.py
+  - scripts/prepare_trpb_architecture_inputs.py
+  - docs/model_release/0.7.0rc1/manifest.json
+  - environment/calibration-py311.lock.txt
+  - data/processed/model-release-candidates/0.7.0rc1.dvc
+  - data/processed/trpb-architecture-calibration-inputs.dvc
+  - tests/test_prepare_trpb_architecture_inputs.py
+  - tests/test_submit_architecture_local.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_input_storage.json
+  - data/processed/trpb-architecture-calibration-preparation.dvc
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_slurm.md
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_architecture_slurm.py
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_slurm_worker.sh
+  - data/processed/trpb-architecture-slurm-runtime.dvc
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-182.dvc
+  - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_slurm_storage.json
+  previous_datasets:
+  - data/processed/interaction-strength-exp065-inputs
+  - data/processed/trpb-profile-additive-inputs
+  - data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/outputs
+  - data/processed/trpb-architecture-calibration-inputs
+  - data/processed/trpb-architecture-slurm-runtime
+  preview: RUN-183
+  run: RUN-184
+  scheduler_job_id: '2325'
+  remote_verification: runs/RUN-184.remote-verification.json
+  environment_evidence: architecture_remote_environment/environment.json
+  cancelled_local_verification: runs/RUN-182.launch_verification.json
+  latest_progress: runs/RUN-184.progress-20261124T042858Z.json
+  started_at: '2026-11-24T09:43:36+11:00'
+  finished_at: '2026-11-24T16:00:32+11:00'
+  scientific_elapsed_seconds: 22614.156789514003
+  attempted_trials: 100
+  completed_trials: 37
+  failed_trials: 63
+  failure_reason: auxiliary inference nonconvergence; failed attempts consume the
+    fixed budget
+  best_trial: 63
+  calibration_loss: 24.034136531319845
+  confirmation_loss: 27.34629870164042
+  selected_inference_converged: true
+  confirmation_scope: disjoint_genotypes_and_fresh_seeds
+  completion_status: runs/RUN-184.completion-status.json
+  completion_verification: runs/RUN-184.completion-verification.json
+  collected_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184.dvc
+  scientific_interpretation: 'ANA-071: achieved calibration not ready as a TrpB-calibrated
+    environment; distribution, sign epistasis and sparse-panel navigation mismatches,
+    unstable bootstrap architecture. Family capacity not rejected; no preset promotion.'
+  storage_verification: runs/RUN-184.storage-verification.json
+  remote_backup: verified
+  dvc_directory_md5: 420d8aa4f4f3c6cff1f4d3da2a77df3e.dir
+  analysis: ANA-071
+  analysis_path: analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/analysis.md
+optuna_readout_followup:
+  authorized_date: '2026-11-24'
+  system: TrpB
+  protocol: optuna_readout.md
+  configuration: optuna_readout.yaml
+  method: trpb_run180_readout_optuna_v1
+  status: implemented_not_run
+  baseline_run: RUN-180
+  motivating_analysis: ANA-071
+  scope: Restore the RUN-180 scientific calibration design with Optuna TPE and authenticated
+    historical warm starts; no new empirical validation or RUN yet.
+  default_dispatch: optuna-readout
+  source_manifest: optuna_readout_source.json
+  engineering_validation: optuna_readout_validation.json
+  previous_active_inputs:
+    declared_files:
+    - AIM.md
+    - PROJECT_STATE.md
+    - docs/hypotheses.md
+    - environment/calibration-py311.lock.txt
+    - data/processed/trpb-architecture-slurm-runtime.dvc
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/metadata.yaml
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_architecture_slurm.py
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_slurm_worker.sh
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_slurm.md
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/architecture_slurm_storage.json
+    datasets:
+    - data/processed/trpb-architecture-slurm-runtime
+  previous_expected_outputs:
+  - config.json
+  - inputs.npz
+  - confirmation_inputs.npz
+  - provenance.json
+  - empirical_architecture.json
+  - empirical_coefficients.npz
+  - study.sqlite3
+  - result.json
+  - trials.json
+  - confirmation_predictions.npz
+  - cli_inputs.json
+joint_readout_followup:
+  authorized_date: '2026-11-24'
+  system: TrpB
+  protocol: joint_readout.md
+  configuration: joint_readout.yaml
+  method: trpb_run180_joint_r_readout_optuna_v1
+  status: completed
+  target: lab-slurm
+  baseline_run: RUN-180
+  motivating_analysis: ANA-071
+  scope: Joint continuous r on [0,8] and four readout coordinates with restored direct
+    fitness loss; Gaussian interactions, alpha not fitted. Preserve prior sampling/observation/confirmation
+    design.
+  default_dispatch: joint-readout
+  source_manifest: joint_readout_source.json
+  runtime_bundle: data/processed/trpb-joint-readout-slurm-runtime
+  studies: 3
+  trials_per_study: 11712
+  total_trials: 35136
+  validation: joint_readout_validation.json
+  storage_verification: joint_readout_slurm_storage.json
+  preview_run: RUN-185
+  run: RUN-186
+  scheduler_job_id: '2355'
+  worker_node: dutch
+  launch_verification: runs/RUN-186.launch_verification.json
+  completion_status: runs/RUN-186.completion-status.json
+  completion_integrity: runs/RUN-186.completion-integrity.json
+  completion_interpretation: All 35136 trials completed with no improvement over RUN-180
+    warm starts. ANA-072 documents partial, observation-dependent TrpB resemblance;
+    broad biological and task equivalence not established.
+  collected_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-186.dvc
+  dvc_directory_md5: 172955844a459e413b582b35328a2085.dir
+  collection_storage_verification: runs/RUN-186.storage-verification.json
+  remote_backup: verified
+  analysis: ANA-072
+  analysis_path: analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/analysis.md
+interaction_ablation_followup:
+  authorized_date: '2026-11-25'
+  system: TrpB
+  status: completed
+  protocol: interaction_ablation.md
+  configuration: interaction_ablation.yaml
+  baseline_run: RUN-186
+  motivating_analysis: ANA-072
+  target: lab-slurm
+  arms:
+  - refitted_r0
+  - joint_full_r
+  trials_per_arm: 11712
+  total_trials: 23424
+  fixed_observation: shared_stop_sensitivity
+  noise_strength_fitted: false
+  interaction_concentration: null
+  runtime_bundle: data/processed/trpb-interaction-ablation-slurm-runtime
+  validation: interaction_ablation_validation.json
+  previous_active_inputs:
+    declared_files:
+    - AIM.md
+    - PROJECT_STATE.md
+    - docs/hypotheses.md
+    - environment/readout-py311.lock.txt
+    - data/processed/trpb-joint-readout-slurm-runtime.dvc
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/metadata.yaml
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout.yaml
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout.md
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout_source.json
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout_runtime.json
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_joint_readout_slurm.py
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/joint_readout_slurm_worker.sh
+    datasets:
+    - data/processed/trpb-joint-readout-slurm-runtime
+  previous_expected_outputs:
+  - manifest.json
+  - config.yaml
+  - input_manifest.json
+  - source_manifest.json
+  - worker_environment.json
+  - optimizer_environment.json
+  - run180_replay.json
+  - warm_start_parameters.json
+  - warm_start_manifest.json
+  - kernel_validation.json
+  - selected_parameters.json
+  - fits
+  - graph_summary.csv
+  - cube_summary.csv
+  - latent_graph_summary.csv
+  - seed_audit.csv
+  - coverage.csv
+  previous_resources:
+    cpus: 4
+    memory_gb: 8
+    gpus: 0
+    gpu_memory_expected_gb: null
+    walltime: '24:00:00'
+    jobfs_gb: 0
+  preview_run: RUN-187
+  storage_verification: interaction_ablation_slurm_storage.json
+  linux_validation: interaction_ablation_remote_environment/smoke_manifest.json
+  run: RUN-188
+  scheduler_job_id: '2356'
+  worker_node: dutch
+  launch_verification: runs/RUN-188.launch_verification.json
+  dvc_directory_md5: 2e912bca6bf272ae81124dae5d8ced26.dir
+  remote_backup: verified
+  completion_status: runs/RUN-188.completion-status.json
+  scientific_elapsed_seconds: 12758.311536588997
+  completed_trials: 23424
+  failed_trials: 0
+  confirmation_seeds: 24
+  completion_interpretation: Full r=0.5 loss 0.03099517 versus r0 loss 0.04207450;
+    both select initial historical candidates. Interaction diagnostics complete but
+    not yet analysed; no noise-compensation conclusion.
+  analysis: ANA-073
+  analysis_path: analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/analysis.md
+  collected_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-188
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-188.dvc
+  collected_directory_md5: 1353108408df113b65306098fe4671c5.dir
+  collection_storage_verification: runs/RUN-188.storage-verification.json
+gamma_concentration_followup:
+  authorized_date: '2026-11-25'
+  system: TrpB
+  status: completed
+  protocol: gamma_concentration.md
+  configuration: gamma_concentration.yaml
+  baseline_run: RUN-188
+  motivating_analysis: ANA-073
+  target: lab-slurm
+  fitted_coordinates:
+  - alpha
+  - r
+  - p0
+  - p1
+  - p2
+  - p3
+  concentration_bounds:
+  - 0.05
+  - 100.0
+  concentration_log: true
+  ratio_bounds:
+  - 0.0
+  - 8.0
+  trials: 11712
+  controls_reused:
+  - RUN-188/r0
+  - RUN-188/full
+  fixed_observation: shared_stop_sensitivity
+  noise_strength_fitted: false
+  runtime_bundle: data/processed/trpb-gamma-concentration-slurm-runtime
+  validation: gamma_concentration_validation.json
+  previous_active_inputs:
+    declared_files:
+    - AIM.md
+    - PROJECT_STATE.md
+    - docs/hypotheses.md
+    - environment/readout-py311.lock.txt
+    - data/processed/trpb-interaction-ablation-slurm-runtime.dvc
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/run.sh
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/metadata.yaml
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation.yaml
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation.md
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation_source.json
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation_runtime.json
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation_validation.json
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation_slurm_storage.json
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/submit_interaction_ablation_slurm.py
+    - experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation_slurm_worker.sh
+    datasets:
+    - data/processed/trpb-interaction-ablation-slurm-runtime
+  previous_expected_outputs: *id001
+  preview_run: RUN-189
+  storage_verification: gamma_concentration_slurm_storage.json
+  linux_validation: gamma_concentration_remote_environment/smoke_manifest.json
+  dvc_directory_md5: 705126f8fe5da52a44a94e6459a918d3.dir
+  remote_backup: verified
+  run: RUN-190
+  scheduler_job_id: '2357'
+  worker_node: dutch
+  launch_verification: runs/RUN-190.launch_verification.json
+  completed_trials: 11712
+  failed_trials: 0
+  confirmation_seeds: 24
+  scientific_elapsed_seconds: 8809.307598571002
+  completion_verification: runs/RUN-190.completion-verification.json
+  selected_alpha: 100.0
+  selected_r: 0.5
+  calibration_loss: 0.031032134854951786
+  gaussian_control_loss: 0.03099516773204625
+  completion_interpretation: All trials and confirmation diagnostics completed; alpha100
+    historical candidate retained. No calibration improvement over Gaussian control;
+    confirmation outputs not yet analysed. No model promotion.
+  analysis: ANA-074
+  analysis_path: analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/analysis.md
+  collected_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-190
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-190.dvc
+  collected_directory_md5: dc3134650246be26a383970ed4d9869a.dir
+  collection_storage_verification: analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/run_storage_verification.json
+  scientific_interpretation: 'ANA-074: achieved Gamma alpha=100 fit is almost Gaussian;
+    no calibration benefit and small mixed confirmation differences. Existing TrpB
+    limitations remain; no model default change.'

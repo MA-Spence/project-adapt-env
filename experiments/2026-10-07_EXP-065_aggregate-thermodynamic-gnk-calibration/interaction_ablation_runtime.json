@@ -1,0 +1,6 @@
+{
+  "runtime_bundle": "data/processed/trpb-interaction-ablation-slurm-runtime",
+  "manifest_sha256": "b2f9eccfa6b19446259c9915c23a822e28a37d86b430cce336cb85f3c10b66c1",
+  "payload_count": 460,
+  "source_manifest_sha256": "bc1a08fdd663bbceb78a54902e0b078e85a2f2cbb12b6025d47f450b3edf89d8"
+}

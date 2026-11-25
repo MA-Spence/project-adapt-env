@@ -1,0 +1,65 @@
+{
+  "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:21:08) [Clang 20.1.8 ]",
+  "executable": "/Users/matthewspence/Documents/Documents/project-adapt-env/.labproj/envs/indirect-py313/bin/python",
+  "imported_package": "/private/tmp/adaptenv-070-installed/adaptenv/__init__.py",
+  "tests_exit_code": 0,
+  "test_seconds": 7.321172290947288,
+  "dependencies": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "optuna": "4.9.0",
+    "pytest": "9.0.3",
+    "fastapi": "0.135.3",
+    "httpx": "0.28.1"
+  },
+  "all_package_imports_from_selected_location": true,
+  "documentation_examples": [
+    "README.md:1",
+    "README.md:2",
+    "docs/API_AND_SERVICE.md:1",
+    "docs/API_AND_SERVICE.md:2",
+    "docs/API_AND_SERVICE.md:3",
+    "docs/API_AND_SERVICE.md:4",
+    "docs/API_AND_SERVICE.md:5",
+    "docs/API_AND_SERVICE.md:6",
+    "docs/API_AND_SERVICE.md:7",
+    "docs/MIGRATION_0_6.md:1",
+    "docs/MIGRATION_0_6.md:2",
+    "docs/MIGRATION_0_6.md:3",
+    "docs/CALIBRATION.md:1",
+    "docs/CALIBRATION.md:2"
+  ],
+  "oracle_checks": [
+    {
+      "length": 100,
+      "queries": 256,
+      "pair_tables": 300,
+      "table_bytes": 960000,
+      "construction_seconds": 0.01745691616088152,
+      "scoring_seconds": 0.0009786668233573437,
+      "exact_energy_check": true,
+      "batch_replay_check": true
+    },
+    {
+      "length": 500,
+      "queries": 256,
+      "pair_tables": 1500,
+      "table_bytes": 4800000,
+      "construction_seconds": 0.08807283313944936,
+      "scoring_seconds": 0.005530834197998047,
+      "exact_energy_check": true,
+      "batch_replay_check": true
+    },
+    {
+      "length": 1000,
+      "queries": 256,
+      "pair_tables": 3000,
+      "table_bytes": 9600000,
+      "construction_seconds": 0.1832459168508649,
+      "scoring_seconds": 0.010449459310621023,
+      "exact_energy_check": true,
+      "batch_replay_check": true
+    }
+  ],
+  "oracle_timing_scope": "single engineering checks; not a comparative performance benchmark"
+}

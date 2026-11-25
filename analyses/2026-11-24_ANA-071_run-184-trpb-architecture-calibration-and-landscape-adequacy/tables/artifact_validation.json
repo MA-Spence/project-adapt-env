@@ -1,0 +1,70 @@
+{
+  "notebooks": {
+    "validation": {
+      "executed_code_cells": 5,
+      "errors": 0,
+      "paired_source_matches": true,
+      "embedded_pngs": 0,
+      "sha256": "7b9c2d1cc05734e540b47c3ffc1b00146c0b65bd3e1eab88f3913fde501d5e5f"
+    },
+    "analysis": {
+      "executed_code_cells": 4,
+      "errors": 0,
+      "paired_source_matches": true,
+      "embedded_pngs": 2,
+      "sha256": "036775b78e1f4148f02eb748745296b3ad6a46fe27f5a26bf186c442ec59a2c0"
+    },
+    "architecture": {
+      "executed_code_cells": 5,
+      "errors": 0,
+      "paired_source_matches": true,
+      "embedded_pngs": 3,
+      "sha256": "e8bc713b7df82df78fb1951725e0664dfab884e4832b4213bae58c0d37d12360"
+    }
+  },
+  "figures": {
+    "01_fitness_distribution": {
+      "pixels": [
+        2179,
+        1532
+      ],
+      "png_sha256": "7333c55aea834f3be19c9d9677fce0c8865f7827077dbad3bea542308caeb604",
+      "pdf_sha256": "5095bd225bc38a745b85f375232c68e28388dd8a28dccb4397b1fb8d425e4172"
+    },
+    "02_unfitted_landscape": {
+      "pixels": [
+        2571,
+        1608
+      ],
+      "png_sha256": "2f3ad26a59c4ccfa5bc486c79c96c915ef478ca00fb2d5af5931ca669d8b11b7",
+      "pdf_sha256": "5a967a668c93ad5dd8783caf715f44294078e4973a63055a8846df809d3a94b0"
+    },
+    "03_architecture": {
+      "pixels": [
+        2750,
+        1859
+      ],
+      "png_sha256": "4acd0801d52953f8de1c861ea9c68fc96aac4f13bc645540f5881e0052f9818c",
+      "pdf_sha256": "5309d0b1f1ab182328b0d004b74a3733c1717571db69b3498a05a2921c9bde19"
+    },
+    "04_inference_and_weighting": {
+      "pixels": [
+        2440,
+        1893
+      ],
+      "png_sha256": "4ca178f76479152a72af8ed8666f491c05c005e73dd21d9467ac57060014faf3",
+      "pdf_sha256": "a30c75d778f512ebca6618ec1c1f111b8dca5014664a8524718cd7d5313ff7f7"
+    },
+    "05_search_and_parameters": {
+      "pixels": [
+        2611,
+        2136
+      ],
+      "png_sha256": "2bc0cc68fd4b995dfa633e8352f01a1b8ac5b36d8cff00f78bd7feac62aa9cc0",
+      "pdf_sha256": "0e4f323e59e512269243a2c9b33243355d4b4a9aea502918e6a953e03b0f0261"
+    }
+  },
+  "local_report_links_exist": true,
+  "visual_review": "All five rendered PNGs inspected for labels, readability, empirical references, all seeds and clipping.",
+  "adequacy_gate": "No registered numerical pass threshold; report gives a scoped qualitative assessment."
+}

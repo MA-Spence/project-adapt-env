@@ -1,0 +1,184 @@
+{
+  "package_version": "0.7.0rc1",
+  "source_commit": "a6b5bfc5a86efa4f1a948d1b4ca968757b3fb343",
+  "released": false,
+  "wheel_filename": "adaptenv-0.7.0rc1-py3-none-any.whl",
+  "wheel_sha256": "b1d004238bd6bc519749350cff310122a756c2e2917ea02e59e5d61e54c97460",
+  "installed_wheel_parity": {
+    "passed": true,
+    "checks": [
+      "frozen independent/shared replicate draws exact",
+      "frozen observation bank exact",
+      "Gaussian additive and interaction fields",
+      "all four loss components for six warm starts and selected Gaussian/r0/Gamma settings"
+    ],
+    "comparisons": [
+      {
+        "source": "RUN180_warm",
+        "ratio": 0.0,
+        "alpha": null,
+        "loss": {
+          "quantile": 0.04124057695393592,
+          "mean_sd": 0.0008135235408087792,
+          "floor_cdf": 2.039968967437744e-05,
+          "total": 0.04207450018441907
+        },
+        "max_absolute_difference": 0.0
+      },
+      {
+        "source": "RUN180_warm",
+        "ratio": 0.5,
+        "alpha": null,
+        "loss": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        },
+        "max_absolute_difference": 0.0
+      },
+      {
+        "source": "RUN180_warm",
+        "ratio": 1.0,
+        "alpha": null,
+        "loss": {
+          "quantile": 0.029800560164746564,
+          "mean_sd": 0.001425851278828095,
+          "floor_cdf": 7.212162017822266e-06,
+          "total": 0.03123362360559248
+        },
+        "max_absolute_difference": 1.0408340855860843e-17
+      },
+      {
+        "source": "RUN180_warm",
+        "ratio": 2.0,
+        "alpha": null,
+        "loss": {
+          "quantile": 0.03779516347932995,
+          "mean_sd": 6.900384448757186e-05,
+          "floor_cdf": 1.9311904907226562e-05,
+          "total": 0.03788347922872475
+        },
+        "max_absolute_difference": 2.0816681711721685e-17
+      },
+      {
+        "source": "RUN180_warm",
+        "ratio": 4.0,
+        "alpha": null,
+        "loss": {
+          "quantile": 0.050593262981615185,
+          "mean_sd": 0.0013276654456344137,
+          "floor_cdf": 6.295740604400635e-05,
+          "total": 0.05198388583329361
+        },
+        "max_absolute_difference": 2.7755575615628914e-17
+      },
+      {
+        "source": "RUN180_warm",
+        "ratio": 8.0,
+        "alpha": null,
+        "loss": {
+          "quantile": 0.0609329466326516,
+          "mean_sd": 0.0022100140499743547,
+          "floor_cdf": 5.187094211578369e-05,
+          "total": 0.06319483162474174
+        },
+        "max_absolute_difference": 2.0816681711721685e-17
+      },
+      {
+        "source": "RUN186",
+        "ratio": 0.5,
+        "alpha": null,
+        "loss": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        },
+        "max_absolute_difference": 0.0
+      },
+      {
+        "source": "RUN188",
+        "ratio": 0.0,
+        "alpha": null,
+        "loss": {
+          "quantile": 0.04124057695393592,
+          "mean_sd": 0.0008135235408087792,
+          "floor_cdf": 2.039968967437744e-05,
+          "total": 0.04207450018441907
+        },
+        "max_absolute_difference": 0.0
+      },
+      {
+        "source": "RUN188",
+        "ratio": 0.5,
+        "alpha": null,
+        "loss": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        },
+        "max_absolute_difference": 0.0
+      },
+      {
+        "source": "RUN190",
+        "ratio": 0.5,
+        "alpha": 100.0,
+        "loss": {
+          "quantile": 0.030182920526992466,
+          "mean_sd": 0.0008426429158728321,
+          "floor_cdf": 6.571412086486816e-06,
+          "total": 0.031032134854951786
+        },
+        "max_absolute_difference": 0.0
+      }
+    ],
+    "public_module": "/private/tmp/res064-final-installed/adaptenv/aggregate_calibration.py",
+    "public_module_sha256": "ed3f94c16291ec0ab0eab17daccd06e1e95600959b96784cb0bef35d45702403",
+    "source_archive": "RUN-186; RUN-188; RUN-190",
+    "no_new_fit": true
+  },
+  "wheel_note": "Final wheel modules match committed source byte-for-byte; verified installed wheel executable modules match (observation.py differs only in trailing blank lines).",
+  "package_tests": {
+    "full_suite": {
+      "passed": 234,
+      "python": "3.13.11",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "optuna": "4.9.0"
+    },
+    "final_affected_suite": {
+      "passed": 52
+    },
+    "python311_new_api_tests": {
+      "passed": 6
+    },
+    "portability_note": "Python 3.11 full suite: 227 pass; 7 historical ranked fingerprint fixtures differ. A spot check of the pre-change synthetic backend reproduces the current fingerprints in that environment; all 46 pairwise/public tests pass under fixture-compatible Python 3.13. No fixtures altered."
+  },
+  "project_tests": {
+    "combined_passed": 86,
+    "combined_errors": 2,
+    "isolated_gamma_passed": 3,
+    "unique_passed": 88,
+    "note": "Combined collection pre-imports editable fitting modules, intentionally rejected by frozen replay guard. Both Gamma fixture errors resolve when its file runs alone; no guard removed."
+  },
+  "methods": [
+    "full centered pair matrices",
+    "Gaussian and Gamma-normal concentration",
+    "direct aggregate loss",
+    "joint continuous r/readout TPE",
+    "optional joint alpha TPE",
+    "fixed-r ablation",
+    "explicit replicate draws",
+    "frozen observation banks"
+  ],
+  "defaults_unchanged": "Profile-conditioned full-pairwise Gaussian; no preset promotion or release",
+  "scientific_replay": "No new fitting or confirmation sampling; historical archive content unchanged",
+  "record_checks": {
+    "refresh_strict_exit_code": 0,
+    "check_strict_exit_code": 0,
+    "result_compliance": "green",
+    "warnings": "Existing legacy untracked durable-data and active-hypothesis warnings remain; external package lock is synchronized."
+  }
+}

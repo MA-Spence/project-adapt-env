@@ -1,0 +1,100 @@
+{
+  "r0": {
+    "intrinsic": {
+      "mean_sign": 0.0,
+      "reproducible_sign": 0.0,
+      "reproducible_reciprocal": 0.0,
+      "mean_epistatic_fraction": 0.3529506381514983,
+      "mean_higher_order_fraction": 0.043953769679677526,
+      "cross_power_2": 0.00029157681122349337,
+      "cross_power_3": 7.213978921898463e-05,
+      "cross_power_4": 2.1178802331078456e-07
+    },
+    "independent_only": {
+      "mean_sign": 0.6484375,
+      "reproducible_sign": 0.16666666666666666,
+      "reproducible_reciprocal": 0.052083333333333336,
+      "mean_epistatic_fraction": 0.478595874312684,
+      "mean_higher_order_fraction": 0.11628757427850632,
+      "cross_power_2": 0.0003064693278210669,
+      "cross_power_3": 7.536650734180257e-05,
+      "cross_power_4": 3.823063198899957e-06
+    },
+    "shared_only": {
+      "mean_sign": 0.6276041666666667,
+      "reproducible_sign": 0.6276041666666667,
+      "reproducible_reciprocal": 0.2838541666666667,
+      "mean_epistatic_fraction": 0.5420539028830181,
+      "mean_higher_order_fraction": 0.13965255502128265,
+      "cross_power_2": 0.0003938915234668511,
+      "cross_power_3": 0.00013627441860477197,
+      "cross_power_4": 2.2126020849898703e-05
+    },
+    "observed": {
+      "mean_sign": 0.625,
+      "reproducible_sign": 0.4296875,
+      "reproducible_reciprocal": 0.17708333333333331,
+      "mean_epistatic_fraction": 0.5481774520025456,
+      "mean_higher_order_fraction": 0.15972767743568395,
+      "cross_power_2": 0.0003956564786707428,
+      "cross_power_3": 0.00012927825113344217,
+      "cross_power_4": 2.3407433679440017e-05
+    },
+    "observed_signs_absent_intrinsically_median": 1.0
+  },
+  "full": {
+    "intrinsic": {
+      "mean_sign": 0.09895833333333334,
+      "reproducible_sign": 0.09895833333333334,
+      "reproducible_reciprocal": 0.010416666666666666,
+      "mean_epistatic_fraction": 0.3563242930656758,
+      "mean_higher_order_fraction": 0.05182906198120822,
+      "cross_power_2": 0.0002482170261882007,
+      "cross_power_3": 5.96823710356965e-05,
+      "cross_power_4": 3.5654461848085468e-06
+    },
+    "independent_only": {
+      "mean_sign": 0.6015625,
+      "reproducible_sign": 0.15885416666666666,
+      "reproducible_reciprocal": 0.036458333333333336,
+      "mean_epistatic_fraction": 0.46089088380687404,
+      "mean_higher_order_fraction": 0.1013518273664604,
+      "cross_power_2": 0.00026816330412304264,
+      "cross_power_3": 5.8746119226540895e-05,
+      "cross_power_4": 5.246725871846892e-06
+    },
+    "shared_only": {
+      "mean_sign": 0.6276041666666666,
+      "reproducible_sign": 0.6276041666666666,
+      "reproducible_reciprocal": 0.2734375,
+      "mean_epistatic_fraction": 0.5439530108314059,
+      "mean_higher_order_fraction": 0.19635412685920728,
+      "cross_power_2": 0.0003097063815225106,
+      "cross_power_3": 0.00014815253900387653,
+      "cross_power_4": 2.3414787454731524e-05
+    },
+    "observed": {
+      "mean_sign": 0.640625,
+      "reproducible_sign": 0.3984375,
+      "reproducible_reciprocal": 0.1796875,
+      "mean_epistatic_fraction": 0.5605283359542483,
+      "mean_higher_order_fraction": 0.20180005177275495,
+      "cross_power_2": 0.00032207774219377154,
+      "cross_power_3": 0.00014197702144419245,
+      "cross_power_4": 2.3257829237212717e-05
+    },
+    "observed_signs_absent_intrinsically_median": 0.9044444444444444
+  },
+  "empirical": {
+    "mean_sign": 0.6510416666666666,
+    "reproducible_sign": 0.38671875,
+    "reproducible_reciprocal": 0.13020833333333334,
+    "mean_epistatic_fraction": 0.329700526755871,
+    "mean_higher_order_fraction": 0.0861728563708178,
+    "cross_power_2": 0.0008819432012760534,
+    "cross_power_3": 0.00023714544330729942,
+    "cross_power_4": 5.9834104591699596e-05
+  },
+  "calibration_loss_reduction": 0.2633265375419883,
+  "maximum_observation_replay_difference": 0.0
+}

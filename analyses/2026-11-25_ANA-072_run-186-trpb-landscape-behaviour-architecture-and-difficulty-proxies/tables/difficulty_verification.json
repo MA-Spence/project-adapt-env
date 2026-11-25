@@ -1,0 +1,2763 @@
+{
+  "small_graph_bruteforce_checks": [
+    {
+      "q": 2,
+      "dim": 3,
+      "missing": false,
+      "edges": 12
+    },
+    {
+      "q": 2,
+      "dim": 3,
+      "missing": true,
+      "edges": 6
+    },
+    {
+      "q": 3,
+      "dim": 2,
+      "missing": false,
+      "edges": 18
+    },
+    {
+      "q": 3,
+      "dim": 2,
+      "missing": true,
+      "edges": 11
+    },
+    {
+      "q": 4,
+      "dim": 2,
+      "missing": false,
+      "edges": 48
+    },
+    {
+      "q": 4,
+      "dim": 2,
+      "missing": true,
+      "edges": 36
+    }
+  ],
+  "maps_summarized": 121,
+  "common_nodes": 159129,
+  "common_edges": 6016433,
+  "map_reconstruction_checks": [
+    {
+      "seed": 57117794,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-18
+    },
+    {
+      "seed": 57117794,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.025630077706069e-17
+    },
+    {
+      "seed": 57117794,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.632783294297951e-17
+    },
+    {
+      "seed": 57117795,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57117795,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    },
+    {
+      "seed": 57117796,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.28583859910259e-17
+    },
+    {
+      "seed": 57117796,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.112366251504909e-17
+    },
+    {
+      "seed": 57117797,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 1.3877787807814457e-17
+    },
+    {
+      "seed": 57117797,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57117797,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 1.3877787807814457e-17
+    },
+    {
+      "seed": 57117797,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.28583859910259e-17
+    },
+    {
+      "seed": 57117798,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 8.326672684688674e-17
+    },
+    {
+      "seed": 57117798,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.28583859910259e-17
+    },
+    {
+      "seed": 57117799,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.112366251504909e-17
+    },
+    {
+      "seed": 57117799,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.632783294297951e-17
+    },
+    {
+      "seed": 57117800,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57117800,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.589415207398531e-17
+    },
+    {
+      "seed": 57117801,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.960577947356938e-17
+    },
+    {
+      "seed": 57117801,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.28583859910259e-17
+    },
+    {
+      "seed": 57117802,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.37257477290143e-17
+    },
+    {
+      "seed": 57117802,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.068998164605489e-17
+    },
+    {
+      "seed": 57117803,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.112366251504909e-17
+    },
+    {
+      "seed": 57117803,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.112366251504909e-17
+    },
+    {
+      "seed": 57117804,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57117804,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57117805,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-18
+    },
+    {
+      "seed": 57117805,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.632783294297951e-17
+    },
+    {
+      "seed": 57117805,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    },
+    {
+      "seed": 57117806,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.28583859910259e-17
+    },
+    {
+      "seed": 57117806,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.28583859910259e-17
+    },
+    {
+      "seed": 57117807,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.28583859910259e-17
+    },
+    {
+      "seed": 57117807,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.112366251504909e-17
+    },
+    {
+      "seed": 57117808,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57117808,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.025630077706069e-17
+    },
+    {
+      "seed": 57117809,
+      "cohort": "reused",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "cohort": "reused",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 8.326672684688674e-17
+    },
+    {
+      "seed": 57117809,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "cohort": "reused",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.982261990806649e-17
+    },
+    {
+      "seed": 57138794,
+      "cohort": "fresh",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57138794,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.28583859910259e-17
+    },
+    {
+      "seed": 57138795,
+      "cohort": "fresh",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57138795,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57138796,
+      "cohort": "fresh",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57138796,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "seed": 57138797,
+      "cohort": "fresh",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 1.3877787807814457e-17
+    },
+    {
+      "seed": 57138797,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57138797,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    },
+    {
+      "seed": 57138798,
+      "cohort": "fresh",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.765421556309548e-17
+    },
+    {
+      "seed": 57138798,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.245004513516506e-17
+    },
+    {
+      "seed": 57138799,
+      "cohort": "fresh",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.632783294297951e-17
+    },
+    {
+      "seed": 57138799,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.068998164605489e-17
+    },
+    {
+      "seed": 57138800,
+      "cohort": "fresh",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.982261990806649e-17
+    },
+    {
+      "seed": 57138800,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 6.938893903907228e-17
+    },
+    {
+      "seed": 57138801,
+      "cohort": "fresh",
+      "observation": "none",
+      "ratio": 4.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 2.7755575615628914e-17
+    },
+    {
+      "seed": 57138801,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "cohort": "fresh",
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.112366251504909e-17
+    },
+    {
+      "seed": 57138801,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "intrinsic",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "cohort": "fresh",
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "layer": "observed",
+      "nodes": 160000,
+      "saved_cube_values": 128,
+      "maximum_absolute_difference": 7.28583859910259e-17
+    }
+  ],
+  "maximum_saved_cube_replay_error": 2.220446049250313e-16,
+  "zero_threshold_monotone_invariance_checks": [
+    {
+      "seed": 57117794,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117794,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117795,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117796,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117797,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117798,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117799,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117800,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117801,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117802,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117803,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117804,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117805,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117806,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117807,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117808,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57117809,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138794,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138795,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138796,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138797,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138798,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138799,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138800,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "observation": "none",
+      "ratio": 4.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "observation": "independent_difference",
+      "ratio": 2.0,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "no_beneficial_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_top",
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 57138801,
+      "observation": "shared_stop_sensitivity",
+      "ratio": 0.5,
+      "metric": "accessible_best",
+      "absolute_difference": 0.0
+    }
+  ],
+  "graph_summary_source": "RUN-186/outputs/graph_summary.csv",
+  "new_learning_or_optimization_tasks": 0,
+  "interpretation": "Static descriptive proxies only; no task-specific difficulty classification."
+}

@@ -1,0 +1,38 @@
+{
+  "checked_utc": "2026-11-25T02:25:46.484638+00:00",
+  "run": "RUN-188",
+  "job": "2356",
+  "queue": {
+    "returncode": 0,
+    "stdout": "2356|RUNNING|1:19:16|dutch|dutch",
+    "stderr": ""
+  },
+  "scheduler": {
+    "returncode": 0,
+    "stdout": "JobId=2356 JobName=EXP-065RUN-188 UserId=matthew-spence(1000) GroupId=matthew-spence(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=(null) JobState=RUNNING Reason=None Dependency=(null) Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=01:19:16 TimeLimit=1-00:00:00 TimeMin=N/A SubmitTime=2026-11-25T12:06:30 EligibleTime=2026-11-25T12:06:30 AccrueTime=2026-11-25T12:06:30 StartTime=2026-11-25T12:06:30 EndTime=2026-11-26T12:06:30 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-25T12:06:30 Scheduler=Backfill Partition=cpu AllocNode:Sid=dutch:208314 ReqNodeList=(null) ExcNodeList=(null) NodeList=dutch BatchHost=dutch NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=8G,node=1,billing=1 AllocTRES=cpu=1,mem=8G,node=1,billing=1 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=8G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/tank/data/labproj/staging/project-adapt-env/RUN-188/project/experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.slurm WorkDir=/tank/data/labproj/staging/project-adapt-env/RUN-188/project StdErr=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-188/logs/stderr.txt StdIn=/dev/null StdOut=/tank/data/labproj/runtime/project-adapt-env/runs/RUN-188/logs/stdout.txt Power= TresPerTask=cpu:1",
+    "stderr": ""
+  },
+  "stdout.txt": "Verified 460 frozen payloads and 36 pinned packages\nStarting matched TrpB r0/full shared-stop calibration; RUN=RUN-188; job=2356\nFIT_PROGRESS r0 200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 400/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 600/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 800/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 1000/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 1200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 1400/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 1600/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 1800/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 2000/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 2200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 2400/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 2600/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 2800/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 3000/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 3200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 3400/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 3600/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 3800/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 4000/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 4200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 4400/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 4600/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 4800/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 5000/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 5200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 5400/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 5600/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 5800/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 6000/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 6200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 6400/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 6600/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 6800/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 7000/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 7200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 7400/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 7600/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 7800/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 8000/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 8200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 8400/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 8600/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 8800/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 9000/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 9200/11712 best_loss=0.04207450018 best_r=0\nFIT_PROGRESS r0 9400/11712 best_loss=0.04207450018 best_r=0\n",
+  "stderr.txt": "",
+  "labproj-exit-code.txt": null,
+  "interaction-ablation-scientific-exit-code.txt": null,
+  "studies": {
+    "r0": {
+      "states": {
+        "COMPLETE": 9512,
+        "RUNNING": 1
+      },
+      "best_trial": [
+        1,
+        0,
+        0.04207450018441907
+      ],
+      "best_parameters": {
+        "p0": 0.21759150165031782,
+        "p1": 2.2973420879919852,
+        "p2": -7.867549377554278,
+        "p3": 0.3292809702406704
+      }
+    }
+  }
+}

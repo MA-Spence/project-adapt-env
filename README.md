@@ -3,20 +3,23 @@
 This repository records the development and empirical evaluation of AdaptEnv,
 a procedural synthetic protein-fitness environment for online ML testing.
 The supported implementation lives in the independently installable
-[Adapt-Env package](external/Adapt-Env/README.md), now the unpublished **0.5.0rc1** release candidate.
+[Adapt-Env package](external/Adapt-Env/README.md), now the unpublished **0.7.0rc1** implementation candidate.
 
 ## Current model and usage
 
 The default model uses alignment/profile-derived additive amino-acid preferences
-with normalized synthetic interactions, followed by a sigmoid. A supplied profile
+with full centered 20-by-20 pair tables, followed by a sigmoid. The latent
+interactions are pairwise only, on a sparse site graph with six partners per site
+by default. A supplied profile
 is required; fully synthetic additive effects are an explicit control. It evaluates arbitrary sequences
 of a configured length without enumerating their complete sequence space.
 
 - [How the model works](external/Adapt-Env/docs/THERMODYNAMIC_V2.md)
 - [Python and HTTP APIs](external/Adapt-Env/docs/API_AND_SERVICE.md)
 - [Configuration and presets](external/Adapt-Env/docs/CONFIGURATION_AND_PRESETS.md)
-- [Profile-default migration](external/Adapt-Env/docs/MIGRATION_0_5.md)
-- [Release decision and source lock](docs/model_release/0.5.0rc1/decision.md)
+- [Full-pairwise migration](external/Adapt-Env/docs/MIGRATION_0_6.md)
+- [TrpB calibration: restored RUN-180 targets with Optuna](docs/calibration/README.md)
+- [Release decision and source lock](docs/model_release/0.7.0rc1/decision.md)
 
 Install from the project root with:
 
@@ -25,12 +28,12 @@ python -m pip install -e 'external/Adapt-Env[api]'
 ```
 
 ```python
-from adaptenv import build_landscape_from_preset
+from adaptenv import ThermodynamicLandscape
+from adaptenv.alignment import AlignmentProfile
 
-# Recorded four-site TrpB profile and its own RUN-178 intrinsic readout.
-model = build_landscape_from_preset(
-    "trpb_run178_r05_profile_shared_stop_intrinsic", seed=7
-)
+# Illustrative alignment; supply the mapped alignment for your protein family.
+profile = AlignmentProfile.from_sequences(["ACDE", "ACDF", "YCDE"], pseudocount=0.4)
+model = ThermodynamicLandscape(alignment_profile=profile)
 fitness = model.evaluate(model.random_sequence())
 ```
 
@@ -40,6 +43,37 @@ explicit submodules. Historical experiment scripts can require an earlier
 package revision; reproduce them with their frozen RUN source and environment.
 
 ## Current empirical evidence
+
+[RES-064](results/RES-064_fixed-observation-noise-epistasis-and-trpb-identifiability/result.md)
+synthesizes ANA-072/073/074: fixed observation errors add epistasis outside
+latent r control but do not account for all intrinsic interaction power. Current
+TrpB replicates and stop controls cannot uniquely distinguish shared errors from
+biological epistasis. Gamma concentration gave no clear advantage over Gaussian.
+The direct joint Optuna and fixed-observation methods are now
+[public package APIs](external/Adapt-Env/docs/CALIBRATION.md).
+
+**The project calibration default restores RUN-180's fitness-distribution
+objective, using Optuna in place of differential evolution.** It preserves the
+profile, Gaussian full-pairwise model, all three
+observation modes, native-unit bounds, cubes, seeds and unfitted diagnostics.
+The current protocol jointly optimizes continuous r in [0,8] and four readout
+parameters in three Optuna studies. Gamma concentration is disabled. A new
+TrpB fit completed as RUN-186; RUN-188 tested r=0 and RUN-190 tested Gamma
+concentration. No public preset is recalibrated here.
+See the [protocol and objective](docs/calibration/README.md).
+
+The alternative Gamma/architecture calibration completed as RUN-184, but
+[ANA-071](analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/analysis.md)
+found a much too narrow fitness distribution and substantial local-landscape
+mismatches. Its achieved fit is not ready as a TrpB surrogate. The architecture
+inference API remains available explicitly; this rollback does not remove model
+capabilities. The exact Gaussian generator remains the generic default until a
+finite concentration is supplied. The established claims below concern
+the historical ranked backend, retained explicitly by every named TrpB preset.
+Its numerical behaviour and fingerprints are preserved. The new architecture
+follows the additive-plus-pairwise expansion through a sigmoid of
+[Park, Metzger and Thornton (2024)](https://doi.org/10.1038/s41467-024-51895-5);
+its synthetic coefficients and sparse site graph are modelling assumptions.
 
 [CLAIM-004](claims/CLAIM-004_thermodynamic-gnk-trpb-aggregate-and-adaptive-search-resemblance.md)
 records useful approximate joint resemblance to TrpB global statistics and

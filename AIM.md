@@ -1,5 +1,41 @@
 # Project aims
 
+2026-11-25 execution authorization: register and submit a matched TrpB-only
+interaction ablation under EXP-065. Independently refit r=0 and full r in [0,8]
+with the frozen RUN-186 shared-stop observation law and restored direct fitness
+loss. Evaluate repeatable interaction powers and sign reversals without fitting
+those diagnostics. No noise-strength/Gamma fitting or package promotion.
+
+2026-11-24 execution authorization: jointly optimize continuous r in [0,8] and
+the four readout parameters using the restored RUN-180 direct fitness loss,
+then register and submit a TrpB-only RUN under EXP-065 to Slurm. Keep Gaussian
+interactions; Gamma shape fitting is explicitly deferred. Preserve data, seeds,
+observation assumptions and post-fit diagnostics; this authorization does not
+assert model adequacy or change historical claims.
+
+2026-11-21 execution amendment: stop local RUN-182 at the scientist's request
+and submit the unchanged TrpB architecture calibration to the remote Slurm
+queue under EXP-065. Preserve the interrupted outputs and restart in a new RUN
+from the original frozen source, inputs, seeds and fitting configuration.
+Only the execution platform changes; this does not report calibration results.
+
+2026-11-21 execution authorization: register a new TrpB-only RUN under existing
+EXP-065 and execute the 0.7.0rc1 Gamma-normal / Optuna architecture calibration
+locally on the MacBook. The new inferred-architecture objective and bounded,
+disjoint genotype panels are explicitly different from RUN-180's matched-repeat
+protocol. Historical controls remain intact; this authorization does not imply
+successful calibration, adequacy, publication or recalibrated public presets.
+
+2026-11-20 implementation authorization: add Gamma-normal pair-coefficient
+concentration and Optuna indirect inference against the reference-free genetic
+architecture inferred by Park, Metzger and Thornton (2024). The same published
+auxiliary objective and CV rule are used on empirical and synthetic observations;
+the outer minimum-distance objective, Gamma sampling assumption and solver
+differences are explicit. This advances the existing synthetic-environment aim,
+without fitting empirical interaction identities or asserting biological adequacy.
+It does not authorize or report a new empirical calibration RUN. The new method
+and tests are documented in docs/calibration and unpublished candidate 0.7.0rc1.
+
 
 ## AIM-001: Create-Model-Landscape
 
@@ -65,3 +101,21 @@ data and explicit tests of the resulting predictions. This extension does not
 reinstate retired implementations or overturn their historical failed tests.
 The scientist authorized Git updates to the source and project repositories;
 package release, tagging and deployment remain outside this action.
+
+2026-11-19 backend revision authorized by the scientist: use unrestricted centered
+q20 pair matrices and pairwise-only latent interactions as the default, retaining
+the profile additive prior and sigmoid. This anchors the functional architecture
+to Park, Metzger and Thornton (2024), without claiming fitted empirical
+coefficients. Bounded site degree retains tractability for hundreds of variable
+sites; sparsity is an explicit modelling restriction. Candidate 0.6.0rc1 is
+uncalibrated. Historical TrpB presets and their ranked-backend evidence remain
+separate and numerically preserved. Calibration and comparative benchmarking
+are not executed by this implementation change.
+
+2026-11-20 calibration authorization: prepare and locally execute a new TrpB
+RUN under EXP-065 for the refined full-pairwise model. Repeat RUN-178's protocol,
+profile, data, calibration and confirmation seeds, observation assumptions and
+unfitted diagnostics, changing only the interaction construction. Reuse the
+recorded RUN-178 and RUN-175 controls. This authorizes execution and preservation
+in the scientific record, without pre-judging model adequacy or publishing a
+release.

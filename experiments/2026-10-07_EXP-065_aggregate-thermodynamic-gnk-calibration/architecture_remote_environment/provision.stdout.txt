@@ -1,0 +1,1 @@
+{"target": "/tank/data/labproj/runtime/project-adapt-env/envs/architecture-0.7.0rc1-py311", "lock_sha256": "a62cb4bdff9f216306e5266741c41675a8b518a3e23458dec78fc946ed7200cc", "installation_returncode": 0}

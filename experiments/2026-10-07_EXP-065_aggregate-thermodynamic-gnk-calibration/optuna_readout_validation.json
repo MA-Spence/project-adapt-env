@@ -1,0 +1,358 @@
+{
+  "date": "2026-11-24",
+  "scope": "Engineering verification of protocol rollback; no new scientific RUN or adequacy inference",
+  "status": "passed",
+  "source_manifest_sha256": "f833785b6972bb9ec85f688f840f94a477f212127a28e2332f883345ad82602b",
+  "source_files_verified": 92,
+  "preflight": {
+    "protocol": "trpb_run180_readout_optuna_v1",
+    "baseline_run": "RUN-180",
+    "settings": 18,
+    "calibration_latents": "array_equal",
+    "objective_replays": [
+      {
+        "ratio": 0.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.17145518690746184,
+          "mean_sd": 0.15666755393417525,
+          "floor_cdf": 0.001102447509765625,
+          "total": 0.3292251883514027
+        },
+        "replayed": {
+          "quantile": 0.17145518690746184,
+          "mean_sd": 0.15666755393417525,
+          "floor_cdf": 0.001102447509765625,
+          "total": 0.3292251883514027
+        }
+      },
+      {
+        "ratio": 0.5,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.15143478196470184,
+          "mean_sd": 0.1208490484700521,
+          "floor_cdf": 0.0010385513305664062,
+          "total": 0.2733223817653203
+        },
+        "replayed": {
+          "quantile": 0.15143478196470184,
+          "mean_sd": 0.1208490484700521,
+          "floor_cdf": 0.0010385513305664062,
+          "total": 0.2733223817653203
+        }
+      },
+      {
+        "ratio": 1.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.1186314425709252,
+          "mean_sd": 0.0897620225684456,
+          "floor_cdf": 0.0016031265258789062,
+          "total": 0.2099965916652497
+        },
+        "replayed": {
+          "quantile": 0.1186314425709252,
+          "mean_sd": 0.0897620225684456,
+          "floor_cdf": 0.0016031265258789062,
+          "total": 0.2099965916652497
+        }
+      },
+      {
+        "ratio": 2.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.0995411914121068,
+          "mean_sd": 0.05198675758572017,
+          "floor_cdf": 0.0008020401000976562,
+          "total": 0.1523299890979246
+        },
+        "replayed": {
+          "quantile": 0.0995411914121068,
+          "mean_sd": 0.05198675758572017,
+          "floor_cdf": 0.0008020401000976562,
+          "total": 0.1523299890979246
+        }
+      },
+      {
+        "ratio": 4.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.0882316698861848,
+          "mean_sd": 0.04815335902710372,
+          "floor_cdf": 0.0011682510375976562,
+          "total": 0.13755327995088618
+        },
+        "replayed": {
+          "quantile": 0.0882316698861848,
+          "mean_sd": 0.04815335902710372,
+          "floor_cdf": 0.0011682510375976562,
+          "total": 0.13755327995088618
+        }
+      },
+      {
+        "ratio": 8.0,
+        "observation": "none",
+        "recorded": {
+          "quantile": 0.09095318913404074,
+          "mean_sd": 0.05012581942189241,
+          "floor_cdf": 0.0024805068969726562,
+          "total": 0.1435595154529058
+        },
+        "replayed": {
+          "quantile": 0.09095318913404074,
+          "mean_sd": 0.05012581942189241,
+          "floor_cdf": 0.0024805068969726562,
+          "total": 0.1435595154529058
+        }
+      },
+      {
+        "ratio": 0.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.06537023288888719,
+          "mean_sd": 0.053902816555233976,
+          "floor_cdf": 8.381903171539307e-05,
+          "total": 0.11935686847583656
+        },
+        "replayed": {
+          "quantile": 0.06537023288888719,
+          "mean_sd": 0.053902816555233976,
+          "floor_cdf": 8.381903171539307e-05,
+          "total": 0.11935686847583656
+        }
+      },
+      {
+        "ratio": 0.5,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.05546173795163827,
+          "mean_sd": 0.05143600772313364,
+          "floor_cdf": 1.6227364540100098e-05,
+          "total": 0.10691397303931202
+        },
+        "replayed": {
+          "quantile": 0.05546173795163827,
+          "mean_sd": 0.05143600772313364,
+          "floor_cdf": 1.6227364540100098e-05,
+          "total": 0.10691397303931202
+        }
+      },
+      {
+        "ratio": 1.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.04607214388271967,
+          "mean_sd": 0.04054720523307092,
+          "floor_cdf": 0.000177040696144104,
+          "total": 0.08679638981193469
+        },
+        "replayed": {
+          "quantile": 0.04607214388271967,
+          "mean_sd": 0.04054720523307092,
+          "floor_cdf": 0.000177040696144104,
+          "total": 0.08679638981193469
+        }
+      },
+      {
+        "ratio": 2.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.03240254081737589,
+          "mean_sd": 0.028246703047087082,
+          "floor_cdf": 0.00010019540786743164,
+          "total": 0.060749439272330404
+        },
+        "replayed": {
+          "quantile": 0.03240254081737589,
+          "mean_sd": 0.028246703047087082,
+          "floor_cdf": 0.00010019540786743164,
+          "total": 0.060749439272330404
+        }
+      },
+      {
+        "ratio": 4.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.029442913914694918,
+          "mean_sd": 0.03326485739202522,
+          "floor_cdf": 0.0003672987222671509,
+          "total": 0.0630750700289873
+        },
+        "replayed": {
+          "quantile": 0.029442913914694918,
+          "mean_sd": 0.03326485739202522,
+          "floor_cdf": 0.0003672987222671509,
+          "total": 0.0630750700289873
+        }
+      },
+      {
+        "ratio": 8.0,
+        "observation": "independent_difference",
+        "recorded": {
+          "quantile": 0.035215077762462625,
+          "mean_sd": 0.03313283784424634,
+          "floor_cdf": 0.0006140619516372681,
+          "total": 0.06896197755834624
+        },
+        "replayed": {
+          "quantile": 0.035215077762462625,
+          "mean_sd": 0.03313283784424634,
+          "floor_cdf": 0.0006140619516372681,
+          "total": 0.06896197755834624
+        }
+      },
+      {
+        "ratio": 0.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.04124057695393592,
+          "mean_sd": 0.0008135235408087792,
+          "floor_cdf": 2.039968967437744e-05,
+          "total": 0.04207450018441907
+        },
+        "replayed": {
+          "quantile": 0.04124057695393592,
+          "mean_sd": 0.0008135235408087792,
+          "floor_cdf": 2.039968967437744e-05,
+          "total": 0.04207450018441907
+        }
+      },
+      {
+        "ratio": 0.5,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        },
+        "replayed": {
+          "quantile": 0.029890048284698507,
+          "mean_sd": 0.0011008130117627216,
+          "floor_cdf": 4.306435585021973e-06,
+          "total": 0.03099516773204625
+        }
+      },
+      {
+        "ratio": 1.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.029800560164746553,
+          "mean_sd": 0.001425851278828095,
+          "floor_cdf": 7.212162017822266e-06,
+          "total": 0.03123362360559247
+        },
+        "replayed": {
+          "quantile": 0.029800560164746553,
+          "mean_sd": 0.001425851278828095,
+          "floor_cdf": 7.212162017822266e-06,
+          "total": 0.03123362360559247
+        }
+      },
+      {
+        "ratio": 2.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.03779516347932997,
+          "mean_sd": 6.900384448756818e-05,
+          "floor_cdf": 1.9311904907226562e-05,
+          "total": 0.037883479228724766
+        },
+        "replayed": {
+          "quantile": 0.03779516347932997,
+          "mean_sd": 6.900384448756818e-05,
+          "floor_cdf": 1.9311904907226562e-05,
+          "total": 0.037883479228724766
+        }
+      },
+      {
+        "ratio": 4.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.05059326298161521,
+          "mean_sd": 0.0013276654456344137,
+          "floor_cdf": 6.295740604400635e-05,
+          "total": 0.051983885833293636
+        },
+        "replayed": {
+          "quantile": 0.05059326298161521,
+          "mean_sd": 0.0013276654456344137,
+          "floor_cdf": 6.295740604400635e-05,
+          "total": 0.051983885833293636
+        }
+      },
+      {
+        "ratio": 8.0,
+        "observation": "shared_stop_sensitivity",
+        "recorded": {
+          "quantile": 0.0609329466326516,
+          "mean_sd": 0.002210014049974334,
+          "floor_cdf": 5.187094211578369e-05,
+          "total": 0.06319483162474172
+        },
+        "replayed": {
+          "quantile": 0.0609329466326516,
+          "mean_sd": 0.002210014049974334,
+          "floor_cdf": 5.187094211578369e-05,
+          "total": 0.06319483162474172
+        }
+      }
+    ],
+    "evidence_scope": "Engineering replay; not a new calibration or adequacy result"
+  },
+  "backend_replay": {
+    "calibration_seeds": 8,
+    "confirmation_seeds": 24,
+    "genotypes_per_confirmation_seed": 160000,
+    "normalized_a_and_g": "array_equal",
+    "references": "array_equal"
+  },
+  "targeted_tests": {
+    "passed": 48,
+    "command": "PYTHONPATH=\"$PWD/.labproj/envs/trpb-py31115/lib/python3.11/site-packages\" .labproj/envs/indirect-py311/bin/python -m pytest -q tests/test_optuna_readout_exp065.py tests/test_optuna_pairwise_calibration_exp065.py tests/test_pairwise_calibration_exp065.py"
+  },
+  "additional_legacy_check": {
+    "passed": 3,
+    "failed": 1,
+    "test": "tests/test_interaction_strength_exp065.py::test_public_readout_at_all_sweep_strengths",
+    "reason": "Historical test assumes implicit ranked/synthetic mixed-order defaults. Current full-pairwise/profile defaults predate this rollback; historical fitting code and backend defaults were not changed."
+  },
+  "smoke": {
+    "command": "PYTHONPATH=\"$PWD/.labproj/envs/trpb-py31115/lib/python3.11/site-packages\" .labproj/envs/indirect-py311/bin/python scripts/optuna_pairwise_calibration_exp065.py --quick --workers 2 --output-dir /tmp/adaptenv-readout-rollback-smoke-final-20261124",
+    "mode": "SMOKE_ONLY",
+    "elapsed_seconds": 51.559797041583806,
+    "settings": 18,
+    "trials_per_setting": 8,
+    "confirmation_seeds": 2,
+    "outputs_verified": 87,
+    "selected_parameters_equal_RUN180": true,
+    "unfitted_diagnostics": {
+      "graph_summary.csv": {
+        "rows": 183,
+        "matches_RUN180": true
+      },
+      "cube_summary.csv": {
+        "rows": 183,
+        "matches_RUN180": true
+      },
+      "latent_graph_summary.csv": {
+        "rows": 12,
+        "matches_RUN180": true
+      }
+    }
+  },
+  "limitations": [
+    "Smoke budget tests startup only; the deterministic 10-trial unit test exercises adaptive TPE.",
+    "Full 1952-trial-per-setting optimization has not been run.",
+    "Previous confirmation panels are reused; they are not new independent validation."
+  ],
+  "scientific_record_check": {
+    "refresh": "passed",
+    "check": "passed",
+    "green": 378,
+    "yellow": 23,
+    "red": 0,
+    "warnings": "Existing historical data tracking and active hypothesis linkage warnings remain."
+  }
+}

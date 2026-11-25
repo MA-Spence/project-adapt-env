@@ -1,5 +1,578 @@
 # Project state
 
+## 2026-11-26 RES-064 — fixed-noise epistasis and public methods
+
+- Created RES-064 linking EXP-065 RUN-186/188/190 and ANA-072/073/074. Fixed
+  genotype-level observation errors add epistasis outside latent r control;
+  they do not account for all synthetic epistasis. Current TrpB replicates and
+  stop controls do not uniquely identify biological versus shared-error
+  contributions. This is conditional nonidentifiability, not impossibility in
+  every experimental design. The synthetic decomposition is exactly known.
+- Gamma concentration gave no demonstrated advantage over Gaussian. Gaussian
+  remains the default; no release, calibrated-preset promotion or new fit.
+- AdaptEnv source commit `a6b5bfc5a86efa4f1a948d1b4ca968757b3fb343` is pushed
+  to `origin/dev`; the project submodule and external-package lock pin it.
+- Public AdaptEnv APIs now expose the direct aggregate objective, serial joint
+  Optuna r/readout fitting, optional alpha fitting, fixed-r ablation, explicit
+  replicate errors and frozen banks. The separate experimental auxiliary-
+  inference method remains clearly distinguished. Immutable RUN snapshots
+  were not changed.
+- Package validation: 234 tests pass in Python 3.13; six new API tests and
+  archived-method parity pass in the production Python 3.11 environment. The
+  installed wheel passes the same archived parity check. Historical ranked
+  fingerprint fixture differences across environments are documented in
+  RES-064/package_verification.json; no historical fixtures were changed.
+- Validation replays fixed independent/shared observations and banks exactly,
+  reconstructs Gaussian/Gamma calibration fields, and reproduces all four loss
+  components for six historical starts and selected RUN-186/188/190 settings
+  (maximum difference 2.8e-17). See RES-064/public_api_parity.json.
+
+
+## ANA-074 — Gamma concentration adds no demonstrated TrpB advantage (25 November 2026)
+
+- Completed RUN-190 analysis with seven visually checked PNG/PDF figures and a ten-code-cell executed notebook. Gamma selects alpha=100, r=0.5 and the Gaussian readout: loss 0.03103213 versus 0.03099517 (0.12% higher). No later Optuna proposal beats the queued candidate.
+- Selected latent pair-table correlation with Gaussian has fresh-seed median 0.99875; top 1% squared coefficient mass is 8.53% versus 8.40%. Confirmation changes are small and mixed: pooled high-order fractions remain about 0.20 versus empirical 0.086; sign prevalence is close, while activity, absolute powers and seed variation remain limitations.
+- Static difficulty proxies remain similar. No learner/search task, new independent empirical validation, model promotion or new result/claim was performed. This does not prove equivalence or a global optimum.
+- Verified 65 output and 536 frozen files, 11,712 completed trials, exact Gaussian/r0 replay, independent powers/quantiles/slopes/sign checks, and reconstruction of 48 full latent pair fields. RUN-190 is locally collected, DVC tracked and backed up; all 543 unique cache objects verify locally and remotely.
+- [Report](analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/analysis.md) and [executed notebook](analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/notebooks/analysis.ipynb). ANA-074 archive `93cbf1674a6c316f03db00a735123a9b.dir` is backed up with all cache objects verified locally and remotely; its 42 canonical payload files match the archive. Verification is recorded with the analysis.
+
+## RUN-190 TrpB Gamma concentration calibration completed (25 November 2026)
+
+RUN-190 (EXP-065; Slurm 2357 on Dutch) completed successfully in 8,809.31 seconds (~2 h 27 min). All 11,712 trials completed with no failures and all 24 confirmation seeds finished; both exit codes are zero, stderr is empty, and all 65 manifest-listed output files passed SHA-256 verification. Reconciled through labproj. Completion evidence: `experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-190.completion-verification.json`.
+
+The selected Gamma fit retains the queued alpha=100, r=0.5 candidate (trial 7): loss 0.03103213 versus the reused exact Gaussian control 0.03099517 (~0.12% higher). No new Optuna candidate improved this warm start. This achieved fixed-budget calibration provides no gain from stronger concentration of interaction magnitudes; it is not a global optimality or equivalence proof. Confirmation diagnostics analysed in ANA-074 above; no model promotion.
+
+Design: joint alpha [0.05,100] (log), r [0,8] and four readout coordinates; unchanged direct loss, fixed shared-stop noise, panels and seeds; RUN-188 Gaussian/r0 controls reused. RUN-189 was the nonexecuting preview. Local 27-test suite and Linux smoke passed; frozen runtime DVC directory `705126f8fe5da52a44a94e6459a918d3.dir` has 470 unique cache objects verified locally and in backup. Production outputs have now been collected and DVC archived with verified project backup as part of ANA-074.
+
+## 2026-11-25 ANA-073 — RUN-188 observation noise versus structured interactions
+
+- Created the requested figure-led ANA with six PNG/PDF figures and an executed
+  notebook (11 code cells), paired source, exact noise-component reconstruction
+  and independent cube-power/face-classification checks. No refitting or new draws.
+- At primary resolution, r0 intrinsic sign epistasis is zero but observed median
+  is 62.5%; full r=0.5 moves from 9.9% intrinsic to 64.1% observed, versus TrpB
+  65.1%. Median 90.4% of full-model observed sign-epistatic faces were absent
+  intrinsically (72.3% at zero resolution; 98.3% at coarser resolution).
+- Noise dominance depends on the metric: intrinsic after-sigmoid fitness supplies
+  91.1% of pooled full-model order2 power, 61.3% of order3, and 16.3% of order4.
+  Shared error supplies 72.3% of order4 power; signed cross terms are retained.
+  These are synthetic power accounts, not identified biological noise fractions.
+- Full-model calibration loss is 26.3% lower, but unfitted diagnostic advantages
+  are mixed. Shared noise produces repeatable reversals; sparse all-active strata
+  and negative near-floor stop-adjusted powers leave biological interpretation
+  unresolved. The observed map is not established as principally r-controlled.
+- All 41 output payloads and 460 frozen payloads verify; all 48 observation replays
+  match exactly. RUN-188 is now locally collected, DVC tracked and backed up;
+  all 460 unique local/remote storage objects verify. No model promotion, new
+  result/claim, or ML/search experiment was performed.
+- Completed ANA-073 archive is DVC tracked and backed up; all 41 unique
+  local/remote objects verify and canonical files match the archive byte-for-byte.
+- [ANA-073 report](analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/analysis.md)
+  and [notebook](analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/notebooks/analysis.ipynb).
+
+## 2026-11-25 RUN-188 completed successfully
+
+- Both calibration studies completed all 11,712 trials (23,424 total) with no
+  failures. All 24 confirmation seeds completed. Scientific runtime was
+  12,758.31 seconds (3 h 32 min 38 sec); scientific and runner exit codes are zero,
+  stderr is empty, and all 41 manifest-listed output files passed SHA-256 checks.
+- The r=0 control retains loss 0.04207450018; the full model retains r=0.5 and
+  loss 0.03099516773 (26.3% lower). Both winners are historical queued candidates;
+  no new Optuna proposal improved them. This is a calibration result, not proof
+  that the observation model is justified or that latent interactions account for
+  the empirical ruggedness.
+- Replicate-aware diagnostics are complete (800 cube rows, 57,600 face rows,
+  1,164 summary rows and 291 graph rows), but have not received a new scientific
+  analysis. No ANA, result, claim or package change is made in this status check.
+- Scheduler retention no longer includes job 2356; completion is supported by
+  both saved zero exit codes, finished studies and authenticated final outputs.
+  Evidence: [completion snapshot](experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.completion-status.json).
+  Production outputs remain on Dutch; full collection/archival is pending.
+
+## 2026-11-25 RUN-188 progress at 13:25 AEDT
+
+- Slurm 2356 remains RUNNING on Dutch after 1 h 19 min. The r=0 control
+  has completed 9,512/11,712 trials (81.2% of that arm; 40.6% of the combined
+  fitting budget), with no failed trials and empty stderr.
+- Best control loss remains 0.04207450018, the initial queued candidate.
+  Full-r fitting and post-fit diagnostics are still pending. No scientific
+  comparison can yet be concluded from this fitting progress.
+- Evidence: [progress snapshot](experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.progress-20261125T022546Z.json).
+
+## 2026-11-25 RUN-188 progress at 12:42 AEDT
+
+- Slurm 2356 remains RUNNING on Dutch after 35 min 53 sec. The r=0 control
+  has completed 4,580/11,712 trials (39.1% of that arm; 19.6% of the combined
+  fitting budget), with no failed trials and empty stderr.
+- Best r=0 calibration loss remains 0.04207450018, the initial queued candidate.
+  The full-r arm and post-fit replicate-aware diagnostics have not started.
+  Trial progress is not total pipeline completion or evidence of adequacy.
+- Read-only scheduler/log/SQLite evidence is retained in
+  [progress snapshot](experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.progress-20261125T014222Z.json).
+
+## 2026-11-25 RUN-188 — matched interaction ablation running
+
+- Registered the authorized TrpB comparison under EXP-065 as RUN-188 and submitted
+  Slurm job 2356. Verified RUNNING on Dutch with one CPU, 8 GB RAM and a 24-hour
+  limit. RUN-187 is the nonexecuting submission preview.
+- Independently refit the profile-additive sigmoid control at r=0 and the full
+  pairwise model with continuous r in [0,8], each with 11,712 Optuna trials. The
+  RUN-186 shared-stop law, calibration loss, panels and generator/noise seeds are
+  frozen. Noise strength and Gamma concentration are not fitted.
+- Unfitted diagnostics measure absolute cross-replicate interaction powers,
+  matching sign reversals, activity strata and intrinsic/observed graph geometry.
+  Previously inspected confirmation panels are reused; shared assay error remains
+  unidentified. No learning/search tasks or package promotion is performed.
+- All 24 targeted tests, local and Linux end-to-end smoke runs passed. Worker
+  verified 460 frozen payloads and 36 exact package pins; all six historical
+  objectives replayed, the r0 fit has started and initial stderr is empty.
+  All 404 local and project backup DVC objects were checksum-verified.
+- See [protocol](experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/interaction_ablation.md),
+  [RUN record](experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.yaml)
+  and [launch verification](experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/runs/RUN-188.launch_verification.json).
+  No production scientific result is available at launch.
+
+## 2026-11-25 ANA-072 — RUN-186 TrpB behaviour, architecture and difficulty proxies
+
+- Created the requested figure-led analysis under EXP-065/RUN-186: four notebooks,
+  seven figures with PDF copies, reviewable Python sources and numerical tables.
+  Fresh-kernel execution and independent mathematical/scientific review pass.
+- RUN-186 retains all three RUN-180 warm starts after 35,136 joint Optuna trials.
+  The shared-stop observed setting partially resembles TrpB: median mean 0.02274
+  versus 0.02115, SD 0.06132 versus 0.05998; local SD and upper-tail mismatches remain.
+  Shared-stop remains an observation sensitivity assumption.
+- Equal-cube and sign-epistasis summaries look relatively close, but pooled
+  higher-order variance is 0.202 versus 0.086 empirically. The latent model remains
+  profile additive plus full Gaussian pair tables; no empirical coefficient
+  inference or Gamma fitting was performed in RUN-186.
+- At the primary resolution, shared-stop observed no-beneficial-neighbour and
+  inaccessible-top-1% fractions are 0.595% and 0.958%, versus TrpB 0.514% and 1.190%.
+  Intrinsic median landscapes are much less locally trapping; neutral connectivity
+  still differs. These are static proxies, not measured learning or optimisation
+  performance. No such tasks were run for this ANA.
+- Primary summaries use eight originally fresh seeds; all 24 are retained. These
+  panels/seeds have already been inspected, full-library comparisons include
+  calibration nodes, and observed maps use error frozen by genotype. This is
+  conditional evidence for a four-site analogue, not broad graduation or a new
+  independent biological validation. No preset, result or claim was changed.
+- RUN-186 has now been collected with its frozen runtime, DVC tracked and backed
+  up; all 393 unique local and remote objects verify. Analysis reproduction and
+  archive evidence are linked from
+  [ANA-072](analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/analysis.md).
+  The completed ANA archive is DVC tracked and backed up; all 67 unique local
+  and remote objects verify. Earlier status notes below are historical.
+
+## 2026-11-25 RUN-186 completed successfully
+
+- Slurm job 2355 finished on Dutch at 03:42 AEDT on 25 November. Scientific
+  runtime was 7 h 44 min. Both scientific and runner exit codes are zero, stderr
+  is empty, and all 86 manifest-listed output files match their SHA-256 checksums.
+  labproj reconciles completion as INFERRED_EXIT_CODE because the scheduler no
+  longer retains the job and Slurm accounting is disabled.
+- All three studies completed 11,712 trials each (35,136 total), with no failed
+  trials. None improved its historical RUN-180 warm start: no-noise r=4,
+  loss 0.13755328; independent-difference r=2, loss 0.06074944; shared-stop
+  sensitivity r=0.5, loss 0.03099517. This reports fixed-budget execution,
+  not convergence or global optimality.
+- All 24 confirmation seeds completed; outputs include 363 graph rows, 363
+  cube-summary rows and 72 latent-graph rows. These diagnostics have not received
+  a new scientific adequacy analysis. Full output archival/collection is not part
+  of this status check; durable outputs remain on Dutch. No preset is changed.
+- Completion evidence and checksum verification are retained in
+  EXP-065/runs/RUN-186.completion-status.json and RUN-186.completion-integrity.json.
+  Earlier progress snapshots below remain historical.
+
+## 2026-11-24 RUN-186 progress at 20:08 AEDT
+
+- Slurm job 2355 remains RUNNING on Dutch after 10 min 21 sec. The first
+  observation study (no noise) has completed 867 of 11,712 trials, with no failed
+  trials; 867/35,136 is 2.47% of the total optimization budget. Stderr is empty.
+- Best calibration loss remains the historical warm start: 0.13755328 at r=4.
+  No improvement has been observed yet. The other two observation studies and
+  the 24-seed confirmation/graph diagnostics remain pending. Trial percentage
+  is not overall job completion or an adequacy assessment.
+- Timestamped queue, logs and read-only SQLite evidence is retained in
+  EXP-065/runs/RUN-186.progress-20261124T090830Z.json.
+  Slurm accounting storage is disabled; current RUNNING state is verified by
+  squeue/scontrol, with no completion exit code or final manifest yet.
+
+## 2026-11-24 Joint continuous-r Optuna fitting running as RUN-186
+
+- Scientist authorized a new TrpB-only RUN under EXP-065, jointly optimizing
+  continuous r in [0,8] and the four readout parameters with the restored RUN-180
+  direct fitness loss. There is no r fitting grid and Gamma concentration stays
+  disabled. Three studies preserve the observation assumptions and total 35,136
+  trials; six historical fits per mode are warm starts. Old data, masks, seeds,
+  noise draws, bounds and post-fit diagnostics remain fixed.
+- Added the joint fitter, updated the default dispatch, and prepared an isolated
+  Dutch Python 3.11.15 runtime with all 36 dependency pins. 114 targeted tests pass;
+  the full local eight-trial smoke completes three settings/two confirmation seeds.
+- Initial Linux preflight exposed only floating-point pair-field differences:
+  maximum 1.33e-15 on calibration and 2.22e-15 across 24×160,000 confirmation values;
+  additive values and references match exactly. The joint replay audit now allows
+  rtol 1e-13 / atol 1e-14, with actual differences recorded, while retaining old loss
+  replay tolerances and exact input authentication. The old strict audit remains
+  the default for the superseded fixed-r adapter. No model values are altered.
+- The complete 339-payload source/input runtime is frozen and DVC tracked under
+  data/processed/trpb-joint-readout-slurm-runtime. The prelaunch amendment and
+  numerical/environment evidence are retained in EXP-065/joint_readout_remote_environment.
+  Dutch preflight passes all 18 historical objective replays (maximum component
+  difference 6.94e-18), source/dependency verification and native graph checks.
+  All 323 unique local and remote DVC objects verify. RUN-185 is the successful
+  nonexecuting preview; RUN-186 is running on Dutch as Slurm job 2355, with
+  4 CPUs, 8 GB memory and a 24 h limit. Worker startup reverified the frozen files,
+  dependencies and all 18 historical objectives. Its first study has 89 completed
+  trials including 83 off-grid r values; all five coordinates are present and
+  stderr is empty. See EXP-065/runs/RUN-186.launch_verification.json.
+  No completed calibration or model-graduation conclusion is available yet.
+
+## 2026-11-24 RUN-180 calibration protocol restored with Optuna
+
+- Scientist requested rollback to the most recent useful calibration while
+  retaining Optuna. EXP-065 now defaults to `optuna-readout`, with its amendment
+  in [optuna_readout.md](experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/optuna_readout.md).
+  No new scientific RUN was registered or launched, and no public preset changed.
+- Restored the exact RUN-180 101-quantile, mean local-cube-SD and near-floor
+  objective, affine units, parameter bounds, fixed r grid, all three observation
+  modes, Gaussian profile full-pairwise fields and reference-anchored sigmoid.
+  Optuna TPE optimizes four readout parameters separately for each of 18 settings,
+  with 1,952 trials per setting including authenticated historical candidates.
+  Every same-setting RUN-180 fit must replay and remains a candidate, so selected
+  calibration loss cannot regress. This is not a confirmation-performance promise.
+- Existing model features and the experimental architecture API remain available;
+  the restored project protocol does not fit Gamma concentration or auxiliary
+  coefficients. Historical RUN-180/RUN-184 archives and fitting functions remain
+  intact. The shared pipeline gained explicit fitting/validation/provenance hooks.
+- Engineering verification: 48 targeted tests pass; all 18 previous objective
+  components replay exactly. Current model fields reproduce eight calibration
+  seeds and all 24 confirmation seeds across 160,000 genotypes each. The bounded
+  eight-trial smoke completes all 18 settings and two confirmation seeds; selected
+  parameters and corresponding graph/cube diagnostics reproduce RUN-180.
+  One additional historical test still assumes obsolete implicit ranked/synthetic
+  defaults; its incompatibility predates this rollback and is recorded explicitly.
+- [Validation](experiments/2026-10-07_EXP-065_aggregate-thermodynamic-gnk-calibration/optuna_readout_validation.json)
+  records source hashes, replay details, commands, smoke scope and limitations.
+  Previous confirmation panels have already been inspected; this rollback is not
+  new independent biological validation, a model graduation, or a test of Optuna
+  superiority. Shared-stop remains an observation sensitivity assumption.
+
+## 2026-11-24 ANA-071 — RUN-184 does not yet support graduation
+
+- Scientist requested a figure-led ANA with reproducible notebooks and an explicit
+  assessment of TrpB landscape recovery. Created ANA-071 under EXP-065/RUN-184.
+  Three fresh-kernel notebooks executed; five PNG/PDF figures show native fitness,
+  independent local diagnostics, all 18 architecture targets, inference stability
+  and the complete search. All seeds and failures are retained; no refitting.
+- Selected model fitness SD is about 27 times too small; 87.72% of measured means
+  lie outside its attainable output interval. Confirmation sign epistasis is
+  15.4–19.4% versus 65.9%, reciprocal sign epistasis 0.7–1.8% versus 27.2%.
+  Walks and peaks also differ on the identical sparse confirmation graph.
+- The empirical coefficient model independently predicts confirmation observations
+  at R²=0.720 (0.735 against genotype means). This predictive value does not carry
+  over to the synthetic coefficient generator. All 20 bootstrap architectures shift
+  radically from the original estimate despite numerical convergence, limiting
+  interpretation of fixed weighting scales. The cause remains unresolved.
+- Verdict: reproducible as a synthetic oracle, but this fitted setting is not
+  ready as a TrpB-calibrated environment. No retrospective numerical gate is added,
+  and no rejection of the full model family is inferred. Earlier favorable claims
+  apply to different versions/protocols. No default, preset, RES or CLAIM changed.
+- [ANA-071 report](analyses/2026-11-24_ANA-071_run-184-trpb-architecture-calibration-and-landscape-adequacy/analysis.md)
+  links figures, source notebooks, verification and reproduction commands. Archive
+  and backup verification are recorded with ANA-071; original RUN-184 is immutable.
+
+## 2026-11-24 TrpB RUN-184 completed and verified
+
+- Job 2325 finished on Dutch at 16:00:32 AEDT after starting at 09:43:36
+  (about 6 h 17 min). Both runner and scientific exit codes are zero; all 11
+  expected outputs are present. Slurm no longer retains the job, so labproj
+  records INFERRED_EXIT_CODE from runtime evidence, not a queried final state.
+- All 100 Optuna attempts were processed: 37 COMPLETE and 63 FAIL due to
+  auxiliary inference nonconvergence. Failed attempts and diagnostics are
+  retained; they consumed the fixed search budget and limit usable search.
+- Best trial index 63 has calibration loss 24.0341 and confirmation loss 27.3463
+  on disjoint genotypes with four fresh seeds. Required empirical, successful
+  trial and confirmation fits pass the strict convergence checks.
+- Independent completion/reproducibility audit passes 33/33 checks: frozen
+  inputs/source intact, SQLite and trial records consistent, losses recomputed,
+  and native-parameter prediction replay agrees within 5.3e-18. All 35 remote
+  output/log file hashes match the local collection. This establishes execution
+  and reproducibility, not model adequacy or superiority; no preset is promoted.
+- See RUN-184.completion-status.json and RUN-184.completion-verification.json.
+  Outputs, logs, frozen runtime and transport evidence are collected under
+  data/processed/aggregate-thermodynamic-gnk-calibration/RUN-184. Its 225-file
+  DVC archive is backed up; all 178 unique local and remote cache objects verify
+  (RUN-184.storage-verification.json). Earlier progress below is historical.
+
+## 2026-11-24 TrpB RUN-184 — historical 15:29 progress check
+
+- Latest check at 15:29 AEDT: job 2325 remains RUNNING on Dutch after 5 h 45 min,
+  using approximately one CPU and 151 MiB resident memory. Empirical inference
+  and all 20 bootstrap fits completed with convergence flags true.
+- Optuna has finished 90 of its 100 attempted trials: 36 COMPLETE, 54 FAIL, with
+  the 91st attempt running. All failures report auxiliary inference nonconvergence.
+  Forty failed trials' full fits reached the 5,000-iteration cap; fourteen report
+  function-tolerance termination, which alone does not establish convergence of
+  the full fit and every selected-penalty CV fold. Failed attempts consume budget.
+- The 20th successful trial finished at 13:22 AEDT, enabling adaptive TPE sampling.
+  Best valid objective is now 24.03 (trial index 63), improved from 76.68 at the
+  previous check. This is a calibration discrepancy, not an adequacy verdict.
+  Confirmation and final outputs are not yet available. The 60% numerical failure
+  rate still limits usable search; it does not itself establish biological inadequacy.
+- Source, convergence requirements and budget remain unchanged. Queue, process,
+  logs and database evidence is retained in RUN-184.progress-20261124T042858Z.json.
+  Earlier progress snapshots and trial-failure evidence are preserved.
+
+## 2026-11-24 TrpB RUN-184 — historical startup check
+
+- The scientist repaired controller hostname resolution and reconfigured Slurm.
+  Job 2325 / RUN-184 started on Dutch at 09:43:36 AEDT. Dutch was MIXED and
+  Ripley IDLE after recovery; the later RESUME request was unnecessary.
+- At 10:37 AEDT the calibration was actively computing: about 54 minutes elapsed,
+  one thread using approximately 99% of a CPU and 110 MiB resident memory.
+  Worker startup verified all 152 frozen payloads and 31 dependency pins;
+  stderr was empty. No source, configuration, seed or fitting-budget change.
+- Only initial input/configuration/provenance outputs exist. The frozen method
+  writes its empirical architecture after the empirical fit and all 20 bootstrap
+  fits; it has not yet created the Optuna study. Exact bootstrap progress and a
+  completion percentage are not observable from current instrumentation. No
+  numerical convergence or scientific adequacy conclusion is available.
+- RUN metadata was reconciled with Slurm. See RUN-184.progress-20261124.json;
+  earlier pending-state observations remain historical records.
+
+## 2026-11-22 Slurm status — RUN-184 still pending
+
+- At 14:04 AEDT, Slurm reports one queued job (2325 / RUN-184), PENDING
+  with zero elapsed execution and no running jobs. Dutch and Ripley are reachable
+  by SSH with active slurmd services, but both are DOWN+NOT_RESPONDING in Slurm.
+- The raspi-1 controller is active. Both workers carry NO NETWORK ADDRESS FOUND;
+  controller hostname lookups return no worker addresses. This indicates a
+  controller-side name-resolution problem. No cluster settings, services, job
+  configuration or node states were changed. See RUN-184 queue-status-20261122.
+
+## 2026-11-21 TrpB calibration moved to Slurm — RUN-184 queued
+
+- Scientist requested stopping local RUN-182 and queuing the same calibration.
+  The verified worker received SIGTERM; worker and supervisor exited. RUN-182
+  is cancelled, with its 190-file immutable partial collection DVC-tracked and
+  backed up. All 149 unique local and remote cache objects verify. Its original
+  automatic failure record is retained; missing final results reflect user
+  interruption, not evidence of numerical or scientific failure.
+- RUN-183 passed the nonexecuting Slurm preview. RUN-184 was accepted as Slurm
+  job **2325** on the CPU partition (1 CPU, 8 GB, 24 hours). At 2026-11-21
+  01:52:44 UTC it was PENDING because the required worker was unavailable;
+  Dutch is reachable by SSH but marked DOWN in Slurm. No cluster service or node
+  state was changed. The job has not begun scientific execution.
+- The self-contained runtime preserves all 152 RUN-182 prelaunch payloads and
+  its original manifest; all staged scientific bytes, dispatcher and environment
+  evidence verify remotely. Its DVC bundle and all 131 unique local/remote cache
+  objects verify. Source, inputs, fitting budget and seeds are unchanged; this
+  is a fresh run, with no unsupported Optuna resumption.
+- A dedicated Linux Python 3.11.15 environment matches all 31 original package
+  pins; imports and structural input/configuration validation pass. Linux/BLAS
+  differences are recorded; numerical bitwise identity with Mac execution is not
+  assumed. Queue acceptance is not completion or an adequacy claim.
+- See EXP-065 `architecture_slurm.md` and RUN-184 remote verification. The
+  original dispatcher, project overlay, SSH transport and stage rules were
+  restored after submission. Final outputs await queued execution.
+
+## 2026-11-21 TrpB Optuna architecture calibration — initial RUN-182 launch
+
+Historical launch record below; RUN-182 was subsequently cancelled and replaced
+by queued RUN-184 as recorded above.
+
+- Scientist authorized a new RUN under existing EXP-065 and local MacBook
+  execution of the 0.7.0rc1 indirect-inference calibration, restricted to TrpB.
+- Prepared deterministic, disjoint 8,192-genotype calibration and confirmation
+  panels from the historical 159,129-genotype mask, retaining both actual assay
+  replicates. The fixed profile matrix is unchanged. Every site-pair/allele cell
+  is observed; the split uses genotype IDs and a fixed seed, not fitness values.
+- `architecture_calibration.md` records the changed objective, six controls,
+  noiseless primary synthetic observations, strict inference convergence and
+  historical-data limitations. A calibration-only timing/convergence pilot is
+  retained before freezing the execution budget. No confirmation result is used
+  for preparation, model selection or budget selection.
+- The source lock and 29 CLI/input/transport checks pass. Raw author replicate
+  columns, disjointness, every pair/allele combination, grouped folds and replay
+  were verified. The 19-file input bundle is DVC-tracked and backed up; all 20
+  local and remote cache objects verify.
+- Calibration-only pilots showed that the example 1,000-iteration limit and
+  function tolerance could stop before strict stationarity. The final protocol
+  retains the 1e-5 stationarity requirement, raises max iterations to 5,000,
+  tightens function tolerance to 1e-10 and allows 10 curvature resets. The penalty
+  grid retains the four example values and adds 10 and 100 after the original
+  optimum hit its boundary. Full empirical, first bootstrap and fixed synthetic
+  fits now converge; all earlier attempts are preserved, including the pilot
+  adapter's initial uint8-index failure (production already converts to int64).
+- The run retains 100 Optuna trials, 4 calibration seeds, 4 fresh confirmation
+  seeds and 20 bootstrap weight estimates. Its 10-fold, six-penalty inner search
+  entails up to 25,986 optimizer fits. Concurrent pilot timings are approximately
+  104–138 seconds per complete auxiliary estimation; an overnight-scale workload
+  is anticipated, not a guaranteed finish time or performance benchmark.
+- Preview RUN-181 passed. Live RUN-182 started locally at approximately 12:39
+  AEDT, using a frozen 124-file scientific source/protocol/preparation manifest
+  and complete input snapshot. Actual output configuration, initial input/source
+  hashes, continuing supervisor heartbeat and restored project overlay were
+  verified. The native Python 3.11.15 environment and dependency versions are
+  captured. Idle sleep is inhibited while the detached supervisor runs.
+- The 45-file preparation bundle is also DVC-tracked and backed up. The supervisor
+  will preserve success or failure artifacts in the RUN-182 bundle; final DVC
+  tracking remains pending until outputs are immutable. See RUN-182 launch
+  verification for paths. No ANA/RES/CLAIM, completed calibration, preset update,
+  publication or Git push is claimed. The locked 0.7.0rc1 source and historical
+  RUNs remain unchanged. Final strict refresh/check pass with 376 green,
+  22 historical/prospective yellow and zero red checks; whitespace checks pass.
+
+## 2026-11-20 Gamma concentration and Optuna architecture fitting implemented
+
+- Scientist authorized Gamma-normal concentration and the proposed Thornton-
+  anchored indirect-inference fitting method. Unpublished candidate 0.7.0rc1
+  adds `interaction_concentration` and seed-independent `global_intercept`.
+  Alpha changes per-entry variance concentration; r retains exact mutation-RMS
+  meaning. None retains the Gaussian/reference-occupancy construction exactly.
+  No arbitrary finite alpha is promoted to a calibrated default.
+- New `adaptenv.inference` follows the pinned authors' sparse sigmoid SSE+L1
+  objective, grouped cross-validation and post-fit zero-sum gauge. The Python
+  split-variable solver differs from their OWL-QN executable; source mapping,
+  original MIT notice and explicit differences are documented. An independently
+  executed upstream R objective/gradient fixture agrees. Stationarity checks
+  prevent premature function-tolerance stops being reported as converged.
+- New `adaptenv.calibration` fits r, alpha, steepness, mean-logit position, lower
+  and span with serial multivariate Optuna TPE. Empirical and synthetic panels
+  use the same inference rule, masks and genotype-grouped folds. Eighteen
+  architecture/readout summaries use fixed calibration-only genotype-bootstrap
+  weights. Seeds are never fitted. Noiseless and explicit pooled-replicate-
+  residual sensitivities are supported; historical shared-stop is not implied.
+- Artifacts retain inputs, source snapshots, versions, weights, coefficients,
+  every trial/failure, boundary distances, native-unit oracle parameters and
+  fresh-seed confirmation. Separate confirmation genotypes must be disjoint;
+  tests prove changing confirmation labels does not alter calibration. Unfitted
+  local sign epistasis, diminishing returns and walks concern the observed
+  panel's induced graph, not an invented whole-library graph. Near-best trial
+  ranges are descriptive, not posterior/confidence regions.
+- Source plus CLI: 239 tests pass. Clean installed wheel: 228 tests pass; no
+  skipped tests in either Python 3.13 verification. Documentation examples and
+  upstream-equivalence, failure, leakage and native-parameter replay checks pass.
+  Same-interpreter comparisons preserve all 28 checked old maps/fingerprints
+  against frozen RUN-180 source. Seven old fixed fingerprints differ under
+  Python 3.11 because of Python float-sum semantics; frozen source has the same
+  differences and the unchanged original fixtures pass under Python 3.13.
+- Engineering sampling with alpha=0.2 at 1,000 sites retains 3,000 full pair
+  tables (9.6 MB) and scores 256 sequences in about 0.01 s locally. This is not
+  an HYP-010 comparison or long-sequence biological validation. Offline all-pairs
+  inference/CV is much more expensive: example optimization entails 16,400
+  auxiliary fits before bootstrap/confirmation, so it requires a timing pilot.
+- `docs/calibration` supplies the exact protocol, validated CLI and example;
+  `docs/model_release/0.7.0rc1` preserves engineering evidence and source lock.
+  Separate Python 3.11/3.13 validation dependency snapshots leave RUN-180's
+  environment unchanged. Historical candidates and scientific outputs remain
+  frozen. No new empirical RUN, fitted TrpB parameters, adequacy claim, package
+  publication, deployment or Git push was performed.
+- The 69-file candidate archive is DVC-tracked locally (517,118 bytes; directory
+  MD5 `8d7dfd3d3c5662e38fe8ba5008c87d2a.dir`). All archive payloads and 70 cache
+  objects verify. The 67-file source/verification lock passes. Labproj also
+  completed its configured remote backup; all 70 remote objects verify under
+  the available DutchZFS volume. The archive pointer is staged by labproj; no
+  commit was made. Strict refresh/check pass: 374 green, 22 existing/prospective
+  yellow and zero red; source and project whitespace checks pass.
+
+## 2026-11-20 matched full-pairwise TrpB calibration — RUN-180 completed
+
+- Scientist authorized a new RUN under EXP-065 and local MacBook execution of
+  the refined 0.6.0rc1 model. `full_pairwise.md` / `full_pairwise.yaml` preserve
+  RUN-178's profile, data/masks, eight calibration seeds, 24 confirmation seeds,
+  18 settings, optimizer rules, observation models and unfitted diagnostics.
+  Only the interaction construction changes; RUN-178 is the direct control and
+  synthetic RUN-175 is retained without rerunning either control.
+- Local preview RUN-179 passed; live RUN-180 completed with return code zero in
+  330.75 seconds using the same pinned Python/numerical environment and compiler.
+  All 18 settings, 24 seed audits, 2,163 graph rows, 2,163 cube-summary rows and
+  144 latent graph rows are present. The full budget was used, with four workers.
+- The 84-file source lock and 133 input/control files verified before execution;
+  all 50 focused preflight tests passed. Independent post-run engineering checks
+  pass. All 351 checked numerical invariants match exactly, including additive
+  values, references, empirical inputs and r=0 fits/graph/cube outcomes. The
+  intended interaction fields differ. The original scientific sources remain
+  unchanged; the 51-file package candidate lock still passes.
+- Initial verification flagged the noise membership checksum: gzip timestamps
+  changed while decompressed donor data remained byte-identical. The original
+  failure report is retained. An explicit v2 verifier authenticates each file's
+  own hash and requires identical decompressed bytes and remaining model fields;
+  six new and seven retained verifier tests pass. See RUN-180.verification.json
+  and RUN-180.verification_amendment.json in EXP-065/runs.
+- Source, complete inputs, environment, logs and outputs are collected in the
+  DVC-tracked RUN-180 bundle: 346 files, 119,576,625 bytes; 326 unique cache objects
+  and all collected SHA-256 hashes verified locally. Remote backup was not
+  attempted. Post-run verification reports and correction are recorded alongside
+  the RUN; the collected bundle retains its original prelaunch sources.
+- No ANA/RES/CLAIM, adequacy conclusion, package preset recalibration, release or
+  Git push was created. Prior calibration evidence and the locked candidate are
+  retained unchanged. Final strict labproj refresh/check pass: 374 green,
+  22 existing/prospective yellow and zero red; source and record whitespace
+  checks pass.
+
+## 2026-11-19 full-pairwise default — unpublished 0.6.0rc1
+
+- Scientist requested full q20 pair tables and pairwise-only latent terms as the
+  default, anchored to Park–Metzger–Thornton's interaction expansion plus sigmoid.
+  The profile additive prior, exact mutation-RMS meaning of r, reference anchoring
+  and sigmoid are retained. Pair tables are centered Gaussian matrices with all
+  361 pure-pair degrees of freedom; there is no rank-eight/binary restriction.
+- Python, service and HTTP defaults now identify `thermodynamic_pairwise_v3`.
+  Bounded site degree six is retained for tractability; each selected pair has
+  a full table. At four sites all six pairs are present. All-pairs topology can
+  be selected explicitly, with quadratic rather than linear length costs.
+- All six calibrated TrpB presets explicitly retain `ranked_gnk`, original
+  orders/weights/degrees/rank and `thermodynamic_gnk_v2`. Regression checks across
+  four seeds per preset preserve components, mutation effects, references and
+  fingerprints exactly. The RUN-178 packaged profile and historical evidence
+  remain unchanged. The new default is uncalibrated; no RUN was created or run.
+- 148 source tests and 148 clean installed-wheel tests pass, plus 11 documentation
+  examples and all 13 project-facade exports. Exhaustive q20 checks at two and
+  three sites verify exact normalization, including overlapping pairs. A second
+  implementation review found no material mathematical or integration defect.
+- A reproducible local engineering check evaluated 256 diverse uniform-q20
+  sequences at L=100/500/1,000. At L=1,000: 3,000 pair tables, 9.6 MB table payload,
+  about 0.104 s construction and 0.0105 s batch scoring; whole-process peak RSS
+  was about 88.5 MB. This is not a comparative HYP-010 benchmark or long-sequence
+  biological validation. Fixed generic readout settings can saturate at large L.
+- The new decision, reproducible check, verification and 51-file source lock are
+  in `docs/model_release/0.6.0rc1`. The previous candidate lock/archive is retained
+  as historical provenance. No package release, tag, deployment or Git push was
+  performed. EXP-067 still targets the frozen ranked candidate; its disabled
+  harness requires a protocol amendment before benchmarking this new default.
+- The 64-file candidate archive is DVC-tracked and its local cache hashes verify;
+  remote backup was not attempted. Strict labproj refresh/check pass with 372
+  green, 22 existing/prospective yellow and zero red checks. The external-package
+  lock accurately records the source checkout as modified; the candidate manifest
+  identifies the tested bytes. Source and record whitespace checks pass.
+
+## 2026-11-19 HYP-010 computational experiment registered
+
+- Created planned EXP-067 through labproj, linked to AIM-001, HYP-010, EXP-065 and
+  RES-063. Four arms compare the frozen factorized oracle with its exact local-table
+  expansion, and conventional GNK tables with an identical counter-based on-demand
+  map. Ehrlich is excluded. No RUN, execution, performance result or ANA is created.
+- The protocol/config and complexity_notes.md define n=q^L as all possible complete
+  sequences and Q as actual queries. At fixed alphabet/order/degree/rank all arms
+  have O(log n) storage/full-query cost. NK enumerates local tables, not necessarily
+  all n states. Current support sorting/retries and retained Gram matrices are
+  explicitly included in setup/memory derivations; no unconditional linear setup
+  or universal asymptotic advantage is claimed.
+- The design fixes four lengths, ten paired seeds and three process repetitions,
+  a 9,600-query workload, memory/time envelopes, correctness gates and comparison
+  rules. A/B have exact realized normalization; C/D have ensemble-expected
+  normalization. Cross-pair capability differences limit the resulting claims.
+- This is a prospective protocol, with a guarded run.sh. Benchmark adapters,
+  counter implementation, isolated dependency lock, host and resource monitor must
+  be frozen before a RUN. The historical project overlay is disabled for this
+  experiment. The unpublished model candidate and its source lock are unchanged.
+- Labproj refresh updates external-package clean-state flags and the derived lock
+  header; it does not change pinned commits or resolve the historical environment.
+- Strict refresh/check pass (372 green, 22 historical/prospective yellow, zero red).
+  Protocol/config checks validate pairing, normalization algebra, table-byte counts,
+  input hashes and links; shell syntax is valid and all 45 candidate-lock files
+  still verify. No timing, correctness benchmark or model recalibration was run.
+
 ## 2026-11-19 result synthesis, benchmark hypotheses and Git synchronization
 
 - Created completed RES-063 through labproj as a synthesis of ANA-069/070 and

@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-11-24T08:56:55.973391+00:00",
+  "historical_control": "RUN-180",
+  "target": "lab-slurm",
+  "ssh_transport": "dutch",
+  "protocol": "joint-readout-slurm",
+  "dedicated_python": "/tank/data/labproj/runtime/project-adapt-env/envs/joint-readout-py311/bin/python",
+  "runtime_bundle": "data/processed/trpb-joint-readout-slurm-runtime",
+  "prelaunch_manifest_sha256": "39960cb6a6cc1ff99302ae1e6ba5ca1b7b38fe14a59b8b617fdeb72545c022d3",
+  "verified_payload_count": 339,
+  "scientific_change": "Joint continuous r in [0,8] and four readout parameters; restored RUN-180 loss; Gaussian interactions",
+  "execution_mode": "fresh calibration, not SQLite resume",
+  "original_run_sh_sha256": "876d8d942c341080b3b5770420bdc97c44b467cc83696e097bb76365abd4562b",
+  "staged_run_sh_sha256": "d4861f95f51fee84874fa3f42ab001fcc7cb3530dfa87009719a64f062a3e8dd",
+  "transport_files_sha256": {
+    "submit_joint_readout_slurm.py": "ef998fea1993f20eff906e4ec27eaf720c8aa301fda1b42a391453c6f660057f",
+    "joint_readout_slurm_worker.sh": "ec8f934e1cce6200b2227db6c61ce2d8f8b1ec8849b524cfb6b3a218cd5fee0e",
+    "joint_readout_runtime.json": "97104cb0e45024b15b84859f2a16b1607edb413983be26394f5861024ece2f0a"
+  }
+}

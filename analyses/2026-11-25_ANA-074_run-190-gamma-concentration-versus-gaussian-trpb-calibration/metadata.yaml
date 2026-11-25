@@ -1,0 +1,98 @@
+id: ANA-074
+title: RUN-190 Gamma concentration versus Gaussian TrpB calibration
+status: completed
+created: '2026-11-25T21:16:33+11:00'
+owner: matthew-spence
+experiments:
+- EXP-065
+runs:
+- RUN-190
+purpose: Compare the achieved Gamma concentration fit with frozen Gaussian and r0
+  controls and measured TrpB using reproducible figures, separating calibration, confirmation
+  behavior, interaction architecture and static task-difficulty proxies.
+path: analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration
+notebook_record:
+  primary_notebook_path: analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/notebooks/analysis.ipynb
+  paired_text_path: analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/notebooks/analysis.py
+  kernel: python3
+  linked_runs:
+  - RUN-190
+  produced_artifacts:
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/01_calibration.pdf
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/01_calibration.png
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/02_fitness_and_diminishing_returns.pdf
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/02_fitness_and_diminishing_returns.png
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/03_epistasis.pdf
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/03_epistasis.png
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/04_repeatable_architecture.pdf
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/04_repeatable_architecture.png
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/05_static_difficulty.pdf
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/05_static_difficulty.png
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/06_latent_concentration.pdf
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/06_latent_concentration.png
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/07_paired_comparison.pdf
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/07_paired_comparison.png
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/analysis_environment.json
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/artifact_validation.json
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/calibration.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/cohort_summary.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/key_numbers.json
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/latent_pair_table_concentration.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/latent_pair_table_energy_curves.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/notebook_execution.log
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/paired_error_summary.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/paired_fresh_seed_contrasts.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/primary_comparison.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/project_record_checks.json
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/replicate_summary_all_seeds.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/seed_summary.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/static_graph_all_seeds.csv
+  - analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/validation.json
+compliance:
+  level: green
+  issues: []
+inputs:
+  run_bundle: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-190
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/RUN-190.dvc
+  run_directory_md5: dc3134650246be26a383970ed4d9869a.dir
+  run_manifest_sha256: 778234f248075facda9b291d1a0fa453278f22d41e5ebb0ec4e8aa98486d1a88
+  comparison: RUN-190 Gamma versus exact RUN-188 Gaussian and r0 controls; TrpB empirical
+    confirmation
+  run_storage_verification: run_storage_verification.json
+  mutable_package_code_used: false
+assessment:
+  selected_alpha: 100.0
+  selected_r: 0.5
+  gaussian_loss: 0.03099516773204625
+  gamma_loss: 0.031032134854951786
+  relative_loss_increase: 0.0011926737491829709
+  conclusion: No achieved calibration gain and no clear overall confirmation advantage;
+    selected architecture remains almost Gaussian
+  coefficient_correlation_median: 0.9987532123942399
+  interpretation: Finite-budget matched comparison on previously exposed four-site
+    TrpB panels; no global-optimum, equivalence or biological coefficient-identification
+    claim
+  model_defaults_changed: false
+  new_result_or_claim_created: false
+  new_independent_empirical_validation: false
+  graduation: No change to existing scoped readiness assessment; no new model promotion
+reproducibility:
+  notebook: notebooks/analysis.ipynb
+  paired_source: notebooks/analysis.py
+  runner: notebooks/execute.py
+  requirements: notebooks/requirements.txt
+  environment_lock: notebooks/environment.lock.txt
+  python: 3.11.15
+  figures: 7
+  executed_code_cells: 10
+  validation: tables/validation.json
+  artifact_validation: tables/artifact_validation.json
+  no_refitting: true
+  new_noise_draws: false
+  primary_seeds: 8
+  all_seeds: 24
+archive:
+  bundle: data/processed/aggregate-thermodynamic-gnk-calibration/ANA-074
+  dvc_pointer: data/processed/aggregate-thermodynamic-gnk-calibration/ANA-074.dvc
+  storage_verification: storage_verification.json
+  sidecar_excluded_from_archive: true

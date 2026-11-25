@@ -461,7 +461,8 @@ items:
     batch throughput and mutation-neighborhood evaluation separately.
   - The comparative advantage must survive initialization and sufficiently long workloads
     to reveal amortization, rather than appear only in a favorable cached operation.
-  tested_by: []
+  tested_by:
+  - EXP-067
   supported_by: []
   weakened_by: []
   refuted_by: []
@@ -471,9 +472,8 @@ items:
   - RES-063
   evidence_status: prospective; not yet tested
   compliance:
-    level: yellow
-    issues:
-    - 'Active hypothesis has no linked experiment: HYP-010'
+    level: green
+    issues: []
 - id: HYP-011
   title: Learnability-And-Searchability-Form-Separable-Landscape-Regimes
   status: active

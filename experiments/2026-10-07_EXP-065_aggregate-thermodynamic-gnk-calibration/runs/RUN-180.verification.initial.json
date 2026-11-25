@@ -1,0 +1,3056 @@
+{
+  "schema": "exp065_pairwise_engineering_validation_v1",
+  "passed": false,
+  "scope": "Engineering reproducibility only; no statistical adequacy or superiority claim",
+  "output_dir": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/outputs",
+  "control_dir": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/outputs",
+  "tolerances": {
+    "rtol": 1e-10,
+    "atol": 1e-12,
+    "additive_atol": 1e-14
+  },
+  "validator_sha256": "cc4779d56639f34935543213a7305f5bfe1e352c1ba6e40bcf3b946b52f09ecd",
+  "configuration": {
+    "unchanged_keys": [
+      "additive_prior",
+      "control_run",
+      "endpoint_calibration_run",
+      "experiment_id",
+      "fit",
+      "input_bundle",
+      "interaction_ratios",
+      "measurement",
+      "motivating_analysis",
+      "observation_modes",
+      "proteins",
+      "required_worker_environment",
+      "sampling",
+      "seed_design",
+      "source_run"
+    ],
+    "declared_changed_keys": [
+      "interpretation",
+      "model",
+      "profile_control_bundle",
+      "profile_control_manifest_sha256",
+      "profile_control_run",
+      "protocol"
+    ]
+  },
+  "manifests": {
+    "candidate": {
+      "outputs": {
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/outputs",
+        "files": 100
+      },
+      "source": {
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/source",
+        "files": 84
+      },
+      "inputs": {
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/inputs/interaction-strength-exp065-inputs",
+        "files": 24
+      },
+      "prior": {
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180/inputs/trpb-profile-additive-inputs",
+        "files": 10
+      },
+      "historical_source": {
+        "available": true,
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/source",
+        "files": 16
+      }
+    },
+    "control": {
+      "outputs": {
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/outputs",
+        "files": 99
+      },
+      "source": {
+        "available": true,
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/source",
+        "files": 42
+      },
+      "inputs": {
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/inputs/interaction-strength-exp065-inputs",
+        "files": 24
+      },
+      "prior": {
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-178/inputs/trpb-profile-additive-inputs",
+        "files": 10
+      },
+      "historical_source": {
+        "available": true,
+        "root": "/Users/matthewspence/Documents/Documents/project-adapt-env/data/processed/aggregate-thermodynamic-gnk-calibration/RUN-175/source",
+        "files": 16
+      }
+    }
+  },
+  "worker_environment": {
+    "python": "3.11.15",
+    "packages": {
+      "numpy": "2.4.4",
+      "pandas": "2.3.0",
+      "scipy": "1.17.1",
+      "pyarrow": "20.0.0",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "seed_design": {
+    "rows": 24,
+    "numeric_columns": {
+      "seed": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          24
+        ]
+      },
+      "noise_seed": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          24
+        ]
+      }
+    }
+  },
+  "confirmation_references_equal": true,
+  "TrpB_empirical.npz": {
+    "fitness": {
+      "maximum_absolute_difference": 0.0,
+      "array_equal": true,
+      "shape": [
+        160000
+      ]
+    },
+    "valid": {
+      "maximum_absolute_difference": 0.0,
+      "array_equal": true,
+      "shape": [
+        160000
+      ]
+    },
+    "genotypes": {
+      "maximum_absolute_difference": 0.0,
+      "array_equal": true,
+      "shape": [
+        160000,
+        4
+      ]
+    }
+  },
+  "TrpB_empirical_cubes.npz": {
+    "fitness": {
+      "maximum_absolute_difference": 0.0,
+      "array_equal": true,
+      "shape": [
+        32,
+        16
+      ]
+    },
+    "genotypes": {
+      "maximum_absolute_difference": 0.0,
+      "array_equal": true,
+      "shape": [
+        32,
+        16,
+        4
+      ]
+    }
+  },
+  "additive_matrix": {
+    "maximum_absolute_difference": 0.0,
+    "array_equal": true,
+    "shape": [
+      4,
+      20
+    ]
+  },
+  "coverage": {
+    "rows": 1,
+    "numeric_columns": {
+      "nodes": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          1
+        ]
+      },
+      "possible_nodes": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          1
+        ]
+      },
+      "origin": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          1
+        ]
+      },
+      "scale": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          1
+        ]
+      },
+      "floor": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          1
+        ]
+      },
+      "calibration_cubes": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          1
+        ]
+      },
+      "confirmation_cubes": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          1
+        ]
+      }
+    }
+  },
+  "summaries": {
+    "graph_summary.csv": {
+      "rows": 2163,
+      "expected_rows": 2163,
+      "duplicate_cells": 0,
+      "r0": {
+        "rows": 360,
+        "numeric_columns": {
+          "seed": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "ratio": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "relative_resolution": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "epsilon": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "nodes": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "edges": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "top_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "best_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "above_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "no_beneficial_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "neutral_edge_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "uniform_steps": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "greedy_steps": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "uniform_terminal_rank": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "greedy_terminal_rank": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "uniform_hit_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "greedy_hit_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "uniform_hit_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "greedy_hit_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "accessible_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "accessible_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "nondecreasing_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "nondecreasing_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "uniform_terminal_fitness": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "greedy_terminal_fitness": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "all_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "all_largest_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "all_largest_span": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "all_largest_below_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "all_largest_size": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "all_mean_size_seen_by_node": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "above_floor_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "above_floor_largest_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "above_floor_largest_span": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "above_floor_largest_below_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "above_floor_largest_size": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "above_floor_mean_size_seen_by_node": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "unique_fitness_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          }
+        }
+      },
+      "empirical": {
+        "rows": 3,
+        "numeric_columns": {
+          "seed": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "ratio": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "relative_resolution": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "epsilon": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "nodes": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "edges": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "top_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "best_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "above_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "no_beneficial_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "neutral_edge_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "uniform_steps": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "greedy_steps": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "uniform_terminal_rank": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "greedy_terminal_rank": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "uniform_hit_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "greedy_hit_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "uniform_hit_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "greedy_hit_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "accessible_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "accessible_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "nondecreasing_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "nondecreasing_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "uniform_terminal_fitness": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "greedy_terminal_fitness": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "all_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "all_largest_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "all_largest_span": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "all_largest_below_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "all_largest_size": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "all_mean_size_seen_by_node": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "above_floor_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "above_floor_largest_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "above_floor_largest_span": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "above_floor_largest_below_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "above_floor_largest_size": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "above_floor_mean_size_seen_by_node": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "unique_fitness_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          }
+        }
+      }
+    },
+    "cube_summary.csv": {
+      "rows": 2163,
+      "expected_rows": 2163,
+      "duplicate_cells": 0,
+      "r0": {
+        "rows": 360,
+        "numeric_columns": {
+          "seed": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "ratio": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "relative_resolution": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "n_cubes": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "epistatic_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "ho_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "slope": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "beneficial_slope": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "sign_epistasis_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "reciprocal_sign_epistasis_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "sd_fitness": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "near_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "power_available": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "slope_median": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "slope_availability": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "power_availability": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "pooled_power_1": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "pooled_power_2": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "pooled_power_3": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "pooled_power_4": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "pooled_epistatic_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          },
+          "pooled_ho_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              360
+            ]
+          }
+        }
+      },
+      "empirical": {
+        "rows": 3,
+        "numeric_columns": {
+          "seed": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "ratio": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "relative_resolution": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "n_cubes": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "epistatic_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "ho_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "slope": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "beneficial_slope": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "sign_epistasis_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "reciprocal_sign_epistasis_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "sd_fitness": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "near_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "power_available": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "slope_median": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "slope_availability": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "power_availability": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "pooled_power_1": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "pooled_power_2": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "pooled_power_3": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "pooled_power_4": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "pooled_epistatic_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          },
+          "pooled_ho_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              3
+            ]
+          }
+        }
+      }
+    },
+    "latent_graph_summary.csv": {
+      "rows": 144,
+      "expected_rows": 144,
+      "duplicate_cells": 0,
+      "r0": {
+        "rows": 24,
+        "numeric_columns": {
+          "seed": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "ratio": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "relative_resolution": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "epsilon": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "nodes": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "edges": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "top_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "best_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "above_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "no_beneficial_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "neutral_edge_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "uniform_steps": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "greedy_steps": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "uniform_terminal_rank": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "greedy_terminal_rank": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "uniform_hit_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "greedy_hit_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "uniform_hit_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "greedy_hit_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "accessible_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "accessible_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "nondecreasing_top": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "nondecreasing_best": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "uniform_terminal_fitness": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "greedy_terminal_fitness": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "all_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "all_largest_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "all_largest_span": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "all_largest_below_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "all_largest_size": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "all_mean_size_seen_by_node": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "above_floor_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "above_floor_largest_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "above_floor_largest_span": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "above_floor_largest_below_floor_fraction": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "above_floor_largest_size": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          },
+          "above_floor_mean_size_seen_by_node": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              24
+            ]
+          }
+        }
+      }
+    }
+  },
+  "calibration_arrays": {
+    "a": {
+      "maximum_absolute_difference": 0.0,
+      "array_equal": true,
+      "shape": [
+        64,
+        16
+      ]
+    },
+    "genotypes": {
+      "maximum_absolute_difference": 0.0,
+      "array_equal": true,
+      "shape": [
+        64,
+        16,
+        4
+      ]
+    }
+  },
+  "calibration_index": {
+    "rows": 64,
+    "numeric_columns": {
+      "seed": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          64
+        ]
+      },
+      "cube": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          64
+        ]
+      },
+      "geometry_cube": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          64
+        ]
+      }
+    }
+  },
+  "calibration_references_equal": true,
+  "confirmation_fields": [
+    {
+      "seed": 57117794,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.616017502325517,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117795,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.259351891140069,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117796,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.383847706544081,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117797,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 7.954327675575726,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117798,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 8.0299024346837,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117799,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.077816030825034,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117800,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.9876517638500255,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117801,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.163940347499181,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117802,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 5.76461318362316,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117803,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 7.277711650476617,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117804,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 5.965816196653482,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117805,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 7.021599140057097,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117806,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 8.121997544509044,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117807,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.127109376804021,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117808,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 5.900997979619211,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57117809,
+      "cohort": "reused",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.423858511645348,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57138794,
+      "cohort": "fresh",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 7.632957905342199,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57138795,
+      "cohort": "fresh",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 7.480725450432614,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57138796,
+      "cohort": "fresh",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.40378967414634,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57138797,
+      "cohort": "fresh",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.958921342219103,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57138798,
+      "cohort": "fresh",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.29204188033215,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57138799,
+      "cohort": "fresh",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.767072110292369,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57138800,
+      "cohort": "fresh",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 7.842661979407567,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "seed": 57138801,
+      "cohort": "fresh",
+      "additive": {
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          160000
+        ]
+      },
+      "maximum_interaction_difference": 6.002535998775232,
+      "r0_cube_values": {
+        "none_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "independent_difference_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_intrinsic_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "shared_stop_sensitivity_observed_r0": {
+          "maximum_absolute_difference": 0.0,
+          "array_equal": true,
+          "shape": [
+            8,
+            16
+          ]
+        }
+      }
+    }
+  ],
+  "interaction_change_is_descriptive_only": true,
+  "settings": {
+    "settings": 18,
+    "all_parameters_within_bounds": true,
+    "r0": {
+      "none": {
+        "fields": [
+          "/bounds/0/0",
+          "/bounds/0/1",
+          "/bounds/1/0",
+          "/bounds/1/1",
+          "/bounds/2/0",
+          "/bounds/2/1",
+          "/bounds/3/0",
+          "/bounds/3/1",
+          "/calibration_origin",
+          "/calibration_scale",
+          "/endpoint_optimizer_evaluations",
+          "/evaluations",
+          "/near_floor_raw",
+          "/objective/floor_cdf",
+          "/objective/mean_sd",
+          "/objective/quantile",
+          "/objective/total",
+          "/offset",
+          "/optimizer_converged",
+          "/optimizer_seed",
+          "/parameters/0",
+          "/parameters/1",
+          "/parameters/2",
+          "/parameters/3",
+          "/position",
+          "/ratio",
+          "/relative_boundary_distance/0",
+          "/relative_boundary_distance/1",
+          "/relative_boundary_distance/2",
+          "/relative_boundary_distance/3",
+          "/scale",
+          "/steepness"
+        ],
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          32
+        ]
+      },
+      "independent_difference": {
+        "fields": [
+          "/bounds/0/0",
+          "/bounds/0/1",
+          "/bounds/1/0",
+          "/bounds/1/1",
+          "/bounds/2/0",
+          "/bounds/2/1",
+          "/bounds/3/0",
+          "/bounds/3/1",
+          "/calibration_origin",
+          "/calibration_scale",
+          "/endpoint_optimizer_evaluations",
+          "/evaluations",
+          "/near_floor_raw",
+          "/objective/floor_cdf",
+          "/objective/mean_sd",
+          "/objective/quantile",
+          "/objective/total",
+          "/offset",
+          "/optimizer_converged",
+          "/optimizer_seed",
+          "/parameters/0",
+          "/parameters/1",
+          "/parameters/2",
+          "/parameters/3",
+          "/position",
+          "/ratio",
+          "/relative_boundary_distance/0",
+          "/relative_boundary_distance/1",
+          "/relative_boundary_distance/2",
+          "/relative_boundary_distance/3",
+          "/scale",
+          "/steepness"
+        ],
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          32
+        ]
+      },
+      "shared_stop_sensitivity": {
+        "fields": [
+          "/bounds/0/0",
+          "/bounds/0/1",
+          "/bounds/1/0",
+          "/bounds/1/1",
+          "/bounds/2/0",
+          "/bounds/2/1",
+          "/bounds/3/0",
+          "/bounds/3/1",
+          "/calibration_origin",
+          "/calibration_scale",
+          "/endpoint_optimizer_evaluations",
+          "/evaluations",
+          "/near_floor_raw",
+          "/objective/floor_cdf",
+          "/objective/mean_sd",
+          "/objective/quantile",
+          "/objective/total",
+          "/offset",
+          "/optimizer_converged",
+          "/optimizer_seed",
+          "/parameters/0",
+          "/parameters/1",
+          "/parameters/2",
+          "/parameters/3",
+          "/position",
+          "/ratio",
+          "/relative_boundary_distance/0",
+          "/relative_boundary_distance/1",
+          "/relative_boundary_distance/2",
+          "/relative_boundary_distance/3",
+          "/scale",
+          "/steepness"
+        ],
+        "maximum_absolute_difference": 0.0,
+        "array_equal": true,
+        "shape": [
+          32
+        ]
+      }
+    }
+  },
+  "noise": {
+    "control_diagnostics.csv": {
+      "byte_identical": true,
+      "semantic_comparison": {
+        "rows": 8,
+        "numeric_columns": {
+          "depth_bin": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              8
+            ]
+          },
+          "n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              8
+            ]
+          },
+          "mean_1": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              8
+            ]
+          },
+          "mean_2": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              8
+            ]
+          },
+          "variance_1": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              8
+            ]
+          },
+          "variance_2": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              8
+            ]
+          },
+          "covariance": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              8
+            ]
+          },
+          "difference_variance": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              8
+            ]
+          }
+        }
+      }
+    },
+    "donor_assignments.csv.gz": {
+      "byte_identical": false,
+      "semantic_comparison": {
+        "rows": 193170,
+        "numeric_columns": {
+          "replicate_1": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              193170
+            ]
+          },
+          "replicate_2": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              193170
+            ]
+          },
+          "published_mean": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              193170
+            ]
+          },
+          "input_count": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              193170
+            ]
+          },
+          "stop_count": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              193170
+            ]
+          },
+          "published_active": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              193170
+            ]
+          },
+          "depth_bin": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              193170
+            ]
+          },
+          "fitness_bin": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              193170
+            ]
+          },
+          "difference": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              193170
+            ]
+          }
+        }
+      }
+    },
+    "noise_calibration.csv": {
+      "byte_identical": true,
+      "semantic_comparison": {
+        "rows": 16,
+        "numeric_columns": {
+          "fitness_bin": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          },
+          "depth_bin": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          },
+          "cell_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          },
+          "donor_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          },
+          "depth_pool_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          },
+          "training_difference_mean": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          },
+          "training_difference_variance": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          },
+          "holdout_n": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          },
+          "holdout_difference_mean": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          },
+          "holdout_difference_variance": {
+            "maximum_absolute_difference": 0.0,
+            "array_equal": true,
+            "shape": [
+              16
+            ]
+          }
+        }
+      }
+    }
+  },
+  "error": "ValidationError: Noise model changed: noise_model.json",
+  "elapsed_seconds": 1.3317040423862636
+}

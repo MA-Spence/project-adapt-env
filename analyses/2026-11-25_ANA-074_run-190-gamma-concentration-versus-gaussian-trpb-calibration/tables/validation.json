@@ -1,0 +1,20 @@
+{
+  "output_files": 65,
+  "frozen_files": 536,
+  "completed_trials": 11712,
+  "independently_checked_cube_layer_rows": 1184,
+  "independent_checks": [
+    "Walsh mean/cross/stop-adjusted power",
+    "Parseval",
+    "101 quantiles",
+    "cube SD",
+    "diminishing-return slopes via least squares",
+    "directed sign reversals at all three resolutions",
+    "replicate-consistent signs"
+  ],
+  "gaussian_and_null_replay": "exact on all 24 seeds",
+  "new_fitting": false,
+  "new_noise": false,
+  "latent_pair_fields_reconstructed": 48,
+  "figures": 7
+}

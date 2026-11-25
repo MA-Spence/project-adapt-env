@@ -1,0 +1,138 @@
+{
+  "archive": {
+    "remote_files": 93,
+    "output_files": 86,
+    "frozen_payloads": 339,
+    "masked_genotypes": 159129,
+    "all_hashes_match": true,
+    "reused_seeds": 16,
+    "fresh_seeds": 8,
+    "calibration_confirmation_seed_overlap": false,
+    "gamma_concentration_enabled": false,
+    "both_exit_codes_zero": true
+  },
+  "trials": [
+    {
+      "observation": "none",
+      "complete": 11712,
+      "failed": 0,
+      "off_grid_trials": 11706,
+      "selected_trial": 4,
+      "selected_r": 4.0,
+      "loss": 0.13755327995088618,
+      "best_new_candidate_loss": 0.1418925372525386,
+      "selected_source": "RUN180_r4_warm_start",
+      "loss_improvement_over_warm_start": 0.0
+    },
+    {
+      "observation": "independent_difference",
+      "complete": 11712,
+      "failed": 0,
+      "off_grid_trials": 11706,
+      "selected_trial": 3,
+      "selected_r": 2.0,
+      "loss": 0.060749439272330404,
+      "best_new_candidate_loss": 0.064029813904497,
+      "selected_source": "RUN180_r2_warm_start",
+      "loss_improvement_over_warm_start": 0.0
+    },
+    {
+      "observation": "shared_stop_sensitivity",
+      "complete": 11712,
+      "failed": 0,
+      "off_grid_trials": 11706,
+      "selected_trial": 1,
+      "selected_r": 0.5,
+      "loss": 0.03099516773204625,
+      "best_new_candidate_loss": 0.0339678006306938,
+      "selected_source": "RUN180_r0.5_warm_start",
+      "loss_improvement_over_warm_start": 0.0
+    }
+  ],
+  "objective": {
+    "historical_settings_replayed": 18,
+    "selected_and_sampled_trials_replayed": 18,
+    "quantiles": 101,
+    "equal_term_weights": true,
+    "target_calibration_cubes": 32,
+    "observation_draws": 8
+  },
+  "model_replay": {
+    "seeds": 24,
+    "genotypes_per_seed": 160000,
+    "maximum_a_difference": 0.0,
+    "maximum_g_difference": 2.220446049250313e-15,
+    "selected_parameters_equal_RUN180": true,
+    "historical_descriptor_comparisons": [
+      {
+        "file": "graph_summary.csv",
+        "rows": 363,
+        "maximum_absolute_difference": 4.440892098500626e-16,
+        "by_column": {
+          "epsilon": 0.0,
+          "nodes": 0.0,
+          "edges": 0.0,
+          "top_fraction": 0.0,
+          "best_fraction": 0.0,
+          "above_floor_fraction": 0.0,
+          "no_beneficial_fraction": 0.0,
+          "neutral_edge_fraction": 0.0,
+          "uniform_steps": 0.0,
+          "greedy_steps": 0.0,
+          "uniform_terminal_rank": 0.0,
+          "greedy_terminal_rank": 0.0,
+          "uniform_hit_top": 0.0,
+          "greedy_hit_top": 0.0,
+          "uniform_hit_best": 0.0,
+          "greedy_hit_best": 0.0,
+          "accessible_top": 0.0,
+          "accessible_best": 0.0,
+          "nondecreasing_top": 0.0,
+          "nondecreasing_best": 0.0,
+          "uniform_terminal_fitness": 4.440892098500626e-16,
+          "greedy_terminal_fitness": 2.220446049250313e-16,
+          "all_n": 0.0,
+          "all_largest_fraction": 0.0,
+          "all_largest_span": 0.0,
+          "all_largest_below_floor_fraction": 0.0,
+          "all_largest_size": 0.0,
+          "all_mean_size_seen_by_node": 0.0,
+          "above_floor_n": 0.0,
+          "above_floor_largest_fraction": 0.0,
+          "above_floor_largest_span": 1.0061396160665481e-16,
+          "above_floor_largest_below_floor_fraction": 0.0,
+          "above_floor_largest_size": 0.0,
+          "above_floor_mean_size_seen_by_node": 0.0,
+          "unique_fitness_fraction": 0.0
+        }
+      },
+      {
+        "file": "cube_summary.csv",
+        "rows": 363,
+        "maximum_absolute_difference": 6.661338147750939e-16,
+        "by_column": {
+          "n_cubes": 0.0,
+          "epistatic_fraction": 1.1102230246251565e-16,
+          "ho_fraction": 9.71445146547012e-17,
+          "slope": 2.983724378680108e-16,
+          "beneficial_slope": 6.661338147750939e-16,
+          "sign_epistasis_fraction": 0.0,
+          "reciprocal_sign_epistasis_fraction": 0.0,
+          "sd_fitness": 0.0,
+          "near_floor_fraction": 0.0,
+          "power_available": 0.0,
+          "slope_median": 5.551115123125783e-16,
+          "slope_availability": 0.0,
+          "power_availability": 0.0,
+          "pooled_power_1": 2.220446049250313e-16,
+          "pooled_power_2": 1.6653345369377348e-16,
+          "pooled_power_3": 1.1102230246251565e-16,
+          "pooled_power_4": 9.71445146547012e-17,
+          "pooled_epistatic_fraction": 2.220446049250313e-16,
+          "pooled_ho_fraction": 8.326672684688674e-17
+        }
+      }
+    ]
+  },
+  "scope": "Engineering verification only; not convergence, new biological validation or a learning/search benchmark."
+}

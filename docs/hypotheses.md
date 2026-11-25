@@ -1,5 +1,25 @@
 # Hypotheses
 
+2026-11-20 implementation boundary: unpublished 0.7.0rc1 adds an explicit Gamma
+effect-concentration control and an Optuna indirect-inference calibration method.
+These are tools for the existing HYP-004/005 and prospective HYP-011/012 questions,
+not new empirical support for any hypothesis. Genetic-architecture summaries are
+now fitting targets; they cannot also count as unfitted validation under this new
+protocol. Historical EXP-065 objectives and conclusions are preserved. No new
+experiment or empirical RUN is created by implementing this method.
+
+2026-11-20 authorized test: EXP-065 will repeat the profile-conditioned TrpB
+calibration with full pairwise interactions, preserving RUN-178's non-model
+design. The repeat is relevant to HYP-004/005's scoped aggregate-statistics and
+search questions. It does not test HYP-010 efficiency or HYP-011/012 learning
+claims, and no new support is asserted before the outputs are analysed.
+
+2026-11-19 model-version boundary: the new unpublished 0.6.0rc1 default uses
+full pairwise tables and a sigmoid; the earlier ranked model remains in the
+named calibrated presets. Historical evidence below does not validate this new
+default. HYP-010/011/012 remain prospective, and EXP-067 still targets its
+explicitly frozen 0.5.0rc1 construction pending a protocol amendment.
+
 ## HYP-001: Local-Protein-Landscape-Statistics-Without-Exact-Reconstruction
 
 - Status: superseded
@@ -371,6 +391,15 @@ Evidence update:
   `RES-049`) or the probe (fixed in `RUN-141`).
 
 ## HYP-005: Mechanistic-Knobs-Produce-Monotonic-Directional-Effects
+
+2026-11-26 RES-064: RUN-188/ANA-073 shows that fixed shared-stop observation
+errors add epistasis outside latent r control without accounting for all
+synthetic interaction power. Sigmoid and observation effects must be separated
+from latent architectural effects in interpreting knob responses. Current TrpB
+replicates/stop controls do not uniquely identify biological versus shared-error
+components. RUN-190/ANA-074's Gamma concentration fit gave no clear advantage.
+This motivates the existing mechanistic-control question, not a monotonicity
+claim or an additional experiment.
 
 2026-10-08 analysis: ANA-067 shows useful observed regimes but substantial
 assay-dependent residuals under the fixed r=4 production calibration. The r=0/r=4
@@ -1049,7 +1078,7 @@ representation, but comparative performance remains unmeasured. No real-data tes
 is needed for a narrowly computational claim; retaining biological resemblance
 requires separate empirical evidence and cannot be inferred from throughput.
 
-**Evidence status.** Motivated by RES-063; no experiment currently tests HYP-010. No support is inferred from its registration.
+**Evidence status.** Motivated by RES-063. [EXP-067](../experiments/2026-11-19_EXP-067_matched-oracle-computability-and-efficiency/experiment.md) is the planned four-arm computational test; it has not been executed. No support is inferred from registration or complexity derivations alone.
 
 
 

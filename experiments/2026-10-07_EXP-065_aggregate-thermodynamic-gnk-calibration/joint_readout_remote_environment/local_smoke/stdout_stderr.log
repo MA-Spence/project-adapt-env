@@ -1,0 +1,13 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+FIT_PROGRESS none 8/8 best_loss=0.13755328 best_r=4
+FIT none 4.0 0.13755327995088618
+FIT_PROGRESS independent_difference 8/8 best_loss=0.06074943927 best_r=2
+FIT independent_difference 2.0 0.060749439272330404
+FIT_PROGRESS shared_stop_sensitivity 8/8 best_loss=0.03099516773 best_r=0.5
+FIT shared_stop_sensitivity 0.5 0.03099516773204625
+GRAPHS reused 57117794 complete
+GRAPHS fresh 57138794 complete
+COMPLETE 3 settings 2 seeds

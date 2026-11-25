@@ -1,0 +1,12 @@
+{
+  "status": "tracked_and_local_cache_verified",
+  "pointer": "data/processed/aggregate-thermodynamic-gnk-calibration/RUN-180.dvc",
+  "directory_md5": "c73a18a0558d2d986a53eb381a087e8c.dir",
+  "files": 346,
+  "bytes": 119576625,
+  "unique_cache_objects_verified": 326,
+  "remote_backup": "not_attempted_local_execution",
+  "bundle_record_timing": "Archived RUN sidecars reflect collection before independent verification and DVC pointer creation; live RUN metadata records final verification and tracking.",
+  "collection_files_sha256_verified": 345,
+  "collection_manifest_sha256": "5d2b9e0f264adac0319f82e77f70b6eb4e64d55a4affb224e6be9184ad464263"
+}

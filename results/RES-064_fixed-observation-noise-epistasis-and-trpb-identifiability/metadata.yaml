@@ -1,0 +1,139 @@
+id: RES-064
+title: Fixed observation noise adds epistasis and limits TrpB architectural identifiability
+status: completed
+created: '2026-11-26T05:18:49+11:00'
+owner: matthew-spence
+analyses:
+- ANA-072
+- ANA-073
+- ANA-074
+experiments:
+- EXP-065
+runs:
+- RUN-186
+- RUN-188
+- RUN-190
+supports: []
+weakens: []
+refutes: []
+motivates:
+- HYP-005
+- HYP-011
+- HYP-012
+supersedes: []
+summary: Fixed genotype-level observation errors add epistasis outside the latent
+  r-controlled architecture, without accounting for all synthetic epistasis; biological
+  epistasis and shared error are not uniquely identifiable from the existing TrpB
+  replicate and stop-control data.
+artifacts:
+- public_api_parity.json
+- package_verification.json
+evidence_paths:
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/01_average_fitness_distribution.pdf
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/01_average_fitness_distribution.png
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/02_average_local_behaviour.pdf
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/02_average_local_behaviour.png
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/03_local_genetic_architecture.pdf
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/03_local_genetic_architecture.png
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/04_latent_readout_observation.pdf
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/04_latent_readout_observation.png
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/05_static_learning_and_navigation_proxies.pdf
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/05_static_learning_and_navigation_proxies.png
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/06_resolution_and_neutral_connectivity.pdf
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/06_resolution_and_neutral_connectivity.png
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/07_joint_search.pdf
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/figures/07_joint_search.png
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/analysis_environment.json
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_cohort_summary.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_cube_metrics.csv.gz
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_seed_metrics.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/architecture_validation.json
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/artifact_validation.json
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_distribution_summary.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_empirical_distribution.json
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_empirical_full_library_quantiles.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_empirical_local.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_empirical_mutation_effect_quantiles.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_fresh_mutation_effect_summary.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_fresh_quantile_summary.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_full_library_by_seed.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_full_library_quantiles.csv.gz
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_local_by_seed.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_local_summary.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_mutation_effect_quantiles.csv.gz
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_reconstruction.json
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/average_reconstruction_checks.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_edge_seed_metrics.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_edge_summary.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_graph_seed_metrics.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_graph_summary.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/difficulty_verification.json
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/independent_review.json
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/notebook_execution.log
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/project_record_checks.json
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_checks.json
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_latent_replay.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_objective_replay.csv
+- analyses/2026-11-25_ANA-072_run-186-trpb-landscape-behaviour-architecture-and-difficulty-proxies/tables/validation_search_summary.csv
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/01_calibration_and_sign_epistasis.pdf
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/01_calibration_and_sign_epistasis.png
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/02_independent_and_shared_noise.pdf
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/02_independent_and_shared_noise.png
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/03_exact_power_accounting.pdf
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/03_exact_power_accounting.png
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/04_repeatable_interaction_power.pdf
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/04_repeatable_interaction_power.png
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/05_activity_strata.pdf
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/05_activity_strata.png
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/06_resolution_sensitivity.pdf
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/figures/06_resolution_sensitivity.png
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/activity_coverage.csv
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/analysis_environment.json
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/artifact_validation.json
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/calibration.csv
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/cohort_summary.csv
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/cube_powers_recomputed.csv.gz
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/face_signs_recomputed.csv.gz
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/key_numbers.json
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/noise_created_signs.csv
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/notebook_execution.log
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/paired_error_summary.csv
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/paired_model_contrasts.csv
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/power_budget_fresh_pooled.csv
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/power_decomposition.csv.gz
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/project_record_checks.json
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/seed_layer_stratum_summary.csv
+- analyses/2026-11-25_ANA-073_run-188-structured-interactions-versus-observation-randomness/tables/validation.json
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/01_calibration.pdf
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/01_calibration.png
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/02_fitness_and_diminishing_returns.pdf
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/02_fitness_and_diminishing_returns.png
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/03_epistasis.pdf
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/03_epistasis.png
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/04_repeatable_architecture.pdf
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/04_repeatable_architecture.png
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/05_static_difficulty.pdf
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/05_static_difficulty.png
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/06_latent_concentration.pdf
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/06_latent_concentration.png
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/07_paired_comparison.pdf
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/figures/07_paired_comparison.png
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/analysis_environment.json
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/artifact_validation.json
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/calibration.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/cohort_summary.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/key_numbers.json
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/latent_pair_table_concentration.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/latent_pair_table_energy_curves.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/notebook_execution.log
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/paired_error_summary.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/paired_fresh_seed_contrasts.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/primary_comparison.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/project_record_checks.json
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/replicate_summary_all_seeds.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/seed_summary.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/static_graph_all_seeds.csv
+- analyses/2026-11-25_ANA-074_run-190-gamma-concentration-versus-gaussian-trpb-calibration/tables/validation.json
+compliance:
+  level: green
+  issues: []
