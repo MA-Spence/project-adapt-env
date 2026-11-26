@@ -1,5 +1,26 @@
 # Project state
 
+## 2026-11-26 CLAIM-005 — scalable generative genetic architecture
+
+- Created [CLAIM-005](claims/CLAIM-005_scalable-generative-genetic-architecture.md),
+  anchored to Park, Metzger and Thornton (2024), RES-064 and the pinned public
+  full-pairwise implementation. It claims a generative adaptation of the
+  published functional architecture, explicit latent interaction controls,
+  and on-demand evaluation without sequence-space enumeration.
+- The claim includes a public-parameter table for r, connectivity, Gamma
+  concentration, sigmoid steepness/position, profile preferences, output bounds
+  and observation semantics, distinguishing generic defaults from fitted TrpB
+  settings. It also states the normalization limit on a conservation knob.
+- Fixed observation errors add apparent epistasis; the current TrpB record does
+  not identify shared error versus biological fitness. Literature supports the
+  general measurement-error concern, not the particular shared-stop law.
+- Model storage and per-sequence scoring are O(L) at fixed alphabet and degree,
+  equivalently O(log_q n) for n=q^L possible genotypes. Computational access to
+  divergent sequences is distinguished from biological validation across
+  evolutionary distances. No comparative efficiency or ML/search advantage,
+  new fit, preset promotion or release is asserted. CLAIM-004 remains historical.
+
+
 ## 2026-11-26 RES-064 — fixed-noise epistasis and public methods
 
 - Created RES-064 linking EXP-065 RUN-186/188/190 and ANA-072/073/074. Fixed

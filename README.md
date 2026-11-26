@@ -44,6 +44,10 @@ package revision; reproduce them with their frozen RUN source and environment.
 
 ## Current empirical evidence
 
+[CLAIM-005](claims/CLAIM-005_scalable-generative-genetic-architecture.md) states the
+current generative-model contribution, published foundation, architectural
+controls, observation boundary and computational scaling.
+
 [RES-064](results/RES-064_fixed-observation-noise-epistasis-and-trpb-identifiability/result.md)
 synthesizes ANA-072/073/074: fixed observation errors add epistasis outside
 latent r control but do not account for all intrinsic interaction power. Current

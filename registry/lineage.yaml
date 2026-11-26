@@ -3074,3 +3074,6 @@ edges:
 - source: ANA-074
   target: RES-064
   relation: produced
+- source: RES-064
+  target: CLAIM-005
+  relation: supports

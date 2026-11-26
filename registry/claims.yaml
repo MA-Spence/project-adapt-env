@@ -158,3 +158,48 @@ items:
   compliance:
     level: green
     issues: []
+- id: CLAIM-005
+  title: AdaptEnv adapts genetic-architecture inference into a scalable generative
+    fitness environment
+  status: completed
+  created: '2026-11-26T11:48:25+11:00'
+  owner: matthew-spence
+  results:
+  - RES-064
+  path: claims/CLAIM-005_scalable-generative-genetic-architecture.md
+  compliance:
+    level: green
+    issues: []
+  aim: AIM-001
+  aims:
+  - AIM-001
+  hypotheses:
+  - HYP-004
+  - HYP-005
+  - HYP-010
+  - HYP-011
+  - HYP-012
+  analyses:
+  - ANA-072
+  - ANA-073
+  - ANA-074
+  experiments:
+  - EXP-065
+  runs:
+  - RUN-186
+  - RUN-188
+  - RUN-190
+  supported_by:
+  - RES-064
+  constrained_by:
+  - RES-063
+  - RES-064
+  implementation:
+    package: Adapt-Env
+    version: 0.7.0rc1
+    model: thermodynamic_pairwise_v3
+    commit: a6b5bfc5a86efa4f1a948d1b4ca968757b3fb343
+    branch: dev
+  evidence_basis: RES-064 and pinned implementation support a conditional generative-method
+    claim; computational scaling is derived, not a comparative benchmark or biological-transfer
+    result.
